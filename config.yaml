@@ -1,0 +1,28 @@
+# Kindle AI Daily Digest configuration
+
+# Language the AI should write summaries in (any language name/code works,
+# it's just fed into the prompt). Also used for a couple of UI labels.
+language: zh-TW
+
+# IANA timezone used to stamp each day's digest.
+timezone: Asia/Taipei
+
+# Max number of articles pulled from each feed per run.
+max_articles_per_feed: 5
+
+# Claude model used for summarization.
+model: claude-sonnet-5
+
+# RSS/Atom feeds to digest. Add or remove entries freely.
+feeds:
+  - name: Hacker News
+    url: https://hnrss.org/frontpage
+    category: 科技 Tech
+
+  - name: BBC World News
+    url: http://feeds.bbci.co.uk/news/world/rss.xml
+    category: 國際 World
+
+  - name: NASA Breaking News
+    url: https://www.nasa.gov/news-release/feed/
+    category: 科學 Science

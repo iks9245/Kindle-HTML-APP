@@ -1,0 +1,25 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="meta">
+{{ generated_at }}
+{% if home_href %} ｜ <a href="{{ home_href }}">首頁</a>{% endif %}
+{% if archive_href %} ｜ <a href="{{ archive_href }}">存檔列表</a>{% endif %}
+{% if prev_href %} ｜ <a href="{{ prev_href }}">← 前一日</a>{% endif %}
+</p>
+
+{% if not categories %}
+<p>今日沒有新文章。</p>
+{% endif %}
+
+{% for category, articles in categories.items() %}
+<h2>{{ category }}</h2>
+{% for a in articles %}
+<article>
+  <h3>{{ a.title }}</h3>
+  <p class="summary">{{ a.summary }}</p>
+  <p class="source">{{ a.source }} ｜ <a href="{{ a.link }}">閱讀原文</a></p>
+</article>
+{% endfor %}
+{% endfor %}
+{% endblock %}
