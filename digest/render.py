@@ -56,6 +56,39 @@ _CJK_RE = re.compile(r"[぀-ヿ㐀-䶿一-鿿豈-﫿]")
 _LATIN_WORD_RE = re.compile(r"[A-Za-z0-9]+")
 
 
+def _paragraph_lines(text: str) -> float:
+    """Estimate how many on-screen lines a paragraph occupies, script-aware.
+
+    Roughly ~32 full-width CJK glyphs or ~12 Latin words fit on one line at the
+    reader's font size and width; used only to decide page breaks, so a coarse
+    estimate is fine.
+    """
+    cjk = len(_CJK_RE.findall(text))
+    latin_words = len(_LATIN_WORD_RE.findall(text))
+    return max(1.0, cjk / 32 + latin_words / 12)
+
+
+def _paginate_paragraphs(paragraphs: list, lines_per_page: int) -> list:
+    """Group whole paragraphs into pages of roughly `lines_per_page` lines.
+
+    Paragraphs are never split mid-way, so each e-ink page turn lands on a clean
+    paragraph boundary. A single over-long paragraph simply gets its own page.
+    """
+    if lines_per_page <= 0:
+        return [paragraphs] if paragraphs else [[]]
+    pages, current, used = [], [], 0.0
+    for para in paragraphs:
+        cost = _paragraph_lines(para) + 0.7  # + inter-paragraph spacing
+        if current and used + cost > lines_per_page:
+            pages.append(current)
+            current, used = [], 0.0
+        current.append(para)
+        used += cost
+    if current:
+        pages.append(current)
+    return pages or [[]]
+
+
 def estimate_reading_minutes(text: str) -> int:
     """Rough minutes-to-read across CJK (per char) and Latin (per word) text."""
     if not text:
@@ -141,39 +174,65 @@ def render_index(date_str: str, categories: dict, conf: dict, brief: str = "") -
             f.write(html)
 
 
-def render_articles(date_str: str, categories: dict, conf: dict) -> None:
-    """One offline full-text page per article, in each font variant.
+def _article_page_name(slug: str, page_no: int) -> str:
+    """Page 1 keeps the bare {slug}.html so digest links stay stable; later
+    pages get a -p{n} suffix. Both start with the date-prefixed slug, so the
+    date-based pruning in prune_old_article_pages catches every page."""
+    return f"{slug}.html" if page_no == 1 else f"{slug}-p{page_no}.html"
 
+
+def render_articles(date_str: str, categories: dict, conf: dict) -> None:
+    """Offline full-text pages per article, in each font variant.
+
+    Long articles are split into several sequential pages (one physical HTML
+    file each) so Kindle readers can turn pages — each turn is a full, clean
+    e-ink refresh landing at the top — instead of scrolling a slow screen.
     Filenames are prefixed with the digest date so they can be pruned on the
     same schedule as the archive pages that link to them.
     """
     tmpl = _env.get_template("article.html.j2")
+    paginate = conf.get("paginate_articles", True)
+    lines_per_page = conf.get("article_page_lines", 14)
     for articles in categories.values():
         for a in articles:
             slug = a.get("slug")
             if not slug:
                 continue
             paragraphs = _split_paragraphs(a.get("full_text", ""))
-            base_name = f"{slug}.html"
-            for font in FONTS:
-                other = _other_font(font)
-                html = tmpl.render(
-                    title=a["title"],
-                    lang=conf["language"],
-                    source=a["source"],
-                    original_link=a["link"],
-                    paragraphs=paragraphs,
-                    qa=a.get("qa"),
-                    read_minutes=a.get("read_minutes"),
-                    home_href=_with_suffix("../index.html", font),
-                    archive_href=_with_suffix("../archive/index.html", font),
-                    font_family=FONTS[font]["family"],
-                    font_href=_with_suffix(base_name, other),
-                    font_label=FONTS[other]["label"],
-                )
-                path = os.path.join(_article_dir(), _with_suffix(base_name, font))
-                with open(path, "w", encoding="utf-8") as f:
-                    f.write(html)
+            if paginate and paragraphs:
+                pages = _paginate_paragraphs(paragraphs, lines_per_page)
+            else:
+                pages = [paragraphs]
+            total = len(pages)
+            for idx, page_paras in enumerate(pages):
+                page_no = idx + 1
+                is_last = page_no == total
+                base_name = _article_page_name(slug, page_no)
+                prev_base = _article_page_name(slug, page_no - 1) if page_no > 1 else None
+                next_base = _article_page_name(slug, page_no + 1) if not is_last else None
+                for font in FONTS:
+                    other = _other_font(font)
+                    html = tmpl.render(
+                        title=a["title"],
+                        lang=conf["language"],
+                        source=a["source"],
+                        original_link=a["link"],
+                        paragraphs=page_paras,
+                        qa=a.get("qa") if is_last else None,
+                        read_minutes=a.get("read_minutes") if page_no == 1 else None,
+                        home_href=_with_suffix("../index.html", font),
+                        archive_href=_with_suffix("../archive/index.html", font),
+                        font_family=FONTS[font]["family"],
+                        font_href=_with_suffix(base_name, other),
+                        font_label=FONTS[other]["label"],
+                        page_no=page_no,
+                        page_total=total,
+                        prev_href=_with_suffix(prev_base, font) if prev_base else None,
+                        next_href=_with_suffix(next_base, font) if next_base else None,
+                    )
+                    path = os.path.join(_article_dir(), _with_suffix(base_name, font))
+                    with open(path, "w", encoding="utf-8") as f:
+                        f.write(html)
 
 
 def prune_old_article_pages(retention_days: int) -> None:

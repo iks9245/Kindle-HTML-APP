@@ -12,6 +12,8 @@ _DEFAULTS = {
     "archive_retention_days": 60,
     "seen_retention_days": 14,
     "quiz_questions": 4,
+    "paginate_articles": True,
+    "article_page_lines": 14,
     "editor_brief": True,
     "deep_read": True,
     "weekly_roundup": True,
