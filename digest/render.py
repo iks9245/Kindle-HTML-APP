@@ -12,6 +12,28 @@ _env = Environment(
     autoescape=select_autoescape(["html"]),
 )
 
+# Kindle's browser can't reliably load custom web fonts, so "more fonts"
+# means picking between generic font-family stacks. Each one is rendered as
+# its own static page (suffix on the filename) rather than a CSS toggle,
+# because the font-size switcher already uses the URL's #fragment via
+# :target — a page can only have one active fragment at a time, so a second
+# independent toggle can't share that mechanism.
+FONTS = {
+    "serif": {"suffix": "", "label": "襯線字體", "family": 'Georgia, "Times New Roman", serif'},
+    "sans": {"suffix": "-sans", "label": "無襯線字體", "family": "Helvetica, Arial, sans-serif"},
+}
+
+
+def _other_font(font: str) -> str:
+    return "sans" if font == "serif" else "serif"
+
+
+def _with_suffix(html_name: str, font: str) -> str:
+    suffix = FONTS[font]["suffix"]
+    if not suffix:
+        return html_name
+    return html_name[: -len(".html")] + suffix + ".html"
+
 
 def _archive_dir() -> str:
     d = os.path.join(DOCS_DIR, "archive")
@@ -20,55 +42,67 @@ def _archive_dir() -> str:
 
 
 def _existing_dates(exclude: str | None = None) -> list:
+    """Canonical (serif-filename) dates only — font variants share these dates."""
     d = _archive_dir()
-    dates = sorted(
-        f[:-5]
-        for f in os.listdir(d)
-        if f.endswith(".html") and f != "index.html" and f[:-5] != exclude
-    )
-    return dates
+    dates = []
+    for f in os.listdir(d):
+        if not f.endswith(".html") or f.endswith("-sans.html") or f == "index.html":
+            continue
+        name = f[: -len(".html")]
+        if name == exclude:
+            continue
+        dates.append(name)
+    return sorted(dates)
 
 
 def _digest_title(date_str: str, language: str) -> str:
     return f"每日 AI 文摘 {date_str}" if language.startswith("zh") else f"Daily AI Digest {date_str}"
 
 
-def render_digest(date_str: str, categories: dict, conf: dict) -> str:
+def render_digest(date_str: str, categories: dict, conf: dict) -> None:
     prev_dates = _existing_dates(exclude=date_str)
-    prev_href = f"{prev_dates[-1]}.html" if prev_dates else None
+    prev_base = f"{prev_dates[-1]}.html" if prev_dates else None
 
     tmpl = _env.get_template("digest.html.j2")
-    html = tmpl.render(
-        title=_digest_title(date_str, conf["language"]),
-        generated_at=date_str,
-        categories=categories,
-        lang=conf["language"],
-        home_href="../index.html",
-        archive_href="index.html",
-        prev_href=prev_href,
-    )
-    path = os.path.join(_archive_dir(), f"{date_str}.html")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(html)
-    return path
+    for font in FONTS:
+        other = _other_font(font)
+        html = tmpl.render(
+            title=_digest_title(date_str, conf["language"]),
+            generated_at=date_str,
+            categories=categories,
+            lang=conf["language"],
+            home_href=_with_suffix("../index.html", font),
+            archive_href=_with_suffix("index.html", font),
+            prev_href=_with_suffix(prev_base, font) if prev_base else None,
+            font_family=FONTS[font]["family"],
+            font_href=_with_suffix(f"{date_str}.html", other),
+            font_label=FONTS[other]["label"],
+        )
+        path = os.path.join(_archive_dir(), _with_suffix(f"{date_str}.html", font))
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
 
 
-def render_index(date_str: str, categories: dict, conf: dict) -> str:
-    tmpl = _env.get_template("digest.html.j2")
-    html = tmpl.render(
-        title=_digest_title(date_str, conf["language"]),
-        generated_at=date_str,
-        categories=categories,
-        lang=conf["language"],
-        home_href=None,
-        archive_href="archive/index.html",
-        prev_href=None,
-    )
+def render_index(date_str: str, categories: dict, conf: dict) -> None:
     os.makedirs(DOCS_DIR, exist_ok=True)
-    path = os.path.join(DOCS_DIR, "index.html")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(html)
-    return path
+    tmpl = _env.get_template("digest.html.j2")
+    for font in FONTS:
+        other = _other_font(font)
+        html = tmpl.render(
+            title=_digest_title(date_str, conf["language"]),
+            generated_at=date_str,
+            categories=categories,
+            lang=conf["language"],
+            home_href=None,
+            archive_href=_with_suffix("archive/index.html", font),
+            prev_href=None,
+            font_family=FONTS[font]["family"],
+            font_href=_with_suffix("index.html", other),
+            font_label=FONTS[other]["label"],
+        )
+        path = os.path.join(DOCS_DIR, _with_suffix("index.html", font))
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
 
 
 def prune_old_archives(retention_days: int) -> None:
@@ -77,25 +111,34 @@ def prune_old_archives(retention_days: int) -> None:
     cutoff = date.today() - timedelta(days=retention_days)
     d = _archive_dir()
     for fname in os.listdir(d):
-        if not fname.endswith(".html") or fname == "index.html":
+        if not fname.endswith(".html") or fname in ("index.html", "index-sans.html"):
             continue
+        base = fname[: -len(".html")]
+        if base.endswith("-sans"):
+            base = base[: -len("-sans")]
         try:
-            file_date = datetime.strptime(fname[:-5], "%Y-%m-%d").date()
+            file_date = datetime.strptime(base, "%Y-%m-%d").date()
         except ValueError:
             continue
         if file_date < cutoff:
             os.remove(os.path.join(d, fname))
 
 
-def render_archive_index(conf: dict) -> str:
+def render_archive_index(conf: dict) -> None:
     dates = list(reversed(_existing_dates()))
     tmpl = _env.get_template("archive_index.html.j2")
-    html = tmpl.render(
-        title="文摘存檔" if conf["language"].startswith("zh") else "Digest Archive",
-        lang=conf["language"],
-        dates=dates,
-    )
-    path = os.path.join(_archive_dir(), "index.html")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(html)
-    return path
+    for font in FONTS:
+        other = _other_font(font)
+        date_links = [(d, _with_suffix(f"{d}.html", font)) for d in dates]
+        html = tmpl.render(
+            title="文摘存檔" if conf["language"].startswith("zh") else "Digest Archive",
+            lang=conf["language"],
+            date_links=date_links,
+            home_href=_with_suffix("../index.html", font),
+            font_family=FONTS[font]["family"],
+            font_href=_with_suffix("index.html", other),
+            font_label=FONTS[other]["label"],
+        )
+        path = os.path.join(_archive_dir(), _with_suffix("index.html", font))
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)

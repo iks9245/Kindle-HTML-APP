@@ -1,13 +1,13 @@
 {% extends "base.html.j2" %}
 {% block content %}
 <h1>{{ title }}</h1>
-<p class="meta"><a href="../index.html">回到首頁</a></p>
-{% if not dates %}
+<p class="meta"><a href="{{ home_href }}">回到首頁</a></p>
+{% if not date_links %}
 <p>目前還沒有存檔。</p>
 {% else %}
 <ul class="toc">
-{% for d in dates %}
-<li><a href="{{ d }}.html">{{ d }}</a></li>
+{% for d, href in date_links %}
+<li><a href="{{ href }}">{{ d }}</a></li>
 {% endfor %}
 </ul>
 {% endif %}
