@@ -1,0 +1,29 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="meta">
+{{ source }}
+{% if home_href %} ｜ <a href="{{ home_href }}">首頁</a>{% endif %}
+{% if archive_href %} ｜ <a href="{{ archive_href }}">存檔列表</a>{% endif %}
+{% if original_link %} ｜ <a href="{{ original_link }}">原文網頁</a>{% endif %}
+</p>
+
+{% if not paragraphs %}
+<p>沒有可離線閱讀的全文內容，請點上方「原文網頁」。</p>
+{% endif %}
+{% for para in paragraphs %}
+<p class="fulltext">{{ para }}</p>
+{% endfor %}
+
+{% if qa %}
+<h2>延伸問答</h2>
+<div class="qa">
+{% for pair in qa %}
+<details>
+  <summary>{{ pair.question }}</summary>
+  <p>{{ pair.answer }}</p>
+</details>
+{% endfor %}
+</div>
+{% endif %}
+{% endblock %}

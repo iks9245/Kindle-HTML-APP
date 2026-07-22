@@ -1,3 +1,4 @@
+import hashlib
 import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -6,7 +7,14 @@ from .config import load_config
 from .dedup import is_similar, normalize_title
 from .fetch import extract_full_text, fetch_feed_entries
 from .rank import score_article
-from .render import prune_old_archives, render_archive_index, render_digest, render_index
+from .render import (
+    prune_old_archives,
+    prune_old_article_pages,
+    render_archive_index,
+    render_articles,
+    render_digest,
+    render_index,
+)
 from .state import load_seen, save_seen
 from .summarize import summarize_article
 
@@ -43,6 +51,7 @@ def build_digest() -> None:
                 print(f"warning: skipping {title!r} ({feed['name']}): {exc}", file=sys.stderr)
                 continue
 
+            slug = f"{date_str}-{hashlib.sha1((link or title).encode('utf-8')).hexdigest()[:10]}"
             articles.append(
                 {
                     "title": title,
@@ -50,6 +59,8 @@ def build_digest() -> None:
                     "summary": result["summary"],
                     "qa": result["qa"],
                     "source": feed["name"],
+                    "slug": slug,
+                    "full_text": text,
                 }
             )
             run_titles.append(normalized)
@@ -60,9 +71,11 @@ def build_digest() -> None:
     for articles in categories.values():
         articles.sort(key=lambda a: -score_article(a, conf["interests"]))
 
+    render_articles(date_str, categories, conf)
     render_digest(date_str, categories, conf)
     render_index(date_str, categories, conf)
     prune_old_archives(conf["archive_retention_days"])
+    prune_old_article_pages(conf["archive_retention_days"])
     render_archive_index(conf)
     save_seen(seen, conf["seen_retention_days"])
 
