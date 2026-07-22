@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launch HN: Unlayer (YC W22) – Add email and document builders to your app</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-23-bc03442471-sans.html">切換為無襯線字體顯示</a></p>
+
+<h1>Launch HN: Unlayer (YC W22) – Add email and document builders to your app</h1>
+<p class="meta">
+Hacker News ｜ 約 2 分鐘閱讀
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://unlayer.com">原文網頁</a>
+</p>
+
+
+
+<p class="fulltext">Visual Builders</p>
+
+<p class="fulltext">Email, page, popup, and document builders embedded inside your app.</p>
+
+<p class="fulltext">Seven primitives that compose into any content surface your users need.</p>
+
+<p class="fulltext">Email, page, popup, and document builders embedded inside your app.</p>
+
+<p class="fulltext">Create, manage, lock, and reuse branded templates across your product.</p>
+
+<p class="fulltext">Help users generate, rewrite, improve, and personalize content.</p>
+
+<p class="fulltext">Upload, organize, and reuse images and files inside the builder.</p>
+
+<p class="fulltext">Export content to HTML, PDF, image, plain text, and ZIP. Server-side or client-side.</p>
+
+<p class="fulltext">React, Angular, and Vue components that render to email, web, or PDF.</p>
+
+<p class="fulltext">SDK, CLI, agent skills, events, and APIs to extend the platform.</p>
+
+<p class="fulltext">Embed one builder or all four in your app. One experience for every content type. One JSON design schema for every builder.</p>
+
+<p class="fulltext">Create responsive emails that render reliably across every email client: Gmail, Outlook, Apple Mail.</p>
+
+<p class="fulltext">Let users design landing pages, forms, and web content with sections, columns, and breakpoints.</p>
+
+<p class="fulltext">Create proposals, reports, and contracts with cover pages, sections, and export-ready PDFs.</p>
+
+<p class="fulltext">Build conversion-focused popups, banners, and lead-capture experiences with triggers and rules.</p>
+
+<p class="fulltext">A helpful layer inside the builder. Not a separate product. Your users stay in flow; AI assists at the block, section, and document level.</p>
+
+<p class="fulltext">The full developer surface: SDK, REST APIs, React Elements, a CLI, and agent skills for your AI tools.</p>
+
+<p class="fulltext">01// Initialize Unlayer02const builder = unlayer.createEditor({03  id: 'editor',04  displayMode: 'email',05  appearance: {06    theme: 'modern_light'07  }08});09 10// Load the template11builder.loadDesign(template);12 13// Export HTML14builder.exportHtml(function (data) {15  const json = data.design; // template json16  const html = data.html; // exported html17});The same primitives, dressed for very different surfaces.</p>
+
+<p class="fulltext">Email, landing pages, popups in one composer.</p>
+
+<p class="fulltext">Let reps personalize outreach without leaving the deal.</p>
+
+<p class="fulltext">White-label a builder your senders actually love.</p>
+
+<p class="fulltext">Add a page composer that feels native to your product.</p>
+
+<p class="fulltext">Proposals, contracts, and reports, designed and exported.</p>
+
+<p class="fulltext">Standardize how teams write, design, and send updates.</p>
+
+<p class="fulltext">Ship a creation experience under your brand, not ours.</p>
+
+<p class="fulltext">Give AI a canvas with structure, blocks, and export.</p>
+
+<p class="fulltext">Embed Unlayer in your product. Ship the parts only you can build.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>哪些類型的應用程式最適合整合 Unlayer？</summary>
+  <p>經常需要用戶創建或個性化各類內容的應用程式，例如行銷自動化平台、CRM 系統、用於提案的 HR 工具，或是內部溝通工具，都能從整合 Unlayer 中獲益良多。</p>
+</details>
+
+<details>
+  <summary>Unlayer 如何確保電子郵件的響應式設計和跨客戶端兼容性？</summary>
+  <p>Unlayer 內建了優化響應式郵件的功能，確保用戶所創建的電子郵件內容能在 Gmail、Outlook 和 Apple Mail 等主流郵件客戶端中可靠且一致地呈現，大幅減少兼容性問題。</p>
+</details>
+
+<details>
+  <summary>文章中提到「AI 輔助在內容區塊、區段和文件層級」具體指的是什麼？</summary>
+  <p>這意味著 AI 可以在內容創建的各個層面提供幫助，例如自動生成文字段落、改寫特定內容塊以改善語氣或清晰度，甚至為整個文件提供結構建議或初步草稿，讓使用者更快速高效地完成內容製作。</p>
+</details>
+
+</div>
+
+
+</div>
+</body>
+</html>

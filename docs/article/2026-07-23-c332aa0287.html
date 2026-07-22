@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thermodynamic Computers Go With the (Energy) Flow</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-23-c332aa0287-sans.html">切換為無襯線字體顯示</a></p>
+
+<h1>Thermodynamic Computers Go With the (Energy) Flow</h1>
+<p class="meta">
+Quanta Magazine ｜ 約 11 分鐘閱讀
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://www.quantamagazine.org/thermodynamic-computers-go-with-the-energy-flow-20260715/">原文網頁</a>
+</p>
+
+
+
+<p class="fulltext">Thermodynamic Computers Go With the (Energy) Flow</p>
+
+<p class="fulltext">Introduction</p>
+
+<p class="fulltext">In the quest to make computers accurate and reliable, noise is the enemy. The thermal jiggling of atoms is a constant threat to the precision needed for detailed calculations. Whether we’re dealing with familiar classical devices like the laptops or supercomputers that we use today, or fancy quantum devices that promise us faster computation tomorrow, we don’t want some haphazard heat fluctuation to flip a binary digit from a 1 to a 0, sending a calculation off course. So computer engineers work hard to make computers immune to noise, by switching bits at energies far above the random ripples of the environment.</p>
+
+<p class="fulltext">But what if noise could be made into the computer engineer’s friend? What if, instead of trying to make devices that work despite the hubbub of thermal fluctuations that ruffle everything in the universe, we could harness that noise to actually do the computing?</p>
+
+<p class="fulltext">That’s the goal of a nascent field called thermodynamic computing. Since the Computing Community Consortium hosted its first conference on thermodynamic computing in 2019, a small community of researchers has been laboring to put it into practice. Recently, some of them have simulated thermodynamic computation in standard silicon-based logic circuits, showing that the basic concepts seem to work in principle.</p>
+
+<p class="fulltext">The approach could produce computers that consume little power and dissipate little heat — a huge advantage, given the power-hungry operation of today’s devices and the increasing struggle to prevent ultra-dense miniaturized circuits from melting down.</p>
+
+<p class="fulltext">Thermodynamic computing would make use of thermodynamic processes, which distribute and dissipate energy and inevitably increase randomness at the microscopic scale. “The field is about designing computers that exploit thermodynamics as a computational resource,” said Patrick Coles, a physicist at the startup Normal Computing in New York. If it works, it could transform not only the computing industry but the very way we think about computation itself.</p>
+
+<p class="fulltext">A Path Through the Energy Landscape</p>
+
+<p class="fulltext">The second law of thermodynamics tells us that the entropy of a closed system should increase over time; things should become less organized overall. This means that energy gets dissipated as random thermal fluctuations, which are generally of no use to anyone. Some processes in nature, however, use those fluctuations to find their way to a more organized state.</p>
+
+<p class="fulltext">“I think thermodynamic computing was developed with the thought that it was piggybacking on the computation that ‘already happens out there’ in the rest of the world but [is] not explicitly labeled as such,” said David Sivak, a statistical physicist at Simon Fraser University in Burnaby, Canada.</p>
+
+<p class="fulltext">In thermodynamics, the way a physical system changes over time (its dynamics) can be described as a trajectory through an “energy landscape,” a kind of map of the total energies of different configurations of a system’s components. In this landscape, valleys are where the system settles into comfortable, low-energy configurations, while peaks are high-energy configurations that are relatively unstable. A system like this reaches equilibrium when it settles in the lowest valley and stays there.</p>
+
+<p class="fulltext">If this all seems a bit abstract, think about milk. What allows many people to digest dairy products is a chainlike enzyme called lactase, which is produced in the small intestine and fits together like a puzzle piece with the complex sugar in milk called lactose. The compatibility between their shapes allows lactase to break lactose apart into its simple sugar components, which are more easily managed by the digestive system.</p>
+
+<p class="fulltext">But how does lactase get this useful shape? It is encoded into the sequence of amino acids that make it up. As the chain is synthesized in the cell, thermal fluctuations allow the chain to explore its energy landscape and crumple up into its most stable equilibrium state.</p>
+
+<p class="fulltext">This process is a kind of thermodynamic computing, in that it solves the problem of folding the lactase into the correct shape using only the thermal energy in the ambient environment of the cell. Once the chain of amino acids is properly folded, continuing thermal fluctuations merely induce a bit of random wiggling. The newly formed enzyme keeps its shape as it sits stably in a deep energy well. Thus, although the operation of a natural system like a living cell proceeds in a milieu pervaded by thermal noise, it still works, often with remarkable energy efficiency.</p>
+
+<p class="fulltext">In and Out of Equilibrium</p>
+
+<p class="fulltext">One type of thermodynamic computing, called equilibrium thermodynamic computing, would work like a folding protein. If you encode the problem you want solved in a system, thermodynamics can drive the system through its energy landscape toward the energy minimum that corresponds to the problem’s optimal solution. “You could take a small electrical circuit, let it evolve naturally under its thermally driven dynamics, and then measure its properties once it has attained thermodynamic equilibrium,” said Stephen Whitelam, a statistical physicist at Lawrence Berkeley National Laboratory in California.</p>
+
+<p class="fulltext">A different approach to thermodynamic computing takes place when a system is driven away from equilibrium by some source of energy, much as the sun’s heat prevents the Earth’s atmosphere from settling into some unchanging state. In this case, the computation takes place as the system moves constantly through its energy landscape. The trajectory itself encodes the calculation. These “out-of-equilibrium” processes are ubiquitous in nature; life itself is one of them, powered by a constant flow of energy and matter.</p>
+
+<p class="fulltext">The trajectories of objects moving under such nonequilibrium conditions display a version of so-called Langevin dynamics, named after the early-20th-century French physicist Paul Langevin. Langevin dynamics represents a kind of relaxation: The system seeks to lower its energy, and it dissipates energy in the process. But the system can never settle into a fixed equilibrium state because random impulses, such as thermal fluctuations, constantly push it onto some new course.</p>
+
+<p class="fulltext">In principle Langevin dynamics can be embodied in an electrical circuit, if it is operating at a power level low enough to be affected by random thermal fluctuations, Whitelam said. If scientists can arrange for the movement of energy through the circuit to correspond to the answer to a calculation, they can use it to do thermodynamic computing.</p>
+
+<p class="fulltext">Both equilibrium and nonequilibrium thermodynamic computers receive continuous boosts of energy from thermal fluctuations, Whitelam explained. But an equilibrium computer must reach equilibrium to complete its calculation, while a nonequilibrium computer can be designed to complete its calculation on a set timescale. That’s why nonequilibrium approaches to thermodynamic computing are popular, Coles said: They “can potentially be faster, because you’re not waiting for natural equilibration.”</p>
+
+<p class="fulltext">Structure From Noise</p>
+
+<p class="fulltext">Most efforts so far to put thermodynamic computing into practice use silicon-based circuits as analogues. Last year, Coles and colleagues at Normal Computing showed that such a circuit could perform various kinds of computation, including matrix inversion, a mathematical problem that has applications in diverse fields ranging from machine learning to computer graphics, engineering, and finance.</p>
+
+<p class="fulltext">Normal was founded in 2022 by Faris Sbahi, Antonio Martinez, and Matthias Tan, former members of Google X and Google Brain. The thermodynamic computer they unveiled was a tailor-made printed circuit board containing eight clusters of components, with each cluster connected to all the others to form a network. Each cluster contained a simple RLC resonator — a resistor, capacitor, and inductor, a combination that creates an oscillating electrical signal at a particular frequency. The circuit is fed a random electrical signal: Basically, it is driven by noise.</p>
+
+<p class="fulltext">The strength of the coupling between each pair of RLC resonators in the network can be varied, and all the couplings can be written in the mathematical form of a matrix. It’s basically an electrical version of a set of interconnected springs. The question is: If you give it a shake, how will the dynamics of the network evolve?</p>
+
+<p class="fulltext">It turns out that, if the network is “shaken” by noise comparable to the energy of the couplings, the equilibrium fluctuations it undergoes correspond to the mathematical inverse of the coupling matrix. “So you can build your device and come back sometime later and measure its fluctuations, and you’ve done matrix inversion,” Whitelam said.</p>
+
+<p class="fulltext">The circuit made by Coles and colleagues didn’t actually run on ambient noise, which was too low-level to affect the dynamics. The researchers had to add in extra noise by hand, using a random-number generator, which cost energy. That’s one reason this kind of analog model doesn’t itself demonstrate the promised energy advantages of thermodynamic computing. But ultimately, Coles said, the advantage comes from the fact that the computation itself runs “for free” once driven by noise. The Normal team showed that, if they scaled up a processing unit by adding more nodes to its network, it would eventually reach a point at which it could solve problems faster than a regular digital neural network, using considerably less energy and dissipating considerably less heat.</p>
+
+<p class="fulltext">Since unveiling this prototype, Normal has announced a new thermodynamic computer called CN101 that uses digital processing on a silicon chip. The researchers say that this digital silicon technology is easier to scale up than their analog circuit and can also carry out other kinds of computation, such as image generation and simulations of molecules. The device has yet to be assessed by other experts.</p>
+
+<p class="fulltext">The initial proof of principle by the Normal team served as an inspiration for Whitelam, who recently reported a simulation of a nonequilibrium thermodynamic computing circuit.</p>
+
+<p class="fulltext">Whitelam used a theoretical model of a “denoising” problem, simulated on a classical computer. He trained an algorithm on a video of Paul Langevin’s face being steadily corrupted by noise, dissolving into random static. (As with the Normal Computing work, the noise was introduced artificially by a random-number generator.) He then demonstrated that the algorithm could start with the static and reconstruct Langevin’s face.</p>
+
+<p class="fulltext">The thermodynamic computer Whitelam used was a network of connected nodes, and its state was determined by how strongly connected those nodes were. During the training process, the algorithm adjusted those connections a little at a time to find the configuration most likely to make Langevin appear.</p>
+
+<p class="fulltext">It’s like a network of linked springs, where those springs have different (and adjustable) spring constants. Indeed, “you could build a thermodynamic computer from real springs,” Whitelam said — though that would be a curiosity rather than a practical technology.</p>
+
+<p class="fulltext">Whitelam showed that the resulting dynamics followed a path that dissipated the minimal amount of heat — by a rough comparison, about 100 billion times less than would be produced if the same task were performed by a digital neural network.</p>
+
+<p class="fulltext">The way Whitelam trained his algorithm is a little like the way people currently train algorithms for generative AI — and indeed this may be one of the major applications of thermodynamic computing. “My algorithm is generative in two ways,” Whitelam said. “First, it turns noise into structure, thereby generating order from disorder. Second, if you train it on a set of images, then it can generate additional images that it hasn’t seen before.”</p>
+
+<p class="fulltext">Normal Computing is not the only startup betting that thermodynamics will feature in the future of computing. The Boston-based company Extropic was also founded in 2022 by a team from Google, IBM, Apple, and Microsoft. In October 2025 the company announced “the world’s first scalable probabilistic computer” — a grid of thousands of interconnected semiconductor-based components on a chip — which it says can run generative AI algorithms using about 10,000 times less energy than existing algorithms. (The work was recently published in the journal npj Unconventional Computing.)</p>
+
+<p class="fulltext">Doing What Comes Naturally</p>
+
+<p class="fulltext">In addition to potentially offering low-cost, low-dissipation computing, thermodynamic computing might also offer insights into the way natural complex systems work.</p>
+
+<p class="fulltext">Much of what goes on in molecular biology is already described as a sort of information processing. For example, a signaling molecule (like a hormone) might arrive at the surface of a cell and have its signal “transduced” — transmitted along a chain of interacting molecules — so that ultimately it flips a switch in the cell nucleus and activates a particular gene. Cells seem able to conduct this kind of computation very efficiently, creating little energy dissipation and relying, in part, on the intrinsic thermodynamics of intermolecular interactions.</p>
+
+<p class="fulltext">So are cells themselves a kind of thermodynamic computer? “To my physicist’s way of thinking, it would be fair to say that nature uses Langevin computers programmed by evolution,” Whitelam said.</p>
+
+<p class="fulltext">The central idea of harnessing thermodynamic fluctuations instead of suppressing them “is indeed thought-provoking,” said Kunihiko Kaneko, a complex-systems theorist at the Niels Bohr Institute in Copenhagen. “But whether this effectively translates to computing in a biological context remains an open question.”</p>
+
+<p class="fulltext">The field of thermodynamic computing is in its early days, “analogous to when small-scale quantum computers were built in the 1990s,” as Coles and his colleagues at Normal wrote in their 2025 paper. Quantum computing is now a global industry estimated to be worth around $12 billion. But it’s a lot easier to build circuits from simple semiconductor-based resonators than from quantum bits that have to be kept in delicate entangled quantum states and often need cryogenic cooling. “The lack of technological barriers for thermodynamic computing can potentially make it a more near-term alternative to quantum computing,” the Normal team wrote.</p>
+
+<p class="fulltext">Whitelam makes a similar comparison with the neural networks that underpin today’s AI. “The computer designs we’ve come up with so far [for thermodynamic computing] are only as capable as the small digital neural networks of around 1990,” he said. The history of AI suggests that it should be possible to do better with larger circuits and more training, he said, “but that remains to be seen.” If it pays off, thermodynamic computing will get noisy in more ways than one.</p>
+
+<p class="fulltext">Correction: July 16, 2026</p>
+
+<p class="fulltext">The Extropic paper describing their scalable probabilistic computer was published in early July 2026. We have updated the reference.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>熱力學計算與量子計算有何根本上的差異？</summary>
+  <p>量子計算主要利用量子力學現象（如疊加和糾纏）來加速特定問題的運算，而熱力學計算則專注於利用熱雜訊和熱力學過程本身來執行計算。它們解決計算問題的底層物理原理截然不同，並非互相排斥而是可能各自適用於不同類型的應用。</p>
+</details>
+
+<details>
+  <summary>熱力學計算目前處於什麼發展階段？距離實際應用還有多遠？</summary>
+  <p>熱力學計算仍處於初期研究階段，研究人員已在標準的矽基邏輯電路中成功模擬其基本概念，驗證了其原理的可行性。然而，要實現實用的熱力學電腦，還有許多工程和設計上的挑戰需要克服，例如如何穩定可靠地編碼問題和讀取結果。</p>
+</details>
+
+<details>
+  <summary>文章中提到蛋白質折疊是熱力學計算的一種形式，那麼這種計算方式主要適合解決哪一類問題？</summary>
+  <p>熱力學計算特別適合解決需要找到最佳或穩定狀態的問題，例如最佳化問題、模式識別或模擬複雜系統的行為。透過讓系統在能量景觀中「自然」地演化至最低能量狀態，它能有效地找到問題的解決方案，類似於自然界中許多自組織過程的運作方式。</p>
+</details>
+
+</div>
+
+
+</div>
+</body>
+</html>
