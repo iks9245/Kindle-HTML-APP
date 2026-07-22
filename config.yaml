@@ -17,6 +17,12 @@ max_articles_per_feed: 3
 # to 0 to keep everything.
 archive_retention_days: 60
 
+# How many days to remember an article's URL so it isn't summarized again
+# if it lingers near the top of a feed on later runs. Also used as the
+# window for skipping cross-feed duplicates picked up in earlier runs.
+# State is kept in .digest-state/seen.json.
+seen_retention_days: 14
+
 # LLM provider used for summarization: "gemini" (Google Gemini API) or
 # "openai" (OpenAI, or any OpenAI-compatible endpoint via openai_base_url).
 provider: gemini

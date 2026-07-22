@@ -36,6 +36,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs
+          git add docs .digest-state
           git diff --cached --quiet || git commit -m "chore: update daily digest $(date -u +%F)"
           git push
