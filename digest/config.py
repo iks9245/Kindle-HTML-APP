@@ -16,6 +16,7 @@ _DEFAULTS = {
     "deep_read": True,
     "weekly_roundup": True,
     "weekly_roundup_weekday": 6,
+    "page_chars": 1500,
     "interests": [],
     "provider": "gemini",
     "model": "gemini-2.5-flash",

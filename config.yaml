@@ -50,6 +50,12 @@ deep_read: true
 weekly_roundup: true
 weekly_roundup_weekday: 6
 
+# Split each offline full-text page into ~this many characters per page, with
+# "下一頁 / 上一頁" links so you page through an article one screen at a time
+# instead of scrolling — every tap is a clean full e-ink refresh. Set to 0 to
+# keep each article on a single scrolling page.
+page_chars: 1500
+
 # Keywords you care about. Articles whose title or summary mention more of
 # these get sorted first within their category (English/Chinese both work,
 # matching is case-insensitive substring). Leave empty to keep RSS order.

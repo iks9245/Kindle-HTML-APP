@@ -48,8 +48,30 @@ def _article_dir() -> str:
     return d
 
 
+def _article_page_name(slug: str, page: int) -> str:
+    """Page 1 keeps the canonical <slug>.html; later pages get a -pN suffix."""
+    return f"{slug}.html" if page <= 1 else f"{slug}-p{page}.html"
+
+
 def _split_paragraphs(text: str) -> list:
     return [line.strip() for line in text.splitlines() if line.strip()]
+
+
+def _paginate(paragraphs: list, budget: int) -> list:
+    """Pack paragraphs into pages of about `budget` characters (always whole
+    paragraphs). budget <= 0 keeps everything on one page."""
+    if budget <= 0 or not paragraphs:
+        return [paragraphs]
+    pages, current, count = [], [], 0
+    for para in paragraphs:
+        if current and count + len(para) > budget:
+            pages.append(current)
+            current, count = [], 0
+        current.append(para)
+        count += len(para)
+    if current:
+        pages.append(current)
+    return pages or [[]]
 
 
 _CJK_RE = re.compile(r"[぀-ヿ㐀-䶿一-鿿豈-﫿]")
@@ -148,32 +170,41 @@ def render_articles(date_str: str, categories: dict, conf: dict) -> None:
     same schedule as the archive pages that link to them.
     """
     tmpl = _env.get_template("article.html.j2")
+    budget = conf.get("page_chars", 0)
     for articles in categories.values():
         for a in articles:
             slug = a.get("slug")
             if not slug:
                 continue
-            paragraphs = _split_paragraphs(a.get("full_text", ""))
-            base_name = f"{slug}.html"
-            for font in FONTS:
-                other = _other_font(font)
-                html = tmpl.render(
-                    title=a["title"],
-                    lang=conf["language"],
-                    source=a["source"],
-                    original_link=a["link"],
-                    paragraphs=paragraphs,
-                    qa=a.get("qa"),
-                    read_minutes=a.get("read_minutes"),
-                    home_href=_with_suffix("../index.html", font),
-                    archive_href=_with_suffix("../archive/index.html", font),
-                    font_family=FONTS[font]["family"],
-                    font_href=_with_suffix(base_name, other),
-                    font_label=FONTS[other]["label"],
-                )
-                path = os.path.join(_article_dir(), _with_suffix(base_name, font))
-                with open(path, "w", encoding="utf-8") as f:
-                    f.write(html)
+            pages = _paginate(_split_paragraphs(a.get("full_text", "")), budget)
+            total = len(pages)
+            for idx, page_paras in enumerate(pages, 1):
+                base_name = _article_page_name(slug, idx)
+                prev_name = _article_page_name(slug, idx - 1) if idx > 1 else None
+                next_name = _article_page_name(slug, idx + 1) if idx < total else None
+                for font in FONTS:
+                    other = _other_font(font)
+                    html = tmpl.render(
+                        title=a["title"],
+                        lang=conf["language"],
+                        source=a["source"],
+                        original_link=a["link"],
+                        paragraphs=page_paras,
+                        qa=a.get("qa") if idx == total else None,
+                        read_minutes=a.get("read_minutes") if idx == 1 else None,
+                        page_num=idx,
+                        page_total=total,
+                        prev_href=_with_suffix(prev_name, font) if prev_name else None,
+                        next_href=_with_suffix(next_name, font) if next_name else None,
+                        home_href=_with_suffix("../index.html", font),
+                        archive_href=_with_suffix("../archive/index.html", font),
+                        font_family=FONTS[font]["family"],
+                        font_href=_with_suffix(base_name, other),
+                        font_label=FONTS[other]["label"],
+                    )
+                    path = os.path.join(_article_dir(), _with_suffix(base_name, font))
+                    with open(path, "w", encoding="utf-8") as f:
+                        f.write(html)
 
 
 def prune_old_article_pages(retention_days: int) -> None:

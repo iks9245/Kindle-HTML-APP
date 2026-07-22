@@ -8,12 +8,22 @@
 {% if original_link %} ｜ <a href="{{ original_link }}">原文網頁</a>{% endif %}
 </p>
 
+{% if page_total > 1 %}<p class="meta pageno">第 {{ page_num }} / {{ page_total }} 頁</p>{% endif %}
+
 {% if not paragraphs %}
 <p>沒有可離線閱讀的全文內容，請點上方「原文網頁」。</p>
 {% endif %}
 {% for para in paragraphs %}
 <p class="fulltext">{{ para }}</p>
 {% endfor %}
+
+{% if page_total > 1 %}
+<p class="pager">
+{% if prev_href %}<a href="{{ prev_href }}" class="prev">← 上一頁</a>{% endif %}
+{% if next_href %}<a href="{{ next_href }}" class="next">下一頁 →</a>{% endif %}
+</p>
+<p class="pageno">第 {{ page_num }} / {{ page_total }} 頁</p>
+{% endif %}
 
 {% if qa %}
 <h2>延伸問答</h2>
