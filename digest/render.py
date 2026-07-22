@@ -113,6 +113,7 @@ def render_index(date_str: str, categories: dict, conf: dict) -> None:
             font_label=FONTS[other]["label"],
             article_prefix="article/",
             font_suffix=FONTS[font]["suffix"],
+            quiz_href=_with_suffix("quiz.html", font),
         )
         path = os.path.join(DOCS_DIR, _with_suffix("index.html", font))
         with open(path, "w", encoding="utf-8") as f:
@@ -186,6 +187,30 @@ def prune_old_archives(retention_days: int) -> None:
             continue
         if file_date < cutoff:
             os.remove(os.path.join(d, fname))
+
+
+def render_quiz(quiz_items: list, source_date: str | None, conf: dict) -> None:
+    """A single rolling recall-quiz page (docs/quiz.html) in each font variant."""
+    os.makedirs(DOCS_DIR, exist_ok=True)
+    zh = conf["language"].startswith("zh")
+    title = "昨日回顧小考" if zh else "Daily Recall Quiz"
+    tmpl = _env.get_template("quiz.html.j2")
+    for font in FONTS:
+        other = _other_font(font)
+        html = tmpl.render(
+            title=title,
+            lang=conf["language"],
+            quiz=quiz_items,
+            source_date=source_date,
+            home_href=_with_suffix("index.html", font),
+            archive_href=_with_suffix("archive/index.html", font),
+            font_family=FONTS[font]["family"],
+            font_href=_with_suffix("quiz.html", other),
+            font_label=FONTS[other]["label"],
+        )
+        path = os.path.join(DOCS_DIR, _with_suffix("quiz.html", font))
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
 
 
 def render_archive_index(conf: dict) -> None:
