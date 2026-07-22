@@ -4,6 +4,12 @@
 # it's just fed into the prompt). Also used for a couple of UI labels.
 language: zh-TW
 
+# Optional second language for side-by-side bilingual summaries — each
+# article shows its summary in `language` and again in this one, turning the
+# digest into a light reading/study aid. Leave blank/null to keep it off.
+secondary_language: null
+# secondary_language: en
+
 # IANA timezone used to stamp each day's digest.
 timezone: Asia/Taipei
 

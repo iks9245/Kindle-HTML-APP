@@ -39,14 +39,23 @@ def _get_openai_client(base_url: str | None):
     return _openai_client
 
 
-def _build_prompt(title: str, text: str, language: str) -> str:
+def _build_prompt(title: str, text: str, language: str, secondary_language: str | None = None) -> str:
     text = text[:MAX_SOURCE_CHARS]
+    secondary_key = ""
+    if secondary_language:
+        secondary_key = (
+            f'- "summary_secondary": the same summary written in {secondary_language} '
+            "(same 2-4 sentence length and format), as one string using \\n for line "
+            "breaks.\n"
+        )
+    keys_word = "three keys" if secondary_language else "two keys"
     return (
         "Read the following article and respond with ONLY a single JSON object "
         "(no markdown code fences, no commentary before or after) with exactly "
-        "these two keys:\n"
+        f"these {keys_word}:\n"
         f'- "summary": a 2-4 sentence summary in {language}, plus a couple of '
         "key-point bullets if useful, as one string using \\n for line breaks.\n"
+        f"{secondary_key}"
         '- "qa": a list of exactly 3 objects, each with "question" and "answer" '
         f"keys, both written in {language}. Each question should be something a "
         "curious reader would naturally wonder after reading the summary "
@@ -108,11 +117,12 @@ def _loads_lenient(raw: str) -> dict:
 def _parse_response(raw: str) -> dict:
     data = _loads_lenient(raw)
     summary = str(data["summary"]).strip()
+    summary_secondary = str(data.get("summary_secondary", "")).strip()
     qa = [
         {"question": str(item["question"]).strip(), "answer": str(item["answer"]).strip()}
         for item in data.get("qa", [])[:3]
     ]
-    return {"summary": summary, "qa": qa}
+    return {"summary": summary, "summary_secondary": summary_secondary, "qa": qa}
 
 
 def _complete(prompt: str, conf: dict, max_tokens: int) -> str:
@@ -146,7 +156,7 @@ def _complete(prompt: str, conf: dict, max_tokens: int) -> str:
 
 
 def summarize_article(title: str, text: str, conf: dict) -> dict:
-    prompt = _build_prompt(title, text, conf["language"])
+    prompt = _build_prompt(title, text, conf["language"], conf.get("secondary_language"))
     return _parse_response(_complete(prompt, conf, max_tokens=800))
 
 

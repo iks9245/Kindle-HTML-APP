@@ -67,6 +67,7 @@ def build_digest() -> None:
                     "title": title,
                     "link": link,
                     "summary": result["summary"],
+                    "summary_secondary": result.get("summary_secondary", ""),
                     "qa": result["qa"],
                     "source": feed["name"],
                     "slug": slug,

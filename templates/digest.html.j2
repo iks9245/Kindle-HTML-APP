@@ -26,6 +26,9 @@
 <article>
   <h3>{{ a.title }}</h3>
   <p class="summary">{{ a.summary }}</p>
+  {% if a.summary_secondary %}
+  <p class="summary secondary">{{ a.summary_secondary }}</p>
+  {% endif %}
   {% if a.qa %}
   <div class="qa">
   {% for pair in a.qa %}
