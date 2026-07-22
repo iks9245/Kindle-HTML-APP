@@ -8,7 +8,9 @@ _DEFAULTS = {
     "language": "zh-TW",
     "timezone": "UTC",
     "max_articles_per_feed": 5,
-    "model": "claude-sonnet-5",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "openai_base_url": None,
     "feeds": [],
 }
 

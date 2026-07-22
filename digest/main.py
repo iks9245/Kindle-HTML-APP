@@ -23,7 +23,7 @@ def build_digest() -> None:
             text = extract_full_text(link, fallback)
             if not text:
                 continue
-            summary = summarize_article(title, text, conf["language"], conf["model"])
+            summary = summarize_article(title, text, conf)
             articles.append({"title": title, "link": link, "summary": summary, "source": feed["name"]})
         if articles:
             categories.setdefault(feed.get("category", "General"), []).extend(articles)

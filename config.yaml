@@ -10,8 +10,19 @@ timezone: Asia/Taipei
 # Max number of articles pulled from each feed per run.
 max_articles_per_feed: 5
 
-# Claude model used for summarization.
-model: claude-sonnet-5
+# LLM provider used for summarization: "gemini" (Google Gemini API) or
+# "openai" (OpenAI, or any OpenAI-compatible endpoint via openai_base_url).
+provider: gemini
+
+# Model name. Examples:
+#   gemini -> gemini-2.5-flash, gemini-2.5-pro
+#   openai -> gpt-4o-mini, gpt-4o, or whatever your compatible endpoint serves
+model: gemini-2.5-flash
+
+# Only used when provider: openai. Leave commented out to use api.openai.com.
+# Point this at any OpenAI-compatible endpoint (OpenRouter, local vLLM, a
+# self-hosted gateway, etc).
+# openai_base_url: https://api.openai.com/v1
 
 # RSS/Atom feeds to digest. Add or remove entries freely.
 feeds:
