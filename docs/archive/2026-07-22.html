@@ -12,9 +12,9 @@
     margin: 0 auto;
     padding: 1em 1.2em 2em;
     max-width: 38em;
-    font-size: 20px;
     line-height: 1.5;
   }
+  .page { font-size: 20px; }
   h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
   h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
   h3 { font-size: 1.05em; margin-bottom: .2em; }
@@ -26,9 +26,26 @@
   article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
   ul.toc { padding-left: 1.1em; }
   ul.toc li { margin: .3em 0; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
 </style>
 </head>
 <body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
 
 <h1>每日 AI 文摘 2026-07-22</h1>
 <p class="meta">
@@ -45,25 +62,28 @@
 
 <article>
   <h3>Show HN: ReadKinetic – a free, local-first speed reader for your own books</h3>
-  <p class="summary">ReadKinetic 推出了一款免費的速讀應用程式。它採用「本地優先」設計，方便您快速閱讀個人書籍檔案。
+  <p class="summary">ReadKinetic 是一款新推出的免費加速閱讀器。它採用「本地優先」模式，確保用戶書籍資料的隱私與安全。這款工具能幫助您更有效率地閱讀自己收藏的電子書。
 
-* 無需付費
-* 資料安全本地儲存</p>
+* 完全免費，數據優先儲存在本地
+* 專為加速閱讀您的個人電子書而設計</p>
   <p class="source">Hacker News ｜ <a href="https://www.readkinetic.com/app/">閱讀原文</a></p>
 </article>
 
 <article>
   <h3>Show HN: A new kind of FPS aim trainer</h3>
-  <p class="summary">這是一款全新的 FPS 瞄準訓練器，專為系統性提升滑鼠協調與控制而設計。它會匿名收集訓練摘要，用以訓練共享的科學化玩家模型，並根據真實玩家基準調整您的評分。隱私是其重點，預設不記錄原始滑鼠軌跡或個人資訊，且可隨時選擇退出數據分享。</p>
+  <p class="summary">這是一款全新的 FPS 瞄準訓練器，旨在系統性地提升您的滑鼠協調和操控能力。它透過匿名收集訓練數據來建立共享的科學玩家模型，讓您的表現能與真實玩家基準化。高度重視隱私，所有數據收集均匿名且可隨時選擇退出。
+
+* 透過匿名數據建立科學玩家模型，確保評分與真實同儕對齊。
+* 高度重視用戶隱私，所有數據收集均可選擇退出，並記錄設定確保分析準確。</p>
   <p class="source">Hacker News ｜ <a href="https://openaim.pramit.gg/">閱讀原文</a></p>
 </article>
 
 <article>
   <h3>Original Apollo 11 Guidance Computer source code for command and lunar modules</h3>
-  <p class="summary">阿波羅11號指揮艙與登月艙導引電腦的原始源碼已獲數位化並公開。這段對人類首次登月至關重要的歷史程式碼，由麻省理工學院儀器實驗室開發，目前已進入公有領域。它現在是一個開放的儲存庫，供保存與研究。
+  <p class="summary">阿波羅11號指揮艙與登月艙的原始導航電腦（AGC）程式碼已數位化並對外公開。這些珍貴的程式碼由麻省理工學院為美國太空總署開發，主要由Margaret H. Hamilton團隊負責。這不僅是重要的歷史文件，如今更已進入公共領域，供全球回顧與研究。
 
-*   **核心程式碼：** 指揮艙 (Comanche055) 及登月艙 (Luminary099)
-*   **數位化單位：** Virtual AGC 與麻省理工學院博物館</p>
+*   數位化：由Virtual AGC與麻省理工博物館合作完成。
+*   著作權：已開放公共領域，人人可存取。</p>
   <p class="source">Hacker News ｜ <a href="https://github.com/chrislgarry/Apollo-11">閱讀原文</a></p>
 </article>
 
@@ -72,29 +92,29 @@
 
 <article>
   <h3>Zelensky sacks Ukraine's top army commander after days of protests</h3>
-  <p class="summary">烏克蘭總統澤倫斯基近日解除了最高陸軍指揮官瑟爾斯基的職務。此前，因受歡迎的國防部長費多羅夫去職，引發多日抗議，對澤倫斯基構成撤換瑟爾斯基的壓力。新任指揮官為備受好評、經驗豐富的德拉帕蒂，此舉有望平息政治風波並推動軍事改革。
+  <p class="summary">烏克蘭總統澤倫斯基已解除最高陸軍司令瑟爾斯基的職務。此舉是在前國防部長費多羅夫被撤職並引發多日抗議後做出的，兩人之間存在分歧。瑟爾斯基由更年輕、受歡迎且經驗豐富的德拉帕蒂將軍接替，費多羅夫也表態支持，有望緩解政治緊張。
 
-*   前國防部長費多羅夫以創新和反腐聞名，與被視為「蘇聯式」指揮官的瑟爾斯基意見不合。
-*   費多羅夫讚揚德拉帕蒂的任命是「變革的聲音」，暗示新氣象。</p>
+*   前國防部長費多羅夫因推動軍隊改革和反腐而廣受讚揚，其遭撤職引發民眾不滿。
+*   新任司令德拉帕蒂被視為更具創新精神，並獲得費多羅夫的公開支持。</p>
   <p class="source">BBC World News ｜ <a href="https://www.bbc.co.uk/news/articles/cyvl35z3917o?at_medium=RSS&at_campaign=rss">閱讀原文</a></p>
 </article>
 
 <article>
-  <h3>US renews strikes on Iran as Trump threatens to attack underground nuclear site</h3>
-  <p class="summary">美國連續第11晚空襲伊朗，旨在削弱其在荷莫茲海峽威脅商船的能力。川普總統更揚言將攻擊伊朗一處地下核設施，伊朗則警告若核設施遭鎖定，將擴大區域戰爭並報復。同時，科威特等國攔截了伊朗的無人機攻擊，葉門青年運動也威脅封鎖沙烏地港口，加劇紅海航運緊張。
+  <h3>More warehouses of Russian online retailer Wildberries hit by Ukraine, officials say</h3>
+  <p class="summary">烏克蘭無人機再次襲擊俄羅斯最大線上零售商Wildberries的倉庫，這是四天內的第二次襲擊，造成10人受傷並迫使員工撤離。烏克蘭聲稱這些設施被用於供應俄羅斯無人機零件及軍事設備，旨在擾亂其物流和軍事供應鏈。
 
-*   美國指控伊朗在過去三個月攻擊逾30艘商船，危害航行自由。
-*   此前美伊曾簽署停火協議，但因荷莫茲海峽衝突而破裂，導致戰事成本飆升。</p>
-  <p class="source">BBC World News ｜ <a href="https://www.bbc.co.uk/news/articles/cdrv0p37k8jo?at_medium=RSS&at_campaign=rss">閱讀原文</a></p>
+*   俄羅斯線上零售商Wildberries的物流中心頻遭烏克蘭無人機襲擊。
+*   烏克蘭表示，這些倉庫是俄羅斯軍事供應鏈的一部分，供應軍用和兩用物資。</p>
+  <p class="source">BBC World News ｜ <a href="https://www.bbc.co.uk/news/articles/c36de9n4pxpo?at_medium=RSS&at_campaign=rss">閱讀原文</a></p>
 </article>
 
 <article>
-  <h3>France passes law banning under-15s from social media</h3>
-  <p class="summary">法國通過了一項新法，禁止15歲以下兒童使用社群媒體，使其成為歐洲第一個實施此類禁令的國家。該法案將於2027年1月全面實施，屆時所有法國社群媒體用戶都需驗證年齡。此舉旨在解決兒童心理健康問題，但同時也引發了對隱私、驗證有效性及可能被繞過的擔憂。
+  <h3>US renews strikes on Iran as Trump threatens to attack underground nuclear site</h3>
+  <p class="summary">美國已連續第11晚恢復對伊朗的空襲，旨在削弱其在荷莫茲海峽威脅商船的能力。川普總統更揚言將攻擊伊朗一處地下核設施，伊朗則警告此舉將被視為區域戰爭擴大並威脅報復。區域緊張情勢因此急劇升溫，國際航運受影響，科威特等盟友國也通報截獲來自伊朗的無人機攻擊。
 
-*   2027年1月起，所有法國社群媒體用戶都需進行年齡驗證。
-*   主要疑慮包括個人隱私問題和年齡驗證工具的實際成效。</p>
-  <p class="source">BBC World News ｜ <a href="https://www.bbc.co.uk/news/articles/cq56l9p4y93o?at_medium=RSS&at_campaign=rss">閱讀原文</a></p>
+*   荷莫茲海峽為衝突核心，影響全球油運。
+*   川普點名將襲擊伊朗地下核設施，伊朗揚言將戰爭擴大；科威特等國亦通報截獲伊朗攻擊。</p>
+  <p class="source">BBC World News ｜ <a href="https://www.bbc.co.uk/news/articles/cdrv0p37k8jo?at_medium=RSS&at_campaign=rss">閱讀原文</a></p>
 </article>
 
 
@@ -102,32 +122,33 @@
 
 <article>
   <h3>A Week of Smoky Skies Across North America</h3>
-  <p class="summary">2026年7月中旬，加拿大野火活動劇烈，導致大量煙霧籠罩北美，影響美加兩國。從7月14日至20日，這股煙霧使多倫多、底特律、紐約等主要城市的空氣品質嚴重惡化，經常處於不健康或危險等級。煙霧中的有害「棕色碳」微粒（PM2.5）隨風飄散，對廣大民眾的心血管和呼吸系統健康構成威脅。
+  <p class="summary">2026年7月，加拿大野火加劇，導致從7月14日至20日期間，北美大部分地區的天空被濃煙籠罩。煙霧中含有褐碳（PM2.5的重要成分），使美加多個主要城市的空氣品質惡化，甚至達到危險等級，嚴重影響民眾健康。
 
-*   主要影響地區：加拿大安大略省、美國中西部、東北部及大湖區。
-*   煙霧成分：包含有機氣溶膠「棕色碳」，是PM2.5的主要成分。</p>
+*   煙霧主要成分：褐碳（brown carbon），屬PM2.5微粒，影響心血管及呼吸系統健康。
+*   受影響主要城市：底特律、多倫多、芝加哥、紐約市及華盛頓特區等。</p>
   <p class="source">NASA Breaking News ｜ <a href="https://science.nasa.gov/earth/earth-observatory/a-week-of-smoky-skies-across-north-america/">閱讀原文</a></p>
 </article>
 
 <article>
   <h3>NISAR’s L-Band Radar Reveals ‘Hummingbird’ in Antarctica</h3>
-  <p class="summary">美國與印度合作的NISAR衛星，利用L波段雷達拍攝南極洲冰流中的山頂，因其冰裂紋酷似「蜂鳥」而得名。這項技術透過分析不同極化微波訊號的反射方式，能區分平滑冰面與不規則裂縫，有助於研究冰層壓力。
+  <p class="summary">美國與印度合作的NISAR衛星，利用其L波段雷達，捕捉到南極洲東部冰層中「蜂鳥」般的景象。這幅影像顯示Zaterjavshijsja山峰從冰流中突出，導致周圍冰層產生大量深裂縫，科學家透過極化微波信號的顏色差異來分析冰面狀況。影像中的洋紅色代表平滑冰面，綠色則顯示不規則的裂縫，提供冰層應力與變化的寶貴數據。
 
-*   NISAR是首個攜帶兩種合成孔徑雷達儀器（L波段和S波段）的衛星。
-*   它搭載了NASA送入太空有史以來最大的12公尺雷達天線。</p>
+*   NISAR：美國與印度合作的地球軌道雷達衛星。
+*   「蜂鳥」影像：揭示南極冰層因地形阻礙產生的應力與裂縫。</p>
   <p class="source">NASA Breaking News ｜ <a href="https://science.nasa.gov/photojournal/nisars-l-band-radar-reveals-hummingbird-in-antarctica/">閱讀原文</a></p>
 </article>
 
 <article>
   <h3>NASA to Host Media Briefing on Roman Telescope, Launching Next Month</h3>
-  <p class="summary">美國國家航空暨太空總署（NASA）準備於下個月發射「南希·格雷斯·羅曼太空望遠鏡」。這座望遠鏡將提供宇宙的深廣全景，旨在徹底改變我們對宇宙的理解並揭示其奧秘。它還將測試先進技術，以直接拍攝系外行星，對尋找外星生命至關重要。
+  <p class="summary">美國太空總署（NASA）預計下個月發射「南希‧格蕾絲‧羅曼太空望遠鏡」。這台望遠鏡將提供宇宙的深廣視野，有望革新我們對宇宙的理解並揭示看不見的奧秘。它也將測試直接拍攝系外行星的先進技術，是尋找其他星球生命的重要一步。
 
-*   將提供宇宙的深廣全景，揭示未曾見過的天體和現象。
-*   搭載先進技術，用於直接拍攝系外行星，是尋找其他世界生命的重要一步。</p>
+*   發射日期：預計八月三十日
+*   主要任務：深度探索宇宙奧秘，並測試直接拍攝系外行星的技術。</p>
   <p class="source">NASA Breaking News ｜ <a href="https://www.nasa.gov/news-release/nasa-to-host-media-briefing-on-roman-telescope-launching-next-month/">閱讀原文</a></p>
 </article>
 
 
 
+</div>
 </body>
 </html>
