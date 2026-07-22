@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日深讀</title>
+<title>Any text-to-SQL benchmark should address difficulties of real-world data stores</title>
 <style>
   body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Georgia, "Times New Roman", serif;
     background: #fff;
     color: #000;
     margin: 0 auto;
@@ -73,48 +73,56 @@
 <span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
 <div class="page">
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
-<p class="fontswitch"><a href="deepread.html">切換為襯線字體顯示</a></p>
+<p class="fontswitch"><a href="2026-07-23-23396bdacf-sans.html">切換為無襯線字體顯示</a></p>
 
-<h1>每日深讀</h1>
+
+<h1>Any text-to-SQL benchmark should address difficulties of real-world data stores</h1>
 <p class="meta">
-本篇：Malleable Computing, Emacs, and You
- ｜ <a href="index-sans.html">首頁</a>
- ｜ <a href="article/2026-07-23-a04ea70735-sans.html">讀全文</a>
- ｜ <a href="http://yummymelon.com/devnull/malleable-computing-emacs-and-you.html">原文網頁</a>
+Hacker News ｜ 約 1 分鐘閱讀
+
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://cacm.acm.org/blogcacm/if-you-think-you-can-do-real-world-text-to-sql/">原文網頁</a>
 </p>
 
 
 
-<h2>脈絡</h2>
-<p>作者Charles Choi發現將GitHub議題手動複製到Org Agenda是重複且低效的。這項任務促使他探索在Emacs中實現自動化，並以此展示Emacs「可塑性計算」的強大能力。文章詳述了如何透過客製化Emacs來簡化此工作流程，最大程度地減少應用程式之間的上下文切換。</p>
 
 
-<h2>重點</h2>
-<ul>
-<li>Emacs透過Elisp提供高度的可塑性計算能力，讓使用者能即時擴展和自動化任務。</li><li>Emacs能夠將外部命令列工具（如GitHub CLI）視為服務，無縫整合到其工作環境中。</li><li>藉助高層次抽象和現有Elisp套件，只需少量程式碼即可實現複雜且強大的自動化功能。</li><li>在Emacs中自動化工作流程能減少應用程式間的上下文切換，從而提升使用者的生產力。</li><li>Elisp的動態特性允許在不重啟Emacs的情況下快速原型開發和迭代程式碼，顯著加速開發過程。</li>
-</ul>
 
 
-<h2>影響與延伸</h2>
-<p>這種可塑性計算的模式賦予使用者將軟體工具精確調整以符合其獨特工作流程的能力，而非受限於預設功能。它強調了個人化和可擴展性在軟體設計中的重要性，預示著未來軟體將更具適應性，能由使用者自行塑造。這最終能極大地提升效率與生產力。</p>
+<p class="fulltext"><p>Article URL: <a href="https://cacm.acm.org/blogcacm/if-you-think-you-can-do-real-world-text-to-sql/">https://cacm.acm.org/blogcacm/if-you-think-you-can-do-real-world-text-to-sql/</a></p></p>
+
+<p class="fulltext"><p>Comments URL: <a href="https://news.ycombinator.com/item?id=49013995">https://news.ycombinator.com/item?id=49013995</a></p></p>
+
+<p class="fulltext"><p>Points: 12</p></p>
+
+<p class="fulltext"><p># Comments: 3</p></p>
 
 
-<h2>小辭典</h2>
-<dl class="glossary">
 
-<dt>可塑性計算 (Malleable Computing)</dt>
-<dd>指軟體工具可以被使用者輕鬆地重新塑造和擴展，以適應其特定需求和工作流程的概念，Emacs是其典型範例。</dd>
+<h2>延伸問答</h2>
+<div class="qa">
 
-<dt>Emacs</dt>
-<dd>一個高度可擴展、可自定義的自由/開源文字編輯器，亦可作為一個操作系統環境，是實現本文中自動化任務的核心平台。</dd>
+<details>
+  <summary>現實世界的資料儲存會遇到哪些具體的「困難」，而目前的基準測試可能沒有涵蓋到？</summary>
+  <p>這些困難可能包括資料不一致、遺失值、不規範的命名、複雜的聯結需求、不完整的資料庫模式，以及與各種異質資料源的整合挑戰。此外，資料庫的規模和動態變化也常超出典型基準測試的範圍。</p>
+</details>
 
-<dt>Org Agenda</dt>
-<dd>Emacs中的一種個人資訊管理和提綱模式，用於規劃、待辦事項列表和筆記，是作者希望將GitHub議題同步到的目標。</dd>
+<details>
+  <summary>為什麼文字轉SQL的基準測試必須涵蓋這些現實世界的困難？</summary>
+  <p>涵蓋這些困難能更準確地評估Text-to-SQL系統在實際應用中的效能和可靠性。如果基準測試過於簡化，那麼在實驗室環境中表現優異的模型，可能在面對真實企業資料時會表現不佳，導致部署失敗或產出錯誤結果。</p>
+</details>
 
-<dt>Elisp</dt>
-<dd>Emacs Lisp程式語言，是Emacs的核心，所有Emacs的擴展和自定義功能皆透過它實現，賦予Emacs可塑性計算能力。</dd>
+<details>
+  <summary>如果文字轉SQL的基準測試持續忽略現實世界的資料複雜性，可能會產生什麼後果？</summary>
+  <p>長期來看，這可能會誤導研究方向，使開發者過度優化在簡化資料集上的性能，而忽視了實際部署所需的關鍵能力。這將導致技術進步與業界需求脫節，阻礙Text-to-SQL技術在企業環境中的廣泛應用和信任建立。</p>
+</details>
 
-</dl>
+</div>
+
+
+
 
 
 

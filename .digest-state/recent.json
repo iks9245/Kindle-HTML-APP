@@ -19,33 +19,18 @@
   "2026-07-23": [
     {
       "source": "Hacker News",
-      "summary": "SIMD（單指令多數據）是一種CPU技術，能讓處理器同時對多個值進行操作，從而大幅加速程式中重複的迴圈處理。作者指出，儘管SIMD常被認為複雜或小眾，但其基本概念和常見的「一次處理N個值」的模式實際上很容易理解與應用。對於處理大量數據的迴圈而言，學習並應用SIMD能帶來顯著的性能提升，達到4倍、8倍甚至更高的加速效果。\n\n主要重點：\n- SIMD透過平行處理多個數據來提升效能。\n- 遵循標準的五個步驟，開發者能更有效地運用SIMD。\n- 適用於處理龐大數據集的場景，效益顯著。",
-      "title": "Everyone Should Know SIMD"
+      "summary": "義大利強大家族麥地奇的佛羅倫斯大公法蘭西斯科一世及其妻子比安卡．卡佩羅於1587年神祕死亡，400多年來一直流傳著瘧疾與砷中毒兩種說法。\n耶魯大學與比薩大學的最新研究，透過法蘭西斯科遺骸的古DNA分析，確鑿地發現了兩種瘧疾寄生蟲的基因痕跡，強烈支持瘧疾是其死因。\n這項研究為這樁歷史懸案提供了明確答案，儘管未能完全排除下毒的可能性，但已大大減少了相關揣測。\n\n- 新研究使用古DNA分析確定死因\n- 排除蓄意謀殺的謠言，指出瘧疾為主要原因",
+      "title": "Medici family mystery may be solved after more than 400 years"
     },
     {
       "source": "Hacker News",
-      "summary": "此文章旨在鼓勵用戶登入以解鎖進階功能。登入後，用戶可以獲得根據其儲存聊天紀錄量身定制的回應，並具備建立圖像及上傳檔案的能力。\n這是一個標準的用戶提示，目的在於提升平台的使用體驗，提供更個人化的服務。",
-      "title": "Terrence Tao's ChatGPT Conversation about the Jacobian Conjecture Counterexample"
+      "summary": "這篇文章的標題指出，任何文字轉SQL（Text-to-SQL）的基準測試都應解決真實世界資料儲存的困難。這意味著現有的基準測試可能未能充分反映實際資料庫中常見的複雜性。未來的評估標準應更深入地考量資料混亂、模式不完整或多樣性等實際挑戰，以更準確地衡量Text-to-SQL系統的實用性。\n\n- 呼籲改善Text-to-SQL基準測試\n- 強調真實世界資料的複雜性對評估的影響",
+      "title": "Any text-to-SQL benchmark should address difficulties of real-world data stores"
     },
     {
       "source": "Hacker News",
-      "summary": "GigaToken 是一種創新的語言模型分詞器，速度比現有的 HuggingFace Tokenizers 和 Tiktoken 快約 1000 倍，能以 GB/s 的速度處理文本資料。儘管 HF 和 Tiktoken 已採用多執行緒 Rust 實作，GigaToken 仍透過其專屬 API 實現了顯著的性能提升，提供廣泛的 CPU 硬體和常見分詞器支援。使用者可以選擇以相容模式或透過其專屬 API 進行整合，後者能帶來最佳效能。\n- 速度提升：比 HuggingFace Tokenizers 和 Tiktoken 快約 1000 倍，達到 GB/s 級別的處理速度。\n- 靈活整合：提供與現有工具的相容模式，但使用其專屬 API 可實現最大效能。",
-      "title": "GigaToken: ~1000x faster Language model tokenization"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "NASA 將於 7 月 31 日在維吉尼亞州的蘭利研究中心啟用其 40 多年來首座新建風洞——飛行動力學研究設施。這座最先進的設施標誌著 NASA 及美國航空和太空研究能力演進的一個重要里程碑，將支援包括透過 Artemis 計畫在月球表面建立持續人類存在和月球基地開發在內的 NASA 目標。媒體受邀參加參觀和剪綵儀式，但需提前預約且僅限美國公民或合法永久居民。\n\n重點：\n* 這是 NASA 40 多年來首座新風洞。\n* 將支援 Artemis 計畫和月球基地開發。",
-      "title": "NASA to Showcase Agency’s Newest Wind Tunnel in Virginia"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "任務機器人載具 (MRV) 搭載著美國太空總署 (NASA) 支持的地球同步衛星機器人維修任務 (RSGS) 載荷，於 7 月 21 日發射升空，正前往地球同步軌道。此任務將利用先進機器人技術，檢查、升級並透過安裝推進模組來延長現有衛星的壽命，解決燃料耗盡或設備過時等問題。在 DARPA 和 NASA 的支持下，RSGS 旨在提升美國在太空服務方面的能力，以用於太空商業和探索活動，使任務更具成本效益。\n\n* 延長衛星壽命\n* 利用先進機器人技術\n* 政府與產業合作項目",
-      "title": "Robotic Servicing Mission Launches with NASA Support"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "美國NASA太空人克里斯·威廉斯與兩名俄羅斯太空人即將結束為期241天的國際太空站任務，預計於美東時間7月26日從太空站脫離並降落在哈薩克。NASA將提供全程直播，見證他們安全返回地球。在脫離前，現任指揮官Sergey Kud-Sverchkov會將國際太空站的指揮權移交給NASA太空人潔西卡·梅爾，標誌著第75遠征隊的開始。\n主要看點：\n• 任務持續241天\n• 降落地點為哈薩克大草原",
-      "title": "NASA Sets Coverage for Astronaut Chris Williams, Crewmates Return"
+      "summary": "這篇文章講述作者如何利用Emacs的「可塑計算」能力，自動化將GitHub議題同步到Org Agenda的流程。\n過去作者手動複製GitHub議題作為個人筆記和回覆草稿，現在透過開發一個名為`fj.el`的Emacs套件來解決。\n這個解決方案利用GitHub CLI工具`gh`處理認證和API互動，並結合多個Emacs Elisp套件實現使用者介面和格式轉換。\n\n*   利用`gh`工具，Emacs能將其視為與GitHub互動的REST服務，簡化認證和API呼叫。\n*   Emacs的動態Lisp環境允許快速原型開發和即時程式碼評估，大大簡化了個人化工具的開發過程。",
+      "title": "Malleable Computing, Emacs, and You"
     }
   ]
 }
