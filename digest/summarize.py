@@ -116,6 +116,29 @@ def _build_deep_read_prompt(title: str, text: str, language: str) -> str:
     )
 
 
+_WEEKLY_MAX_ARTICLES = 60
+
+
+def _build_weekly_prompt(articles: list, language: str) -> str:
+    blocks = []
+    for a in articles:
+        date = a.get("date", "")
+        blocks.append(f"- ({date}, {a['source']}) {a['title']}: {a['summary']}")
+    joined = "\n".join(blocks)
+    return (
+        "Below are the article summaries from the past week of a daily news digest. "
+        f"Write a weekly roundup in {language} that groups them into a few themes and "
+        "synthesizes what happened across the week — connecting stories, not just "
+        "relisting them. Respond with ONLY a single JSON object (no markdown code "
+        "fences, no commentary) with these keys:\n"
+        f'- "intro": 2-3 sentences in {language} framing the week.\n'
+        f'- "themes": a list of 3-5 objects, each with "title" (a short theme name in '
+        f'{language}) and "body" (2-4 sentences in {language} on that theme, using \\n '
+        "between paragraphs if needed).\n\n"
+        f"Articles:\n{joined}"
+    )
+
+
 def _loads_lenient(raw: str) -> dict:
     text = raw.strip()
     if text.startswith("```"):
@@ -211,3 +234,14 @@ def generate_deep_read(article: dict, conf: dict) -> dict:
         "implications": str(data.get("implications", "")).strip(),
         "glossary": glossary,
     }
+
+
+def generate_weekly_roundup(articles: list, conf: dict) -> dict:
+    prompt = _build_weekly_prompt(articles[:_WEEKLY_MAX_ARTICLES], conf["language"])
+    data = _loads_lenient(_complete(prompt, conf, max_tokens=1500))
+    themes = [
+        {"title": str(t.get("title", "")).strip(), "body": str(t.get("body", "")).strip()}
+        for t in data.get("themes", [])
+        if str(t.get("title", "")).strip() and str(t.get("body", "")).strip()
+    ]
+    return {"intro": str(data.get("intro", "")).strip(), "themes": themes}

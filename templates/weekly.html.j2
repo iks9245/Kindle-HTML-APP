@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="meta">
+{% if date_label %}{{ date_label }}{% endif %}
+{% if home_href %} ｜ <a href="{{ home_href }}">首頁</a>{% endif %}
+{% if archive_href %} ｜ <a href="{{ archive_href }}">存檔列表</a>{% endif %}
+</p>
+
+{% if not roundup %}
+<p>還沒有本週回顧 — 每週結算日跑過之後，就會把這一週的文章分主題整理成一篇。</p>
+{% else %}
+{% if roundup.intro %}<p class="summary">{{ roundup.intro }}</p>{% endif %}
+{% for theme in roundup.themes %}
+<h2>{{ theme.title }}</h2>
+{% for para in theme.body.split('\n') if para.strip() %}
+<p>{{ para.strip() }}</p>
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% endblock %}
