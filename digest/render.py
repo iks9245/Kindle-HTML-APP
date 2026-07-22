@@ -116,6 +116,8 @@ def render_index(date_str: str, categories: dict, conf: dict, brief: str = "") -
     tmpl = _env.get_template("digest.html.j2")
     for font in FONTS:
         other = _other_font(font)
+        weekly_name = _with_suffix("weekly.html", font)
+        weekly_href = weekly_name if os.path.exists(os.path.join(DOCS_DIR, weekly_name)) else None
         html = tmpl.render(
             title=_digest_title(date_str, conf["language"]),
             generated_at=date_str,
@@ -132,6 +134,7 @@ def render_index(date_str: str, categories: dict, conf: dict, brief: str = "") -
             font_suffix=FONTS[font]["suffix"],
             quiz_href=_with_suffix("quiz.html", font),
             deepread_href=_with_suffix("deepread.html", font),
+            weekly_href=weekly_href,
         )
         path = os.path.join(DOCS_DIR, _with_suffix("index.html", font))
         with open(path, "w", encoding="utf-8") as f:
@@ -228,6 +231,30 @@ def render_quiz(quiz_items: list, source_date: str | None, conf: dict) -> None:
             font_label=FONTS[other]["label"],
         )
         path = os.path.join(DOCS_DIR, _with_suffix("quiz.html", font))
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
+
+
+def render_weekly(roundup: dict | None, date_label: str, conf: dict) -> None:
+    """A single rolling weekly-roundup page (docs/weekly.html)."""
+    os.makedirs(DOCS_DIR, exist_ok=True)
+    zh = conf["language"].startswith("zh")
+    title = "本週主題回顧" if zh else "This Week in Themes"
+    tmpl = _env.get_template("weekly.html.j2")
+    for font in FONTS:
+        other = _other_font(font)
+        html = tmpl.render(
+            title=title,
+            lang=conf["language"],
+            roundup=roundup,
+            date_label=date_label,
+            home_href=_with_suffix("index.html", font),
+            archive_href=_with_suffix("archive/index.html", font),
+            font_family=FONTS[font]["family"],
+            font_href=_with_suffix("weekly.html", other),
+            font_label=FONTS[other]["label"],
+        )
+        path = os.path.join(DOCS_DIR, _with_suffix("weekly.html", font))
         with open(path, "w", encoding="utf-8") as f:
             f.write(html)
 

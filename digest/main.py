@@ -1,6 +1,6 @@
 import hashlib
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from .config import load_config
@@ -17,9 +17,16 @@ from .render import (
     render_digest,
     render_index,
     render_quiz,
+    render_weekly,
 )
 from .state import load_recent, load_seen, save_recent, save_seen
-from .summarize import generate_brief, generate_deep_read, generate_quiz, summarize_article
+from .summarize import (
+    generate_brief,
+    generate_deep_read,
+    generate_quiz,
+    generate_weekly_roundup,
+    summarize_article,
+)
 
 
 def _previous_entry(recent: dict, today: str):
@@ -29,6 +36,26 @@ def _previous_entry(recent: dict, today: str):
         return None, None
     day = days[-1]
     return recent[day], day
+
+
+def _week_articles(recent: dict, today: str, days: int = 7):
+    """Flatten the last `days` days of stored articles, tagging each with its date."""
+    try:
+        today_d = datetime.strptime(today, "%Y-%m-%d").date()
+    except ValueError:
+        return [], ""
+    start = today_d - timedelta(days=days - 1)
+    out = []
+    for day in sorted(recent.keys()):
+        try:
+            d = datetime.strptime(day, "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if start <= d <= today_d:
+            for a in recent[day]:
+                out.append({**a, "date": day})
+    label = f"{start.isoformat()} – {today_d.isoformat()}" if out else ""
+    return out, label
 
 
 def build_digest() -> None:
@@ -127,8 +154,24 @@ def build_digest() -> None:
     if todays_articles:
         recent[date_str] = todays_articles
 
+    # Weekly roundup: once a week, theme up the last 7 days from recent state.
+    # Only regenerated on the roundup weekday; other days keep the last one.
+    roundup = None
+    week_label = ""
+    if conf["weekly_roundup"] and datetime.now(tz).weekday() == conf["weekly_roundup_weekday"]:
+        week_arts, week_label = _week_articles(recent, date_str)
+        if week_arts:
+            try:
+                result = generate_weekly_roundup(week_arts, conf)
+                if result["intro"] or result["themes"]:
+                    roundup = result
+            except Exception as exc:
+                print(f"warning: weekly roundup failed: {exc}", file=sys.stderr)
+
     render_articles(date_str, categories, conf)
     render_digest(date_str, categories, conf, brief=brief)
+    if roundup:
+        render_weekly(roundup, week_label, conf)
     render_index(date_str, categories, conf, brief=brief)
     render_quiz(quiz_items, prev_date, conf)
     render_deep_read(deep, deep_article, conf)

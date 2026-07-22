@@ -14,6 +14,8 @@ _DEFAULTS = {
     "quiz_questions": 4,
     "editor_brief": True,
     "deep_read": True,
+    "weekly_roundup": True,
+    "weekly_roundup_weekday": 6,
     "interests": [],
     "provider": "gemini",
     "model": "gemini-2.5-flash",

@@ -43,6 +43,13 @@ editor_brief: true
 # page (docs/deepread.html). Set to false to turn it off.
 deep_read: true
 
+# Once a week, group the past 7 days of articles into themes and write a
+# longer roundup essay on its own page (docs/weekly.html). Set weekly_roundup
+# to false to turn it off. weekly_roundup_weekday is the day it's generated:
+# 0 = Monday ... 6 = Sunday.
+weekly_roundup: true
+weekly_roundup_weekday: 6
+
 # Keywords you care about. Articles whose title or summary mention more of
 # these get sorted first within their category (English/Chinese both work,
 # matching is case-insensitive substring). Leave empty to keep RSS order.
