@@ -9,6 +9,13 @@
 {% if prev_href %} ｜ <a href="{{ prev_href }}">← 前一日</a>{% endif %}
 </p>
 
+{% if brief %}
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>{{ brief }}</p>
+</div>
+{% endif %}
+
 {% if not categories %}
 <p>今日沒有新文章。</p>
 {% endif %}

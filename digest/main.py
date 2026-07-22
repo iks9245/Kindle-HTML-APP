@@ -17,7 +17,7 @@ from .render import (
     render_quiz,
 )
 from .state import load_recent, load_seen, save_recent, save_seen
-from .summarize import generate_quiz, summarize_article
+from .summarize import generate_brief, generate_quiz, summarize_article
 
 
 def _previous_entry(recent: dict, today: str):
@@ -81,6 +81,21 @@ def build_digest() -> None:
     for articles in categories.values():
         articles.sort(key=lambda a: -score_article(a, conf["interests"]))
 
+    todays_articles = [
+        {"title": a["title"], "summary": a["summary"], "source": a["source"]}
+        for articles in categories.values()
+        for a in articles
+    ]
+
+    # Editor's brief: one short cross-article overview of the day, baked into
+    # both today's front page and its archived copy.
+    brief = ""
+    if todays_articles and conf["editor_brief"]:
+        try:
+            brief = generate_brief(todays_articles, conf)
+        except Exception as exc:
+            print(f"warning: editor brief failed: {exc}", file=sys.stderr)
+
     # Recall quiz: questions come from the previous day's articles (spaced
     # review), and today's articles are stashed for tomorrow's quiz.
     recent = load_recent()
@@ -91,17 +106,12 @@ def build_digest() -> None:
             quiz_items = generate_quiz(prev_articles, conf, conf["quiz_questions"])
         except Exception as exc:
             print(f"warning: quiz generation failed: {exc}", file=sys.stderr)
-    todays_articles = [
-        {"title": a["title"], "summary": a["summary"], "source": a["source"]}
-        for articles in categories.values()
-        for a in articles
-    ]
     if todays_articles:
         recent[date_str] = todays_articles
 
     render_articles(date_str, categories, conf)
-    render_digest(date_str, categories, conf)
-    render_index(date_str, categories, conf)
+    render_digest(date_str, categories, conf, brief=brief)
+    render_index(date_str, categories, conf, brief=brief)
     render_quiz(quiz_items, prev_date, conf)
     prune_old_archives(conf["archive_retention_days"])
     prune_old_article_pages(conf["archive_retention_days"])

@@ -69,7 +69,7 @@ def _digest_title(date_str: str, language: str) -> str:
     return f"每日 AI 文摘 {date_str}" if language.startswith("zh") else f"Daily AI Digest {date_str}"
 
 
-def render_digest(date_str: str, categories: dict, conf: dict) -> None:
+def render_digest(date_str: str, categories: dict, conf: dict, brief: str = "") -> None:
     prev_dates = _existing_dates(exclude=date_str)
     prev_base = f"{prev_dates[-1]}.html" if prev_dates else None
 
@@ -80,6 +80,7 @@ def render_digest(date_str: str, categories: dict, conf: dict) -> None:
             title=_digest_title(date_str, conf["language"]),
             generated_at=date_str,
             categories=categories,
+            brief=brief,
             lang=conf["language"],
             home_href=_with_suffix("../index.html", font),
             archive_href=_with_suffix("index.html", font),
@@ -95,7 +96,7 @@ def render_digest(date_str: str, categories: dict, conf: dict) -> None:
             f.write(html)
 
 
-def render_index(date_str: str, categories: dict, conf: dict) -> None:
+def render_index(date_str: str, categories: dict, conf: dict, brief: str = "") -> None:
     os.makedirs(DOCS_DIR, exist_ok=True)
     tmpl = _env.get_template("digest.html.j2")
     for font in FONTS:
@@ -104,6 +105,7 @@ def render_index(date_str: str, categories: dict, conf: dict) -> None:
             title=_digest_title(date_str, conf["language"]),
             generated_at=date_str,
             categories=categories,
+            brief=brief,
             lang=conf["language"],
             home_href=None,
             archive_href=_with_suffix("archive/index.html", font),

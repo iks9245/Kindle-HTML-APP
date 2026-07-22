@@ -73,6 +73,22 @@ def _build_quiz_prompt(articles: list, language: str, num_questions: int) -> str
     )
 
 
+def _build_brief_prompt(articles: list, language: str) -> str:
+    blocks = []
+    for i, a in enumerate(articles, 1):
+        blocks.append(f"{i}. [{a['source']}] {a['title']}\n{a['summary']}")
+    joined = "\n\n".join(blocks)
+    return (
+        "You are the editor of a daily news digest. Below are today's article "
+        f"summaries. Write a single editor's brief of 2-4 sentences in {language} "
+        "that gives the reader the big picture — the main threads of the day and, "
+        "where it's natural, how stories connect — rather than just listing them. "
+        "Respond with ONLY a single JSON object (no markdown code fences, no "
+        'commentary) with one key "brief" whose value is that paragraph as a plain '
+        f"string.\n\nArticles:\n{joined}"
+    )
+
+
 def _loads_lenient(raw: str) -> dict:
     text = raw.strip()
     if text.startswith("```"):
@@ -144,3 +160,9 @@ def generate_quiz(articles: list, conf: dict, num_questions: int) -> list:
         if question and answer:
             items.append({"question": question, "answer": answer})
     return items
+
+
+def generate_brief(articles: list, conf: dict) -> str:
+    prompt = _build_brief_prompt(articles, conf["language"])
+    data = _loads_lenient(_complete(prompt, conf, max_tokens=400))
+    return str(data.get("brief", "")).strip()

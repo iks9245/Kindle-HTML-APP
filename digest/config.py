@@ -11,6 +11,7 @@ _DEFAULTS = {
     "archive_retention_days": 60,
     "seen_retention_days": 14,
     "quiz_questions": 4,
+    "editor_brief": True,
     "interests": [],
     "provider": "gemini",
     "model": "gemini-2.5-flash",
