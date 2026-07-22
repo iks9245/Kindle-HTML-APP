@@ -7,8 +7,10 @@ language: zh-TW
 # IANA timezone used to stamp each day's digest.
 timezone: Asia/Taipei
 
-# Max number of articles pulled from each feed per run.
-max_articles_per_feed: 5
+# Max number of articles pulled from each feed per run. Keep this low if
+# you're on the Gemini free tier — it caps gemini-2.5-flash at 5 requests
+# per minute, and total feeds x this number = requests per run.
+max_articles_per_feed: 3
 
 # LLM provider used for summarization: "gemini" (Google Gemini API) or
 # "openai" (OpenAI, or any OpenAI-compatible endpoint via openai_base_url).

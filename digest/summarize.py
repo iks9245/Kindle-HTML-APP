@@ -1,9 +1,23 @@
 import os
+import time
 
 MAX_SOURCE_CHARS = 6000
 
+_RETRY_ATTEMPTS = 4
+_RETRY_BASE_DELAY = 20  # seconds; doubles each retry to ride out rate limits
+
 _gemini_client = None
 _openai_client = None
+
+
+def _call_with_retry(fn):
+    for attempt in range(_RETRY_ATTEMPTS):
+        try:
+            return fn()
+        except Exception:
+            if attempt == _RETRY_ATTEMPTS - 1:
+                raise
+            time.sleep(_RETRY_BASE_DELAY * (2**attempt))
 
 
 def _get_gemini_client():
@@ -41,14 +55,20 @@ def summarize_article(title: str, text: str, conf: dict) -> str:
     model = conf["model"]
 
     if provider == "gemini":
-        resp = _get_gemini_client().models.generate_content(model=model, contents=prompt)
+        client = _get_gemini_client()
+        resp = _call_with_retry(
+            lambda: client.models.generate_content(model=model, contents=prompt)
+        )
         return resp.text.strip()
 
     if provider == "openai":
-        resp = _get_openai_client(conf.get("openai_base_url")).chat.completions.create(
-            model=model,
-            max_tokens=400,
-            messages=[{"role": "user", "content": prompt}],
+        client = _get_openai_client(conf.get("openai_base_url"))
+        resp = _call_with_retry(
+            lambda: client.chat.completions.create(
+                model=model,
+                max_tokens=400,
+                messages=[{"role": "user", "content": prompt}],
+            )
         )
         return resp.choices[0].message.content.strip()
 

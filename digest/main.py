@@ -1,3 +1,4 @@
+import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -23,7 +24,11 @@ def build_digest() -> None:
             text = extract_full_text(link, fallback)
             if not text:
                 continue
-            summary = summarize_article(title, text, conf)
+            try:
+                summary = summarize_article(title, text, conf)
+            except Exception as exc:
+                print(f"warning: skipping {title!r} ({feed['name']}): {exc}", file=sys.stderr)
+                continue
             articles.append({"title": title, "link": link, "summary": summary, "source": feed["name"]})
         if articles:
             categories.setdefault(feed.get("category", "General"), []).extend(articles)

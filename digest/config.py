@@ -7,7 +7,7 @@ DEFAULT_CONFIG_PATH = os.path.join(os.path.dirname(__file__), "..", "config.yaml
 _DEFAULTS = {
     "language": "zh-TW",
     "timezone": "UTC",
-    "max_articles_per_feed": 5,
+    "max_articles_per_feed": 3,
     "provider": "gemini",
     "model": "gemini-2.5-flash",
     "openai_base_url": None,
