@@ -1,0 +1,19 @@
+{
+  "2026-07-22": [
+    {
+      "source": "Hacker News",
+      "summary": "Codeberg 討論並通過了一項修正案，將使用條款（ToU）擴展至禁止「LLM生成內容」，特別是那些主要由大型語言模型（LLM）生成的代碼。此舉的動機主要是為了避免LLM生成代碼不確定的版權歸屬所帶來的法律風險，這對於一個非營利組織來說是個嚴峻的問題。儘管存在關於措辭的討論，該提案已被採納。\n\n- 主要禁止：主要由LLM生成的代碼內容。\n- 核心考量：LLM生成代碼的版權模糊性，對Codeberg構成潛在法律威脅。",
+      "title": "Codeberg: ToU extension to prohibit LLM-extrusions"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "這篇文章透過 `mcpgrade` 工具評估了36個流行的模型上下文協議 (MCP) 伺服器在AI代理可用性方面的表現。作者發現有三分之一的伺服器得分為D或F，即使是符合規範的伺服器也常因缺乏良好的描述、命名不清晰及差勁的架構設計而無法被代理有效使用。\n\n- 許多伺服器面臨「未記錄參數」的嚴重問題，尤其在從Zod或OpenAPI定義生成架構時，忽略了為參數添加說明。\n- 研究指出，代理可用性關鍵在於「文件紀律」而非單純的工程問題，修正參數描述是提升代理可靠性的最高槓桿點。",
+      "title": "I graded 36 popular MCP servers on agent usability. A third got a D or F"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "美國國防部長Pete Hegseth表示，與伊朗的戰爭迄今已耗費美國375億美元，並緊急向國會請求額外撥款870億美元，其中670億美元用於中東行動。\n這項請求遭到民主黨和部分共和黨的反對，他們質疑其必要性及對「永無止境的戰爭」的擔憂，尤其在上週停火破裂、敵對行動重新開始並導致三名美軍士兵喪生之後。\n* 美國自上次估計以來，戰爭成本增加了近80億美元。\n* 由於國會將休會至九月，資金撥款將被延遲。",
+      "title": "Iran war has cost US $37.5bn so far, Hegseth says, as Pentagon seeks billions more"
+    }
+  ]
+}

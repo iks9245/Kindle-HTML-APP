@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I graded 36 popular MCP servers on agent usability. A third got a D or F</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-22-8b5e06778b-sans.html">切換為無襯線字體顯示</a></p>
+
+<h1>I graded 36 popular MCP servers on agent usability. A third got a D or F</h1>
+<p class="meta">
+Hacker News
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://tengli.dev/posts/mcp-servers-failing-agents.html">原文網頁</a>
+</p>
+
+
+
+<p class="fulltext">I lint-scanned 36 popular MCP servers. A third of them are failing your agent.</p>
+
+<p class="fulltext">Your MCP server can be 100% spec-compliant and still be unusable by an agent.</p>
+
+<p class="fulltext">The Model Context Protocol spec tells you how to transport tools: JSON-RPC framing, capability negotiation, schema shapes. It says nothing about whether a model can actually use what you serve — whether it picks the right tool out of your catalog, fills the arguments correctly, or burns 8k tokens parsing your schemas on every single request.</p>
+
+<p class="fulltext">I integrate first- and third-party MCP connectors into a production AI agent for a living, and I kept seeing the same failure: servers that pass every compliance check, yet the model calls the wrong tool, hallucinates arguments, or ignores the tool entirely. The problems were never in the protocol layer. They were in the parts no one lints: descriptions, naming, schema design.</p>
+
+<p class="fulltext">So I wrote mcpgrade — a Lighthouse-style scorecard for MCP servers. One command, no API key, report in seconds:</p>
+
+<p class="fulltext">npx mcpgrade --stdio "npx -y your-mcp-server"</p>
+
+<p class="fulltext">Then I pointed it at 36 popular servers. It did not go great.</p>
+
+<p class="fulltext">The results</p>
+
+<p class="fulltext">Full sortable table: [https://tengli.dev/mcp-leaderboard.html]. The short version (static analysis, point-in-time snapshot; servers marked (archived) are unmaintained reference implementations, included because they're still widely installed and copied):</p>
+
+<p class="fulltext">Top of the class (A): brave-search (archived), exa, google-maps (archived), slack (archived), perplexity-ask, @shopify/dev-mcp, @apify/actors-mcp-server, airbnb, figma-developer-mcp, tavily, gitlab (archived), elastic, shrimp-task-manager, and more — 15 of 36.</p>
+
+<p class="fulltext">Bottom of the class (D/F), 11 of 36 — and it's not hobby projects: MongoDB's official server (66, with 66 errors), Notion's official server (62), Airtable (69, 66 errors), todoist-mcp-server (67, 110 errors), GitHub's archived reference server (67, 44 errors), and firecrawl-mcp at the very bottom (57, 134 errors).</p>
+
+<p class="fulltext">Two more servers (Stripe, Supabase) couldn't be scanned with dummy credentials and were excluded rather than graded.</p>
+
+<p class="fulltext">Finding 1: the ecosystem has an undocumented-parameter epidemic</p>
+
+<p class="fulltext">Almost every D/F server has a descriptions score of zero while its schema, naming, and token scores are fine. One rule dominates: D004 — parameter has no description.</p>
+
+<p class="fulltext">firecrawl: 132 of its 134 errors are undocumented parameters. url, formats, jsonOptions — the model gets a name and a type, nothing else. todoist: 110. MongoDB and Airtable: 66 each.</p>
+
+<p class="fulltext">The root cause is visible in the source of nearly all of them: schemas are generated from zod or OpenAPI definitions, and nobody adds .describe(). The type system knows url: string. The model needs to know which URL, in what format, with what constraints. Your schema generator is quietly stripping the single most important signal your tools have.</p>
+
+<p class="fulltext">If you take one thing from this post: open your server, count the parameters without a description, and fix them. It's the highest-leverage hour you can spend on agent reliability.</p>
+
+<p class="fulltext">Finding 2: it's documentation discipline, not catalog size — but size makes discipline harder</p>
+
+<p class="fulltext">My first pass at this data suggested "small catalogs win": most 95+ scorers have few tools, and the 24–26 tool servers cluster at D/F. Then shrimp-task-manager scored A/96 with 15 tools — carefully documented, tightly named, every description distinct.</p>
+
+<p class="fulltext">So the honest version: well-documented big catalogs are possible; they're just rare. Every tool you add is another description to write, another name that can collide, another schema to keep tight. Discipline doesn't scale by default. (Size still taxes you either way: the full catalog is serialized into every request.)</p>
+
+<p class="fulltext">Finding 3: compliance and usability are different axes</p>
+
+<p class="fulltext">The most-updated servers aren't the most usable ones. The archived Slack reference server — code nobody maintains — scores A/97, because someone once documented every tool and every parameter by hand. Meanwhile several actively-developed commercial servers ship parameters with no descriptions at all.</p>
+
+<p class="fulltext">Agent usability is a writing problem more than an engineering problem. Compliance checkers can't measure it. That's the gap mcpgrade fills.</p>
+
+<p class="fulltext">(One hopeful counterpoint: while writing this, context7 shipped a new version that fixed all its missing parameter descriptions — jumping from C to a perfect static score. The ecosystem can move fast when the gap is visible.)</p>
+
+<p class="fulltext">Finding 4: I checked the static scores against a real model. The scary number is refusal.</p>
+
+<p class="fulltext">Static lint is a proxy, so I built --eval: it synthesizes realistic single-step tasks (each embedding concrete values for every required parameter), shows a model the full catalog, and measures whether it picks the right tool and fills valid arguments. Calibration details and methodology: docs/eval-calibration.md. Cost: pennies per server on a small model.</p>
+
+<p class="fulltext">Two results worth your attention:</p>
+
+<p class="fulltext">Static findings predict live confusion. On well-documented servers, tool-selection accuracy was 100%. On firecrawl it dropped to 84% — and the misses land exactly on the naming collisions static rules flag: extract↔scrape, agent_status↔check_crawl_status, feedback↔search_feedback.</p>
+
+<p class="fulltext">Big fuzzy catalogs break refusal. Given deliberately out-of-scope tasks, the model correctly declined 100% of the time on small, well-documented catalogs — but only 50% of the time on firecrawl's 26 fuzzy tools. Half the time it "found" a plausible tool and called it. In production, that's an agent doing something when it should do nothing — arguably the most dangerous failure mode there is.</p>
+
+<p class="fulltext">What "good" looks like</p>
+
+<p class="fulltext">From the top scorers, a checklist:</p>
+
+<p class="fulltext">- Every tool description answers three questions: what it does, when to use it, what it returns.</p>
+
+<p class="fulltext">- Every parameter has a description with format and one example value.</p>
+
+<p class="fulltext">- Fixed value sets live in enum, not in prose.</p>
+
+<p class="fulltext">- requiredis declared explicitly — even when it's empty.</p>
+
+<p class="fulltext">- One naming convention, verb_object style, no generic verbs, no near-twin names.</p>
+
+<p class="fulltext">- Errors name the missing/invalid parameter so the model can self-correct in one turn.</p>
+
+<p class="fulltext">Try it on your server</p>
+
+<p class="fulltext">npx mcpgrade --stdio "node ./my-server.js"   # local stdio</p>
+
+<p class="fulltext">npx mcpgrade https://my-server.example/mcp    # streamable HTTP</p>
+
+<p class="fulltext">npx mcpgrade <target> --fail-on error         # CI gate</p>
+
+<p class="fulltext">npx mcpgrade <target> --eval                  # live model test (BYO key; any OpenAI-compatible endpoint works)</p>
+
+<p class="fulltext">24 rules, each with a concrete fix and a rationale you're welcome to dispute in the issues — the ruleset is opinionated by design, and I'd rather have the argument in public. (How this differs from mcp-lint and other MCP QA tools — with side-by-side outputs: docs/comparison.md.)</p>
+
+<p class="fulltext">If you maintain one of the servers above and fix your score, open a rescan issue — I'll happily re-run and update the table. PRs to your own servers beat arguments with my ruleset.</p>
+
+<p class="fulltext">I build production AI agent integrations at a large tech company; mcpgrade is a personal project and reflects scars from integrating dozens of MCP connectors. No affiliation with any server ranked above.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>模型上下文協議 (MCP) 是什麼？為何其可用性對AI代理來說如此重要？</summary>
+  <p>MCP 是一種用於在模型和工具之間傳輸訊息、協商能力和定義模式的規範。其可用性至關重要，因為即使協議本身符合標準，若工具描述不清或命名不佳，AI代理仍可能無法正確選擇工具、填寫參數，甚至在不應操作時執行錯誤任務，嚴重影響代理的可靠性和安全性。</p>
+</details>
+
+<details>
+  <summary>文章指出許多伺服器因「未記錄參數」而表現不佳，開發者應如何解決這個常見問題？</summary>
+  <p>解決此問題的關鍵是在定義工具參數時，為每個參數提供清晰詳細的描述，說明其用途、格式和範例值。特別是對於從Zod或OpenAPI等工具生成的架構，開發者需要主動加入 `.describe()` 等方法來確保這些關鍵資訊被保留，而不是被默默地捨棄。</p>
+</details>
+
+<details>
+  <summary>文章區分了「合規性」和「可用性」，這意味著什麼？為何合規性檢查器無法衡量可用性？</summary>
+  <p>「合規性」是指伺服器是否遵循協議的技術規範，例如JSON-RPC框架或模式形狀，而「可用性」則是指AI模型是否能實際理解並有效利用伺服器提供的工具。合規性檢查器只能驗證技術規範，無法判斷描述的清晰度、命名是否容易混淆或架構設計是否對模型友好，這些都是影響代理實際操作能力的「寫作」而非單純的「工程」問題。</p>
+</details>
+
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Codeberg: ToU extension to prohibit LLM-extrusions</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-22-45436653d7.html">切換為襯線字體顯示</a></p>
+
+<h1>Codeberg: ToU extension to prohibit LLM-extrusions</h1>
+<p class="meta">
+Hacker News
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://codeberg.org/Codeberg/org/pulls/1253">原文網頁</a>
+</p>
+
+
+
+<p class="fulltext">Proposal Assembly 2026: ToU extension to prohibit LLM-extrusions #1253</p>
+
+<p class="fulltext">No reviewers</p>
+
+<p class="fulltext">Labels</p>
+
+<p class="fulltext">No labels</p>
+
+<p class="fulltext">duplicate</p>
+
+<p class="fulltext">enhancemenet</p>
+
+<p class="fulltext">privacypolicy</p>
+
+<p class="fulltext">enhancement</p>
+
+<p class="fulltext">enhancement</p>
+
+<p class="fulltext">bylaws</p>
+
+<p class="fulltext">enhancement</p>
+
+<p class="fulltext">tos</p>
+
+<p class="fulltext">help wanted</p>
+
+<p class="fulltext">invalid</p>
+
+<p class="fulltext">question</p>
+
+<p class="fulltext">reviewed</p>
+
+<p class="fulltext">wontfix</p>
+
+<p class="fulltext">No milestone</p>
+
+<p class="fulltext">No assignees</p>
+
+<p class="fulltext">10 participants</p>
+
+<p class="fulltext">Notifications</p>
+
+<p class="fulltext">Due date</p>
+
+<p class="fulltext">No due date set.</p>
+
+<p class="fulltext">Dependencies</p>
+
+<p class="fulltext">No dependencies set</p>
+
+<p class="fulltext">Reference</p>
+
+<p class="fulltext">Codeberg/org!1253</p>
+
+<p class="fulltext">Loading…</p>
+
+<p class="fulltext">Reference in a new issue</p>
+
+<p class="fulltext">No description provided.</p>
+
+<p class="fulltext">Delete branch "gedankenstuecke/org:20260629-llm-proposal"</p>
+
+<p class="fulltext">Deleting a branch is permanent. Although the deleted branch may continue to exist for a short time before it actually gets removed, it CANNOT be undone in most cases. Continue?</p>
+
+<p class="fulltext">Here is the proposed addition for the ToU that @Gusted and I agreed on post-assembly for the upcoming membership vote. 🙏</p>
+
+<p class="fulltext">The discussion for this proposal is available for Codeberg e. V. members in the forum: https://forum.codeberg.org/d/139-resolutions-for-assembly-on-codeberg-taking-a-stand-against-ai</p>
+
+<p class="fulltext">Signed-off-by: gedankenstuecke gedankenstuecke@noreply.codeberg.org</p>
+
+<p class="fulltext">Agree with the suggestion in spirit, but correct English would be:</p>
+
+<p class="fulltext">"Such projects have an unclear copyright status..."</p>
+
+<p class="fulltext">and either</p>
+
+<p class="fulltext">"...furthermore have little safeguard..."</p>
+
+<p class="fulltext">or</p>
+
+<p class="fulltext">"...furthermore have few safeguards..."</p>
+
+<p class="fulltext">As highlighted by @Gusted for #1254, status quo for now due to being sent for voting, minor edits can be made by the board/presidium if the text generally passes.</p>
+
+<p class="fulltext">"You must not share projects"</p>
+
+<p class="fulltext">"that mostly consist of code "</p>
+
+<p class="fulltext">Beyond it being too late for substantial changes, it's out of scope for this change. It uses the identical language around sharing as used for the other points on acceptable/unacceptable content.</p>
+
+<p class="fulltext">If you understand what sharing means in the context of "You must not share any content that's expressing hate or encouraging violence", the same applies here.</p>
+
+<p class="fulltext">I am in favor of this proposal. The copyright issues alone are sufficient to be problematic for a non-profit.</p>
+
+<p class="fulltext">@infosec812 wrote in #1253 (comment):</p>
+
+<p class="fulltext">The copyright issue is always relevant, not directly related to this proposal alone.</p>
+
+<p class="fulltext">It’s also quite often broken, as is LICENSE</p>
+
+<p class="fulltext">Seems to me like it goes a bit far to not be allowed to share it for educational purposes (the readme could carry a prominent notice; the main file could be broken on purpose so it cannot be run as-is; etc.) as well as prohibiting manually reading the code and then sharing it. E.g. if it's a 150-line python utility, you can perfectly well read, understand, and test it, and only then share it, but this would now be disallowed without writing another 75 dummy lines. I am really conflicted what to vote on this specific wording for the terms of use since I also see the upsides</p>
+
+<p class="fulltext">Slapping the label "educational purposes" is not a get-out-of-jail-free card. It doesn't magically make the copyright issues go away. Even if it did in certain jurisdictions, it certainly doesn't in others.</p>
+
+<p class="fulltext">As far as I understand it, this isn't about the wording being fool-proof & covering all corner cases. It's supposed to capture our intent & sentiment as well as reflect reality: even while you could read that one 150 line Python script & fully test & understand it, reality shows that regularly reviewing huge LLM contributing quickly degenerates into "LGTM, merge" due to fatigue etc. The majority of "mostly just LLM-generated" code will not be thoroughly understood and reviewed.</p>
+
+<p class="fulltext">Don't let perfect be the enemy of good. Such wording doesn't need to cover every possible case.</p>
+
+<p class="fulltext">I'm in favor.</p>
+
+<p class="fulltext">Why is the focus exclusively on "copyright status"? Codeberg is meant to be the ethical alternative, so the ethical issues should also be brought up, not shoved aside.</p>
+
+<p class="fulltext">also, "mostly" is up to too-lenient interpretation. would that mean a codebase that is 49% slop will be platformed? something like "in significant part" would be better. make it clear that no contributor notably outsourcing their thinking to an LLM is part of the target audience here.</p>
+
+<p class="fulltext">"A contribution should be worth more to the project than the time it takes to review it."</p>
+
+<p class="fulltext">hi! i'm not on the codeberg team at all, but i wanted to reply my thoughts. The short answer is because, in meme terms "we live in a society". Copyright is an unavoidable fact and LLMs are right now working in a legal gray area which can be problematic, SPECIALLY for open source projects! What if suddenly the AI companies lobby laws to make sure the copyright of LLM-coded projects goes towards them? Or something like asking for percentages of profit, exclusive usage, etc. Even if you were to make your case via the judicial route, how many Open Source projects have the money to fight that? Working in a legal gray area is pracitcally a blank check that allows these companies to force projects to god-knows-what in the future.</p>
+
+<p class="fulltext">To the rest of everyone here, I totally agree and am also worried about this! I've been thinking that the best scenario for llms is basically assisted typing. While the worst case is agentic hands-off vibecoding. The bad bit is this is a spectrum definitely, so where do we draw the line? I think for starters LLM-automated commits or PRs could be prohibited. The Godot team is prohibiting the usage of LLMs for human-to-human communication (as well as just generally in the project basically) which I think it's a good idea. I'm quite interested to see how this discussion evolves and particularly where do we draw the line? as I like seeing the possibility of good usages of LLMs. But again, the legal concerns are real and unavoidable</p>
+
+<p class="fulltext">legal concerns are unavoidable yes ^^ but they aren't the only concerns are they? while the current reasoning works the case against slop is much larger than just that</p>
+
+<p class="fulltext">This has passed. @gedankenstuecke and I will prepare a blog post about this along with the statement about the usage of AI by Codeberg which also passed.</p>
+
+<p class="fulltext">@Gusted where can the vote result be seen (for a passive codeberg member who was thus not invited to vote, this time).</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Codeberg作為一個強調道德的平台，為何將重點放在版權問題而非道德議題上？</summary>
+  <p>儘管道德問題被承認，但版權是任何專案，特別是開源專案，都無法迴避的實際法律問題。版權歸屬不清會產生法律灰色地帶，可能被AI公司利用，導致潛在的利潤分成或獨家使用要求，而大多數開源專案缺乏資源來應對此類法律訴訟。</p>
+</details>
+
+<details>
+  <summary>提案中提到的「主要由LLM生成的代碼」具體指的是什麼，以及將如何執行？</summary>
+  <p>文章承認「主要」一詞可能存在解釋空間，但其意圖是阻止貢獻者「將他們的思考外包」給LLM。提案旨在傳達「貢獻的價值應超過審查所需的時間」的精神，不鼓勵大量未經徹底理解和審查的LLM生成代碼。</p>
+</details>
+
+<details>
+  <summary>這項禁令是否有例外情況，例如用於教育目的或LLM提供的輕微輔助？</summary>
+  <p>討論中明確指出，「教育目的」並不能作為規避版權問題的「免死金牌」，因為法律解釋因司法管轄區而異。此提案旨在應對現實情況，即審查大量LLM生成代碼常導致審查疲勞。儘管輕微輔助可能存在於一個連續的光譜上，但總體意圖是禁止主要由這類內容組成的專案，旨在傳達其精神而非涵蓋所有細節。</p>
+</details>
+
+</div>
+
+
+</div>
+</body>
+</html>
