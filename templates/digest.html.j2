@@ -28,7 +28,7 @@
   {% endfor %}
   </div>
   {% endif %}
-  <p class="source">{{ a.source }} ｜ <a href="{{ a.link }}">閱讀原文</a></p>
+  <p class="source">{{ a.source }}{% if a.slug %} ｜ <a href="{{ article_prefix }}{{ a.slug }}{{ font_suffix }}.html">全文</a>{% endif %} ｜ <a href="{{ a.link }}">原文網頁</a></p>
 </article>
 {% endfor %}
 {% endfor %}

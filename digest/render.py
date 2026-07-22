@@ -41,6 +41,16 @@ def _archive_dir() -> str:
     return d
 
 
+def _article_dir() -> str:
+    d = os.path.join(DOCS_DIR, "article")
+    os.makedirs(d, exist_ok=True)
+    return d
+
+
+def _split_paragraphs(text: str) -> list:
+    return [line.strip() for line in text.splitlines() if line.strip()]
+
+
 def _existing_dates(exclude: str | None = None) -> list:
     """Canonical (serif-filename) dates only — font variants share these dates."""
     d = _archive_dir()
@@ -77,6 +87,8 @@ def render_digest(date_str: str, categories: dict, conf: dict) -> None:
             font_family=FONTS[font]["family"],
             font_href=_with_suffix(f"{date_str}.html", other),
             font_label=FONTS[other]["label"],
+            article_prefix="../article/",
+            font_suffix=FONTS[font]["suffix"],
         )
         path = os.path.join(_archive_dir(), _with_suffix(f"{date_str}.html", font))
         with open(path, "w", encoding="utf-8") as f:
@@ -99,10 +111,62 @@ def render_index(date_str: str, categories: dict, conf: dict) -> None:
             font_family=FONTS[font]["family"],
             font_href=_with_suffix("index.html", other),
             font_label=FONTS[other]["label"],
+            article_prefix="article/",
+            font_suffix=FONTS[font]["suffix"],
         )
         path = os.path.join(DOCS_DIR, _with_suffix("index.html", font))
         with open(path, "w", encoding="utf-8") as f:
             f.write(html)
+
+
+def render_articles(date_str: str, categories: dict, conf: dict) -> None:
+    """One offline full-text page per article, in each font variant.
+
+    Filenames are prefixed with the digest date so they can be pruned on the
+    same schedule as the archive pages that link to them.
+    """
+    tmpl = _env.get_template("article.html.j2")
+    for articles in categories.values():
+        for a in articles:
+            slug = a.get("slug")
+            if not slug:
+                continue
+            paragraphs = _split_paragraphs(a.get("full_text", ""))
+            base_name = f"{slug}.html"
+            for font in FONTS:
+                other = _other_font(font)
+                html = tmpl.render(
+                    title=a["title"],
+                    lang=conf["language"],
+                    source=a["source"],
+                    original_link=a["link"],
+                    paragraphs=paragraphs,
+                    qa=a.get("qa"),
+                    home_href=_with_suffix("../index.html", font),
+                    archive_href=_with_suffix("../archive/index.html", font),
+                    font_family=FONTS[font]["family"],
+                    font_href=_with_suffix(base_name, other),
+                    font_label=FONTS[other]["label"],
+                )
+                path = os.path.join(_article_dir(), _with_suffix(base_name, font))
+                with open(path, "w", encoding="utf-8") as f:
+                    f.write(html)
+
+
+def prune_old_article_pages(retention_days: int) -> None:
+    if not retention_days or retention_days <= 0:
+        return
+    cutoff = date.today() - timedelta(days=retention_days)
+    d = _article_dir()
+    for fname in os.listdir(d):
+        if not fname.endswith(".html"):
+            continue
+        try:
+            file_date = datetime.strptime(fname[:10], "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if file_date < cutoff:
+            os.remove(os.path.join(d, fname))
 
 
 def prune_old_archives(retention_days: int) -> None:
