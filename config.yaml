@@ -28,6 +28,10 @@ seen_retention_days: 14
 # 0 to turn the quiz off.
 quiz_questions: 4
 
+# Show an AI "editor's brief" at the top of each day's digest: one short
+# paragraph tying together the day's stories. Set to false to turn it off.
+editor_brief: true
+
 # Keywords you care about. Articles whose title or summary mention more of
 # these get sorted first within their category (English/Chinese both work,
 # matching is case-insensitive substring). Leave empty to keep RSS order.
