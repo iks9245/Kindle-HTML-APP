@@ -51,6 +51,18 @@
   .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
   .fontswitch a { text-decoration: underline; }
 
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
   .qa { margin: .5em 0 0 0; }
   .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
   .qa summary { cursor: pointer; font-size: .9em; }
@@ -77,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日焦點集中於中東地緣政治的雙重緊張：美國與沙烏地阿拉伯的核協議引發核擴散擔憂，而葉門胡塞武裝在紅海的航運威脅則直接衝擊全球供應鏈。與此同時，科學界突破不斷，NASA朱諾號深入探測木衛一的火山活動，揭示其地下熱源奧秘，同時在生物學領域，從極端微生物到粒線體對心智的影響，甚至對細胞智慧的重新定義，都深化了我們對生命本質的理解。科技創新則持續推進，包括利用熱雜訊的熱力學電腦、可客製化的3D列印拉鍊，以及提升應用開發效率的視覺編輯器。</p>
+<p>今日新聞焦點落在太空探索與科技創新。美國太空總署（NASA）不僅啟用逾四十載首座新風洞以支持登月計畫，更成功發射機器人任務載具，將利用先進技術延長衛星壽命，展現其太空科技的持續進步。同時，電腦領域也迎來效能突破，無論是透過SIMD技術優化CPU運算，或是開發出速度快千倍的語言模型分詞器GigaToken，都預示著未來處理巨量數據將更加高效。</p>
 </div>
 
 
@@ -87,422 +99,187 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>Launch HN: Unlayer (YC W22) – Add email and document builders to your app</h3>
-  <p class="summary">Unlayer 是一個專為應用程式開發者設計的嵌入式視覺編輯器平台，讓您能輕鬆地將電子郵件、網頁、彈出視窗和文件建構器整合到自己的應用中。它提供統一的拖放介面，可創建響應式內容，並支援 AI 輔助內容生成及多種格式導出，大幅提升應用程式的內容創作與管理效率。
+  <h3>Everyone Should Know SIMD</h3>
+  <p class="summary">SIMD（單指令多數據）是一種CPU技術，能讓處理器同時對多個值進行操作，從而大幅加速程式中重複的迴圈處理。作者指出，儘管SIMD常被認為複雜或小眾，但其基本概念和常見的「一次處理N個值」的模式實際上很容易理解與應用。對於處理大量數據的迴圈而言，學習並應用SIMD能帶來顯著的性能提升，達到4倍、8倍甚至更高的加速效果。
 
-主要特點：
-- 一站式整合多種內容建構器。
-- 支援 AI 內容生成與多元導出格式。</p>
+主要重點：
+- SIMD透過平行處理多個數據來提升效能。
+- 遵循標準的五個步驟，開發者能更有效地運用SIMD。
+- 適用於處理龐大數據集的場景，效益顯著。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>哪些類型的應用程式最適合整合 Unlayer？</summary>
-    <p>經常需要用戶創建或個性化各類內容的應用程式，例如行銷自動化平台、CRM 系統、用於提案的 HR 工具，或是內部溝通工具，都能從整合 Unlayer 中獲益良多。</p>
+    <summary>哪些程式語言支援SIMD？</summary>
+    <p>文章雖然使用Zig作為範例，但指出SIMD的概念適用於任何程式語言，並期待未來更多程式語言能揭露這些通用概念。通常，C/C++等低階語言透過內建函數（intrinsics）提供直接的SIMD支援，而一些高階語言可能透過函式庫或編譯器優化來利用SIMD。</p>
   </details>
   
   <details>
-    <summary>Unlayer 如何確保電子郵件的響應式設計和跨客戶端兼容性？</summary>
-    <p>Unlayer 內建了優化響應式郵件的功能，確保用戶所創建的電子郵件內容能在 Gmail、Outlook 和 Apple Mail 等主流郵件客戶端中可靠且一致地呈現，大幅減少兼容性問題。</p>
+    <summary>摘要中提到的SIMD「通用模式」包含哪五個步驟？</summary>
+    <p>SIMD的通用模式包含五個步驟：首先，廣播所需的常數並初始化向量累加器；接著，以向量寬度為單位遍歷輸入數據塊；然後，在所有通道中平行執行比較或算術運算；第四步，根據需要縮減或儲存向量結果；最後，使用純量尾部處理任何剩餘的元素。</p>
   </details>
   
   <details>
-    <summary>文章中提到「AI 輔助在內容區塊、區段和文件層級」具體指的是什麼？</summary>
-    <p>這意味著 AI 可以在內容創建的各個層面提供幫助，例如自動生成文字段落、改寫特定內容塊以改善語氣或清晰度，甚至為整個文件提供結構建議或初步草稿，讓使用者更快速高效地完成內容製作。</p>
+    <summary>在什麼情況下，使用SIMD反而不值得？</summary>
+    <p>文章指出，只有當需要定期處理「足夠大量」的數據時，SIMD才值得應用。如果迴圈只涉及幾十個或少量位元組的數據，其開銷可能會超過所帶來的效益，此時就不值得投入精力去實作SIMD優化。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-bc03442471-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://unlayer.com">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-2a21281a60-sans.html">全文（約 11 分鐘）</a> ｜ <a href="https://mitchellh.com/writing/everyone-should-know-simd">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Does creatine make you smarter?</h3>
-  <p class="summary">肌酸是一種天然營養素，存在於肉類中且人體也會自行合成，並非類固醇或荷爾蒙。研究顯示它不會導致脫髮或增加睾酮，且在建議劑量下被認為是安全的。肌酸能顯著提升力量和衝刺表現，因為它在肌肉細胞中充當能量儲備，但在耐力運動中效果不顯著。透過補充肌酸，肌肉內的肌酸水平可提升約16.67%，進而增加短時間的能量儲備，這與力量試驗中觀察到的5-15%力量增幅一致。
-- 肌酸是安全的營養素，非藥物或類固醇。
-- 主要功能是提供肌肉細胞短期能量，提升爆發力。</p>
+  <h3>Terrence Tao's ChatGPT Conversation about the Jacobian Conjecture Counterexample</h3>
+  <p class="summary">此文章旨在鼓勵用戶登入以解鎖進階功能。登入後，用戶可以獲得根據其儲存聊天紀錄量身定制的回應，並具備建立圖像及上傳檔案的能力。
+這是一個標準的用戶提示，目的在於提升平台的使用體驗，提供更個人化的服務。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>人體和肉類中都含有肌酸，那它在身體裡的主要生理功能是什麼？</summary>
-    <p>肌酸在細胞內負責傳遞能量，它能將磷酸肌酸轉化為ATP（三磷酸腺苷），為肌肉提供快速的能量來源。這對於高強度、短時間的活動，如舉重和短跑，至關重要。</p>
+    <summary>這個提示的主要目的是什麼？</summary>
+    <p>這個提示的主要目的是鼓勵用戶登入，以便他們能夠使用該平台的更多個人化和進階功能，例如基於過去互動的客製化回應。</p>
   </details>
   
   <details>
-    <summary>為什麼肌酸對提升力量和衝刺表現有幫助，但對長距離耐力運動的益處卻很小？</summary>
-    <p>肌酸主要透過增加肌肉細胞的磷酸肌酸儲備來提供短期、爆發性的能量。耐力運動依賴的是更長時間的能量供應系統，例如有氧代謝，這與肌酸提供快速能量儲備的機制不同。因此，肌酸在需要持續長時間能量而非瞬間爆發力的活動中，效果不明顯。</p>
+    <summary>登入後用戶可以期待哪些額外的功能？</summary>
+    <p>登入後，用戶將能夠根據他們儲存的聊天記錄獲得量身定制的回應，並且還能使用建立圖像和上傳檔案的功能，這些都是未登入狀態下無法使用的。</p>
   </details>
   
   <details>
-    <summary>哪些人群特別適合補充肌酸？素食者是否需要更多關注肌酸補充？</summary>
-    <p>進行高強度力量訓練或短跑運動員最能從肌酸補充中獲益，以提升表現。由於素食者的飲食中缺乏肉類來源的肌酸，他們的肌肉肌酸水平通常較低，因此補充肌酸對他們來說可能特別有利，能幫助他們達到與雜食者相似的水平。</p>
+    <summary>為什麼這個服務需要用戶登入才能提供這些特定功能？</summary>
+    <p>這些功能通常需要存取用戶的個人資料（如聊天紀錄）以提供個人化服務，或需要進行身份驗證以確保檔案上傳和圖像建立的安全性和歸屬性，因此需要用戶登入。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-05846c603f-sans.html">全文（約 21 分鐘）</a> ｜ <a href="https://dynomight.net/creatine/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-8fcc591b02-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>A Zipper Patent Sat in a Garage for 40 Years. Now It's Real</h3>
-  <p class="summary">Bill Freeman在1985年提出了三面拉鍊的概念，能夠將柔軟的結構轉變為堅固的承重物。經過近四十年，麻省理工學院（MIT）的CSAIL團隊終於將其實現，開發出可透過3D列印製造的Y-Zipper。
-這項創新技術提供了「可調式剛度」功能，能讓物體在柔性與剛性之間輕鬆轉換，並可透過軟體進行客製化設計。其應用潛力廣泛，涵蓋露營裝備、醫療器材和機器人等領域，挑戰了材料特性的傳統觀念。
-*   發明概念源於1985年，經過近40年才得以實現。
-*   可透過軟體客製化設計，並使用3D列印製造。</p>
+  <h3>GigaToken: ~1000x faster Language model tokenization</h3>
+  <p class="summary">GigaToken 是一種創新的語言模型分詞器，速度比現有的 HuggingFace Tokenizers 和 Tiktoken 快約 1000 倍，能以 GB/s 的速度處理文本資料。儘管 HF 和 Tiktoken 已採用多執行緒 Rust 實作，GigaToken 仍透過其專屬 API 實現了顯著的性能提升，提供廣泛的 CPU 硬體和常見分詞器支援。使用者可以選擇以相容模式或透過其專屬 API 進行整合，後者能帶來最佳效能。
+- 速度提升：比 HuggingFace Tokenizers 和 Tiktoken 快約 1000 倍，達到 GB/s 級別的處理速度。
+- 靈活整合：提供與現有工具的相容模式，但使用其專屬 API 可實現最大效能。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>既然Y-Zipper的概念早在1985年就已提出並獲得專利，為何直到現在才被MIT的團隊實現？</summary>
-    <p>文章指出，Bill Freeman在1985年的設計競賽中被拒絕，且當時的工具和技術尚未成熟到足以實現他的想法。近四十年後，MIT的CSAIL團隊才擁有3D列印等技術，能將其概念轉化為實際產品。</p>
+    <summary>GigaToken 是如何實現比現有分詞器快上千倍的驚人速度？</summary>
+    <p>GigaToken 之所以能達到如此顯著的速度提升，主要歸功於其專屬 API。該 API 允許 Rust 實作直接讀取資料，最大限度地減少了操作開銷，並實現了極致的平行處理能力。即使其他熱門分詞器已採用多執行緒 Rust，GigaToken 仍透過這些深層次的優化找到了突破性的性能瓶頸。</p>
   </details>
   
   <details>
-    <summary>文章提到Y-Zipper實現了「可調式剛度」，這具體是指什麼？為何Y-Zipper在這一領域被視為一項突破？</summary>
-    <p>「可調式剛度」指的是物體能夠在柔軟彈性和堅固承重兩種狀態之間自由切換的能力。Y-Zipper的突破在於它提供了一種簡單、可逆且自動化的解決方案，克服了以往此類結構難以逆轉或需要大量手動組裝的問題。</p>
+    <summary>對於已經在使用 HuggingFace Tokenizers 或 Tiktoken 的開發者來說，整合 GigaToken 有哪些實用考量？</summary>
+    <p>對於現有使用者，GigaToken 提供了便利的相容模式，可以作為現有 HuggingFace Tokenizers 或 Tiktoken 的直接替代品，程式碼改動最少。然而，要充分利用 GigaToken 近千倍的性能提升，建議透過其專屬 API 進行整合，因為相容模式雖然更快，但無法完全達到最佳的 1000 倍速度。</p>
   </details>
   
   <details>
-    <summary>目前Y-Zipper有哪些局限性？未來還有哪些潛在的改進方向？</summary>
-    <p>目前Y-Zipper僅限於使用塑膠線材製造。研究團隊正努力探索使用金屬材料以提升耐用度和強度，並計畫將其應用擴展到更大的結構上。</p>
+    <summary>GigaToken 這種高速分詞器主要適用於哪些應用場景或用戶？</summary>
+    <p>GigaToken 非常適合需要處理大規模文本資料的應用場景，例如大型語言模型（LLM）的資料預處理和訓練。它能以每秒數 GB 的速度進行分詞，顯著加速整個資料處理流程，對於資料密集型且對處理速度要求嚴苛的任務尤其有價值。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-6f315bc047-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.yankodesign.com/2026/05/31/a-zipper-patent-sat-in-a-garage-for-40-years-now-its-real/">原文網頁</a></p>
-</article>
-
-
-<h2>國際 World</h2>
-
-<article>
-  <h3>US to announce deal allowing Saudi Arabia a nuclear programme</h3>
-  <p class="summary">美國預計將宣布一項與沙烏地阿拉伯的協議，允許該國發展民用核計畫。這項為期30年、價值數百億美元的協議，可能允許沙烏地阿拉伯在其境內濃縮鈾以生產核燃料，而非依賴進口。然而，此舉已引發以色列、核專家以及核不擴散倡議者的擔憂，他們擔心這可能導致沙烏地阿拉伯最終發展核武器，尤其是在其王儲曾表示若伊朗擁核，沙國也將跟進的情況下。
-* 沙烏地阿拉伯可能獲准在其境內濃縮鈾，這與過往的核協議有所不同。
-* 此協議的背景涉及與伊朗的區域核競賽潛在關聯，沙烏地王儲曾表態若伊朗擁核，沙國將會跟進。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>為什麼沙烏地阿拉伯獲准在其境內濃縮鈾的條款會引發如此大的擔憂？</summary>
-    <p>境內濃縮鈾的技術除了可用於生產核電站的燃料，也可用於製造核武器。與美國在2009年與阿拉伯聯合大公國簽署的協議不同，後者不生產自己的核燃料並接受其他限制，因此沙烏地阿拉伯的這項條款被視為可能為其發展核武器打開大門，增加了核擴散的風險。</p>
-  </details>
-  
-  <details>
-    <summary>文章中提到此協議與伊朗局勢相關，沙烏地阿拉伯發展核能力與伊朗之間有何具體關聯？</summary>
-    <p>沙烏地阿拉伯的實際統治者穆罕默德·本·薩勒曼王儲曾在2018年表示，沙國目前不打算獲取核武器，但「如果伊朗研發出核彈，我們將會盡快跟進」。這表明沙烏地阿拉伯的核計畫被視為對伊朗潛在核能力的潛在回應，增加了中東地區的核軍備競賽風險。</p>
-  </details>
-  
-  <details>
-    <summary>這項協議將面臨哪些反對與挑戰？</summary>
-    <p>除了以色列、核專家和核不擴散倡議者的擔憂外，美國國會的一些兩黨議員也預計會反對這項協議。儘管川普的共和黨控制著國會兩院，但該協議仍需送交國會審議，這可能成為其最終批准的主要障礙。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">BBC World News ｜ <a href="../article/2026-07-23-b9a681b562-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cj03r59z73po?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>Tankers make sharp U-turns after Houthi shipping threat</h3>
-  <p class="summary">葉門胡塞武裝組織宣布對沙烏地阿拉伯實施「海上禁運」後，至少七艘油輪在紅海附近掉頭，改變航向。此禁運旨在禁止船隻在沙烏地港口裝卸貨物，並威脅將對其進行襲擊。紅海是全球約15%海上貿易的關鍵航線，特別是沙烏地阿拉伯石油出口的重要通道，胡塞的行動恐導致油價上漲並擾亂全球市場。
-- 紅海-亞丁灣是連接地中海（蘇伊士運河）和波斯灣（曼德海峽）的重要航道。
-- 胡塞武裝過去曾因加薩戰爭攻擊紅海商船，此次禁運則聲稱是報復沙烏地對葉門的封鎖。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>紅海對全球貿易，特別是沙烏地阿拉伯，為何如此重要？</summary>
-    <p>紅海透過蘇伊士運河連接地中海，並經由曼德海峽連接亞丁灣，是全球約15%海上貿易的關鍵動脈。對沙烏地阿拉伯而言，由於美國與以色列對伊朗戰爭導致荷姆茲海峽實際關閉，紅海對其石油出口變得更加重要，超過70%的原油經由此處運往延布等紅海港口。</p>
-  </details>
-  
-  <details>
-    <summary>如果胡塞武裝的威脅持續或升級，可能帶來哪些更廣泛的經濟後果？</summary>
-    <p>如果胡塞武裝的威脅持續或升級，可能會抑制紅海和亞丁灣的所有國際航運，而不僅限於前往沙烏地阿拉伯的船隻。這很可能導致全球運費和能源價格顯著上漲，最終轉嫁到消費者身上。儘管對消費者的即時影響可能不那麼劇烈，但本已脆弱的全球能源系統可能會面臨嚴重的衝擊。</p>
-  </details>
-  
-  <details>
-    <summary>胡塞武裝過去是否曾對航運做出類似威脅或採取行動？其聲稱的原因為何？</summary>
-    <p>是的，胡塞武裝過去曾對曼德海峽造成嚴重干擾。在2023年10月加薩戰爭爆發後不久，他們便開始襲擊紅海和亞丁灣的商船，聲稱此舉是為了支持巴勒斯坦人。這些過去的襲擊導致數艘船隻沉沒或被扣押，並造成船員死亡。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">BBC World News ｜ <a href="../article/2026-07-23-cce6611a1b-sans.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cn0n127lpzgo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-e08b4c6de4-sans.html">全文（約 10 分鐘）</a> ｜ <a href="https://github.com/marcelroed/gigatoken/">原文網頁</a></p>
 </article>
 
 
 <h2>科學 Science</h2>
 
 <article>
-  <h3>Mapping Io’s Hidden Heat With NASA’s Juno</h3>
-  <p class="summary">NASA的朱諾號太空船利用其微波輻射計（MWR）儀器，在兩次近距離飛掠中繪製了木星衛星木衛一（Io）的隱藏熱源，以揭示其火山活動產生的內部熱量分佈。這些飛掠分別發生在2023年12月30日（探測北半球）和2024年2月3日（探測中緯度及赤道地區），數據採集了始終面向木星的那一面。朱諾號在距離木衛一大約1,500公里處，以每分鐘兩轉的速度旋轉，成功捕捉到廣泛的測繪模式。
-- 主要儀器：微波輻射計（MWR）
-- 測繪目標：木衛一（Io）的隱藏熱源</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>為什麼木衛一會產生如此多的「隱藏熱源」？</summary>
-    <p>木衛一的強烈火山活動是由於木星及其其他衛星（歐羅巴、加利略衛星）引力造成的潮汐力所引起。這些潮汐力對木衛一內部產生巨大的摩擦和擠壓，使其熔融並不斷噴發火山物質，產生顯著的內部熱量。</p>
-  </details>
-  
-  <details>
-    <summary>朱諾號太空船的主要任務是什麼？探測木衛一是其核心目標嗎？</summary>
-    <p>朱諾號的主要任務是研究木星的大氣層、磁場、重力場以及其內部結構。探測木衛一雖然不是其核心任務，但作為一項拓展任務，利用其微波輻射計來研究木衛一的火山活動和內部熱量分佈，能為理解太陽系行星演化提供寶貴數據。</p>
-  </details>
-  
-  <details>
-    <summary>測繪木衛一的「隱藏熱源」對於行星科學有何重要意義？</summary>
-    <p>測繪這些隱藏熱源有助於科學家更深入地了解木衛一內部潮汐加熱的機制及其火山活動的動態分佈。這不僅能幫助我們理解木衛一極端環境的形成原因，也能為研究其他類似天體（如系外行星）的內部能量過程提供參考。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-23-c426789cac-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>NASA’s Juno Peers Beneath Io’s Surface</h3>
-  <p class="summary">NASA的朱諾號探測器透過其微波輻射計(MWR)首次深入探測木星衛星木衛一(Io)地表下方2至6公尺的熱量分布，有別於紅外線僅測量表面溫度。這項觀測揭示了木衛一獨特的地下溫度梯度，並識別出顯著的局部熱源，包括與活躍岩漿流相關的Zal Montes Patera複合體附近以及赤道附近的另一處主要熱點。這些發現表明木衛一地殼淺層存在顯著的內部加熱活動。
-* MWR儀器能穿透木衛一地殼數公尺，探測地表下的熱量。
-* 數據顯示木衛一有明確的地下熱點和溫度梯度，證實其內部有強烈的加熱現象。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>木衛一的內部熱量來源是什麼？為何它會有如此顯著的火山活動？</summary>
-    <p>木衛一的強烈內部加熱主要是由木星及其其他伽利略衛星（歐羅巴、加尼美德）的引力潮汐力所引起。這些巨大的引力作用在木衛一的內部產生摩擦，將其岩石核心和地幔扭曲和拉伸，從而產生大量熱量，驅動其活躍的火山活動。</p>
-  </details>
-  
-  <details>
-    <summary>朱諾號的MWR探測為何特別重要？它與之前觀測木衛一熱量有何不同？</summary>
-    <p>朱諾號的MWR探測首次能穿透木衛一地表數公尺深，直接測量地下熱量，而非僅限於表面溫度。這提供了更全面的內部熱傳遞圖像，有助於科學家更精確地了解木衛一火山作用的機制及其地下結構。</p>
-  </details>
-  
-  <details>
-    <summary>除了朱諾號，未來還有其他任務計劃探索木衛一或類似的天體嗎？</summary>
-    <p>歐洲太空總署的木星冰月探測器(JUICE)和美國太空總署的歐羅巴快船(Europa Clipper)任務雖然主要目標是木星的其他冰衛星，但它們在軌道運行期間也可能提供木衛一的額外數據。未來的專門任務可能會進一步研究木衛一極端的火山環境。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-23-144950c178-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>NASA’s Juno Takes Temperature of Jupiter’s Fiery Moon Io</h3>
-  <p class="summary">NASA 的朱諾號任務首次量測了木星衛星木衛一（Io）的地表以下溫度，揭示了其淺層地表內部的顯著加熱現象，並發現其大部分表面異常光滑且由密度非常低的物質組成。這些數據透過微波輻射計（MWR）深入火山岩層，提供了一種前所未有的方式來理解木衛一極端火山活動背後的潮汐加熱機制，對於研究太陽系中最活躍的火山世界具有重要意義。
-
-* 關鍵發現：首次成功使用微波輻射計探測岩石衛星地表以下溫度，證明其潛力超越氣態巨行星。
-* 重要意義：揭示木衛一的地下熱流遠超太陽加熱，可能來自導電地殼的穩定熱流或覆蓋固化地殼的冷卻熔岩流，有助於深入理解宇宙中的潮汐加熱作用。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>木衛一的「潮汐加熱機制」具體是指什麼，它如何產生如此強烈的火山活動？</summary>
-    <p>潮汐加熱是指木衛一在圍繞木星的橢圓軌道上運行時，不斷受到木星巨大引力的拉伸和擠壓。這種持續的形變產生了大量的內部摩擦熱，使得木衛一的內部溫度極高，從而導致其成為太陽系中火山活動最活躍的天體。</p>
-  </details>
-  
-  <details>
-    <summary>朱諾號任務使用的微波輻射計（MWR）技術，除了探測木衛一之外，還能應用於哪些領域或天體的研究？</summary>
-    <p>MWR 技術最初是為探測木星深層大氣而設計的，但此次意外成功證明其也能有效探測岩石衛星的地表以下。這項技術未來可應用於研究地球火山的地下溫度梯度，以獲取新的工作機制信息，也能用於探索其他冰衛星（如歐羅巴和木衛三）的冰殼以下數十英里深處。</p>
-  </details>
-  
-  <details>
-    <summary>文章提到木衛一的表面「異常光滑且由密度非常低的物質組成」，這些物質具體是什麼類型，它與之前對木衛一的認知有何不同？</summary>
-    <p>這些低密度物質更像是浮石或蓬鬆的火山灰，而非堅硬的岩石，這與木衛一地表大部分區域的平坦特徵相符。儘管木衛一以其高聳的山脈而聞名，但MWR數據揭示了除了這些可見地形外，還有廣闊的平坦區域，提供了對木衛一地表構成的新認識。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-23-582bdb7443-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.nasa.gov/missions/juno/nasas-juno-takes-temperature-of-jupiters-fiery-moon-io/">原文網頁</a></p>
-</article>
-
-
-<h2>長文 Long Reads</h2>
-
-<article>
-  <h3>The Organisms That Make Earth’s Harshest Places Home</h3>
-  <p class="summary">地球上生命無處不在，甚至在最嚴酷的環境中也能茁壯成長。這些被稱為「極端微生物」的生物，如細菌和古菌，能夠適應極高溫、極低溫、腐蝕性酸、高壓、重金屬和輻射等極端條件。
-牠們不僅是生物學上的奇觀，更在工業應用、污染清理、遺傳學研究，以及探索生命起源和外星生命方面具有重大意義。
+  <h3>NASA to Showcase Agency’s Newest Wind Tunnel in Virginia</h3>
+  <p class="summary">NASA 將於 7 月 31 日在維吉尼亞州的蘭利研究中心啟用其 40 多年來首座新建風洞——飛行動力學研究設施。這座最先進的設施標誌著 NASA 及美國航空和太空研究能力演進的一個重要里程碑，將支援包括透過 Artemis 計畫在月球表面建立持續人類存在和月球基地開發在內的 NASA 目標。媒體受邀參加參觀和剪綵儀式，但需提前預約且僅限美國公民或合法永久居民。
 
 重點：
-*   極端微生物定義：能在地球最惡劣環境中生存的生物。
-*   應用範圍廣泛：工業、環保、生物學及外星生命探測。</p>
+* 這是 NASA 40 多年來首座新風洞。
+* 將支援 Artemis 計畫和月球基地開發。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>極端微生物在工業應用或遺傳學研究上有哪些具體例子？</summary>
-    <p>例如，耐高溫的聚合酶（如Taq酶）在聚合酶鏈式反應（PCR）中至關重要，徹底改變了分子生物學。在工業上，牠們的酶可用於生物燃料生產、洗滌劑或食品加工，因為牠們能在極端條件下保持活性。</p>
+    <summary>為什麼 NASA 在 40 多年後才建造新的風洞？這個新設施與舊的風洞相比有何不同或改進？</summary>
+    <p>建造新的風洞反映了航空和太空研究需求隨時間的演變，尤其是在先進材料、高速飛行和太空探索方面的需求。新的飛行動力學研究設施採用最先進的技術，能夠模擬更複雜和嚴苛的飛行條件，以支援現代化飛行器和太空船的開發。</p>
   </details>
   
   <details>
-    <summary>極端微生物如何幫助我們了解地球上生命的起源？</summary>
-    <p>透過研究極端微生物在極端環境下的生存極限，科學家可以推斷早期地球的可能生命形式和條件。由於早期地球環境惡劣且充滿毒素，極端微生物的發現有助於構建生命如何首先在這樣的環境中出現並演化的模型。</p>
+    <summary>這個新風洞將如何具體幫助 Artemis 計畫和月球基地的開發？它將進行哪些類型的研究？</summary>
+    <p>該風洞將用於測試和改進太空船在進入和離開月球大氣層時的氣動力學性能，以及月球著陸器和居住模組的設計。這有助於確保太空船在不同環境下的穩定性和效率，並優化月球基地結構的設計。</p>
   </details>
   
   <details>
-    <summary>如果極端微生物能在地球上生存，這對在宇宙其他地方（特別是火星）尋找生命有何啟示？</summary>
-    <p>這表示即使在太陽系中被認為不適合居住的行星或衛星，生命也可能存在。火星目前被認為擁有寒冷乾燥的環境和高輻射，但如果生命能在地球類似的條件下生存，那麼火星地表下或其過去的生命遺跡就可能存在。</p>
+    <summary>在這次剪綵儀式中，有哪些主要人物會出席，他們分別扮演什麼角色？</summary>
+    <p>出席活動的主要人物包括 NASA 局長 Jared Isaacman、NASA 蘭利中心主任 Trina Dyal 博士，以及美國總務管理局局長 Edward C. Forst。他們將代表各自機構，共同慶祝這一新設施的啟用，並強調其對未來研究的重要性。</p>
   </details>
   
   </div>
   
-  <p class="source">Quanta Magazine ｜ <a href="../article/2026-07-23-e1df440e12-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/the-organisms-that-make-earths-harshest-places-home-20260720/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-23-9179ca2ef6-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-to-showcase-agencys-newest-wind-tunnel-in-virginia/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Martin Picard’s Mitochondrial Theory of Mind</h3>
-  <p class="summary">哥倫比亞大學的馬丁·皮卡德博士透過在代謝研究室進行人體實驗，深入探討粒線體在健康與疾病中的核心作用。他提出了「粒線體心智理論」，認為粒線體不僅是細胞的能量工廠，更透過處理神經傳導物質、荷爾蒙和代謝物，直接影響我們的情緒、壓力、睡眠和意識。
+  <h3>Robotic Servicing Mission Launches with NASA Support</h3>
+  <p class="summary">任務機器人載具 (MRV) 搭載著美國太空總署 (NASA) 支持的地球同步衛星機器人維修任務 (RSGS) 載荷，於 7 月 21 日發射升空，正前往地球同步軌道。此任務將利用先進機器人技術，檢查、升級並透過安裝推進模組來延長現有衛星的壽命，解決燃料耗盡或設備過時等問題。在 DARPA 和 NASA 的支持下，RSGS 旨在提升美國在太空服務方面的能力，以用於太空商業和探索活動，使任務更具成本效益。
 
-- 粒線體是生命能量流動的基礎，其運作狀態決定了我們的身心健康。
-- 能量流的中斷被視為意識與生命終結的根本原因。</p>
+* 延長衛星壽命
+* 利用先進機器人技術
+* 政府與產業合作項目</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>除了提供能量，粒線體還如何具體影響我們的心智和身體功能？</summary>
-    <p>粒線體能合成神經傳導物質，如麩胺酸和乙醯膽鹼，這些物質對大腦、神經和肌肉功能至關重要。此外，它們也是所有類固醇荷爾蒙（包括皮質醇、雌激素等）合成的第一步，因此直接影響睡眠、性慾和壓力等生理反應。</p>
+    <summary>摘要中提到的「推進模組」具體是什麼？它們如何延長衛星壽命？</summary>
+    <p>推進模組（Mission Extension Pods）是小型推進器單元，由 MRV 安裝到現有衛星上。它們為衛星提供額外的燃料或推進能力，使其能夠繼續執行任務，從而有效延長原本可能因燃料耗盡而退役的衛星的使用壽命。</p>
   </details>
   
   <details>
-    <summary>馬丁·皮卡德的「生命能量觀」與傳統生物學觀點有何不同？</summary>
-    <p>傳統觀點可能更著重於基因和蛋白質在生命中的角色，但皮卡德博士認為，粒線體及其調控的代謝途徑是生命體驗最基本的層面。他強調，如果維持生命所需的能量流動停止，即便基因完好，意識和生命也將不復存在。</p>
+    <summary>延長地球同步軌道衛星的壽命為何如此重要？</summary>
+    <p>地球同步軌道衛星對通訊、導航和氣象預報等應用至關重要，但由於燃料耗盡或設備過時常被提前淘汰。延長其壽命可以節省建造和發射新衛星的巨額成本，並確保關鍵太空服務的持續性。這也使得未來的太空任務設計更具創新性和成本效益。</p>
+  </details>
+  
+  <details>
+    <summary>文章提到 NASA 在太空服務方面的經驗傳承，它過去有哪些相關任務？</summary>
+    <p>NASA 在太空服務方面有豐富的經驗，其中著名的包括哈伯太空望遠鏡的多次維修任務，這些任務成功修復並升級了望遠鏡。此外，國際太空站上的機器人加油任務 (Robotic Refueling Missions) 也展示了 NASA 在軌道上進行複雜機器人操作的能力。</p>
   </details>
   
   </div>
   
-  <p class="source">Quanta Magazine ｜ <a href="../article/2026-07-23-d21a47aaf6-sans.html">全文（約 14 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/martin-picards-mitochondrial-theory-of-mind-20260717/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-23-234cc68ab6-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Thermodynamic Computers Go With the (Energy) Flow</h3>
-  <p class="summary">熱力學計算是一個新興領域，旨在利用熱雜訊（原子隨機晃動）作為運算資源，而非傳統電腦中將其視為干擾。這種方法有望大幅降低電腦的功耗和散熱需求，解決當前高能耗設備和小型化散熱的挑戰。它透過利用熱力學過程，讓系統在能量景觀中尋找穩定且低能量的組態來解決問題，類似蛋白質折疊的過程，將熱力學轉化為計算資源。
-- 顛覆傳統思維：從對抗熱雜訊轉變為利用熱雜訊進行計算。
-- 潛在效益：實現顯著的低功耗和高效散熱。</p>
+  <h3>NASA Sets Coverage for Astronaut Chris Williams, Crewmates Return</h3>
+  <p class="summary">美國NASA太空人克里斯·威廉斯與兩名俄羅斯太空人即將結束為期241天的國際太空站任務，預計於美東時間7月26日從太空站脫離並降落在哈薩克。NASA將提供全程直播，見證他們安全返回地球。在脫離前，現任指揮官Sergey Kud-Sverchkov會將國際太空站的指揮權移交給NASA太空人潔西卡·梅爾，標誌著第75遠征隊的開始。
+主要看點：
+• 任務持續241天
+• 降落地點為哈薩克大草原</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>熱力學計算與量子計算有何根本上的差異？</summary>
-    <p>量子計算主要利用量子力學現象（如疊加和糾纏）來加速特定問題的運算，而熱力學計算則專注於利用熱雜訊和熱力學過程本身來執行計算。它們解決計算問題的底層物理原理截然不同，並非互相排斥而是可能各自適用於不同類型的應用。</p>
+    <summary>為什麼這次任務會包含NASA和俄羅斯聯邦太空總署（Roscosmos）的太空人？</summary>
+    <p>國際太空站（ISS）是一個由多國太空機構共同合作的國際項目，其中包括美國NASA和俄羅斯聯邦太空總署。這種聯合任務是太空站運行的標準模式，旨在促進太空探索領域的國際合作與知識共享。</p>
   </details>
   
   <details>
-    <summary>熱力學計算目前處於什麼發展階段？距離實際應用還有多遠？</summary>
-    <p>熱力學計算仍處於初期研究階段，研究人員已在標準的矽基邏輯電路中成功模擬其基本概念，驗證了其原理的可行性。然而，要實現實用的熱力學電腦，還有許多工程和設計上的挑戰需要克服，例如如何穩定可靠地編碼問題和讀取結果。</p>
+    <summary>國際太空站（ISS）除了讓太空人停留，還有哪些主要的任務與目標？</summary>
+    <p>國際太空站（ISS）的主要目標是推進科學知識，進行地球上無法實現的研究突破。此外，它也協助NASA理解並克服載人太空飛行的挑戰，開拓低地球軌道的商業機會，並為未來的阿提米絲計畫中登月以及前往火星的長期任務奠定基礎。</p>
   </details>
   
   <details>
-    <summary>文章中提到蛋白質折疊是熱力學計算的一種形式，那麼這種計算方式主要適合解決哪一類問題？</summary>
-    <p>熱力學計算特別適合解決需要找到最佳或穩定狀態的問題，例如最佳化問題、模式識別或模擬複雜系統的行為。透過讓系統在能量景觀中「自然」地演化至最低能量狀態，它能有效地找到問題的解決方案，類似於自然界中許多自組織過程的運作方式。</p>
+    <summary>太空人成功降落地球後，他們的下一步行程或安排是什麼？</summary>
+    <p>降落後，組員將搭乘直升機前往哈薩克的卡拉干達恢復中心。之後，美國NASA太空人克里斯·威廉斯會返回位於休士頓的詹森太空中心，而兩位俄羅斯太空人則會返回位於俄羅斯星城的訓練基地。</p>
   </details>
   
   </div>
   
-  <p class="source">Quanta Magazine ｜ <a href="../article/2026-07-23-c332aa0287-sans.html">全文（約 11 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/thermodynamic-computers-go-with-the-energy-flow-20260715/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>Can cells think?</h3>
-  <p class="summary">這篇文章探討了細胞是否能思考的問題。
-一位生物學家正在研究實驗室中的智慧，他將重點放在解決問題的能力，而非神經元。
-這暗示了智慧的定義可能比傳統上理解的更為廣泛，甚至可能存在於單一細胞層面。
-*   跳脫傳統神經元框架來理解智慧
-*   以解決問題的能力作為智慧的核心</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>這裡提到的「解決問題」具體是指細胞的哪些行為？</summary>
-    <p>這可能包括細胞對環境刺激的反應、尋找營養、躲避毒素、修復損傷或形成複雜的組織結構等。這些行為展現了細胞在沒有中樞神經系統的情況下，仍能有效應對挑戰的能力。</p>
-  </details>
-  
-  <details>
-    <summary>這項研究的細胞範圍涵蓋哪些？是單細胞生物，還是多細胞生物體內的細胞？</summary>
-    <p>儘管文章沒有明確說明，但此類研究通常會考察從單細胞生物（如變形蟲）到多細胞生物體內細胞（如癌細胞或再生醫學中的細胞）的行為。重點是觀察它們如何獨立或協同解決問題，而不依賴完整的神經系統。</p>
-  </details>
-  
-  <details>
-    <summary>如果細胞真的能在沒有神經元的情況下思考或解決問題，這對我們理解智慧的本質有何影響？</summary>
-    <p>這將挑戰傳統上將智慧侷限於大腦和神經系統的觀點，促使我們以更廣泛的視角來定義智慧。它可能啟發人工智慧領域發展出新的計算模型，這些模型不依賴於模擬神經網路，而是基於分佈式、自組織的解決問題策略。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Aeon ｜ <a href="../article/2026-07-23-0e88e99bd8-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/why-we-should-think-of-intelligence-in-terms-of-goals-not-brains">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>The people’s atheist</h3>
-  <p class="summary">讓·梅斯利耶是一位生活在法國鄉村的神父，他被後世稱為「人民的無神論者」。梅斯利耶的核心論點是，宗教被設計為一種工具，旨在培養出會自動服從權威的順民。他認為宗教並非引導人們走向信仰，而是為了維持社會秩序與統治階級的控制。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>讓·梅斯利耶究竟是何許人也？他作為一名神父，為何會持有如此激進的無神論觀點？</summary>
-    <p>讓·梅斯利耶是一位17世紀末至18世紀初的法國鄉村神父。他在其生前未發表的著作《我的遺囑》中表達了對宗教的強烈批判，認為教會剝削人民。他對貧困和不公的親身體驗，促使他對當時的宗教和社會體制產生質疑，最終走向無神論。</p>
-  </details>
-  
-  <details>
-    <summary>梅斯利耶的這些無神論思想是如何被世人所知的？在他生前是否公開傳播過？</summary>
-    <p>梅斯利耶的激進思想主要記錄在他死後才被發現的著作《我的遺囑》中。這本書以手稿形式在法國地下流傳，後來由伏爾泰等啟蒙思想家進行編輯和出版，儘管伏爾泰為了避免爭議刪改了其中一些最激烈的無神論部分。梅斯利耶生前並未公開宣揚這些觀點，而是秘密寫下，死後才得以公開。</p>
-  </details>
-  
-  <details>
-    <summary>在18世紀的法國，梅斯利耶的無神論思想對當時的啟蒙運動產生了什麼影響？</summary>
-    <p>儘管梅斯利耶的完整思想直到他死後才廣為人知，但他的作品對後來的法國啟蒙運動產生了深遠影響。他的激進批判為當時的懷疑論者和無神論者提供了理論基礎，並激發了對宗教和君主專制的進一步質疑。他被視為早期重要的無神論先驅之一，為後世的激進思想家鋪平了道路。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Aeon ｜ <a href="../article/2026-07-23-b8e2f2dfc5-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/essays/the-rural-french-priest-who-preached-atheism-to-the-people">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>The Skinner revolution</h3>
-  <p class="summary">「斯金納革命」這部影片是1979年製作的紀錄片，深入探討了行為心理學家B.F.斯金納的生平與思想。影片特別聚焦於他激進且備受爭議的行為實驗。
-
-* 探討B.F.斯金納的生平與思想
-* 聚焦於其激進且具爭議性的行為實驗</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>B.F.斯金納是誰？他為什麼會被稱為「行為心理學家」？</summary>
-    <p>B.F.斯金納是20世紀美國著名的心理學家，他是行為主義學派的代表人物。他被稱為行為心理學家，是因為他主張心理學應該專注於研究可觀察的行為，而非不可觀察的內在心理狀態，並透過實驗方法探討行為與環境刺激之間的關係。</p>
-  </details>
-  
-  <details>
-    <summary>斯金納的「激進且備受爭議的行為實驗」具體指哪些方面？</summary>
-    <p>斯金納最著名的實驗包括「斯金納箱」，他將動物（如老鼠或鴿子）放入其中，透過獎勵（如食物）來訓練牠們執行特定動作。這些實驗因其強調環境對行為的完全控制，以及對自由意志和人類尊嚴的潛在挑戰而引起了廣泛爭議。</p>
-  </details>
-  
-  <details>
-    <summary>斯金納的思想和實驗對後世產生了什麼樣的影響？</summary>
-    <p>斯金納的操作制約理論對教育、臨床心理學和行為矯正常生了深遠的影響，例如應用行為分析（ABA）就是基於他的行為科學原則。儘管爭議不斷，他的研究確立了系統性觀察和實驗在理解人類與動物行為中的重要性，並促使人們更深入思考環境塑造行為的力量。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Aeon ｜ <a href="../article/2026-07-23-447dd8ec71-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/how-bf-skinner-upended-our-understanding-of-behaviour-and-control">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-23-ac463d9ae1-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-sets-coverage-for-astronaut-chris-williams-crewmates-return/">原文網頁</a></p>
 </article>
 
 

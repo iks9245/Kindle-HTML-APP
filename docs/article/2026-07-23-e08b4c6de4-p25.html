@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GigaToken: ~1000x faster Language model tokenization</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-23-e08b4c6de4-p25-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>GigaToken: ~1000x faster Language model tokenization</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 25 / 25 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://github.com/marcelroed/gigatoken/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-23-e08b4c6de4-p24.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 25 / 25 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">A majority of this code base was crafted by hand without any use of AI (which can be seen from the project's Git history). In the final stages of the project, AI was used to assist:- Implementing the user-facing API</p>
+
+<p class="fulltext">- Widening of compatibility, for instance generalizing and porting the pretokenizer implementations to support more tokenizers, less interesting features like padding/truncation/unicode normalization</p>
+
+<p class="fulltext">- Porting SIMD strategies between AVX512/AVX2/NEON</p>
+
+<p class="fulltext">- Final profiling stages and the last ~4x worth of performance from eliminating branching and improving the pretoken cache hierarchy</p>
+
+<p class="fulltext">- Refactoring and code reuse</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>GigaToken 是如何實現比現有分詞器快上千倍的驚人速度？</summary>
+  <p>GigaToken 之所以能達到如此顯著的速度提升，主要歸功於其專屬 API。該 API 允許 Rust 實作直接讀取資料，最大限度地減少了操作開銷，並實現了極致的平行處理能力。即使其他熱門分詞器已採用多執行緒 Rust，GigaToken 仍透過這些深層次的優化找到了突破性的性能瓶頸。</p>
+</details>
+
+<details>
+  <summary>對於已經在使用 HuggingFace Tokenizers 或 Tiktoken 的開發者來說，整合 GigaToken 有哪些實用考量？</summary>
+  <p>對於現有使用者，GigaToken 提供了便利的相容模式，可以作為現有 HuggingFace Tokenizers 或 Tiktoken 的直接替代品，程式碼改動最少。然而，要充分利用 GigaToken 近千倍的性能提升，建議透過其專屬 API 進行整合，因為相容模式雖然更快，但無法完全達到最佳的 1000 倍速度。</p>
+</details>
+
+<details>
+  <summary>GigaToken 這種高速分詞器主要適用於哪些應用場景或用戶？</summary>
+  <p>GigaToken 非常適合需要處理大規模文本資料的應用場景，例如大型語言模型（LLM）的資料預處理和訓練。它能以每秒數 GB 的速度進行分詞，顯著加速整個資料處理流程，對於資料密集型且對處理速度要求嚴苛的任務尤其有價值。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-23-e08b4c6de4-p24.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 25 / 25 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

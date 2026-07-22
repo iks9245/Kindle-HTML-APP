@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Everyone Should Know SIMD</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-23-2a21281a60-p26-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Everyone Should Know SIMD</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 26 / 26 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://mitchellh.com/writing/everyone-should-know-simd">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-23-2a21281a60-p25.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 26 / 26 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">-</p>
+
+<p class="fulltext">The comparison itself is one vector operation. Loading the vector, reducing the result, and locating the failed lane require additional instructions. The important part is that we're doing multiple comparisons at once. ↩</p>
+
+<p class="fulltext">-</p>
+
+<p class="fulltext">This post was based on a Lobsters comment I wrote. ↩</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>哪些程式語言支援SIMD？</summary>
+  <p>文章雖然使用Zig作為範例，但指出SIMD的概念適用於任何程式語言，並期待未來更多程式語言能揭露這些通用概念。通常，C/C++等低階語言透過內建函數（intrinsics）提供直接的SIMD支援，而一些高階語言可能透過函式庫或編譯器優化來利用SIMD。</p>
+</details>
+
+<details>
+  <summary>摘要中提到的SIMD「通用模式」包含哪五個步驟？</summary>
+  <p>SIMD的通用模式包含五個步驟：首先，廣播所需的常數並初始化向量累加器；接著，以向量寬度為單位遍歷輸入數據塊；然後，在所有通道中平行執行比較或算術運算；第四步，根據需要縮減或儲存向量結果；最後，使用純量尾部處理任何剩餘的元素。</p>
+</details>
+
+<details>
+  <summary>在什麼情況下，使用SIMD反而不值得？</summary>
+  <p>文章指出，只有當需要定期處理「足夠大量」的數據時，SIMD才值得應用。如果迴圈只涉及幾十個或少量位元組的數據，其開銷可能會超過所帶來的效益，此時就不值得投入精力去實作SIMD優化。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-23-2a21281a60-p25.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 26 / 26 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
