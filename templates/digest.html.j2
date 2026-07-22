@@ -18,6 +18,16 @@
 <article>
   <h3>{{ a.title }}</h3>
   <p class="summary">{{ a.summary }}</p>
+  {% if a.qa %}
+  <div class="qa">
+  {% for pair in a.qa %}
+  <details>
+    <summary>{{ pair.question }}</summary>
+    <p>{{ pair.answer }}</p>
+  </details>
+  {% endfor %}
+  </div>
+  {% endif %}
   <p class="source">{{ a.source }} ｜ <a href="{{ a.link }}">閱讀原文</a></p>
 </article>
 {% endfor %}

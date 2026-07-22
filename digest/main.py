@@ -38,12 +38,20 @@ def build_digest() -> None:
             if not text:
                 continue
             try:
-                summary = summarize_article(title, text, conf)
+                result = summarize_article(title, text, conf)
             except Exception as exc:
                 print(f"warning: skipping {title!r} ({feed['name']}): {exc}", file=sys.stderr)
                 continue
 
-            articles.append({"title": title, "link": link, "summary": summary, "source": feed["name"]})
+            articles.append(
+                {
+                    "title": title,
+                    "link": link,
+                    "summary": result["summary"],
+                    "qa": result["qa"],
+                    "source": feed["name"],
+                }
+            )
             run_titles.append(normalized)
             seen[link] = date_str
         if articles:
