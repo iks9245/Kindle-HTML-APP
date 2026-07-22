@@ -6,6 +6,7 @@ DEFAULT_CONFIG_PATH = os.path.join(os.path.dirname(__file__), "..", "config.yaml
 
 _DEFAULTS = {
     "language": "zh-TW",
+    "secondary_language": None,
     "timezone": "UTC",
     "max_articles_per_feed": 3,
     "archive_retention_days": 60,
