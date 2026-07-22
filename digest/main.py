@@ -4,7 +4,7 @@ from zoneinfo import ZoneInfo
 
 from .config import load_config
 from .fetch import extract_full_text, fetch_feed_entries
-from .render import render_archive_index, render_digest, render_index
+from .render import prune_old_archives, render_archive_index, render_digest, render_index
 from .summarize import summarize_article
 
 
@@ -35,6 +35,7 @@ def build_digest() -> None:
 
     render_digest(date_str, categories, conf)
     render_index(date_str, categories, conf)
+    prune_old_archives(conf["archive_retention_days"])
     render_archive_index(conf)
 
 

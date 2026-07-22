@@ -1,4 +1,5 @@
 import os
+from datetime import date, datetime, timedelta
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -68,6 +69,22 @@ def render_index(date_str: str, categories: dict, conf: dict) -> str:
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
     return path
+
+
+def prune_old_archives(retention_days: int) -> None:
+    if not retention_days or retention_days <= 0:
+        return
+    cutoff = date.today() - timedelta(days=retention_days)
+    d = _archive_dir()
+    for fname in os.listdir(d):
+        if not fname.endswith(".html") or fname == "index.html":
+            continue
+        try:
+            file_date = datetime.strptime(fname[:-5], "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if file_date < cutoff:
+            os.remove(os.path.join(d, fname))
 
 
 def render_archive_index(conf: dict) -> str:

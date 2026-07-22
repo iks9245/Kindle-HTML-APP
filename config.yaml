@@ -12,6 +12,11 @@ timezone: Asia/Taipei
 # per minute, and total feeds x this number = requests per run.
 max_articles_per_feed: 3
 
+# How many days of past digests to keep under docs/archive/. Older dated
+# pages get deleted on each run so the archive doesn't grow forever. Set
+# to 0 to keep everything.
+archive_retention_days: 60
+
 # LLM provider used for summarization: "gemini" (Google Gemini API) or
 # "openai" (OpenAI, or any OpenAI-compatible endpoint via openai_base_url).
 provider: gemini
