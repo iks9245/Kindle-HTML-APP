@@ -56,7 +56,24 @@ def _build_prompt(title: str, text: str, language: str) -> str:
     )
 
 
-def _parse_response(raw: str) -> dict:
+def _build_quiz_prompt(articles: list, language: str, num_questions: int) -> str:
+    blocks = []
+    for i, a in enumerate(articles, 1):
+        blocks.append(f"{i}. {a['title']}\n{a['summary']}")
+    joined = "\n\n".join(blocks)
+    return (
+        "Below are summaries of news articles a reader saw recently. Write a short "
+        f"recall quiz of {num_questions} questions (or fewer if there isn't enough "
+        f"material) in {language} that checks whether the reader remembers the key "
+        "facts. Respond with ONLY a single JSON object (no markdown code fences, no "
+        'commentary) with one key "quiz": a list of objects, each with "question" '
+        f'and "answer" keys, both written in {language}. Each question should test '
+        "one concrete fact or takeaway, and each answer should be 1-2 self-contained "
+        f"sentences.\n\nArticles:\n{joined}"
+    )
+
+
+def _loads_lenient(raw: str) -> dict:
     text = raw.strip()
     if text.startswith("```"):
         text = text.strip("`")
@@ -64,13 +81,16 @@ def _parse_response(raw: str) -> dict:
             text = text[4:]
         text = text.strip()
     try:
-        data = json.loads(text)
+        return json.loads(text)
     except json.JSONDecodeError:
         start, end = text.find("{"), text.rfind("}")
         if start == -1 or end == -1:
             raise
-        data = json.loads(text[start : end + 1])
+        return json.loads(text[start : end + 1])
 
+
+def _parse_response(raw: str) -> dict:
+    data = _loads_lenient(raw)
     summary = str(data["summary"]).strip()
     qa = [
         {"question": str(item["question"]).strip(), "answer": str(item["answer"]).strip()}
@@ -79,8 +99,7 @@ def _parse_response(raw: str) -> dict:
     return {"summary": summary, "qa": qa}
 
 
-def summarize_article(title: str, text: str, conf: dict) -> dict:
-    prompt = _build_prompt(title, text, conf["language"])
+def _complete(prompt: str, conf: dict, max_tokens: int) -> str:
     provider = conf["provider"]
     model = conf["model"]
 
@@ -93,18 +112,35 @@ def summarize_article(title: str, text: str, conf: dict) -> dict:
                 config={"response_mime_type": "application/json"},
             )
         )
-        return _parse_response(resp.text)
+        return resp.text
 
     if provider == "openai":
         client = _get_openai_client(conf.get("openai_base_url"))
         resp = _call_with_retry(
             lambda: client.chat.completions.create(
                 model=model,
-                max_tokens=800,
+                max_tokens=max_tokens,
                 response_format={"type": "json_object"},
                 messages=[{"role": "user", "content": prompt}],
             )
         )
-        return _parse_response(resp.choices[0].message.content)
+        return resp.choices[0].message.content
 
     raise ValueError(f"Unknown provider: {provider!r} (expected 'gemini' or 'openai')")
+
+
+def summarize_article(title: str, text: str, conf: dict) -> dict:
+    prompt = _build_prompt(title, text, conf["language"])
+    return _parse_response(_complete(prompt, conf, max_tokens=800))
+
+
+def generate_quiz(articles: list, conf: dict, num_questions: int) -> list:
+    prompt = _build_quiz_prompt(articles, conf["language"], num_questions)
+    data = _loads_lenient(_complete(prompt, conf, max_tokens=700))
+    items = []
+    for item in data.get("quiz", [])[:num_questions]:
+        question = str(item.get("question", "")).strip()
+        answer = str(item.get("answer", "")).strip()
+        if question and answer:
+            items.append({"question": question, "answer": answer})
+    return items

@@ -14,9 +14,19 @@ from .render import (
     render_articles,
     render_digest,
     render_index,
+    render_quiz,
 )
-from .state import load_seen, save_seen
-from .summarize import summarize_article
+from .state import load_recent, load_seen, save_recent, save_seen
+from .summarize import generate_quiz, summarize_article
+
+
+def _previous_entry(recent: dict, today: str):
+    """Most recent stored day strictly before `today` that has articles."""
+    days = sorted(d for d, items in recent.items() if d < today and items)
+    if not days:
+        return None, None
+    day = days[-1]
+    return recent[day], day
 
 
 def build_digest() -> None:
@@ -71,13 +81,33 @@ def build_digest() -> None:
     for articles in categories.values():
         articles.sort(key=lambda a: -score_article(a, conf["interests"]))
 
+    # Recall quiz: questions come from the previous day's articles (spaced
+    # review), and today's articles are stashed for tomorrow's quiz.
+    recent = load_recent()
+    prev_articles, prev_date = _previous_entry(recent, date_str)
+    quiz_items: list = []
+    if prev_articles and conf["quiz_questions"] > 0:
+        try:
+            quiz_items = generate_quiz(prev_articles, conf, conf["quiz_questions"])
+        except Exception as exc:
+            print(f"warning: quiz generation failed: {exc}", file=sys.stderr)
+    todays_articles = [
+        {"title": a["title"], "summary": a["summary"], "source": a["source"]}
+        for articles in categories.values()
+        for a in articles
+    ]
+    if todays_articles:
+        recent[date_str] = todays_articles
+
     render_articles(date_str, categories, conf)
     render_digest(date_str, categories, conf)
     render_index(date_str, categories, conf)
+    render_quiz(quiz_items, prev_date, conf)
     prune_old_archives(conf["archive_retention_days"])
     prune_old_article_pages(conf["archive_retention_days"])
     render_archive_index(conf)
     save_seen(seen, conf["seen_retention_days"])
+    save_recent(recent, conf["seen_retention_days"])
 
 
 if __name__ == "__main__":

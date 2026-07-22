@@ -1,0 +1,23 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="meta">
+{% if source_date %}回顧 {{ source_date }} 讀過的內容{% endif %}
+{% if home_href %} ｜ <a href="{{ home_href }}">首頁</a>{% endif %}
+{% if archive_href %} ｜ <a href="{{ archive_href }}">存檔列表</a>{% endif %}
+</p>
+
+{% if not quiz %}
+<p>還沒有可回顧的內容 — 明天再回來，看看你記得多少昨天讀過的東西。</p>
+{% else %}
+<p class="quizhint">先想一下答案，再點開題目對照：</p>
+<div class="qa">
+{% for pair in quiz %}
+<details>
+  <summary>{{ loop.index }}. {{ pair.question }}</summary>
+  <p>{{ pair.answer }}</p>
+</details>
+{% endfor %}
+</div>
+{% endif %}
+{% endblock %}

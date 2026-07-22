@@ -23,6 +23,11 @@ archive_retention_days: 60
 # State is kept in .digest-state/seen.json.
 seen_retention_days: 14
 
+# Number of questions in the daily recall quiz (docs/quiz.html), generated
+# from the previous day's articles so you can test what you remember. Set to
+# 0 to turn the quiz off.
+quiz_questions: 4
+
 # Keywords you care about. Articles whose title or summary mention more of
 # these get sorted first within their category (English/Chinese both work,
 # matching is case-insensitive substring). Leave empty to keep RSS order.
