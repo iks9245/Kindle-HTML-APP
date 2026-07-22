@@ -34,6 +34,19 @@ seen_retention_days: 14
 # 0 to turn the quiz off.
 quiz_questions: 4
 
+# Split each offline full-text page into several sequential pages so you can
+# turn pages on Kindle (one clean e-ink refresh per turn, landing at the top)
+# instead of scrolling the slow screen. Each page is its own static HTML file
+# with plain "上一頁 / 下一頁" links — still no JavaScript. Set to false to keep
+# the old single long scrolling page.
+paginate_articles: true
+
+# Roughly how many on-screen text lines to fit per page when paginate_articles
+# is on. Lower = shorter pages / more page turns; higher = longer pages. 14 is
+# about one Kindle screen at the default font size. Whole paragraphs are never
+# split across a page break.
+article_page_lines: 14
+
 # Show an AI "editor's brief" at the top of each day's digest: one short
 # paragraph tying together the day's stories. Set to false to turn it off.
 editor_brief: true

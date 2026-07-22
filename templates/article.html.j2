@@ -1,12 +1,24 @@
 {% extends "base.html.j2" %}
 {% block content %}
+{% macro pager() %}
+{% if page_total and page_total > 1 %}
+<nav class="pager">
+{% if prev_href %}<a class="pager-prev" href="{{ prev_href }}">← 上一頁</a>{% else %}<span class="pager-prev pager-off">← 上一頁</span>{% endif %}
+{% if next_href %}<a class="pager-next" href="{{ next_href }}">下一頁 →</a>{% else %}<span class="pager-next pager-off">下一頁 →</span>{% endif %}
+<span class="pager-num">第 {{ page_no }} / {{ page_total }} 頁</span>
+</nav>
+{% endif %}
+{% endmacro %}
 <h1>{{ title }}</h1>
 <p class="meta">
 {{ source }}{% if read_minutes %} ｜ 約 {{ read_minutes }} 分鐘閱讀{% endif %}
+{% if page_total and page_total > 1 %} ｜ 第 {{ page_no }} / {{ page_total }} 頁{% endif %}
 {% if home_href %} ｜ <a href="{{ home_href }}">首頁</a>{% endif %}
 {% if archive_href %} ｜ <a href="{{ archive_href }}">存檔列表</a>{% endif %}
 {% if original_link %} ｜ <a href="{{ original_link }}">原文網頁</a>{% endif %}
 </p>
+
+{{ pager() }}
 
 {% if not paragraphs %}
 <p>沒有可離線閱讀的全文內容，請點上方「原文網頁」。</p>
@@ -26,4 +38,6 @@
 {% endfor %}
 </div>
 {% endif %}
+
+{{ pager() }}
 {% endblock %}
