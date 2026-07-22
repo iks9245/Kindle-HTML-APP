@@ -8,16 +8,18 @@ from .dedup import is_similar, normalize_title
 from .fetch import extract_full_text, fetch_feed_entries
 from .rank import score_article
 from .render import (
+    estimate_reading_minutes,
     prune_old_archives,
     prune_old_article_pages,
     render_archive_index,
     render_articles,
+    render_deep_read,
     render_digest,
     render_index,
     render_quiz,
 )
 from .state import load_recent, load_seen, save_recent, save_seen
-from .summarize import generate_brief, generate_quiz, summarize_article
+from .summarize import generate_brief, generate_deep_read, generate_quiz, summarize_article
 
 
 def _previous_entry(recent: dict, today: str):
@@ -72,6 +74,7 @@ def build_digest() -> None:
                     "source": feed["name"],
                     "slug": slug,
                     "full_text": text,
+                    "read_minutes": estimate_reading_minutes(text),
                 }
             )
             run_titles.append(normalized)
@@ -97,6 +100,20 @@ def build_digest() -> None:
         except Exception as exc:
             print(f"warning: editor brief failed: {exc}", file=sys.stderr)
 
+    # Deep read: pick the meatiest article of the day (most full text to work
+    # with) and generate a longer companion piece on its own page.
+    deep = None
+    deep_article = None
+    all_articles = [a for articles in categories.values() for a in articles]
+    if all_articles and conf["deep_read"]:
+        deep_article = max(all_articles, key=lambda a: len(a.get("full_text", "")))
+        try:
+            result = generate_deep_read(deep_article, conf)
+            if result["background"] or result["points"] or result["implications"] or result["glossary"]:
+                deep = result
+        except Exception as exc:
+            print(f"warning: deep read failed: {exc}", file=sys.stderr)
+
     # Recall quiz: questions come from the previous day's articles (spaced
     # review), and today's articles are stashed for tomorrow's quiz.
     recent = load_recent()
@@ -114,6 +131,7 @@ def build_digest() -> None:
     render_digest(date_str, categories, conf, brief=brief)
     render_index(date_str, categories, conf, brief=brief)
     render_quiz(quiz_items, prev_date, conf)
+    render_deep_read(deep, deep_article, conf)
     prune_old_archives(conf["archive_retention_days"])
     prune_old_article_pages(conf["archive_retention_days"])
     render_archive_index(conf)

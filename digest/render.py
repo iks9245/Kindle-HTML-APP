@@ -1,4 +1,5 @@
 import os
+import re
 from datetime import date, datetime, timedelta
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -49,6 +50,20 @@ def _article_dir() -> str:
 
 def _split_paragraphs(text: str) -> list:
     return [line.strip() for line in text.splitlines() if line.strip()]
+
+
+_CJK_RE = re.compile(r"[぀-ヿ㐀-䶿一-鿿豈-﫿]")
+_LATIN_WORD_RE = re.compile(r"[A-Za-z0-9]+")
+
+
+def estimate_reading_minutes(text: str) -> int:
+    """Rough minutes-to-read across CJK (per char) and Latin (per word) text."""
+    if not text:
+        return 0
+    cjk = len(_CJK_RE.findall(text))
+    latin_words = len(_LATIN_WORD_RE.findall(text))
+    minutes = cjk / 350 + latin_words / 220
+    return max(1, round(minutes))
 
 
 def _existing_dates(exclude: str | None = None) -> list:
@@ -116,6 +131,7 @@ def render_index(date_str: str, categories: dict, conf: dict, brief: str = "") -
             article_prefix="article/",
             font_suffix=FONTS[font]["suffix"],
             quiz_href=_with_suffix("quiz.html", font),
+            deepread_href=_with_suffix("deepread.html", font),
         )
         path = os.path.join(DOCS_DIR, _with_suffix("index.html", font))
         with open(path, "w", encoding="utf-8") as f:
@@ -145,6 +161,7 @@ def render_articles(date_str: str, categories: dict, conf: dict) -> None:
                     original_link=a["link"],
                     paragraphs=paragraphs,
                     qa=a.get("qa"),
+                    read_minutes=a.get("read_minutes"),
                     home_href=_with_suffix("../index.html", font),
                     archive_href=_with_suffix("../archive/index.html", font),
                     font_family=FONTS[font]["family"],
@@ -211,6 +228,35 @@ def render_quiz(quiz_items: list, source_date: str | None, conf: dict) -> None:
             font_label=FONTS[other]["label"],
         )
         path = os.path.join(DOCS_DIR, _with_suffix("quiz.html", font))
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
+
+
+def render_deep_read(deep: dict | None, article: dict | None, conf: dict) -> None:
+    """A single rolling 'deep read of the day' page (docs/deepread.html)."""
+    os.makedirs(DOCS_DIR, exist_ok=True)
+    zh = conf["language"].startswith("zh")
+    title = "每日深讀" if zh else "Deep Read of the Day"
+    tmpl = _env.get_template("deepread.html.j2")
+    for font in FONTS:
+        other = _other_font(font)
+        article_href = None
+        if article and article.get("slug"):
+            article_href = _with_suffix(f"article/{article['slug']}.html", font)
+        html = tmpl.render(
+            title=title,
+            lang=conf["language"],
+            deep=deep,
+            article_title=article["title"] if article else None,
+            article_href=article_href,
+            original_link=article["link"] if article else None,
+            home_href=_with_suffix("index.html", font),
+            archive_href=_with_suffix("archive/index.html", font),
+            font_family=FONTS[font]["family"],
+            font_href=_with_suffix("deepread.html", other),
+            font_label=FONTS[other]["label"],
+        )
+        path = os.path.join(DOCS_DIR, _with_suffix("deepread.html", font))
         with open(path, "w", encoding="utf-8") as f:
             f.write(html)
 

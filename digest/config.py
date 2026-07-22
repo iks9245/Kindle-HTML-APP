@@ -13,6 +13,7 @@ _DEFAULTS = {
     "seen_retention_days": 14,
     "quiz_questions": 4,
     "editor_brief": True,
+    "deep_read": True,
     "interests": [],
     "provider": "gemini",
     "model": "gemini-2.5-flash",
