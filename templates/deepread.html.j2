@@ -1,0 +1,38 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="meta">
+{% if article_title %}本篇：{{ article_title }}{% endif %}
+{% if home_href %} ｜ <a href="{{ home_href }}">首頁</a>{% endif %}
+{% if article_href %} ｜ <a href="{{ article_href }}">讀全文</a>{% endif %}
+{% if original_link %} ｜ <a href="{{ original_link }}">原文網頁</a>{% endif %}
+</p>
+
+{% if not deep %}
+<p>今天還沒有深讀內容 — 排程跑過之後就會挑出當天最有份量的一篇，做成延伸導讀。</p>
+{% else %}
+{% if deep.background %}
+<h2>脈絡</h2>
+<p>{{ deep.background }}</p>
+{% endif %}
+{% if deep.points %}
+<h2>重點</h2>
+<ul>
+{% for p in deep.points %}<li>{{ p }}</li>{% endfor %}
+</ul>
+{% endif %}
+{% if deep.implications %}
+<h2>影響與延伸</h2>
+<p>{{ deep.implications }}</p>
+{% endif %}
+{% if deep.glossary %}
+<h2>小辭典</h2>
+<dl class="glossary">
+{% for g in deep.glossary %}
+<dt>{{ g.term }}</dt>
+<dd>{{ g.definition }}</dd>
+{% endfor %}
+</dl>
+{% endif %}
+{% endif %}
+{% endblock %}

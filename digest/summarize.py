@@ -98,6 +98,24 @@ def _build_brief_prompt(articles: list, language: str) -> str:
     )
 
 
+def _build_deep_read_prompt(title: str, text: str, language: str) -> str:
+    text = text[:MAX_SOURCE_CHARS]
+    return (
+        "Read the following article and write an in-depth 'deep read' companion for a "
+        f"curious reader who wants more than a quick summary, written in {language}. "
+        "Respond with ONLY a single JSON object (no markdown code fences, no "
+        "commentary) with these keys:\n"
+        f'- "background": 2-4 sentences of context/background in {language}, as one '
+        "string.\n"
+        f'- "points": a list of 3-5 key takeaways, each a short sentence in {language}.\n'
+        f'- "implications": 2-3 sentences in {language} on why it matters or what may '
+        "follow, as one string.\n"
+        f'- "glossary": a list of 2-4 objects with "term" and "definition" keys — '
+        f"terms, people, or concepts from the article worth knowing — both in {language}."
+        f"\n\nTitle: {title}\n\nArticle:\n{text}"
+    )
+
+
 def _loads_lenient(raw: str) -> dict:
     text = raw.strip()
     if text.startswith("```"):
@@ -176,3 +194,20 @@ def generate_brief(articles: list, conf: dict) -> str:
     prompt = _build_brief_prompt(articles, conf["language"])
     data = _loads_lenient(_complete(prompt, conf, max_tokens=400))
     return str(data.get("brief", "")).strip()
+
+
+def generate_deep_read(article: dict, conf: dict) -> dict:
+    prompt = _build_deep_read_prompt(article["title"], article.get("full_text", ""), conf["language"])
+    data = _loads_lenient(_complete(prompt, conf, max_tokens=1000))
+    points = [str(p).strip() for p in data.get("points", []) if str(p).strip()]
+    glossary = [
+        {"term": str(g.get("term", "")).strip(), "definition": str(g.get("definition", "")).strip()}
+        for g in data.get("glossary", [])
+        if str(g.get("term", "")).strip() and str(g.get("definition", "")).strip()
+    ]
+    return {
+        "background": str(data.get("background", "")).strip(),
+        "points": points,
+        "implications": str(data.get("implications", "")).strip(),
+        "glossary": glossary,
+    }

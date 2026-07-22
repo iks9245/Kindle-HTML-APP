@@ -38,6 +38,11 @@ quiz_questions: 4
 # paragraph tying together the day's stories. Set to false to turn it off.
 editor_brief: true
 
+# Pick the meatiest article of the day and generate a longer "deep read"
+# companion (background, key points, implications, mini-glossary) on its own
+# page (docs/deepread.html). Set to false to turn it off.
+deep_read: true
+
 # Keywords you care about. Articles whose title or summary mention more of
 # these get sorted first within their category (English/Chinese both work,
 # matching is case-insensitive substring). Leave empty to keep RSS order.
@@ -74,3 +79,13 @@ feeds:
   - name: NASA Breaking News
     url: https://www.nasa.gov/news-release/feed/
     category: 科學 Science
+
+  # Long-form essays — great for slow e-ink reading via the offline full-text
+  # pages. Trim max_articles_per_feed or drop these if you want a lighter run.
+  - name: Quanta Magazine
+    url: https://api.quantamagazine.org/feed/
+    category: 長文 Long Reads
+
+  - name: Aeon
+    url: https://aeon.co/feed.rss
+    category: 長文 Long Reads
