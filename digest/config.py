@@ -10,6 +10,7 @@ _DEFAULTS = {
     "max_articles_per_feed": 3,
     "archive_retention_days": 60,
     "seen_retention_days": 14,
+    "interests": [],
     "provider": "gemini",
     "model": "gemini-2.5-flash",
     "openai_base_url": None,

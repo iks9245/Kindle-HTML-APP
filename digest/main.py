@@ -5,6 +5,7 @@ from zoneinfo import ZoneInfo
 from .config import load_config
 from .dedup import is_similar, normalize_title
 from .fetch import extract_full_text, fetch_feed_entries
+from .rank import score_article
 from .render import prune_old_archives, render_archive_index, render_digest, render_index
 from .state import load_seen, save_seen
 from .summarize import summarize_article
@@ -47,6 +48,9 @@ def build_digest() -> None:
             seen[link] = date_str
         if articles:
             categories.setdefault(feed.get("category", "General"), []).extend(articles)
+
+    for articles in categories.values():
+        articles.sort(key=lambda a: -score_article(a, conf["interests"]))
 
     render_digest(date_str, categories, conf)
     render_index(date_str, categories, conf)

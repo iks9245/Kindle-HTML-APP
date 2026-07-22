@@ -23,6 +23,15 @@ archive_retention_days: 60
 # State is kept in .digest-state/seen.json.
 seen_retention_days: 14
 
+# Keywords you care about. Articles whose title or summary mention more of
+# these get sorted first within their category (English/Chinese both work,
+# matching is case-insensitive substring). Leave empty to keep RSS order.
+interests: []
+# interests:
+#   - AI
+#   - 台灣
+#   - climate
+
 # LLM provider used for summarization: "gemini" (Google Gemini API) or
 # "openai" (OpenAI, or any OpenAI-compatible endpoint via openai_base_url).
 provider: gemini
