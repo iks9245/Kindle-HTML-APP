@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cruller: Bun's Zig Runtime, Continued on Zig 0.16</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-23-5166245623-p4-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Cruller: Bun's Zig Runtime, Continued on Zig 0.16</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 4 / 4 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://ziggit.dev/t/cruller-buns-zig-runtime-continued-on-zig-0-16/16734">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-23-5166245623-p3.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 4 / 4 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Linux x64 is the currently supported build target</p>
+
+<p class="fulltext">Suggested topic tags: showcase, zig-0-16, llm</p>
+
+<p class="fulltext">AI / LLM usage disclosure</p>
+
+<p class="fulltext">AI was used as an engineering assistant for parts of the Zig 0.16 migration, build/debug investigation, and focused test work. The project scope, architecture decisions, review of changes, and build/test verification remain maintainer-directed. This is not a purely AI-generated project.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>「專注於生產的運行時」對於 Cruller 來說具體意味著什麼？</summary>
+  <p>這表示 Cruller 旨在提供一個精簡、高效的環境，專門用於執行已經建置好的 JavaScript 服務器。它移除了如套件管理器、打包器和測試執行器等開發工具，只保留了運行生產服務所需的最小核心功能，從而降低了資源消耗並簡化了部署。</p>
+</details>
+
+<details>
+  <summary>對於 Cruller 的目標使用場景，它與完整的 Bun 運行時相比主要優勢是什麼？</summary>
+  <p>Cruller 的主要優勢在於其更小的體積和更低的資源消耗，實現了約 18% 的尺寸縮減。這使得它更適合部署在資源受限的環境或需要快速啟動的場景中。此外，由於其專注於核心運行時功能，也可能帶來更簡潔的運行時行為和潛在的穩定性優勢。</p>
+</details>
+
+<details>
+  <summary>支援「原生 Zig 0.16」對於 Cruller 的開發和未來發展有何重要意義？</summary>
+  <p>支援原生 Zig 0.16 意味著 Cruller 不再依賴 Bun 舊版中帶有補丁的 Zig 編譯器集成，而是採用了標準的 Zig 工具鏈。這簡化了構建圖並提高了項目的可維護性、兼容性和可移植性，使其更容易跟隨 Zig 語言本身的發展，也為潛在的社區貢獻和跨平台支援奠定了基礎。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-23-5166245623-p3.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 4 / 4 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -89,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今天的報導涵蓋了科技如何幫助我們解決長期懸而未決的問題。利用古DNA分析，我們終於解開了麥地奇家族四百年的死亡之謎；同時，有文章探討了如何透過Emacs的高度客製化能力來自動化個人工作流程，展現了技術的強大應用。然而，對於人工智慧工具如Text-to-SQL，其基準測試仍需改進，以更準確地反映真實世界數據的複雜性，確保其評估的實用價值。</p>
+<p>今日新聞主要關注中東紅海區域衝突升級，同時歐洲多國野火肆虐，全球正面臨地緣政治緊張與氣候變遷的雙重嚴峻考驗。科技領域則聚焦於輕量級軟體運行時的創新、GitHub漏洞獎勵計畫的品質化轉型，以及回顧Amiga 1000的歷史經驗，強調技術實力與市場策略並重。此外，紐約皇后區的建築多元性與巴西「文化食人主義」的哲學思辨，共同展現了文化融合與身份認同的深層探索。</p>
 </div>
 
 
@@ -99,97 +99,253 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>Medici family mystery may be solved after more than 400 years</h3>
-  <p class="summary">義大利強大家族麥地奇的佛羅倫斯大公法蘭西斯科一世及其妻子比安卡．卡佩羅於1587年神祕死亡，400多年來一直流傳著瘧疾與砷中毒兩種說法。
-耶魯大學與比薩大學的最新研究，透過法蘭西斯科遺骸的古DNA分析，確鑿地發現了兩種瘧疾寄生蟲的基因痕跡，強烈支持瘧疾是其死因。
-這項研究為這樁歷史懸案提供了明確答案，儘管未能完全排除下毒的可能性，但已大大減少了相關揣測。
-
-- 新研究使用古DNA分析確定死因
-- 排除蓄意謀殺的謠言，指出瘧疾為主要原因</p>
+  <h3>Cruller: Bun's Zig Runtime, Continued on Zig 0.16</h3>
+  <p class="summary">Cruller 是一個基於 Bun 舊版 Zig 發行的分支，專注於執行現有的生產型 JavaScript 伺服器，並已移植到原生 Zig 0.16。它保留了運行時所需的關鍵組件，例如 JavaScriptCore、Bun.serve 和網路功能，但移除了開發工具如套件管理器和測試執行器，使其成為一個輕量級的運行時。此項目旨在作為運行時而非完整的 Bun 替代品，與官方 Bun 相比，其大小減少了約 18%，且性能表現相當。
+- 專為預先建置的 JavaScript 服務器優化，大幅削減開發相關功能。
+- 支援原生 Zig 0.16 和 Linux x64，具備尺寸和部署優勢。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為什麼當年會有關於法蘭西斯科一世及其妻子被下毒的謠言傳出？</summary>
-    <p>當年法蘭西斯科的弟弟費迪南多是王位繼承人，但有被私生子安東尼奧超越的風險。費迪南多在兩人病倒前曾拜訪他們，加上麥地奇家族歷史上多有謀殺事件，這些因素共同助長了下毒奪權的謠言。</p>
+    <summary>「專注於生產的運行時」對於 Cruller 來說具體意味著什麼？</summary>
+    <p>這表示 Cruller 旨在提供一個精簡、高效的環境，專門用於執行已經建置好的 JavaScript 服務器。它移除了如套件管理器、打包器和測試執行器等開發工具，只保留了運行生產服務所需的最小核心功能，從而降低了資源消耗並簡化了部署。</p>
   </details>
   
   <details>
-    <summary>過去也有研究嘗試確認法蘭西斯科的死因，這次的古DNA分析有何獨特之處，使其結果更具決定性？</summary>
-    <p>過去的研究主要使用古免疫學分析抗原或蛋白質痕跡，但其結論並非完全無爭議。古DNA分析則直接尋找疾病的基因特徵，提供更直接和明確的證據，因此被認為具有高度的確定性。</p>
+    <summary>對於 Cruller 的目標使用場景，它與完整的 Bun 運行時相比主要優勢是什麼？</summary>
+    <p>Cruller 的主要優勢在於其更小的體積和更低的資源消耗，實現了約 18% 的尺寸縮減。這使得它更適合部署在資源受限的環境或需要快速啟動的場景中。此外，由於其專注於核心運行時功能，也可能帶來更簡潔的運行時行為和潛在的穩定性優勢。</p>
   </details>
   
   <details>
-    <summary>這項研究除了揭開麥地奇家族的死因之謎外，對於歷史學或醫學研究還有什麼更廣泛的意義？</summary>
-    <p>這項研究不僅確認了特定歷史人物的死因，更重要的是，它透過識別不同的瘧疾寄生蟲種類，有助於填補文藝復興時期義大利中部瘧疾演變和傳播的歷史空白。這為了解人類歷史上這種主要殺手提供了寶貴的數據。</p>
+    <summary>支援「原生 Zig 0.16」對於 Cruller 的開發和未來發展有何重要意義？</summary>
+    <p>支援原生 Zig 0.16 意味著 Cruller 不再依賴 Bun 舊版中帶有補丁的 Zig 編譯器集成，而是採用了標準的 Zig 工具鏈。這簡化了構建圖並提高了項目的可維護性、兼容性和可移植性，使其更容易跟隨 Zig 語言本身的發展，也為潛在的社區貢獻和跨平台支援奠定了基礎。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-55d6d3cbed.html">全文（約 7 分鐘）</a> ｜ <a href="https://www.cnn.com/2026/07/15/science/medici-family-mystery-dna-malaria">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-5166245623.html">全文（約 2 分鐘）</a> ｜ <a href="https://ziggit.dev/t/cruller-buns-zig-runtime-continued-on-zig-0-16/16734">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Any text-to-SQL benchmark should address difficulties of real-world data stores</h3>
-  <p class="summary">這篇文章的標題指出，任何文字轉SQL（Text-to-SQL）的基準測試都應解決真實世界資料儲存的困難。這意味著現有的基準測試可能未能充分反映實際資料庫中常見的複雜性。未來的評估標準應更深入地考量資料混亂、模式不完整或多樣性等實際挑戰，以更準確地衡量Text-to-SQL系統的實用性。
+  <h3>Amiga 1000: Ten years ahead of its time</h3>
+  <p class="summary">Amiga 1000 電腦於 1985 年推出，被譽為領先時代十年。它擁有先進的自訂晶片組，提供彩色圖形、立體聲、圖形使用者介面，尤其其全搶佔式多工處理能力，在當時遠超同期的 Apple Macintosh 和 Atari ST，甚至早於 Windows 95。儘管技術卓越且性價比相對較高，但由於 Commodore 糟糕的行銷和管理，未能充分發揮其潛力。
 
-- 呼籲改善Text-to-SQL基準測試
-- 強調真實世界資料的複雜性對評估的影響</p>
+* 主要優勢：先進的全搶佔式多工處理。
+* 主要瓶頸：Commodore 缺乏有效的產品行銷和領導。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>現實世界的資料儲存會遇到哪些具體的「困難」，而目前的基準測試可能沒有涵蓋到？</summary>
-    <p>這些困難可能包括資料不一致、遺失值、不規範的命名、複雜的聯結需求、不完整的資料庫模式，以及與各種異質資料源的整合挑戰。此外，資料庫的規模和動態變化也常超出典型基準測試的範圍。</p>
+    <summary>Amiga 1000 的「全搶佔式多工處理」與其他系統相比有何特別之處？</summary>
+    <p>「全搶佔式多工處理」允許作業系統完全控制 CPU 的時間分配，確保每個程式都能公平運行，即使一個程式卡住也不會影響其他程式。這與當時許多作業系統（如 Windows 3.0/3.1 和 Apple System 7）採用的協同式多工處理不同，後者需要程式主動放棄 CPU 控制權，更容易導致系統不穩定。</p>
   </details>
   
   <details>
-    <summary>為什麼文字轉SQL的基準測試必須涵蓋這些現實世界的困難？</summary>
-    <p>涵蓋這些困難能更準確地評估Text-to-SQL系統在實際應用中的效能和可靠性。如果基準測試過於簡化，那麼在實驗室環境中表現優異的模型，可能在面對真實企業資料時會表現不佳，導致部署失敗或產出錯誤結果。</p>
+    <summary>既然 Amiga 1000 技術如此先進且價格合理，為何它未能主導市場？</summary>
+    <p>Amiga 1000 未能主導市場主要歸咎於 Commodore 公司糟糕的行銷策略和領導層。他們未能有效地向大眾傳達 Amiga 的獨特優勢和未來願景，也缺乏像 Apple 那樣吸引人的產品敘事。此外，公司內部管理不善，領導人更專注於從公司中謀取利益而非長期發展。</p>
   </details>
   
   <details>
-    <summary>如果文字轉SQL的基準測試持續忽略現實世界的資料複雜性，可能會產生什麼後果？</summary>
-    <p>長期來看，這可能會誤導研究方向，使開發者過度優化在簡化資料集上的性能，而忽視了實際部署所需的關鍵能力。這將導致技術進步與業界需求脫節，阻礙Text-to-SQL技術在企業環境中的廣泛應用和信任建立。</p>
+    <summary>後來的個人電腦或作業系統吸收了 Amiga 的哪些創新或改進？</summary>
+    <p>Amiga 1000 的全搶佔式多工處理能力直到 1995 年 Windows 95 推出後才被主流 PC 作業系統普遍採納。文章指出，作者在使用 Windows PC 時，甚至到 1994 年仍感覺其穩定性不如 Amiga，特別是在同時進行多個任務時。Amiga 在圖形和聲音方面的早期領先也為未來多媒體PC的發展奠定了基礎。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-23396bdacf.html">全文（約 1 分鐘）</a> ｜ <a href="https://cacm.acm.org/blogcacm/if-you-think-you-can-do-real-world-text-to-sql/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-65b394a0bc.html">全文（約 12 分鐘）</a> ｜ <a href="https://dfarq.homeip.net/amiga-1000-ten-years-ahead-of-its-time/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Malleable Computing, Emacs, and You</h3>
-  <p class="summary">這篇文章講述作者如何利用Emacs的「可塑計算」能力，自動化將GitHub議題同步到Org Agenda的流程。
-過去作者手動複製GitHub議題作為個人筆記和回覆草稿，現在透過開發一個名為`fj.el`的Emacs套件來解決。
-這個解決方案利用GitHub CLI工具`gh`處理認證和API互動，並結合多個Emacs Elisp套件實現使用者介面和格式轉換。
+  <h3>Restructuring GitHub's bug bounty program</h3>
+  <p class="summary">GitHub 正在重組其漏洞獎勵計畫，以提升獎勵品質而非數量。此舉旨在為優質研究人員提供更豐厚的報酬和更深入的合作關係，同時維持對所有安全研究社群的開放性。主要變革包括推出永久性 VIP 計畫、調整公開獎勵金支付標準，並實施 HackerOne 訊號要求以減少低品質報告。這些調整旨在吸引高價值研究，並確保程式對認真的研究人員具有吸引力。
 
-*   利用`gh`工具，Emacs能將其視為與GitHub互動的REST服務，簡化認證和API呼叫。
-*   Emacs的動態Lisp環境允許快速原型開發和即時程式碼評估，大大簡化了個人化工具的開發過程。</p>
+主要重點：
+* 推出邀請制 VIP 計畫，提供更高的獎金和更快的響應速度。
+* 調整公開計畫的獎金標準為固定金額，並降低金額以區分。
+* 導入 HackerOne 訊號要求，篩選低品質或 AI 生成的報告。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為什麼作者偏好將GitHub議題複製到Org Agenda，而不是直接在GitHub上處理所有事務？</summary>
-    <p>作者將GitHub議題複製到Org Agenda，是為了將其作為個人筆記的草稿區和準備回覆的暫存區。Org mode提供了更強大的表達語法和組織功能，讓作者能夠更靈活地思考和構思內容，這是單純的GitHub議題介面所無法提供的。</p>
+    <summary>GitHub 這次重組漏洞獎勵計畫的動機是什麼？</summary>
+    <p>GitHub 決定重組計畫，是因為面臨報告數量不斷增加，需要減少「噪音」並專注於「訊號」。他們經過數月的反思、分析行業趨勢並考慮研究人員的體驗後，才做出了這些改變。</p>
   </details>
   
   <details>
-    <summary>在Emacs的背景下，「可塑計算」（Malleable Computing）具體指的是什麼？它如何協助實現這類自動化？</summary>
-    <p>在Emacs中，「可塑計算」指的是其基於Lisp的動態環境，允許用戶在運行時修改、擴展和評估程式碼。這項特性使得開發者能夠迅速建立原型、即時測試，並將內建的Elisp程式碼與外部工具（如GitHub CLI `gh`）無縫整合，從而快速地為個人化需求打造自動化解決方案。</p>
+    <summary>這些變革會不會讓新的或經驗較少的安全研究人員更難參與或獲得獎勵？</summary>
+    <p>雖然公開計畫的獎金有所降低且有訊號要求，但 GitHub 表示這「不是新手研究人員的障礙」。HackerOne 平台為未達標準的研究人員提供最多四次初始提交機會，足以讓真正有發現的新手展示其技能，並有機會進入 VIP 計畫。</p>
   </details>
   
   <details>
-    <summary>除了同步GitHub議題外，Emacs的可塑計算能力還能應用於哪些其他類型的任務或工作流程？</summary>
-    <p>Emacs的可塑計算能力適用於各種需要高度客製化和自動化的任務。例如，可以用來建立個人化的檔案管理工具、客製化專案追蹤系統、自動化資料轉換流程，或是將多個網路服務（如電子郵件、日曆、RSS閱讀器）整合到統一的Emacs環境中，以減少上下文切換並提高效率。</p>
+    <summary>除了獎勵金重組和 VIP 計畫外，GitHub 還計劃採取哪些措施來改善與安全研究社群的互動？</summary>
+    <p>GitHub 還將投入更多資源以縮短響應時間、提供更清晰的嚴重性判斷理由，並加強社群參與。他們計劃透過參與 DEFCON 等會議和持續的外展活動，直接與研究人員互動，建立更緊密的合作關係。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-a04ea70735.html">全文（約 7 分鐘）</a> ｜ <a href="http://yummymelon.com/devnull/malleable-computing-emacs-and-you.html">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-d2fa6f8b0d.html">全文（約 4 分鐘）</a> ｜ <a href="https://github.blog/security/next-chapter-restructuring-githubs-bug-bounty-program/">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Houthis claim attack on oil tankers as US launches more strikes on Iran</h3>
+  <p class="summary">葉門的青年運動聲稱已襲擊紅海中的兩艘沙烏地阿拉伯油輪，以實施其對沙烏地的「海上禁運」，沙烏地阿拉伯證實其中一艘油輪遇襲並起火。與此同時，美國對伊朗發動了連續第十二晚的空襲，目標是伊朗的軍事設施，旨在削弱其威脅區域航運的能力。伊朗媒體報導稱空襲造成兩人死亡，且荷姆茲海峽因爆炸而「完全關閉」，導致油輪無法通行。此區域衝突加劇，恐將進一步擾亂國際航運並影響全球燃料價格。
+* 青年運動表示將持續其海上行動，執行「圍困換圍困」策略。
+* 美伊和平談判停滯，此前簽署的諒解備忘錄在伊朗襲擊荷姆茲海峽船隻後被川普終止。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>青年運動所宣稱的「海上禁運」具體內容為何？</summary>
+    <p>青年運動宣布對沙烏地阿拉伯實施「海上禁運」，聲稱將關閉紅海南部的曼德海峽（Bab al-Mandab Strait）給沙烏地船隻通行。此舉旨在回應美以與伊朗之間的戰爭，該戰爭已導致荷姆茲海峽實際上被關閉。</p>
+  </details>
+  
+  <details>
+    <summary>鑑於荷姆茲海峽的狀況，紅海的穩定對沙烏地阿拉伯及全球航運為何如此關鍵？</summary>
+    <p>由於美以與伊朗之間的衝突，荷姆茲海峽已實際關閉，紅海已成為沙烏地阿拉伯石油運輸的關鍵通道。青年運動在紅海的襲擊威脅，將進一步擾亂國際航運，並可能導致全球燃料價格顯著波動。</p>
+  </details>
+  
+  <details>
+    <summary>在這些衝突升級的背景下，美國與伊朗之間的和平談判現況如何？</summary>
+    <p>美國和伊朗之間的和平談判已陷入僵局。兩國此前於六月簽署了一份諒解備忘錄，旨在停止軍事行動並重新開放荷姆茲海峽，但美國總統川普在伊朗襲擊荷姆茲的船隻後宣布停火「結束」。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-07-23-341e3e413a.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cpw9xzx9r4ko?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Around 12,000 people evacuated in France fires</h3>
+  <p class="summary">歐洲各地野火肆虐，導致大規模疏散和人員傷亡。法國西南部吉倫特地區約有12,000人被疏散，其中包含10,000名遊客，當地已有超過2,000公頃土地被毀，並有兩名消防員殉職。義大利西西里島亦有消防員因救火身亡，西班牙馬德里也受火災影響，部分居民被迫撤離。這些破壞性火災發生在歐洲一系列異常且持續的高溫熱浪期間，顯示歐洲正成為全球暖化速度最快的大洲。
+
+重點：
+- 法國吉倫特地區約1.2萬人撤離，兩名消防員殉職。
+- 義大利西西里島和西班牙馬德里亦受嚴重野火影響。
+- 歐洲正經歷異常高溫，加劇野火風險，被指為暖化最快的大洲。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>歐洲為何會經歷如此異常且持續的高溫熱浪，使其成為暖化速度最快的大洲？</summary>
+    <p>歐洲的熱浪與全球氣候變遷密切相關，特別是北極地區暖化速度較快，影響了急流模式，導致熱空氣停滯。地理位置和高壓系統也使其更容易受到來自非洲的熱氣團影響，進一步加劇了熱浪的強度和持續時間。</p>
+  </details>
+  
+  <details>
+    <summary>除了人員疏散和土地燒毀，這些頻繁的野火還會對歐洲造成哪些長期影響？</summary>
+    <p>長期而言，頻繁的野火會導致生態系統嚴重受損，例如生物多樣性減少、土壤侵蝕加劇，並釋放大量碳排放，加劇氣候變遷。此外，重建成本高昂，旅遊業可能受衝擊，居民的心理健康也將面臨挑戰。</p>
+  </details>
+  
+  <details>
+    <summary>鑑於野火頻繁發生且部分歸因於人為因素，歐洲各國正採取或未來能採取哪些措施來預防和控制野火？</summary>
+    <p>各國正加強森林管理，例如定期清理林下植被以減少燃料，並實施更嚴格的火災管制措施，包括在高風險地區禁止生火及限制交通。此外，提升公眾對野火風險的意識、改進早期預警系統和加強跨國合作也是重要的策略。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-07-23-85bd07a046.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>Olympic Mountain Glory</h3>
+  <p class="summary">奧林匹克半島坐落於華盛頓州西北部，以其多樣的地理景觀聞名，包括高山冰川、崎嶇海岸線、溫帶雨林與深邃河谷。奧林匹克山脈由胡安德富卡板塊潛沒所形成，儘管地殼持續抬升，但此地豐沛的雨雪侵蝕作用有效地平衡了隆升。該地區的冰川正逐漸消退，而埃爾瓦河上的兩座大壩在2011至2014年間被拆除，啟動了美國當時最大的生態復育項目之一，旨在恢復魚類遷徙與自然生態系統。
+- 奧林匹克國家公園保護著山脈核心及部分太平洋海岸線的原始風貌。
+- 埃爾瓦河大壩拆除案例展示了大規模生態修復的努力及其對當地生物多樣性的正面影響。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>奧林匹克半島的溫帶雨林有何獨特之處？為何此地會形成這類生態系統？</summary>
+    <p>奧林匹克半島擁有美國大陸上最大的溫帶雨林之一，其特色是常年濕潤、植被茂密，包括古老的針葉樹和豐富的苔蘚與蕨類植物。這些雨林得益於來自太平洋的潮濕空氣被奧林匹克山脈阻擋，形成大量降水，創造了獨特的濕潤微氣候。</p>
+  </details>
+  
+  <details>
+    <summary>摘要中提到冰川正在後退，這對奧林匹克半島的環境會造成哪些更廣泛的影響？</summary>
+    <p>冰川後退會減少夏季河流的徑流量，影響下游生態系統和水生生物。此外，失去冰川會改變景觀，減少當地生物多樣性，並可能加劇氣候變遷對區域水資源供應的壓力。</p>
+  </details>
+  
+  <details>
+    <summary>埃爾瓦河大壩拆除計畫在實現其生態復育目標方面取得了哪些成效？</summary>
+    <p>埃爾瓦河大壩拆除計畫被視為一項巨大的成功，河中的鮭魚和其他魚類數量顯著回升，得以再次遷徙至上游產卵地。河流的自然泥沙輸運和河岸植被也得以恢復，促進了整個流域生態系統的健康。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-23-a33daecdae.html">全文（約 4 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/earth-observatory/olympic-mountain-glory/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>All the Queens houses</h3>
+  <p class="summary">紐約市皇后區的房屋以其強烈的個人化風格和多樣性而聞名。對專業人士而言，這些房屋的建築設計能喚起從威尼斯街景到中國寺廟等各種聯想，展現了豐富的文化融合。
+- 皇后區住宅反映其多元文化特色。
+- 建築風格極具個性化與藝術性。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼皇后區的房屋會展現如此多樣的建築風格？</summary>
+    <p>皇后區是紐約市最多元化的行政區，其居民來自世界各地。他們將各自的文化背景、傳統和個人品味融入房屋設計中，從而創造出獨特的建築景觀。</p>
+  </details>
+  
+  <details>
+    <summary>除了威尼斯街景和中國寺廟，還能看到哪些具體的建築風格或文化元素？</summary>
+    <p>除了上述提及的風格，皇后區的房屋可能還融合了其他歐洲、拉丁美洲、南亞或中東的建築特色。這些可能體現在屋頂、窗戶、裝飾細節或色彩選擇上，彰顯了居民多元的起源。</p>
+  </details>
+  
+  <details>
+    <summary>這種獨特的建築多樣性對皇后區的社區有何重要意義？</summary>
+    <p>這種建築上的豐富性不僅美化了街區，更成為皇后區多元文化身份的視覺象徵。它有助於居民的歸屬感，並展現了該地區開放且兼容並蓄的社區精神。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-07-23-87c11c0c19.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/tour-the-eclectic-residences-of-new-yorks-most-diverse-borough">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>The savage bites back</h3>
+  <p class="summary">巴西現代主義中的「文化食人主義」（anthropophagy）運動，旨在「吞噬」並轉化文化，進而顛覆殖民者對食人行為的恐懼。此運動將殖民者的刻板印象轉化為一種積極的創造力量，重新定義巴西的文化認同。
+
+- 起源於巴西現代主義。
+- 核心概念是文化轉化與吸收。
+- 目的為反殖民敘事，顛覆歐洲中心觀。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>「文化食人主義」具體是指什麼？它如何「吞噬」和「轉化」文化？</summary>
+    <p>「文化食人主義」並非指實際的食人行為，而是比喻性地吸收和內化外來（尤其是歐洲）文化元素，然後將其重新加工、轉化，創造出獨具巴西特色的文化表達。它強調將外來影響本土化，並賦予其新的意義。</p>
+  </details>
+  
+  <details>
+    <summary>這個運動為何特別強調「顛覆殖民者對食人行為的恐懼」？這背後有什麼歷史背景？</summary>
+    <p>在殖民時期，歐洲人常將美洲原住民描述為野蠻的食人族，以此來合理化他們的征服和文化優越性。巴西現代主義者反其道而行，將這個負面形象「奪回」，轉化為一種象徵性的力量，表達巴西文化有能力消化、吸收並超越外來影響，從而挑戰歐洲中心主義的視角。</p>
+  </details>
+  
+  <details>
+    <summary>除了文化藝術領域，這種「文化食人主義」思想在巴西社會中還有哪些更廣泛的影響或體現？</summary>
+    <p>「文化食人主義」的理念超越了藝術範疇，成為巴西民族認同建構的重要基石。它鼓勵巴西人民擁抱多元性，將不同文化的衝擊視為豐富自身的力量，而非威脅。這也反映在巴西社會中對混血文化和多樣性的高度包容與自豪感上。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-07-23-b3d40681bd.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/essays/anthropophagy-art-flips-the-cannibal-worries-of-colonialism">原文網頁</a></p>
 </article>
 
 
