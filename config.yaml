@@ -18,6 +18,22 @@ timezone: Asia/Taipei
 # per minute, and total feeds x this number = requests per run.
 max_articles_per_feed: 3
 
+# How many characters of an article's text are fed to the model when
+# summarizing. Short news feeds fit easily in the smaller budget; long-form
+# categories (see long_form_categories) use the larger one so summaries of long
+# essays cover the whole piece — text over budget keeps its head AND tail rather
+# than just the opening, so the thesis and conclusion aren't lost.
+summary_source_chars: 6000
+longform_source_chars: 16000
+
+# Feed categories treated as long-form: their articles get the larger source
+# budget above, a summary prompt tuned for essays (argument/reasoning/where it
+# lands), and a leg up when picking the daily deep read. Case-insensitive
+# substring match against each feed's `category`.
+long_form_categories:
+  - 長文
+  - Long Reads
+
 # How many days of past digests to keep under docs/archive/. Older dated
 # pages get deleted on each run so the archive doesn't grow forever. Set
 # to 0 to keep everything.
@@ -66,11 +82,16 @@ weekly_roundup_weekday: 6
 # Keywords you care about. Articles whose title or summary mention more of
 # these get sorted first within their category (English/Chinese both work,
 # matching is case-insensitive substring). Leave empty to keep RSS order.
-interests: []
-# interests:
-#   - AI
-#   - 台灣
-#   - climate
+interests:
+  - AI
+  - 半導體
+  - 太空
+  - 經濟
+  - 生物技術
+  - 神經科學
+  - 光電技術
+  - 物理
+  - 化學
 
 # LLM provider used for summarization: "gemini" (Google Gemini API) or
 # "openai" (OpenAI, or any OpenAI-compatible endpoint via openai_base_url).
@@ -89,7 +110,10 @@ model: gemini-2.5-flash
 # RSS/Atom feeds to digest. Add or remove entries freely.
 feeds:
   - name: Hacker News
-    url: https://hnrss.org/frontpage
+    # ?points=100 keeps only stories that cleared 100 points, cutting the noise
+    # (Show HN, job posts, dead external links) and raising the odds each item
+    # has a real article body to extract. Lower the threshold for more volume.
+    url: https://hnrss.org/frontpage?points=100
     category: 科技 Tech
 
   - name: BBC World News

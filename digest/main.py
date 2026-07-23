@@ -58,6 +58,12 @@ def _week_articles(recent: dict, today: str, days: int = 7):
     return out, label
 
 
+def _is_long_form(category: str, conf: dict) -> bool:
+    """True if a feed's category is one of the configured long-form categories."""
+    c = (category or "").lower()
+    return any(str(x).lower() in c for x in conf.get("long_form_categories", []))
+
+
 def build_digest() -> None:
     conf = load_config()
     tz = ZoneInfo(conf["timezone"])
@@ -68,6 +74,8 @@ def build_digest() -> None:
 
     categories: dict[str, list] = {}
     for feed in conf["feeds"]:
+        category = feed.get("category", "General")
+        long_form = _is_long_form(category, conf)
         entries = fetch_feed_entries(feed["url"], conf["max_articles_per_feed"])
         articles = []
         for entry in entries:
@@ -81,11 +89,11 @@ def build_digest() -> None:
                 continue
 
             fallback = entry.get("summary", "")
-            text = extract_full_text(link, fallback)
+            text, has_full_text = extract_full_text(link, fallback)
             if not text:
                 continue
             try:
-                result = summarize_article(title, text, conf)
+                result = summarize_article(title, text, conf, long_form=long_form)
             except Exception as exc:
                 print(f"warning: skipping {title!r} ({feed['name']}): {exc}", file=sys.stderr)
                 continue
@@ -99,6 +107,9 @@ def build_digest() -> None:
                     "summary_secondary": result.get("summary_secondary", ""),
                     "qa": result["qa"],
                     "source": feed["name"],
+                    "category": category,
+                    "long_form": long_form,
+                    "has_full_text": has_full_text,
                     "slug": slug,
                     "full_text": text,
                     "read_minutes": estimate_reading_minutes(text),
@@ -107,7 +118,7 @@ def build_digest() -> None:
             run_titles.append(normalized)
             seen[link] = date_str
         if articles:
-            categories.setdefault(feed.get("category", "General"), []).extend(articles)
+            categories.setdefault(category, []).extend(articles)
 
     for articles in categories.values():
         articles.sort(key=lambda a: -score_article(a, conf["interests"]))
@@ -127,13 +138,26 @@ def build_digest() -> None:
         except Exception as exc:
             print(f"warning: editor brief failed: {exc}", file=sys.stderr)
 
-    # Deep read: pick the meatiest article of the day (most full text to work
-    # with) and generate a longer companion piece on its own page.
+    # Deep read: pick the meatiest article of the day and generate a longer
+    # companion piece on its own page. We only consider articles we actually
+    # extracted full text for (a deep read of a one-line blurb is pointless),
+    # and score by substance — reading time, interest matches, and a bonus for
+    # long-form pieces — rather than raw character count, which favours pages
+    # heavy on boilerplate over genuinely meaty ones.
     deep = None
     deep_article = None
     all_articles = [a for articles in categories.values() for a in articles]
     if all_articles and conf["deep_read"]:
-        deep_article = max(all_articles, key=lambda a: len(a.get("full_text", "")))
+        candidates = [a for a in all_articles if a.get("has_full_text")] or all_articles
+
+        def _deep_score(a: dict) -> float:
+            return (
+                a.get("read_minutes", 0)
+                + 3 * score_article(a, conf["interests"])
+                + (5 if a.get("long_form") else 0)
+            )
+
+        deep_article = max(candidates, key=_deep_score)
         try:
             result = generate_deep_read(deep_article, conf)
             if result["background"] or result["points"] or result["implications"] or result["glossary"]:
