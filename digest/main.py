@@ -129,6 +129,21 @@ def build_digest() -> None:
         for a in articles
     ]
 
+    # No new articles this run — e.g. a second run the same day, after the first
+    # already claimed every item via seen-state, or a genuinely quiet fetch.
+    # Rendering here would overwrite the day's existing digest, deep read and
+    # quiz with an empty "no articles" page, so instead keep the last good pages
+    # and only do housekeeping (prune + refresh archive index + persist state).
+    # This makes re-running the workflow safe and idempotent.
+    if not todays_articles:
+        print("no new articles this run; keeping existing pages", file=sys.stderr)
+        prune_old_archives(conf["archive_retention_days"])
+        prune_old_article_pages(conf["archive_retention_days"])
+        render_archive_index(conf)
+        save_seen(seen, conf["seen_retention_days"])
+        save_recent(load_recent(), conf["seen_retention_days"])
+        return
+
     # Editor's brief: one short cross-article overview of the day, baked into
     # both today's front page and its archived copy.
     brief = ""
