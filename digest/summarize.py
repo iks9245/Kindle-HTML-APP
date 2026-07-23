@@ -2,7 +2,24 @@ import json
 import os
 import time
 
+# Default budget for how much of an article's text is fed to the model. Long-form
+# categories use a larger one (see conf["longform_source_chars"]).
 MAX_SOURCE_CHARS = 6000
+
+
+def _clip_source(text: str, limit: int) -> str:
+    """Trim article text to ``limit`` chars, keeping both ends for long pieces.
+
+    A plain ``text[:limit]`` makes long essays get summarized from their opening
+    alone, missing the thesis and conclusion. When the text is over budget we
+    keep the first ~65% and the last ~35% with an elision marker between, so the
+    model sees where the piece lands, not just where it starts.
+    """
+    if limit <= 0 or len(text) <= limit:
+        return text
+    head = int(limit * 0.65)
+    tail = limit - head
+    return text[:head].rstrip() + "\n\n[…]\n\n" + text[-tail:].lstrip()
 
 _RETRY_ATTEMPTS = 4
 _RETRY_BASE_DELAY = 20  # seconds; doubles each retry to ride out rate limits
@@ -39,8 +56,15 @@ def _get_openai_client(base_url: str | None):
     return _openai_client
 
 
-def _build_prompt(title: str, text: str, language: str, secondary_language: str | None = None) -> str:
-    text = text[:MAX_SOURCE_CHARS]
+def _build_prompt(
+    title: str,
+    text: str,
+    language: str,
+    secondary_language: str | None = None,
+    long_form: bool = False,
+    source_chars: int = MAX_SOURCE_CHARS,
+) -> str:
+    text = _clip_source(text, source_chars)
     secondary_key = ""
     if secondary_language:
         secondary_key = (
@@ -48,13 +72,23 @@ def _build_prompt(title: str, text: str, language: str, secondary_language: str 
             "(same 2-4 sentence length and format), as one string using \\n for line "
             "breaks.\n"
         )
+    # Nudge the summary toward what matters for the kind of piece it is.
+    if long_form:
+        angle = (
+            "This is a long-form essay: center the summary on its main argument, the "
+            "key steps of its reasoning, and where it lands — not just the opening. "
+        )
+    else:
+        angle = (
+            "Lead with the concrete news: who/what/when/where and why it matters. "
+        )
     keys_word = "three keys" if secondary_language else "two keys"
     return (
         "Read the following article and respond with ONLY a single JSON object "
         "(no markdown code fences, no commentary before or after) with exactly "
         f"these {keys_word}:\n"
         f'- "summary": a 2-4 sentence summary in {language}, plus a couple of '
-        "key-point bullets if useful, as one string using \\n for line breaks.\n"
+        f"key-point bullets if useful, as one string using \\n for line breaks. {angle}\n"
         f"{secondary_key}"
         '- "qa": a list of exactly 3 objects, each with "question" and "answer" '
         f"keys, both written in {language}. Each question should be something a "
@@ -98,8 +132,8 @@ def _build_brief_prompt(articles: list, language: str) -> str:
     )
 
 
-def _build_deep_read_prompt(title: str, text: str, language: str) -> str:
-    text = text[:MAX_SOURCE_CHARS]
+def _build_deep_read_prompt(title: str, text: str, language: str, source_chars: int = MAX_SOURCE_CHARS) -> str:
+    text = _clip_source(text, source_chars)
     return (
         "Read the following article and write an in-depth 'deep read' companion for a "
         f"curious reader who wants more than a quick summary, written in {language}. "
@@ -196,8 +230,20 @@ def _complete(prompt: str, conf: dict, max_tokens: int) -> str:
     raise ValueError(f"Unknown provider: {provider!r} (expected 'gemini' or 'openai')")
 
 
-def summarize_article(title: str, text: str, conf: dict) -> dict:
-    prompt = _build_prompt(title, text, conf["language"], conf.get("secondary_language"))
+def _source_chars(conf: dict, long_form: bool) -> int:
+    key = "longform_source_chars" if long_form else "summary_source_chars"
+    return int(conf.get(key, MAX_SOURCE_CHARS))
+
+
+def summarize_article(title: str, text: str, conf: dict, long_form: bool = False) -> dict:
+    prompt = _build_prompt(
+        title,
+        text,
+        conf["language"],
+        conf.get("secondary_language"),
+        long_form=long_form,
+        source_chars=_source_chars(conf, long_form),
+    )
     return _parse_response(_complete(prompt, conf, max_tokens=800))
 
 
@@ -220,7 +266,13 @@ def generate_brief(articles: list, conf: dict) -> str:
 
 
 def generate_deep_read(article: dict, conf: dict) -> dict:
-    prompt = _build_deep_read_prompt(article["title"], article.get("full_text", ""), conf["language"])
+    long_form = bool(article.get("long_form"))
+    prompt = _build_deep_read_prompt(
+        article["title"],
+        article.get("full_text", ""),
+        conf["language"],
+        source_chars=_source_chars(conf, long_form),
+    )
     data = _loads_lenient(_complete(prompt, conf, max_tokens=1000))
     points = [str(p).strip() for p in data.get("points", []) if str(p).strip()]
     glossary = [
