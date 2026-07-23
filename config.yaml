@@ -82,11 +82,16 @@ weekly_roundup_weekday: 6
 # Keywords you care about. Articles whose title or summary mention more of
 # these get sorted first within their category (English/Chinese both work,
 # matching is case-insensitive substring). Leave empty to keep RSS order.
-interests: []
-# interests:
-#   - AI
-#   - 台灣
-#   - climate
+interests:
+  - AI
+  - 半導體
+  - 太空
+  - 經濟
+  - 生物技術
+  - 神經科學
+  - 光電技術
+  - 物理
+  - 化學
 
 # LLM provider used for summarization: "gemini" (Google Gemini API) or
 # "openai" (OpenAI, or any OpenAI-compatible endpoint via openai_base_url).
