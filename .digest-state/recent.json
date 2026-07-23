@@ -22,5 +22,62 @@
       "summary": "一名開發者成功為 Fairphone 6 的超廣角鏡頭達成了實驗性的 Linux 支援。這項進展解決了在主流 Linux 和 postmarketOS 上使用該設備的主要障礙之一——相機支援，特別是為了其 QR 碼掃描專案。這對於希望在 Fairphone 6 上運行替代作業系統的用戶來說，是個重要的里程碑。\n* 僅支援 OmniVision OV13B10 超廣角鏡頭，主鏡頭和前鏡頭尚無驅動。\n* 目前功能仍屬實驗性質，存在如無自動對焦、預覽畫面裁切及簡化電源管理等限制。",
       "title": "Fairphone 6 wide camera experimental Linux support"
     }
+  ],
+  "2026-07-24": [
+    {
+      "source": "Hacker News",
+      "summary": "一位開發者推出了名為「Echo」的實驗性AI系統，它透過動態結合多個開源模型而非僅依賴單一模型來處理任務。該系統展現了令人印象深刻的成果，能以約三分之一的推論成本，達到與Fable等領先系統相似的效能水準，這對降低高效能AI的成本和普及化具有重要意義。Echo能夠根據每個請求智慧地選擇和整合模型，即使是整體較弱的模型也能在特定問題上發揮關鍵作用，彌補了單一模型的局限。\n\n*   透過多模型協作，實現高效能與低成本兼顧。\n*   利用不同模型的互補性，最佳化AI任務處理。",
+      "title": "Show HN: Echo – Fable-level results at 1/3 the cost using open-weight models"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "NameCheap 近期在未經嚴格驗證的情況下，將一位長期用戶的帳戶控制權（包括密碼重設和電子郵件變更）轉移給一名第三方。儘管該域名是以原用戶的個人資料註冊，但一名大學社團的新任領導僅憑一通電話便成功說服 NameCheap 客服，導致該帳戶遭到未經授權的接管。此事件揭示了 NameCheap 客戶支援驗證流程存在嚴重的安全漏洞，讓用戶資產面臨風險。\n* 主要新聞點：NameCheap 未經核實即轉移帳戶控制權。\n* 潛在影響：客戶帳戶安全受到嚴重威脅。",
+      "title": "Namecheap Gave My Account to an Unverified Third Party Just Because They Asked"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "一對夫婦在中國為他們的女兒支付了超過80萬美元進行基因編輯治療，但女兒不幸在治療後去世。這項死亡事件發生在一個中國的基因編輯試驗中，但從未被公開披露，引發了對實驗性治療透明度和倫理的嚴重擔憂。這突顯了高昂的實驗性醫療費用、潛在風險以及臨床試驗數據公開的重要性。\n* 未公開披露：女兒的死亡事件此前未被公眾知曉。\n* 倫理與透明度：事件引發了對基因編輯療法試驗倫理標準和資訊透明化的質疑。",
+      "title": "Couple pay >$800k for a gene-editing therapy for their daughter. She died."
+    },
+    {
+      "source": "BBC World News",
+      "summary": "布蘭特原油價格自五月以來首次飆升至每桶100美元，主因是中東地區衝突升級，包括美國對伊朗的軍事打擊及葉門胡塞武裝襲擊紅海油輪，重新引發了對全球能源供應的擔憂。這項發展預計將對英國和美國等多國造成通膨壓力，導致汽油、柴油及其他商品價格上漲，對消費者造成直接影響。同時，這也讓各國央行在控制通膨的戰役中面臨更大挑戰，可能迫使他們維持高利率或進一步升息。\n- 紅海航線受威脅，沙烏地阿拉伯的替代出口路線可能受阻。\n- 央行可能面臨升息壓力，影響抵押貸款持有人和借款人。",
+      "title": "Oil prices hit $100 for the first time since May"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "美國前總統川普宣布，美國與沙烏地阿拉伯之間的民用核能協議，將嚴格取決於沙烏地阿拉伯是否加入《亞伯拉罕協議》並承認以色列。這項重大的發展將一個數十億美元的和平核能合作夥伴關係，與中東地區的關係正常化進程連結起來，儘管沙國尚未回應，且過去曾將承認以色列與巴勒斯坦建國條件掛鉤。該協議將提交國會審查，旨在提供非軍事核能且不涉及鈾濃縮，但仍引發了專家和議員對核擴散的擔憂。\n- 關鍵條件：沙烏地阿拉伯必須加入《亞伯拉罕協議》，承認以色列。\n- 協議性質：僅限非軍事用途，不涉及鈾濃縮，但仍引發核擴散擔憂。",
+      "title": "Saudis must recognise Israel for nuclear deal, says Trump"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "美國太空總署（NASA）於週四宣布，其串流服務 NASA+ 現已在 Amazon Fire TV Channels 上線，讓 Fire TV 用戶能透過 Alexa 更便捷地觀看太空探索內容。此舉旨在將 NASA 的科學任務發射、Artemis 載人登月系統測試、月球機器人交付等節目帶給更廣泛的受眾。這項新的發行合作夥伴關係，是 NASA 履行向公眾展示其工作、支持其建立月球基地和增加 Artemis 任務頻率目標的重要一步，確保引人入勝的太空內容持續可用。\n\n- 可透過 Alexa 語音指令輕鬆存取。\n- 內容保持免費且無廣告，並同時在 NASA 應用程式和官方網站提供。",
+      "title": "Look for NASA+ Now Streaming on Amazon Fire TV"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "NASA的組員於2026年5月15日在位於紐奧良的米紹德裝配廠，成功將高達130英尺的Artemis IV液態氫燃料槽從生產單元移出，運送到獨立的測試建築。這個燃料槽是太空發射系統（SLS）火箭核心階段的關鍵部分，負責為RS-25引擎提供數千加侖的超低溫推進劑。此次轉移是Artemis IV任務準備工作的重要進展，標誌著NASA在推進人類重返月球的Artemis計畫上又邁出一步。",
+      "title": "Crews Move Artemis IV Liquid Hydrogen Tank"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "NASA MAVEN任務的科學家們近日發現，火星極光形成的方式與地球極光相似，是透過一種微型「鄧吉循環」（Dungey cycle）在其地殼磁場上方產生。這項新發現發佈於《自然通訊》，揭示了火星極光的物理機制，對於理解太陽系中此類過程的普遍性以及火星與地球的演化差異至關重要。\n* MAVEN任務雖已於2025年12月失去信號並於2026年6月終止，但其數據持續為科學研究提供貢獻。\n* 火星不具全球性磁場，但其強大的地殼磁場區域能產生局部極光。",
+      "title": "NASA’s MAVEN Illuminates New Understanding of Auroras at Mars"
+    },
+    {
+      "source": "Quanta Magazine",
+      "summary": "宇宙學界正熱烈討論著「哈伯張力」(Hubble tension)，這是宇宙當前膨脹速率測量值之間存在的顯著差異。兩種主要測量方法產生了相互矛盾的結果，這對標準宇宙學模型構成了重大挑戰。這篇文章深入探討了這個問題，並指出這可能暗示我們當前的宇宙模型存在根本缺陷，需要引入新的物理學來解釋。\n\n*   核心論點：宇宙膨脹速度的測量值存在差異，引發了對宇宙學標準模型的質疑。\n*   主要推理步驟：宇宙加速膨脹的發現引出了暗能量概念，但現在兩種測量當前膨脹率的方法卻不一致。\n*   結論：這種張力可能預示著宇宙學需要新的物理學理論來補足當前模型的不足。",
+      "title": "How Fast Is the Universe Really Expanding?"
+    },
+    {
+      "source": "Quanta Magazine",
+      "summary": "這篇文章預告了2026年的菲爾茲獎和算盤獎得主名單，這些獎項每四年頒發一次，旨在表彰40歲以下在數學和理論計算機科學領域做出傑出貢獻的年輕學者。其中，王紅（Hong Wang）因其「百年一遇」的證明而成為第三位獲得菲爾茲獎的女性，其成就展現了專注、投入與洞察力的重要性。這些獎項共同肯定了那些開創性地重塑了其專業領域的頂尖人才。",
+      "title": "Fields and Abacus Medals 2026"
+    },
+    {
+      "source": "Quanta Magazine",
+      "summary": "計算機科學家 Shayan Oveis Gharan 因其獨特的「不安於室」研究方法而聞名，他善於從看似不相關的數學領域中汲取新工具，以解決長期存在的計算難題。他透過將問題轉化為多項式方法並引入隨機性，不僅在隨機抽樣演算法領域取得了突破性進展，解決了懸而未決三十年的推測，更將這些新方法應用於旅行推銷員問題 (TSP)。最終，他與團隊成功打破了 Christofides 演算法長達四十多年的最佳紀錄，證明了以新穎工具和跨領域思考應對複雜問題的強大潛力。\n\n*   利用多項式方法和隨機性，解決了懸而未決三十年的數學對象抽樣（馬可夫鏈混合時間）推測。\n*   將這些創新工具回頭應用於旅行推銷員問題，成功設計出超越 Christofides 演算法效能的新方法。",
+      "title": "A Master of the Traveling Salesperson Problem Finds His Own Path"
+    }
   ]
 }

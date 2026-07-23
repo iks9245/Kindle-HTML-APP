@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Show HN: Echo – Fable-level results at 1/3 the cost using open-weight models</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-24-8eec2cc6fc-p4.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Show HN: Echo – Fable-level results at 1/3 the cost using open-weight models</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 4 / 4 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://news.ycombinator.com/item?id=49026810">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-24-8eec2cc6fc-p3-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 4 / 4 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Here is a short/high level video on how it works: https://www.youtube.com/watch?v=lJFJSvOdXhg</p>
+
+<p class="fulltext">I wrote up the evaluation methodology, individual model results, costs and current limitations here: https://echo.tracerml.ai/eval</p>
+
+<p class="fulltext">I would love for you to try it! Especially if you hit any weird failure cases or places where the allocation looks unintuitive.</p>
+
+<p class="fulltext">reply</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Echo系統是如何決定要使用哪些模型以及如何結合它們的輸出？</summary>
+  <p>Echo會根據每個請求的特定需求，智慧地決定需要分配多少運算資源、哪些開源模型應該參與，以及如何最佳化結合它們的輸出。這個過程旨在無需預先知道哪些決策是好的情況下，最大限度地發揮多模型協作的優勢。</p>
+</details>
+
+<details>
+  <summary>與直接使用單一大型模型（如Fable）相比，Echo系統有哪些主要優勢？</summary>
+  <p>Echo系統的主要優勢在於其卓越的成本效益和靈活性。它能以大約三分之一的推論成本，達到與Fable等強大單一模型相似的綜合效能，同時還能透過利用不同模型在特定任務上的互補性來處理更廣泛的問題。</p>
+</details>
+
+<details>
+  <summary>目前Echo系統在開發上還有哪些限制或正在努力改進的方面？</summary>
+  <p>目前Echo在某些情況下仍會做出不正確的模型分配或組合決策。開發者正在深入分析這些失敗案例，並積極測試該方法是否同樣適用於衡量品質更為複雜的編碼和代理任務，以進一步提升系統的魯棒性和適用性。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-24-8eec2cc6fc-p3-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 4 / 4 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
