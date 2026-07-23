@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-07-23</title>
+<title>Fairphone 6 wide camera experimental Linux support</title>
 <style>
   body {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Helvetica, Arial, sans-serif;
     background: #fff;
     color: #000;
     margin: 0 auto;
@@ -73,59 +73,48 @@
 <span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
 <div class="page">
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
-<p class="fontswitch"><a href="index-sans.html">切換為無襯線字體顯示</a></p>
+<p class="fontswitch"><a href="2026-07-23-d7d4ca9012-p21.html">切換為襯線字體顯示</a></p>
 
-<h1>每日 AI 文摘 2026-07-23</h1>
+
+<h1>Fairphone 6 wide camera experimental Linux support</h1>
 <p class="meta">
-2026-07-23
-
- ｜ <a href="archive/index.html">存檔列表</a>
- ｜ <a href="deepread.html">每日深讀</a>
-
- ｜ <a href="quiz.html">昨日小考</a>
-
+Hacker News
+ ｜ 第 21 / 23 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://nondescriptpointer.com/articles/fairphone-6-wide-camera-linux/">原文網頁</a>
 </p>
 
 
-<div class="brief">
-<p class="brief-label">主編導讀</p>
-<p>今日科技界傳出重要消息，一名開發者成功為Fairphone 6的超廣角鏡頭提供了實驗性的Linux支援。這解決了在該裝置上運行替代作業系統時，長久以來相機支援的重大挑戰。儘管目前僅限於超廣角鏡頭，且功能仍處於實驗階段並帶有諸多限制，這對於尋求開放原始碼手機體驗的用戶來說，仍是個值得關注的進展。</p>
-</div>
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-23-d7d4ca9012-p20-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-07-23-d7d4ca9012-p22-sans.html">下一頁 →</a>
+<span class="pager-num">第 21 / 23 頁</span>
+</nav>
 
 
 
 
 
-<h2>科技 Tech</h2>
+<p class="fulltext">Limitations</p>
 
-<article>
-  <h3>Fairphone 6 wide camera experimental Linux support</h3>
-  <p class="summary">一名開發者成功為 Fairphone 6 的超廣角鏡頭達成了實驗性的 Linux 支援。這項進展解決了在主流 Linux 和 postmarketOS 上使用該設備的主要障礙之一——相機支援，特別是為了其 QR 碼掃描專案。這對於希望在 Fairphone 6 上運行替代作業系統的用戶來說，是個重要的里程碑。
-* 僅支援 OmniVision OV13B10 超廣角鏡頭，主鏡頭和前鏡頭尚無驅動。
-* 目前功能仍屬實驗性質，存在如無自動對焦、預覽畫面裁切及簡化電源管理等限制。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>為什麼 Fairphone 6 是主流 Linux 支援的一個理想目標？</summary>
-    <p>Fairphone 6 擁有相對現代的硬體，且其製造商 Fairphone 積極投資主流 Linux 支援，並允許安裝替代作業系統。此外，Fairphone 承諾長期支援其設備，為未來的開發工作提供了穩定的基礎。</p>
-  </details>
-  
-  <details>
-    <summary>在 Fairphone 6 上實現完整的 Linux 相機支援面臨哪些主要挑戰？</summary>
-    <p>主要挑戰包括主鏡頭和前鏡頭缺乏主流 Linux 驅動程式、需實作自動對焦功能、優化電源管理，以及解決因軟體 ISP 引起的預覽畫面裁切問題。目前僅超廣角鏡頭在實驗性支援下運作。</p>
-  </details>
-  
-  <details>
-    <summary>對於 Fairphone 6 超廣角鏡頭的實驗性 Linux 支援，下一步的開發計畫是什麼？</summary>
-    <p>下一步的計畫包括修復二進位模式以恢復完整的視野、編寫適當的電源時序控制，以及準備已完成的部分以供上游整合到主流 Linux 核心中。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Hacker News ｜ <a href="article/2026-07-23-d7d4ca9012.html">全文（約 10 分鐘）</a> ｜ <a href="https://nondescriptpointer.com/articles/fairphone-6-wide-camera-linux/">原文網頁</a></p>
-</article>
+<p class="fulltext">This is an experimental start, not production camera support.</p>
+
+<p class="fulltext">- Only the ultra-wide (OV13B10) works. The main (IMX896) and front (S5KKD1) sensors have no mainline drivers.</p>
+
+<p class="fulltext">- There is no autofocus. libcamera's software ISP has no contrast-AF loop, so focus is a fixed compromise position. Proper autofocus would require an AF algorithm in the software ISP or an app-side loop to drive the VCM.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-23-d7d4ca9012-p20-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-07-23-d7d4ca9012-p22-sans.html">下一頁 →</a>
+<span class="pager-num">第 21 / 23 頁</span>
+</nav>
 
 
 

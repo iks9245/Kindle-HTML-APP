@@ -89,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日新聞主要關注中東紅海區域衝突升級，同時歐洲多國野火肆虐，全球正面臨地緣政治緊張與氣候變遷的雙重嚴峻考驗。科技領域則聚焦於輕量級軟體運行時的創新、GitHub漏洞獎勵計畫的品質化轉型，以及回顧Amiga 1000的歷史經驗，強調技術實力與市場策略並重。此外，紐約皇后區的建築多元性與巴西「文化食人主義」的哲學思辨，共同展現了文化融合與身份認同的深層探索。</p>
+<p>今日科技界傳出重要消息，一名開發者成功為Fairphone 6的超廣角鏡頭提供了實驗性的Linux支援。這解決了在該裝置上運行替代作業系統時，長久以來相機支援的重大挑戰。儘管目前僅限於超廣角鏡頭，且功能仍處於實驗階段並帶有諸多限制，這對於尋求開放原始碼手機體驗的用戶來說，仍是個值得關注的進展。</p>
 </div>
 
 
@@ -99,253 +99,32 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>Cruller: Bun's Zig Runtime, Continued on Zig 0.16</h3>
-  <p class="summary">Cruller 是一個基於 Bun 舊版 Zig 發行的分支，專注於執行現有的生產型 JavaScript 伺服器，並已移植到原生 Zig 0.16。它保留了運行時所需的關鍵組件，例如 JavaScriptCore、Bun.serve 和網路功能，但移除了開發工具如套件管理器和測試執行器，使其成為一個輕量級的運行時。此項目旨在作為運行時而非完整的 Bun 替代品，與官方 Bun 相比，其大小減少了約 18%，且性能表現相當。
-- 專為預先建置的 JavaScript 服務器優化，大幅削減開發相關功能。
-- 支援原生 Zig 0.16 和 Linux x64，具備尺寸和部署優勢。</p>
+  <h3>Fairphone 6 wide camera experimental Linux support</h3>
+  <p class="summary">一名開發者成功為 Fairphone 6 的超廣角鏡頭達成了實驗性的 Linux 支援。這項進展解決了在主流 Linux 和 postmarketOS 上使用該設備的主要障礙之一——相機支援，特別是為了其 QR 碼掃描專案。這對於希望在 Fairphone 6 上運行替代作業系統的用戶來說，是個重要的里程碑。
+* 僅支援 OmniVision OV13B10 超廣角鏡頭，主鏡頭和前鏡頭尚無驅動。
+* 目前功能仍屬實驗性質，存在如無自動對焦、預覽畫面裁切及簡化電源管理等限制。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>「專注於生產的運行時」對於 Cruller 來說具體意味著什麼？</summary>
-    <p>這表示 Cruller 旨在提供一個精簡、高效的環境，專門用於執行已經建置好的 JavaScript 服務器。它移除了如套件管理器、打包器和測試執行器等開發工具，只保留了運行生產服務所需的最小核心功能，從而降低了資源消耗並簡化了部署。</p>
+    <summary>為什麼 Fairphone 6 是主流 Linux 支援的一個理想目標？</summary>
+    <p>Fairphone 6 擁有相對現代的硬體，且其製造商 Fairphone 積極投資主流 Linux 支援，並允許安裝替代作業系統。此外，Fairphone 承諾長期支援其設備，為未來的開發工作提供了穩定的基礎。</p>
   </details>
   
   <details>
-    <summary>對於 Cruller 的目標使用場景，它與完整的 Bun 運行時相比主要優勢是什麼？</summary>
-    <p>Cruller 的主要優勢在於其更小的體積和更低的資源消耗，實現了約 18% 的尺寸縮減。這使得它更適合部署在資源受限的環境或需要快速啟動的場景中。此外，由於其專注於核心運行時功能，也可能帶來更簡潔的運行時行為和潛在的穩定性優勢。</p>
+    <summary>在 Fairphone 6 上實現完整的 Linux 相機支援面臨哪些主要挑戰？</summary>
+    <p>主要挑戰包括主鏡頭和前鏡頭缺乏主流 Linux 驅動程式、需實作自動對焦功能、優化電源管理，以及解決因軟體 ISP 引起的預覽畫面裁切問題。目前僅超廣角鏡頭在實驗性支援下運作。</p>
   </details>
   
   <details>
-    <summary>支援「原生 Zig 0.16」對於 Cruller 的開發和未來發展有何重要意義？</summary>
-    <p>支援原生 Zig 0.16 意味著 Cruller 不再依賴 Bun 舊版中帶有補丁的 Zig 編譯器集成，而是採用了標準的 Zig 工具鏈。這簡化了構建圖並提高了項目的可維護性、兼容性和可移植性，使其更容易跟隨 Zig 語言本身的發展，也為潛在的社區貢獻和跨平台支援奠定了基礎。</p>
+    <summary>對於 Fairphone 6 超廣角鏡頭的實驗性 Linux 支援，下一步的開發計畫是什麼？</summary>
+    <p>下一步的計畫包括修復二進位模式以恢復完整的視野、編寫適當的電源時序控制，以及準備已完成的部分以供上游整合到主流 Linux 核心中。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-5166245623-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://ziggit.dev/t/cruller-buns-zig-runtime-continued-on-zig-0-16/16734">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>Amiga 1000: Ten years ahead of its time</h3>
-  <p class="summary">Amiga 1000 電腦於 1985 年推出，被譽為領先時代十年。它擁有先進的自訂晶片組，提供彩色圖形、立體聲、圖形使用者介面，尤其其全搶佔式多工處理能力，在當時遠超同期的 Apple Macintosh 和 Atari ST，甚至早於 Windows 95。儘管技術卓越且性價比相對較高，但由於 Commodore 糟糕的行銷和管理，未能充分發揮其潛力。
-
-* 主要優勢：先進的全搶佔式多工處理。
-* 主要瓶頸：Commodore 缺乏有效的產品行銷和領導。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>Amiga 1000 的「全搶佔式多工處理」與其他系統相比有何特別之處？</summary>
-    <p>「全搶佔式多工處理」允許作業系統完全控制 CPU 的時間分配，確保每個程式都能公平運行，即使一個程式卡住也不會影響其他程式。這與當時許多作業系統（如 Windows 3.0/3.1 和 Apple System 7）採用的協同式多工處理不同，後者需要程式主動放棄 CPU 控制權，更容易導致系統不穩定。</p>
-  </details>
-  
-  <details>
-    <summary>既然 Amiga 1000 技術如此先進且價格合理，為何它未能主導市場？</summary>
-    <p>Amiga 1000 未能主導市場主要歸咎於 Commodore 公司糟糕的行銷策略和領導層。他們未能有效地向大眾傳達 Amiga 的獨特優勢和未來願景，也缺乏像 Apple 那樣吸引人的產品敘事。此外，公司內部管理不善，領導人更專注於從公司中謀取利益而非長期發展。</p>
-  </details>
-  
-  <details>
-    <summary>後來的個人電腦或作業系統吸收了 Amiga 的哪些創新或改進？</summary>
-    <p>Amiga 1000 的全搶佔式多工處理能力直到 1995 年 Windows 95 推出後才被主流 PC 作業系統普遍採納。文章指出，作者在使用 Windows PC 時，甚至到 1994 年仍感覺其穩定性不如 Amiga，特別是在同時進行多個任務時。Amiga 在圖形和聲音方面的早期領先也為未來多媒體PC的發展奠定了基礎。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-65b394a0bc-sans.html">全文（約 12 分鐘）</a> ｜ <a href="https://dfarq.homeip.net/amiga-1000-ten-years-ahead-of-its-time/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>Restructuring GitHub's bug bounty program</h3>
-  <p class="summary">GitHub 正在重組其漏洞獎勵計畫，以提升獎勵品質而非數量。此舉旨在為優質研究人員提供更豐厚的報酬和更深入的合作關係，同時維持對所有安全研究社群的開放性。主要變革包括推出永久性 VIP 計畫、調整公開獎勵金支付標準，並實施 HackerOne 訊號要求以減少低品質報告。這些調整旨在吸引高價值研究，並確保程式對認真的研究人員具有吸引力。
-
-主要重點：
-* 推出邀請制 VIP 計畫，提供更高的獎金和更快的響應速度。
-* 調整公開計畫的獎金標準為固定金額，並降低金額以區分。
-* 導入 HackerOne 訊號要求，篩選低品質或 AI 生成的報告。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>GitHub 這次重組漏洞獎勵計畫的動機是什麼？</summary>
-    <p>GitHub 決定重組計畫，是因為面臨報告數量不斷增加，需要減少「噪音」並專注於「訊號」。他們經過數月的反思、分析行業趨勢並考慮研究人員的體驗後，才做出了這些改變。</p>
-  </details>
-  
-  <details>
-    <summary>這些變革會不會讓新的或經驗較少的安全研究人員更難參與或獲得獎勵？</summary>
-    <p>雖然公開計畫的獎金有所降低且有訊號要求，但 GitHub 表示這「不是新手研究人員的障礙」。HackerOne 平台為未達標準的研究人員提供最多四次初始提交機會，足以讓真正有發現的新手展示其技能，並有機會進入 VIP 計畫。</p>
-  </details>
-  
-  <details>
-    <summary>除了獎勵金重組和 VIP 計畫外，GitHub 還計劃採取哪些措施來改善與安全研究社群的互動？</summary>
-    <p>GitHub 還將投入更多資源以縮短響應時間、提供更清晰的嚴重性判斷理由，並加強社群參與。他們計劃透過參與 DEFCON 等會議和持續的外展活動，直接與研究人員互動，建立更緊密的合作關係。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-d2fa6f8b0d-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://github.blog/security/next-chapter-restructuring-githubs-bug-bounty-program/">原文網頁</a></p>
-</article>
-
-
-<h2>國際 World</h2>
-
-<article>
-  <h3>Houthis claim attack on oil tankers as US launches more strikes on Iran</h3>
-  <p class="summary">葉門的青年運動聲稱已襲擊紅海中的兩艘沙烏地阿拉伯油輪，以實施其對沙烏地的「海上禁運」，沙烏地阿拉伯證實其中一艘油輪遇襲並起火。與此同時，美國對伊朗發動了連續第十二晚的空襲，目標是伊朗的軍事設施，旨在削弱其威脅區域航運的能力。伊朗媒體報導稱空襲造成兩人死亡，且荷姆茲海峽因爆炸而「完全關閉」，導致油輪無法通行。此區域衝突加劇，恐將進一步擾亂國際航運並影響全球燃料價格。
-* 青年運動表示將持續其海上行動，執行「圍困換圍困」策略。
-* 美伊和平談判停滯，此前簽署的諒解備忘錄在伊朗襲擊荷姆茲海峽船隻後被川普終止。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>青年運動所宣稱的「海上禁運」具體內容為何？</summary>
-    <p>青年運動宣布對沙烏地阿拉伯實施「海上禁運」，聲稱將關閉紅海南部的曼德海峽（Bab al-Mandab Strait）給沙烏地船隻通行。此舉旨在回應美以與伊朗之間的戰爭，該戰爭已導致荷姆茲海峽實際上被關閉。</p>
-  </details>
-  
-  <details>
-    <summary>鑑於荷姆茲海峽的狀況，紅海的穩定對沙烏地阿拉伯及全球航運為何如此關鍵？</summary>
-    <p>由於美以與伊朗之間的衝突，荷姆茲海峽已實際關閉，紅海已成為沙烏地阿拉伯石油運輸的關鍵通道。青年運動在紅海的襲擊威脅，將進一步擾亂國際航運，並可能導致全球燃料價格顯著波動。</p>
-  </details>
-  
-  <details>
-    <summary>在這些衝突升級的背景下，美國與伊朗之間的和平談判現況如何？</summary>
-    <p>美國和伊朗之間的和平談判已陷入僵局。兩國此前於六月簽署了一份諒解備忘錄，旨在停止軍事行動並重新開放荷姆茲海峽，但美國總統川普在伊朗襲擊荷姆茲的船隻後宣布停火「結束」。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">BBC World News ｜ <a href="../article/2026-07-23-341e3e413a-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cpw9xzx9r4ko?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>Around 12,000 people evacuated in France fires</h3>
-  <p class="summary">歐洲各地野火肆虐，導致大規模疏散和人員傷亡。法國西南部吉倫特地區約有12,000人被疏散，其中包含10,000名遊客，當地已有超過2,000公頃土地被毀，並有兩名消防員殉職。義大利西西里島亦有消防員因救火身亡，西班牙馬德里也受火災影響，部分居民被迫撤離。這些破壞性火災發生在歐洲一系列異常且持續的高溫熱浪期間，顯示歐洲正成為全球暖化速度最快的大洲。
-
-重點：
-- 法國吉倫特地區約1.2萬人撤離，兩名消防員殉職。
-- 義大利西西里島和西班牙馬德里亦受嚴重野火影響。
-- 歐洲正經歷異常高溫，加劇野火風險，被指為暖化最快的大洲。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>歐洲為何會經歷如此異常且持續的高溫熱浪，使其成為暖化速度最快的大洲？</summary>
-    <p>歐洲的熱浪與全球氣候變遷密切相關，特別是北極地區暖化速度較快，影響了急流模式，導致熱空氣停滯。地理位置和高壓系統也使其更容易受到來自非洲的熱氣團影響，進一步加劇了熱浪的強度和持續時間。</p>
-  </details>
-  
-  <details>
-    <summary>除了人員疏散和土地燒毀，這些頻繁的野火還會對歐洲造成哪些長期影響？</summary>
-    <p>長期而言，頻繁的野火會導致生態系統嚴重受損，例如生物多樣性減少、土壤侵蝕加劇，並釋放大量碳排放，加劇氣候變遷。此外，重建成本高昂，旅遊業可能受衝擊，居民的心理健康也將面臨挑戰。</p>
-  </details>
-  
-  <details>
-    <summary>鑑於野火頻繁發生且部分歸因於人為因素，歐洲各國正採取或未來能採取哪些措施來預防和控制野火？</summary>
-    <p>各國正加強森林管理，例如定期清理林下植被以減少燃料，並實施更嚴格的火災管制措施，包括在高風險地區禁止生火及限制交通。此外，提升公眾對野火風險的意識、改進早期預警系統和加強跨國合作也是重要的策略。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">BBC World News ｜ <a href="../article/2026-07-23-85bd07a046-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
-</article>
-
-
-<h2>科學 Science</h2>
-
-<article>
-  <h3>Olympic Mountain Glory</h3>
-  <p class="summary">奧林匹克半島坐落於華盛頓州西北部，以其多樣的地理景觀聞名，包括高山冰川、崎嶇海岸線、溫帶雨林與深邃河谷。奧林匹克山脈由胡安德富卡板塊潛沒所形成，儘管地殼持續抬升，但此地豐沛的雨雪侵蝕作用有效地平衡了隆升。該地區的冰川正逐漸消退，而埃爾瓦河上的兩座大壩在2011至2014年間被拆除，啟動了美國當時最大的生態復育項目之一，旨在恢復魚類遷徙與自然生態系統。
-- 奧林匹克國家公園保護著山脈核心及部分太平洋海岸線的原始風貌。
-- 埃爾瓦河大壩拆除案例展示了大規模生態修復的努力及其對當地生物多樣性的正面影響。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>奧林匹克半島的溫帶雨林有何獨特之處？為何此地會形成這類生態系統？</summary>
-    <p>奧林匹克半島擁有美國大陸上最大的溫帶雨林之一，其特色是常年濕潤、植被茂密，包括古老的針葉樹和豐富的苔蘚與蕨類植物。這些雨林得益於來自太平洋的潮濕空氣被奧林匹克山脈阻擋，形成大量降水，創造了獨特的濕潤微氣候。</p>
-  </details>
-  
-  <details>
-    <summary>摘要中提到冰川正在後退，這對奧林匹克半島的環境會造成哪些更廣泛的影響？</summary>
-    <p>冰川後退會減少夏季河流的徑流量，影響下游生態系統和水生生物。此外，失去冰川會改變景觀，減少當地生物多樣性，並可能加劇氣候變遷對區域水資源供應的壓力。</p>
-  </details>
-  
-  <details>
-    <summary>埃爾瓦河大壩拆除計畫在實現其生態復育目標方面取得了哪些成效？</summary>
-    <p>埃爾瓦河大壩拆除計畫被視為一項巨大的成功，河中的鮭魚和其他魚類數量顯著回升，得以再次遷徙至上游產卵地。河流的自然泥沙輸運和河岸植被也得以恢復，促進了整個流域生態系統的健康。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-23-a33daecdae-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/earth-observatory/olympic-mountain-glory/">原文網頁</a></p>
-</article>
-
-
-<h2>長文 Long Reads</h2>
-
-<article>
-  <h3>All the Queens houses</h3>
-  <p class="summary">紐約市皇后區的房屋以其強烈的個人化風格和多樣性而聞名。對專業人士而言，這些房屋的建築設計能喚起從威尼斯街景到中國寺廟等各種聯想，展現了豐富的文化融合。
-- 皇后區住宅反映其多元文化特色。
-- 建築風格極具個性化與藝術性。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>為什麼皇后區的房屋會展現如此多樣的建築風格？</summary>
-    <p>皇后區是紐約市最多元化的行政區，其居民來自世界各地。他們將各自的文化背景、傳統和個人品味融入房屋設計中，從而創造出獨特的建築景觀。</p>
-  </details>
-  
-  <details>
-    <summary>除了威尼斯街景和中國寺廟，還能看到哪些具體的建築風格或文化元素？</summary>
-    <p>除了上述提及的風格，皇后區的房屋可能還融合了其他歐洲、拉丁美洲、南亞或中東的建築特色。這些可能體現在屋頂、窗戶、裝飾細節或色彩選擇上，彰顯了居民多元的起源。</p>
-  </details>
-  
-  <details>
-    <summary>這種獨特的建築多樣性對皇后區的社區有何重要意義？</summary>
-    <p>這種建築上的豐富性不僅美化了街區，更成為皇后區多元文化身份的視覺象徵。它有助於居民的歸屬感，並展現了該地區開放且兼容並蓄的社區精神。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Aeon ｜ <a href="../article/2026-07-23-87c11c0c19-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/tour-the-eclectic-residences-of-new-yorks-most-diverse-borough">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>The savage bites back</h3>
-  <p class="summary">巴西現代主義中的「文化食人主義」（anthropophagy）運動，旨在「吞噬」並轉化文化，進而顛覆殖民者對食人行為的恐懼。此運動將殖民者的刻板印象轉化為一種積極的創造力量，重新定義巴西的文化認同。
-
-- 起源於巴西現代主義。
-- 核心概念是文化轉化與吸收。
-- 目的為反殖民敘事，顛覆歐洲中心觀。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>「文化食人主義」具體是指什麼？它如何「吞噬」和「轉化」文化？</summary>
-    <p>「文化食人主義」並非指實際的食人行為，而是比喻性地吸收和內化外來（尤其是歐洲）文化元素，然後將其重新加工、轉化，創造出獨具巴西特色的文化表達。它強調將外來影響本土化，並賦予其新的意義。</p>
-  </details>
-  
-  <details>
-    <summary>這個運動為何特別強調「顛覆殖民者對食人行為的恐懼」？這背後有什麼歷史背景？</summary>
-    <p>在殖民時期，歐洲人常將美洲原住民描述為野蠻的食人族，以此來合理化他們的征服和文化優越性。巴西現代主義者反其道而行，將這個負面形象「奪回」，轉化為一種象徵性的力量，表達巴西文化有能力消化、吸收並超越外來影響，從而挑戰歐洲中心主義的視角。</p>
-  </details>
-  
-  <details>
-    <summary>除了文化藝術領域，這種「文化食人主義」思想在巴西社會中還有哪些更廣泛的影響或體現？</summary>
-    <p>「文化食人主義」的理念超越了藝術範疇，成為巴西民族認同建構的重要基石。它鼓勵巴西人民擁抱多元性，將不同文化的衝擊視為豐富自身的力量，而非威脅。這也反映在巴西社會中對混血文化和多樣性的高度包容與自豪感上。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Aeon ｜ <a href="../article/2026-07-23-b3d40681bd-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/essays/anthropophagy-art-flips-the-cannibal-worries-of-colonialism">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-23-d7d4ca9012-sans.html">全文（約 10 分鐘）</a> ｜ <a href="https://nondescriptpointer.com/articles/fairphone-6-wide-camera-linux/">原文網頁</a></p>
 </article>
 
 
