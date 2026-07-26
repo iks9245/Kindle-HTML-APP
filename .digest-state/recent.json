@@ -163,5 +163,42 @@
       "summary": "美國前總統川普在一次因三個月前槍擊事件而延期的白宮記者協會晚宴上，對媒體進行了猛烈抨擊。這場原旨在慶祝新聞自由的活動，在華爾道夫酒店舉行，川普在演講中雖有提及對媒體的尊重，但更多的是指責「假新聞」及記者患有「川普精神錯亂症」，凸顯了白宮與媒體之間持續緊張的關係。\n\n* 川普向因在四月槍擊案中表現英勇的特勤局警官維克多·岡薩雷斯頒發獎項。\n* 他還向因報導川普與愛潑斯坦關係而獲獎的《華爾街日報》團隊表示祝賀。",
       "title": "Trump takes swipes at press during White House Correspondents' Dinner"
     }
+  ],
+  "2026-07-27": [
+    {
+      "source": "Hacker News",
+      "summary": "這篇文章指出，人們對人工智慧（AI），特別是大型語言模型（LLMs）的熱情，源於一種不需深入細節就能實現事物的願望。然而，作者強調，細節是無法迴避的，真正的專業知識和成就來自於對細節的專注與投入，任何創新或優良的工作都需鑽研細節，試圖完全將細節交給AI並非賦權，反而意味著個人在過程中沒有發揮任何作用。\n\n- 細節在任何事物中都不可避免，且越深入越複雜，無法透過抽象化來解決。\n- 真正的專業知識和能力，是基於對細節的深度理解和處理。\n- 試圖完全將細節交給AI並非賦權，反而意味著個人在過程中沒有發揮任何作用。",
+      "title": "It's not empowering to hand off the details"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "Decker 是一個全新的多媒體平台，旨在讓使用者創造和分享互動式文件，支援聲音、圖像、超文本和腳本行為。這個平台汲取了 HyperCard 和經典 macOS 的精髓，提供簡單易學的界面與現代化的優化功能，例如深度撤銷歷史和更好的鍵盤導航。使用者可以在網路瀏覽器中立即體驗 Decker，或下載其 macOS 及 Windows 版本，用來製作電子雜誌、遊戲、筆記或簡報。\n* 靈感來自 HyperCard，結合懷舊美學與現代功能。\n* 內建獨特的 Lil 腳本語言，易學且功能強大。\n* 完全免費開源，無廣告、無追蹤，高度尊重使用者隱私。",
+      "title": "Decker, a platform that builds on the legacy of Hypercard and classic macOS"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "一位使用者成功將一台ThinkPad T480筆記型電腦改造成具備完整手機功能的設備，支援通話、簡訊和行動數據。這項改裝利用了Intel Management Engine的漏洞來刷入Libreboot韌體，從而繞過硬體限制並安裝特定的LTE數據機，實現了筆記型電腦即手機的應用。該方案還可透過Waydroid執行Android應用，意味著使用者未來可能只需一台筆記型電腦就能處理所有通訊需求，進一步整合行動與運算體驗。\n- 關鍵技術：透過刷入Libreboot以移除無線卡白名單限制，並使用如Quectel EG25-G等特定數據機。\n- 功能實現：數據機被設定為USB音訊介面以處理通話音訊，簡訊與行動數據則直接運作。",
+      "title": "Using ThinkPad T480 as a mobile phone"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "柏林警方已擊斃21歲的嫌犯Abdul Ballout，他涉嫌在週六晚間柏林同志驕傲節活動期間發動一場「伊斯蘭恐怖攻擊」。Ballout駕駛一輛貨車衝撞Tiergarten公園附近人群，造成一名女性死亡、至少29人受傷，隨後還發動了持刀攻擊。此事件導致德國提高了威脅等級，並引發了對政府削減對LGBTQ+組織支持的批評。\n\n重點：\n- 攻擊目標是歐洲最著名的同志驕傲節活動之一。\n- 嫌犯曾有激進化紀錄，試圖加入伊斯蘭國，並多次犯下暴力罪行。\n- 德國政府承諾捍衛社會的自由與開放，但LGBTQ+社群也對政府支持不足表示不滿。",
+      "title": "Berlin Pride attack suspect shot and killed during police operation"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "柏林在週六晚間的同志驕傲遊行（Christopher Street Day）中發生一起廂型車衝撞人群事件，造成一名女性死亡、至少29人受傷，官方稱這可能是一起「伊斯蘭主義恐怖襲擊」。\n21歲的嫌犯Abdul Ballout在警方行動中被擊斃。此次襲擊地點在蒂爾加滕公園（Tiergarten park）附近，該事件已引起德國總理及多位歐洲領導人的強烈譴責，凸顯了對自由、尊嚴與平等這些核心價值的威脅。\n\n關鍵點：\n- 襲擊除廂型車衝撞外，也可能涉及刀具攻擊。\n- 嫌犯Abdul Ballout為德國籍黎巴嫩裔，有激進化傾向及參與恐怖組織的企圖，並曾因此入獄。",
+      "title": "What we know so far about the Berlin Pride ramming attack"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "巴勒斯坦官員表示，在約旦河西岸緊張局勢持續升級之際，以色列屯墾者在被佔領的約旦河西岸縱火焚燒清真寺、汽車和農田。這些襲擊發生在屯墾者與巴勒斯坦人之間致命衝突的兩天後，該衝突造成六人死亡，進一步加劇了約旦河西岸的暴力情勢。\n\n* 此次襲擊被視為對近期致命衝突的報復行為，加劇了地區的不穩定。\n* 儘管國際社會譴責，屯墾者暴力事件仍不斷加劇，且以色列總理承諾加速約旦河西岸非法屯墾點的建立和合法化。",
+      "title": "Israeli settlers set fire to mosques, cars and farm land in West Bank, Palestinians say"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "美國太空總署（NASA）太空人克里斯·威廉斯（Chris Williams）與俄羅斯聯邦太空總署（Roscosmos）太空人謝爾蓋·庫德-斯維奇科夫（Sergey Kud-Sverchkov）和謝爾蓋·米卡耶夫（Sergei Mikaev）於週日搭乘聯盟號MS-28太空船，在國際太空站執行了為期241天的科學任務後，安全降落在哈薩克傑茲卡茲甘東南部地區。這趟為期八個月的任務（於2025年11月27日發射）推進了癌症治療和太空製造技術的研究，並為未來月球和火星載人任務奠定基礎，其成果對地球生活和深空探索皆意義重大。\n- 威廉斯在任務期間支持多項科學研究，包括新癌症療法和高性能電腦材料的太空製造。\n- 他還完成了兩次太空漫步，為太空站的供電系統升級和加拿大臂2機械臂的故障關節更換做準備。",
+      "title": "NASA Astronaut Chris Williams, Crewmates Return from Space Station"
+    }
   ]
 }
