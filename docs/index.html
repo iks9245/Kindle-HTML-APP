@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-07-27</title>
+<title>每日 AI 文摘 2026-07-28</title>
 <style>
   body {
     font-family: Georgia, "Times New Roman", serif;
@@ -75,9 +75,9 @@
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
 <p class="fontswitch"><a href="index-sans.html">切換為無襯線字體顯示</a></p>
 
-<h1>每日 AI 文摘 2026-07-27</h1>
+<h1>每日 AI 文摘 2026-07-28</h1>
 <p class="meta">
-2026-07-27
+2026-07-28
 
  ｜ <a href="archive/index.html">存檔列表</a>
  ｜ <a href="deepread.html">每日深讀</a>
@@ -89,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日國際局勢動盪不安，柏林同志驕傲節遭遇恐怖攻擊，凸顯極端主義威脅；約旦河西岸衝突亦持續升級，屯墾者發動襲擊使地區不穩加劇。在科技前沿，雖然人工智慧承諾簡化繁瑣，但有論點指出，對細節的投入仍是專業知識的核心，無法完全假手AI。與此同時，有駭客成功將筆記型電腦改造成全功能手機，並有新平台借鑒舊有科技，提供使用者懷舊又創新的創作體驗，而國際太空站的太空人也平安返航，為地球帶來寶貴的科研成果。</p>
+<p>今日全球焦點橫跨科技、地緣政治與環境議題。AI技術在網路安全領域取得新進展，但同時引發Anthropic對其潛在濫用風險的擔憂，以及Google因網站抓取爭議而觸及的資訊開放界線。國際局勢方面，烏克蘭在裏海襲擊伊朗船隻加劇地區緊張，而美伊之間則出現對話緩解衝突的可能。此外，歐洲野火的失控狀態突顯氣候變遷的嚴峻性，同時科學家正積極探索牛隻甲烷減排的新方法，而NASA太空任務也持續推進人類對宇宙的理解。</p>
 </div>
 
 
@@ -99,222 +99,371 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>It's not empowering to hand off the details</h3>
-  <p class="summary">這篇文章指出，人們對人工智慧（AI），特別是大型語言模型（LLMs）的熱情，源於一種不需深入細節就能實現事物的願望。然而，作者強調，細節是無法迴避的，真正的專業知識和成就來自於對細節的專注與投入，任何創新或優良的工作都需鑽研細節，試圖完全將細節交給AI並非賦權，反而意味著個人在過程中沒有發揮任何作用。
-
-- 細節在任何事物中都不可避免，且越深入越複雜，無法透過抽象化來解決。
-- 真正的專業知識和能力，是基於對細節的深度理解和處理。
-- 試圖完全將細節交給AI並非賦權，反而意味著個人在過程中沒有發揮任何作用。</p>
+  <h3>Our position on open-weights models</h3>
+  <p class="summary">Anthropic執行長Dario Amodei針對近期關於開源權重AI模型的討論，澄清Anthropic從未主張禁止此類模型，並反駁了保護主義禁令的說法。他指出，Anthropic的主要擔憂是威權政府利用AI取得軍事優勢或進行鎮壓，以及強大AI模型可能被濫用於網路或生物攻擊。為此，Amodei建議的措施包括限制對中國出售先進晶片和晶片製造設備，以及打擊大規模模型蒸餾。
+*   不主張禁止無危險能力的開源模型，認為其為公共財。
+*   主要關切威權國家AI優勢及強大AI的誤用風險。
+*   支持限制晶片出口中國及打擊模型蒸餾。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>既然文章認為AI無法取代對細節的掌握，那麼在實際應用中，AI能在哪些具體方面有效協助人類，而又不至於削弱人類的專業知識？</summary>
-    <p>AI可以在處理重複性、數據密集型或需要模式識別的特定細節任務上提供有效協助，例如數據清理、程式碼生成初步草稿或資訊摘要。但關鍵在於人類專家需判斷哪些「部分」細節可以委派，並對AI的產出進行審查和修正，以確保其品質與符合真實需求。</p>
+    <summary>什麼是「開源權重模型」（open-weights models）？為何它們成為近期討論的焦點？</summary>
+    <p>「開源權重模型」是指其內部參數（即權重）對公眾開放的AI模型，任何人都可以檢視、修改和運行它們。它們促進創新，但也帶來潛在的濫用風險，尤其是在模型具有危險能力時。近期討論主要圍繞其在國家安全方面的影響，特別是針對來自中國的模型。</p>
   </details>
   
   <details>
-    <summary>文章主張「無法擺脫細節」及「交辦細節並非賦權」，這與目前AI應用中「提示工程」（Prompt Engineering）或精確指令引導AI的觀念有何關聯？</summary>
-    <p>這兩者其實不衝突，反而相互印證。提示工程的精髓就在於使用者需要對目標任務及其細節有深刻理解，才能設計出精確、有效的提示詞來引導AI。如果缺乏對細節的掌握，再好的AI也無法產生符合預期的結果，這正是文章強調的「你必須自己擅長這件事」。</p>
+    <summary>Amodei提到的「兩個夢魘情境」具體指什麼？他為何認為這些情境比開放權重模型本身更令人擔憂？</summary>
+    <p>Amodei首要擔憂的是威權政府（如中共）開發出比美國更強大的AI模型，並用於實現永久軍事優勢或對人民進行深度壓制。其次是強大AI模型可能被濫用來進行網路攻擊或生物攻擊，且難以有效控制。他認為這些情境更具威脅，因為針對美國企業的禁令無法阻止外國政府開發AI，也無法阻止惡意行為者獲取這些技術。</p>
   </details>
   
   <details>
-    <summary>既然對細節的專注是培養專業知識的關鍵，那麼在一個由AI驅動的未來，這對於教育和技能發展有何啟示？</summary>
-    <p>這意味著未來的教育和技能發展應更強調批判性思維、解決問題的能力，以及深入理解複雜系統的細節。學生和專業人士需要培養辨別關鍵細節、分析AI產出、並在此基礎上進行創新和決策的能力，而非單純依賴AI來「完成」所有工作。</p>
+    <summary>Amodei提出的晶片出口限制和打擊模型蒸餾等措施，他認為為何能有效解決其擔憂？</summary>
+    <p>Amodei認為限制對中國出售先進晶片和設備是阻止威權政府開發強大AI的最直接有效方式，因為中國的國內生產能力有限。打擊大規模模型蒸餾則能阻止中國在晶片數量有限的情況下，透過更高效的方式開發出更優質的模型。這些措施旨在從根本上限制威權國家獲取並利用尖端AI技術的能力，從而解決他的主要擔憂。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-27-93c5baa8a1.html">全文（約 1 分鐘）</a> ｜ <a href="https://davidnicholaswilliams.com/its-not-empowering-to-hand-off-the-details/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-28-80d8760fd0.html">全文（約 7 分鐘）</a> ｜ <a href="https://www.anthropic.com/news/position-open-weights-models">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Decker, a platform that builds on the legacy of Hypercard and classic macOS</h3>
-  <p class="summary">Decker 是一個全新的多媒體平台，旨在讓使用者創造和分享互動式文件，支援聲音、圖像、超文本和腳本行為。這個平台汲取了 HyperCard 和經典 macOS 的精髓，提供簡單易學的界面與現代化的優化功能，例如深度撤銷歷史和更好的鍵盤導航。使用者可以在網路瀏覽器中立即體驗 Decker，或下載其 macOS 及 Windows 版本，用來製作電子雜誌、遊戲、筆記或簡報。
-* 靈感來自 HyperCard，結合懷舊美學與現代功能。
-* 內建獨特的 Lil 腳本語言，易學且功能強大。
-* 完全免費開源，無廣告、無追蹤，高度尊重使用者隱私。</p>
+  <h3>MAI-Cyber-1-Flash inside MDASH</h3>
+  <p class="summary">微軟今天宣布推出MAI-Cyber-1-Flash，這是一個新的AI模型，已深度整合到其多代理漏洞識別與修復平台MDASH中。此組合在CyberGym基準測試中展現世界級的卓越性能，超越了Mythos、Gemini及GPT等領先模型，同時能將營運成本降低50%。MAI-Cyber-1-Flash旨在高效處理高達90%的網路安全任務，以應對AI驅動的複雜網路威脅，並確保即時修復漏洞，對於強化全球軟體安全至關重要。
+- **卓越性能與成本效益：** 系統在CyberGym上達到96%分數，同時將成本降低一半。
+- **安全性優先設計：** 模型從訓練到部署都以安全性為核心，並經過嚴格評估。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>HyperCard 是什麼？它對 Decker 的設計理念有何重要影響？</summary>
-    <p>HyperCard 是蘋果公司在 1980 年代開發的一款早期超媒體平台，以其簡單易用的卡片式界面和腳本功能，讓非程式設計師也能建立應用程式。Decker 繼承了 HyperCard 的直觀操作和內容創建的便利性，同時加入了現代化的改進，以提供更流暢的使用者體驗。</p>
+    <summary>MAI-Cyber-1-Flash的推出，主要是在應對當前網路安全環境中的哪些具體挑戰？</summary>
+    <p>隨著AI的進步，網路威脅也變得日益複雜和強大，攻擊者能更高效地找出程式碼中的單一弱點。舊的定期掃描和修補模式已不足以應對，MAI-Cyber-1-Flash的目標正是要高效地在複雜程式碼庫中找出具挑戰性的漏洞，以建立強大的網路模型來強化全球軟體安全。</p>
   </details>
   
   <details>
-    <summary>除了製作電子雜誌和遊戲，Decker 還能用於哪些獨特的創作或專案？</summary>
-    <p>Decker 的多媒體功能和 Lil 腳本語言使其適用於多種創意專案。使用者可以利用它來組織個人筆記、製作互動式簡報、設計1位元像素藝術，甚至作為概念驗證的快速原型工具，以其「ditherpunk」美學風格創造具有復古感的作品。</p>
+    <summary>MAI-Cyber-1-Flash是如何在達到卓越性能的同時，還能將成本降低50%的？</summary>
+    <p>MAI-Cyber-1-Flash被設計為能高效處理高達90%的任務，讓MDASH平台能將艦隊中較大型、昂貴的模型（如GPT-5.4）專注於處理僅剩10%的極難任務。這種多模型協作系統，結合其獨特豐富的歷史訓練數據，確保了在每項任務中都能以最佳價格使用最佳模型，從而實現顯著的成本節約。</p>
   </details>
   
   <details>
-    <summary>Decker 的 Lil 腳本語言和指令行友善特性，對於沒有程式設計背景的使用者來說會不會很難上手？</summary>
-    <p>Decker 的設計旨在保持 HyperCard 的簡潔易學，其 Lil 腳本語言受到 Lua 的啟發，易於掌握，即使是初學者也能快速上手。此外，Decker 文件採用行導向文字格式儲存，並提供 Lilt 獨立解釋器，這使得它能良好地與 Git 等版本控制工具協作，方便進階使用者進行整合和自動化操作。</p>
+    <summary>文章中提到的「Perception」是什麼，它與MAI-Cyber-1-Flash和MDASH之間有何關聯？</summary>
+    <p>Perception是微軟推出的一個具代理能力的網路安全系統，旨在為MDASH中的各種安全工作流程提供代理團隊，以持續監控、修補和關閉新的威脅向量。MAI-Cyber-1-Flash未來也將用於Perception的更多安全工作流程，超越軟體漏洞工作，共同構建更全面的自動化安全防禦體系。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-27-60f7eea842.html">全文（約 2 分鐘）</a> ｜ <a href="https://beyondloom.com/decker/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-28-176cd9f25a.html">全文（約 4 分鐘）</a> ｜ <a href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Using ThinkPad T480 as a mobile phone</h3>
-  <p class="summary">一位使用者成功將一台ThinkPad T480筆記型電腦改造成具備完整手機功能的設備，支援通話、簡訊和行動數據。這項改裝利用了Intel Management Engine的漏洞來刷入Libreboot韌體，從而繞過硬體限制並安裝特定的LTE數據機，實現了筆記型電腦即手機的應用。該方案還可透過Waydroid執行Android應用，意味著使用者未來可能只需一台筆記型電腦就能處理所有通訊需求，進一步整合行動與運算體驗。
-- 關鍵技術：透過刷入Libreboot以移除無線卡白名單限制，並使用如Quectel EG25-G等特定數據機。
-- 功能實現：數據機被設定為USB音訊介面以處理通話音訊，簡訊與行動數據則直接運作。</p>
+  <h3>Judge Rejects Google's Attempt to DMCA Its Way Out of Being Scraped</h3>
+  <p class="summary">法官駁回了 Google 對 SerpAPI 提起的一項 DMCA 1201 訴訟，該訴訟旨在阻止其網路搜尋結果被抓取。Google 指控 SerpAPI 規避了其技術保護措施「SearchGuard」來抓取其搜尋結果，但法官裁定 DMCA 的反規避條款不適用於不受版權保護的公共網路內容，而 Google 的搜尋結果即屬此類。此判決重申了公共網路資訊的開放存取原則，並質疑 Google 作為一個靠抓取網路起家的公司，卻反過來起訴他人抓取其內容的立場。
+* Google 過去以抓取網路內容建立其業務，因此此舉被視為偽善。
+* 法院裁定 DMCA 1201 條款僅適用於受版權保護的內容。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為什麼ThinkPad T480原本的SIM卡槽不能直接用於通話功能，而需要這些複雜的改裝？</summary>
-    <p>儘管ThinkPad T480配備了SIM卡槽以支援LTE數據機，但其內部PCM音訊傳輸引腳並未連接到數據機，因此無法直接處理語音通話。這項改裝是為了繞過此限制，透過自訂韌體將數據機註冊為USB音訊介面來實現通話功能。</p>
+    <summary>Google 為何選擇以 DMCA 1201 條款起訴 SerpAPI，而此條款的通常用途是什麼？</summary>
+    <p>Google 試圖利用 DMCA 1201 條款，聲稱 SerpAPI 規避了其「SearchGuard」技術保護措施以抓取搜尋結果。DMCA 1201 條款旨在防止人們規避數位版權管理（DRM）技術，以保護受版權法保護的內容。</p>
   </details>
   
   <details>
-    <summary>將筆記型電腦改造成手機使用，相較於傳統智慧型手機，主要有哪些優勢或實際益處？</summary>
-    <p>這種改造允許使用者將多個設備的功能整合到一台筆記型電腦中，減少攜帶的設備數量。此外，透過刷入開源韌體（如Libreboot）和使用特定數據機的自訂韌體，使用者對硬體和軟體的控制權可能更大，潛在地提升了隱私和安全性。</p>
+    <summary>這項判決對「開放網路」原則以及依賴數據抓取的公司有何更廣泛的影響？</summary>
+    <p>這項判決對開放網路原則具有重要意義，它重申了公共、不受版權保護的內容應保持開放存取。對於依賴資料抓取的公司而言，這可能意味著只要不規避受版權保護內容的 DRM，對公開資料的抓取行為將更難被 DMCA 1201 條款所限制。</p>
   </details>
   
   <details>
-    <summary>文章提到可以透過Waydroid運行Android應用程式，這對於將筆記型電腦作為主要行動裝置有何意義？</summary>
-    <p>透過Waydroid在ThinkPad T480上運行Android應用程式，意味著使用者在捨棄傳統手機後，仍能無縫使用原有的行動應用生態系統，極大地擴展了這台「手機筆電」的實用性。這有助於消除用戶轉換設備時可能面臨的應用程式兼容性障礙，使筆記型電腦作為主力通訊裝置的可行性更高。</p>
+    <summary>鑑於 Google 的核心業務建立在網路抓取之上，這場訴訟及其駁回在 AI 時代背景下，揭示了 Google 怎樣的策略轉變？</summary>
+    <p>Google 此舉被批評為「過河拆橋」，因為其自身業務便是建立在網路抓取之上。這場訴訟的駁回表明，在 AI 時代，隨著數據價值日益提升，Google 等老牌公司可能正轉向法律手段來控制數據存取，而非僅是創新，這與其早期推崇的開放網路精神形成對比。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-27-ee0309cd79.html">全文（約 1 分鐘）</a> ｜ <a href="https://grego.site/blog/thinkphone">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-28-2b8c164e3b.html">全文（約 9 分鐘）</a> ｜ <a href="https://www.techdirt.com/2026/07/27/judge-rejects-googles-attempt-to-dmca-its-way-out-of-being-scraped/">原文網頁</a></p>
 </article>
 
 
 <h2>國際 World</h2>
 
 <article>
-  <h3>Berlin Pride attack suspect shot and killed during police operation</h3>
-  <p class="summary">柏林警方已擊斃21歲的嫌犯Abdul Ballout，他涉嫌在週六晚間柏林同志驕傲節活動期間發動一場「伊斯蘭恐怖攻擊」。Ballout駕駛一輛貨車衝撞Tiergarten公園附近人群，造成一名女性死亡、至少29人受傷，隨後還發動了持刀攻擊。此事件導致德國提高了威脅等級，並引發了對政府削減對LGBTQ+組織支持的批評。
+  <h3>Ukraine dismisses Iranian threats as Caspian Sea strike directly links wars</h3>
+  <p class="summary">烏克蘭於週六在裏海襲擊了一艘伊朗貨船，基輔聲稱該船運載伊朗提供給俄羅斯的無人機和飛彈部件。這次事件標誌著烏克蘭戰爭與伊朗相關衝突之間的首次直接連結，烏克蘭隨後駁斥了伊朗的報復威脅，並指責伊朗是俄羅斯侵略的幫兇。伊朗強烈回應，否認干預戰爭並譴責烏克蘭違反國際法。
 
-重點：
-- 攻擊目標是歐洲最著名的同志驕傲節活動之一。
-- 嫌犯曾有激進化紀錄，試圖加入伊斯蘭國，並多次犯下暴力罪行。
-- 德國政府承諾捍衛社會的自由與開放，但LGBTQ+社群也對政府支持不足表示不滿。</p>
+* 此次襲擊是烏克蘭為切斷俄羅斯補給線而進行的遠程打擊行動的一部分。
+* 有專家質疑烏克蘭與伊朗開闢新戰線的策略是否明智。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>儘管嫌犯Abdul Ballout過去有多次犯罪記錄和激進化背景，他為何仍能在社會上自由行動？</summary>
-    <p>根據報導，Ballout在今年五月因「準備嚴重危害國家安全的暴力行為」被判處一年十個月徒刑，但該判決延期六個月執行，並將他置於假釋官的監督之下。他曾因試圖加入伊斯蘭國而在黎巴嫩服刑，並於2022年和2020年有襲擊和搶劫的定罪記錄。</p>
+    <summary>為何裏海對這次襲擊而言是一個重要地點？</summary>
+    <p>裏海是俄羅斯和伊朗之間一條具有戰略意義的重要補給路線。襲擊此路線有助於烏克蘭進一步切斷俄羅斯戰爭所需的供應網絡，特別是軍事貨物的運輸。</p>
   </details>
   
   <details>
-    <summary>這起攻擊事件針對柏林同志驕傲節，對於德國LGBTQ+社群有何特殊意義或影響？</summary>
-    <p>柏林同志驕傲節（Christopher Street Day）是歐洲最大規模的同志活動之一，每年吸引數十萬人參與，象徵著LGBTQ+社群的慶祝與權利捍衛。這次襲擊不僅造成了人員傷亡，也打破了活動的歡樂氣氛，使社群再次面臨恐懼和不安，並引發了對政府保護不足的批評。</p>
+    <summary>伊朗與俄羅斯之間的軍事關係為何，這與烏克蘭戰爭有何關聯？</summary>
+    <p>伊朗與俄羅斯之間存在密切的軍事關係。自2022年以來，伊朗一直向俄羅斯提供其國產的見證者無人機，莫斯科已將其改裝並用於襲擊烏克蘭城市，且有報導稱伊朗計劃向俄羅斯提供彈道飛彈。</p>
   </details>
   
   <details>
-    <summary>德國政府對此次恐怖攻擊事件的回應和未來安全措施有何承諾或調整？</summary>
-    <p>德國內政部長Alexander Dobrindt表示，此次攻擊後德國的威脅等級將會提高，並建議其他州審查其大型活動的安全措施。德國總理Friedrich Merz承諾將「捍衛我們生活的自由與開放」，並強調不會讓「恐怖主義的毒藥」影響德國社會。</p>
+    <summary>有專家質疑烏克蘭襲擊伊朗船隻的決定是否明智。他們的擔憂是什麼？</summary>
+    <p>專家擔心烏克蘭與伊朗開戰可能會開啟另一個戰線，這對烏克蘭而言可能並非有利。儘管此舉旨在擾亂貿易路線並造成損害，但將伊朗視為直接對手可能會使烏克蘭的戰略局勢更加複雜。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-27-2098bb2dd7.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c62eg899l99o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-28-28585a3df6.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cwyj7yl0xndo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>What we know so far about the Berlin Pride ramming attack</h3>
-  <p class="summary">柏林在週六晚間的同志驕傲遊行（Christopher Street Day）中發生一起廂型車衝撞人群事件，造成一名女性死亡、至少29人受傷，官方稱這可能是一起「伊斯蘭主義恐怖襲擊」。
-21歲的嫌犯Abdul Ballout在警方行動中被擊斃。此次襲擊地點在蒂爾加滕公園（Tiergarten park）附近，該事件已引起德國總理及多位歐洲領導人的強烈譴責，凸顯了對自由、尊嚴與平等這些核心價值的威脅。
-
-關鍵點：
-- 襲擊除廂型車衝撞外，也可能涉及刀具攻擊。
-- 嫌犯Abdul Ballout為德國籍黎巴嫩裔，有激進化傾向及參與恐怖組織的企圖，並曾因此入獄。</p>
+  <h3>Wildfire now nine miles from French city of Bordeaux, mayor warns</h3>
+  <p class="summary">法國多地野火肆虐，其中一場距離波爾多市僅15公里，市長已準備應對大規模疏散。法國總統馬克宏稱這是「二戰以來最嚴峻的野火」，吉倫特地區已有42,000公頃土地燒毀，切斯塔斯鎮240棟房屋被毀，法國已疏散超過22萬人。鄰國西班牙首都馬德里西部也面臨「失控」的野火，預計新的熱浪將使滅火工作更加艱鉅，此次前所未有的火災季節與氣候變遷導致的更頻繁、更強烈熱浪有關。
+- 主要關鍵點：
+- 野火季節異常嚴峻，法國自一月以來已發生13,566起火災，燒毀116,085公頃土地。
+- 歐洲暖化速度是全球平均的兩倍，加劇了熱浪和野火。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>襲擊者Abdul Ballout的背景為何？他過去是否有激進化或犯罪記錄？</summary>
-    <p>Abdul Ballout是一名21歲的德國公民，具黎巴嫩背景。他已知有激進化傾向，並曾試圖前往敘利亞加入伊斯蘭國（IS）。Ballout在2025年5月被判入獄1年10個月，罪名是「準備實施危害國家的嚴重暴力行為」，且他之前也有襲擊和搶劫的定罪記錄。</p>
+    <summary>這些在法國和西班牙發生的前所未有野火，主要原因是什麼？</summary>
+    <p>雖然多數野火是人為引起，通常因亂丟菸蒂或燒烤等疏忽造成，但也有部分是蓄意縱火。更關鍵的是，氣候變遷是主要的根本因素，它導致氣溫升高，引發更頻繁、更強烈的熱浪，為野火創造了有利條件。歐洲正以全球平均兩倍的速度暖化。</p>
   </details>
   
   <details>
-    <summary>柏林的「同志驕傲遊行」（Christopher Street Day）是什麼樣的活動？為什麼它可能成為襲擊的目標？</summary>
-    <p>Christopher Street Day是柏林每年舉行的同志驕傲遊行，旨在慶祝LGBTQ+群體的權利，並提倡自由、尊嚴與平等。襲擊此類活動可能反映了對這些價值觀的敵意，尤其是在官方認定為「伊斯蘭主義恐怖襲擊」的背景下，表明襲擊者可能出於意識形態或仇恨動機選擇了這一特定目標。</p>
+    <summary>除了波爾多和馬德里周邊，野火情況在法國和歐洲其他地區有多廣泛？</summary>
+    <p>在法國，除了波爾多地區，朗德省、瓦爾省和科西嘉島的奧特科斯地區也有野火燃燒。西班牙首都馬德里西部也因野火肆虐而進入全國緊急狀態，已影響超過27,000公頃。總體而言，法國正經歷一個「前所未有的火災季節」，自一月以來已燒毀超過116,000公頃土地，並記錄到超過13,500起火災。</p>
   </details>
   
   <details>
-    <summary>德國和歐洲各國對此次襲擊的反應如何？此事件對未來的公共安全和活動組織有何影響？</summary>
-    <p>德國總理梅爾茨將此次事件譴責為「滔天」襲擊，歐盟執委會主席馮德萊恩等歐洲領導人也表達了慰問並強調自由、尊嚴和平等的重要性。這類襲擊可能會促使當局加強對大型公共活動的安保措施，並可能引發對極端主義威脅的進一步關注。</p>
+    <summary>鑑於預期的熱浪，消防員和當局在控制這些野火方面面臨哪些挑戰？</summary>
+    <p>消防員面臨巨大挑戰，主要是預計將加劇火勢的強烈熱浪。持續存在的風帶來飛濺火星和火勢方向突然改變的風險，使得控制工作極其困難。當局正在建造防火帶，但承認野火有「自己的生命」，鑑於火災的不可預測性和規模，必須保持謹慎。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-27-9289efc8a1.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cevmdxz4872o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-28-6aca9a17ef.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/ckg34128nvpo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Israeli settlers set fire to mosques, cars and farm land in West Bank, Palestinians say</h3>
-  <p class="summary">巴勒斯坦官員表示，在約旦河西岸緊張局勢持續升級之際，以色列屯墾者在被佔領的約旦河西岸縱火焚燒清真寺、汽車和農田。這些襲擊發生在屯墾者與巴勒斯坦人之間致命衝突的兩天後，該衝突造成六人死亡，進一步加劇了約旦河西岸的暴力情勢。
+  <h3>Trump says Iran war talks taking place during lull in strikes</h3>
+  <p class="summary">美國總統川普表示，在美伊雙方連續三天未進行攻擊後，目前正就與伊朗的衝突進行「非常友好的談判」，並對結束戰事表達樂觀。他指出，美國因調解方要求而暫停空襲，伊朗也已停止攻擊，顯示衝突可能降級。然而，伊朗否認有任何直接談判發生，且川普警告若談判失敗，美國將恢復行動。
 
-* 此次襲擊被視為對近期致命衝突的報復行為，加劇了地區的不穩定。
-* 儘管國際社會譴責，屯墾者暴力事件仍不斷加劇，且以色列總理承諾加速約旦河西岸非法屯墾點的建立和合法化。</p>
+要點：
+* 此前近兩週美伊之間曾每日發生報復性襲擊，導致6月的停火協議破裂。
+* 衝突降級的希望促使週一油價下跌超過9%。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>約旦河西岸的以色列屯墾者是如何出現的？該地區的國際地位為何？</summary>
-    <p>以色列在1967年中東戰爭中佔領了約旦河西岸和東耶路撒冷，此後在那裡建立了數百個屯墾區，供約70萬猶太人居住。根據國際法，這些屯墾區被視為非法，但以色列對此有爭議。巴勒斯坦人則希望約旦河西岸、東耶路撒冷和加薩地帶能組成他們未來的獨立國家。</p>
+    <summary>美國與伊朗之間的衝突為何會走到停火談判的階段？</summary>
+    <p>此前的停火協議於七月因伊朗攻擊油輪而破裂，導致美方恢復空襲並實施海上封鎖，伊朗則以攻擊美國軍事設施報復，雙方陷入近兩週的每日交火。在調解方的要求下，美國總統川普決定暫停攻擊，促成了目前的談判。</p>
   </details>
   
   <details>
-    <summary>以色列現任政府與加薩戰爭如何影響了約旦河西岸屯墾者暴力的升級？</summary>
-    <p>以色列政府內部的極右翼分子被認為鼓勵了屯墾者對巴勒斯坦人的暴力行為。此外，自2023年10月哈馬斯襲擊以色列以及隨後以色列在加薩發動戰爭以來，約旦河西岸的屯墾者暴力事件急劇增加，使得局勢進一步惡化。</p>
+    <summary>此次衝突可能降溫對全球經濟有何影響？</summary>
+    <p>衝突降級的希望已經對全球油價產生立即影響，報導指出週一油價一度下跌超過9%。若緊張局勢持續緩和，預計將有助於穩定能源市場，並減輕航運成本上升的壓力。</p>
   </details>
   
   <details>
-    <summary>對於屯墾者的襲擊，以色列官方有何回應？是否存在前後矛盾的訊息？</summary>
-    <p>以色列軍方表示將派遣部隊前往事發地點，警方也將調查並收集證據，稱其正努力防止「民族主義犯罪」事件。然而，以色列總理納坦雅胡在回應致命衝突時，誓言採取「強力行動」，並表示將加速約旦河西岸農場屯墾點的建立和合法化，這與公開譴責暴力並防止其發生的訊息似乎存在矛盾。</p>
+    <summary>伊朗方面對於此次「友好談判」有何回應？如果談判失敗，美國有何應對措施？</summary>
+    <p>伊朗方面否認有任何直接談判正在進行。美國總統川普則明確警告，如果最新的談判未能成功，華盛頓將「恢復我們之前的行動」，意味著可能重啟對伊朗的軍事打擊。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-27-bb7e9947d7.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cjrv77gl4deo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-28-b42e63b1aa.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c62xn4vzmnpo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 
 <h2>科學 Science</h2>
 
 <article>
-  <h3>NASA Astronaut Chris Williams, Crewmates Return from Space Station</h3>
-  <p class="summary">美國太空總署（NASA）太空人克里斯·威廉斯（Chris Williams）與俄羅斯聯邦太空總署（Roscosmos）太空人謝爾蓋·庫德-斯維奇科夫（Sergey Kud-Sverchkov）和謝爾蓋·米卡耶夫（Sergei Mikaev）於週日搭乘聯盟號MS-28太空船，在國際太空站執行了為期241天的科學任務後，安全降落在哈薩克傑茲卡茲甘東南部地區。這趟為期八個月的任務（於2025年11月27日發射）推進了癌症治療和太空製造技術的研究，並為未來月球和火星載人任務奠定基礎，其成果對地球生活和深空探索皆意義重大。
-- 威廉斯在任務期間支持多項科學研究，包括新癌症療法和高性能電腦材料的太空製造。
-- 他還完成了兩次太空漫步，為太空站的供電系統升級和加拿大臂2機械臂的故障關節更換做準備。</p>
+  <h3>NASA Astronaut Chris Williams to Discuss Space Station Mission</h3>
+  <p class="summary">美國太空總署（NASA）太空人克里斯·威廉斯將於美東時間8月4日下午2點45分，在休士頓詹森太空中心召開記者會，回顧他近期在國際太空站（ISS）為期八個月的任務。他作為第73/74遠征隊的飛行工程師，在首次太空飛行中度過了241天，支持了廣泛的科學研究和技術展示，包括癌症治療的推進和太空製造材料的改進，並完成了兩次太空漫步。
+此次任務的成果有助於改善地球生活並為未來的月球和火星載人任務做準備。
+* 支援新型癌症治療和太空製造材料等科學研究。
+* 執行兩次太空漫步，為太空站電力系統升級和維修加拿大臂2機械臂。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>國際太空站（ISS）究竟是什麼，它在此次任務中扮演了什麼樣的角色？</summary>
-    <p>國際太空站是一個在低地球軌道運行的研究實驗室，各國太空人在這裡長期生活和工作。它為威廉斯及其組員提供了進行廣泛科學研究和技術演示的平台，這些研究有助於改善地球生活並為未來的深空探索任務做準備。</p>
+    <summary>威廉斯所參與的「第73/74遠征隊」指的是什麼？</summary>
+    <p>「遠征隊」是指國際太空站上長期駐留的太空人團隊。威廉斯作為第73/74遠征隊的飛行工程師，這表示他在這兩個連續的任務期間都在太空站上執行職務，負責科學實驗、站體維護和日常運作。</p>
   </details>
   
   <details>
-    <summary>摘要中提到了太空站上進行的癌症治療和太空製造研究，這些特定研究領域有何重要性？</summary>
-    <p>在太空微重力環境下進行的研究，可以發現地球上難以觀察到的科學現象。例如，對新癌症療法的研究可能在藥物開發或疾病理解上取得突破，而太空製造技術則有潛力生產用於高性能電腦和電子產品的先進材料，這些技術將造福地球上的產業。</p>
+    <summary>威廉斯進行的太空漫步對國際太空站和未來的太空任務有何重要性？</summary>
+    <p>威廉斯的太空漫步旨在準備太空站的電力系統升級並更換加拿大臂2機械臂的故障接頭，這些都是維持太空站運作和功能性的關鍵維護工作。確保太空站的正常運行不僅能持續進行重要的科學研究，也為NASA未來的月球「阿提米絲」（Artemis）計劃和火星載人任務提供必要的技術驗證和操作經驗。</p>
   </details>
   
   <details>
-    <summary>這項任務如何與NASA未來的月球和火星探索計畫，例如阿提米絲計畫（Artemis program）相關聯？</summary>
-    <p>國際太空站的長期任務讓NASA能理解並克服人類太空飛行的挑戰，例如太空人健康和輻射防護等。這些經驗和技術的發展，將為阿提米絲計畫中載人重返月球以及最終前往火星的長期任務，提供重要的基礎和準備。</p>
+    <summary>威廉斯在太空站上具體支持了哪些「新型癌症治療」和「太空製造」相關的科學研究？</summary>
+    <p>雖然文章沒有提供具體細節，但在微重力環境下進行的研究通常涉及在地球上難以實現的獨特條件。新型癌症治療研究可能專注於在微重力下細胞生長、藥物傳遞或蛋白質結晶的行為，以開發更有效的治療方法。太空製造則可能探索如何生產用於高性能電腦和電子產品的材料，利用太空的真空和微重力環境來創造地球上無法獲得的材料特性。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-27-cd7f208673.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-astronaut-chris-williams-crewmates-return-from-space-station/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-28-a592706dd3.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-astronaut-chris-williams-to-discuss-space-station-mission/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NASA Science Soars During August Total Solar Eclipse</h3>
+  <p class="summary">美國太空總署（NASA）資助的科學團隊將於2026年8月12日日全食期間，部署高空噴射機和科學氣球，以研究太陽及其對地球大氣層的影響。此次日全食將橫掃格陵蘭、冰島和西班牙上空。WB-57噴射機將追逐月影，以延長時間捕捉太陽日冕的高解析度影像，旨在了解其加熱機制和太陽風。同時，學生團隊將在冰島和西班牙發射氣球，探究突然的黑暗如何影響大氣邊界層和臭氧水平。這些研究對於增進我們對太陽動力學及其對地球影響的理解至關重要。
+
+* WB-57噴射機將拍攝日冕影像，以研究日冕如何被加熱以及與太陽風的關係。
+* 科學氣球將測量日食期間大氣邊界層和臭氧水平的變化。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼日全食對於研究太陽的日冕如此重要？</summary>
+    <p>太陽的日冕是其外層大氣，通常被明亮的太陽盤遮蔽。在日全食期間，月球完美地遮擋了太陽，使地球上的科學家能夠直接觀測和捕捉獨特的日冕高解析度影像，這是其他太陽觀測方法或太陽系中其他位置難以實現的。</p>
+  </details>
+  
+  <details>
+    <summary>科學家希望透過氣球在日食期間觀測到哪些具體的大氣變化？</summary>
+    <p>科學家特別感興趣的是，當白天突然變暗時，地球的「邊界層」（與地面接觸的大氣層部分）如何變化。他們還旨在測量臭氧水平，因為臭氧的形成需要陽光，以觀察其在日全食期間是否會下降，以及這些效應是否會因地理位置、時間和季節而異。</p>
+  </details>
+  
+  <details>
+    <summary>與地面觀測相比，WB-57這類高空噴射機如何改進日食觀測？</summary>
+    <p>WB-57噴射機在50,000英尺高空飛行，可以避開可能阻礙地面觀測的雲層，並透過追逐月球陰影延長觀測日冕的時間。這個高度也使得相機可以捕捉到被低層大氣吸收的某些紅外波長，提供了地面無法獲得的新數據。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-28-17a51f995a.html">全文（約 4 分鐘）</a> ｜ <a href="https://science.nasa.gov/science-research/heliophysics/nasa-science-soars-during-august-total-solar-eclipse/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NASA Astronaut Chris Williams Returns to Earth</h3>
+  <p class="summary">NASA太空人Chris Williams於2026年7月26日在哈薩克順利返回地球，與俄羅斯太空人Sergey Kud-Sverchkov和Sergei Mikaev一同著陸。這是Williams的首次太空任務，他在國際太空站（ISS）上度過了八個月，期間支援了廣泛的科學調查和技術演示。
+他還完成了兩次太空漫步，為太空站的電力系統升級做準備，並更換了Canadarm2機械臂上的故障接頭，任務圓滿成功且意義重大。
+- 任務時長：八個月
+- 主要貢獻：支援科學研究與技術展示、兩次太空漫步</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>國際太空站（ISS）的主要功能和任務是什麼？</summary>
+    <p>國際太空站是一個在地球軌道上運行的研究實驗室，由多個國家合作建造和運行。它的主要功能是進行微重力環境下的科學研究、技術測試，並作為未來深空探索的準備平台。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到的Canadarm2機械臂是什麼？更換故障接頭的重要性在哪裡？</summary>
+    <p>Canadarm2是國際太空站上的一個大型機器人手臂，用於移動設備、執行太空站的維護和捕捉來訪的太空船。更換故障接頭對確保Canadarm2的正常運作至關重要，以維持太空站的日常運作及未來任務的執行。</p>
+  </details>
+  
+  <details>
+    <summary>太空人在國際太空站上通常會支援哪些類型的科學研究？</summary>
+    <p>太空人在ISS上支援的研究範圍廣泛，包括生物學（如人類生理學對太空環境的反應）、物理學、材料科學、地球觀測和天文學等。這些研究旨在增進人類對宇宙的理解，並開發有益於地球的新技術。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-28-ccfb03d969.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/nasa-astronaut-chris-williams-returns-to-earth/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>A New Way That a Cow’s Inner World Shapes Earth’s Atmosphere</h3>
+  <p class="summary">一項發表於《科學》雜誌的最新研究揭示了牛隻反芻胃中甲烷排放的關鍵生物機制。研究人員在牛瘤胃纖毛蟲內發現了一種新的胞器，名為「氫體」(hydrogenobody)，它負責產生氫氣，而這些氫氣隨後被產甲烷菌轉化為強效溫室氣體甲烷。
+這項發現不僅深入解釋了牛隻如何產生大量甲烷，也為開發更精確、有效的甲烷減排策略提供了新方向，例如針對特定的纖毛蟲種類或其氫體。
+*   氫體是纖毛蟲能量代謝的一部分，它產生氫氣並消耗氧氣，為產甲烷菌創造了理想的厭氧環境。
+*   研究顯示，擁有更多「多毛蟲」(Isotrichs) 類纖毛蟲（富含氫體）的牛隻，其甲烷排放量明顯更高。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>牛隻甲烷排放對全球暖化的影響有多大？它與其他溫室氣體有何不同？</summary>
+    <p>牛隻等反芻動物排放的甲烷約佔全球大氣中甲烷總量的三分之一，並在過去150年全球氣溫上升中佔約30%。相較於二氧化碳，甲烷在大氣中的壽命較短，但其捕獲熱能的效率高出約80倍，因此具有快速減緩全球暖化的潛力。</p>
+  </details>
+  
+  <details>
+    <summary>發現「氫體」對未來減少牛隻甲烷排放有哪些具體應用或潛在策略？</summary>
+    <p>這項發現開啟了多種減排策略。科學家可以開發方法來選擇性地減少或去除瘤胃中產生更多氫氣的特定纖毛蟲（如多毛蟲），而不是全面清除所有原生動物。另外，也可以直接針對氫體本身進行研究，以重新引導其產生的氫氣，使其不被產甲烷菌利用，或者增強現有飼料添加劑的效果。</p>
+  </details>
+  
+  <details>
+    <summary>這項研究雖有突破，但未來還有哪些研究方向或未解決的問題？</summary>
+    <p>儘管這項研究至關重要，但仍需更深入地探討不同纖毛蟲物種或氫體本身如何具體影響甲烷排放。例如，論文作者並未詳細說明實驗牛隻的飲食，而飼料類型是影響微生物甲烷生成量的主要因素。未來研究將可能從跨界氫傳輸的角度，探索細菌、古菌、真菌和原生動物之間複雜的氫代謝關係。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="article/2026-07-28-2fda3eda24.html">全文（約 8 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/a-new-way-that-a-cows-inner-world-shapes-earths-atmosphere-20260727/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>In search of the northern cassowary</h3>
+  <p class="summary">這篇影片探討尋找一種難以捉摸的大型鳥類——北方食火雞。牠在維持雨林生態系統的健康中扮演著關鍵角色。
+- 探索神秘且難以捉摸的北方食火雞。
+- 強調其對雨林生態平衡的巨大影響。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是食火雞，牠為何被稱為「難以捉摸」？</summary>
+    <p>食火雞是一種大型、不會飛的鳥類，主要分佈在新幾內亞及其周邊地區。牠們因生性害羞、棲息於茂密雨林深處且行動隱蔽，使其很難被人類發現和觀察，因此被形容為「難以捉摸」。</p>
+  </details>
+  
+  <details>
+    <summary>北方食火雞在雨林生態系統中扮演著怎樣的「關鍵角色」？</summary>
+    <p>北方食火雞是重要的種子傳播者。牠們吞食大型果實，並將種子隨糞便排泄到廣闊的區域，有助於多種雨林植物的繁殖和分佈，進而維持雨林生態的多樣性與健康。</p>
+  </details>
+  
+  <details>
+    <summary>除了「北方食火雞」，還有其他種類的食火雞嗎？牠們主要分佈在哪裡？</summary>
+    <p>是的，食火雞科目前已知有三種，除了北方食火雞外，還有南方食火雞和侏食火雞。牠們主要分佈在新幾內亞、印尼的部分島嶼和澳洲東北部的熱帶雨林地區。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="article/2026-07-28-1f1fe26a09.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/scientists-and-locals-unite-to-film-a-large-elusive-new-guinean-bird">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>The taming of Black thought</h3>
+  <p class="summary">這篇題為「馴服黑人思想」的文章指出，儘管黑人哲學家已納入西方課程，但歐洲傳統卻將其思想的激進性淡化，轉化為一種迎合或令人安心的詮釋。其核心論點是，西方學術體系在吸納非西方思想時，可能存在將其核心批判和顛覆性面向「去勢」的傾向。
+
+關鍵點：
+- 黑人哲學的激進本質在西方語境中被削弱。
+- 西方學術對非西方思想的整合可能導致其原意的變質。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是「將其激進性淡化為一種迎合或令人安心的詮釋」？</summary>
+    <p>這可能意味著，黑人哲學中挑戰既有權力結構、批判種族主義和殖民主義的觀點，在西方課程中被選擇性地解讀或強調其普遍性、倫理觀等較不具威脅性的面向。這種詮釋方式淡化了其原有的批判鋒芒和變革潛力，使其更容易被主流學術體系所接受。</p>
+  </details>
+  
+  <details>
+    <summary>為什麼歐洲傳統會這樣「馴服」黑人思想？其背後的原因或機制是什麼？</summary>
+    <p>這可能是因為西方學術體系傾向於維持自身的範式和舒適區，對於可能挑戰其基礎的激進思想，會不自覺地進行同化或邊緣化處理。這種機制可能涉及教學材料的選擇、詮釋框架的限制，甚至學者自身的文化預設。</p>
+  </details>
+  
+  <details>
+    <summary>這種「馴服」過程可能帶來哪些負面影響？</summary>
+    <p>這種做法可能導致黑人哲學的豐富性和原創性無法被充分理解，阻礙學生對其深層批判力量的認識。更重要的是，它可能繼續鞏固西方中心主義的敘事，使非西方思想的獨特貢獻被貶低，未能真正促進多元思想的對話與反思。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="article/2026-07-28-d42d3c28c3.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/essays/epistemic-convergence-in-the-study-of-world-philosophies">原文網頁</a></p>
 </article>
 
 
