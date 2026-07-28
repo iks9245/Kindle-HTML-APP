@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-07-28</title>
+<title>每日 AI 文摘 2026-07-29</title>
 <style>
   body {
     font-family: Helvetica, Arial, sans-serif;
@@ -75,9 +75,9 @@
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
 <p class="fontswitch"><a href="index.html">切換為襯線字體顯示</a></p>
 
-<h1>每日 AI 文摘 2026-07-28</h1>
+<h1>每日 AI 文摘 2026-07-29</h1>
 <p class="meta">
-2026-07-28
+2026-07-29
 
  ｜ <a href="archive/index-sans.html">存檔列表</a>
  ｜ <a href="deepread-sans.html">每日深讀</a>
@@ -89,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日全球焦點橫跨科技、地緣政治與環境議題。AI技術在網路安全領域取得新進展，但同時引發Anthropic對其潛在濫用風險的擔憂，以及Google因網站抓取爭議而觸及的資訊開放界線。國際局勢方面，烏克蘭在裏海襲擊伊朗船隻加劇地區緊張，而美伊之間則出現對話緩解衝突的可能。此外，歐洲野火的失控狀態突顯氣候變遷的嚴峻性，同時科學家正積極探索牛隻甲烷減排的新方法，而NASA太空任務也持續推進人類對宇宙的理解。</p>
+<p>今日全球多地正面臨嚴峻氣候挑戰，法國西南部與美國俄勒岡州皆飽受野火肆虐，在乾旱與熱浪夾擊下導致大規模破壞與疏散。在科技安全方面，OpenAI開源工具助開發者防護程式碼，而Anthropic的AI則展現了偵測加密演算法深層缺陷的潛力，預示著AI在資安領域的雙重影響。同時，商業模式也在變革中，蘋果推出新型租賃服務，但國際足總的全球發展計畫卻因過度商業化而引發爭議。</p>
 </div>
 
 
@@ -99,371 +99,252 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>Our position on open-weights models</h3>
-  <p class="summary">Anthropic執行長Dario Amodei針對近期關於開源權重AI模型的討論，澄清Anthropic從未主張禁止此類模型，並反駁了保護主義禁令的說法。他指出，Anthropic的主要擔憂是威權政府利用AI取得軍事優勢或進行鎮壓，以及強大AI模型可能被濫用於網路或生物攻擊。為此，Amodei建議的措施包括限制對中國出售先進晶片和晶片製造設備，以及打擊大規模模型蒸餾。
-*   不主張禁止無危險能力的開源模型，認為其為公共財。
-*   主要關切威權國家AI優勢及強大AI的誤用風險。
-*   支持限制晶片出口中國及打擊模型蒸餾。</p>
+  <h3>OpenAI just open-sourced Codex Security</h3>
+  <p class="summary">OpenAI 最近開源了 Codex Security，這是一個 CLI 和 TypeScript SDK，旨在幫助開發者在其程式碼中查找、驗證和修復安全漏洞。此工具對於提升軟體開發的安全性至關重要，允許團隊掃描儲存庫、審查程式碼變更並在持續整合 (CI) 流程中運行安全檢查，從而有效追蹤和管理安全發現。
+
+主要功能包括：
+*   在程式碼中查找、驗證和修復安全漏洞。
+*   支援掃描儲存庫、追蹤安全發現和在 CI 中運行安全檢查。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>什麼是「開源權重模型」（open-weights models）？為何它們成為近期討論的焦點？</summary>
-    <p>「開源權重模型」是指其內部參數（即權重）對公眾開放的AI模型，任何人都可以檢視、修改和運行它們。它們促進創新，但也帶來潛在的濫用風險，尤其是在模型具有危險能力時。近期討論主要圍繞其在國家安全方面的影響，特別是針對來自中國的模型。</p>
+    <summary>Codex Security 主要用來解決什麼問題？它如何幫助開發者？</summary>
+    <p>Codex Security 主要用於識別、驗證和修復程式碼中的安全漏洞。它通過提供 CLI 和 TypeScript SDK，讓開發者能夠自動化安全掃描、追蹤問題並在開發生命週期早期整合安全檢查。</p>
   </details>
   
   <details>
-    <summary>Amodei提到的「兩個夢魘情境」具體指什麼？他為何認為這些情境比開放權重模型本身更令人擔憂？</summary>
-    <p>Amodei首要擔憂的是威權政府（如中共）開發出比美國更強大的AI模型，並用於實現永久軍事優勢或對人民進行深度壓制。其次是強大AI模型可能被濫用來進行網路攻擊或生物攻擊，且難以有效控制。他認為這些情境更具威脅，因為針對美國企業的禁令無法阻止外國政府開發AI，也無法阻止惡意行為者獲取這些技術。</p>
+    <summary>使用 Codex Security 需要什麼技術環境或條件？</summary>
+    <p>欲使用 Codex Security，使用者需要 Node.js 22 或更高版本、Python 3.10 或更高版本，以及對 Codex Security 的存取權限。它也可以在持續整合 (CI) 環境中透過設定 OPENAI_API_KEY 來使用，無需登入。</p>
   </details>
   
   <details>
-    <summary>Amodei提出的晶片出口限制和打擊模型蒸餾等措施，他認為為何能有效解決其擔憂？</summary>
-    <p>Amodei認為限制對中國出售先進晶片和設備是阻止威權政府開發強大AI的最直接有效方式，因為中國的國內生產能力有限。打擊大規模模型蒸餾則能阻止中國在晶片數量有限的情況下，透過更高效的方式開發出更優質的模型。這些措施旨在從根本上限制威權國家獲取並利用尖端AI技術的能力，從而解決他的主要擔憂。</p>
+    <summary>這個開源工具有哪些具體的應用場景，或者說它在軟體開發流程中扮演什麼角色？</summary>
+    <p>Codex Security 可以在軟體開發的各個階段發揮作用，包括掃描整個程式碼儲存庫以發現現有漏洞、在程式碼變更時審查其安全性，以及在持續整合 (CI) 流程中自動運行安全檢查。這使得開發團隊能夠持續追蹤並管理安全問題，提高軟體整體安全性。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-28-80d8760fd0-sans.html">全文（約 7 分鐘）</a> ｜ <a href="https://www.anthropic.com/news/position-open-weights-models">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-29-65f8a2e3ed-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://github.com/openai/codex-security">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>MAI-Cyber-1-Flash inside MDASH</h3>
-  <p class="summary">微軟今天宣布推出MAI-Cyber-1-Flash，這是一個新的AI模型，已深度整合到其多代理漏洞識別與修復平台MDASH中。此組合在CyberGym基準測試中展現世界級的卓越性能，超越了Mythos、Gemini及GPT等領先模型，同時能將營運成本降低50%。MAI-Cyber-1-Flash旨在高效處理高達90%的網路安全任務，以應對AI驅動的複雜網路威脅，並確保即時修復漏洞，對於強化全球軟體安全至關重要。
-- **卓越性能與成本效益：** 系統在CyberGym上達到96%分數，同時將成本降低一半。
-- **安全性優先設計：** 模型從訓練到部署都以安全性為核心，並經過嚴格評估。</p>
+  <h3>Discovering Cryptographic Weaknesses with Claude</h3>
+  <p class="summary">Anthropic 的研究人員利用 Claude Mythos Preview 發現了改進的加密演算法攻擊方法。這些突破性研究進展，包括顯著削弱後量子數位簽章方案 HAWK 的強度，以及找到攻擊縮減輪數 AES 的新方法。儘管這些發現目前不影響任何現有生產系統，它們展示了前沿 AI 模型在發現重要加密演算法漏洞方面的巨大潛力，並強調了未來加密系統設計與審查中AI可能扮演的重要角色。
+
+* AI (Claude Mythos Preview) 能夠自主發現演算法本身的數學缺陷，而非僅是實作錯誤。
+* 這些攻擊對現有系統無實際影響，但預示著更強大的AI模型將能更深入地檢測加密安全。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>MAI-Cyber-1-Flash的推出，主要是在應對當前網路安全環境中的哪些具體挑戰？</summary>
-    <p>隨著AI的進步，網路威脅也變得日益複雜和強大，攻擊者能更高效地找出程式碼中的單一弱點。舊的定期掃描和修補模式已不足以應對，MAI-Cyber-1-Flash的目標正是要高效地在複雜程式碼庫中找出具挑戰性的漏洞，以建立強大的網路模型來強化全球軟體安全。</p>
+    <summary>HAWK 和 AES 分別是什麼，以及它們在數位安全中扮演什麼重要角色？</summary>
+    <p>HAWK 是一種針對後量子世界設計的數位簽章方案，旨在抵抗未來量子電腦的攻擊，目前是美國國家標準暨技術研究院 (NIST) 考慮採用的候選方案之一。AES (進階加密標準) 則是目前全球最廣泛使用的對稱式加密演算法，為電子郵件、網路銀行等大量線上通訊提供安全保護，是數位安全基石。</p>
   </details>
   
   <details>
-    <summary>MAI-Cyber-1-Flash是如何在達到卓越性能的同時，還能將成本降低50%的？</summary>
-    <p>MAI-Cyber-1-Flash被設計為能高效處理高達90%的任務，讓MDASH平台能將艦隊中較大型、昂貴的模型（如GPT-5.4）專注於處理僅剩10%的極難任務。這種多模型協作系統，結合其獨特豐富的歷史訓練數據，確保了在每項任務中都能以最佳價格使用最佳模型，從而實現顯著的成本節約。</p>
+    <summary>儘管研究結果目前不影響現有生產系統，這項發現對於未來的加密技術發展有何長遠的意義？</summary>
+    <p>雖然 HAWK 仍在候選階段且攻擊目標是縮減輪數的 AES，但這項研究證明了前沿 AI 模型能發現連人類專家多年都未察覺的演算法數學缺陷。這預示著AI將在未來的加密演算法審查和壓力測試中扮演更關鍵的角色，有助於開發更安全、更強健的加密系統，以應對不斷演進的威脅。</p>
   </details>
   
   <details>
-    <summary>文章中提到的「Perception」是什麼，它與MAI-Cyber-1-Flash和MDASH之間有何關聯？</summary>
-    <p>Perception是微軟推出的一個具代理能力的網路安全系統，旨在為MDASH中的各種安全工作流程提供代理團隊，以持續監控、修補和關閉新的威脅向量。MAI-Cyber-1-Flash未來也將用於Perception的更多安全工作流程，超越軟體漏洞工作，共同構建更全面的自動化安全防禦體系。</p>
+    <summary>Claude 是如何發現這些加密演算法的數學缺陷的？這與AI過去在網路安全領域的應用有何不同？</summary>
+    <p>過去AI模型通常是用來發現軟體實作加密演算法時的程式碼錯誤。然而，這次Claude Mythos Preview 能夠更進一步，直接在演算法本身的數學設計中找到弱點。這顯示了AI在密碼分析能力上的巨大飛躍，從檢測實作漏洞進步到分析演算法理論基礎的缺陷。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-28-176cd9f25a-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-29-df6c16550d-sans.html">全文（約 17 分鐘）</a> ｜ <a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Judge Rejects Google's Attempt to DMCA Its Way Out of Being Scraped</h3>
-  <p class="summary">法官駁回了 Google 對 SerpAPI 提起的一項 DMCA 1201 訴訟，該訴訟旨在阻止其網路搜尋結果被抓取。Google 指控 SerpAPI 規避了其技術保護措施「SearchGuard」來抓取其搜尋結果，但法官裁定 DMCA 的反規避條款不適用於不受版權保護的公共網路內容，而 Google 的搜尋結果即屬此類。此判決重申了公共網路資訊的開放存取原則，並質疑 Google 作為一個靠抓取網路起家的公司，卻反過來起訴他人抓取其內容的立場。
-* Google 過去以抓取網路內容建立其業務，因此此舉被視為偽善。
-* 法院裁定 DMCA 1201 條款僅適用於受版權保護的內容。</p>
+  <h3>The iPhone Upgrade Program is being replaced by Apple Upgrade</h3>
+  <p class="summary">蘋果公司宣布終止其「iPhone 升級計畫」(iPhone Upgrade Program)，並推出全新的「Apple Upgrade」租賃服務作為替代。現有的 iPhone 升級計畫會員可繼續支付剩餘款項。這項新計畫不僅適用於 iPhone，更擴展至 iPad、Mac 和 Apple Watch 等多種 Apple 產品，讓消費者能以更彈性的方式取得並升級設備。
+- 「Apple Upgrade」提供低月租費和靈活的租賃期限。
+- 租賃期滿時，用戶可輕鬆升級至新設備並歸還舊設備。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>Google 為何選擇以 DMCA 1201 條款起訴 SerpAPI，而此條款的通常用途是什麼？</summary>
-    <p>Google 試圖利用 DMCA 1201 條款，聲稱 SerpAPI 規避了其「SearchGuard」技術保護措施以抓取搜尋結果。DMCA 1201 條款旨在防止人們規避數位版權管理（DRM）技術，以保護受版權法保護的內容。</p>
+    <summary>舊的「iPhone 升級計畫」與新的「Apple Upgrade」之間主要有何不同？</summary>
+    <p>舊的「iPhone 升級計畫」主要是針對 iPhone 的分期付款與每年升級選項，用戶在付清款項後擁有設備。而新的「Apple Upgrade」則是一種租賃模式，涵蓋更多 Apple 產品，用戶在租賃期結束時歸還設備並選擇升級，本質上不擁有產品。</p>
   </details>
   
   <details>
-    <summary>這項判決對「開放網路」原則以及依賴數據抓取的公司有何更廣泛的影響？</summary>
-    <p>這項判決對開放網路原則具有重要意義，它重申了公共、不受版權保護的內容應保持開放存取。對於依賴資料抓取的公司而言，這可能意味著只要不規避受版權保護內容的 DRM，對公開資料的抓取行為將更難被 DMCA 1201 條款所限制。</p>
+    <summary>「Apple Upgrade」計畫是否已立即推出，以及消費者能在哪裡使用這項服務？</summary>
+    <p>文章指出「Apple Upgrade」是一個新的支付選項，將用於未來的 iPhone 購買。雖然文章強調「Only at Apple」，但具體的推出時間和適用國家/地區通常會透過 Apple 官方進一步公布。消費者應在 Apple 官網或實體店查詢最新資訊。</p>
   </details>
   
   <details>
-    <summary>鑑於 Google 的核心業務建立在網路抓取之上，這場訴訟及其駁回在 AI 時代背景下，揭示了 Google 怎樣的策略轉變？</summary>
-    <p>Google 此舉被批評為「過河拆橋」，因為其自身業務便是建立在網路抓取之上。這場訴訟的駁回表明，在 AI 時代，隨著數據價值日益提升，Google 等老牌公司可能正轉向法律手段來控制數據存取，而非僅是創新，這與其早期推崇的開放網路精神形成對比。</p>
+    <summary>除了「Apple Upgrade」之外，消費者還有哪些其他方式可以購買新的 iPhone？</summary>
+    <p>文章中提到，消費者仍可透過電信業者提供的優惠方案、Apple 提供的分期付款選項，或選擇一次性付款的方式來購買新的 iPhone。這些多元的選擇確保了消費者可以根據自身需求和偏好來取得設備。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-28-2b8c164e3b-sans.html">全文（約 9 分鐘）</a> ｜ <a href="https://www.techdirt.com/2026/07/27/judge-rejects-googles-attempt-to-dmca-its-way-out-of-being-scraped/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-29-e12adb90e9-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.apple.com/shop/iphone/iphone-upgrade-program">原文網頁</a></p>
 </article>
 
 
 <h2>國際 World</h2>
 
 <article>
-  <h3>Ukraine dismisses Iranian threats as Caspian Sea strike directly links wars</h3>
-  <p class="summary">烏克蘭於週六在裏海襲擊了一艘伊朗貨船，基輔聲稱該船運載伊朗提供給俄羅斯的無人機和飛彈部件。這次事件標誌著烏克蘭戰爭與伊朗相關衝突之間的首次直接連結，烏克蘭隨後駁斥了伊朗的報復威脅，並指責伊朗是俄羅斯侵略的幫兇。伊朗強烈回應，否認干預戰爭並譴責烏克蘭違反國際法。
-
-* 此次襲擊是烏克蘭為切斷俄羅斯補給線而進行的遠程打擊行動的一部分。
-* 有專家質疑烏克蘭與伊朗開闢新戰線的策略是否明智。</p>
+  <h3>Wildfires in south-west France flare up as region braces for new 40C heatwave</h3>
+  <p class="summary">法國西南部吉倫特地區近日野火復燃，消防員正日以繼夜地工作，以控制火勢並應對即將到來的攝氏40度熱浪。這波火災已迫使數萬人撤離，摧毀約240棟房屋，並嚴重影響了波爾多市的空氣品質和當地經濟活動。當局對空氣污染保持高度警惕，並下令海岸露營地緊急撤離。這是一個前所未有的事件，使該地區面臨嚴峻挑戰。
+- 吉倫特地區已有14個曾受災地點再次起火。
+- 另有4名消防員近期在法國各地因火災殉職。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為何裏海對這次襲擊而言是一個重要地點？</summary>
-    <p>裏海是俄羅斯和伊朗之間一條具有戰略意義的重要補給路線。襲擊此路線有助於烏克蘭進一步切斷俄羅斯戰爭所需的供應網絡，特別是軍事貨物的運輸。</p>
+    <summary>這些野火今年為何如此嚴重且難以控制？</summary>
+    <p>文章指出，這是夏季第四波熱浪，預計該地區氣溫將飆升至攝氏40度，這使得火勢難以撲滅且容易復燃。官員也表示，這次事件是「前所未有」的，加劇了火災的嚴重性。</p>
   </details>
   
   <details>
-    <summary>伊朗與俄羅斯之間的軍事關係為何，這與烏克蘭戰爭有何關聯？</summary>
-    <p>伊朗與俄羅斯之間存在密切的軍事關係。自2022年以來，伊朗一直向俄羅斯提供其國產的見證者無人機，莫斯科已將其改裝並用於襲擊烏克蘭城市，且有報導稱伊朗計劃向俄羅斯提供彈道飛彈。</p>
+    <summary>儘管波爾多市未直接受火災威脅，其居民生活和城市運作受到哪些影響？</summary>
+    <p>雖然波爾多市區未受火勢波及，但空氣品質急劇惡化，充滿煙霧和灰燼，導致許多商店、餐廳和咖啡館門可羅雀甚至關閉。居民被建議待在室內並佩戴口罩，旅遊業也因此大受打擊。</p>
   </details>
   
   <details>
-    <summary>有專家質疑烏克蘭襲擊伊朗船隻的決定是否明智。他們的擔憂是什麼？</summary>
-    <p>專家擔心烏克蘭與伊朗開戰可能會開啟另一個戰線，這對烏克蘭而言可能並非有利。儘管此舉旨在擾亂貿易路線並造成損害，但將伊朗視為直接對手可能會使烏克蘭的戰略局勢更加複雜。</p>
+    <summary>除了高溫和乾燥等自然因素外，是否有其他人類因素導致這些野火？</summary>
+    <p>文章提到一名23歲男子因涉嫌在瓦爾地區縱火而被捕，可能面臨15年監禁。自7月6日以來，法國內政部長表示已有184人因與火災相關的行為而被捕，這表明部分火災可能是人為縱火所致。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-28-28585a3df6-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cwyj7yl0xndo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-29-44c682a32a-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c5yd8gly1ydo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Wildfire now nine miles from French city of Bordeaux, mayor warns</h3>
-  <p class="summary">法國多地野火肆虐，其中一場距離波爾多市僅15公里，市長已準備應對大規模疏散。法國總統馬克宏稱這是「二戰以來最嚴峻的野火」，吉倫特地區已有42,000公頃土地燒毀，切斯塔斯鎮240棟房屋被毀，法國已疏散超過22萬人。鄰國西班牙首都馬德里西部也面臨「失控」的野火，預計新的熱浪將使滅火工作更加艱鉅，此次前所未有的火災季節與氣候變遷導致的更頻繁、更強烈熱浪有關。
-- 主要關鍵點：
-- 野火季節異常嚴峻，法國自一月以來已發生13,566起火災，燒毀116,085公頃土地。
-- 歐洲暖化速度是全球平均的兩倍，加劇了熱浪和野火。</p>
+  <h3>Uefa and PM criticise Infantino World Cup plan</h3>
+  <p class="summary">國際足球總會（FIFA）近期提出計畫，擬透過新成立的子公司「FIFA發展企業（FFE）」引入私人投資，目標是將足球發展資金擴大至逾100億美元。此舉迅速引發歐洲足球總會（UEFA）與英國首相安迪·伯納姆的嚴厲批評，指責FIFA此舉「越界」並有「出賣」足球靈魂之嫌。
+FIFA聲稱這能為全球各會員協會提供高達2000萬美元的發展資金，但批評者擔憂這將導致世界盃等賽事過度商業化、缺乏透明度，甚至可能為滿足股東利益而頻繁擴大賽事規模，進而破壞足球的本質與賽程安排。
+
+* 主要投資方Thrive Eternal與美國前總統川普的女婿兄弟有關聯，引發額外關注。
+* 此計畫被視為自歐洲超級聯賽以來對足球界最大的衝擊之一。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>這些在法國和西班牙發生的前所未有野火，主要原因是什麼？</summary>
-    <p>雖然多數野火是人為引起，通常因亂丟菸蒂或燒烤等疏忽造成，但也有部分是蓄意縱火。更關鍵的是，氣候變遷是主要的根本因素，它導致氣溫升高，引發更頻繁、更強烈的熱浪，為野火創造了有利條件。歐洲正以全球平均兩倍的速度暖化。</p>
+    <summary>國際足球總會（FIFA）提出的「FIFA發展企業（FFE）」具體是如何運作的？誰將是主要投資方？</summary>
+    <p>FFE旨在整合FIFA的商業和賽事營運，並邀請第三方進行少數、非控制性的投資。FIFA表示，若計畫獲批，美國風險投資公司Thrive Eternal有望成為此投資集團的領導者。該公司由約書亞·庫什納創立，他是美國前總統唐納·川普女婿賈里德·庫什納的兄弟。</p>
   </details>
   
   <details>
-    <summary>除了波爾多和馬德里周邊，野火情況在法國和歐洲其他地區有多廣泛？</summary>
-    <p>在法國，除了波爾多地區，朗德省、瓦爾省和科西嘉島的奧特科斯地區也有野火燃燒。西班牙首都馬德里西部也因野火肆虐而進入全國緊急狀態，已影響超過27,000公頃。總體而言，法國正經歷一個「前所未有的火災季節」，自一月以來已燒毀超過116,000公頃土地，並記錄到超過13,500起火災。</p>
+    <summary>歐洲足球總會（UEFA）和其他批評者對FIFA此計畫的主要擔憂是什麼？</summary>
+    <p>他們最擔心的是，引入私人投資者可能導致FIFA為了滿足股東利益而推動世界盃等賽事進一步擴大規模或增加舉辦頻率。這不僅會加劇賽程壓力，還可能威脅到現有的歐洲賽事，並被視為商業利益凌駕於足球運動的「靈魂與治理」之上。</p>
   </details>
   
   <details>
-    <summary>鑑於預期的熱浪，消防員和當局在控制這些野火方面面臨哪些挑戰？</summary>
-    <p>消防員面臨巨大挑戰，主要是預計將加劇火勢的強烈熱浪。持續存在的風帶來飛濺火星和火勢方向突然改變的風險，使得控制工作極其困難。當局正在建造防火帶，但承認野火有「自己的生命」，鑑於火災的不可預測性和規模，必須保持謹慎。</p>
+    <summary>除了足球，其他體育項目是否有類似引入私人投資的做法？FIFA為何認為此模式可行？</summary>
+    <p>文章提及，FIFA認為其計畫與其他體育管理機構的做法類似，例如英格蘭超級橄欖球聯賽（Premiership Rugby）在2018年就與私募股權公司CVC Capital Partners建立了合作夥伴關係。FIFA認為這種專門的商業子公司模式有助於創造更多收入以支持全球足球發展。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-28-6aca9a17ef-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/ckg34128nvpo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-29-ff59de902d-sans.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/sport/football/articles/c8xng9894z0o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Trump says Iran war talks taking place during lull in strikes</h3>
-  <p class="summary">美國總統川普表示，在美伊雙方連續三天未進行攻擊後，目前正就與伊朗的衝突進行「非常友好的談判」，並對結束戰事表達樂觀。他指出，美國因調解方要求而暫停空襲，伊朗也已停止攻擊，顯示衝突可能降級。然而，伊朗否認有任何直接談判發生，且川普警告若談判失敗，美國將恢復行動。
-
-要點：
-* 此前近兩週美伊之間曾每日發生報復性襲擊，導致6月的停火協議破裂。
-* 衝突降級的希望促使週一油價下跌超過9%。</p>
+  <h3>Ghana mourns its tallest man - a 'generous and popular giant'</h3>
+  <p class="summary">迦納最高的男子蘇萊曼納·阿卜杜勒·薩米德（Sulemana Abdul Samed），暱稱「Awuche」，於週一在迦納北部塔馬利的一家醫院去世，享年33歲。他的身高達223公分（7英尺4英寸），因腿部潰瘍感染的併發症而去世，儘管據稱對治療反應良好。他的去世引發了全國，特別是北部地區的深切哀悼，他不僅是當地名人，更因其慷慨和善良而廣受歡迎，並為其家鄉甘巴加（Gambaga）帶來了獨特的認同。
+* 他在20多歲時被診斷出患有巨人症和馬凡氏症候群。
+* 生前曾為醫療費用所困，近期獲迦納總統兄弟伊卜拉欣·馬哈馬（Ibrahim Mahama）資助。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>美國與伊朗之間的衝突為何會走到停火談判的階段？</summary>
-    <p>此前的停火協議於七月因伊朗攻擊油輪而破裂，導致美方恢復空襲並實施海上封鎖，伊朗則以攻擊美國軍事設施報復，雙方陷入近兩週的每日交火。在調解方的要求下，美國總統川普決定暫停攻擊，促成了目前的談判。</p>
+    <summary>馬凡氏症候群是什麼？它是如何影響蘇萊曼納·阿卜杜勒·薩米德的身體狀況的？</summary>
+    <p>馬凡氏症候群是一種影響結締組織的遺傳疾病，導致阿卜杜勒·薩米德的肢體異常伸長。這種症候群導致他身軀巨大化，並引發了包括腿部感染在內的多種健康併發症，最終導致他英年早逝。</p>
   </details>
   
   <details>
-    <summary>此次衝突可能降溫對全球經濟有何影響？</summary>
-    <p>衝突降級的希望已經對全球油價產生立即影響，報導指出週一油價一度下跌超過9%。若緊張局勢持續緩和，預計將有助於穩定能源市場，並減輕航運成本上升的壓力。</p>
+    <summary>蘇萊曼納·阿卜杜勒·薩米德的超高身高如何影響了他的日常生活和人生抱負？</summary>
+    <p>他的身高嚴重限制了他的活動能力和社交生活，使他無法像同齡人一樣踢足球或輕鬆地短距離行走。九年前，他的身高迫使他放棄了成為司機的夢想，並從首都阿克拉返回家鄉甘巴加。</p>
   </details>
   
   <details>
-    <summary>伊朗方面對於此次「友好談判」有何回應？如果談判失敗，美國有何應對措施？</summary>
-    <p>伊朗方面否認有任何直接談判正在進行。美國總統川普則明確警告，如果最新的談判未能成功，華盛頓將「恢復我們之前的行動」，意味著可能重啟對伊朗的軍事打擊。</p>
+    <summary>為什麼他最終被安葬在塔馬利（Tamale）而不是他的家鄉甘巴加（Gambaga）？</summary>
+    <p>他的家人決定將他安葬在塔馬利，因為他們擔心如果將他運回家鄉甘巴加，當地會湧入過多的哀悼者，村莊可能無法承受。此舉是為了避免給他深愛的家鄉帶來不必要的混亂和負擔。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-28-b42e63b1aa-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c62xn4vzmnpo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-29-6431850cff-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/crk52jk0131o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 
 <h2>科學 Science</h2>
 
 <article>
-  <h3>NASA Astronaut Chris Williams to Discuss Space Station Mission</h3>
-  <p class="summary">美國太空總署（NASA）太空人克里斯·威廉斯將於美東時間8月4日下午2點45分，在休士頓詹森太空中心召開記者會，回顧他近期在國際太空站（ISS）為期八個月的任務。他作為第73/74遠征隊的飛行工程師，在首次太空飛行中度過了241天，支持了廣泛的科學研究和技術展示，包括癌症治療的推進和太空製造材料的改進，並完成了兩次太空漫步。
-此次任務的成果有助於改善地球生活並為未來的月球和火星載人任務做準備。
-* 支援新型癌症治療和太空製造材料等科學研究。
-* 執行兩次太空漫步，為太空站電力系統升級和維修加拿大臂2機械臂。</p>
+  <h3>Smoke Blankets Oregon</h3>
+  <p class="summary">2026年7月15日，乾燥雷暴在喀斯喀特山脈引發數千次閃電，導致俄勒岡州中部和東部自7月16日起發生大量野火。由於乾旱、高溫和陣風，這些火災迅速蔓延，截至7月27日已焚燒超過一百萬英畝，產生大量煙霧，促使當局發布空氣品質警報並疏散社區。超過一萬名消防員正在撲救火災，其中許多火災的圍堵率不到5%。此次火災規模顯著超過美國十年來的同期平均水平。
+
+重點：
+- 俄勒岡州已焚燒超過一百萬英畝，全國範圍則達四百萬英畝，遠超十年平均。
+- 許多社區面臨疏散命令，東俄勒岡州發布了空氣品質警報。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>威廉斯所參與的「第73/74遠征隊」指的是什麼？</summary>
-    <p>「遠征隊」是指國際太空站上長期駐留的太空人團隊。威廉斯作為第73/74遠征隊的飛行工程師，這表示他在這兩個連續的任務期間都在太空站上執行職務，負責科學實驗、站體維護和日常運作。</p>
+    <summary>造成俄勒岡州野火如此迅速蔓延和大規模燃燒的具體自然條件是什麼？</summary>
+    <p>這些野火最初是由乾燥雷暴在7月15日引發的數千次閃電所致。隨後，強勁的陣風、極度乾旱以及夏季高溫等惡劣條件，共同助長了火勢的迅速擴大，使其在短時間內席捲廣闊的土地。</p>
   </details>
   
   <details>
-    <summary>威廉斯進行的太空漫步對國際太空站和未來的太空任務有何重要性？</summary>
-    <p>威廉斯的太空漫步旨在準備太空站的電力系統升級並更換加拿大臂2機械臂的故障接頭，這些都是維持太空站運作和功能性的關鍵維護工作。確保太空站的正常運行不僅能持續進行重要的科學研究，也為NASA未來的月球「阿提米絲」（Artemis）計劃和火星載人任務提供必要的技術驗證和操作經驗。</p>
+    <summary>大規模野火對俄勒岡州的居民和環境造成了哪些直接影響？</summary>
+    <p>直接影響包括大量煙霧導致東俄勒岡州發布空氣品質警報，許多社區面臨疏散命令，以及超過一百萬英畝的土地被燒毀。這不僅威脅到居民的健康和安全，也對當地的生態系統造成嚴重破壞。</p>
   </details>
   
   <details>
-    <summary>威廉斯在太空站上具體支持了哪些「新型癌症治療」和「太空製造」相關的科學研究？</summary>
-    <p>雖然文章沒有提供具體細節，但在微重力環境下進行的研究通常涉及在地球上難以實現的獨特條件。新型癌症治療研究可能專注於在微重力下細胞生長、藥物傳遞或蛋白質結晶的行為，以開發更有效的治療方法。太空製造則可能探索如何生產用於高性能電腦和電子產品的材料，利用太空的真空和微重力環境來創造地球上無法獲得的材料特性。</p>
+    <summary>當局除了部署大量消防員外，還利用了哪些技術和措施來應對和監測這些野火？</summary>
+    <p>除了超過一萬名消防員在前線奮戰，當局還啟用了俄勒岡州的「緊急火災應對法案」以保護社區。同時，NASA的FIRMS系統、Worldview瀏覽器和Fire Event Explorer等衛星數據和即時監測工具也被用於追蹤火勢行為和分析趨勢，以協助應對策略。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-28-a592706dd3-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-astronaut-chris-williams-to-discuss-space-station-mission/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>NASA Science Soars During August Total Solar Eclipse</h3>
-  <p class="summary">美國太空總署（NASA）資助的科學團隊將於2026年8月12日日全食期間，部署高空噴射機和科學氣球，以研究太陽及其對地球大氣層的影響。此次日全食將橫掃格陵蘭、冰島和西班牙上空。WB-57噴射機將追逐月影，以延長時間捕捉太陽日冕的高解析度影像，旨在了解其加熱機制和太陽風。同時，學生團隊將在冰島和西班牙發射氣球，探究突然的黑暗如何影響大氣邊界層和臭氧水平。這些研究對於增進我們對太陽動力學及其對地球影響的理解至關重要。
-
-* WB-57噴射機將拍攝日冕影像，以研究日冕如何被加熱以及與太陽風的關係。
-* 科學氣球將測量日食期間大氣邊界層和臭氧水平的變化。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>為什麼日全食對於研究太陽的日冕如此重要？</summary>
-    <p>太陽的日冕是其外層大氣，通常被明亮的太陽盤遮蔽。在日全食期間，月球完美地遮擋了太陽，使地球上的科學家能夠直接觀測和捕捉獨特的日冕高解析度影像，這是其他太陽觀測方法或太陽系中其他位置難以實現的。</p>
-  </details>
-  
-  <details>
-    <summary>科學家希望透過氣球在日食期間觀測到哪些具體的大氣變化？</summary>
-    <p>科學家特別感興趣的是，當白天突然變暗時，地球的「邊界層」（與地面接觸的大氣層部分）如何變化。他們還旨在測量臭氧水平，因為臭氧的形成需要陽光，以觀察其在日全食期間是否會下降，以及這些效應是否會因地理位置、時間和季節而異。</p>
-  </details>
-  
-  <details>
-    <summary>與地面觀測相比，WB-57這類高空噴射機如何改進日食觀測？</summary>
-    <p>WB-57噴射機在50,000英尺高空飛行，可以避開可能阻礙地面觀測的雲層，並透過追逐月球陰影延長觀測日冕的時間。這個高度也使得相機可以捕捉到被低層大氣吸收的某些紅外波長，提供了地面無法獲得的新數據。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-28-17a51f995a-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://science.nasa.gov/science-research/heliophysics/nasa-science-soars-during-august-total-solar-eclipse/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>NASA Astronaut Chris Williams Returns to Earth</h3>
-  <p class="summary">NASA太空人Chris Williams於2026年7月26日在哈薩克順利返回地球，與俄羅斯太空人Sergey Kud-Sverchkov和Sergei Mikaev一同著陸。這是Williams的首次太空任務，他在國際太空站（ISS）上度過了八個月，期間支援了廣泛的科學調查和技術演示。
-他還完成了兩次太空漫步，為太空站的電力系統升級做準備，並更換了Canadarm2機械臂上的故障接頭，任務圓滿成功且意義重大。
-- 任務時長：八個月
-- 主要貢獻：支援科學研究與技術展示、兩次太空漫步</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>國際太空站（ISS）的主要功能和任務是什麼？</summary>
-    <p>國際太空站是一個在地球軌道上運行的研究實驗室，由多個國家合作建造和運行。它的主要功能是進行微重力環境下的科學研究、技術測試，並作為未來深空探索的準備平台。</p>
-  </details>
-  
-  <details>
-    <summary>文章中提到的Canadarm2機械臂是什麼？更換故障接頭的重要性在哪裡？</summary>
-    <p>Canadarm2是國際太空站上的一個大型機器人手臂，用於移動設備、執行太空站的維護和捕捉來訪的太空船。更換故障接頭對確保Canadarm2的正常運作至關重要，以維持太空站的日常運作及未來任務的執行。</p>
-  </details>
-  
-  <details>
-    <summary>太空人在國際太空站上通常會支援哪些類型的科學研究？</summary>
-    <p>太空人在ISS上支援的研究範圍廣泛，包括生物學（如人類生理學對太空環境的反應）、物理學、材料科學、地球觀測和天文學等。這些研究旨在增進人類對宇宙的理解，並開發有益於地球的新技術。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-28-ccfb03d969-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/nasa-astronaut-chris-williams-returns-to-earth/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-29-8068c38598-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/natural-disasters/wildfires/smoke-blankets-oregon/">原文網頁</a></p>
 </article>
 
 
 <h2>長文 Long Reads</h2>
 
 <article>
-  <h3>A New Way That a Cow’s Inner World Shapes Earth’s Atmosphere</h3>
-  <p class="summary">一項發表於《科學》雜誌的最新研究揭示了牛隻反芻胃中甲烷排放的關鍵生物機制。研究人員在牛瘤胃纖毛蟲內發現了一種新的胞器，名為「氫體」(hydrogenobody)，它負責產生氫氣，而這些氫氣隨後被產甲烷菌轉化為強效溫室氣體甲烷。
-這項發現不僅深入解釋了牛隻如何產生大量甲烷，也為開發更精確、有效的甲烷減排策略提供了新方向，例如針對特定的纖毛蟲種類或其氫體。
-*   氫體是纖毛蟲能量代謝的一部分，它產生氫氣並消耗氧氣，為產甲烷菌創造了理想的厭氧環境。
-*   研究顯示，擁有更多「多毛蟲」(Isotrichs) 類纖毛蟲（富含氫體）的牛隻，其甲烷排放量明顯更高。</p>
+  <h3>The light narrows</h3>
+  <p class="summary">這篇文章探討了作者在父親去世後，如何透過巴西柔術尋求慰藉與力量的個人歷程。然而，面對挫敗、睪固酮低下以及使用化學「作弊碼」的誘惑，作者深入反思了真正力量的意義，以及如何應對脆弱與困境。文章旨在探討在生命挑戰面前，人們對於追求身體與精神力量的掙扎，以及道德選擇的影響。
+
+*   喪父之痛與柔術：以武術作為應對悲傷的方式。
+*   挑戰與誘惑：面對失敗和生理限制時，對捷徑的考量。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>牛隻甲烷排放對全球暖化的影響有多大？它與其他溫室氣體有何不同？</summary>
-    <p>牛隻等反芻動物排放的甲烷約佔全球大氣中甲烷總量的三分之一，並在過去150年全球氣溫上升中佔約30%。相較於二氧化碳，甲烷在大氣中的壽命較短，但其捕獲熱能的效率高出約80倍，因此具有快速減緩全球暖化的潛力。</p>
+    <summary>作者在巴西柔術的訓練中具體遇到了哪些挫折，讓他感到「失敗」並導致睪固酮低下？</summary>
+    <p>根據文章的簡介，作者在柔術練習中遭遇了顯著的挫敗感，這可能與他未能達到預期表現或在比賽中失利有關。此外，他還面臨睪固酮低下的生理挑戰，這可能進一步影響了他的訓練表現和整體身心狀態。</p>
   </details>
   
   <details>
-    <summary>發現「氫體」對未來減少牛隻甲烷排放有哪些具體應用或潛在策略？</summary>
-    <p>這項發現開啟了多種減排策略。科學家可以開發方法來選擇性地減少或去除瘤胃中產生更多氫氣的特定纖毛蟲（如多毛蟲），而不是全面清除所有原生動物。另外，也可以直接針對氫體本身進行研究，以重新引導其產生的氫氣，使其不被產甲烷菌利用，或者增強現有飼料添加劑的效果。</p>
+    <summary>文章中提到的「化學作弊碼」具體指什麼，作者為何會考慮使用它？</summary>
+    <p>「化學作弊碼」很可能指的是增強體能或提高睪固酮水平的藥物，例如合成代謝類固醇或其他激素療法。作者考慮使用它，是為了克服因睪固酮低下帶來的身體限制和在柔術中屢次受挫的困境，尋求一種快速恢復力量和表現的捷徑。</p>
   </details>
   
   <details>
-    <summary>這項研究雖有突破，但未來還有哪些研究方向或未解決的問題？</summary>
-    <p>儘管這項研究至關重要，但仍需更深入地探討不同纖毛蟲物種或氫體本身如何具體影響甲烷排放。例如，論文作者並未詳細說明實驗牛隻的飲食，而飼料類型是影響微生物甲烷生成量的主要因素。未來研究將可能從跨界氫傳輸的角度，探索細菌、古菌、真菌和原生動物之間複雜的氫代謝關係。</p>
+    <summary>這篇散文最終對於「真正的力量」或應對悲傷與脆弱提出了什麼樣的見解？</summary>
+    <p>雖然文章簡介未提供完整答案，但從其主題推斷，散文可能引導讀者思考：真正的力量不僅是身體上的，更包含面對脆弱、接受限制和在困境中做出道德選擇的能力。它或許強調透過內省和健康的方式來處理悲傷，而非依賴外部的捷徑。</p>
   </details>
   
   </div>
   
-  <p class="source">Quanta Magazine ｜ <a href="article/2026-07-28-2fda3eda24-sans.html">全文（約 8 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/a-new-way-that-a-cows-inner-world-shapes-earths-atmosphere-20260727/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>In search of the northern cassowary</h3>
-  <p class="summary">這篇影片探討尋找一種難以捉摸的大型鳥類——北方食火雞。牠在維持雨林生態系統的健康中扮演著關鍵角色。
-- 探索神秘且難以捉摸的北方食火雞。
-- 強調其對雨林生態平衡的巨大影響。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>什麼是食火雞，牠為何被稱為「難以捉摸」？</summary>
-    <p>食火雞是一種大型、不會飛的鳥類，主要分佈在新幾內亞及其周邊地區。牠們因生性害羞、棲息於茂密雨林深處且行動隱蔽，使其很難被人類發現和觀察，因此被形容為「難以捉摸」。</p>
-  </details>
-  
-  <details>
-    <summary>北方食火雞在雨林生態系統中扮演著怎樣的「關鍵角色」？</summary>
-    <p>北方食火雞是重要的種子傳播者。牠們吞食大型果實，並將種子隨糞便排泄到廣闊的區域，有助於多種雨林植物的繁殖和分佈，進而維持雨林生態的多樣性與健康。</p>
-  </details>
-  
-  <details>
-    <summary>除了「北方食火雞」，還有其他種類的食火雞嗎？牠們主要分佈在哪裡？</summary>
-    <p>是的，食火雞科目前已知有三種，除了北方食火雞外，還有南方食火雞和侏食火雞。牠們主要分佈在新幾內亞、印尼的部分島嶼和澳洲東北部的熱帶雨林地區。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Aeon ｜ <a href="article/2026-07-28-1f1fe26a09-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/scientists-and-locals-unite-to-film-a-large-elusive-new-guinean-bird">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>The taming of Black thought</h3>
-  <p class="summary">這篇題為「馴服黑人思想」的文章指出，儘管黑人哲學家已納入西方課程，但歐洲傳統卻將其思想的激進性淡化，轉化為一種迎合或令人安心的詮釋。其核心論點是，西方學術體系在吸納非西方思想時，可能存在將其核心批判和顛覆性面向「去勢」的傾向。
-
-關鍵點：
-- 黑人哲學的激進本質在西方語境中被削弱。
-- 西方學術對非西方思想的整合可能導致其原意的變質。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>什麼是「將其激進性淡化為一種迎合或令人安心的詮釋」？</summary>
-    <p>這可能意味著，黑人哲學中挑戰既有權力結構、批判種族主義和殖民主義的觀點，在西方課程中被選擇性地解讀或強調其普遍性、倫理觀等較不具威脅性的面向。這種詮釋方式淡化了其原有的批判鋒芒和變革潛力，使其更容易被主流學術體系所接受。</p>
-  </details>
-  
-  <details>
-    <summary>為什麼歐洲傳統會這樣「馴服」黑人思想？其背後的原因或機制是什麼？</summary>
-    <p>這可能是因為西方學術體系傾向於維持自身的範式和舒適區，對於可能挑戰其基礎的激進思想，會不自覺地進行同化或邊緣化處理。這種機制可能涉及教學材料的選擇、詮釋框架的限制，甚至學者自身的文化預設。</p>
-  </details>
-  
-  <details>
-    <summary>這種「馴服」過程可能帶來哪些負面影響？</summary>
-    <p>這種做法可能導致黑人哲學的豐富性和原創性無法被充分理解，阻礙學生對其深層批判力量的認識。更重要的是，它可能繼續鞏固西方中心主義的敘事，使非西方思想的獨特貢獻被貶低，未能真正促進多元思想的對話與反思。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Aeon ｜ <a href="article/2026-07-28-d42d3c28c3-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/essays/epistemic-convergence-in-the-study-of-world-philosophies">原文網頁</a></p>
+  <p class="source">Aeon ｜ <a href="article/2026-07-29-e6db5cf0be-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/essays/what-kind-of-strength-did-i-chase-with-a-cojones-cheat-code">原文網頁</a></p>
 </article>
 
 

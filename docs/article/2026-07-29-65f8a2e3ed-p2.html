@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAI just open-sourced Codex Security</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-29-65f8a2e3ed-p2-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>OpenAI just open-sourced Codex Security</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 2 / 2 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://github.com/openai/codex-security">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-29-65f8a2e3ed.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 2 / 2 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">const security = new CodexSecurity();</p>
+
+<p class="fulltext">const result = await security.run(".");</p>
+
+<p class="fulltext">console.log(result.reportPath);</p>
+
+<p class="fulltext">await security.close();For installation, authentication, scan options, and CI setup, see the official documentation.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Codex Security 主要用來解決什麼問題？它如何幫助開發者？</summary>
+  <p>Codex Security 主要用於識別、驗證和修復程式碼中的安全漏洞。它通過提供 CLI 和 TypeScript SDK，讓開發者能夠自動化安全掃描、追蹤問題並在開發生命週期早期整合安全檢查。</p>
+</details>
+
+<details>
+  <summary>使用 Codex Security 需要什麼技術環境或條件？</summary>
+  <p>欲使用 Codex Security，使用者需要 Node.js 22 或更高版本、Python 3.10 或更高版本，以及對 Codex Security 的存取權限。它也可以在持續整合 (CI) 環境中透過設定 OPENAI_API_KEY 來使用，無需登入。</p>
+</details>
+
+<details>
+  <summary>這個開源工具有哪些具體的應用場景，或者說它在軟體開發流程中扮演什麼角色？</summary>
+  <p>Codex Security 可以在軟體開發的各個階段發揮作用，包括掃描整個程式碼儲存庫以發現現有漏洞、在程式碼變更時審查其安全性，以及在持續整合 (CI) 流程中自動運行安全檢查。這使得開發團隊能夠持續追蹤並管理安全問題，提高軟體整體安全性。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-29-65f8a2e3ed.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 2 / 2 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

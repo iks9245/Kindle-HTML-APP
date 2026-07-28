@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-07-29</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-29-sans.html">切換為無襯線字體顯示</a></p>
+
+<h1>每日 AI 文摘 2026-07-29</h1>
+<p class="meta">
+2026-07-29
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="index.html">存檔列表</a>
+
+
+
+ ｜ <a href="2026-07-28.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日全球多地正面臨嚴峻氣候挑戰，法國西南部與美國俄勒岡州皆飽受野火肆虐，在乾旱與熱浪夾擊下導致大規模破壞與疏散。在科技安全方面，OpenAI開源工具助開發者防護程式碼，而Anthropic的AI則展現了偵測加密演算法深層缺陷的潛力，預示著AI在資安領域的雙重影響。同時，商業模式也在變革中，蘋果推出新型租賃服務，但國際足總的全球發展計畫卻因過度商業化而引發爭議。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>OpenAI just open-sourced Codex Security</h3>
+  <p class="summary">OpenAI 最近開源了 Codex Security，這是一個 CLI 和 TypeScript SDK，旨在幫助開發者在其程式碼中查找、驗證和修復安全漏洞。此工具對於提升軟體開發的安全性至關重要，允許團隊掃描儲存庫、審查程式碼變更並在持續整合 (CI) 流程中運行安全檢查，從而有效追蹤和管理安全發現。
+
+主要功能包括：
+*   在程式碼中查找、驗證和修復安全漏洞。
+*   支援掃描儲存庫、追蹤安全發現和在 CI 中運行安全檢查。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Codex Security 主要用來解決什麼問題？它如何幫助開發者？</summary>
+    <p>Codex Security 主要用於識別、驗證和修復程式碼中的安全漏洞。它通過提供 CLI 和 TypeScript SDK，讓開發者能夠自動化安全掃描、追蹤問題並在開發生命週期早期整合安全檢查。</p>
+  </details>
+  
+  <details>
+    <summary>使用 Codex Security 需要什麼技術環境或條件？</summary>
+    <p>欲使用 Codex Security，使用者需要 Node.js 22 或更高版本、Python 3.10 或更高版本，以及對 Codex Security 的存取權限。它也可以在持續整合 (CI) 環境中透過設定 OPENAI_API_KEY 來使用，無需登入。</p>
+  </details>
+  
+  <details>
+    <summary>這個開源工具有哪些具體的應用場景，或者說它在軟體開發流程中扮演什麼角色？</summary>
+    <p>Codex Security 可以在軟體開發的各個階段發揮作用，包括掃描整個程式碼儲存庫以發現現有漏洞、在程式碼變更時審查其安全性，以及在持續整合 (CI) 流程中自動運行安全檢查。這使得開發團隊能夠持續追蹤並管理安全問題，提高軟體整體安全性。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-29-65f8a2e3ed.html">全文（約 1 分鐘）</a> ｜ <a href="https://github.com/openai/codex-security">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Discovering Cryptographic Weaknesses with Claude</h3>
+  <p class="summary">Anthropic 的研究人員利用 Claude Mythos Preview 發現了改進的加密演算法攻擊方法。這些突破性研究進展，包括顯著削弱後量子數位簽章方案 HAWK 的強度，以及找到攻擊縮減輪數 AES 的新方法。儘管這些發現目前不影響任何現有生產系統，它們展示了前沿 AI 模型在發現重要加密演算法漏洞方面的巨大潛力，並強調了未來加密系統設計與審查中AI可能扮演的重要角色。
+
+* AI (Claude Mythos Preview) 能夠自主發現演算法本身的數學缺陷，而非僅是實作錯誤。
+* 這些攻擊對現有系統無實際影響，但預示著更強大的AI模型將能更深入地檢測加密安全。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>HAWK 和 AES 分別是什麼，以及它們在數位安全中扮演什麼重要角色？</summary>
+    <p>HAWK 是一種針對後量子世界設計的數位簽章方案，旨在抵抗未來量子電腦的攻擊，目前是美國國家標準暨技術研究院 (NIST) 考慮採用的候選方案之一。AES (進階加密標準) 則是目前全球最廣泛使用的對稱式加密演算法，為電子郵件、網路銀行等大量線上通訊提供安全保護，是數位安全基石。</p>
+  </details>
+  
+  <details>
+    <summary>儘管研究結果目前不影響現有生產系統，這項發現對於未來的加密技術發展有何長遠的意義？</summary>
+    <p>雖然 HAWK 仍在候選階段且攻擊目標是縮減輪數的 AES，但這項研究證明了前沿 AI 模型能發現連人類專家多年都未察覺的演算法數學缺陷。這預示著AI將在未來的加密演算法審查和壓力測試中扮演更關鍵的角色，有助於開發更安全、更強健的加密系統，以應對不斷演進的威脅。</p>
+  </details>
+  
+  <details>
+    <summary>Claude 是如何發現這些加密演算法的數學缺陷的？這與AI過去在網路安全領域的應用有何不同？</summary>
+    <p>過去AI模型通常是用來發現軟體實作加密演算法時的程式碼錯誤。然而，這次Claude Mythos Preview 能夠更進一步，直接在演算法本身的數學設計中找到弱點。這顯示了AI在密碼分析能力上的巨大飛躍，從檢測實作漏洞進步到分析演算法理論基礎的缺陷。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-29-df6c16550d.html">全文（約 17 分鐘）</a> ｜ <a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>The iPhone Upgrade Program is being replaced by Apple Upgrade</h3>
+  <p class="summary">蘋果公司宣布終止其「iPhone 升級計畫」(iPhone Upgrade Program)，並推出全新的「Apple Upgrade」租賃服務作為替代。現有的 iPhone 升級計畫會員可繼續支付剩餘款項。這項新計畫不僅適用於 iPhone，更擴展至 iPad、Mac 和 Apple Watch 等多種 Apple 產品，讓消費者能以更彈性的方式取得並升級設備。
+- 「Apple Upgrade」提供低月租費和靈活的租賃期限。
+- 租賃期滿時，用戶可輕鬆升級至新設備並歸還舊設備。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>舊的「iPhone 升級計畫」與新的「Apple Upgrade」之間主要有何不同？</summary>
+    <p>舊的「iPhone 升級計畫」主要是針對 iPhone 的分期付款與每年升級選項，用戶在付清款項後擁有設備。而新的「Apple Upgrade」則是一種租賃模式，涵蓋更多 Apple 產品，用戶在租賃期結束時歸還設備並選擇升級，本質上不擁有產品。</p>
+  </details>
+  
+  <details>
+    <summary>「Apple Upgrade」計畫是否已立即推出，以及消費者能在哪裡使用這項服務？</summary>
+    <p>文章指出「Apple Upgrade」是一個新的支付選項，將用於未來的 iPhone 購買。雖然文章強調「Only at Apple」，但具體的推出時間和適用國家/地區通常會透過 Apple 官方進一步公布。消費者應在 Apple 官網或實體店查詢最新資訊。</p>
+  </details>
+  
+  <details>
+    <summary>除了「Apple Upgrade」之外，消費者還有哪些其他方式可以購買新的 iPhone？</summary>
+    <p>文章中提到，消費者仍可透過電信業者提供的優惠方案、Apple 提供的分期付款選項，或選擇一次性付款的方式來購買新的 iPhone。這些多元的選擇確保了消費者可以根據自身需求和偏好來取得設備。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-07-29-e12adb90e9.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.apple.com/shop/iphone/iphone-upgrade-program">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Wildfires in south-west France flare up as region braces for new 40C heatwave</h3>
+  <p class="summary">法國西南部吉倫特地區近日野火復燃，消防員正日以繼夜地工作，以控制火勢並應對即將到來的攝氏40度熱浪。這波火災已迫使數萬人撤離，摧毀約240棟房屋，並嚴重影響了波爾多市的空氣品質和當地經濟活動。當局對空氣污染保持高度警惕，並下令海岸露營地緊急撤離。這是一個前所未有的事件，使該地區面臨嚴峻挑戰。
+- 吉倫特地區已有14個曾受災地點再次起火。
+- 另有4名消防員近期在法國各地因火災殉職。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這些野火今年為何如此嚴重且難以控制？</summary>
+    <p>文章指出，這是夏季第四波熱浪，預計該地區氣溫將飆升至攝氏40度，這使得火勢難以撲滅且容易復燃。官員也表示，這次事件是「前所未有」的，加劇了火災的嚴重性。</p>
+  </details>
+  
+  <details>
+    <summary>儘管波爾多市未直接受火災威脅，其居民生活和城市運作受到哪些影響？</summary>
+    <p>雖然波爾多市區未受火勢波及，但空氣品質急劇惡化，充滿煙霧和灰燼，導致許多商店、餐廳和咖啡館門可羅雀甚至關閉。居民被建議待在室內並佩戴口罩，旅遊業也因此大受打擊。</p>
+  </details>
+  
+  <details>
+    <summary>除了高溫和乾燥等自然因素外，是否有其他人類因素導致這些野火？</summary>
+    <p>文章提到一名23歲男子因涉嫌在瓦爾地區縱火而被捕，可能面臨15年監禁。自7月6日以來，法國內政部長表示已有184人因與火災相關的行為而被捕，這表明部分火災可能是人為縱火所致。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-07-29-44c682a32a.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c5yd8gly1ydo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Uefa and PM criticise Infantino World Cup plan</h3>
+  <p class="summary">國際足球總會（FIFA）近期提出計畫，擬透過新成立的子公司「FIFA發展企業（FFE）」引入私人投資，目標是將足球發展資金擴大至逾100億美元。此舉迅速引發歐洲足球總會（UEFA）與英國首相安迪·伯納姆的嚴厲批評，指責FIFA此舉「越界」並有「出賣」足球靈魂之嫌。
+FIFA聲稱這能為全球各會員協會提供高達2000萬美元的發展資金，但批評者擔憂這將導致世界盃等賽事過度商業化、缺乏透明度，甚至可能為滿足股東利益而頻繁擴大賽事規模，進而破壞足球的本質與賽程安排。
+
+* 主要投資方Thrive Eternal與美國前總統川普的女婿兄弟有關聯，引發額外關注。
+* 此計畫被視為自歐洲超級聯賽以來對足球界最大的衝擊之一。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>國際足球總會（FIFA）提出的「FIFA發展企業（FFE）」具體是如何運作的？誰將是主要投資方？</summary>
+    <p>FFE旨在整合FIFA的商業和賽事營運，並邀請第三方進行少數、非控制性的投資。FIFA表示，若計畫獲批，美國風險投資公司Thrive Eternal有望成為此投資集團的領導者。該公司由約書亞·庫什納創立，他是美國前總統唐納·川普女婿賈里德·庫什納的兄弟。</p>
+  </details>
+  
+  <details>
+    <summary>歐洲足球總會（UEFA）和其他批評者對FIFA此計畫的主要擔憂是什麼？</summary>
+    <p>他們最擔心的是，引入私人投資者可能導致FIFA為了滿足股東利益而推動世界盃等賽事進一步擴大規模或增加舉辦頻率。這不僅會加劇賽程壓力，還可能威脅到現有的歐洲賽事，並被視為商業利益凌駕於足球運動的「靈魂與治理」之上。</p>
+  </details>
+  
+  <details>
+    <summary>除了足球，其他體育項目是否有類似引入私人投資的做法？FIFA為何認為此模式可行？</summary>
+    <p>文章提及，FIFA認為其計畫與其他體育管理機構的做法類似，例如英格蘭超級橄欖球聯賽（Premiership Rugby）在2018年就與私募股權公司CVC Capital Partners建立了合作夥伴關係。FIFA認為這種專門的商業子公司模式有助於創造更多收入以支持全球足球發展。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-07-29-ff59de902d.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/sport/football/articles/c8xng9894z0o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Ghana mourns its tallest man - a 'generous and popular giant'</h3>
+  <p class="summary">迦納最高的男子蘇萊曼納·阿卜杜勒·薩米德（Sulemana Abdul Samed），暱稱「Awuche」，於週一在迦納北部塔馬利的一家醫院去世，享年33歲。他的身高達223公分（7英尺4英寸），因腿部潰瘍感染的併發症而去世，儘管據稱對治療反應良好。他的去世引發了全國，特別是北部地區的深切哀悼，他不僅是當地名人，更因其慷慨和善良而廣受歡迎，並為其家鄉甘巴加（Gambaga）帶來了獨特的認同。
+* 他在20多歲時被診斷出患有巨人症和馬凡氏症候群。
+* 生前曾為醫療費用所困，近期獲迦納總統兄弟伊卜拉欣·馬哈馬（Ibrahim Mahama）資助。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>馬凡氏症候群是什麼？它是如何影響蘇萊曼納·阿卜杜勒·薩米德的身體狀況的？</summary>
+    <p>馬凡氏症候群是一種影響結締組織的遺傳疾病，導致阿卜杜勒·薩米德的肢體異常伸長。這種症候群導致他身軀巨大化，並引發了包括腿部感染在內的多種健康併發症，最終導致他英年早逝。</p>
+  </details>
+  
+  <details>
+    <summary>蘇萊曼納·阿卜杜勒·薩米德的超高身高如何影響了他的日常生活和人生抱負？</summary>
+    <p>他的身高嚴重限制了他的活動能力和社交生活，使他無法像同齡人一樣踢足球或輕鬆地短距離行走。九年前，他的身高迫使他放棄了成為司機的夢想，並從首都阿克拉返回家鄉甘巴加。</p>
+  </details>
+  
+  <details>
+    <summary>為什麼他最終被安葬在塔馬利（Tamale）而不是他的家鄉甘巴加（Gambaga）？</summary>
+    <p>他的家人決定將他安葬在塔馬利，因為他們擔心如果將他運回家鄉甘巴加，當地會湧入過多的哀悼者，村莊可能無法承受。此舉是為了避免給他深愛的家鄉帶來不必要的混亂和負擔。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-07-29-6431850cff.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/crk52jk0131o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>Smoke Blankets Oregon</h3>
+  <p class="summary">2026年7月15日，乾燥雷暴在喀斯喀特山脈引發數千次閃電，導致俄勒岡州中部和東部自7月16日起發生大量野火。由於乾旱、高溫和陣風，這些火災迅速蔓延，截至7月27日已焚燒超過一百萬英畝，產生大量煙霧，促使當局發布空氣品質警報並疏散社區。超過一萬名消防員正在撲救火災，其中許多火災的圍堵率不到5%。此次火災規模顯著超過美國十年來的同期平均水平。
+
+重點：
+- 俄勒岡州已焚燒超過一百萬英畝，全國範圍則達四百萬英畝，遠超十年平均。
+- 許多社區面臨疏散命令，東俄勒岡州發布了空氣品質警報。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>造成俄勒岡州野火如此迅速蔓延和大規模燃燒的具體自然條件是什麼？</summary>
+    <p>這些野火最初是由乾燥雷暴在7月15日引發的數千次閃電所致。隨後，強勁的陣風、極度乾旱以及夏季高溫等惡劣條件，共同助長了火勢的迅速擴大，使其在短時間內席捲廣闊的土地。</p>
+  </details>
+  
+  <details>
+    <summary>大規模野火對俄勒岡州的居民和環境造成了哪些直接影響？</summary>
+    <p>直接影響包括大量煙霧導致東俄勒岡州發布空氣品質警報，許多社區面臨疏散命令，以及超過一百萬英畝的土地被燒毀。這不僅威脅到居民的健康和安全，也對當地的生態系統造成嚴重破壞。</p>
+  </details>
+  
+  <details>
+    <summary>當局除了部署大量消防員外，還利用了哪些技術和措施來應對和監測這些野火？</summary>
+    <p>除了超過一萬名消防員在前線奮戰，當局還啟用了俄勒岡州的「緊急火災應對法案」以保護社區。同時，NASA的FIRMS系統、Worldview瀏覽器和Fire Event Explorer等衛星數據和即時監測工具也被用於追蹤火勢行為和分析趨勢，以協助應對策略。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-07-29-8068c38598.html">全文（約 2 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/natural-disasters/wildfires/smoke-blankets-oregon/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>The light narrows</h3>
+  <p class="summary">這篇文章探討了作者在父親去世後，如何透過巴西柔術尋求慰藉與力量的個人歷程。然而，面對挫敗、睪固酮低下以及使用化學「作弊碼」的誘惑，作者深入反思了真正力量的意義，以及如何應對脆弱與困境。文章旨在探討在生命挑戰面前，人們對於追求身體與精神力量的掙扎，以及道德選擇的影響。
+
+*   喪父之痛與柔術：以武術作為應對悲傷的方式。
+*   挑戰與誘惑：面對失敗和生理限制時，對捷徑的考量。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>作者在巴西柔術的訓練中具體遇到了哪些挫折，讓他感到「失敗」並導致睪固酮低下？</summary>
+    <p>根據文章的簡介，作者在柔術練習中遭遇了顯著的挫敗感，這可能與他未能達到預期表現或在比賽中失利有關。此外，他還面臨睪固酮低下的生理挑戰，這可能進一步影響了他的訓練表現和整體身心狀態。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到的「化學作弊碼」具體指什麼，作者為何會考慮使用它？</summary>
+    <p>「化學作弊碼」很可能指的是增強體能或提高睪固酮水平的藥物，例如合成代謝類固醇或其他激素療法。作者考慮使用它，是為了克服因睪固酮低下帶來的身體限制和在柔術中屢次受挫的困境，尋求一種快速恢復力量和表現的捷徑。</p>
+  </details>
+  
+  <details>
+    <summary>這篇散文最終對於「真正的力量」或應對悲傷與脆弱提出了什麼樣的見解？</summary>
+    <p>雖然文章簡介未提供完整答案，但從其主題推斷，散文可能引導讀者思考：真正的力量不僅是身體上的，更包含面對脆弱、接受限制和在困境中做出道德選擇的能力。它或許強調透過內省和健康的方式來處理悲傷，而非依賴外部的捷徑。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-07-29-e6db5cf0be.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/essays/what-kind-of-strength-did-i-chase-with-a-cojones-cheat-code">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>

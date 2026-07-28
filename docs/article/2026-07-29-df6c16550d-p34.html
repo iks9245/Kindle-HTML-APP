@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discovering Cryptographic Weaknesses with Claude</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-29-df6c16550d-p34-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Discovering Cryptographic Weaknesses with Claude</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 34 / 34 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-29-df6c16550d-p33.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 34 / 34 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Read the full paper on HAWK.</p>
+
+<p class="fulltext">Read the full paper on AES, and the associated chain of thought.</p>
+
+<p class="fulltext">Read the paper introducing CryptanalysisBench.</p>
+
+<p class="fulltext">Working with Andon Labs, we’ve developed a new series of evaluations that assess AI models’ ability to use a flying drone, culminating in a new benchmark: Drone-Bench.</p>
+
+<p class="fulltext">Read moreGet updates on our latest red-teaming research and findings.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>HAWK 和 AES 分別是什麼，以及它們在數位安全中扮演什麼重要角色？</summary>
+  <p>HAWK 是一種針對後量子世界設計的數位簽章方案，旨在抵抗未來量子電腦的攻擊，目前是美國國家標準暨技術研究院 (NIST) 考慮採用的候選方案之一。AES (進階加密標準) 則是目前全球最廣泛使用的對稱式加密演算法，為電子郵件、網路銀行等大量線上通訊提供安全保護，是數位安全基石。</p>
+</details>
+
+<details>
+  <summary>儘管研究結果目前不影響現有生產系統，這項發現對於未來的加密技術發展有何長遠的意義？</summary>
+  <p>雖然 HAWK 仍在候選階段且攻擊目標是縮減輪數的 AES，但這項研究證明了前沿 AI 模型能發現連人類專家多年都未察覺的演算法數學缺陷。這預示著AI將在未來的加密演算法審查和壓力測試中扮演更關鍵的角色，有助於開發更安全、更強健的加密系統，以應對不斷演進的威脅。</p>
+</details>
+
+<details>
+  <summary>Claude 是如何發現這些加密演算法的數學缺陷的？這與AI過去在網路安全領域的應用有何不同？</summary>
+  <p>過去AI模型通常是用來發現軟體實作加密演算法時的程式碼錯誤。然而，這次Claude Mythos Preview 能夠更進一步，直接在演算法本身的數學設計中找到弱點。這顯示了AI在密碼分析能力上的巨大飛躍，從檢測實作漏洞進步到分析演算法理論基礎的缺陷。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-29-df6c16550d-p33.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 34 / 34 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
