@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kimi K3-256k</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-07-30-c67f0599e5-p14-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Kimi K3-256k</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 14 / 14 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://www.kimi.com/code/docs/en/kimi-code/models">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-30-c67f0599e5-p13.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 14 / 14 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">low / minimum / light   → low</p>
+
+<p class="fulltext"># → thinking disabled</p>
+
+<p class="fulltext">none                    → thinking.type disabled</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>既然 k3-256k 更經濟，那 Kimi Code 目前提供哪些主要模型，它們之間有何區別？</summary>
+  <p>Kimi Code 主要提供 Kimi K3 (包含 k3 和 k3-256k 版本) 及 Kimi K2.7 Code (包含 kimi-for-coding 和 kimi-for-coding-highspeed 版本)。K3 是旗艦模型，擁有強大推理能力和更大的上下文視窗（K3-256k 則專注於成本效益）；K2.7 Code 則擅長程式碼補全與常規開發，其中高速版輸出速度更快。</p>
+</details>
+
+<details>
+  <summary>使用 k3-256k 時，有哪些特別的使用情境或注意事項需要了解？</summary>
+  <p>k3-256k 適用於日常問答、程式碼補全、常規功能開發和單一或小型檔案編輯，但不支援影片輸入。在從 K3 (1M) 切換至 k3-256k 時，若上下文已超過 256k 或包含影片檔，建議先手動壓縮上下文以避免資訊丟失或切換失敗，並獲得更持久的配額效益。</p>
+</details>
+
+<details>
+  <summary>如果在使用新模型後發現配額消耗增加，或者無法訪問某些模型功能，可能原因是什麼？</summary>
+  <p>模型切換後，舊的上下文快取會失效，需要重新預填充，導致初期用量顯得較高，建議開啟新會話以獲取最佳體驗並降低消耗。此外，若請求的能力超出會員方案權益（如會員等級不足或上下文視窗大小限制），伺服器會返回 401 錯誤，用戶可能需要升級方案。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-07-30-c67f0599e5-p13.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 14 / 14 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

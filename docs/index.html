@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-07-29</title>
+<title>每日 AI 文摘 2026-07-30</title>
 <style>
   body {
     font-family: Georgia, "Times New Roman", serif;
@@ -75,9 +75,9 @@
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
 <p class="fontswitch"><a href="index-sans.html">切換為無襯線字體顯示</a></p>
 
-<h1>每日 AI 文摘 2026-07-29</h1>
+<h1>每日 AI 文摘 2026-07-30</h1>
 <p class="meta">
-2026-07-29
+2026-07-30
 
  ｜ <a href="archive/index.html">存檔列表</a>
  ｜ <a href="deepread.html">每日深讀</a>
@@ -89,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日全球多地正面臨嚴峻氣候挑戰，法國西南部與美國俄勒岡州皆飽受野火肆虐，在乾旱與熱浪夾擊下導致大規模破壞與疏散。在科技安全方面，OpenAI開源工具助開發者防護程式碼，而Anthropic的AI則展現了偵測加密演算法深層缺陷的潛力，預示著AI在資安領域的雙重影響。同時，商業模式也在變革中，蘋果推出新型租賃服務，但國際足總的全球發展計畫卻因過度商業化而引發爭議。</p>
+<p>今日科技新聞聚焦AI發展的兩面性，Kimi推出了更經濟高效的模型，但Claude服務卻面臨普遍性錯誤，同時Apple Vision Pro在建築設計上展現了沉浸式應用新可能。國際方面，沙烏地阿拉伯在美伊衝突中陷入兩難，區域緊張升溫；而南歐野火頻傳，突顯了氣候變遷帶來的嚴峻環境挑戰。在科學探索上，NASA持續推進深空技術與天文觀測，物理學界則在解決量子謎團後又發現實驗數據新矛盾，這提醒我們科學求知的道路永無止境，並強調了辨識偽科學的重要性。</p>
 </div>
 
 
@@ -99,252 +99,347 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>OpenAI just open-sourced Codex Security</h3>
-  <p class="summary">OpenAI 最近開源了 Codex Security，這是一個 CLI 和 TypeScript SDK，旨在幫助開發者在其程式碼中查找、驗證和修復安全漏洞。此工具對於提升軟體開發的安全性至關重要，允許團隊掃描儲存庫、審查程式碼變更並在持續整合 (CI) 流程中運行安全檢查，從而有效追蹤和管理安全發現。
-
-主要功能包括：
-*   在程式碼中查找、驗證和修復安全漏洞。
-*   支援掃描儲存庫、追蹤安全發現和在 CI 中運行安全檢查。</p>
+  <h3>Claude: Elevated errors across all models</h3>
+  <p class="summary">Claude 服務目前正面臨所有模型都出現「錯誤率升高」的問題，這表示其AI服務可能正在經歷普遍性的中斷或效能下降，影響廣大用戶的使用。
+此頁面旨在讓用戶訂閱透過電子郵件或簡訊接收事件更新的通知，以便隨時掌握服務狀態的最新進展。
+- 主要問題：Claude 所有模型普遍存在錯誤率升高的情況。
+- 服務措施：用戶可訂閱即時更新通知，以了解服務狀態的最新資訊。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>Codex Security 主要用來解決什麼問題？它如何幫助開發者？</summary>
-    <p>Codex Security 主要用於識別、驗證和修復程式碼中的安全漏洞。它通過提供 CLI 和 TypeScript SDK，讓開發者能夠自動化安全掃描、追蹤問題並在開發生命週期早期整合安全檢查。</p>
+    <summary>這些「錯誤率升高」具體指的是什麼？用戶會遇到哪些問題？</summary>
+    <p>「錯誤率升高」通常意味著Claude的AI模型在處理請求時，產生錯誤回應或無法完成任務的頻率增加。這可能導致用戶遇到服務延遲、回應不正確、無法存取服務或應用程式崩潰等問題。</p>
   </details>
   
   <details>
-    <summary>使用 Codex Security 需要什麼技術環境或條件？</summary>
-    <p>欲使用 Codex Security，使用者需要 Node.js 22 或更高版本、Python 3.10 或更高版本，以及對 Codex Security 的存取權限。它也可以在持續整合 (CI) 環境中透過設定 OPENAI_API_KEY 來使用，無需登入。</p>
+    <summary>用戶可以透過哪些方式訂閱有關此服務問題的更新通知？</summary>
+    <p>用戶可以選擇透過電子郵件或簡訊訂閱更新通知。訂閱電子郵件無需額外驗證，而訂閱簡訊則需要輸入手機號碼並通過一次性密碼（OTP）驗證，以確保訊息能正確發送。</p>
   </details>
   
   <details>
-    <summary>這個開源工具有哪些具體的應用場景，或者說它在軟體開發流程中扮演什麼角色？</summary>
-    <p>Codex Security 可以在軟體開發的各個階段發揮作用，包括掃描整個程式碼儲存庫以發現現有漏洞、在程式碼變更時審查其安全性，以及在持續整合 (CI) 流程中自動運行安全檢查。這使得開發團隊能夠持續追蹤並管理安全問題，提高軟體整體安全性。</p>
+    <summary>Claude是什麼？這次的服務中斷對其用戶或AI產業有何潛在影響？</summary>
+    <p>Claude是由Anthropic開發的一系列先進AI模型，廣泛應用於對話、內容生成及分析等領域。這次所有模型普遍出現錯誤率升高的問題，可能對依賴Claude服務的企業和個人造成業務影響，同時也突顯了AI服務穩定性的重要性。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-29-65f8a2e3ed.html">全文（約 1 分鐘）</a> ｜ <a href="https://github.com/openai/codex-security">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-30-ce380da70f.html">全文（約 2 分鐘）</a> ｜ <a href="https://status.claude.com/incidents/q2kg8n613kr3">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Discovering Cryptographic Weaknesses with Claude</h3>
-  <p class="summary">Anthropic 的研究人員利用 Claude Mythos Preview 發現了改進的加密演算法攻擊方法。這些突破性研究進展，包括顯著削弱後量子數位簽章方案 HAWK 的強度，以及找到攻擊縮減輪數 AES 的新方法。儘管這些發現目前不影響任何現有生產系統，它們展示了前沿 AI 模型在發現重要加密演算法漏洞方面的巨大潛力，並強調了未來加密系統設計與審查中AI可能扮演的重要角色。
+  <h3>Kimi K3-256k</h3>
+  <p class="summary">Kimi Code 近期推出了 k3-256k 模型，這是 Kimi K3 模型的一個更經濟實惠的版本。它在 256k 的上下文限制內能提供與 Kimi K3 (1M) 相同的效能，但配額消耗約減少一半，非常適合日常問答、程式碼補全和小型檔案編輯等任務。這為用戶提供了在不犧牲主要功能的情況下，有效管理配額和資源的新選擇。
 
-* AI (Claude Mythos Preview) 能夠自主發現演算法本身的數學缺陷，而非僅是實作錯誤。
-* 這些攻擊對現有系統無實際影響，但預示著更強大的AI模型將能更深入地檢測加密安全。</p>
+- 為確保最佳體驗和配額效益，從 k3 (1M) 切換到 k3-256k 時，若當前會話上下文超過 256k 或包含影片檔，建議先手動壓縮（compact）上下文。
+- 模型選擇、上下文視窗大小和高速功能受會員方案影響，用戶應根據需求升級方案以解鎖更多功能。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>HAWK 和 AES 分別是什麼，以及它們在數位安全中扮演什麼重要角色？</summary>
-    <p>HAWK 是一種針對後量子世界設計的數位簽章方案，旨在抵抗未來量子電腦的攻擊，目前是美國國家標準暨技術研究院 (NIST) 考慮採用的候選方案之一。AES (進階加密標準) 則是目前全球最廣泛使用的對稱式加密演算法，為電子郵件、網路銀行等大量線上通訊提供安全保護，是數位安全基石。</p>
+    <summary>既然 k3-256k 更經濟，那 Kimi Code 目前提供哪些主要模型，它們之間有何區別？</summary>
+    <p>Kimi Code 主要提供 Kimi K3 (包含 k3 和 k3-256k 版本) 及 Kimi K2.7 Code (包含 kimi-for-coding 和 kimi-for-coding-highspeed 版本)。K3 是旗艦模型，擁有強大推理能力和更大的上下文視窗（K3-256k 則專注於成本效益）；K2.7 Code 則擅長程式碼補全與常規開發，其中高速版輸出速度更快。</p>
   </details>
   
   <details>
-    <summary>儘管研究結果目前不影響現有生產系統，這項發現對於未來的加密技術發展有何長遠的意義？</summary>
-    <p>雖然 HAWK 仍在候選階段且攻擊目標是縮減輪數的 AES，但這項研究證明了前沿 AI 模型能發現連人類專家多年都未察覺的演算法數學缺陷。這預示著AI將在未來的加密演算法審查和壓力測試中扮演更關鍵的角色，有助於開發更安全、更強健的加密系統，以應對不斷演進的威脅。</p>
+    <summary>使用 k3-256k 時，有哪些特別的使用情境或注意事項需要了解？</summary>
+    <p>k3-256k 適用於日常問答、程式碼補全、常規功能開發和單一或小型檔案編輯，但不支援影片輸入。在從 K3 (1M) 切換至 k3-256k 時，若上下文已超過 256k 或包含影片檔，建議先手動壓縮上下文以避免資訊丟失或切換失敗，並獲得更持久的配額效益。</p>
   </details>
   
   <details>
-    <summary>Claude 是如何發現這些加密演算法的數學缺陷的？這與AI過去在網路安全領域的應用有何不同？</summary>
-    <p>過去AI模型通常是用來發現軟體實作加密演算法時的程式碼錯誤。然而，這次Claude Mythos Preview 能夠更進一步，直接在演算法本身的數學設計中找到弱點。這顯示了AI在密碼分析能力上的巨大飛躍，從檢測實作漏洞進步到分析演算法理論基礎的缺陷。</p>
+    <summary>如果在使用新模型後發現配額消耗增加，或者無法訪問某些模型功能，可能原因是什麼？</summary>
+    <p>模型切換後，舊的上下文快取會失效，需要重新預填充，導致初期用量顯得較高，建議開啟新會話以獲取最佳體驗並降低消耗。此外，若請求的能力超出會員方案權益（如會員等級不足或上下文視窗大小限制），伺服器會返回 401 錯誤，用戶可能需要升級方案。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-29-df6c16550d.html">全文（約 17 分鐘）</a> ｜ <a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-30-c67f0599e5.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.kimi.com/code/docs/en/kimi-code/models">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>The iPhone Upgrade Program is being replaced by Apple Upgrade</h3>
-  <p class="summary">蘋果公司宣布終止其「iPhone 升級計畫」(iPhone Upgrade Program)，並推出全新的「Apple Upgrade」租賃服務作為替代。現有的 iPhone 升級計畫會員可繼續支付剩餘款項。這項新計畫不僅適用於 iPhone，更擴展至 iPad、Mac 和 Apple Watch 等多種 Apple 產品，讓消費者能以更彈性的方式取得並升級設備。
-- 「Apple Upgrade」提供低月租費和靈活的租賃期限。
-- 租賃期滿時，用戶可輕鬆升級至新設備並歸還舊設備。</p>
+  <h3>The coolest use for the Vision Pro</h3>
+  <p class="summary">作者與女友在2026年建造他們的第一棟房子時，發現了Apple Vision Pro的絕佳應用。他們利用Vision Pro將2D平面圖轉化為沉浸式虛擬實境體驗，解決了傳統平面圖難以提供空間感的困境，並能在昂貴的施工決策前對設計有更深入的理解和信心，避免了潛在的錯誤。
+* 運用Fusion 360等工具將建築平面圖轉化為詳細的3D模型，包括家具與材質。
+* Vision Pro的高解析度螢幕與感測器提供真實的沉浸式體驗，遠超傳統建築軟體的導覽。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>舊的「iPhone 升級計畫」與新的「Apple Upgrade」之間主要有何不同？</summary>
-    <p>舊的「iPhone 升級計畫」主要是針對 iPhone 的分期付款與每年升級選項，用戶在付清款項後擁有設備。而新的「Apple Upgrade」則是一種租賃模式，涵蓋更多 Apple 產品，用戶在租賃期結束時歸還設備並選擇升級，本質上不擁有產品。</p>
+    <summary>如果沒有3D建模經驗，一般人該如何利用Vision Pro來預覽房屋設計？</summary>
+    <p>作者建議，不熟悉3D設計工具的人可以將此視為一個入門專案，透過YouTube或AI尋求學習資源。此外，也可以在Fiverr等平台上聘請專業人士，請他們將平面圖轉換為Vision Pro可讀取的3D檔案（USDZ），以便進行探索。</p>
   </details>
   
   <details>
-    <summary>「Apple Upgrade」計畫是否已立即推出，以及消費者能在哪裡使用這項服務？</summary>
-    <p>文章指出「Apple Upgrade」是一個新的支付選項，將用於未來的 iPhone 購買。雖然文章強調「Only at Apple」，但具體的推出時間和適用國家/地區通常會透過 Apple 官方進一步公布。消費者應在 Apple 官網或實體店查詢最新資訊。</p>
+    <summary>與傳統建築師提供的3D導覽相比，Vision Pro的虛擬實境體驗有何獨特優勢？</summary>
+    <p>作者指出，建築師使用的Revit軟體雖能提供3D導覽，但體驗更像Google街景般的「點擊傳送」。Vision Pro則能提供完全沉浸式的VR體驗，讓使用者感覺「身臨其境」，從而對空間佈局和感受有更真實、更深刻的理解，遠超傳統方式。</p>
   </details>
   
   <details>
-    <summary>除了「Apple Upgrade」之外，消費者還有哪些其他方式可以購買新的 iPhone？</summary>
-    <p>文章中提到，消費者仍可透過電信業者提供的優惠方案、Apple 提供的分期付款選項，或選擇一次性付款的方式來購買新的 iPhone。這些多元的選擇確保了消費者可以根據自身需求和偏好來取得設備。</p>
+    <summary>作者對未來房屋設計過程有何預測？</summary>
+    <p>作者預測，在未來，透過3D虛擬實境參觀潛在房屋設計將成為設計過程的核心環節。他強調，如果現在具備如Vision Pro般的硬體設備，這個未來已觸手可及，將大幅提升設計溝通與決策的效率與品質。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-07-29-e12adb90e9.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.apple.com/shop/iphone/iphone-upgrade-program">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-07-30-9c58f8b83a.html">全文（約 9 分鐘）</a> ｜ <a href="https://christianselig.com/2026/07/vision-pro-house/">原文網頁</a></p>
 </article>
 
 
 <h2>國際 World</h2>
 
 <article>
-  <h3>Wildfires in south-west France flare up as region braces for new 40C heatwave</h3>
-  <p class="summary">法國西南部吉倫特地區近日野火復燃，消防員正日以繼夜地工作，以控制火勢並應對即將到來的攝氏40度熱浪。這波火災已迫使數萬人撤離，摧毀約240棟房屋，並嚴重影響了波爾多市的空氣品質和當地經濟活動。當局對空氣污染保持高度警惕，並下令海岸露營地緊急撤離。這是一個前所未有的事件，使該地區面臨嚴峻挑戰。
-- 吉倫特地區已有14個曾受災地點再次起火。
-- 另有4名消防員近期在法國各地因火災殉職。</p>
+  <h3>Saudi Arabia's dilemma as it tries to stay out of US-Iran war</h3>
+  <p class="summary">沙烏地阿拉伯正陷入美國與伊朗衝突的兩難局面。自2月28日美以對伊朗開戰以來，沙國一直試圖保持中立，但近期遭到來自伊拉克什葉派民兵及葉門胡塞武裝組織的三面襲擊後，沙國本週與美國聯手對伊拉克的伊朗代理民兵發動了聯合打擊。這場不斷擴大的區域衝突，對沙烏地阿拉伯的未來發展構成嚴重威脅：
+* 沙國以經濟多元化為核心的「2030願景」面臨巨大風險，基礎設施易受攻擊，阻礙外國投資。
+* 波斯灣及紅海航運安全受威脅，可能影響全球能源供應，尤其對沙國的石油出口造成衝擊。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>這些野火今年為何如此嚴重且難以控制？</summary>
-    <p>文章指出，這是夏季第四波熱浪，預計該地區氣溫將飆升至攝氏40度，這使得火勢難以撲滅且容易復燃。官員也表示，這次事件是「前所未有」的，加劇了火災的嚴重性。</p>
+    <summary>「2030願景」是什麼？這場衝突對其有何具體影響？</summary>
+    <p>「2030願景」是沙烏地阿拉伯王儲穆罕默德·本·薩勒曼推動的國家發展計畫，旨在使沙國經濟擺脫對石油的依賴，實現多元化並吸引外國投資。不斷升級的區域衝突，特別是基礎設施面臨的無人機和飛彈襲擊威脅，恐將阻礙外國投資並破壞該計畫的實施。</p>
   </details>
   
   <details>
-    <summary>儘管波爾多市未直接受火災威脅，其居民生活和城市運作受到哪些影響？</summary>
-    <p>雖然波爾多市區未受火勢波及，但空氣品質急劇惡化，充滿煙霧和灰燼，導致許多商店、餐廳和咖啡館門可羅雀甚至關閉。居民被建議待在室內並佩戴口罩，旅遊業也因此大受打擊。</p>
+    <summary>文章中提及的更廣泛區域衝突，主要涉及哪些方？</summary>
+    <p>這場衝突主要分為兩大陣營：一邊是以伊朗及其革命衛隊為首，聯手葉門胡塞武裝、伊拉克人民動員部隊和黎巴嫩真主黨。另一邊則是美國及其中央司令部部隊，並在不同程度上聯合海灣阿拉伯國家和約旦，以色列目前則非活躍參與者。</p>
   </details>
   
   <details>
-    <summary>除了高溫和乾燥等自然因素外，是否有其他人類因素導致這些野火？</summary>
-    <p>文章提到一名23歲男子因涉嫌在瓦爾地區縱火而被捕，可能面臨15年監禁。自7月6日以來，法國內政部長表示已有184人因與火災相關的行為而被捕，這表明部分火災可能是人為縱火所致。</p>
+    <summary>荷姆茲海峽和紅海在這場衝突中為何如此重要？沙烏地阿拉伯的石油出口受到什麼影響？</summary>
+    <p>荷姆茲海峽是全球約20%石油和液化天然氣的運輸要道，伊朗曾關閉此海峽以報復美以攻擊。紅海的曼德海峽則是沙烏地阿拉伯經由延布港出口石油至亞洲的重要航線。胡塞武裝對紅海航運的襲擊，嚴重威脅了沙國的石油出口安全，迫使其不得不尋找替代路線或面臨出口受阻的風險。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-29-44c682a32a.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c5yd8gly1ydo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-30-3ea53c3cdf.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/clyx83l8jv8o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Uefa and PM criticise Infantino World Cup plan</h3>
-  <p class="summary">國際足球總會（FIFA）近期提出計畫，擬透過新成立的子公司「FIFA發展企業（FFE）」引入私人投資，目標是將足球發展資金擴大至逾100億美元。此舉迅速引發歐洲足球總會（UEFA）與英國首相安迪·伯納姆的嚴厲批評，指責FIFA此舉「越界」並有「出賣」足球靈魂之嫌。
-FIFA聲稱這能為全球各會員協會提供高達2000萬美元的發展資金，但批評者擔憂這將導致世界盃等賽事過度商業化、缺乏透明度，甚至可能為滿足股東利益而頻繁擴大賽事規模，進而破壞足球的本質與賽程安排。
+  <h3>Two firefighters die in Crete as wildfires threaten parts of southern Europe</h3>
+  <p class="summary">希臘克里特島近日發生野火，導致兩名希臘消防員在雷西姆農地區殉職。同時，南歐多國，包括西班牙、法國、土耳其及葡萄牙，也面臨嚴峻的夏季野火威脅，其中西班牙阿維拉省的火災已成為該國有紀錄以來最大規模的野火，燒毀超過43,000公頃土地。這些野火在強風和熱浪助長下迅速蔓延，導致多個村莊撤離，並對當地居民的生活和環境造成嚴重衝擊。專家指出，氣候變遷是導致歐洲野火日益頻繁和劇烈的主要原因。
 
-* 主要投資方Thrive Eternal與美國前總統川普的女婿兄弟有關聯，引發額外關注。
-* 此計畫被視為自歐洲超級聯賽以來對足球界最大的衝擊之一。</p>
+- 氣候變遷導致歐洲熱浪與野火頻率增加。
+- 西班牙已燒毀逾20萬公頃土地，影響甚鉅。
+- 法國多處敏感軍工地點受野火威脅。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>國際足球總會（FIFA）提出的「FIFA發展企業（FFE）」具體是如何運作的？誰將是主要投資方？</summary>
-    <p>FFE旨在整合FIFA的商業和賽事營運，並邀請第三方進行少數、非控制性的投資。FIFA表示，若計畫獲批，美國風險投資公司Thrive Eternal有望成為此投資集團的領導者。該公司由約書亞·庫什納創立，他是美國前總統唐納·川普女婿賈里德·庫什納的兄弟。</p>
+    <summary>氣候變遷如何具體影響南歐野火的嚴重性與頻率？</summary>
+    <p>根據哥白尼氣候變遷服務中心，歐洲是全球暖化速度最快的大陸，升溫速度是全球平均的兩倍。這導致夏季熱浪增加、水資源供應壓力變大，進而使野火更加頻繁和猛烈。</p>
   </details>
   
   <details>
-    <summary>歐洲足球總會（UEFA）和其他批評者對FIFA此計畫的主要擔憂是什麼？</summary>
-    <p>他們最擔心的是，引入私人投資者可能導致FIFA為了滿足股東利益而推動世界盃等賽事進一步擴大規模或增加舉辦頻率。這不僅會加劇賽程壓力，還可能威脅到現有的歐洲賽事，並被視為商業利益凌駕於足球運動的「靈魂與治理」之上。</p>
+    <summary>除了人員傷亡，這些廣泛的野火對當地社區和經濟造成了哪些重大影響？</summary>
+    <p>野火導致數千人撤離家園，許多居民失去房屋和工作，重建將是艱鉅的任務。例如，西班牙馬德里地區就有數萬人被疏散，而法國則需部署特別措施以保護軍工相關的敏感設施。</p>
   </details>
   
   <details>
-    <summary>除了足球，其他體育項目是否有類似引入私人投資的做法？FIFA為何認為此模式可行？</summary>
-    <p>文章提及，FIFA認為其計畫與其他體育管理機構的做法類似，例如英格蘭超級橄欖球聯賽（Premiership Rugby）在2018年就與私募股權公司CVC Capital Partners建立了合作夥伴關係。FIFA認為這種專門的商業子公司模式有助於創造更多收入以支持全球足球發展。</p>
+    <summary>為何西班牙阿維拉省的野火被稱為該國史上最大規模？目前火勢控制情況如何？</summary>
+    <p>西班牙阿維拉省的Burgohondo野火已燒毀超過43,000公頃土地，使其成為西班牙有紀錄以來最大規模的野火。儘管火勢在夜間沒有明顯蔓延，但因高溫和低濕度，消防人員仍需高度警惕，重點是穩定180公里長的火勢周邊。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-29-ff59de902d.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/sport/football/articles/c8xng9894z0o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-30-9aea9c4547.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cwyjgwg8jddo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Ghana mourns its tallest man - a 'generous and popular giant'</h3>
-  <p class="summary">迦納最高的男子蘇萊曼納·阿卜杜勒·薩米德（Sulemana Abdul Samed），暱稱「Awuche」，於週一在迦納北部塔馬利的一家醫院去世，享年33歲。他的身高達223公分（7英尺4英寸），因腿部潰瘍感染的併發症而去世，儘管據稱對治療反應良好。他的去世引發了全國，特別是北部地區的深切哀悼，他不僅是當地名人，更因其慷慨和善良而廣受歡迎，並為其家鄉甘巴加（Gambaga）帶來了獨特的認同。
-* 他在20多歲時被診斷出患有巨人症和馬凡氏症候群。
-* 生前曾為醫療費用所困，近期獲迦納總統兄弟伊卜拉欣·馬哈馬（Ibrahim Mahama）資助。</p>
+  <h3>Zendaya on working with Tom Holland in Spider-Man: ‘When you’re best friends it’s easy’</h3>
+  <p class="summary">好萊塢明星夫妻湯姆·霍蘭德與千黛亞日前出席了他們最新電影《蜘蛛人：全新的一天》在倫敦的首映會。千黛亞受訪時表示，因為她和霍蘭德是最好的朋友，所以一起工作感覺「非常容易」。
+
+- 這部新片延續了彼得·帕克被親友遺忘的設定，並加入了《怪奇物語》演員莎蒂·辛克飾演一個神秘角色。
+- 電影初步評價普遍正面，評論稱讚其重拾了系列的趣味性，並特別點出千黛亞的表現。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>馬凡氏症候群是什麼？它是如何影響蘇萊曼納·阿卜杜勒·薩米德的身體狀況的？</summary>
-    <p>馬凡氏症候群是一種影響結締組織的遺傳疾病，導致阿卜杜勒·薩米德的肢體異常伸長。這種症候群導致他身軀巨大化，並引發了包括腿部感染在內的多種健康併發症，最終導致他英年早逝。</p>
+    <summary>千黛亞提到與湯姆·霍蘭德因是「最好的朋友」而合作愉快，這對他們在電影中的角色有何影響？</summary>
+    <p>在電影中，千黛亞飾演彼得·帕克的戀人MJ。身為現實生活中的情侶兼好友，他們之間的默契和熟悉感，可能讓他們在詮釋銀幕上的愛情關係時，更自然且具說服力。</p>
   </details>
   
   <details>
-    <summary>蘇萊曼納·阿卜杜勒·薩米德的超高身高如何影響了他的日常生活和人生抱負？</summary>
-    <p>他的身高嚴重限制了他的活動能力和社交生活，使他無法像同齡人一樣踢足球或輕鬆地短距離行走。九年前，他的身高迫使他放棄了成為司機的夢想，並從首都阿克拉返回家鄉甘巴加。</p>
+    <summary>《蜘蛛人：全新的一天》的劇情設定，彼得·帕克被親友遺忘，這對故事發展和人物關係會帶來什麼樣的挑戰？</summary>
+    <p>這個設定意味著彼得·帕克必須重新面對他最親近的人，包括他的女友MJ，而他們將不再記得他是誰。這將為電影帶來情感上的複雜性與角色關係的重塑，迫使彼得在沒有過去支持的情況下，尋找新的身份與方向。</p>
   </details>
   
   <details>
-    <summary>為什麼他最終被安葬在塔馬利（Tamale）而不是他的家鄉甘巴加（Gambaga）？</summary>
-    <p>他的家人決定將他安葬在塔馬利，因為他們擔心如果將他運回家鄉甘巴加，當地會湧入過多的哀悼者，村莊可能無法承受。此舉是為了避免給他深愛的家鄉帶來不必要的混亂和負擔。</p>
+    <summary>電影《蜘蛛人：全新的一天》目前獲得的初步評價如何？其中是否有特別值得注意的亮點或演員表現？</summary>
+    <p>該片獲得了普遍正面的評價，許多評論家給予四星好評，稱讚其重拾了系列作的「呆氣」與趣味性。特別值得注意的是，雖然評價不一，但有評論認為千黛亞的表演「拯救」了整部電影，顯示她在片中的重要性。此外，《怪奇物語》演員莎蒂·辛克飾演的神秘角色也引起了廣泛討論。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-07-29-6431850cff.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/crk52jk0131o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-07-30-e7ece2d69f.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c0km3d2j6mko?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 
 <h2>科學 Science</h2>
 
 <article>
-  <h3>Smoke Blankets Oregon</h3>
-  <p class="summary">2026年7月15日，乾燥雷暴在喀斯喀特山脈引發數千次閃電，導致俄勒岡州中部和東部自7月16日起發生大量野火。由於乾旱、高溫和陣風，這些火災迅速蔓延，截至7月27日已焚燒超過一百萬英畝，產生大量煙霧，促使當局發布空氣品質警報並疏散社區。超過一萬名消防員正在撲救火災，其中許多火災的圍堵率不到5%。此次火災規模顯著超過美國十年來的同期平均水平。
-
-重點：
-- 俄勒岡州已焚燒超過一百萬英畝，全國範圍則達四百萬英畝，遠超十年平均。
-- 許多社區面臨疏散命令，東俄勒岡州發布了空氣品質警報。</p>
+  <h3>NASA Awards 2026 Innovative Technology Concepts</h3>
+  <p class="summary">美國太空總署（NASA）的創新先進概念（NIAC）計畫近日撥款320萬美元，頒發18項第一階段獎項，以支持2026年的前瞻性航空航太技術概念。這些獎項旨在資助早期突破性技術的發展，對於實現NASA重返月球、探索火星及深入了解宇宙的宏偉目標至關重要。每個項目將獲得高達175,000美元的資金，進行為期九個月的初步研究，推動超越漸進式改進的「巨大飛躍」。
+* 主要探索領域包括：月球基礎設施與探測、太陽系行星環研究以及深空觀測（如繪製系外行星地圖、探測黑洞）。
+* 部分概念還涉及利用太空塵埃減少太陽輻射，以及監測地球軌道碎片等應用。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>造成俄勒岡州野火如此迅速蔓延和大規模燃燒的具體自然條件是什麼？</summary>
-    <p>這些野火最初是由乾燥雷暴在7月15日引發的數千次閃電所致。隨後，強勁的陣風、極度乾旱以及夏季高溫等惡劣條件，共同助長了火勢的迅速擴大，使其在短時間內席捲廣闊的土地。</p>
+    <summary>NIAC計畫的主要目標是什麼？它與NASA其他任務有何不同？</summary>
+    <p>NIAC計畫的主要目標是孵化和資助早期階段、具有變革潛力及未來實施可行性的突破性技術概念。它與其他NASA官方任務不同，專注於概念開發而非實際任務執行，旨在播種創新，為未來的太空任務和航空航太經濟帶來潛在益處。</p>
   </details>
   
   <details>
-    <summary>大規模野火對俄勒岡州的居民和環境造成了哪些直接影響？</summary>
-    <p>直接影響包括大量煙霧導致東俄勒岡州發布空氣品質警報，許多社區面臨疏散命令，以及超過一百萬英畝的土地被燒毀。這不僅威脅到居民的健康和安全，也對當地的生態系統造成嚴重破壞。</p>
+    <summary>能否提供幾個與月球探索相關的創新概念範例？</summary>
+    <p>當然。在月球探索方面，獲獎概念包括支援懸停機器人探索月球地下熔岩管的系統，為小型移動探測機器人管理溫度的技術，以及將放射性同位素熱源整合到宇航服中，以幫助宇航員在長達兩週的月球夜晚保持溫暖的方法。這些技術旨在支援NASA建立持續月球存在。</p>
   </details>
   
   <details>
-    <summary>當局除了部署大量消防員外，還利用了哪些技術和措施來應對和監測這些野火？</summary>
-    <p>除了超過一萬名消防員在前線奮戰，當局還啟用了俄勒岡州的「緊急火災應對法案」以保護社區。同時，NASA的FIRMS系統、Worldview瀏覽器和Fire Event Explorer等衛星數據和即時監測工具也被用於追蹤火勢行為和分析趨勢，以協助應對策略。</p>
+    <summary>這些早期階段的NIAC項目如何貢獻NASA的長期太空探索願景？</summary>
+    <p>這些早期階段的NIAC項目對NASA的長期願景至關重要，因為它們是實現「巨大飛躍」而非僅僅是漸進式技術發展的基石。通過資助這些創新種子，NASA得以探索可能改變未來太空任務格局的潛力技術，例如支持重返月球、推進火星探索以及深化對宇宙理解所需的先進解決方案。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-29-8068c38598.html">全文（約 2 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/natural-disasters/wildfires/smoke-blankets-oregon/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-30-adc3f9b4e7.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-awards-2026-innovative-technology-concepts/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NASA Sets Coverage for August Northern Hemisphere Total Solar Eclipse</h3>
+  <p class="summary">美國國家航空暨太空總署（NASA）宣布將於8月12日星期三，直播一場壯觀的日全食。
+此次日全食將在格陵蘭、冰島、俄羅斯北部、大西洋、西班牙和葡萄牙部分地區可見，而北美洲、歐洲大部分地區和西北非洲則能觀測到日偏食。
+NASA將進行多項科學實驗，包括利用WB-57高空研究機追蹤月球陰影以研究太陽日冕，以及派遣學生團隊利用科學氣球探測日食對地球大氣的影響，強調其在科學研究上的重要性。
+
+* 主要觀測區域：格陵蘭、冰島、俄羅斯北部、西班牙、葡萄牙部分地區。
+* NASA科學任務：研究太陽日冕及日食對地球大氣層的影響。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>不在日全食路徑上的觀眾如何觀看此次日全食？</summary>
+    <p>美國太空總署（NASA）將於美東時間8月12日下午1:15開始，透過多個平台進行日全食的直播。這使得全球觀眾都能觀看日食實況及專家解說。</p>
+  </details>
+  
+  <details>
+    <summary>NASA為何在日食期間進行實驗，特別是研究太陽日冕和地球大氣？</summary>
+    <p>在日食期間研究太陽日冕至關重要，因為月球暫時遮擋了太陽的明亮圓盤，使科學家能夠觀察到較為微弱的日冕，這有助於揭示太陽活動的線索。同時，探究大氣層的變化能幫助理解短暫變暗如何影響地球高層大氣，進而對大氣科學做出貢獻。</p>
+  </details>
+  
+  <details>
+    <summary>觀看直播的觀眾如何與NASA互動？</summary>
+    <p>觀眾可以透過X、Facebook和Instagram等社群媒體平台，向NASA的官方帳號提交問題。NASA專家將在直播期間回答這些問題，提供互動式的學習體驗。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-30-461a4e25b6.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-sets-coverage-for-august-northern-hemisphere-total-solar-eclipse/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NASA’s Curiosity Views a Sand-Capped Butte</h3>
+  <p class="summary">美國國家航空暨太空總署（NASA）的「好奇號」火星探測車於2026年6月11日，在其火星任務的第4,923個火星日，利用其桅杆攝影機拍攝到一座名為「米拉弗洛雷斯」（Miraflores）的沙帽狀山丘，估計高約6公尺。這座山丘是周圍岩石經過長時間侵蝕而形成的，顯示了火星地表的演變過程，而好奇號正穿越一個廣闊的河谷。這次觀測有助於科學家進一步理解火星的地質歷史和侵蝕作用。
+
+重點：
+* 「米拉弗洛雷斯」山丘高約6公尺，由侵蝕作用形成。
+* 影像為11張照片拼接而成，顏色經調整以符合地球人眼視覺。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是「方山」（butte）？它在火星上是如何形成的？</summary>
+    <p>「方山」是一種頂部平坦，側面陡峭的獨立小山丘。根據文章，火星上的「米拉弗洛雷斯」方山是周圍較軟的岩石經長時間風化、侵蝕後，留下較為堅硬的部分而形成的，這反映了火星地表曾經歷劇烈的地質變遷。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到的火星地表「多邊形」特徵是什麼？它們有何意義？</summary>
+    <p>「多邊形」地表特徵通常是由於土壤凍融循環、乾燥收縮或地下冰層活動所引起。這些特徵的存在可能暗示著火星過去或現在存在水冰活動，對於了解火星的氣候歷史和潛在的生命環境具有重要的參考價值。</p>
+  </details>
+  
+  <details>
+    <summary>「好奇號」火星探測車的主要任務是什麼？它為何會在火星上攀爬河谷？</summary>
+    <p>「好奇號」的主要任務是評估火星過去或現在是否具備微生物生命存在的環境條件，並研究火星的氣候和地質。它在火星上攀爬河谷是為了探測不同地層的組成和結構，尋找水、有機分子或潛在的生命跡象，以揭示火星的演化歷程。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-07-30-ce2e2b1931.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/photojournal/nasas-curiosity-views-a-sand-capped-butte/">原文網頁</a></p>
 </article>
 
 
 <h2>長文 Long Reads</h2>
 
 <article>
-  <h3>The light narrows</h3>
-  <p class="summary">這篇文章探討了作者在父親去世後，如何透過巴西柔術尋求慰藉與力量的個人歷程。然而，面對挫敗、睪固酮低下以及使用化學「作弊碼」的誘惑，作者深入反思了真正力量的意義，以及如何應對脆弱與困境。文章旨在探討在生命挑戰面前，人們對於追求身體與精神力量的掙扎，以及道德選擇的影響。
+  <h3>Physicists Solve a Big Quantum Mystery. Now, Old Results Don’t Add Up.</h3>
+  <p class="summary">這篇文章探討了物理學界在解決長達25年的「μ子g-2異常」後，所浮現的新謎團。過去μ子的磁性擺動實驗結果與理論預測不符，曾被視為新粒子存在的線索；然而，2021年格子量子色動力學(lattice QCD)的理論計算與實驗結果吻合，似乎排除了新粒子存在的可能性。但這卻引發了新的問題：基於實驗數據的「數據驅動法」計算結果，依然與實驗和新的理論預測不符。
 
-*   喪父之痛與柔術：以武術作為應對悲傷的方式。
-*   挑戰與誘惑：面對失敗和生理限制時，對捷徑的考量。</p>
+目前，重點已轉移至電子-正子對撞機實驗數據的不一致性，特別是π介子產生率的測量。
+* 較新的VEPP-2000對撞機數據與格子QCD預測一致，但與其自身舊數據及其他實驗結果相悖。
+* 這項衝突可能源於實驗程序的差異，或是未知粒子對夸克行為的影響。
+
+物理學家正努力釐清這些對撞實驗中哪個數據是正確的，以解決這個新的謎團。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>作者在巴西柔術的訓練中具體遇到了哪些挫折，讓他感到「失敗」並導致睪固酮低下？</summary>
-    <p>根據文章的簡介，作者在柔術練習中遭遇了顯著的挫敗感，這可能與他未能達到預期表現或在比賽中失利有關。此外，他還面臨睪固酮低下的生理挑戰，這可能進一步影響了他的訓練表現和整體身心狀態。</p>
+    <summary>「μ子g-2異常」究竟是什麼？為何在它看似被解決之前，會被認為如此重要？</summary>
+    <p>μ子g-2異常是指μ子在磁場中擺動的實驗測量值與粒子物理標準模型理論預測值之間長期存在的微小差異。這種差異曾被物理學家視為可能存在未知粒子或新物理現象的強烈暗示，因為μ子的擺動會受到宇宙中所有粒子的影響。</p>
   </details>
   
   <details>
-    <summary>文章中提到的「化學作弊碼」具體指什麼，作者為何會考慮使用它？</summary>
-    <p>「化學作弊碼」很可能指的是增強體能或提高睪固酮水平的藥物，例如合成代謝類固醇或其他激素療法。作者考慮使用它，是為了克服因睪固酮低下帶來的身體限制和在柔術中屢次受挫的困境，尋求一種快速恢復力量和表現的捷徑。</p>
+    <summary>如果格子量子色動力學的計算結果是正確的，這對最初與μ子g-2異常相關的「新物理」假設意味著什麼？</summary>
+    <p>這意味著最初的μ子g-2異常可能並非來自新粒子或超出標準模型的物理現象。相反，μ子的額外擺動可以完全由已知粒子在已知力的作用下發射和再吸收來解釋，將問題從μ子本身轉移到用於數據驅動法計算的實驗數據的不一致性。</p>
   </details>
   
   <details>
-    <summary>這篇散文最終對於「真正的力量」或應對悲傷與脆弱提出了什麼樣的見解？</summary>
-    <p>雖然文章簡介未提供完整答案，但從其主題推斷，散文可能引導讀者思考：真正的力量不僅是身體上的，更包含面對脆弱、接受限制和在困境中做出道德選擇的能力。它或許強調透過內省和健康的方式來處理悲傷，而非依賴外部的捷徑。</p>
+    <summary>為了釐清電子-正子對撞實驗數據的不一致性，物理學家接下來會採取哪些步驟？</summary>
+    <p>物理學家將會深入分析和比對來自不同對撞機（如VEPP-2000和BABAR）的實驗結果，特別是π介子產生率的測量，以找出差異的來源。他們需要確定這些衝突是不同實驗程序所造成的副作用，還是確實有新的粒子在夸克行為中顯現的跡象，才能確定哪個數據是正確的。</p>
   </details>
   
   </div>
   
-  <p class="source">Aeon ｜ <a href="article/2026-07-29-e6db5cf0be.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/essays/what-kind-of-strength-did-i-chase-with-a-cojones-cheat-code">原文網頁</a></p>
+  <p class="source">Quanta Magazine ｜ <a href="article/2026-07-30-d398ad4b8e.html">全文（約 8 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>How to spot pseudoscience</h3>
+  <p class="summary">本篇文章旨在教授如何辨識偽科學，開篇即指出我們正處於偽科學的「黃金時代」。文章承諾將提供三個實用工具，以幫助讀者有效地從其模仿者中區分出真正的科學。這些工具的具體內容，例如其定義與應用方式，將是理解文章核心論點的關鍵。
+
+主要論點:
+* 點出偽科學盛行的現狀。
+* 承諾提供辨識科學與偽科學的三個工具。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是偽科學？</summary>
+    <p>偽科學指的是那些宣稱具有科學基礎或科學方法的學說、信仰或實踐，但實際上缺乏實驗證據、無法被驗證或證偽，且不符合科學社群所接受的標準。它常使用科學術語包裝，但實質上偏離了科學精神。</p>
+  </details>
+  
+  <details>
+    <summary>為何辨識偽科學如此重要？</summary>
+    <p>辨識偽科學至關重要，因為它可能導致人們做出錯誤的決策，影響健康、財務或社會福祉。它也可能侵蝕大眾對科學的信任，阻礙理性思考和科學進步。</p>
+  </details>
+  
+  <details>
+    <summary>文章可能提到的「三個實用工具」會包含哪些類型的方法？</summary>
+    <p>這些工具可能包括檢視主張的可證偽性、要求嚴謹的經驗證據，以及評估其是否符合同行評審和科學共識。它們可能旨在幫助讀者從方法論、證據和社群共識等角度來判斷一項主張的科學性。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="article/2026-07-30-9fe444e962.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/three-handy-tools-for-separating-pseudoscience-from-the-real-deal">原文網頁</a></p>
 </article>
 
 
