@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-08-02</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-02-sans.html">切換為無襯線字體顯示</a></p>
+
+<h1>每日 AI 文摘 2026-08-02</h1>
+<p class="meta">
+2026-08-02
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="index.html">存檔列表</a>
+
+
+
+ ｜ <a href="2026-08-01.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日全球焦點集中於歐洲因移民危機而引發的緊張局勢，以及國際足總內部治理不透明所面臨的嚴峻挑戰。在科技領域，矽谷的「絞肉機」文化再次揭示了快速成功背後的毀滅性風險，同時科技巨頭Google過去破壞開放網路協議的行為也引發省思。不過，開源社群NetBSD展現了透明修復已知問題的承諾，而秘魯的觀光飛機事故則再次提醒人們安全無虞的重要性。儘管存在這些人類社會的挑戰與悲劇，八月的天空將迎來一連串精彩天象，包括日全食和流星雨，為世界帶來一絲宇宙的浩瀚與美麗。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>The Silicon Valley Founder Meat Grinder</h3>
+  <p class="summary">一名被稱為 Jim 的男子，從想進入科技業的調酒師起步，憑藉其魅力和野心，在短短數年間於科技界迅速竄升。他獲得高薪工作後移居矽谷，進入 Y Combinator 並連續創辦數家新創公司，一時風光無限。然而，Jim 最終沉迷於藥物派對和揮霍無度的生活，導致精神崩潰並失蹤，揭示了矽谷創業生態圈「絞肉機」的殘酷本質。
+此案例顯示，矽谷為有魅力和野心者提供快速上升通道，但伴隨的毀滅性風險也極高。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>儘管 Jim 最初缺乏技術背景，他是如何能在短時間內於科技界迅速竄升的？</summary>
+    <p>Jim 之所以能快速崛起，主要歸因於他的個人魅力、企圖心和強烈的學習渴望。他擁有獨特的外表、口音，且極具說服力，這些特質幫助他建立了人脈，獲得了最初的工作機會和後來進入知名孵化器 Y Combinator 的推薦。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到的「矽谷創始人絞肉機」具體指的是什麼？</summary>
+    <p>「矽谷創始人絞肉機」指的是矽谷創業生態系統殘酷且高度競爭的本質。它吸引了無數充滿野心的個人，將他們推向極限，少數人雖能獲得巨大成功，但絕大多數人因過度投入、生活失衡以及高失敗率而最終被淘汰或摧毀。這是一個迅速消耗人才的環境。</p>
+  </details>
+  
+  <details>
+    <summary>Jim 的創業歷程與作者自身的道路有何不同？作者從中學到了什麼？</summary>
+    <p>Jim 的歷程呈現「倒拋物線」形，即迅速崛起後又快速崩潰；而作者的道路則是「線性」發展，緩慢但穩健向上。作者從中體悟到，雖然 Jim 的方式可能帶來速成的高光時刻，但在絕大多數情況下，「穩健」才是實現長期快速進步的有效途徑。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-02-d9aabc019c.html">全文（約 4 分鐘）</a> ｜ <a href="https://zaksa.zip/blog/silicon-valley-founder-meat-grinder/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>How Google helped destroy adoption of RSS feeds (2023)</h3>
+  <p class="summary">Google 多年來透過「擁抱、擴展、消滅」策略，系統性地破壞了 RSS feed 的普及採用。該公司先在 Chrome 瀏覽器、Google Reader、FeedBurner、Google Alerts 和 Google News 等產品中整合 RSS 功能以吸引用戶，隨後卻無預警地移除這些支援，導致許多用戶放棄使用 RSS。這種行為不僅打擊了用戶對 RSS 的信心，也對開放網路的自由與開放構成威脅。
+
+* 具體事件包括2013年關閉廣受歡迎的 Google Reader，對 RSS 採用造成巨大打擊。
+* 透過收購 FeedBurner 並限制其功能，進一步削弱了第三方 RSS 整合。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>RSS feed 究竟是什麼，以及它對開放網路的重要性為何？</summary>
+    <p>RSS 是一種標準化的網路內容發布格式，允許用戶訂閱網站的最新資訊更新，無需親自瀏覽每個網站。它賦予用戶掌握資訊流動的權力，並促進了去中心化的內容消費，是維護開放網路生態的關鍵要素。</p>
+  </details>
+  
+  <details>
+    <summary>Google 逐步淘汰 RSS 支援對普通用戶造成了哪些實際影響？</summary>
+    <p>Google 移除 RSS 支援導致許多依賴其服務的用戶突然失去訂閱和管理內容的能力。這迫使他們重新尋找替代方案或完全放棄 RSS，使得獲取跨網站更新變得更加困難和不便，間接降低了用戶對 RSS 技術的信任度。</p>
+  </details>
+  
+  <details>
+    <summary>Google 這種對 RSS 的「擁抱、擴展、消滅」策略，其背後的動機可能為何？</summary>
+    <p>Google 的動機可能在於推動用戶轉向其自家的專有平台和服務，以便更好地控制內容分發、收集用戶數據並增加廣告收入。透過削弱開放標準，Google 能夠更有效地鎖定用戶，並限制第三方競爭者對其生態系統的訪問。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-02-f7ce8c5def.html">全文（約 5 分鐘）</a> ｜ <a href="https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NetBSD 11.0</h3>
+  <p class="summary">NetBSD 專案已於 2026 年 8 月 1 日正式發布 NetBSD 11.0 版本，儘管其發布時間因等待第三方組件更新而有所延遲，且坦承存在數個公開的安全問題。開發團隊選擇透明公開這些已知問題，並計畫在未來兩個月內透過 11.1 版本進行修復。此版本在安裝映像上進行了優化，以適應不同的媒體類型。
+
+- NetBSD 11.0 包含已知安全問題，但開發團隊已透明公開，並預計在兩個月內發布 11.1 進行修復。
+- 安裝時請務必根據所使用的媒體（如 CD、DVD 或 USB 驅動器）選擇正確的映像檔類型。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>NetBSD 11.0 版本發布為何會延遲？為什麼發布時仍有未解決的安全問題？</summary>
+    <p>延遲發布的原因是為了等待第三方組件的穩定版本，以便納入其修復。面對不斷出現的新安全問題，開發團隊決定以透明的方式發布，而非為了修復所有已知問題而無限期延遲發布，並承諾在即將到來的 11.1 版本中解決這些問題。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到的主要開放安全問題有哪些？使用者在等待 11.1 版本期間應如何應對？</summary>
+    <p>文章具體提到了 hdaudio(4) 的訪問檢查缺陷、ipfilter 和 pf 中的安全問題。其中 ipfilter 和 pf 預設不安裝在核心中，hdaudio 則提供手動移除 /dev/hdaudio* 的簡單解決方法。所有這些問題的修復預計將在 11.1 版本中完成。</p>
+  </details>
+  
+  <details>
+    <summary>安裝 NetBSD 11.0 時，針對不同的安裝媒體（如光碟或 USB）有何特別的注意事項？</summary>
+    <p>安裝 NetBSD 11.0 時，ISO 映像檔已分為適用於 CD-ROM 的小尺寸映像和完整 DVD 尺寸的映像。若使用基於快閃的媒體（例如 USB 隨身碟），則必須使用 .img 檔案而非 .iso 映像檔，且在使用前需先進行解壓縮。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-02-bc4ec80770.html">全文（約 3 分鐘）</a> ｜ <a href="https://blog.netbsd.org/tnf/entry/netbsd_11_0_released">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>EU calls emergency meeting to discuss Ceuta migrant crossings</h3>
+  <p class="summary">歐盟將召開緊急會議，討論西班牙在北非飛地休達（Ceuta）的移民危機，此前約有6萬名移民從摩洛哥湧入該地。此次事件導致歐盟成員國之間出現外交緊張，部分國家批評西班牙並暫停申根協議，而西班牙則譴責「自私」反應並堅稱已恢復邊境控制。這場危機凸顯了對歐盟外部邊界安全和共同移民政策完整性的擔憂。
+* 儘管大部分移民已返回，但仍造成至少67人死亡。
+* 西班牙首相指責人口販子利用法院判決來煽動移民。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>休達（Ceuta）為何會成為移民湧入歐洲的熱點？</summary>
+    <p>休達與梅利利亞（Melilla）是歐盟僅有的兩個與非洲接壤的陸地邊界，使其成為尋求進入歐洲的移民的戰略要地。移民可以透過游泳或陸路進入該飛地，夏季期間尤其常見大規模湧入。</p>
+  </details>
+  
+  <details>
+    <summary>此次移民危機如何影響了歐盟內部的申根協議及成員國關係？</summary>
+    <p>由於此次危機，義大利已暫停與西班牙的申根協議，芬蘭、法國、葡萄牙和丹麥也考慮實施邊境檢查。這導致了歐盟成員國間的緊張關係，部分國家對西班牙處理危機的方式表示不滿，凸顯了對共同移民政策的擔憂。</p>
+  </details>
+  
+  <details>
+    <summary>西班牙對於移民的整體立場為何？這與其他一些歐盟成員國有何不同？</summary>
+    <p>相較於一些歐盟成員國的嚴格立場，西班牙對移民採取相對友善的態度。例如，政府最近批准了一項計畫，賦予50萬無證移民合法身份。這與此次危機中一些國家批評西班牙處理方式的態度形成了對比。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-02-8dcf962fed.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cz7d17r455go?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Call for 'full review' as pressure grows on Infantino</h3>
+  <p class="summary">國際足協主席詹尼·因凡蒂諾因撤回了一項出售國際足協賽事股權予私人投資者的爭議性計劃，而遭到歐洲足球協會聯盟（Uefa）和中北美洲及加勒比海足球協會（Concacaf）的公開質疑和強烈批評。歐足聯指責因凡蒂諾未能兌現承諾且行事不透明，而中北美洲及加勒比海足協更呼籲對其領導層進行「全面審查」。這項壓力正值因凡蒂諾尋求在三月國際足協大會上連任之際，使他的前途面臨巨大挑戰。
+* 此計劃旨在成立名為「國際足協前進企業」（Fifa Forward Enterprise, FFE）的商業子公司，並引入外部投資者持有其少數股權，以提升國際足協賽事的商業價值。
+* 該提案原預計由美國創投公司Thrive Eternal領導投資者集團，該公司創辦人與美國前總統川普家族有密切關係。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>國際足協主席因凡蒂諾此次撤回的「出售賽事股權予私人投資者」計畫具體內容為何？</summary>
+    <p>該計畫旨在成立一家名為「國際足協前進企業 (Fifa Forward Enterprise, FFE)」的商業子公司，將世界盃等主要賽事商業化，並邀請外部投資者購買其少數且無控制權的股權。摩根大通的報告指出，此舉是為了解決國際足協賽事「貨幣化不足」的問題，預計可大幅增加成員協會的收益。</p>
+  </details>
+  
+  <details>
+    <summary>歐足聯與中北美洲及加勒比海足球協會對因凡蒂諾的批評，將如何影響他即將到來的連任競選？</summary>
+    <p>這些來自主要足球管理機構的公開批評，對因凡蒂諾在三月國際足協大會上尋求第四屆連任造成巨大壓力。歐足聯明確表示已對他失去信任，而中北美洲及加勒比海足球協會更要求對其領導層進行全面審查，這使得他的連任前景充滿不確定性。</p>
+  </details>
+  
+  <details>
+    <summary>除了此次撤回的投資計畫外，因凡蒂諾過去還有哪些引發爭議的舉動或決策？</summary>
+    <p>因凡蒂諾曾因2022年世界盃選擇在卡達舉辦而飽受爭議，該國的人權紀錄和對LGBTQ+群體的待遇廣受批評。此外，在賽事前夕，他還曾為卡達辯護，並建議歐洲國家應為自身歷史上的行為道歉，而非聚焦卡達的移工問題，此言論也引起了爭議。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-02-ced530318b.html">全文（約 8 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/sport/football/articles/c04kr2nv3v3o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Tourist plane crashes in Peru, killing 13</h3>
+  <p class="summary">上週六（當地時間約下午1點），一架小型觀光飛機在秘魯納斯卡線考古遺址上空墜毀，機上所有13人（11名乘客及2名飛行員）不幸罹難。這架由當地航空公司Aerodiana營運的飛機，從皮斯科機場起飛後不久即在普韋布洛維耶霍地區失事，據信罹難者中包含義大利遊客。此事件不僅令人深感悲痛，也引發對該地區觀光飛機安全的擔憂，因這已是當地近幾十年來第三起類似的空難。
+
+關鍵點：
+* 納斯卡線為聯合國教科文組織世界遺產，以其沙漠中的古代巨型地畫聞名。
+* 過去曾於2022年和2010年發生過類似的觀光飛機墜毀事故，造成多人死亡。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>納斯卡線是什麼樣的景點，為何會吸引遊客搭乘飛機觀賞？</summary>
+    <p>納斯卡線是秘魯南部的聯合國教科文組織世界遺產，以其在沙漠中刻畫的巨大古代地畫聞名，這些圖案只有從高空才能完整欣賞。因此，搭乘小型飛機是遊客觀賞這些神秘圖案最受歡迎的方式之一。</p>
+  </details>
+  
+  <details>
+    <summary>秘魯納斯卡線地區頻繁發生觀光飛機墜毀事件，其主要原因可能為何？對當地觀光業有何影響？</summary>
+    <p>文章未明確說明墜機原因，但頻繁的事故可能與飛機老舊、維護不足、飛行員訓練或當地飛行條件等因素有關，有待進一步調查。這類事件無疑會引發遊客對安全性的疑慮，可能影響該地區觀光業的聲譽和發展。</p>
+  </details>
+  
+  <details>
+    <summary>針對納斯卡線地區觀光飛機的頻繁事故，秘魯政府或相關單位可能採取哪些措施來提升飛行安全？</summary>
+    <p>秘魯政府和民航主管機關可能會加強對觀光航空公司的監管，包括對飛機維護、飛行員資格和操作規程進行更嚴格的檢查。此外，也可能考慮限制飛行器的種類、制定更明確的飛行路線或增加空中交通管制，以減少事故發生率。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-02-947baee6e2.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c70g132erlko?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>What’s Up: August 2026 Skywatching Tips from NASA</h3>
+  <p class="summary">美國太空總署（NASA）公布了2026年8月的觀星指南，預告了多個精彩天象。其中包括8月12日橫跨俄羅斯、格陵蘭、冰島和西班牙的日全食（美國部分地區可見日偏食），以及同日迎來極大期的英仙座流星雨。此外，8月14至16日金星將達最大東距，並在8月27至28日出現可見於美洲及部分歐非地區的月偏食。這些事件為全球觀星愛好者提供了豐富的觀測機會。
+*   8月12日：多國可見日全食，美國部分地區可見日偏食。
+*   8月12-13日：英仙座流星雨極大期，適逢新月有利觀測。
+*   8月27-28日：月偏食，月面約93%將進入地球本影。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>觀測8月12日的日食（包括日全食和日偏食）需要特別注意哪些安全事項？</summary>
+    <p>觀測日食時，務必使用經過認證的日食眼鏡或安全的太陽濾光片，不可直接用肉眼觀看太陽。切勿在沒有專用太陽濾鏡的情況下，透過望遠鏡、雙筒望遠鏡或相機觀看，因為這會導致嚴重的眼睛損傷。</p>
+  </details>
+  
+  <details>
+    <summary>英仙座流星雨在8月有何特別之處？觀測時有哪些技巧可以提高成功率？</summary>
+    <p>8月英仙座流星雨的極大期恰逢新月，這意味著天空將異常黑暗，提供了絕佳的觀測條件。為了獲得最佳觀測效果，建議選擇遠離光害的開闊地，讓眼睛適應黑暗30分鐘，並朝向東北方尋找英仙座，但流星可能劃過天空的任何部分。</p>
+  </details>
+  
+  <details>
+    <summary>8月27-28日的月偏食與日食在觀測方式上有何不同？這次月偏食有什麼值得期待的景象？</summary>
+    <p>與日食不同，月偏食是絕對安全的，可以肉眼直接觀看，而雙筒望遠鏡或小型望遠鏡則能提供更清晰的視野。這次月偏食在最大食分時，月球約93%的直徑將進入地球本影，屆時月球可能會顯著變暗，邊緣呈現出鏽色或銅色。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-02-d7882b12c0.html">全文（約 3 分鐘）</a> ｜ <a href="https://science.nasa.gov/solar-system/whats-up-august-2026-skywatching-tips-from-nasa/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>APOD: 2026 August 1 – Buck Moon and Belt of Venus</h3>
+  <p class="summary">7月28日，從克羅埃西亞的克爾克島捕捉到七月滿月「鹿月」升起的壯麗景象，同時伴隨著地平線上地球的陰影和粉紅色的金星帶（反曙暮光弧）。這次滿月不僅展示了迷人的天文現象，也為即將到來的8月12日新月將引發的全球矚目的日全食預熱。
+
+要點：
+* 鹿月：七月的滿月，在日落時分升起，與太陽的影子相對。
+* 金星帶：位於地球陰影上方，由散射的太陽光形成的粉紅色光帶。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼七月的滿月被稱為「鹿月」？</summary>
+    <p>「鹿月」是北美原住民對七月滿月的傳統稱呼，因為此時雄鹿鹿角開始生長並達到完全的尺寸。這個名稱反映了人們過去與自然季節變化的緊密聯繫。</p>
+  </details>
+  
+  <details>
+    <summary>文中提到的「地球的陰影」和「金星帶」是什麼現象？它們是如何形成的？</summary>
+    <p>「地球的陰影」是地球自身在地平線上投下的暗灰色陰影，在日落或日出時分，與太陽方向相反。而「金星帶」（又稱反曙暮光弧）則是地球陰影上方的粉紅色光帶，由被大氣層散射的太陽光形成，呈現出柔和的色彩。</p>
+  </details>
+  
+  <details>
+    <summary>8月12日的新月將如何引發日全食？這個現象為何會如此備受期待？</summary>
+    <p>日全食發生在新月時，月球運行到地球與太陽之間，三者排成一線，月球完全遮擋住太陽盤面。這是一個相對罕見且壯觀的天文事件，讓地球上特定區域的觀測者能夠體驗到白晝變暗、看到太陽日冕的奇景，因此備受全球天文愛好者期待。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-02-7c3f97c278.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/image-article/apod-2026-august-1-buck-moon-and-belt-of-venus/">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>

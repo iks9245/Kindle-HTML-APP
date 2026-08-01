@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NetBSD 11.0</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-02-bc4ec80770-p6.html">切換為襯線字體顯示</a></p>
+
+
+<h1>NetBSD 11.0</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 6 / 6 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://blog.netbsd.org/tnf/entry/netbsd_11_0_released">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-02-bc4ec80770-p5-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 6 / 6 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Posted by Jay on August 01, 2026 at 06:10 PM UTC #</p>
+
+<p class="fulltext">Posted by Hossein on August 01, 2026 at 06:36 PM UTC #</p>
+
+<p class="fulltext">Posted by Artos on August 01, 2026 at 07:02 PM UTC #</p>
+
+<p class="fulltext">Posted by jeorge on August 01, 2026 at 07:14 PM UTC #</p>
+
+<p class="fulltext">Posted by Mario on August 01, 2026 at 07:28 PM UTC #</p>
+
+<p class="fulltext">Posted by Connor on August 01, 2026 at 10:25 PM UTC #</p>
+
+<p class="fulltext">Posted by Jaime Lopez on August 01, 2026 at 10:47 PM UTC #</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>NetBSD 11.0 版本發布為何會延遲？為什麼發布時仍有未解決的安全問題？</summary>
+  <p>延遲發布的原因是為了等待第三方組件的穩定版本，以便納入其修復。面對不斷出現的新安全問題，開發團隊決定以透明的方式發布，而非為了修復所有已知問題而無限期延遲發布，並承諾在即將到來的 11.1 版本中解決這些問題。</p>
+</details>
+
+<details>
+  <summary>文章中提到的主要開放安全問題有哪些？使用者在等待 11.1 版本期間應如何應對？</summary>
+  <p>文章具體提到了 hdaudio(4) 的訪問檢查缺陷、ipfilter 和 pf 中的安全問題。其中 ipfilter 和 pf 預設不安裝在核心中，hdaudio 則提供手動移除 /dev/hdaudio* 的簡單解決方法。所有這些問題的修復預計將在 11.1 版本中完成。</p>
+</details>
+
+<details>
+  <summary>安裝 NetBSD 11.0 時，針對不同的安裝媒體（如光碟或 USB）有何特別的注意事項？</summary>
+  <p>安裝 NetBSD 11.0 時，ISO 映像檔已分為適用於 CD-ROM 的小尺寸映像和完整 DVD 尺寸的映像。若使用基於快閃的媒體（例如 USB 隨身碟），則必須使用 .img 檔案而非 .iso 映像檔，且在使用前需先進行解壓縮。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-02-bc4ec80770-p5-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 6 / 6 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
