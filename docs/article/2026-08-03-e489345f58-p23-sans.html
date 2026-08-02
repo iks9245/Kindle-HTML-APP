@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-03-e489345f58-p23.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 23 / 23 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://github.com/wie-project/kakehashi">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-03-e489345f58-p22-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 23 / 23 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">| scripts/docker-curl.sh | Darwin curl underkh (same shape asdocker-7zz ) |</p>
+
+<p class="fulltext">| scripts/docker-curl-probe.sh | KH_CURL_PROBE=1 wrapper (logs →.tmp/kh-curl-probe ) |</p>
+
+<p class="fulltext">| scripts/docker-curl-options.sh | Tiered curl flag smoke ( tier1 …tier10 ,tier9-10 ,all →.tmp/kh-curl-options ) |</p>
+
+<p class="fulltext">| scripts/docker-git.sh | Apple git from CLT underkh (swscan +.kh/data cache) |</p>
+
+<p class="fulltext">| scripts/bench-fair-local.sh | Native vs kh compress (artifacts → .tmp/kh-bench-fair ) |</p>
+
+<p class="fulltext">Apache License 2.0. See LICENSE.txt and NOTICE.</p>
+
+<p class="fulltext">This project is not derived from Darling. Do not vendor proprietary Apple SDKs or blobs.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Kakehashi 專案的開發目的是什麼？它主要解決了哪些痛點？</summary>
+  <p>Kakehashi 旨在提供一個在 Linux aarch64 環境下執行 macOS ARM64 二進位檔的實驗性使用者空間轉譯層。它主要解決了開發者在非 macOS 平台上運行或測試 macOS 應用程式的困難，為跨平台開發和自動化測試提供了新的可能性。</p>
+</details>
+
+<details>
+  <summary>Kakehashi 在技術實現上與其他作業系統相容層有何不同？</summary>
+  <p>Kakehashi 的技術特點在於它是一個命令列優先的解決方案，並且不依賴即時編譯器 (JIT)。它透過載入 Darwin Mach-O 執行檔、映射一個獨立的 libSystem 並直接轉譯 BSD 系統呼叫來運行 macOS 程式，這使其在某些方面與其他依賴 JIT 或更複雜虛擬化的專案有所區別。</p>
+</details>
+
+<details>
+  <summary>目前 Kakehashi 已經支援哪些 macOS 應用程式？未來有何發展計畫？</summary>
+  <p>目前 Kakehashi 已成功驗證可執行 7-Zip 的多執行緒壓縮和 curl 的 HTTP/HTTPS 請求等基礎應用。未來計畫包括支援 Xcode 工具鏈中的 Git、整合 Apple Security.framework、以及對 GUI 應用程式和程式碼簽章的支援，以擴展其應用範圍。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-03-e489345f58-p22-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 23 / 23 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

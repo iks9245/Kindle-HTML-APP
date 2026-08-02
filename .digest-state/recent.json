@@ -517,5 +517,42 @@
       "summary": "7月28日，從克羅埃西亞的克爾克島捕捉到七月滿月「鹿月」升起的壯麗景象，同時伴隨著地平線上地球的陰影和粉紅色的金星帶（反曙暮光弧）。這次滿月不僅展示了迷人的天文現象，也為即將到來的8月12日新月將引發的全球矚目的日全食預熱。\n\n要點：\n* 鹿月：七月的滿月，在日落時分升起，與太陽的影子相對。\n* 金星帶：位於地球陰影上方，由散射的太陽光形成的粉紅色光帶。",
       "title": "APOD: 2026 August 1 – Buck Moon and Belt of Venus"
     }
+  ],
+  "2026-08-03": [
+    {
+      "source": "Hacker News",
+      "summary": "eBay因一場針對某位女士的騷擾活動，被裁定需支付5600萬美元的巨額賠償。這場被形容為「壓垮這位女士」的活動，顯示了企業內部可能出現的嚴重不當行為及其對個人造成的毀滅性影響。此判決突顯了企業在員工行為監管上的責任，以及未能履責所帶來的巨大法律和財務後果。\n\n*   這起案件涉及eBay內部策劃的惡意騷擾行動。\n*   5600萬美元的賠償金強調了此類不法行為的嚴重性與高昂代價。",
+      "title": "'Crush this lady': how eBay harassment campaign led to $56M payout"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "Kakehashi 是一個實驗性的使用者空間轉譯層，旨在讓 macOS ARM64 二進位檔在 Linux aarch64 環境下運行。這個工具透過載入 Darwin Mach-O 檔案、映射一個獨立的 libSystem 並轉譯 BSD 系統呼叫來實現，且不需要即時編譯器 (JIT)。它已在 Docker/Colima 和 UTM (Linux aarch64) 上成功驗證，目前可執行如 7-Zip 和 curl 等應用程式。這項技術對於希望在 Linux ARM 平台上測試或運行部分 macOS 應用程式的開發者來說具有重要意義，有望簡化跨平台工作流程。\n*   實現 macOS ARM64 二進位檔在 Linux ARM64 上運行。\n*   無需 JIT，透過系統呼叫轉譯和獨立 libSystem 實現。",
+      "title": "Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "一篇分析比較了1953年的「通用詞彙表」（GSL）與2013/2023年的「新通用詞彙表」（NGSL），這兩份針對英語學習者設計的核心詞彙列表，發現70年間英語日常用語發生了巨大變化。約600個詞彙被移除，超過1,100個詞彙被新增，這反映了日常生活與社會結構的演變。\n* 舊列表中許多具體、實體世界的詞彙（如「apple」、「fork」、「soap」）被移除。\n* 新列表中則增加了大量抽象概念的詞彙（如「mortgage」、「corporation」、「analysis」）。",
+      "title": "How the words we teach English language learners changed"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "美國總統唐納德·川普宣布，他已取消對伊朗的計劃性大規模打擊，條件是伊朗能「迅速」達成協議。川普聲稱伊朗及其他中東國家因已就協議「初步範圍」達成一致而要求暫停打擊，儘管伊朗否認了這一說法。此決定是在美國和以色列可能正計劃對伊朗能源基礎設施進行嚴厲轟炸的報導之後作出的，並發生在地區緊張局勢加劇、美國國內反戰壓力以及中期選舉逼近的背景下。\n- 川普此前曾透過強硬威脅啟動談判，但這些談判經常以失敗告終。\n- 沙烏地阿拉伯等區域盟友主張透過對話緩解緊張局勢。",
+      "title": "Trump cancels Iran strikes subject to deal being made 'rapidly'"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "以色列近日對加沙地帶發動連續空襲，造成至少13名巴勒斯坦人死亡，其中包括兒童。這些襲擊發生在哈馬斯據稱已接受美國總統川普「和平委員會」提出的解除武裝協議數日之後，但以色列對此協議的實施抱持高度懷疑。儘管有停火計畫，以色列能源部長甚至暗示若哈馬斯不繳械，加沙應由以色列完全控制，導致當地和平前景堪憂，自去年10月以來已有超過1,100名巴勒斯坦人喪生。\n- 哈馬斯已同意美國促成的解除武裝協議，但以色列對其執行意願存疑。\n- 以色列的空襲導致多人傷亡，並宣稱擊斃數名哈馬斯指揮官。",
+      "title": "At least 13 killed in Israeli strikes on Gaza after Hamas agree disarmament deal"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "2026年8月2日的「每日天文圖」（APOD）展示了一張2021年在美國西維吉尼亞州北福克山附近拍攝的壯觀「火彩虹」（環水平弧）照片。這種美麗且罕見的大氣光學現象，是由陽光穿過高空中卷雲內水平排列的扁平六角形冰晶折射而形成的，其火焰般的色彩使其得名。\n\n觀察到火彩虹需要特定的條件：\n- 太陽必須至少高於地平線58度。\n- 卷雲中的冰晶必須以水平方向排列，才能將陽光折射成這種平行於地平線的弧狀。",
+      "title": "APOD: 2026 August 2 – A Fire Rainbow over West Virginia"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "7月28日，在克羅埃西亞的克爾克島沿海，一輪被稱為「雄鹿月」的七月滿月從遠山升起，照亮了亞得里亞海的天空。這場黃昏景象中，地球的陰影以灰帶形式出現，而其上方則是粉紅色的「金星帶」（又稱反曙暮光弧）。這次滿月為即將到來的8月12日新月日全食拉開序幕，屆時新月將在地球上投下陰影，帶來一場備受期待的天文奇觀。",
+      "title": "APOD: 2026 August 1 – Buck Moon and Belt of Venus"
+    }
   ]
 }
