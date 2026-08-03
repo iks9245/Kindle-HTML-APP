@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smaller, faster, safer: running Kimi and GLM at scale</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-04-489b06ed50-p17.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Smaller, faster, safer: running Kimi and GLM at scale</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 17 / 17 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://blog.cloudflare.com/smaller-faster-safer-models/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-04-489b06ed50-p16-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 17 / 17 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Serving frontier models efficiently is a moving target, and this is the ongoing work behind it. We're expanding FP8 KV caches across more of the fleet, validating NVFP4 weights on Blackwell (NVIDIA’s GPU architecture), and working toward making integrity checks something we can leave on everywhere at negligible cost. These optimizations will allow us to continue to support more customers at a lower cost and at the same accuracy.</p>
+
+<p class="fulltext">If squeezing the best open models onto GPUs and serving them to millions of developers sounds like your kind of problem, come work with us.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>雖然文章提到 FP8 KV 快取在單一併行請求下可能比 BF16 稍慢，那麼採用 FP8 的主要優勢究竟是什麼？</summary>
+  <p>FP8 KV 快取的主要優勢在於其記憶體效率。儘管單獨來看每個 token 的處理速度略慢，但它能將快取大小減半，從而允許 GPU 同時容納更多並行請求。這最終大幅提升了總體吞吐量（例如在 Kimi K2.6 上達到 41% 的峰值提升），並顯著降低了每個 token 的成本，而模型準確性絲毫不受影響。</p>
+</details>
+
+<details>
+  <summary>為什麼大型語言模型在運行時需要「KV 快取完整性檢查」這樣的安全機制？它解決了什麼潛在問題？</summary>
+  <p>在處理大量請求和複雜的共享記憶體（如分頁注意力、連續批處理）時，即使是極微小的錯誤也可能導致快取頁面被錯誤分配或讀取。KV 快取完整性檢查機制能即時驗證每個請求讀取的快取頁面是否正確，防止因數據錯誤而導致模型返回不正確的結果。這確保了系統的穩定性和數據的可靠性。</p>
+</details>
+
+<details>
+  <summary>Cloudflare 實施這些優化措施的長期目標是什麼？對其客戶和未來的 AI 服務有何意義？</summary>
+  <p>Cloudflare 的長期目標是持續高效地服務最先進的開源模型，並將這些最佳化措施擴展到更多部署中。透過降低成本並提高處理能力，他們能支援更多客戶使用其 Workers AI 平台上的 AI 服務，並計劃將這些能力進一步推廣至 NVIDIA Blackwell 等新一代 GPU 架構，使尖端 AI 技術更具可負擔性和普及性。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-04-489b06ed50-p16-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 17 / 17 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
