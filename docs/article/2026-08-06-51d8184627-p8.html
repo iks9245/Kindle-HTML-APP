@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muse Code and Muse Spark 1.2</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-06-51d8184627-p8-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Muse Code and Muse Spark 1.2</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 8 / 8 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-06-51d8184627-p7.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 8 / 8 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Get started with Muse Code</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Muse Code 的「持久性異步背景代理」和「重放精確執行時」設計具體如何幫助開發者解決複雜問題？</summary>
+  <p>持久性異步背景代理能在整個會話期間保持活躍，避免重複資訊收集並減少延遲，讓代理能更快解決多步驟任務。重放精確的執行時設計則記錄所有操作，確保代理在遇到故障後能從上次停止的地方恢復，使其能承擔長期運行的任務而不受中斷影響。</p>
+</details>
+
+<details>
+  <summary>Muse Code 和 Muse Spark 1.2 的結合，在實際的軟體開發流程中能為開發者帶來哪些具體好處？</summary>
+  <p>它們的結合能自動化複雜的程式碼規劃、撰寫與驗證，從而顯著縮短開發週期。開發者可以利用它來處理大型專案中的程式碼生成和除錯，甚至能用於對 GPU 核心進行迭代優化，提高程式碼性能。</p>
+</details>
+
+<details>
+  <summary>Muse Spark 1.2 提到針對長週期程式碼任務進行訓練，這類任務具體包含哪些範疇？</summary>
+  <p>這類任務包括整個儲存庫的程式碼生成、大型端到端專案的開發，以及自動研究等。這表示模型能夠處理需要長期規劃、多步驟執行和大量上下文理解的複雜程式設計挑戰，並保持進度方向。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-06-51d8184627-p7.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 8 / 8 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
