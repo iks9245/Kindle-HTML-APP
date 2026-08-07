@@ -1,28 +1,4 @@
 {
-  "2026-07-22": [
-    {
-      "source": "Hacker News",
-      "summary": "Codeberg 討論並通過了一項修正案，將使用條款（ToU）擴展至禁止「LLM生成內容」，特別是那些主要由大型語言模型（LLM）生成的代碼。此舉的動機主要是為了避免LLM生成代碼不確定的版權歸屬所帶來的法律風險，這對於一個非營利組織來說是個嚴峻的問題。儘管存在關於措辭的討論，該提案已被採納。\n\n- 主要禁止：主要由LLM生成的代碼內容。\n- 核心考量：LLM生成代碼的版權模糊性，對Codeberg構成潛在法律威脅。",
-      "title": "Codeberg: ToU extension to prohibit LLM-extrusions"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "這篇文章透過 `mcpgrade` 工具評估了36個流行的模型上下文協議 (MCP) 伺服器在AI代理可用性方面的表現。作者發現有三分之一的伺服器得分為D或F，即使是符合規範的伺服器也常因缺乏良好的描述、命名不清晰及差勁的架構設計而無法被代理有效使用。\n\n- 許多伺服器面臨「未記錄參數」的嚴重問題，尤其在從Zod或OpenAPI定義生成架構時，忽略了為參數添加說明。\n- 研究指出，代理可用性關鍵在於「文件紀律」而非單純的工程問題，修正參數描述是提升代理可靠性的最高槓桿點。",
-      "title": "I graded 36 popular MCP servers on agent usability. A third got a D or F"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "美國國防部長Pete Hegseth表示，與伊朗的戰爭迄今已耗費美國375億美元，並緊急向國會請求額外撥款870億美元，其中670億美元用於中東行動。\n這項請求遭到民主黨和部分共和黨的反對，他們質疑其必要性及對「永無止境的戰爭」的擔憂，尤其在上週停火破裂、敵對行動重新開始並導致三名美軍士兵喪生之後。\n* 美國自上次估計以來，戰爭成本增加了近80億美元。\n* 由於國會將休會至九月，資金撥款將被延遲。",
-      "title": "Iran war has cost US $37.5bn so far, Hegseth says, as Pentagon seeks billions more"
-    }
-  ],
-  "2026-07-23": [
-    {
-      "source": "Hacker News",
-      "summary": "一名開發者成功為 Fairphone 6 的超廣角鏡頭達成了實驗性的 Linux 支援。這項進展解決了在主流 Linux 和 postmarketOS 上使用該設備的主要障礙之一——相機支援，特別是為了其 QR 碼掃描專案。這對於希望在 Fairphone 6 上運行替代作業系統的用戶來說，是個重要的里程碑。\n* 僅支援 OmniVision OV13B10 超廣角鏡頭，主鏡頭和前鏡頭尚無驅動。\n* 目前功能仍屬實驗性質，存在如無自動對焦、預覽畫面裁切及簡化電源管理等限制。",
-      "title": "Fairphone 6 wide camera experimental Linux support"
-    }
-  ],
   "2026-07-24": [
     {
       "source": "Hacker News",
@@ -714,6 +690,73 @@
       "source": "Quanta Magazine",
       "summary": "珊瑚並非被動生物，它們透過微小的纖毛主動製造水流漩渦來獲取氧氣，尤其在夜間共生藻停止光合作用時。然而，最新研究顯示，當水溫升高時，水中溶氧量減少且珊瑚需氧量增加，導致纖毛加速擺動以嘗試補充氧氣。但若水溫持續上升超過臨界點，纖毛的劇烈擺動反而會消耗過多氧氣並輸送缺氧水體，最終導致珊瑚窒息死亡。這項發現揭示了氣候變遷下導致珊瑚死亡的關鍵新機制，強調缺氧與白化同為致命威脅，有助於解釋為何有些珊瑚在熱壓力下會死亡卻未白化。\n\n關鍵重點：\n- 珊瑚纖毛是主動的氧氣供應機制，而非被動擴散。\n- 高溫導致纖毛過度作功，造成自身缺氧窒息。\n- 缺氧是高溫下珊瑚死亡的直接原因，提供白化以外的解釋。",
       "title": "Corals Spin Tiny Vortices to Get Oxygen, but Not if It’s Too Hot"
+    }
+  ],
+  "2026-08-07": [
+    {
+      "source": "Hacker News",
+      "summary": "AMD 已收購 AI 晶片新創公司 Taalas，旨在透過將 AI 模型直接蝕刻到矽晶片中，大幅提升 AI 推理效能。此舉將創造出模型專用的積體電路，初步技術演示顯示其每秒可處理高達 17,000 個 tokens，預計將顯著推動 AI 效率和速度的發展。\n- 提升 AI 推理速度與效率\n- 實現模型專用硬體最佳化",
+      "title": "AMD acquires Taalas to boost inference performance by etching models in silicon"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "為慶祝《雷神之鎚》(Quake) 30週年，id Software 與 MachineGames 合作推出了全新的免費遊戲篇章「機械黎明」(Dawn of the Machine)。此更新現已在 Xbox、PC、PlayStation 和 Nintendo Switch 等主要平台上提供，為玩家帶來19個全新地圖、獨特的重複循環機制、敵人變體及武器。\n它以殘酷的戰鬥、迷宮般的關卡設計和扭曲現實的夢魘領域，進一步拓展了這款經典第一人稱射擊遊戲的傳奇。\n- 包含19個全新戰役地圖，並有專屬故事線。\n- 新增多種敵人變體及經典擴充包啟發的新武器，如雷射加農炮。\n- 引入獨特的重複遊玩循環，每次都改變遊戲體驗並帶來角色進程。",
+      "title": "Quake – 30th Anniversary Update"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "Herdr 專案的創辦人 Can 宣布，其為 CLI 編碼代理設計的執行時環境 Herdr 將加入 Y Combinator 的 F26 批次，以擴展其作為開發者工具的潛力。這個專案在短時間內獲得了巨大的社群支持，並將透過加入加速器組建團隊，從單人專案發展為公司。\n\n* Herdr 的核心執行時環境將保持免費且採用 Apache-2.0 開源許可。\n* 未來公司將專注於強化執行時、開發更多客戶端以及連接分散的代理機器，同時鼓勵透過擴充功能來實現多樣化需求。",
+      "title": "Herdr is joining Y Combinator. The runtime stays open"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "週四，美國新墨西哥州的一名法官命令Meta公司再支付5.67億美元，原因是其未能就旗下平台對兒童構成的危險發出警告，使此案的總罰款達到9.42億美元。這標誌著針對Meta公司兒童安全問題的最大裁決，法官將其平台對兒童造成的心理傷害和剝削比作「公害」。這筆資金將用於治療現有傷害並實施新的安全措施，但Meta表示不同意此裁決並將提出上訴。\n\n*   裁決強調Meta被視為如同製造空氣污染的工廠，其平台產生了兒童心理傷害和性剝削等「污染」。\n*   法院還命令Meta實施一系列具體措施，例如禁止向未成年用戶推薦成人帳號、禁止未成年用戶傳送或接收裸體內容、設定未成年用戶每月使用時長上限等。",
+      "title": "Meta fined $567m in largest child safety ruling against social media giant"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "美國總統川普否認關於美國武器庫存短缺的報導，並誓言將「追捕」洩露此類資訊的「叛國者」，聲稱他們將面臨長期監禁。此聲明發布之際，正值美國軍方因持續作戰而面臨彈藥儲備質疑，伊朗更宣稱其本土武器能應對任何威脅。儘管川普堅稱美國擁有「大量」彈藥，且國防部長赫格賽斯也否認短缺，但政府同時已請求緊急資金以補充軍備，引發外界對實際情況的疑問。\n*   CBS News和《華盛頓郵報》引用匿名消息來源，指出美國的長程精準飛彈庫存已大幅消耗。\n*   智庫「戰略與國際研究中心」（CSIS）估計，愛國者飛彈和THAAD飛彈的庫存量已顯著下降，部分僅剩戰前約三分之一。",
+      "title": "Trump denies US weapons shortage and says information 'leakers' being 'hunted down'"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "歐洲足球總會（Uefa）表示，儘管國際足球總會（Fifa）主席英凡提諾（Gianni Infantino）已撤回出售世界盃等賽事股權予私人投資者的計劃，但對國際足總比賽（包括世界盃）的抵制威脅仍可能實施。英格蘭足球總會（FA）也已撤回對英凡提諾的支持。Uefa認為，其提出的條件（徹底撤回相關提案並保證未來不再有類似行為）並未獲得滿足，並重申已對英凡提諾失去信心，使得歐洲與國際足總之間的裂痕日益加深。\n\n* 英凡提諾的出售賽事股權計劃（Fifa Forward Enterprise, FFE）雖已流產，但Uefa認為Fifa對此事的處理缺乏誠意，未能滿足其要求。\n* 此事可能引發歐洲球隊抵制重大國際賽事，並對英凡提諾在明年總統大選前的地位構成嚴重挑戰。",
+      "title": "Uefa says boycott may still go ahead as FA withdraws Infantino support"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "2026年7月27日至29日，由哈佛大學主導的NASA CosmicDS團隊與史密森尼學會的BEST AQI專案合作，在麻薩諸塞州劍橋舉辦了領導力學院。\n該學院培訓了13位教育工作者，使其能夠利用NASA TEMPO任務的近乎即時數據分析工具TEMPO-Lab，共同開發課程，並整合最新臭氧數據來進行案例研究。\n這項工作旨在賦予青少年透過數據調查並改善當地空氣品質的能力，預計將推廣至數千名青少年研究員，以促進數據素養和社區行動。\n* 培訓教育者使用TEMPO-Lab，探索NASA TEMPO任務的空氣品質數據。\n* 共同開發課程，幫助青少年利用數據解決社區空氣品質問題。",
+      "title": "Educators & Teens Get Hands-On With TEMPO Data to Help Investigate Local Air Quality"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "NASA計畫於2028年12月，搭載「太空反應爐-1自由號」(Space Reactor-1 Freedom)發射三架「天降號」(SkyFall)火星直升機前往火星。這些先進的旋翼機將繼承「機智號」火星直升機的成功經驗，用於收集地表下雷達數據和近紅外圖像數據，大幅推進火星探索任務。其主要目標是收集寶貴的科學數據，並透過提供空中視角和路線規劃，協助未來的火星探測車作業。\n\n*   每架「天降號」直升機都將配備四種儀器，以執行其數據收集任務。\n*   此專案由NASA噴氣推進實驗室(JPL)管理，並與曾共同設計「機智號」的AeroVironment公司合作。",
+      "title": "NASA’s SkyFall Helicopters at Work (Artist’s Concept)"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "NASA工程師Maya Román目前正在南加州噴射推進實驗室的環境測試實驗室，為預計於2028年末發射的SkyFall任務，進行探地雷達天線的測試。\n這項任務旨在延續火星直升機「獨創號」的成功經驗，證明在火星稀薄大氣中進行受控飛行是可行的，並提供有價值的數據。\n\n- SkyFall任務將由三架飛機執行，每架飛機配備四個儀器。\n- 「獨創號」在火星上飛行了72次，展示了空中視角對於火星探測的巨大潛力。",
+      "title": "Antenna Testing for NASA’s SkyFall Mission"
+    },
+    {
+      "source": "Quanta Magazine",
+      "summary": "這篇文章探討了觸覺、疼痛與愉悅的複雜性，指出儘管這些是生命的基本事實，科學界對其運作機制仍知之甚少。神經科學家 Ishmail Abdus-Saboor 的研究聚焦於皮膚與大腦的連結，以及這些感覺背後的神經機制。他強調疼痛與愉悅不僅是感官訊號，也具備演化目的和社會情感意涵，並透過動物模型（如裸鼴鼠）研究這些難以量化的感受。文章也提及了跨領域合作的重要性，並以發現介導哺乳期泌乳的特定觸覺神經元為例，展現了科學探索的發現之樂。\n\n- 疼痛和愉悅具有演化目的，並傳遞社會和情感信號。\n- 透過動物模型研究觸覺，同時需要面對倫理考量。\n- 促進神經科學與心理學等領域的跨學科合作，以深入理解大腦與心智。",
+      "title": "How Does Touch Lead To Pain Or Pleasure?"
+    },
+    {
+      "source": "Aeon",
+      "summary": "這篇短文介紹了一部關於巴黎商業區的影片，該影片以其高聳的摩天大樓和引人注目的雕塑為背景，對不平等現象進行了深刻的反思。影片透過這些大膽的藝術作品與現代都市景觀的並置，引導觀眾思考社會經濟差距的議題。這部「視覺冥想」作品旨在探討宏偉建築所象徵的繁榮背後，可能存在的社會分化與挑戰。\n\n重點：\n- 核心主題：社會不平等\n- 探討媒介：巴黎商業區的現代建築與大型雕塑",
+      "title": "The great arc"
+    },
+    {
+      "source": "Aeon",
+      "summary": "這篇文章探討了C.P. Snow的「兩種文化」演講，以及隨後引發的F.R. Leavis激烈反駁。Snow認為，現代社會存在科學與人文學科之間的嚴重隔閡，阻礙了人類進步與理解。Leavis則嚴厲批評Snow的觀點，認為其對文化的理解過於膚淺，並強調文學與人文學科在形塑道德與批判性思維上的核心價值。這場文化衝突的核心在於對知識、教育和社會發展方向的不同看法，至今仍具深遠影響。\n*   Snow主張科學與人文領域互不理解，形成兩道文化鴻溝。\n*   Leavis反駁，強調文學文化對社會道德與批判思考的至關重要性。",
+      "title": "Culture clash"
+    },
+    {
+      "source": "Aeon",
+      "summary": "這部影片講述一位作家追溯祖父母前往冰島瓦特納冰川的旅程，以此作為理解氣候變遷的切入點。影片旨在探討敘事和個人故事如何能幫助人們更好地掌握氣候變遷這個宏大且抽象的議題，超越冰冷的數據。\n* 以家族歷史與地理探索為脈絡。\n* 強調故事在傳達氣候變遷影響中的獨特作用。",
+      "title": "The last ice age"
     }
   ]
 }
