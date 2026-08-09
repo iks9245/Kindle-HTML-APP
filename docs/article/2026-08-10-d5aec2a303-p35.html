@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask HN: What are you working on? (August 2026)</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-10-d5aec2a303-p35-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Ask HN: What are you working on? (August 2026)</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 35 / 256 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://news.ycombinator.com/item?id=49233423">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-10-d5aec2a303-p34.html">← 上一頁</a>
+<a class="pager-next" href="2026-08-10-d5aec2a303-p36.html">下一頁 →</a>
+<span class="pager-num">第 35 / 256 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">|  |  | I've been building https://consciousnesslibrary.org, an open library for psychedelic and consciousness research that pulls from over a dozen academic APIs every 20 minutes, dedupes them, organizes by relevance, and synthesizes evidence. I just finished my master's in Psychedelics and Consciousness Studies, and built the library I wanted while studying. I started it over a year ago, but put it down until my practicum advisor suggested I dust it off and go hard on it during my last term. As of this writing, there are over 35,700 papers by over 82,200 authors organized into 37 topics, growing daily. There's a 2D map of the whole corpus and evidence syntheses on the topic pages, plus the ability to generate your own syntheses with any prompt. It's built with Rails 8.1, uses one Postgres (for full-text search, vectors, and job queue), and runs on a $24/mo DigitalOcean droplet that I just upgraded from the $12 tier and deploy to with Kamal. Total LLM spend so far is ~$28 in DeepSeek-V4-Flash, trending down after a big one-time backfill push. Relevance was the hardest part to get right by far. Ensuring we keep papers on LSD the psychedelic vs Lumpy Skin Disease, or Ketamine for depression vs anesthesia in cats was no small feat. The design ended up being a cheap keyword prefilter, then an LLM rubric that accepts or rejects papers. More on that here: https://consciousnesslibrary.org/docs/article-pipeline.html It's free, no ads, no signup to read anything, and a registered 501(c)(3) I fund myself for now. I'd really like to know what breaks or any other feedback, and would love to answer any questions about it! |</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-10-d5aec2a303-p34.html">← 上一頁</a>
+<a class="pager-next" href="2026-08-10-d5aec2a303-p36.html">下一頁 →</a>
+<span class="pager-num">第 35 / 256 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
