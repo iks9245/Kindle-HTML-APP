@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-08-11</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-11-sans.html">切換為無襯線字體顯示</a></p>
+
+<h1>每日 AI 文摘 2026-08-11</h1>
+<p class="meta">
+2026-08-11
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="index.html">存檔列表</a>
+
+
+
+ ｜ <a href="2026-08-10.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日科技新聞揭示了數位世界的新挑戰，美國伊利諾州針對作業系統（包括開源Linux）推動年齡驗證法規，同時x86處理器也爆出系統管理模式的安全漏洞。在宇宙探索方面，NASA詹姆斯·韋伯望遠鏡捕捉到獅子星雲的壯麗影像，並透過串流平台與教育資源普及太空知識；此外，河流網絡的數學奧秘也再次引發關注。然而，地球上也不乏嚴峻挑戰，從哥倫比亞的強震與加拿大肆虐的野火等自然災害，到烏克蘭深入俄羅斯境內的致命空襲及以色列與美國在加薩和平進程上的僵持，都顯示出全球局勢的複雜與動盪。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>Illinois Just Passed a Law That Puts Linux on the Hook for Age Verification</h3>
+  <p class="summary">伊利諾州州長JB Pritzker於7月31日簽署了HB5511法案（《兒童社交媒體安全法》），該法案不僅針對社交媒體平台，更劃設了一個新的法律類別「作業系統提供商」。此舉引人關注的是，截至2028年1月1日，所有提供網際網路連線作業系統的供應商（無論商業或非營利，包括開源專案）都必須內建年齡聲明功能，並向要求年齡資訊的應用程式提供加密的年齡區間訊號。與其他州法規不同，伊利諾州的法案並未為開源軟體提供豁免，這可能對包括Linux在內的開源專案產生重大影響。
+
+- 該法案旨在保護未成年人，要求社交媒體對其演算法推送和陌生人接觸設限。
+- 作業系統提供商需在2028年前建置年齡驗證介面，並透過API向應用程式傳遞年齡訊號。
+- 法律涵蓋範圍廣泛，可能影響到如Linux等開源作業系統，且目前無開源豁免條款。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>伊利諾州通過這項法律的目的是什麼？為什麼特別針對作業系統，而其他州主要關注社交媒體？</summary>
+    <p>這項法律的官方目的是保護兒童免受社交媒體的危害，特別點名了TikTok和Instagram。針對作業系統的規定，雖然在新聞稿中未被強調，但它是「數位年齡驗證」趨勢的一部分，旨在從設備層面更全面地實施年齡限制，這一趨勢也見於科羅拉多州和加利福尼亞州的類似法案。</p>
+  </details>
+  
+  <details>
+    <summary>哪些類型的「作業系統提供商」將受到這項法律的最大影響？它可能對Linux等開源專案產生什麼衝擊？</summary>
+    <p>該法案將「作業系統提供商」廣泛定義為所有構建連網作業系統的實體，無論商業或非營利。像Google、微軟、蘋果以及在伊利諾州有業務的任何Linux供應商都將受到影響。對於通常缺乏商業實體或集中開發的開源專案來說，遵守規定可能具有挑戰性且成本高昂，可能迫使它們實施目前沒有的年齡聲明步驟。</p>
+  </details>
+  
+  <details>
+    <summary>在2028年截止日期前，這項法律可能面臨哪些潛在的後續步驟或挑戰？</summary>
+    <p>文章提到了一些可能性。鑑於其他州的類似法律曾面臨NetChoice等組織的法律挑戰，HB5511也可能在法庭上被質疑。此外，如果開源社區積極倡導，該法案也有可能被修訂，加入類似科羅拉多州和加利福尼亞州那樣的開源豁免條款。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-11-df6b934768.html">全文（約 7 分鐘）</a> ｜ <a href="https://linuxstans.com/illinois-hb5511-operating-system-age-verification/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Exploiting System Management Mode with a very long interrupt</h3>
+  <p class="summary">研究人員發現了x86 CPU上系統管理模式 (SMM) 的一個新漏洞，允許攻擊者在特定條件下破壞其安全機制。此漏洞利用一個核心在執行「超長指令」時，未能及時響應SMM的同步進入請求，導致SMM要求所有核心同時進入或退出SMM的同步狀態被打破。這使得攻擊者可能在SMM運作期間，利用原本休眠的漏洞進行攻擊。目前，建議的權宜之計是避免執行任何超長指令，但長期修復方案仍不明確。
+
+- 漏洞核心在於SMM的多核心同步機制失效。
+- 透過執行耗時極長的機器指令來觸發。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是系統管理模式 (SMM)，以及打破它為何如此嚴重？</summary>
+    <p>SMM是x86 CPU上一個高度特權的執行環境，用於處理諸如電源管理或硬體控制等底層系統任務。破壞SMM意味著攻擊者可能獲得對系統的最高控制權限，繞過大部分安全防護。</p>
+  </details>
+  
+  <details>
+    <summary>這種「超長指令」是如何導致SMM同步失效的？</summary>
+    <p>SMM要求所有核心同時進入或退出。當一個核心執行耗時極長的指令時，它無法及時響應另一個核心發出的SMM進入請求。發出請求的核心最終會因逾時而單獨進入SMM，從而破壞了SMM預期的同步狀態。</p>
+  </details>
+  
+  <details>
+    <summary>修復這個SMM漏洞面臨哪些主要挑戰？</summary>
+    <p>修復此漏洞存在兩難：如果保留或增加等待超長指令完成的逾時時間，可能會導致性能下降或同步被破壞；如果移除逾時，則一個合法停滯的核心可能導致整個平台掛起。目前沒有明確的最佳解決方案。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-11-5ba2f6fd9c.html">全文（約 6 分鐘）</a> ｜ <a href="https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Magnitude 7.4 Earthquake – 5 km S of San José del Palmar, Colombia</h3>
+  <p class="summary">哥倫比亞聖荷西德爾帕爾馬（San José del Palmar）南方5公里處近日發生芮氏規模7.4強震。這起高強度地震可能對當地及周邊地區造成嚴重影響，包括建築物損壞、基礎設施中斷以及潛在的人員傷亡，因此引發廣泛關注其後續影響及救災應變。
+- 震度高達芮氏規模7.4，破壞潛力巨大。
+- 震央距離城鎮不遠，可能影響廣大區域民眾。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>芮氏規模7.4的地震在歷史上通常會造成什麼樣的影響？</summary>
+    <p>芮氏規模7.4的地震被認為是「大地震」，通常足以造成廣泛且嚴重的破壞。建築物可能會倒塌，道路和橋樑可能斷裂，並可能引發山崩或土壤液化。此類地震常導致大量人員傷亡和基礎設施癱瘓。</p>
+  </details>
+  
+  <details>
+    <summary>哥倫比亞位處的地理位置是否容易發生強烈地震？</summary>
+    <p>是的，哥倫比亞位於環太平洋地震帶上，這是世界上地震活動最頻繁的區域之一。該國位於南美洲板塊、納斯卡板塊和加勒比海板塊的交界處，板塊運動活躍導致地震頻繁。因此，哥倫比亞經常會發生中度到強烈的地震。</p>
+  </details>
+  
+  <details>
+    <summary>通常發生如此強烈的地震後，政府和國際社會會採取哪些措施？</summary>
+    <p>地震發生後，政府通常會立即啟動緊急救援機制，包括搜救倖存者、提供醫療援助和安置受災民眾。國際社會也可能提供人道援助，如派遣救援隊、運送物資和提供資金支持。同時，當局也會評估災損，並著手重建工作。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-11-19a863a423.html">全文（約 1 分鐘）</a> ｜ <a href="https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/executive">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>At least 13 killed in Ukrainian drone strike deep into Russia</h3>
+  <p class="summary">烏克蘭無人機深入俄羅斯境內，襲擊了韃靼斯坦共和國的下卡姆斯克市，造成至少13人死亡、75人受傷，其中包括一名兒童和七名烏茲別克公民。這次襲擊發生在距離烏克蘭邊境1,100多公里的地方，並擊中了塔涅沃煉油廠。這是自2022年俄烏戰爭全面爆發以來，俄羅斯遭受最致命的單次襲擊之一，顯示基輔正加強對俄羅斯戰爭機器相關設施的遠程打擊。
+* 這是對俄羅斯本土最深入的攻擊之一，地點位於下卡姆斯克。
+* 烏克蘭聲稱此類襲擊目標是為了削弱俄羅斯在烏克蘭的戰爭能力。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>烏克蘭為何選擇在如此深入俄羅斯境內發動攻擊？此類遠程打擊的目標通常是什麼？</summary>
+    <p>烏克蘭近期加強了對俄羅斯境內設施的遠程打擊，這些設施被認為為俄羅斯的戰爭提供收入和後勤支援。襲擊目標通常包括煉油廠、能源基礎設施或工業設施，旨在削弱俄羅斯的戰爭能力和經濟。</p>
+  </details>
+  
+  <details>
+    <summary>俄羅斯對烏克蘭此類襲擊有何反應？對平民傷亡的態度是什麼？</summary>
+    <p>俄羅斯譴責這些襲擊，並誓言要對所有參與者進行「不可避免和嚴厲的懲罰」。莫斯科聲稱這些襲擊造成了平民傷亡，並將責任歸咎於烏克蘭，而烏克蘭則表示俄羅斯平民的死亡責任應由普丁承擔。</p>
+  </details>
+  
+  <details>
+    <summary>烏克蘭的深層次打擊與俄羅斯對烏克蘭的攻擊有何相似或不同之處？</summary>
+    <p>兩國都利用無人機和導彈對對方境內目標進行攻擊。然而，俄羅斯主要針對烏克蘭的城市和居民中心進行大規模空襲，而烏克蘭則更頻繁地鎖定俄羅斯的能源和工業設施，儘管這些襲擊也導致了平民傷亡。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-11-91024385e6.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cvgjvgv926po?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Netanyahu's rejection of Trump's 15-point Gaza plan unlikely to be final word</h3>
+  <p class="summary">以色列總理納坦雅胡（Netanyahu）近日正式拒絕了由「和平委員會」（Board of Peace）提出的加薩15點和平路線圖，該計畫旨在解除哈馬斯武裝並促成以色列撤軍。然而，美國白宮對此表示不以為意，認為這是納坦雅胡為國內選舉考量的競選言論，並預期以色列將在美國壓力下繼續推進部分和平進程。此舉突顯了以色列國內政治與國際外交之間的複雜角力，以及加薩地區和平進程的不確定性。
+
+*   儘管納坦雅胡公開拒絕，但國際穩定部隊（ISF）在拉法建設基地的計畫仍照常進行。
+*   哈馬斯已同意此路線圖，並呼籲調解方促使以色列遵守協議。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>和平委員會提出的加薩15點和平路線圖主要內容為何？</summary>
+    <p>該路線圖的核心目標是讓哈馬斯和其他巴勒斯坦武裝團體完全解除武裝，並將所有武器移交給加薩的新巴勒斯坦行政機構。同時，以色列軍隊將撤出目前控制的逾60%加薩地區。</p>
+  </details>
+  
+  <details>
+    <summary>儘管納坦雅胡公開拒絕，美國白宮為何對此反應平淡？</summary>
+    <p>美國將納坦雅胡的聲明視為其在即將到來的全國大選前的競選言論，旨在安撫國內右翼選民。美國官員認為，只要以色列繼續執行美方要求的行動，例如限制在加薩的襲擊，公開的拒絕聲明並無大礙。</p>
+  </details>
+  
+  <details>
+    <summary>國際穩定部隊（ISF）的部署將如何推動加薩的和平進程？</summary>
+    <p>國際穩定部隊的部署是和平計畫的關鍵一步，它將與新的巴勒斯坦警察部隊合作，以確保加薩地區的安全。ISF基地的建設意味著重建工作即將展開，並為解除哈馬斯武裝後的當地治理提供支持。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-11-457c7b8c1b.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/ce3q5282ep3o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>'We've had a lot of close calls': Canada wildfire evacuees wonder if they still have homes</h3>
+  <p class="summary">加拿大不列顛哥倫比亞省奧肯那根地區正受「禿山火」（Bald Range wildfire）嚴重威脅，該火災自上週五爆發以來迅速蔓延至53平方英里，已導致數千居民撤離，並造成至少一人死亡。
+許多居民不確定他們位在桃花園（Peachland）或夏日灘（Summerland）的家園是否安然無恙，且該火災仍處於失控狀態。
+
+關鍵點：
+• 該省目前有超過100起野火同時燃燒，其中70起是過去一週內新發生的。
+• 極端乾旱、乾燥閃電、高溫和強風預計將使火勢持續惡化，並可能引發新的火源。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼加拿大近年來野火頻率和強度都顯著增加？</summary>
+    <p>專家指出，氣候變遷導致天氣更熱、更乾燥，使得加拿大大片北方森林的野火變得更加頻繁和劇烈。例如，2023年該國經歷了歷史上最嚴重的野火季節。</p>
+  </details>
+  
+  <details>
+    <summary>加拿大的野火問題是否也影響了其他地區，或者這是更廣泛的全球現象？</summary>
+    <p>是的，不僅加拿大不列顛哥倫比亞省面臨野火威脅，其南部的美國華盛頓州也有6萬5千多人被迫撤離。今年夏天，歐洲的西班牙和法國也因乾旱和創紀錄的高溫而遭受嚴重火災。</p>
+  </details>
+  
+  <details>
+    <summary>面對如此快速的撤離，受災地區的牲畜和寵物是如何被處理或救援的？</summary>
+    <p>部分居民在緊急撤離時被迫將牲畜留在原地。志工團體，例如Kaz Nowlin所組織的，一直在奧肯那根地區幫助救援受困動物，至今已救出數十隻，包括57匹馬和數隻羊駝。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-11-48ce89dc66.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx2lwv032j9o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>NASA+ Debuts on discovery+, Coming Soon to HBO Max</h3>
+  <p class="summary">NASA+ 週一宣布將其節目擴展到 discovery+ 和 HBO Max，以將太空探索更廣泛地帶給觀眾。discovery+ 將提供 NASA+ 的連續直播內容，而 HBO Max 則會串流播放特別活動，包括預計於 2027 年進行的 Artemis III 任務。此舉旨在透過 Dolby Vision 技術提供更身臨其境的觀看體驗，並履行 NASA 與大眾分享太空探索故事的承諾。
+*   觀眾仍可透過 NASA 應用程式和官方網站免費、無廣告地觀看 NASA+ 內容。
+*   未來節目將涵蓋科學任務發射、載人登月任務等關鍵事件。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>NASA+ 在這些新的串流平台上與其原有的免費平台（NASA 應用程式和網站）有何不同？</summary>
+    <p>在 discovery+ 和 HBO Max 上，觀眾可以在支援的設備上以 Dolby Vision 觀看 NASA+ 內容，提供更生動、更清晰、更詳細的沉浸式體驗。然而，NASA+ 在其應用程式和網站上仍然是免費且無廣告的，內容核心保持一致。新的平台主要是擴大覆蓋範圍並提供高階的視聽選項。</p>
+  </details>
+  
+  <details>
+    <summary>除了 Artemis III 任務，NASA+ 在這些新平台上還將推出哪些未來的特色節目？</summary>
+    <p>未來的節目可能包括科學任務發射、與人類登陸系統會合和對接的試飛、機器人月球運送任務以及 Artemis 計畫下的首次載人登月任務等。這些內容旨在透明且引人入勝地記錄 NASA 的太空探索歷程。</p>
+  </details>
+  
+  <details>
+    <summary>NASA 擴展到主流串流平台的主要動機是什麼，這對其長期目標有何意義？</summary>
+    <p>NASA 擴展到主流串流平台是為了履行其在《國家航空暨太空法案》中，與最廣大受眾分享太空探索故事的承諾。此舉旨在透過多種裝置和首選頻道，強化與公眾的互動，讓更多人能夠接觸到其任務和教育內容，尤其是在 Artemis 計畫持續推進月球探索和建立月球基地的背景下。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-11-dbebc523c5.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-debuts-on-discovery-coming-soon-to-hbo-max/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Lion Nebula Roars to Life With NASA’s Webb</h3>
+  <p class="summary">美國太空總署（NASA）的詹姆斯·韋伯太空望遠鏡（JWST）近日捕捉到NGC 2392，又稱「獅子星雲」的全新高解析度影像，其紅外視角揭示了星雲中緻密的塵埃團塊和電離氣體的細節，比哈伯望遠鏡之前的可見光影像更清晰。這個星雲是由一顆低質量恆星死亡後，其外層物質被拋射形成，中心留下的白矮星正「烹煮」著這些氣體和塵埃，形成複雜的環狀和殼狀結構，未來約一萬年後將會消散。
+* 韋伯望遠鏡的紅外能力能夠穿透塵埃，揭示星雲內部更深層的結構。
+* 獅子星雲的獨特外觀是由於中心死亡恆星（白矮星）的能量和輻射所驅動。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是行星狀星雲，它是如何形成的？</summary>
+    <p>行星狀星雲是當一顆低質量恆星在其生命末期耗盡核心燃料時，變得不穩定並將其外層物質拋射到太空中形成的氣體和塵埃殼層。這些被拋射的物質由恆星殘餘的核心（白矮星）的輻射所驅動，形成美麗而複雜的結構。</p>
+  </details>
+  
+  <details>
+    <summary>韋伯望遠鏡的紅外影像與哈伯望遠鏡的觀測相比，揭示了哪些更清晰或新的細節？</summary>
+    <p>韋伯望遠鏡利用其紅外視角，能夠比哈伯望遠鏡在可見光下更清晰、更詳細地揭示獅子星雲的結構。它特別突顯了緻密的塵埃團塊和電離氣體的霧靄，這些是構成星雲複雜形態的重要組成部分。</p>
+  </details>
+  
+  <details>
+    <summary>獅子星雲的未來會如何，它最終的命運是什麼？</summary>
+    <p>獅子星雲將會持續演變，其氣體和塵埃會隨著時間從中心的恆星核心逐漸遠離並擴散。天文學家估計，這個壯麗的星雲將在大約一萬年後完全消散，這在宇宙的時間尺度上是一個相對短暫的階段。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-11-c288566b22.html">全文（約 3 分鐘）</a> ｜ <a href="https://science.nasa.gov/missions/webb/lion-nebula-roars-to-life-with-nasas-webb/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Community College Instructors Bring Astronomy Textbook Into 21st Century</h3>
+  <p class="summary">2026年6月，來自NASA科學活化（SciAct）計畫的三個團隊，包括NASA社區大學網絡（NCCN）、Infiniscope和NASA Treks，與五位社區大學講師合作，將NASA豐富的互動學習資源整合到OpenStax天文學101教科書中。這項計畫旨在為入門天文學學生提供現代且引人入勝的「REAL課程教材」，並預計於2026年秋季在社區大學課堂進行實地測試，以提升對天文學基本概念的理解。這項工作不僅作為將現有教科書轉化為活躍學習工具的驗證，也有效推廣了NASA SciAct的資源。
+
+重點摘要：
+- 改造OpenStax天文學教科書，使其更具互動性。
+- 結合NASA SciAct計畫的學習資源。
+- 預計於2026年秋季進行實地測試。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>OpenStax天文學101教科書是什麼？它為何被選中用於這次的教材改造計畫？</summary>
+    <p>OpenStax天文學101是一本被廣泛使用的教科書，以其核心內容和清晰的解釋性敘述而聞名。它被選中是因為團隊希望在保留其既有優點的基礎上，將其轉化為更具互動性的學習工具，以符合現代學生的學習策略。</p>
+  </details>
+  
+  <details>
+    <summary>NASA的「活躍學習組件」或資源具體包含哪些內容？</summary>
+    <p>這些活躍學習組件來自NASA豐富的教育和視覺化資源庫，包括圖像、活動以及由NASA SciAct計畫團隊（如NASA Treks、Universe of Learning和Cosmic Data Stories）開發的教材。它們旨在將概念性的天文學知識轉化為具體的、讓學生能動手參與的學習體驗。</p>
+  </details>
+  
+  <details>
+    <summary>在初步實地測試之後，這項「REAL課程教材」計畫的下一步是什麼？</summary>
+    <p>在2026年秋季的初步實地測試後，計畫下一步將擴大實施範圍，並系統性地重新構想OpenStax教科書的其餘內容。目標是將整本書，乃至整個宇宙的天文學知識，都轉化為活躍學習工具。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-11-c0c453403f.html">全文（約 2 分鐘）</a> ｜ <a href="https://science.nasa.gov/learning-resources/science-activation/community-college-instructors-bring-astronomy-textbook-into-21st-century/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>Why Are Rivers So Mathematical?</h3>
+  <p class="summary">「河流為何如此數學化？」一文探討了河流網絡看似混沌卻又遵循著普世數學定律——哈克定律（Hack's Law，L ~ A^0.6）。這定律指出河流長度與其流域面積的0.6次方成正比，意味著大型流域會比小型流域更為細長。其成因可歸結為水流下坡運輸最優化能源效率的結果，以及河流系統透過侵蝕和沈積不斷自我調整，歷經數千年演化至此種最小能量耗散的穩定配置。近期研究更發現哈克定律也適用於河流三角洲，為地球科學家們帶來了新的謎團。
+* 哈克定律 (L ~ A^0.6) 是河流網絡的核心數學關係。
+* 能源效率與景觀演化是解釋河流形態的兩大關鍵因素。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>文章提到其他運輸網絡（如血管、植物葉脈）也有分形模式，它們是否也遵循哈克定律或類似的最佳比例定律？</summary>
+    <p>文章指出，儘管許多運輸網絡都呈現分支模式，但它們可能遵循不同的最佳比例定律。例如，在三維空間中分支的樹木，其定律會與河流不同。本文特別關注河流是從混沌的地球過程中產生，而非生物演化或都市規劃的結果。</p>
+  </details>
+  
+  <details>
+    <summary>為何哈克定律應用於河流三角洲會令人驚訝？地貌學家可能會如何進一步探索？</summary>
+    <p>令人驚訝之處在於，河流三角洲是分流網絡（沉積物堆積、水分流），與主流入網絡（沉積物運輸、水匯聚）恰好相反。三角洲同時也是平坦且動態的區域，研究難度高。地貌學家目前正思考為何這個數學定律在這種逆向情境中依然適用，這可能揭示了更深層、普遍的有效運輸原則。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="../article/2026-08-11-8bd809d7a0.html">全文（約 9 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/why-are-rivers-so-mathematical-20260810/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Khosheutovsky khurul</h3>
+  <p class="summary">Khosheutovsky khurul 是歐洲最古老的佛教寺廟，為紀念曾對抗拿破崙的卡爾梅克團而建造。這座寺廟因其獨特的建築風格，被認為是一種建築上的異數。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Khosheutovsky khurul 位於何處，有什麼更具體的背景嗎？</summary>
+    <p>根據標題，Khosheutovsky khurul 是歐洲最古老的佛教寺廟。雖然文章未提供確切地點，但它與卡爾梅克團在對抗拿破崙戰爭中的作用密切相關，暗示其可能位於卡爾梅克人居住的地區，例如俄羅斯的卡爾梅克共和國。</p>
+  </details>
+  
+  <details>
+    <summary>卡爾梅克人是誰？他們為何會對抗拿破崙？</summary>
+    <p>卡爾梅克人是一個主要居住在俄羅斯卡爾梅克共和國的蒙古族群，傳統上信奉藏傳佛教。他們是俄羅斯帝國的組成部分，因此在拿破崙戰爭期間，卡爾梅克騎兵團作為沙皇軍隊的一部分，參與了對抗法軍的戰鬥。</p>
+  </details>
+  
+  <details>
+    <summary>為什麼這座寺廟會被稱為「建築上的異數」？</summary>
+    <p>文章未詳細說明其「建築上的異數」具體表現在哪裡，但這通常意味著它的設計或風格與當地常見的建築模式、或傳統佛教寺廟的典型樣貌有所不同。這可能體現在其材料、結構、裝飾元素，或是與其他建築風格的融合上。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-08-11-c73cb602e3.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/the-strange-circuitous-history-of-europes-oldest-buddhist-temple">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>

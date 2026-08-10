@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploiting System Management Mode with a very long interrupt</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-11-5ba2f6fd9c-p56.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Exploiting System Management Mode with a very long interrupt</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 56 / 56 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-11-5ba2f6fd9c-p55-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 56 / 56 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">| -r xmm\|ymm\|zmm | xmm | Vector register width for the timed MMIO read (16/32/64 bytes). If no SMI count delta is observed, the tool advises stepping up to the next size. |</p>
+
+<p class="fulltext">| -a <phys-addr> | 0xfcc68860 | Target physical address for the MMIO timing loop (hex 0x... or decimal). |</p>
+
+<p class="fulltext">| -h ,--help | — | Print usage and exit. |</p>
+
+<p class="fulltext">smiiiiiiiiiiiiiiii is a research effort from Christopher Domas (@xoreaxeaxeax).</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>什麼是系統管理模式 (SMM)，以及打破它為何如此嚴重？</summary>
+  <p>SMM是x86 CPU上一個高度特權的執行環境，用於處理諸如電源管理或硬體控制等底層系統任務。破壞SMM意味著攻擊者可能獲得對系統的最高控制權限，繞過大部分安全防護。</p>
+</details>
+
+<details>
+  <summary>這種「超長指令」是如何導致SMM同步失效的？</summary>
+  <p>SMM要求所有核心同時進入或退出。當一個核心執行耗時極長的指令時，它無法及時響應另一個核心發出的SMM進入請求。發出請求的核心最終會因逾時而單獨進入SMM，從而破壞了SMM預期的同步狀態。</p>
+</details>
+
+<details>
+  <summary>修復這個SMM漏洞面臨哪些主要挑戰？</summary>
+  <p>修復此漏洞存在兩難：如果保留或增加等待超長指令完成的逾時時間，可能會導致性能下降或同步被破壞；如果移除逾時，則一個合法停滯的核心可能導致整個平台掛起。目前沒有明確的最佳解決方案。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-11-5ba2f6fd9c-p55-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 56 / 56 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
