@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compression is prediction</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-12-393c13f6da-p37.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Compression is prediction</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 37 / 37 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://ngrok.com/blog/compression-is-prediction">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-12-393c13f6da-p36-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 37 / 37 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The open question is how small we can make our entropy. Better models—better predictors—help us lower this number. LLMs are fantastic at this (setting aside the overhead cost), but what’s really interesting is that they’re trained to minimize that exact bits-per-symbol number. With LLMs this is called cross-entropy, but it’s the same underlying formula. So while in compression entropy measures how small we can shrink things, in language modeling, it’s a number we reduce to make our model better at prediction. If you’d like to dig into the nitty-gritty of this, check out this article by Chris Olah.</p>
+
+<p class="fulltext">At the end of the day, though, both LLMs and compression algorithms are predictors. They’re two expressions of the same underlying math. Compression is prediction, and LLMs are compressors.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>為什麼文章說資料壓縮與大型語言模型（LLMs）的核心任務都是「預測」？</summary>
+  <p>傳統資料壓縮透過識別並移除資料中的重複或冗餘模式來縮小檔案，這本質上是在預測接下來可能出現的資料。同樣地，LLMs透過學習語言模式來預測下一個最有可能的詞或字元，從而生成連貫的文本。兩者都是基於對資料模式的「預測」來達到其目的。</p>
+</details>
+
+<details>
+  <summary>既然LLMs在預測上表現出色，為何文章又說它們不適用於一般的資料壓縮任務？</summary>
+  <p>儘管LLMs有強大的預測能力，但它們通常規模巨大，需要數GB甚至數TB的儲存空間，並消耗大量的運算資源。對於壓縮網頁回應等日常任務，這些成本遠遠超過了壓縮所能帶來的效益，因此傳統且輕量級的壓縮演算法（如gzip）仍然是更實際的選擇。</p>
+</details>
+
+<details>
+  <summary>文章中提到的「熵」與LLMs的「交叉熵」有何關聯，它們在壓縮與語言模型中扮演什麼角色？</summary>
+  <p>在資料壓縮中，「熵」衡量的是資料的最小不可壓縮大小，即資料的真實資訊量。壓縮的目標是將資料壓縮至接近其熵值。而LLMs訓練時最小化的「交叉熵」，本質上也是在最小化模型預測與實際資料分佈之間的差異，這與壓縮中減少「每符號位元數」的目標相同，都旨在使模型更有效地預測資料。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-12-393c13f6da-p36-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 37 / 37 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
