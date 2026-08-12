@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delta</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-13-d2535f0238-p10-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Delta</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 10 / 10 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://zed.dev/blog/introducing-delta">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-13-d2535f0238-p9.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 10 / 10 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Check out similar blogs from the Zed team.</p>
+
+<p class="fulltext">Looking for a better editor?</p>
+
+<p class="fulltext">You can try Zed today on macOS, Windows, or Linux. Download now!</p>
+
+<p class="fulltext">We are hiring!</p>
+
+<p class="fulltext">If you're passionate about the topics we cover on our blog, please consider joining our team to help us ship the future of software development.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Delta 與現有程式碼協作工具相比，主要的創新或改進之處為何？</summary>
+  <p>Delta 透過其 DeltaDB 技術，將程式碼與對話即時連結，讓所有評論都能緊密地附著於不斷演進的程式碼上，而不是傳統工具中容易過時的程式碼快照。這確保了開發者和 AI 代理在整個開發過程中都能保有完整的語境和決策歷史。</p>
+</details>
+
+<details>
+  <summary>文章中提及的 DeltaDB 具體是什麼，它如何與開發者現有的 Git 工作流程整合？</summary>
+  <p>DeltaDB 是一個即時同步對話和程式碼工作樹的數據庫系統。它與現有的 Git 儲存庫無縫協作，在每次提交之間捕捉所有的編輯和對話，因此開發者可以像往常一樣提交和推送，而未使用 Delta 的隊友仍能看到標準的 Git 儲存庫。</p>
+</details>
+
+<details>
+  <summary>Delta 與現有的 Zed 編輯器有何關聯？DeltaDB 未來是否也會整合到 Zed 中？</summary>
+  <p>Delta 是一個全新的應用程式，雖然它與 Zed 秉持相同的性能與工藝原則，但它被設計為 DeltaDB 的首個客戶端，以不受現有編輯器限制地迭代。儘管 Delta 是 DeltaDB 的起點，開發團隊仍會繼續開發 Zed，並且 DeltaDB 最終也會整合到 Zed 編輯器中。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-13-d2535f0238-p9.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 10 / 10 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

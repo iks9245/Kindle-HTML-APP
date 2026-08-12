@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML over WebSockets: real-time SPAs with barely any JavaScript</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-13-39b8dacf1d-p24-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>HTML over WebSockets: real-time SPAs with barely any JavaScript</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 24 / 24 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-13-39b8dacf1d-p23.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 24 / 24 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Laravel Reverb, Laravel's first-party WebSocket server (2024): proof that PHP also does real-time without third-party extensions.</p>
+
+<p class="fulltext">- ASP.NET Core Blazor render modes, Microsoft Learn: the Interactive Server mode runs over SignalR (WebSockets).</p>
+
+<p class="fulltext">This work is under a Attribution-NonCommercial-NoDerivatives 4.0 International license.</p>
+
+<p class="fulltext">Help me keep writing</p>
+
+<p class="fulltext">Every coffee gives me a push toward the next article.</p>
+
+<p class="fulltext">Comments</p>
+
+<p class="fulltext">There are no comments yet.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>「HTML over WebSockets」這種技術解決了傳統 SPA 開發模式的哪些痛點？</summary>
+  <p>傳統 SPA 通常需要獨立的前端 JavaScript 框架和後端 API，導致兩套獨立程式碼庫透過複雜的合約相互理解，增加了開發的複雜度和溝通成本。HTML over WebSockets 透過將所有渲染邏輯移至後端，並直接傳送 HTML，簡化了架構、減少了對 API 合約的需求，並允許以單一語言棧進行開發，從而提升效率。</p>
+</details>
+
+<details>
+  <summary>對於前端和後端開發者來說，採用「HTML over WebSockets」這種模式會帶來什麼樣的影響？</summary>
+  <p>對後端開發者而言，他們將承擔更多渲染邏輯和介面控制的責任，但可以在自己熟悉的語言和環境中完成更多工作。前端開發者則無需處理複雜的視圖渲染，主要職責是建立 WebSocket 通道、放置接收到的 HTML，以及處理次要的動畫和事件。這種模式促進了團隊在單一技術棧上的協作，潛在地加速了開發週期。</p>
+</details>
+
+<details>
+  <summary>雖然文章提到這種技術的優點，但它在什麼情況下可能不適用，或者有哪些潛在的局限性？</summary>
+  <p>HTML over WebSockets 最適合需要雙向、低延遲即時通訊的應用，如聊天室或協作工具，但並非所有情況都適用。如果應用僅需從伺服器單向推播更新，SSE (Server-Sent Events) 可能更簡單且經濟；如果一般的請求-回應模式已足夠，HTTP 上的超媒體（如 htmx）會是更好的選擇。此外，所有的渲染邏輯都在伺服器端，可能會增加伺服器的負載和狀態管理的複雜性。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-13-39b8dacf1d-p23.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 24 / 24 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
