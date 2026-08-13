@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accelerating GPT-5.6 Sol Ultrafast</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-14-50f9ffd706-p7.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Accelerating GPT-5.6 Sol Ultrafast</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 7 / 7 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-14-50f9ffd706-p6-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 7 / 7 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Cerebras takes a contrarian approach to eliminating this inefficient data movement: we pack 44 GB of SRAM on each wafer-sized chip. Weights stay on-chip, and tokens flow uninterrupted through model layers pipelined across wafers. This technical approach scales smoothly with model size, paving the way for a continued speed advantage on future frontier models.</p>
+
+<p class="fulltext">Ultrafast: Now in Limited Preview</p>
+
+<p class="fulltext">GPT-5.6 Sol on Ultrafast mode is available in a limited preview today to a select group of customers. Access will expand as capacity grows. Sign up for updates.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Cerebras 的 Wafer-Scale Engine 架構是如何實現 GPT-5.6 Sol Ultrafast 如此高速的？</summary>
+  <p>Cerebras 的技術透過在單個晶圓級晶片上整合 44 GB 的 SRAM，讓模型權重能夠保留在晶片上。這消除了傳統 GPU 上模型權重在晶片內外記憶體之間頻繁傳輸所造成的記憶體頻寬瓶頸，從而實現了不間斷的 token 流。</p>
+</details>
+
+<details>
+  <summary>Ultrafast 模式目前僅供部分客戶預覽，預計何時會擴大開放？其廣泛應用將帶來哪些潛在影響？</summary>
+  <p>雖然文章中沒有明確指出具體日期，但提到隨著容量的增長，訪問權限將會擴大。廣泛應用後，它將能徹底改變代理人的工作模式，並在法律、金融、網路安全等領域實現即時洞察和決策，顯著提高企業響應關鍵問題的能力。</p>
+</details>
+
+<details>
+  <summary>除了文章中提到的法律簡報和金融模型，GPT-5.6 Sol Ultrafast 在哪些「經濟上有價值的知識工作任務」上最具優勢？</summary>
+  <p>憑藉其超高速推理能力，GPT-5.6 Sol Ultrafast 特別適用於需要快速處理大量資訊和即時決策的任務。例如，在工程報告生成、生產中斷故障排除、以及高風險網路攻擊的即時威脅檢測與響應等方面，它都能大幅提升效率並降低潛在損失。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-14-50f9ffd706-p6-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 7 / 7 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
