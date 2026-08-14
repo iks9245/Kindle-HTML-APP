@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maximizing the value of your Claude Code sessions</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-15-9f1cc05b1c-p23.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Maximizing the value of your Claude Code sessions</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 23 / 23 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-15-9f1cc05b1c-p22-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 23 / 23 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Get the developer newsletter</p>
+
+<p class="fulltext">Product updates, how-tos, community spotlights, and more. Delivered monthly to your inbox.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>為什麼在 Claude Code 會話中管理 token 使用量變得如此重要？</summary>
+  <p>過去的編碼工具通常是固定費用或免費，但像 Claude Code 這樣的代理工具按 token 計費。這意味著即使是相同的任務，不同的使用方式也會產生不同的成本，因此有效管理 token 使用量對於控制費用至關重要。</p>
+</details>
+
+<details>
+  <summary>文章中提到了哪些具體的指令或技巧，可以幫助用戶有效管理上下文並節省 token？</summary>
+  <p>文章建議使用 `/clear` 在新任務開始前清除不相關的上下文，以減少 token 消耗。此外，在休息前使用 `/compact` 可以總結對話並利用快取，而使用 subagents 則能將產生大量臨時輸出的任務隔離，進一步優化 token 使用。</p>
+</details>
+
+<details>
+  <summary>除了管理上下文，還有哪些因素會影響 Claude Code 會話的成本和效率？</summary>
+  <p>除了上下文管理，模型選擇（如更大的模型處理複雜問題，更小的模型處理常規任務）和 token 類型（輸入 token 與輸出 token 的計費差異）也會顯著影響成本。輸出 token 比輸入 token 更昂貴，因為它們涉及更多的 GPU 運算時間，且思考 token 也是輸出的一部分，可以透過 `/effort` 或 `MAX_THINKING_TOKENS=0` 進行控制。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-15-9f1cc05b1c-p22-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 23 / 23 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RustDesk now supports true unattended remote access on Wayland</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-15-ac01be975c-p3.html">切換為襯線字體顯示</a></p>
+
+
+<h1>RustDesk now supports true unattended remote access on Wayland</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 3 / 3 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://rustdesk.com/blog/unattended-remote-access-wayland/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-15-ac01be975c-p2-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 3 / 3 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">If you use Wayland, especially with multiple monitors, please give the preview build a try and let us know what works—and what doesn’t.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Wayland 是什麼？為什麼它對遠端桌面應用程式的支援一直很困難？</summary>
+  <p>Wayland 是一種現代的顯示伺服器協定，旨在取代 Linux 上較舊的 X Window System (Xorg)，提供更好的安全性和性能。然而，其安全模型使得應用程式難以直接截取螢幕內容，而這對遠端桌面軟體至關重要，因此為開發帶來了重大挑戰。</p>
+</details>
+
+<details>
+  <summary>RustDesk 在 Wayland 無人值守遠端存取功能方面，下一步的計畫是什麼？</summary>
+  <p>RustDesk 團隊計畫從這個預覽版本中收集更多實際測試數據。一旦功能穩定，他們打算將 Wayland 無人值守存取推廣到更多 Linux 發行版，包括 Fedora 和 Arch Linux，並最終將其整合到標準的 RustDesk 發行版中。</p>
+</details>
+
+<details>
+  <summary>RustDesk 的 Wayland 支援與其他主流遠端桌面產品相比有何不同？</summary>
+  <p>RustDesk 現在能夠在 Wayland 上提供真正的無人值守存取，這是其一大優勢。相較之下，AnyDesk 目前在 Linux 會話中仍要求使用 Xorg，而 TeamViewer 對 Wayland 的支援則被描述為實驗性的，顯示 RustDesk 在這一領域取得了領先地位。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-15-ac01be975c-p2-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 3 / 3 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
