@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-08-17</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-17-sans.html">切換為無襯線字體顯示</a></p>
+
+<h1>每日 AI 文摘 2026-08-17</h1>
+<p class="meta">
+2026-08-17
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="index.html">存檔列表</a>
+
+
+
+ ｜ <a href="2026-08-16.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日全球地緣政治局勢緊張，俄烏戰爭升級至2026年最大規模襲擊，而美國前總統川普則持續影響國際政策，不僅宣布縮減美韓軍演，其特使也正積極推動加薩和平計畫。同時，科技領域正經歷重大變革，人工智慧模型策略性地轉向強化推理能力以求更高效精簡，而RISC-V的開放性則為開發中國家普及嵌入式技術帶來希望。然而，大型科技公司如Cloudflare靜默注入分析代碼的行為，也引發了用戶數據隱私的新一輪關注。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>Models Are Getting Dumber on Purpose</h3>
+  <p class="summary">近期，AI模型正刻意犧牲龐大的事實知識儲存，轉而專注於強化其推理能力，導致模型在特定基準測試上表現出「更聰明」的表現，儘管整體知識儲備減少。這種趨勢使得模型參數數量大幅下降，例如GLM-5.2和Qwen3.5等，使其更小、更高效，足以在消費級GPU上運行。此策略旨在將容易過時且佔用空間的事實知識外包給外部工具或檢索系統，而模型本身則作為一個強大的「推理引擎」，以此解決幻覺問題並延長模型的核心價值。
+* 模型目的性地捨棄大量事實知識，轉而提升推理能力。
+* 這使得模型體積更小，能在消費級硬體上高效運行。
+* 最終目標是結合外部知識庫，大幅減少幻覺並保持知識更新。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼AI實驗室選擇犧牲模型的「事實知識」來增強「推理能力」？</summary>
+    <p>這是因為事實知識佔用大量參數，更新迅速且容易過時，導致模型訓練成本高昂且易產生幻覺。相反，推理程序更為穩定且可壓縮，透過犧牲事實儲存能讓模型更小巧、更高效，並解決了過去事實錯誤難以修正的問題。</p>
+  </details>
+  
+  <details>
+    <summary>這種將事實知識外包給外部系統，而模型專注於推理的策略，如何解決目前AI模型常見的「幻覺」問題？</summary>
+    <p>當事實知識儲存在模型權重中時，錯誤的事實難以追蹤和修正。但若事實來自外部可更新的知識庫，錯誤就有「地址」可查證。這樣一來，用戶可以編輯外部文件來修正錯誤，大幅減少了模型生成不實資訊的機率，並使修正過程更加透明和高效。</p>
+  </details>
+  
+  <details>
+    <summary>這些「刻意變笨」但推理能力強的模型，在哪些任務上會表現出色？而若沒有外部工具輔助，它們又會在哪方面遇到困難？</summary>
+    <p>它們在數學、程式編碼等需要邏輯推理和步驟分解的任務上表現出色，因為這些程序相對穩定。然而，若沒有外部工具輔助，當被問及最新的時事、複雜的統計數據或特定領域的深層細節等純粹的事實問題時，這些模型將難以提供正確答案，甚至會傾向於編造資訊。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-17-08e6169d68.html">全文（約 6 分鐘）</a> ｜ <a href="https://w4g1.dev/blog/models-are-getting-dumber-on-purpose">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Tell HN: Cloudflare silently injects its analytics when you switch nameservers</h3>
+  <p class="summary">近日，用戶「stagas」報告指出，當他將網站名稱伺服器切換至 Cloudflare 並啟用其代理服務時，Cloudflare 預設在其網站中靜默注入了 JavaScript 分析代碼。多位其他用戶也證實了這一情況，指出即使未明確啟用分析功能，Cloudflare 也可能自動加入 `beacon.min.js` 追蹤腳本，並認為這種做法具有侵入性，應改為選擇啟用。
+* 該問題主要影響使用 Cloudflare 代理服務（DNS 設置中的橙色雲朵）的網站。
+* 用戶需進入 Cloudflare 分析儀表板手動啟用後再停用，或將域名設置為「僅限 DNS」（灰色雲朵）以移除該腳本。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>如果網站擁有者不希望 Cloudflare 注入分析腳本，他們應該如何操作？</summary>
+    <p>網站擁有者應確保其域名在 Cloudflare DNS 設定中設為「僅限 DNS」（灰色雲朵圖標），而非「代理」（橙色雲朵圖標）。此外，如果已啟用代理，則需要在 Cloudflare 分析儀表板中手動啟用網站分析後再將其停用。</p>
+  </details>
+  
+  <details>
+    <summary>Cloudflare 為何會採取這種預設注入分析腳本的做法？</summary>
+    <p>文章中提到，Cloudflare 可能認為其 CDN 代理服務是大多數用戶使用的預期預設功能，因此傾向於預設啟用相關服務。然而，許多用戶認為這應該是選擇啟用而非選擇停用的功能。</p>
+  </details>
+  
+  <details>
+    <summary>Cloudflare 靜默注入分析腳本對用戶網站的隱私和安全性有何潛在影響？</summary>
+    <p>這種做法引發了對用戶數據隱私的擔憂，因為它在未經明確同意的情況下收集了網站訪客的分析數據。更廣泛地看，如果 Cloudflare 能夠在網站內容中注入腳本，理論上它也能夠監視加密流量，這對於網站的數據完整性和安全性構成潛在風險。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-17-35ab455a61.html">全文（約 11 分鐘）</a> ｜ <a href="https://news.ycombinator.com/item?id=49322107">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>A 3rd World Embedded Engineer Responds to "RISC-V They Should Have Known Better"</h3>
+  <p class="summary">一位來自千里達及托巴哥的嵌入式工程師 Armstrong Subero 回應了 Dmitry Grinberg 對 RISC-V 架構的批評，指出 Grinberg 忽略了 RISC-V 對「第三世界」國家普及嵌入式技術的關鍵意義。作者認為，RISC-V 的真正優勢在於其極低的成本和易於獲取性，而非其架構的優雅，這使得當地工程師和學生能夠以可負擔的價格獲得開發硬體。
+*   重點：RISC-V 的價格優勢和開放生態系統。
+*   重點：實現了全球範圍內，特別是開發中國家嵌入式系統教育和開發的普及化。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Dmitry Grinberg 對 RISC-V 的主要批評是什麼？</summary>
+    <p>Grinberg 的批評主要集中在 RISC-V 的架構設計細節上，他認為某些指令集的選擇不夠優雅或存在缺陷，例如壓縮儲存偏移量、Zicsr 作為獨立擴展等。他認為 RISC-V 缺乏理想的指令集設計，並將此視為一種「輕微的指責」。</p>
+  </details>
+  
+  <details>
+    <summary>作者 Armstrong Subero 來自「第三世界」國家的視角如何影響他對 RISC-V 的看法？</summary>
+    <p>對於像千里達及托巴哥這樣的國家，開發板和晶片的運費高昂且獲取困難。Subero 認為，在這種環境下，RISC-V 晶片低廉的價格（幾美分）和無需授權費的開放性遠比架構的「優雅」更重要，因為這直接決定了是否能讓學生和工程師負擔得起並實際接觸到硬體。</p>
+  </details>
+  
+  <details>
+    <summary>文章如何闡釋 RISC-V 在全球範圍內實現「自由與民主」的意義？</summary>
+    <p>RISC-V 的開放性、低成本和無需授權的特性，使得世界各地的工程師，特別是那些在資源受限地區的工程師，能夠自主設計、學習和創新，而不受傳統專有技術許可的限制。這打破了技術獲取的障礙，讓更多人能夠參與到嵌入式系統的開發中，體現了技術的普及和民主化。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-17-3e9e04424f.html">全文（約 14 分鐘）</a> ｜ <a href="https://rvembedded.com/blog_post/12/">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Russia says at least seven killed in largest Ukrainian attack of 2026</h3>
+  <p class="summary">俄羅斯表示，烏克蘭發動了今年（2026年）規模最大的襲擊，至少造成7人死亡，其中莫斯科地區遭600架無人機鎖定，共822架無人機參與，導致莫斯科附近的一個大型線上零售商Wildberries倉庫受損。與此同時，俄羅斯對烏克蘭的襲擊也造成至少7人死亡及逾39人受傷，雙方空戰升級，目標涵蓋基礎設施及平民區。
+* 此次烏克蘭襲擊是2026年最大規模，凸顯其深入俄羅斯境內打擊能力的提升。
+* 雙方攻擊均造成嚴重平民傷亡和財產損失，加劇了人道危機。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>烏克蘭為何會鎖定像Wildberries這樣的大型線上零售商倉庫為攻擊目標？</summary>
+    <p>根據烏克蘭國防部表示，Wildberries的物流中心被俄羅斯用於購買軍事裝備和供應俄羅斯軍隊，因此將其列為打擊目標。這次襲擊據稱已使Wildberries十大物流中心中的七個「癱瘓」。</p>
+  </details>
+  
+  <details>
+    <summary>摘要指出這是烏克蘭今年「規模最大」的襲擊，這對烏克蘭的軍事能力發展有何暗示？</summary>
+    <p>這暗示烏克蘭在自主研發和製造長程無人機方面取得了顯著進展，使其能夠深入俄羅斯領土進行大規模打擊。烏克蘭前國防部長也指出，該國有望在未來三到六個月內具備發射國產彈道飛彈的能力，進一步提升其打擊範圍和強度。</p>
+  </details>
+  
+  <details>
+    <summary>這次空襲的加劇，對俄烏戰爭的整體局勢有何影響？</summary>
+    <p>文章指出，隨著地面戰線的膠著，雙方戰事已演變為以飛彈和無人機互襲為主的空中戰。這種加劇的空中戰旨在削弱對方的作戰能力，儘管造成大量平民傷亡，但地面戰線的實際推進仍舊有限。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-17-20cfa26d02.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c1411pgje8xo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Trump says US to scale back military drills with South Korea after it stayed out of Iran war</h3>
+  <p class="summary">美國前總統唐納·川普宣布，美國將「大幅減少」與韓國的聯合軍事演習，理由是他與北韓領導人金正恩的「良好關係」，以及這些演習成本高昂且傳達了「不恰當和敵對」的信號。此外，他還指出韓國近期拒絕加入美國對伊朗的「去核化」行動。此舉發生在北韓進行彈道飛彈試射之後，儘管美韓日前才宣布將舉行「乙支自由之盾」聯合軍演。
+* 川普認為軍演耗資巨大且具挑釁意味。
+* 韓國拒絕參與美國對伊朗的去核化倡議。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>美韓聯合軍事演習的性質是什麼？北韓為何對此類演習表示反對？</summary>
+    <p>美韓聯合軍事演習通常是每年舉行的防禦性演練，如「乙支自由之盾」，旨在提升兩國的聯合防禦能力。北韓視這些演習為入侵的預演和威脅，並多次聲明這侵犯了其自衛權。</p>
+  </details>
+  
+  <details>
+    <summary>減少美韓聯合軍演對區域安全和美國的盟友關係可能產生什麼影響？</summary>
+    <p>減少軍演可能會被外界解讀為美國對其區域盟友承諾的鬆動，尤其可能削弱對北韓的嚇阻力。同時，這也可能影響美國在亞洲的同盟體系，並引發其他盟友對未來合作模式的擔憂。</p>
+  </details>
+  
+  <details>
+    <summary>川普提到韓國拒絕參與伊朗「去核化」的決定，這其中有何深意？</summary>
+    <p>川普提及韓國拒絕參與伊朗「去核化」的決定，可能暗示他將盟友之間的合作視為一種交易，期望盟友在不同國際事務上配合美國的政策。這也可能反映出美國在外交策略上試圖將不同地區的安全與非擴散議題連結起來，以爭取更多支持。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-17-d39bc91ddc.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Trump envoy Kushner meets Hamas leader to push Gaza peace plan</h3>
+  <p class="summary">美國總統川普的中東特使庫許納週日在埃及會見了哈瑪斯新任領導人哈亞，以推動美國支持的加薩和平計畫。該計畫旨在實現哈瑪斯解除武裝、以色列撤軍以及加薩由新的巴勒斯坦民事政府重建。然而，以色列上週已拒絕此計畫，堅持必須先全面解除哈瑪斯武裝，此舉遭到八個穆斯林國家的譴責，認為這威脅到川普的和平努力。
+* 庫許納的會晤是自去年停火協議以來，與哈瑪斯在這一層級的首次接觸。
+* 會談據報導聚焦於哈瑪斯武器的解除，以及以色列撤軍和人道救援工作。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>以色列為何拒絕這項和平計畫，並提出了哪些條件？</summary>
+    <p>以色列拒絕了川普政府提出的加薩和平計畫，主要原因是他們堅持哈瑪斯必須先完全解除武裝。以色列總理納坦雅胡明確表示，除非哈瑪斯真正解除武裝，否則以色列國防軍不會執行任何撤軍行動。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提及的「和平委員會」是什麼組織？除了庫許納，還有哪些重要人士參與了這次會談？</summary>
+    <p>「和平委員會」是由美國總統川普領導的一個國際組織，最初目標是為加薩帶來和平，但後來已擴展至處理全球範圍內的衝突。除了庫許納和哈瑪斯領導人外，委員會特使尼古拉·姆拉德諾夫、英國前首相東尼·布萊爾，以及埃及、卡達和土耳其的代表也一同參與了此次在埃及的會談。</p>
+  </details>
+  
+  <details>
+    <summary>鑑於這些和平努力，加薩目前的停火狀況如何？這場衝突最初是如何爆發的？</summary>
+    <p>儘管自去年10月10日生效的停火協議依然存在，但以色列國防軍此後在加薩進行了數次打擊，指責哈瑪斯違反停火。這場衝突的導火線是2023年10月7日哈瑪斯對以色列南部發動的襲擊，造成約1,200人死亡和251名人質，隨後以色列對加薩展開了大規模軍事行動。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-17-2d4b21839f.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c77gg5vn44yo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>APOD: 2026 August 16 – Milky Way over Yellowstone</h3>
+  <p class="summary">APOD（每日一天文圖）於 2026 年 8 月 16 日刊載了一張由 Dave Lane 於 2014 年拍攝的壯麗全景圖，展示了美國懷俄明州黃石國家公園硫磺泉（Silex Spring）上方橫跨天際的銀河系。這張由 16 張照片合成的影像，巧妙地結合了地球獨特的地質奇觀與浩瀚的宇宙景致，突顯了自然界的雙重魅力。文章同時提醒，黃石熱點的岩漿活動與過去的超級火山爆發有關，未來仍潛藏影響北美洲大片區域的潛在威脅。
+
+- 硫磺泉鮮豔的色彩源自生長在熱泉中的細菌層，而非天文現象。
+- 黃石熱點曾引發大規模超級火山爆發，未來仍有再次噴發的潛在威脅。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>黃石熱點所謂的「超級火山」究竟是什麼？它一旦爆發將會產生什麼樣的影響？</summary>
+    <p>黃石熱點是一個巨大的火山活動區域，其地下儲存著龐大的岩漿庫，被稱為「超級火山」。若其再次像約 64 萬年前那樣大爆發，可能導致北美洲大片區域被火山灰覆蓋、全球氣候劇烈變化，並對生態和人類社會造成毀滅性衝擊。</p>
+  </details>
+  
+  <details>
+    <summary>文章中特別提到「銀河不是由蒸發的湖水造成的」，這句話想澄清什麼樣的誤解？</summary>
+    <p>這句話是為了防止讀者因照片構圖而產生混淆。影像中硫磺泉鮮豔的顏色是由泉水中的細菌層產生，與遠在天際、由數十億顆恆星組成的銀河系完全無關，兩者只是在視覺上巧合地被捕捉在同一畫面中。</p>
+  </details>
+  
+  <details>
+    <summary>硫磺泉中「細菌層」如何導致其水體呈現如此豐富多彩的顏色？</summary>
+    <p>硫磺泉的熱水環境富含多種礦物質，為不同種類的嗜熱微生物提供了獨特的生長條件。這些細菌和古菌會產生不同的色素，並依據泉水的溫度梯度、化學成分等條件，在泉邊形成不同顏色的微生物群落，從而呈現出令人驚嘆的色彩變化。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-17-7b23f8a5b2.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/image-article/apod/apod-2026-august-16-milky-way-over-yellowstone/">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>
