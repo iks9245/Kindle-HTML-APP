@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPU Offload in Rust: Portable, Safe, and Fast</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-18-e81d1903d0-p5.html">切換為襯線字體顯示</a></p>
+
+
+<h1>GPU Offload in Rust: Portable, Safe, and Fast</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 5 / 5 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://arxiv.org/abs/2608.13759">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-18-e81d1903d0-p4-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 5 / 5 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Influence Flower (What are Influence Flowers?)</p>
+
+<p class="fulltext">CORE Recommender (What is CORE?)</p>
+
+<p class="fulltext">arXivLabs: experimental projects with community collaborators</p>
+
+<p class="fulltext">arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.</p>
+
+<p class="fulltext">Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.</p>
+
+<p class="fulltext">Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>為什麼傳統上在GPU程式設計中，記憶體安全性和執行效率難以兼顧？</summary>
+  <p>傳統上，為了達到高效能，GPU程式設計常需使用特定供應商的領域特定語言（DSLs）或直接操作不安全的原始指標，這犧牲了記憶體安全性。Rust雖然在CPU端提供了嚴格的記憶體安全保證，但將其所有權模型應用於大規模並行GPU環境一直是一大挑戰。</p>
+</details>
+
+<details>
+  <summary>對於開發者而言，使用這個新的Rust GPU offload框架會帶來哪些主要好處？</summary>
+  <p>主要好處包括能夠以Rust的編譯時記憶體安全保證來編寫GPU程式碼，無需妥協於執行效率或使用不安全的語法。此外，它支援多供應商GPU，增強了程式碼的可移植性，並減少了開發者在不同硬體平台間適應的負擔，提供更一致的開發體驗。</p>
+</details>
+
+<details>
+  <summary>這個框架是如何解決主機與裝置目標之間跨供應商ABI（應用二進位介面）不匹配問題的？</summary>
+  <p>該框架透過引入一個雙通道編譯管線來解決此問題。這使得編譯器能夠安全地處理手動或編譯器生成的記憶體移動，確保不同供應商的GPU硬體與主機系統之間能正確且有效地溝通，從而實現真正的跨平台兼容性，無需特定供應商的程式碼修改。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-18-e81d1903d0-p4-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 5 / 5 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
