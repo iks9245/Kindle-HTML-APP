@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unsloth Dynamic 3.0 GGUFs</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-20-5bdbe701c0-p41-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Unsloth Dynamic 3.0 GGUFs</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 41 / 41 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://unsloth.ai/docs/basics/dynamic-3.0-ggufs">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-20-5bdbe701c0-p40.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 41 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Running Llama 4 Scout:</p>
+
+<p class="fulltext">To run Llama 4 Scout for example, first clone llama.cpp:</p>
+
+<p class="fulltext">Then download out new dynamic v 2.0 quant for Scout:</p>
+
+<p class="fulltext">And and let's do inference!</p>
+
+<p class="fulltext">Read more on running Llama 4 here: https://docs.unsloth.ai/basics/tutorial-how-to-run-and-fine-tune-llama-4</p>
+
+<p class="fulltext">Last updated</p>
+
+<p class="fulltext">Was this helpful?</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>「Dynamic 量化」具體是什麼，以及 v3.0 版本是如何在其基礎上改進的？</summary>
+  <p>Dynamic 量化是一種在推斷時根據輸入動態調整權重的技術，旨在保持模型精度的同時減小模型尺寸。v3.0 版本透過使用更高品質的 imatrix 校準數據集、改進的層選擇和引入更多新的量化技術，顯著提升了模型品質的保留度與準確性。</p>
+</details>
+
+<details>
+  <summary>為什麼「top-1% 準確度」的提升很重要？以及「Divergence-300 @32」和「KL Divergence」這些指標是用來衡量什麼？</summary>
+  <p>Top-1% 準確度雖然是常見指標，但僅評估單一預測的最高機率。Divergence-300 @32 則是 Unsloth 創建的一種新指標，用於評估模型在多達 32 個 token 的生成序列中是否過度擬合以及輸出與 BF16 模型的相似性；KL Divergence (KLD) 則衡量不同量化模型與原始 BF16 模型輸出分佈的差異。這些指標能更全面地評估模型在實際推理中的表現。</p>
+</details>
+
+<details>
+  <summary>Unsloth 的「訓練後量化」(PTQ) 方法與其他如 QAT/QAD 的量化方式有何不同？其主要優勢是什麼？</summary>
+  <p>Unsloth 的 Dynamic v3.0 採用純粹的訓練後量化 (PTQ)，這意味著在模型訓練完成後才進行量化處理，不需要額外的訓練。這與需要訓練的量化感知訓練 (QAT) 或量化感知蒸餾 (QAD) 不同，PTQ 有助於降低過度擬合的風險，並簡化了量化流程，同時仍能實現出色的模型精度和尺寸縮減。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-20-5bdbe701c0-p40.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 41 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
