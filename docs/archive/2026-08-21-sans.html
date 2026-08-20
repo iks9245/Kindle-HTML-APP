@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-08-21</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-21.html">切換為襯線字體顯示</a></p>
+
+<h1>每日 AI 文摘 2026-08-21</h1>
+<p class="meta">
+2026-08-21
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="index-sans.html">存檔列表</a>
+
+
+
+ ｜ <a href="2026-08-20-sans.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>本日焦點顯示，科技發展正處於關鍵時期：AI技術一方面帶來編程創新與航空進步，另一方面卻引發了對其本質、倫理雙重標準（如資料抓取）及基礎設施穩定性（如GitHub大規模中斷）的深刻反思。與此同時，全球地緣政治局勢依舊緊繃，美國對伊朗祭出制裁，多國聯手譴責以色列擴建定居點，而俄羅斯對烏克蘭關鍵設施的蓄意襲擊更顯衝突升級。儘管挑戰重重，人類仍不懈地探索太空（Artemis任務）與萬物本質，從量子觸摸的哲學思辨到理解異種智能的嘗試，展現了持續的求知慾與自我超越。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>Aaron Swartz was prosecuted for scraping, while Meta does it without consequence</h3>
+  <p class="summary">這篇文章再次表達了對亞倫·史瓦茲（Aaron Swartz）過去因資料抓取而遭到起訴的沮喪，並將其與Meta目前大規模資料收集行為卻鮮少面臨法律後果的情況進行對比。這種差異凸顯了法律體系在處理個人與強大企業進行類似技術行為時的明顯雙重標準，引發對公平性的質疑。
+
+* 亞倫·史瓦茲曾因從JSTOR下載學術文章而面臨嚴重的法律指控。
+* Meta目前正為AI訓練進行廣泛的資料抓取，卻未受到類似的制裁。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>亞倫·史瓦茲是誰？他具體做了什麼導致他被起訴？</summary>
+    <p>亞倫·史瓦茲是一位著名的程式設計師、網路行動主義者和RSS的共同創始人。他因下載了數百萬份JSTOR的學術期刊文章而被指控犯下多項重罪，包括電信詐欺和電腦詐欺。他認為這些資訊應該公開，但檢察官將他的行為視為盜竊。</p>
+  </details>
+  
+  <details>
+    <summary>為什麼Meta的資料抓取行為被認為不同，或者沒有受到相同的法律後果？</summary>
+    <p>文章指出，Meta為訓練其AI模型而進行的大規模資料抓取，雖然性質與史瓦茲的行為相似，但卻沒有面臨同等的法律制裁。這可能是因為Meta擁有強大的法律資源，且其行為常被包裝為商業營運或「合理使用」的一部分，這凸顯了對不同實體執法標準的差異。</p>
+  </details>
+  
+  <details>
+    <summary>這種感知到的雙重標準對未來的資料共享和智慧財產權法律有何更廣泛的影響？</summary>
+    <p>這種雙重標準引發了關於資料所有權、智慧財產權以及數位時代法律公平性的深刻問題。它可能鼓勵大型企業繼續大規模抓取資料，同時壓制個人或其他組織的開放資料倡議。這也呼籲重新審視現有法律，以確保其在面對技術發展時能夠公正適用於所有人。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-21-c992986a59-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Show HN: Huzzah – a novel approach to coding with AI</h3>
+  <p class="summary">「Huzzah」是一個於2026年8月提出的實驗性AI程式碼編輯器，旨在解決現有AI編碼代理在長期使用中遇到的問題。它提出了一種新穎的範式，用簡潔、宣告式且持久的偽程式碼來取代傳統AI代理中冗長、指令式且一次性的自然語言提示。此舉目的在於更好地記錄人類意圖、提高程式碼生成效率，並讓開發者對其產出有更強的掌控感與品質保證。這種方法希望能改善開發者對AI輔助編碼的疲勞感，並提升其專業滿意度。
+* Huzzah利用偽程式碼作為AI提示，解決了傳統AI編碼中提示詞效率低、人類意圖難以追溯的問題。
+* 這種新方法讓開發者能更直觀地「設計」程式碼結構，提升對最終產出的控制與品質信心。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>傳統的AI編碼代理在使用上遇到了哪些具體問題，促使作者開發了Huzzah？</summary>
+    <p>作者發現傳統AI編碼代理存在人類意圖記錄不可靠、提示詞是指令式且瞬時的，以及自然語言中資訊密度低導致的低效率問題。這些因素讓開發者感到疲勞，且難以掌控最終程式碼的品質。</p>
+  </details>
+  
+  <details>
+    <summary>Huzzah提出的「偽程式碼」方法相較於傳統的自然語言提示，對開發者有哪些主要的好處？</summary>
+    <p>Huzzah的偽程式碼提示更簡潔、更具可讀性，且是宣告式和持久性的。這不僅能作為開發者文檔，清晰表達人類意圖，還能讓開發者在「設計」程式碼形狀時更投入，對最終產出的品質更有掌控感。它也支持語言無關的偽程式碼，提升了彈性。</p>
+  </details>
+  
+  <details>
+    <summary>Huzzah這種創新的編碼方法是否有其限制或不適用情境？</summary>
+    <p>是的，Huzzah可能不適用於處理現有的大型程式碼庫，或對於缺乏領域專業知識的開發者來說，自然語言互動仍可能更簡單。此外，它在處理跨檔案依賴性等複雜情況時可能存在挑戰，且目前不支援LSP類型的功能。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-21-19e393a5e1-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.danielvaughn.dev/posts/huzzah/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>The August 17 outage, and the work ahead</h3>
+  <p class="summary">GitHub 於 8 月 17 日經歷了長達 7 小時 47 分鐘的全球服務中斷，嚴重影響了 GitHub.com、身份驗證、GitHub Actions 及 API 等關鍵服務，對全球開發者和組織造成巨大衝擊。這次中斷的主因是流量達到高峰時，其美國中部資料中心的一個關鍵基礎設施組件未能擴展容量，導致系統壓力蔓延。GitHub 承認這是本月第二次重大事件，並強調將加速可靠性工作，包括增加基礎設施、擴展 Azure 部署、改進操作流程及隔離關鍵系統，以期重建用戶信任。
+- 故障歸因於容量不足而非程式碼或配置錯誤。
+- GitHub 正積極將平台負載遷移至 Azure，目前已處理 58% 的平台負載。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這次 8 月 17 日的服務中斷與之前發生過的事件有何不同？其根本原因為何？</summary>
+    <p>這次中斷的主要原因是流量達到新高峰時，美國中部資料中心的關鍵基礎設施組件未能按需求擴展容量，而非程式碼或配置錯誤。與 8 月初的另一次 Actions 故障一樣，這兩起事件的核心都是容量不足。</p>
+  </details>
+  
+  <details>
+    <summary>GitHub 如何具體解決這些底層的容量問題，並確保未來系統的穩定性？</summary>
+    <p>GitHub 正透過多管齊下的方式解決容量問題，包括增加數百萬個 CPU 核心和大量儲存空間，並加速將平台遷移至 Azure。他們還致力於改進操作實踐，如加強測試、更安全的部署、更好的可觀察性和警報系統，同時隔離關鍵系統以減少潛在故障的影響。</p>
+  </details>
+  
+  <details>
+    <summary>考慮到開發者對 GitHub 的高度依賴，公司對未來的平台可靠性有何具體承諾？</summary>
+    <p>GitHub 承諾會透過提升平台的擴展性和可靠性來重新贏得開發者的信任。他們將從每次故障中學習，並將相關工作納入可用性工作流程，例如應用一致的重試限制和審查低優先級警報，以防止未來的級聯故障。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-08-21-ba7ef830fa-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>US says sanctions will 'squash' Iran's economy and 'collapse' its regime</h3>
+  <p class="summary">美國財政部長史考特·貝森特表示，美國正計畫對伊朗實施「史上最具壓制性的經濟行動」，旨在「壓垮」伊朗經濟並「瓦解」其政權。此舉是在美國與伊朗之間持續數月的衝突和數次停火協議被打破後，為避免軍事衝突升級所採取的措施。貝森特呼籲盟友支持華盛頓的努力，並警告與伊朗進行商業往來的國家將面臨「巨大的經濟後果」。
+
+- 美國計劃於8月24日公布更多制裁細節。
+- 儘管伊朗經濟長期受制裁困擾，但當地居民對新制裁能否徹底摧毀政權表示懷疑。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>美國與伊朗之間「持續數月的衝突」是如何開始的？</summary>
+    <p>美國與以色列於二月發動對伊朗的戰爭，聲稱是為阻止伊朗發展核武器，但德黑蘭否認此指控。伊朗隨後則襲擊了以色列、美國在中東的基地及美國的阿拉伯盟友，導致局勢升級。</p>
+  </details>
+  
+  <details>
+    <summary>伊朗過去長期遭受制裁，其經濟狀況如何，民眾對此有何看法？</summary>
+    <p>伊朗經濟長期在國際制裁下舉步維艱，今年稍早因生活成本飆升和通脹引發了民眾抗議。然而，儘管政權長期受壓，居民對新制裁能否使其垮台表示懷疑，認為伊朗已習慣此情況並會尋找其他貿易途徑。</p>
+  </details>
+  
+  <details>
+    <summary>美國計劃對伊朗實施的「最嚴厲經濟行動」將包含哪些具體措施？</summary>
+    <p>儘管具體細節將於8月24日公布，但美國財政部長貝森特表示，這將是「世界歷史上最協調的經濟孤立」。它主要針對與伊朗進行資金轉移或購買其石油的國際貿易夥伴，並威脅將對這些實體實施制裁，以切斷伊朗的收入來源。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-21-910d737212-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c87n90eg0p2o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project</h3>
+  <p class="summary">英國、法國、德國、義大利和加拿大等主要西方國家於週四發表聯合聲明，強烈譴責以色列計畫在被佔領的約旦河西岸E1地區開放招標建設約1,200個定居點住宅的決定，稱其「不可接受」。此舉被國際社會視為對兩國方案希望的重大打擊，因其將可能切斷約旦河西岸並孤立東耶路撒冷，從而實質上阻止一個毗連的巴勒斯坦國的建立。此計畫在該地區不穩定局勢和定居者暴力事件頻傳之際推出，更引發聯合國秘書長等各方擔憂，認為其危及以色列的國際地位。
+*   此招標計畫的截止日期為10月19日，即以色列大選前夕，旨在使未來政府更難推翻。
+*   以色列財政部長貝扎萊爾·斯莫特里赫曾言，巴勒斯坦建國理念正「被抹去」。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>E1地區為何對巴勒斯坦建國構成「生存威脅」？</summary>
+    <p>E1地區位於東耶路撒冷和主要定居點馬阿勒阿杜明之間，戰略位置極為重要。若在此建設定居點，將有效切斷約旦河西岸的南北連結，並阻止將拉姆安拉、東耶路撒冷和伯利恆連接起來的巴勒斯坦城市區的發展，從而使一個毗連的巴勒斯坦國無法建立。</p>
+  </details>
+  
+  <details>
+    <summary>儘管國際社會強烈譴責，以色列為何仍堅持推動定居點計畫？</summary>
+    <p>根據國際法，所有定居點均屬非法，但以色列歷屆政府仍允許其擴張。現任總理納坦雅胡領導的右翼親定居者聯合政府，自2022年底上任以來，特別加快了定居點的擴張。此外，此招標計畫的截止日期設定在以色列大選前夕，旨在使未來政府難以撤銷。</p>
+  </details>
+  
+  <details>
+    <summary>除了阻礙兩國方案，此定居點擴建計畫還可能帶來哪些負面影響？</summary>
+    <p>此計畫不僅將進一步加劇約旦河西岸的緊張局勢，引發巴勒斯坦人的不滿和抗議，還可能導致定居者與巴勒斯坦平民之間的暴力衝突升級。此外，它將嚴重損害以色列的國際地位，並可能使其與西方盟友的關係更加緊張。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-21-e28573af70-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c998evlgz8ko?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Russia 'purposefully' hit critical infrastructure in latest strikes, Kyiv mayor says</h3>
+  <p class="summary">俄羅斯在最近一次對基輔的攻擊中，蓄意鎖定關鍵基礎設施，導致至少17人死亡、40多人受傷，並造成兒童醫院和學校受損。基輔市長克里琴科表示，這是幾個月來首都首次遭到針對關鍵基礎設施的蓄意襲擊，導致部分地區熱水供應中斷及數千戶停電。
+
+* 烏克蘭總統澤倫斯基強調國家急需盟友提供更多防空系統和飛彈。
+* 烏克蘭情報部門認為，俄羅斯此舉可能是為冬季製造困難而提前策劃。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼烏克蘭會面臨防空飛彈短缺的問題，特別是愛國者攔截飛彈？</summary>
+    <p>由於美國在與伊朗的衝突中耗費了大量庫存，導致烏克蘭在獲得愛國者攔截飛彈等關鍵防空物資方面面臨挑戰。這些飛彈對於抵禦俄羅斯的彈道飛彈攻擊至關重要，澤倫斯基總統也強調每日都需要補充。</p>
+  </details>
+  
+  <details>
+    <summary>俄羅斯蓄意攻擊烏克蘭關鍵基礎設施，尤其是在冬季將近之際，這可能帶來哪些更廣泛的影響？</summary>
+    <p>烏克蘭情報部門認為，俄羅斯此舉旨在冬季來臨前讓烏克蘭人民生活更加艱難，並削弱其戰鬥意志。這不僅會造成基礎服務中斷，如熱水和電力供應，也可能加劇人道危機和居民流離失所。</p>
+  </details>
+  
+  <details>
+    <summary>鑑於雙方近期頻繁的大規模空襲，外交方面是否有任何進展以緩解衝突？</summary>
+    <p>儘管雙方近期都進行了大規模空襲並造成多人傷亡，但停火的外交努力並無實質進展。烏克蘭總統澤倫斯基表示，只要烏克蘭沒有足夠的反彈道能力，俄羅斯就不會認真考慮和平。聯合國秘書長也已譴責此次襲擊，對衝突升級深表關切。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-08-21-cedf7f5c01-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>NASA Selects University Teams to Help Advance Aviation Research</h3>
+  <p class="summary">美國太空總署（NASA）近日透過其「大學領導倡議」，選定四所大學團隊並投入約3000萬美元，以推進多項尖端航空研究。這些為期多年的項目旨在轉型航空的未來，涵蓋了超音速推進、AI整合航空電子系統、城市空中交通的低噪音路徑規劃，以及更高效的飛機設計認證。這項計畫不僅加速航空創新，也致力於培養美國的航空研究人才。
+* 明尼蘇達大學：開發超音速高效率的燃料彈性推進系統。
+* 史丹佛大學（兩項）：研究AI航空電子系統的安全整合與城市空中交通的低噪音飛行路徑。
+* 維吉尼亞理工學院：運用新型電腦建模工具提升飛機設計與認證效率。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>美國太空總署的「大學領導倡議」是什麼？其主要目標為何？</summary>
+    <p>「大學領導倡議」是NASA一項旨在讓大學團隊參與實際飛行研究的計畫，藉此推動航空領域的發展。它的主要目標是培養美國航空研究人才，同時透過創新研究推動商業高速飛機、空中交通管理效率及新型空中運輸選項等NASA航空策略目標。</p>
+  </details>
+  
+  <details>
+    <summary>這些大學團隊的具體研究項目將如何影響未來的航空業？</summary>
+    <p>這些研究項目將從多方面影響航空業。例如，明尼蘇達大學的超音速推進系統有助於實現更快、更高效的高速飛行；史丹佛大學的AI航空電子系統將提升飛行安全與自動化，而其低噪音路徑規劃則能改善城市空中交通對居民的影響。維吉尼亞理工學院的設計認證研究則將加速新機型的開發。</p>
+  </details>
+  
+  <details>
+    <summary>此次約3000萬美元的資金將如何支持這些大學團隊，以及這項倡議對美國航空產業的長期意義是什麼？</summary>
+    <p>這筆約3000萬美元的資金將提供數年的支持，讓獲獎大學建立團隊並進行研究，為學生提供實踐經驗。從長遠來看，這項倡議不僅能帶來尖端的研究成果，推動航空技術進步，更能培養下一代航空科學家和工程師，確保美國在航空領域的創新領導地位。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-21-889bdb4bbf-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.nasa.gov/aeronautics/nasa-selects-university-teams-to-help-advance-aviation-research/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>SmallSat 2026</h3>
+  <p class="summary">「SmallSat 2026」會議將於8月24日至26日舉行，美國太空總署（NASA）專家將在展廳（攤位號635、835、641、940）進行分享。此活動匯集了NASA在小型衛星領域的最新見解和發展，涵蓋從技術挑戰、供應鏈觀察到各種任務亮點及合作機會。會議議程強調小型衛星在太空探索中的關鍵作用，並為未來航天任務設計提供指導。
+* 會議探討了小型衛星的供應鏈、技術短缺以及應對方案。
+* 涵蓋NASA在飛行機會、夥伴關係以及多項小型衛星任務的最新進展。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>「SmallSat 2026」會議的主要目的是什麼？</summary>
+    <p>「SmallSat 2026」是一個專注於小型衛星技術與應用的年度會議。其主要目的在於匯集太空領域的專家，分享小型衛星的最新研究成果、技術挑戰、發展趨勢以及未來的合作機會，以推動小型衛星在科學研究和商業應用上的進步。</p>
+  </details>
+  
+  <details>
+    <summary>根據議程，NASA專家在小型衛星領域關注哪些具體議題或挑戰？</summary>
+    <p>NASA專家關注多個方面，包括小型衛星的供應鏈觀察、技術短缺、任務設計、飛行機會以及與其他機構的合作模式。此外，他們也探討了從搭便車發射到專用發射的選擇、如何利用MSFC進行合作，以及各種特定任務（如JPL Skyfall、SWIFT LINK Reboost）的工程挑戰和最佳實踐。</p>
+  </details>
+  
+  <details>
+    <summary>NASA如何支持小型衛星的發展與應用？</summary>
+    <p>NASA透過多種方式支持小型衛星的發展與應用，包括提供飛行機會、推動商業化途徑、鼓勵公私營夥伴關係（如CSLI/CLPS）、資助創新研究（如SBIR/STTR計畫），並分享其在任務設計、工程實踐和技術轉移方面的專業知識。他們也積極探索如何利用小型衛星進行科學探索和技術驗證。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-21-112cf176fe-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/smallsat-2026/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Artemis Mission Patches</h3>
+  <p class="summary">2026 年 8 月 6 日，美國國家航空暨太空總署 (NASA) 位於佛羅里達州的甘迺迪太空中心，在 Artemis III 任務的終端倒數模擬期間，一件掛著 Artemis I 和 II 任務臂章的夾克被觀察到。這項由 NASA 探索地面系統團隊執行的模擬，演練了發射倒數的最後五小時，包括關鍵的終端倒數。Artemis III 任務本身至關重要，因其將在近地軌道展示未來月球著陸所需的關鍵系統，為 Artemis IV 及其後的任務鋪路。
+*   主要目標：Artemis III 旨在驗證未來月球登陸所需的關鍵系統。
+*   模擬範圍：涵蓋發射倒數的最後五小時，包括最後的終端倒數。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Artemis 計畫的總體目標是什麼？</summary>
+    <p>Artemis 計畫是 NASA 旨在將人類重新送上月球的太空探索計畫。其最終目標是建立可持續的月球存在，並為未來的火星任務做準備。</p>
+  </details>
+  
+  <details>
+    <summary>Artemis III 任務在「近地軌道展示關鍵系統」有何重要性？</summary>
+    <p>這表示 Artemis III 將在較低的軌道環境中測試登月所需的各項技術和程序，例如生命支持系統、導航和通信技術等。這些測試對於確保未來月球任務的成功與太空人安全至關重要。</p>
+  </details>
+  
+  <details>
+    <summary>既然 Artemis IV 將是月球著陸任務的「開始」，預計會有哪些任務目標？</summary>
+    <p>鑑於 Artemis IV 將開啟月球著陸，預計它會涉及太空人實際登陸月球表面，並執行科學研究、採集樣本或測試月球棲息地等任務。它將是人類重返月球表面的關鍵一步，並為更長期的月球探索奠定基礎。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-08-21-1136f26b92-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/artemis-mission-patches/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>Are We Thinking Correctly About AI Intelligence?</h3>
+  <p class="summary">這篇文章探討了我們是否正確理解人工智慧的智能，以及AI是像人類一樣推理，還是僅產生看似推理的文字。Santa Fe 研究所的 Melanie Mitchell 認為，AI是一種「異種智能」，其認知機制與人類不同，因此我們缺乏足夠的測量方法。她建議借鑒發展心理學和比較心理學研究嬰兒和動物的方法來探測AI，並提出六項原則以更好地評估機器認知。對話也觸及了AI的「黑箱」性質、其令人驚訝的能力，以及類似「聰明漢斯」效應的警示，最終討論了AI對人類科學與社會的潛在影響——是作為強大工具，還是取代人類成為發現的前沿。
+
+要點：
+- AI的智能本質與人類不同，是一種「異種智能」。
+- 應採用心理學實驗方法來評估AI認知，而非僅依賴基準測試。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>文章中提到的「異種智能」是什麼意思？</summary>
+    <p>在AI的背景下，「異種智能」指的是人工智慧系統的運作、學習和推理方式與人類的認知機制截然不同。儘管AI可能經過大量人類數據訓練，但其底層工作原理是非人類的。</p>
+  </details>
+  
+  <details>
+    <summary>發展心理學和比較心理學的方法如何應用於評估AI？</summary>
+    <p>這些方法涉及觀察嬰兒和動物的行為，並從中推斷其潛在的認知機制。將其應用於AI意味著設計實驗來探測AI系統在面對新穎或略微變化的任務時的反應，從而更科學地理解其能力和局限性，而非僅僅依賴於基準測試結果。</p>
+  </details>
+  
+  <details>
+    <summary>「聰明漢斯」效應是什麼，為何對評估AI智能具有警示作用？</summary>
+    <p>「聰明漢斯」效應是指一匹看似能做數學題的馬，實際上是透過觀察訓練者無意識的身體暗示來給出答案。這對AI的警示意義在於，我們必須警惕AI系統可能表面上表現出智能，但其背後的「理解」可能僅是對模式的巧妙匹配，而非真正的推理或認知。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="../article/2026-08-21-2f2b5fe809-sans.html">全文（約 42 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/are-we-thinking-correctly-about-ai-intelligence-20260820/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>A vocabulary for the future: touch</h3>
+  <p class="summary">美國理論物理學家與女性主義理論家凱倫·巴拉德在「未來詞彙」系列中，透過量子場論重新定義了「觸摸」的本質。她挑戰了古典物理學中觸摸從未真正發生的觀點，指出如果物質從一開始就相互糾纏，那麼觸摸就不是獨立物體之間未竟的接觸，而是構成物質本質的一部分。這項深刻的思考將日常的觸摸提升為通往物理學和哲學深層問題的門戶。
+
+* 觸摸是量子糾纏下物質本質的構成要素，而非獨立物體間的失敗接觸。
+* 從電磁排斥到量子糾纏，重新理解物質世界的互動方式。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>「未來詞彙」系列是什麼？</summary>
+    <p>「未來詞彙」是巴塞隆納當代文化中心的一個系列，邀請知名思想家反思他們選擇的一個詞彙，並由電影製片人將其文字視覺化。該系列旨在透過重新審視熟悉語言，為更好的未來奠定基礎。</p>
+  </details>
+  
+  <details>
+    <summary>巴拉德對「觸摸」的重新定義對我們理解現實和互動有何深遠影響？</summary>
+    <p>巴拉德的觀點挑戰了我們對物質獨立性的傳統認知，強調萬物從根本上就是相互糾纏和關聯的。這意味著我們與世界的每一次互動，包括看似微不足道的觸摸，都參與了物質本質的構成，而非僅是表面的接觸。</p>
+  </details>
+  
+  <details>
+    <summary>作為一位女性主義理論家，凱倫·巴拉德的女性主義理論如何與她對觸摸的物理學詮釋連結？</summary>
+    <p>文章雖然沒有直接說明兩者連結，但巴拉德的女性主義理論通常強調主體間性和關係性，挑戰傳統的二元對立思維。她對觸摸的重新定義，即物質間的糾纏與構成性，與其挑戰獨立個體存在、強調關係網絡的女性主義觀點不謀而合。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-08-21-774752dd66-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/repulsion-at-the-core-of-attraction-on-the-paradox-of-touch">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Dolphins and other lovers</h3>
+  <p class="summary">人類學家在亞馬遜與安多克人共同生活，研究他們對河豚的特殊看法。安多克人視河豚為「壞人」或變形者，代表著一種危險而誘人的力量，會導致疾病甚至喪失人性。這種泛靈論的世界觀，將非人類生物賦予與人類相似的意圖和情感，為理解慾望、商品經濟及被外界誘惑所帶來的危險提供了一種獨特的視角。
+作者最終反思了安多克人的觀點如何深刻地重塑了他對權力、弱點以及現代生活中外部慾望誘惑的理解。
+* 亞馬遜安多克人將河豚視為危險的變形者，其誘惑力可能導致疾病或失去自我。
+* 文章探討了泛靈論視角下，非人類生物如何影響人類生活與文化，並連結到現代社會的消費慾望與自我迷失。
+* 作者通過體驗安多克文化，認識到抵禦外部誘惑、保持「接地氣」的重要性，並反思自身。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>泛靈論在亞馬遜社會的語境中是如何被描述的？</summary>
+    <p>根據菲利普·德斯科拉的說法，亞馬遜社會中的泛靈論是指一種現實理解，其中非人類實體（如動物、植物）被賦予了與人類相似的靈魂和主觀性。這意味著它們被認為具有與人類一樣的願望、思想和文化習俗。</p>
+  </details>
+  
+  <details>
+    <summary>安多克人對河豚的看法與作者對現代消費社會的觀察有何關聯？</summary>
+    <p>作者將安多克人眼中會導致迷失自我的河豚誘惑，與消費社會中的慾望動態進行了類比。正如河豚代表著危險的外部慾望，社交媒體和精心策劃的他人生活也會感染我們的慾望，將我們從「接地氣」的狀態中拉走，使我們容易被消費主義吞噬。</p>
+  </details>
+  
+  <details>
+    <summary>安多克語中「河豚」（ama̰na̰）一詞為何是外來語？這對安多克人的歷史有何啟示？</summary>
+    <p>「ama̰na̰」一詞源自圖皮-瓜拉尼語，這表明安多克人最初與河豚的互動不多。這暗示安多克人原本是內陸獵人，直到19世紀與外界的貿易（由圖皮-瓜拉尼語使用者居中協調）增加後，他們才更多地接觸亞馬遜主要河流及其特有的生物。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-08-21-ec7334d626-sans.html">全文（約 31 分鐘）</a> ｜ <a href="https://aeon.co/essays/why-the-andoque-of-the-amazon-fear-the-seductive-dolphin">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>
