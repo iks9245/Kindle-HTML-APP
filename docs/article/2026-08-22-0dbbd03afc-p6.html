@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claudette: Make Claude stop talking like a BuzzFeed article</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-22-0dbbd03afc-p6-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Claudette: Make Claude stop talking like a BuzzFeed article</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 6 / 6 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://github.com/adnanakil/nobuzz/blob/main/README.md">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-22-0dbbd03afc-p5.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 6 / 6 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">MIT</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>為什麼開發者認為 Claude 的原始輸出需要被「去浮誇化」？</summary>
+  <p>Claude 被描述為一位出色的工程師，但它有一個「無可救藥的狀況」：說話像是在為自己的 pull request 發表 TED 演講。它的回應常常過於戲劇化、冗長且充滿了「點擊誘餌」式的語言，使得直接獲取核心資訊變得困難。</p>
+</details>
+
+<details>
+  <summary>Claudette 是如何實現將 Claude 的輸出轉換為「正常英文」的？</summary>
+  <p>Claudette 的運作原理是將 Claude 的上次回應寫入一個臨時文件，然後透過 Gemini CLI 將該文件內容管道傳送給 Gemini 模型進行翻譯。Gemini 會根據指示將文本翻譯成簡潔明瞭的風格，其輸出會被 Claudette 如實打印，避免 Claude 再次介入修改。</p>
+</details>
+
+<details>
+  <summary>Claudette 提供了哪些不同的「模式」，以及這些模式如何滿足不同用戶的需求？</summary>
+  <p>Claudette 提供了三種主要模式：「colleague」（同事）模式輸出技術細節，適用於工程師；「manager」（經理）模式提供簡化、去除了程式碼的摘要，適用於技術相關的經理；而「director」（主管）模式則提供精簡的結果、影響和要求，適用於只需要快速了解要點的高管。這些模式讓用戶能根據不同受眾調整輸出內容，提高溝通效率。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-22-0dbbd03afc-p5.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 6 / 6 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
