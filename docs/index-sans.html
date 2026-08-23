@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-08-23</title>
+<title>每日 AI 文摘 2026-08-24</title>
 <style>
   body {
     font-family: Helvetica, Arial, sans-serif;
@@ -75,9 +75,9 @@
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
 <p class="fontswitch"><a href="index.html">切換為襯線字體顯示</a></p>
 
-<h1>每日 AI 文摘 2026-08-23</h1>
+<h1>每日 AI 文摘 2026-08-24</h1>
 <p class="meta">
-2026-08-23
+2026-08-24
 
  ｜ <a href="archive/index-sans.html">存檔列表</a>
  ｜ <a href="deepread-sans.html">每日深讀</a>
@@ -89,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日新聞焦點在科技巨頭的挑戰與國際貿易的波瀾：Anthropic 被爆可能為成本效益調整其AI模型的輸出品質，而TikTok則因侵犯兒童隱私支付了巨額罰款，凸顯了科技倫理與數據保護的重要性。同時，美國與加拿大因貿易談判破裂而關係緊張，導致雙方互祭報復性關稅。在其他方面，macOS系統更新帶來了工具變革，數學領域的長年難題取得重大突破，夜空中也捕捉到了英仙座流星雨的壯麗景象。</p>
+<p>今日科技界見證AI領域的顯著突破，AI輔助的即時編譯技術達到微秒級速度，大幅提升資料庫性能；同時，開源大型語言模型Qwen展現驚人逆向工程能力，這些都凸顯了AI技術發展的潛力與普及性。在國際要聞方面，烏克蘭政府面臨腐敗指控與戰時選舉的壓力，而幾內亞則遭受垃圾山崩塌的災難性衝擊，造成重大傷亡。與此同時，好奇號火星車正持續在紅色星球上探索，為人類收集寶貴的科學數據。</p>
 </div>
 
 
@@ -99,253 +99,189 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>Anthropic appears to be A/B testing reduced effort levels in Claude Code</h3>
-  <p class="summary">Anthropic 似乎正在對其 AI 模型 Claude Code 進行一項 A/B 測試，該測試可能涉及降低模型輸出「努力程度」的變數。這項舉動表明 Anthropic 可能正在探索優化成本或提高處理效率的方法，即使這可能影響模型生成程式碼的品質。如果測試屬實，用戶可能會察覺到 Claude Code 在程式碼生成方面的表現有所變化，這對AI服務的品質與用戶體驗而言，是一個值得關注的發展。
-- 可能旨在降低營運成本。
-- 用戶或會體驗到程式碼生成品質的變化。</p>
+  <h3>JIT Compiling Code in 5μs</h3>
+  <p class="summary">這篇文章介紹了 pgrust 專案如何利用 AI 輔助，成功開發出一個在約 5 微秒內編譯程式碼的即時 (JIT) 編譯器。這項技術突破解決了傳統 JIT 編譯速度慢的限制，讓每個 SQL 查詢都能進行 JIT 編譯，從而實現 10-20 倍的顯著性能提升。
+
+過去，快速 JIT 編譯被認為極為困難且罕見，但 AI 的應用大大降低了其實現門檻，為新一代高效能軟體（特別是資料庫）的開發開闢了新道路。
+
+關鍵點：
+- AI 輔助：使 JIT 編譯變得更容易實現。
+- 極速編譯：約 5 微秒的編譯時間。
+- 全面應用：能對每個 SQL 查詢進行 JIT 編譯。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>「降低努力程度」對於 Claude Code 的用戶來說意味著什麼？</summary>
-    <p>這可能表示 Claude Code 生成的程式碼會變得更簡潔、解釋更少，或在處理複雜任務時需要更多的提示才能獲得滿意的結果。模型可能會傾向於提供更簡單而非最優的解決方案。</p>
+    <summary>為什麼 JIT 編譯器在過去難以實現？AI 在其中扮演了什麼角色？</summary>
+    <p>過去，開發高效能的 JIT 編譯器需要深入的組合語言知識，被視為一項專業且困難的技術，導致其應用不廣。如今，借助 AI 的力量，直接針對組合語言進行程式碼生成變得更容易，大大降低了開發 JIT 編譯器的技術門檻，使其更容易實現。</p>
   </details>
   
   <details>
-    <summary>Anthropic 為何會對其 AI 模型進行這種潛在的「降低努力程度」測試？</summary>
-    <p>Anthropic 的主要動機可能是為了降低運營成本，因為更詳細、更深入的內容需要更多的計算資源。此外，他們也可能在評估不同服務層級的市場反應，以在回應速度和內容質量之間取得最佳平衡。</p>
+    <summary>pgrust 的高速 JIT 編譯器具體為 SQL 查詢帶來了哪些性能優勢？</summary>
+    <p>由於其編譯時間僅需約 5 微秒，pgrust 能夠對每一條 SQL 查詢都進行即時編譯，而非僅限於部分查詢。這使得 pgrust 在執行時能獲得 10 到 20 倍的性能提升，甚至在某些情況下能超越手寫優化程式碼的性能。</p>
   </details>
   
   <details>
-    <summary>用戶可以如何察覺到 Claude Code 的「努力程度」可能已經降低？</summary>
-    <p>用戶可能會觀察到模型生成程式碼的速度有所加快，但同時程式碼的完整性、解釋的詳細程度或錯誤處理能力可能有所下降。例如，生成的程式碼可能缺少必要的註釋、未能涵蓋所有邊界情況，或在一次回應中未能完全解決問題。</p>
+    <summary>除了資料庫，AI 輔助的 JIT 編譯技術還能在哪些領域帶來改進？</summary>
+    <p>JIT 編譯不僅適用於程式語言解釋器，在解析未知結構的資料時也很有用。例如，當資料模式在執行時才確定時，JIT 編譯器可以動態生成高效的解析程式碼，從而提升各種需要動態優化的軟體性能。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-23-304760d427-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://twitter.com/argofowl/status/2091150597374537729">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-24-525e0c69bb-sans.html">全文（約 15 分鐘）</a> ｜ <a href="https://malisper.me/jit-compiling-code-in-5-us/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>hdiutil is deprecated in macOS 27 Golden Gate</h3>
-  <p class="summary">在即將推出的 macOS 27 Golden Gate 中，用於操作磁碟映像的命令列工具 hdiutil 已被棄用，並由 diskutil image 取代。這項變更影響了現有的自動化腳本和工作流程，因為新工具的行為和選項有所不同。儘管 diskutil image 提供了更快的映像建立速度和更小的檔案大小，但它在處理根目錄擁有的檔案時需要手動介入，且部分 hdiutil 的特定選項已被移除或行為有所改變。
-主要變化包括：
-- diskutil image 處理根目錄檔案時不會提示驗證，可能導致操作失敗。
-- diskutil image 預設會「清理」（scrub）臨時檔案，例如 ~/.Trash/。
-- diskutil image 的映像建立速度明顯快於 hdiutil，且生成的 .dmg 檔案更小。</p>
+  <h3>I gave Qwen 3.8 27B a reverse-engineering job and it finished in 30 minutes</h3>
+  <p class="summary">作者利用阿里巴巴的開源大型語言模型Qwen 3.8 27B，在短短30分鐘內成功逆向工程一個商用應用程式的許可證檢查機制，並開發出一個繞過方案。這項測試在本地工作站上完成，展示了即使是運行在消費級硬體上的開源模型，也具備極為強大的專業分析能力，這對於本地模型的能力發展和潛在的雙重用途影響具有重要意義。
+* 模型在本地完全透過靜態分析完成任務，並在過程中修正了自己的錯誤。
+* 這種能力現在已經可以在普通消費者級顯示卡上實現，無需依賴雲端API。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為什麼 Apple 要廢棄 hdiutil，而其功能卻在 diskutil image 中延續？這對開發者和用戶可能造成什麼影響？</summary>
-    <p>文章作者不理解 Apple 廢棄 hdiutil 的理由，認為許多長期使用的腳本和應用程式將因此失效。這項改變意味著用戶和開發者需要更新他們的腳本和工作流程，以適應新的 diskutil image 命令及其行為差異。</p>
+    <summary>Qwen 3.8 27B 是什麼，以及它為何重要？</summary>
+    <p>Qwen 3.8 27B 是阿里巴巴發布的一個備受期待的開源大型語言模型。它在4B到40B的模型級別中被評為頂尖模型，展現出卓越的推理和程式碼處理能力，甚至超越了一些成本更高的模型。</p>
   </details>
   
   <details>
-    <summary>文章提到 diskutil image 在處理根目錄擁有的檔案時會失敗，其行為與 hdiutil 有何不同？用戶應如何解決這個問題？</summary>
-    <p>hdiutil 在遇到根目錄擁有的檔案時會觸發驗證提示並繼續操作，而 diskutil image 則直接失敗，且不會提供詳細錯誤訊息。為了解決這個問題，用戶必須手動刪除或處理這些根目錄擁有的檔案，因為 diskutil 不會提示管理員憑證。</p>
+    <summary>Qwen 3.8 27B 是如何成功逆向工程許可證檢查的？</summary>
+    <p>該模型主要透過靜態分析完成任務，它反彙編了應用程式的框架，分析了數千行arm64程式碼，找出安全功能及其調用點，並成功定位到隱藏在二進位檔中的公開驗證金鑰。最終，它將這些片段組合起來，生成了完整的繞過方案。</p>
   </details>
   
   <details>
-    <summary>儘管存在一些挑戰，diskutil image 據稱速度更快且生成的檔案更小。除了這些優點之外，相較於 hdiutil，它還有哪些重要的行為改變或潛在優勢？</summary>
-    <p>diskutil image 的顯著優勢是它建立映像的速度更快，且生成的 .dmg 檔案尺寸較小。行為上的改變包括它預設會「清理」臨時檔案（例如 ~/.Trash/），這與 hdiutil 的 -scrub 選項類似。此外，它支援 ASIF (Apple Sparse Image Format) 映像，而 hdiutil 不支援。</p>
+    <summary>本地模型擁有如此先進的能力會帶來哪些更廣泛的影響？</summary>
+    <p>這項能力預示著複雜的分析任務（例如逆向工程專有軟體或惡意軟體）可以在完全離線的環境中進行，無需依賴雲端API或受到使用限制。雖然這對分析機密程式碼非常有益，但也同時引發了關於這些強大本地模型可能被個人用於惡意目的的擔憂。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-23-2a6060ec93-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://lapcatsoftware.com/articles/2026/8/7.html">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-24-d191ca370d-sans.html">全文（約 8 分鐘）</a> ｜ <a href="https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Scrap</h3>
-  <p class="summary">作者於2006年前後搬到匹茲堡，在一個寒冷的冬季經歷了新家的整修困難，並逐漸了解當地獨特的「廢金屬回收者」（scrappers）文化。他描述了兩個回收者，Ron和Wade，如何以出人意料的效率和粗暴的方式，移除他家中的舊鑄鐵浴缸和一個笨重的燃氣爐。這段經歷揭示了匹茲堡當地回收業的特色，以及作者對該城市生活方式的初次認識。最終，作者領悟到這就是匹茲堡的「生活」樣貌。
-
-* 匹茲堡的回收者文化與舊金山的「尋寶者」截然不同，主要關注原始金屬回收。
-* Ron和Wade這對搭檔透過大聲吼叫溝通，並使用斧頭等非傳統工具處理廢棄物。
-* 回收金屬的價格，例如鋼鐵，約為每磅四美分。</p>
+  <h3>The End of an Athlon</h3>
+  <p class="summary">在進行CPU更換研究時，一顆Athlon XP處理器在拆除散熱器時嚴重損壞，一大塊矽晶片從中斷裂並黏在散熱器上。這事件凸顯了2000年代初期翻晶封裝（flip-chip PGA）CPU的脆弱性，其裸露的晶片容易因散熱器安裝時受力不均而破裂，這是當時常見的問題。儘管在晶片脫落前CPU仍能運作，可能存在微裂痕，此事件也促使業界轉向更堅固的帶蓋封裝設計以提高耐用性。
+* 脆弱的翻晶封裝：Athlon XP等早期CPU的裸露晶片易碎，安裝或拆卸散熱器時存在損壞風險。
+* 設計演進：為了解決機械損壞問題，CPU封裝從裸露晶片轉向帶蓋設計，以提高耐用性和安裝安全性。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>作者提到舊金山有「尋寶者」（scroungers），而匹茲堡有「廢金屬回收者」（scrappers），這兩者之間有何主要區別？</summary>
-    <p>根據作者的觀察，舊金山的「尋寶者」可能尋找小飾品或二手家具，而匹茲堡的「廢金屬回收者」則專注於收集各種原始金屬，例如鑄鐵和鋼鐵，以進行回收。這顯示了兩地在廢棄物利用文化上的顯著差異。</p>
+    <summary>在2000年代初期，儘管裸露晶片的翻晶PGA封裝脆弱，為何製造商仍選擇使用此種封裝方式？</summary>
+    <p>2000年代初期採用裸露晶片的翻晶PGA封裝，主要是為了提升散熱效能，因為當時處理器的熱設計功耗（TDP）迅速增加。這種設計能提供更直接的熱傳導路徑，然而，其缺點是裸露的矽晶片非常脆弱，極易受到物理損壞。</p>
   </details>
   
   <details>
-    <summary>為什麼作者將Ron和Wade移除燃氣爐的經歷描述為「這，基本上就是匹茲堡的生活」？</summary>
-    <p>作者透過Ron和Wade的粗獷、直接且略帶混亂的回收方式，體驗到匹茲堡一種實用主義且不拘小節的生活態度。他們雖然用喊叫溝通、甚至使用斧頭，卻能有效率地完成任務，這對作者來說是認識匹茲堡當地文化的一個縮影。</p>
+    <summary>為了解決裸露晶片的機械脆弱性，CPU封裝是如何演變的？新設計的主要優勢為何？</summary>
+    <p>為了解決脆弱性問題，CPU封裝從裸露晶片設計演變為帶蓋封裝（lidded packaging），例如後來Intel的P4系列和AMD的Opteron處理器。帶蓋設計顯著提高了CPU的機械耐用性，使處理器在安裝或拆卸散熱器時更堅固，不易受到物理損壞。</p>
   </details>
   
   <details>
-    <summary>在第一次鑄鐵浴缸神秘消失時，作者的最初反應是什麼？</summary>
-    <p>作者對第一次浴缸消失感到十分困惑和驚訝，認為這是一起隨機的盜竊，並質疑誰會如此瘋狂地協調搬運如此沉重物品的行動。直到後來他才意識到這是匹茲堡獨特的「廢金屬回收者」文化所為。</p>
+    <summary>在這段時期，Intel和AMD等不同製造商的翻晶封裝CPU在耐用性方面是否存在差異？</summary>
+    <p>雖然Intel和AMD都曾使用翻晶PGA封裝，但普遍認為Intel的Coppermine PIII CPU比AMD的Athlon/Duron系列更為耐用。AMD的處理器被認為相當脆弱，甚至促成了專為其設計的保護墊片的出現，而Intel則迅速轉向更堅固的帶蓋設計，如其P4產品線。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-23-0cbbcd53f1-sans.html">全文（約 7 分鐘）</a> ｜ <a href="https://twitter.com/moxie/status/2091218652133732491">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-24-650ef088ec-sans.html">全文（約 3 分鐘）</a> ｜ <a href="http://www.os2museum.com/wp/the-end-of-an-athlon/">原文網頁</a></p>
 </article>
 
 
 <h2>國際 World</h2>
 
 <article>
-  <h3>Carney faces crucial test after walking away from Trump's deal</h3>
-  <p class="summary">加拿大總理馬克·卡尼近期在與美國總統唐納·川普的貿易談判中選擇退出，此舉使兩國陷入前所未有的貿易戰，而非達成一項看似在望的協議。卡尼表示美國在最後一刻提出了「要求過多」且「提供過少」的不公平條款，特別是在汽車業和對其他國家貿易協議的限制上，他將此視為一場「權力遊戲」。這項決定對卡尼而言是一次重大的政治考驗，他必須說服加拿大人民，為尋求長期更好的協議而承受經濟痛苦是值得的。此事件也使得兩國的貿易關係高度緊張，並為北美自由貿易協定（USMCA）的未來投下變數。
-關鍵點：
-- 美國在最後關頭提出的條款「不公平、不經濟」，觸及汽車業和限制加拿大與他國的貿易協議。
-- 加拿大總理選擇「反擊」，認為這是美國的「權力遊戲」，考驗國民對短期經濟痛苦的承受度。</p>
+  <h3>Zelensky should be asked what he knew about government corruption, sacked minister tells BBC</h3>
+  <p class="summary">前烏克蘭國防部長 Mykhailo Fedorov 近日接受英國廣播公司（BBC）採訪時表示，總統澤倫斯基應被問及對政府腐敗的了解程度，尤其是在一項針對議員和銀行家的洗錢調查被宣布之後。儘管 Fedorov 本人未見過澤倫斯基有腐敗行為，但他強調總統有責任說明是否知情。Fedorov 也再次呼籲在烏克蘭舉行戰時選舉，認為民主不應被戰爭挾持，此舉引發了關於烏克蘭政治透明度和民主進程的討論。
+
+*   澤倫斯基的總統任期已於2024年5月結束，但因戒嚴法而暫停選舉。
+*   Fedorov 亦批評西方盟友因官僚主義導致對烏克蘭武器援助的延遲。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>儘管可能帶來經濟痛苦，加拿大為何仍選擇退出與美國的貿易協議？</summary>
-    <p>加拿大總理卡尼表示，美國在最後一刻提出了「不公平、不經濟」的條款，尤其是在汽車產業和對加拿大與其他國家貿易協議的限制上。他將此視為一種「權力遊戲」，認為這些要求過多且誠意不足，因此決定反擊以爭取更好的長期協議。</p>
+    <summary>前國防部長 Fedorov 為何被解職？他在職時的聲譽如何？</summary>
+    <p>Fedorov 據報導因與烏克蘭武裝部隊司令發生衝突而於上個月被解職。他曾是一位受歡迎的部長，負責軍隊現代化並開創了無人機戰爭。</p>
   </details>
   
   <details>
-    <summary>加拿大人民對於貿易爭端升級以及卡尼總理的強硬立場有何反應？</summary>
-    <p>民意調查顯示，許多加拿大人支持對美國關稅採取報復行動，並主張聯邦政府應採取強硬路線，不再讓步。部分省份已採取具體行動抵制美國商品，例如下架美國酒品，導致美國相關產業出口額大幅下降，也造成美國旅遊業的收入損失。</p>
+    <summary>澤倫斯基總統對於在戰時舉行選舉的立場為何？目前存在哪些挑戰？</summary>
+    <p>澤倫斯基總統認為在目前這樣的戰爭中舉行選舉是一個巨大的風險，可能會分裂烏克蘭。專家指出，戰時選舉面臨多重障礙，包括士兵、數百萬難民以及被佔領地區的選民如何投票，以及俄羅斯散布虛假信息的威脅。</p>
   </details>
   
   <details>
-    <summary>卡尼總理的這項決定將對加美關係及未來的貿易協定產生哪些潛在影響？</summary>
-    <p>短期內，兩國之間的貿易緊張將加劇，雙方企業面臨更多關稅壓力，可能導致經濟痛苦。長期而言，這不僅影響正在審查中的北美自由貿易協定（USMCA）的未來，也考驗著加拿大在面對主要貿易夥伴壓力時的國家韌性與外交策略。</p>
+    <summary>Fedorov 提到的政府腐敗調查具體是什麼？</summary>
+    <p>烏克蘭的反腐敗局宣布，他們發現了一項企圖挪用超過300萬美元烏克蘭貨幣的計劃，以支付一名被控洗錢的前能源部長的保釋金。據稱一名澤倫斯基辦公室的高級官員涉案，並已被解職。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-08-23-5fd4de93df-sans.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c3040pn8lmmo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-08-24-c85614423c-sans.html">全文（約 6 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cwy4ypzvd7po?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Carney calls Trump's fresh tariffs a 'miscalculation' after trade talks collapse</h3>
-  <p class="summary">加拿大總理卡尼指出，在貿易談判於週五深夜破裂後，美國對加拿大加徵新關稅是「誤判」，旨在「傷害和分化我們」。作為回應，加拿大將從9月8日起對鋼鐵、乳製品、電器和電子產品等美國商品實施「以牙還牙」的報復性關稅，以保護自身利益。此次美加貿易戰的升級，不僅破壞了兩個盟友間高度整合的貿易關係，也為北美自由貿易協定的未來蒙上陰影，目前尚無明確的解決方案。
-* 美國對加拿大葡萄酒、乳製品、水泥等價值約200億加元的商品加徵50%關稅。
-* 加拿大總理卡尼獲得國內跨黨派及各省領導人支持，拒絕美方限制加拿大與其他國家簽訂貿易協議的「不可接受」條件。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>導致此次貿易談判破裂的具體分歧點為何？</summary>
-    <p>談判破裂的主因是雙方相互指責對方在最後一刻提出「新要求或反悔」已達成協議的條款。加拿大總理卡尼特別指出，美方提出的條件過於嚴苛且「不可接受」，包括限制加拿大與其他國家簽訂新貿易協議的能力，這被認為是不公平且不經濟的。</p>
-  </details>
-  
-  <details>
-    <summary>這些新關稅對北美自由貿易協定（USMCA）可能造成什麼影響？</summary>
-    <p>總理卡尼表示，此次貿易談判的破裂對於北美自由貿易協定（USMCA）「絕對不是個好消息」。儘管加拿大和墨西哥此前已正式請求將USMCA延長16年，但美國拒絕以現有形式續簽。新關稅的實施無疑將使這個價值1.6萬億美元的三邊貿易協定的未來變得更加複雜和不確定。</p>
-  </details>
-  
-  <details>
-    <summary>美國和加拿大此次加徵關稅分別針對哪些具體商品？</summary>
-    <p>美國此次加徵的50%新關稅主要針對加拿大價值約200億加元的商品，包括葡萄酒、乳製品、水泥、服裝和曲棍球設備等。作為回應，加拿大將從9月8日起對鋼鐵、乳製品、電器和電子產品等美國商品實施報復性關稅。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">BBC World News ｜ <a href="article/2026-08-23-f4c36d47d3-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
-</article>
+  <h3>Guinea rubbish landfill collapse kills 30</h3>
+  <p class="summary">幾內亞首都科納克里達爾薩拉姆區的主要垃圾場，因深夜大雨導致一座垃圾山於當地時間凌晨2點左右崩塌，壓毀附近民宅，造成至少30人死亡，22人受傷，其中6人傷勢嚴重。幾內亞政府已部署大量資源及軍隊進行搜救，總理也已前往現場視察，儘管如此，死亡人數仍恐將持續攀升。
 
-<article>
-  <h3>TikTok to pay $400m to US in one of largest child privacy settlements</h3>
-  <p class="summary">TikTok 及其母公司字節跳動已同意向美國支付 4 億美元，以和解一宗指控其平台侵犯兒童隱私權的訴訟。這項和解是針對美國司法部在 2024 年提起的訴訟，該訴訟稱 TikTok 未經父母同意，收集了數百萬 13 歲以下用戶的大量數據，違反了《兒童線上隱私保護法》(COPPA)。這是此類案件中規模最大的和解案之一，凸顯了科技公司在保護兒童數據方面的責任。
-關鍵要點：
-* TikTok 被控違反了聯邦《兒童線上隱私保護法》(COPPA)。
-* 和解金額包含立即支付 3 億美元，以及政府解除 2019 年同意法令後支付的 1 億美元。</p>
+重點：
+- 該垃圾場在2017年曾發生過類似的崩塌事件，造成10人死亡。
+- 搜救工作目前持續進行中，以尋找更多可能的倖存者。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>什麼是《兒童線上隱私保護法》(COPPA)？</summary>
-    <p>COPPA 是一項於 2000 年頒布的美國聯邦法律，旨在規範線上服務如何收集、使用和披露 13 歲以下兒童的個人資訊。它要求網站和線上服務在收集兒童數據前必須徵得父母同意。</p>
+    <summary>造成此次垃圾山崩塌的主要原因為何？</summary>
+    <p>報導指出，此次崩塌發生在深夜大雨過後，顯示降雨可能是直接誘因，導致垃圾堆積物鬆動。然而，該垃圾場過去曾發生類似事件，可能表示其結構穩定性與垃圾處理方式存在長期問題，使其極易受天氣影響。</p>
   </details>
   
   <details>
-    <summary>TikTok 的這項和解案與其他科技公司的案例相比如何？這對其他科技公司有何影響？</summary>
-    <p>TikTok 的 4 億美元和解金是同類案件中金額最高的之一，超越了 Google 旗下 YouTube 在 2019 年支付的 1.7 億美元和 Epic Games 在 2022 年支付的 2.75 億美元。這表明美國政府對兒童隱私保護的執法力度日益加強，對 Meta 等面臨類似訴訟的公司發出強烈警告。</p>
+    <summary>這種大型垃圾掩埋場對周邊居民和環境會造成哪些主要危害？</summary>
+    <p>除了突然崩塌可能造成人員傷亡和財產損失外，大型垃圾場還會對周邊環境帶來嚴重污染。這包括地下水和土壤污染、散發惡臭、滋生病媒，以及長期對居民健康造成危害，例如呼吸道疾病等。</p>
   </details>
   
   <details>
-    <summary>自從面臨這項訴訟以來，TikTok 為了改善兒童隱私保護做了哪些改變？</summary>
-    <p>儘管司法部未詳細說明和解後的具體行動，但提到自訴訟以來，TikTok 在所有權、隱私實踐和年輕用戶的平台控制方面經歷了「重大變化」。這些改變可能包括加強年齡驗證機制、實施更嚴格的數據收集限制以及尋求家長同意的流程。</p>
+    <summary>幾內亞政府和相關單位可以採取哪些措施來防止未來再次發生類似的災難？</summary>
+    <p>為防止未來發生類似災害，政府應加強對垃圾掩埋場的結構監測和工程管理，確保其穩定性。此外，投資現代化的垃圾處理設施、推動垃圾分類與回收計畫，並評估將居住在危險區域的居民進行重新安置，都是重要的預防措施。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-08-23-f3ee26afe8-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cwyr0l45xjro?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-08-24-c3bfba41d6-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c4g3g36z7p6o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 
 <h2>科學 Science</h2>
 
 <article>
-  <h3>APOD: 2026 August 22 – Mostly Perseids</h3>
-  <p class="summary">捷克一家天文台的四台流星監測攝影機於8月12日至13日晚間，在英仙座流星雨高峰期捕捉到了一整夜的天空影像。這些影像結合後顯示共有1,706顆流星，其中絕大多數是英仙座流星。這項觀測不僅清晰展示了英仙座流星雨的密集活動，也辨識出其他較不活躍流星群的存在。
-* 英仙座流星雨的輻射點位於天空右上方的英仙座區域。
-* 其他流星群如天鵝座κ流星和反日點流星也在此次觀測中被識別出來。</p>
+  <h3>Curiosity Blog, Sols 4982–4987: Back to Our Regularly Scheduled Programming</h3>
+  <p class="summary">好奇號火星車於火星日4982-4987（地球時間2026年8月14日）在火星蓋爾撞擊坑恢復常規任務，在短暫調查「侵蝕表面」後，正繼續攀登夏普山。在這段時間內，好奇號對多個地質目標進行了詳細成像、化學成分分析及大氣測量，並成功行駛了30公尺，計劃再行駛47公尺，同時密切監測蓋爾撞擊坑進入秋季後的沙塵暴活動，以收集火星地質與氣候變化的寶貴資料。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>英仙座流星雨為何會呈現從單一輻射點發射的現象？</summary>
-    <p>流星雨的輻射點是地球穿越彗星或小行星留下的塵埃和碎片軌道時，這些粒子進入地球大氣層燃燒所產生的。由於這些粒子都沿著幾乎平行的軌道運行，從地球上看，它們似乎都來自天空中同一個點，即輻射點。</p>
+    <summary>好奇號火星車攀登夏普山的主要科學目標是什麼？</summary>
+    <p>夏普山高約5.5公里，由不同地質層構成，記錄了火星地質歷史和氣候變化。攀登它能讓科學家研究這些地層，尋找過去存在液態水和微生物生命的證據，從而了解火星過去是否適合居住。</p>
   </details>
   
   <details>
-    <summary>文中提到的天鵝座κ流星和反日點流星群與英仙座流星雨相比有何不同？</summary>
-    <p>與英仙座流星雨的壓倒性數量相比，天鵝座κ流星群和反日點流星群是活躍度明顯較低的流星群。這表示它們在同一時間內產生的流星數量遠少於英仙座流星，因此在觀測時較為稀疏和難以發現。</p>
+    <summary>文章中提到的「侵蝕表面」是什麼，好奇號為何要特意繞道調查它？</summary>
+    <p>侵蝕表面是蓋爾撞擊坑中一個獨特的地質特徵，代表著地質歷史中一個重要的侵蝕事件。好奇號通過詳細成像和化學分析，旨在了解該表面以下和以上的地層關係，以揭示火星過去環境變化的線索和地質演變過程。</p>
   </details>
   
   <details>
-    <summary>像英仙座流星雨這樣的大規模流星雨，最佳觀測條件通常是什麼？</summary>
-    <p>觀測流星雨的最佳條件通常是在遠離城市燈光污染的黑暗地點，且天空無雲、月光不強的夜晚。流星雨活動高峰期是觀測數量最多的時機，且無需望遠鏡，只需肉眼觀看廣闊的天空即可。</p>
+    <summary>好奇號為何如此重視監測火星上的沙塵暴，特別是在進入秋季時？</summary>
+    <p>沙塵暴會顯著影響火星大氣的光學深度和能見度，進而影響火星車的科學觀測和行駛安全。監測沙塵暴有助於科學家研究火星的天氣模式和氣候變化，並預防潛在的操作風險；儘管蓋爾撞擊坑進入秋季後沙塵暴發生率降低，好奇號仍會持續監測以防晚期風暴。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-23-5f36beb666-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/image-article/apod/apod-2026-august-22-mostly-perseids/">原文網頁</a></p>
-</article>
-
-
-<h2>長文 Long Reads</h2>
-
-<article>
-  <h3>‘Huge Breakthrough’ in the Math of Imbalance</h3>
-  <p class="summary">組合差異理論中的Komlós猜想認為，無論物件和維度數量多寡，將具有多重特徵的物件分為兩組時，其不平衡程度（差異）不會超過一個通用常數。此猜想雖具革命性，但數十年來證明進展緩慢。最近，Bansal和Jiang透過一種新穎的演算法方法，成功將差異的上限從 log(N)½ 顯著降低至 log(N)¼，使得其非常接近常數。
-這一突破性進展為Komlós猜想的真實性提供了迄今為止最強有力的證據，並對數學、物理學和機器學習等廣泛領域的應用具有深遠潛力。
-
-主要重點：
-• Komlós猜想的核心在於「通用常數」上限，而非隨物件或維度增長的上限。
-• Bansal和Jiang的新演算法通過處理屬性之間的「依賴性」，實現了這一重大改進。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>什麼是組合差異理論中的「差異」？</summary>
-    <p>「差異」衡量的是將一組具有多重屬性的物件（例如：玩家的技能或車輛的顏色）分為兩組時，各組在每種屬性上的不平衡程度。目標是盡可能平均分配這些屬性，使得兩組之間的差異最小化。</p>
-  </details>
-  
-  <details>
-    <summary>為何將差異上限推近「常數」如此重要，這有何實際應用潛力？</summary>
-    <p>達到接近常數的上限意味著無論問題的規模多大、維度多複雜，都能保證找到一個相對平衡的分配方案。這在運籌學、最佳化理論、物理學甚至機器學習等領域有廣泛應用，例如在臨床試驗分組或大型語言模型訓練中實現更公平的資源分配。</p>
-  </details>
-  
-  <details>
-    <summary>文章提到 log(N)¼「不會是最終的極限」，那麼要完全證明Komlós猜想，接下來需要什麼？</summary>
-    <p>為了完全證明Komlós猜想，研究人員需要找到一個完全獨立於N（物件數量）的通用常數作為差異的上限。Bansal認為，要超越目前的四次方根上限，可能需要全新的演算法策略或數學方法，而非僅是改進現有技術。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Quanta Magazine ｜ <a href="article/2026-08-23-bfc1334674-sans.html">全文（約 10 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/huge-breakthrough-in-the-math-of-imbalance-20260821/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-24-234c89fb6a-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://science.nasa.gov/blog/curiosity-blog-sols-4982-4987-back-to-our-regularly-scheduled-programming/">原文網頁</a></p>
 </article>
 
 
