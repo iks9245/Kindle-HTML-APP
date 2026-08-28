@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日深讀</title>
+<title>Show HN: We built open OpenRouter that turns usage into a better model</title>
 <style>
   body {
     font-family: Helvetica, Arial, sans-serif;
@@ -73,18 +73,73 @@
 <span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
 <div class="page">
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
-<p class="fontswitch"><a href="deepread.html">切換為襯線字體顯示</a></p>
+<p class="fontswitch"><a href="2026-08-28-a1b02a6424-p8.html">切換為襯線字體顯示</a></p>
 
-<h1>每日深讀</h1>
+
+<h1>Show HN: We built open OpenRouter that turns usage into a better model</h1>
 <p class="meta">
-本篇：The Forested Floodplains of Congaree National Park
- ｜ <a href="index-sans.html">首頁</a>
- ｜ <a href="article/2026-08-28-13b57a0368-sans.html">讀全文</a>
- ｜ <a href="https://science.nasa.gov/earth/earth-observatory/the-forested-floodplains-of-congaree-national-park/">原文網頁</a>
+Hacker News
+ ｜ 第 8 / 8 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://github.com/experientiallabs/experiential">原文網頁</a>
 </p>
 
 
-<p>今天還沒有深讀內容 — 排程跑過之後就會挑出當天最有份量的一篇，做成延伸導讀。</p>
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-28-a1b02a6424-p7-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 8 / 8 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">uv sync --extra dev</p>
+
+<p class="fulltext">uv run ruff format --check .</p>
+
+<p class="fulltext">uv run ruff check .</p>
+
+<p class="fulltext">uv run ty check</p>
+
+<p class="fulltext">uv run pytest -q</p>
+
+<p class="fulltext">Repository and documentation conventions live in AGENTS.md.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Experiential 的「OpenAI 相容 API」具體指的是什麼？它如何實現對不同模型來源的統一管理？</summary>
+  <p>這個「OpenAI 相容 API」意味著開發者可以使用現有的 OpenAI SDK 或習慣的 API 格式來呼叫所有透過 Experiential 管理的模型。它透過一個中央閘道器將來自 OpenAI、Anthropic、Gemini、Azure 等多種供應商的 API 金鑰或本地模型統一聚合起來，提供單一介面，簡化了多模型協作的複雜性。</p>
+</details>
+
+<details>
+  <summary>Experiential 如何將「生產流量轉化為客製化路由器或模型」來達到品質、速度與成本的優化？</summary>
+  <p>Experiential 能夠收集 LLM 的呼叫追蹤（traces）作為遙測數據。這些數據可以用來模擬代理的工作流程，並據此優化一個模型路由器，使其能根據當前的需求自動選擇最佳模型，或透過 Tinker 工具微調開源模型，從而提升整體性能與效率。</p>
+</details>
+
+<details>
+  <summary>哪些類型的代理（agent）工作流程或應用場景最能從 Experiential 中受益？</summary>
+  <p>任何需要頻繁呼叫多個大型語言模型（LLMs）的自動化代理或應用都會受益。例如，用於軟體開發的編碼代理（如 Claude Code, Cursor）、內容生成工具、自動化客服系統，以及需要根據不同任務動態選擇模型的複雜工作流，都能利用 Experiential 實現更高效、更具成本效益的模型管理。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-28-a1b02a6424-p7-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 8 / 8 頁</span>
+</nav>
+
 
 
 </div>
