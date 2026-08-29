@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-08-28</title>
+<title>每日 AI 文摘 2026-08-29</title>
 <style>
   body {
     font-family: Georgia, "Times New Roman", serif;
@@ -75,9 +75,9 @@
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
 <p class="fontswitch"><a href="index-sans.html">切換為無襯線字體顯示</a></p>
 
-<h1>每日 AI 文摘 2026-08-28</h1>
+<h1>每日 AI 文摘 2026-08-29</h1>
 <p class="meta">
-2026-08-28
+2026-08-29
 
  ｜ <a href="archive/index.html">存檔列表</a>
  ｜ <a href="deepread.html">每日深讀</a>
@@ -89,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日焦點集中於科技與政府間的法律戰，一名法官裁定川普政府將AI公司Anthropic列入黑名單是違法報復，此舉強調了政府權力在科技倫理應用上的界限，以及言論自由的重要性。與此同時，人工智慧社群亦持續發展，推出能優化模型管理並轉化生產流量的新開源工具。而在國際舞台上，土耳其正式簽署《阿提米絲協定》加入太空探索行列；地球另一端，尼泊爾與西藏邊界則遭受毀滅性山洪的衝擊，凸顯環境災害的嚴峻。</p>
+<p>今日要聞聚焦於科技、地緣政治與太空探索的動態。科技界見證了 OpenAI 終止與 SpaceX 的合作，以及 AI 代理加速網路安全威脅的雙面效應。地緣政治方面，美國與委內瑞拉達成石油大協議，而 9/11 劫機者與沙烏地間諜的新證據浮出水面，同時中國對西藏洪水的資訊審查亦受矚目。此外，NASA 在太空探索領域持續取得進展，阿提米絲二號任務組員獲頒榮譽，並透過創新競賽推動月球資源回收。</p>
 </div>
 
 
@@ -99,280 +99,307 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>Show HN: We built open OpenRouter that turns usage into a better model</h3>
-  <p class="summary">Experiential 推出了一款開源閘道器與路由器，旨在簡化代理（agent）工作流程。這項工具提供了一個與 OpenAI 相容的 API 介面，讓使用者能整合託管、自帶金鑰（BYOK）及本地模型，並精細控制使用者權限、用例及預算。其核心價值在於能將實際的生產流量轉化為客製化的路由器或模型，從而優化模型呼叫的品質、速度與成本，提升 AI 應用的效率與管理彈性。
-
-*   統一管理各類模型：透過單一介面整合來自不同供應商或本地部署的模型。
-*   利用實際流量優化模型表現：將生產數據用於訓練或調優路由器與模型，以提升效益。</p>
+  <h3>Our decision on Cursor following its acquisition by SpaceX</h3>
+  <p class="summary">OpenAI 已通知 SpaceX，由於對其遵守服務條款的能力缺乏信心，將於 2026 年 11 月 12 日終止向其旗下程式碼編輯器 Cursor 提供 OpenAI 模型服務的合約。此決定是因為 Elon Musk 旗下公司過去曾違反 OpenAI 的合約條款，例如 Twitter (現為 X) 和 xAI。儘管這是一個艱難的決定，OpenAI 仍給予最長的合約通知期，以最大程度地減少對開發者的影響。
+關鍵重點：
+- 合約終止日期：2026 年 11 月 12 日。
+- 主要原因：對 SpaceX 及其關聯公司遵守 OpenAI 服務條款的信心不足。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>Experiential 的「OpenAI 相容 API」具體指的是什麼？它如何實現對不同模型來源的統一管理？</summary>
-    <p>這個「OpenAI 相容 API」意味著開發者可以使用現有的 OpenAI SDK 或習慣的 API 格式來呼叫所有透過 Experiential 管理的模型。它透過一個中央閘道器將來自 OpenAI、Anthropic、Gemini、Azure 等多種供應商的 API 金鑰或本地模型統一聚合起來，提供單一介面，簡化了多模型協作的複雜性。</p>
+    <summary>OpenAI為何特別提到Elon Musk旗下公司過去的違約行為？</summary>
+    <p>OpenAI 指出，過去 SpaceX 旗下的 Twitter (現為 X) 曾違反其合約條款，而 xAI 的 Elon Musk 也在宣誓下承認違反了 OpenAI 的服務條款。這些經歷導致 OpenAI 對 SpaceX 未來會遵守其服務條款缺乏信心，因此決定終止與 Cursor 的合作。</p>
   </details>
   
   <details>
-    <summary>Experiential 如何將「生產流量轉化為客製化路由器或模型」來達到品質、速度與成本的優化？</summary>
-    <p>Experiential 能夠收集 LLM 的呼叫追蹤（traces）作為遙測數據。這些數據可以用來模擬代理的工作流程，並據此優化一個模型路由器，使其能根據當前的需求自動選擇最佳模型，或透過 Tinker 工具微調開源模型，從而提升整體性能與效率。</p>
+    <summary>這項決定將如何影響目前透過 Cursor 使用 OpenAI 模型的開發者？</summary>
+    <p>OpenAI 意識到此決定將對依賴其模型於 Cursor 中的開發者產生影響。儘管終止日期設定在 2026 年 11 月 12 日，提供了充足的過渡期，OpenAI 也表示將會提供額外支持，以幫助開發者順利過渡。</p>
   </details>
   
   <details>
-    <summary>哪些類型的代理（agent）工作流程或應用場景最能從 Experiential 中受益？</summary>
-    <p>任何需要頻繁呼叫多個大型語言模型（LLMs）的自動化代理或應用都會受益。例如，用於軟體開發的編碼代理（如 Claude Code, Cursor）、內容生成工具、自動化客服系統，以及需要根據不同任務動態選擇模型的複雜工作流，都能利用 Experiential 實現更高效、更具成本效益的模型管理。</p>
+    <summary>文章中提到的「Astra」是什麼，它與此決定有何關聯？</summary>
+    <p>Astra 是 OpenAI 即將推出的模型。隨著 AI 能力的進步，OpenAI 認為有更高的責任確保其未來模型（包括 Astra）被正確使用並符合其服務條款。這也是 OpenAI 在評估與大型合作夥伴如 SpaceX 的合作時，更為謹慎考量合約遵守問題的原因之一。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-28-a1b02a6424.html">全文（約 3 分鐘）</a> ｜ <a href="https://github.com/experientiallabs/experiential">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-29-3ac5377561.html">全文（約 2 分鐘）</a> ｜ <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Judge Rules Trump Administration’s Blacklisting of Anthropic Was Illegal</h3>
-  <p class="summary">一名法官於2026年8月27日裁定，川普政府將人工智慧公司Anthropic列入黑名單的行為屬非法，此舉撤銷了一項針對該科技公司的重大政府行動。
-這項判決凸顯了司法部門對行政權力的制衡作用，並可能對政府與科技公司之間，尤其是在國家安全和技術監管領域的關係，產生深遠影響。
-* 判決日期：2026年8月27日
-* 核心議題：政府對科技公司黑名單的合法性</p>
+  <h3>Boot a Virtual iPhone via Apple's Virtualization.framework</h3>
+  <p class="summary">vphone-cli 是一款新工具，讓用戶能夠在搭載 Apple Silicon 的 macOS 15 (Sequoia) 或更高版本的電腦上，透過 Apple 的 Virtualization.framework 啟動虛擬 iPhone。這項工具為 iOS 裝置提供了強大的虛擬化環境，支援從建立、組態到啟動、管理虛擬機的完整流程。它特別之處在於能安裝客製化韌體（CFW），並提供多種變體選項，包括實現全面越獄（jailbreak）及進階安全繞過功能，對於iOS研究與開發極具價值。
+- 支援多種修補變體，從維持 iOS 緩解措施的「無補丁」模式，到包含全面越獄及反虛擬機偵測研究補丁的「實驗性」模式。
+- 提供豐富的命令列介面，可用於虛擬機的建立、克隆、匯出、匯入、設定（CPU/記憶體）以及韌體準備與修補。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>川普政府當初為何將Anthropic列入黑名單？</summary>
-    <p>文章並未詳述黑名單的具體原因，但政府通常會基於國家安全考量、違反特定法規或對公共利益造成潛在威脅等理由，對公司採取此類措施。Anthropic作為一家AI公司，其技術可能涉及數據安全、潛在的國家戰略意義或出口管制問題，進而引發政府的關注。</p>
+    <summary>「vphone-cli」的運行需要哪些特定的硬體和軟體環境？</summary>
+    <p>它需要搭載 Apple Silicon 的 macOS 15 (Sequoia) 或更高版本作業系統。此外，還需安裝 Xcode 及 iOS SDK，並且系統的安全保護機制（SIP/AMFI）可能需要放鬆，以允許使用未簽署的二進位檔案和私有權利。</p>
   </details>
   
   <details>
-    <summary>這項判決對Anthropic有什麼直接影響？</summary>
-    <p>這項判決將撤銷對Anthropic的黑名單地位，使其能夠恢復正常的商業運作，包括與政府機構或受政府限制的實體進行合作。這也可能提升該公司在市場上的聲譽，幫助其吸引更多投資與合作夥伴。</p>
+    <summary>為什麼這項工具對於iOS研究和開發特別重要？它能實現哪些傳統虛擬機無法做到的功能？</summary>
+    <p>該工具的價值在於它能提供深層次的系統控制，允許安裝自訂韌體和多種安全繞過補丁，甚至實現全面越獄。這使得開發者和研究人員能夠在虛擬環境中測試和分析通常受限於物理裝置的行為，例如系統級別的修改和安全漏洞的探討。</p>
   </details>
   
   <details>
-    <summary>這項裁決對未來美國政府與科技公司的關係可能產生什麼影響？</summary>
-    <p>這項裁決可能為科技公司挑戰政府行動樹立先例，並強調了政府在實施限制性措施時必須遵守法律程序和原則。它可能促使政府在未來對科技公司採取類似行動時更加謹慎，並強調司法審查的重要性，從而塑造更為規範的政企關係。</p>
+    <summary>「vphone-cli」提供的不同「變體」（variants）有何區別，這些變體對虛擬機的功能有何影響？</summary>
+    <p>「vphone-cli」提供「less」、「regular」、「dev」、「jb」和「exp」等多種變體。這些變體代表不同程度的系統修補和安全繞過，從僅保留 iOS 緩解措施的「less」模式，到包含完整越獄（如自動安裝 Sileo、TrollStore）的「jb」模式，甚至還有用於反虛擬機偵測研究的「exp」模式，為使用者提供靈活的控制能力。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-28-3ceeb5bddf.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-29-58021e8b5c.html">全文（約 6 分鐘）</a> ｜ <a href="https://github.com/Lakr233/vphone-cli">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Show HN: OpenTIE and OpenXWA, Modern Ports of Tie Fighter and X-Wing Alliance</h3>
-  <p class="summary">OpenTIE 是一個開源專案，在 Windows、macOS 和 Linux 等現代作業系統上重新實作了經典遊戲《星際大戰：鈦戰機》。它讓玩家能在現代硬體上體驗這款經典，並透過高解析度渲染、進階照明和高刷新率等現代化改進大幅提升遊戲體驗，同時也保留了原汁原味的經典呈現。OpenTIE 特別之處在於能整合遊戲不同版本（1995年和1998年）的最佳元素，提供更豐富的遊玩選擇。
-- 結合 1995 年的互動式 iMUSE 音效和過場動畫，以及 1998 年更先進的飛行模擬與 3D 資產。
-- 支援陰影、環境光遮蔽、HDR 輸出及 AMD FSR 等現代圖形效果，並能以高達 240 Hz 的刷新率運行。</p>
+  <h3>Just the rumour of a bug is enough to find an exploit these days</h3>
+  <p class="summary">OCaml cohttp 函式庫的維護者近日發布了 6.3.0 版本的安全修補程式，修復了一個路徑遍歷漏洞。然而，在修補程式的公開 PR 提出僅數分鐘後，作者的伺服器日誌就偵測到針對此漏洞的探測行為。這凸顯了由於 AI 代理的快速漏洞生成能力，傳統的安全應對措施（如漏洞封鎖）已不再有效，攻擊者現在可以在補丁發布之前就利用漏洞，使得開源維護者面臨巨大的挑戰。
+*   AI 代理如 DeepSeek V4 Pro 能夠僅憑大致方向，在短時間內自行找到並生成漏洞利用程式。
+*   漏洞被利用的平均時間已變成負值，意味著攻擊行為常發生在修補程式發布之前。
+*   開源專案需要改變安全響應策略，以應對這種自動化威脅。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>玩 OpenTIE 需要準備什麼才能開始遊戲？</summary>
-    <p>玩家需要擁有《星際大戰：鈦戰機》1995年 Collector's CD-ROM 或 1998年 Windows 版本的完整安裝檔。若要體驗最佳組合，建議同時安裝這兩個版本。OpenTIE 本身不包含遊戲內容。</p>
+    <summary>報告中提到「漏洞利用現在先於補丁」，這具體是什麼意思？這種情況如何發展？</summary>
+    <p>這表示攻擊者能夠在安全補丁公開發布之前，就發現並利用軟體中的漏洞。根據文章，這個「平均利用時間」已從 2018-19 年的 63 天縮短到 2024 年的負 7 天，顯示利用速度大幅加快，主要原因歸咎於 AI 代理的普及。</p>
   </details>
   
   <details>
-    <summary>OpenTIE 在圖形和遊戲流暢度方面有哪些具體的現代化提升？</summary>
-    <p>OpenTIE 提供現代圖形模式，包括陰影、環境光遮蔽、動態模糊、HDR 輸出以及 AMD FSR 抗鋸齒與升級技術。飛行模擬更新率可達 240 Hz，以配合現代高刷新率顯示器，提供更流暢的動作和更靈敏的控制。</p>
+    <summary>文章中提到的「bugonomics」概念是什麼？為什麼它現在對開源軟體維護者不利？</summary>
+    <p>「bugonomics」（漏洞經濟學）描述了軟體漏洞的經濟動態，指出瓶頸已從漏洞發現轉移到「防禦者修復吞吐量」。大型語言模型能夠迅速生成漏洞利用程式，但維護者驗證、分類和發布修復的速度未能跟上，導致開源維護者處於劣勢。</p>
   </details>
   
   <details>
-    <summary>OpenTIE 推薦的配置是如何結合 1995 年和 1998 年版本的，這樣做有什麼優勢？</summary>
-    <p>推薦配置結合了 1995 年的選單、過場動畫和自適應 iMUSE 音效，以及 1998 年的飛行模擬與 3D 資產。這樣玩家既能享受到 1998 年的飛行呈現，又不會錯過 Collector's CD-ROM 中互動性強的音樂體驗。</p>
+    <summary>為了應對這種快速的自動化漏洞利用，文章提出了哪些潛在的解決方案或研究方向？</summary>
+    <p>文章建議結合輕量級的開源貢獻者信任網絡、改進開源打包流程，以及更高效的持續發布和分類機制。研究方向包括建立一個「反機器人防禦測試平台」以實現快速、本地化的緩解措施，以及將 Lean 規範編譯成運行時強制執行自動機。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-28-0fb288ec68.html">全文（約 3 分鐘）</a> ｜ <a href="https://github.com/elyosh/OpenTIE/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-29-c7ae024cae.html">全文（約 9 分鐘）</a> ｜ <a href="https://anil.recoil.org/notes/rumour-is-the-exploit">原文網頁</a></p>
 </article>
 
 
 <h2>國際 World</h2>
 
 <article>
-  <h3>Trump administration illegally retaliated against Anthropic, judge rules</h3>
-  <p class="summary">美國地區法官 Rita Lin 近日裁定，川普政府的國防部在將人工智慧新創公司 Anthropic 列為供應鏈風險時，採取了「非法且毫無根據」的報復行動。Anthropic 因拒絕讓軍方將其 AI 模型用於監視或自主武器等用途而遭到報復。法官指出，引用國家安全不能成為懲罰和報復政府批評者的「空白支票」，此案被視為典型的第一修正案報復。
-
-*   此裁決強調了政府權力與科技公司在 AI 倫理應用上的界限，特別是在言論自由方面。
-*   這是美國公司首次被公開指定為供應鏈風險，突顯了政府在軍事應用 AI 方面與科技公司之間的緊張關係。</p>
+  <h3>Trump hails 'historic' deal for US to control 65bn barrels of Venezuela's oil</h3>
+  <p class="summary">美國總統唐納·川普宣布達成一項「歷史性」協議，美國將透過一家合資企業控制委內瑞拉650億桶石油儲備，此舉將使美國石油儲備增加一倍以上，並有望大幅降低汽油價格。委內瑞拉臨時總統德爾西·羅德里格斯也讚揚該協議，稱其將帶來近1000億美元的私人投資，並在大幅促進委內瑞拉的經濟復興和重建，尤其是在其前總統尼古拉斯·馬杜羅被捕之後。這項極不尋常的協議賦予美國在17個戰略油田為期100年的特許經營權中55%的控制權。
+- 這項協議預計將顯著增加美國的石油供應並降低國內汽油價格。
+- 委內瑞拉將獲得巨額投資，以支持其經濟復甦和產業現代化。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>Anthropic 拒絕了哪些具體的軍事應用，導致國防部對其採取報復行動？</summary>
-    <p>Anthropic 拒絕讓美國軍方將其開發的 AI 模型用於監視或自主武器系統。該公司表示，其模型尚未達到足夠的可靠性以安全用於武器系統，並且反對其技術被用於國內監視，認為這侵犯了公民權利。</p>
+    <summary>委內瑞拉前總統尼古拉斯·馬杜羅（Nicolás Maduro）是如何被捕的？這與美國控制委內瑞拉石油儲備的協議有何關聯？</summary>
+    <p>馬杜羅及其夫人西莉亞·弗洛雷斯於1月3日在一場經川普授權的美國特種部隊行動中被捕。在突襲後的數小時內，川普聲稱美國將無限期控制委內瑞拉石油的銷售，直到該國實現「安全、適當和明智的過渡」，這為此次石油協議奠定了基礎。</p>
   </details>
   
   <details>
-    <summary>這項裁決對於美國政府與人工智慧公司之間的未來關係可能產生什麼影響？</summary>
-    <p>這項裁決確立了政府在要求科技公司合作時的界限，特別是在國家安全與言論自由之間取得平衡。它可能會鼓勵其他 AI 公司更堅定地就其技術的倫理應用設定條款，並可能促使政府在推動軍事 AI 發展時採取更協商而非脅迫的方式。</p>
+    <summary>為什麼這項協議被稱為「極不尋常」？它對國家主權有何影響？</summary>
+    <p>這項協議被認為極不尋常，因為它似乎賦予美國對外國主權國家資源的直接治理權，這與過去的國際慣例有所不同。其範圍甚至比美國在2003年推翻薩達姆·侯賽因後對伊拉克石油收入的控制更廣泛，引發了對其法律和憲法挑戰的可能性。</p>
   </details>
   
   <details>
-    <summary>國防部將 Anthropic 列為「供應鏈風險」有何不尋常之處？這個標籤通常適用於哪些公司？</summary>
-    <p>國防部通常將「供應鏈風險」的標籤保留給那些總部設在對美國構成威脅的國家，或被視為構成國家安全風險的外國公司。Anthropic 是一家美國公司，這是美國公司首次被公開指定為此類風險，這使其情況變得前所未有且不同尋常。</p>
+    <summary>除了經濟復甦，委內瑞拉從這項石油協議中還能獲得哪些具體的經濟利益？</summary>
+    <p>根據協議，委內瑞拉預計將獲得近1000億美元的私人投資，以及超過2090億美元的國家稅收。這些資金將用於恢復和現代化其石油工業，推動國家經濟增長，並有助於半球的能源安全及國際市場的平衡。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-08-28-1f8849af21.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cm2q7z5mlrmo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-08-29-d1fd3bc001.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx2zlwe7qj1o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Tate brothers blast US jail conditions as they seek bail in UK extradition fight</h3>
-  <p class="summary">Tate兄弟近期在佛羅里達州法院出庭，尋求保釋以對抗英國的引渡要求，他們在英國面臨多達59項強姦和人口販運等指控。這對於7月19日在邁阿密被捕的兄弟，不僅否認所有罪名，更嚴厲批評美國監獄的惡劣條件，例如食物不足和缺乏陽光。美國政府律師認為他們是潛逃風險，而辯護律師則強調其高知名度使其難以逃跑。法官將擇期裁決保釋，英國則需在9月16日前提交完整的引渡請求。
+  <h3>Footage of Tibet floods isn't being shown in China - and we know little about victims there</h3>
+  <p class="summary">近日，尼泊爾與西藏邊境的吉隆口岸（Gyirong Port）發生嚴重洪災，洪水沖毀一切，造成數百人死亡與失蹤。儘管中國已展開大規模救援行動，但中國境內對此災情的報導卻受到嚴格審查，與全球廣泛流傳的災難影片形成鮮明對比。這反映了北京在西藏問題上高度的敏感性，旨在維護社會穩定並控制信息流動，導致外界對實際災情與受害者情況知之甚少。
 
-* 英國提出的59項指控中，包括去年21項和上個月新增的38項，涉及七名受害者。
-* 兄弟倆此前也在羅馬尼亞面臨過性販運指控，並被施加旅行禁令。</p>
+*   全球媒體廣泛報導的戲劇性洪水畫面，在中國國內媒體和網路平台卻幾乎消失無蹤。
+*   中國政府的資訊管制阻礙了倖存者證詞、用戶生成內容以及失蹤者家屬聲音的傳播。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>英國對Tate兄弟提出的具體指控是什麼？</summary>
-    <p>英國皇室檢察署對Tate兄弟提出了總計59項刑事指控，包括強姦、性販運以及與兒童不雅圖像相關的罪名。這些指控涉及七名受害者。</p>
+    <summary>為什麼中國政府對西藏的災情資訊進行如此嚴格的審查？</summary>
+    <p>文章指出，西藏在1950年代被北京併吞後，長期抵抗中共統治，且曾發生多次抗議。中國政府擔心類似災難可能引發社會不滿或成為團結藏人的因素，因此透過審查來維持社會秩序和穩定。</p>
   </details>
   
   <details>
-    <summary>Tate兄弟之前是否也有類似的法律麻煩？</summary>
-    <p>是的，Tate兄弟在2022年也曾於羅馬尼亞面臨性販運指控，當時他們被禁止旅行。特里斯坦·泰特在庭上表示，羅馬尼亞的案件摧毀了他的生活，讓他失去了一切。</p>
+    <summary>資訊審查對西藏當地居民和外界了解災情造成了什麼影響？</summary>
+    <p>資訊審查使得外界難以獲得第一手資料，包括倖存者證詞或受害者家屬的聲音。同時，在中國境內的藏人也難以與外界記者接觸或發布政府不樂見的內容，使得藏族社群內外都難以了解親屬安危。</p>
   </details>
   
   <details>
-    <summary>Tate兄弟在法庭上如何為自己辯護，特別是針對潛逃風險的說法？</summary>
-    <p>Tate兄弟否認所有指控，並聲稱他們因在網路上發表「愚蠢言論」來吸引注意而被誤解。針對潛逃風險，辯護律師指出他們身為高知名度社群媒體影響者，幾乎不可能潛逃。安德魯·泰特也提到他已經重回拳擊賽場以維持生計，顯示其經濟狀況並非外界想像般富裕。</p>
+    <summary>中國政府在處理一般災難時，資訊透明度是否也如此之低？與西藏的特殊情況有何不同？</summary>
+    <p>文章暗示，對西藏災情的處理方式顯著不同於其他地區。通常情況下，雖然中國也有審查，但在西藏，由於其特殊的政治歷史和敏感性，審查更為嚴格，甚至連國外記者都難以獲准進入該地區進行獨立報導。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-08-28-e56fcb12c5.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c9v9nndjznvo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-08-29-929aeaf9b4.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx2z415w2gpo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Tracing the deadly path of the Nepal-Tibet flash flood</h3>
-  <p class="summary">尼泊爾與西藏邊界地區近期遭受毀滅性山洪暴發，導致多個城鎮被毀、橋樑沖垮，並造成數百人死亡、數百人失蹤。BBC Verify 團隊已利用經過驗證的影片和衛星圖像，追蹤了這次致命洪水的路徑。
-
-* 洪水摧毀了尼泊爾-西藏邊界地區的城鎮和橋樑。
-* 數百人死亡，數百人失蹤。</p>
+  <h3>Landlady to 9/11 hijackers reveals their links to alleged Saudi spy</h3>
+  <p class="summary">前9/11劫機者及沙烏地阿拉伯間諜嫌疑人奧馬爾·巴約米（Omar al-Bayoumi）的房東霍莉·拉奇福德（Holly Ratchford）首次向英國廣播公司（BBC）公開她對巴約米的觀察細節，這些說法與巴約米向調查人員的供詞相悖。巴約米被控在9/11事件中協助劫機者，目前在9/11受害者家屬對沙烏地阿拉伯提起的萬億美元訴訟中扮演關鍵角色。法院先前已裁定有「合理推斷」巴約米在協助劫機者時與沙烏地政府協調，而拉奇福德的證詞進一步強化了沙烏地政府可能涉案的說法。 
+ * 拉奇福德的證詞或能為追究沙烏地政府在9/11事件中的潛在責任提供新的證據。 
+ * 此案將於十月提交美國上訴法院，其結果對9/11受害者家屬的求償至關重要。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>這次尼泊爾-西藏邊界地區的山洪暴發可能由什麼原因引起？</summary>
-    <p>文章中沒有明確說明這次山洪暴發的具體原因，但在山區，此類災害通常由強降雨或冰川湖潰決洪水引發。這些自然現象可能導致水量在短時間內急劇增加，沖毀一切。</p>
+    <summary>奧馬爾·巴約米在9/11事件中被指控扮演了什麼角色？他與劫機者之間的互動具體為何？</summary>
+    <p>據指控，巴約米協助了最先抵達美國的兩名9/11劫機者——納瓦夫·阿爾-哈茲米（Nawaf al-Hazmi）和哈立德·阿爾-米赫達爾（Khalid al-Mihdhar），他向他們提供了住處及其他幫助。房東拉奇福德見證了他與劫機者的互動，並表示巴約米為他們提供了關鍵的支持。法官認為有「合理推斷」他協調了沙烏地政府以提供這些協助。</p>
   </details>
   
   <details>
-    <summary>BBC Verify 追蹤洪水路徑有何重要性？</summary>
-    <p>BBC Verify 透過使用經過驗證的影片和衛星圖像來追蹤洪水路徑，這對於準確評估災害範圍和影響至關重要。這種方式能提供可靠的資訊，幫助人們理解災害規模並協助救援工作。</p>
+    <summary>霍莉·拉奇福德的證詞對目前針對沙烏地阿拉伯的訴訟為何如此重要？</summary>
+    <p>拉奇福德的證詞首次公開了她作為房東的親身觀察，直接挑戰了巴約米此前向調查人員提供的說法。她的目擊證詞強化了巴約米並非僅是「好撒瑪利亞人」，而是可能根據沙烏地政府指示提供幫助的論點，這對證明沙烏地政府在9/11事件中的責任至關重要。</p>
   </details>
   
   <details>
-    <summary>山洪暴發對尼泊爾-西藏這類邊境地區有何獨特影響？</summary>
-    <p>在尼泊爾-西藏這類山區邊境地區，山洪暴發因地形陡峭、河谷狹窄而極具破壞力，洪水會以巨大衝力沖毀一切。這些地區通常基礎設施較少且偏遠，使得及時預警、疏散和救援工作更加困難，導致更高的傷亡和更廣泛的破壞。</p>
+    <summary>沙烏地阿拉伯對這些指控和訴訟的官方立場是什麼？他們正在採取哪些法律辯護？</summary>
+    <p>沙烏地阿拉伯堅決否認與9/11事件有任何關聯，並否認奧馬爾·巴約米是其代理人或對襲擊有任何預知。他們主要的法律辯護是主張享有「主權豁免權」，即國家應免於某些類型的民事訴訟和刑事起訴。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-08-28-8d686ff70b.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/videos/cp80m87pez3o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-08-29-fde97915fc.html">全文（約 14 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c99dvm39mreo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 
 <h2>科學 Science</h2>
 
 <article>
-  <h3>The Forested Floodplains of Congaree National Park</h3>
-  <p class="summary">康加里國家公園（Congaree National Park）位於南卡羅來納州，其80%的面積由康加里河的洪氾區構成，是美國最大、最完整的古老河漫灘硬木林區之一。
-這片森林因河水每年數次的洪水而獲得豐富養分，孕育了大量異常高大的「冠軍樹木」，部分樹種曾保持全國或州的尺寸紀錄。
-該地區在19世紀因頻繁洪災、泥濘道路和蚊患，而逃過了大規模砍伐，並於1976年被指定為國家紀念區，2003年升格為國家公園，以保護其獨特的生態系統和生物多樣性。
-- 洪氾區地理：河流蜿蜒形成牛軛湖和古老河道，影響不同地勢的淹水頻率，產生多樣生態系統。
-- 獨特保育：得益於自然挑戰，園區古老森林得以保存，並持續被豐富的沖積土滋養。</p>
+  <h3>NASA’s Artemis II Crew Receives Congressional Space Medal of Honor</h3>
+  <p class="summary">2026年8月28日，美國總統唐納·川普向參與Artemis II任務的四位太空人——NASA的Victor Glover、Christina Koch、Reid Wiseman以及加拿大太空總署（CSA）的Jeremy Hansen——頒發了國會太空榮譽獎章。此獎章旨在表彰太空人在執行任務時所展現的非凡勇氣、卓越貢獻及對國家與人類福祉的付出。他們因在Artemis II任務中的服務而獲此殊榮，使得該獎章的受獎人數增至34位。
+* 該獎章自1969年設立，過去也曾追授給阿波羅1號、挑戰者號和哥倫比亞號的殉職組員。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>摘要提到康加里國家公園頻繁的洪水為森林帶來養分。這種過程具體是如何運作的，為何對樹木如此有利？</summary>
-    <p>康加里河每年多次溢出河岸，通常在冬季和初春，以及夏季和秋季的強降雨後。這些洪水將富含養分的淤泥廣泛地分佈到整個洪氾區，滋養了森林。這也是公園內樹木異常高大，甚至出現「冠軍樹」的原因。</p>
+    <summary>國會太空榮譽獎章的設立宗旨和歷史背景為何？</summary>
+    <p>該獎章於1969年由美國國會授權設立，旨在表彰太空人在執行任務中表現出非凡的勇氣、卓越的努力以及對國家和人類福祉的貢獻。自設立以來，這項榮譽已頒發給34位太空人，其中包括追授給阿波羅1號、挑戰者號和哥倫比亞號的殉職組員。</p>
   </details>
   
   <details>
-    <summary>文章中提到了牛軛湖和古老的河道。這些地理特徵是如何形成的，它們在公園中會是永久的嗎？</summary>
-    <p>河流在平坦柔軟的地形中流動，會形成彎曲的河道。隨著時間推移，河灣的外部不斷被侵蝕，而內部則堆積沉積物，最終可能導致河灣與主流分離，形成U形的牛軛湖。這些被遺棄的河道和牛軛湖最終會被沉積物填滿，逐漸變淺成為濕地，例如園區內的「sloughs」。</p>
+    <summary>Artemis II任務的具體目標和重要性是什麼？</summary>
+    <p>儘管文章未詳述，但Artemis II任務被廣泛預期為載人繞月飛行，旨在為後續的月球登陸任務（如Artemis III）奠定基礎。這項任務不僅標誌著人類重返深空的關鍵一步，也促進了國際間在太空探索領域的合作。</p>
   </details>
   
   <details>
-    <summary>摘要指出公園內的古老森林非常「稀有」。與美國東南部的其他地區相比，康加里國家公園的森林為何能免於大規模砍伐？</summary>
-    <p>在19世紀80年代，康加里地區的伐木工人因頻繁的洪水、泥濘不堪的道路以及蚊蟲滋生等挑戰，難以大規模進入森林。這些惡劣的自然條件無意中保護了大部分的洪氾區森林，使其逃過了當時在東南部其他地區普遍發生的廣泛砍伐，從而保留了其古老森林的獨特狀態。</p>
+    <summary>之前追授給阿波羅1號、挑戰者號和哥倫比亞號組員的獎章，其背後有何特殊意義？</summary>
+    <p>追授給這些太空人的國會太空榮譽獎章，是為了紀念他們在太空任務中為國家和人類所做的最終犧牲。這強調了太空探索的固有風險，同時也緬懷了那些在追求知識和超越人類極限過程中獻出生命的勇士。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-28-13b57a0368.html">全文（約 4 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/earth-observatory/the-forested-floodplains-of-congaree-national-park/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-29-4bee60c7db.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/nasas-artemis-ii-crew-receives-congressional-space-medal-of-honor/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>NASA Invites Media to Turkey Artemis Accords Signing Ceremony</h3>
-  <p class="summary">土耳其將於美國東部時間8月31日星期一下午2:30在華盛頓NASA總部簽署《阿提米絲協定》，成為第71個簽署國。此舉標誌著土耳其加入國際合作，共同推動月球、火星及其他深空探索的安全、透明和協調性。NASA局長Jared Isaacman將與土耳其工業和科技部長Mehmet Fatih Kacır共同主持儀式。
-
-主要重點：
-* 土耳其為第71個簽署國，拓展了國際太空合作網絡。
-* 《阿提米絲協定》為月球、火星及未來太空活動建立了實用原則，確保安全與透明。</p>
+  <h3>NASA Awards First Prize in Phase 2 of Agency’s LunaRecycle Challenge</h3>
+  <p class="summary">美國太空總署（NASA）近日在「月球回收挑戰賽」（LunaRecycle Challenge）第二階段中，將首獎頒發給麻省理工學院（MIT）的CERBERUZ團隊。該團隊因其創新技術，能將太空任務中的混合廢棄物（如織物、塑膠、泡沫和金屬）研磨成細粉，再用於注塑或3D列印，對減少月球及深空任務垃圾至關重要，共獲得775,000美元獎金。
+- CERBERUZ團隊的技術能將混合垃圾，包括Zotek泡沫，轉化為強化材料，用於製造零件。
+- 他們同時贏得了原型開發和虛擬模型（數位分身）兩個賽道的第一名。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>《阿提米絲協定》的背景是什麼，它為何成立？</summary>
-    <p>《阿提米絲協定》由美國NASA和國務院於2020年與其他七個創始國共同發起，旨在應對政府和私營公司對月球活動日益增長的興趣。它確立了首套實用原則，旨在增強月球、火星及其他民用太空探索的安全性、透明度和協調性。</p>
+    <summary>為何太空任務中的廢棄物回收如此重要？</summary>
+    <p>在月球或深空任務中，將所有物資從地球運送過去成本高昂且空間有限。透過回收利用廢棄物，可以大幅減少補給需求，延長任務持續時間，並支持建立更永續的太空基地，對於人類的深空探索至關重要。</p>
   </details>
   
   <details>
-    <summary>土耳其簽署《阿提米絲協定》對其國家和國際太空合作有何意義？</summary>
-    <p>土耳其成為第71個簽署國，這表示它承諾遵守協定的國際太空探索原則，包括和平利用太空、資源開採的透明度及避免有害干涉。這有助於深化土耳其與參與國之間的太空合作，並為未來共同的太空任務奠定基礎。</p>
+    <summary>這項廢棄物回收技術除了應用於太空任務外，在地球上是否有潛在用途？</summary>
+    <p>當然。該技術將混合廢棄物轉化為可用的注塑零件或3D列印耗材，這在地球上也具有巨大的潛力，例如處理都市垃圾、工業廢棄物或用於災區重建。這有助於推動循環經濟，減少地球上的廢棄物堆積。</p>
   </details>
   
   <details>
-    <summary>《阿提米絲協定》主要涵蓋哪些太空探索活動和原則？</summary>
-    <p>《阿提米絲協定》主要涵蓋月球、火星及更遠深空的民用太空探索活動。其核心原則包括和平探索、透明度、互操作性、緊急援助、註冊太空物體、釋放太空數據、保護文化遺產、太空資源利用、避免有害干涉以及減輕軌道碎片。</p>
+    <summary>「月球回收挑戰賽」分為兩階段進行，這兩階段之間有何不同？整個挑戰的最終目標是什麼？</summary>
+    <p>第一階段鼓勵全球創新者提交設計概念，而第二階段則要求美國團隊開發並展示實際原型，並可選擇提交虛擬模型。整個「月球回收挑戰賽」的最終目標是激發創新，為NASA開發出能夠有效減少和再利用月球及深空任務中產生廢棄物的技術，以支持未來的長期太空探索和居住。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-28-312c79e472.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-invites-media-to-turkey-artemis-accords-signing-ceremony/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-29-fa3a90c04b.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/centennial-challenges/nasa-awards-first-prize-in-phase-2-of-agencys-lunarecycle-challenge/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>APOD: 2026 August 28 – The Sky Turns Above Paranal</h3>
-  <p class="summary">這篇文章介紹了一張在智利ESO帕拉納爾天文台拍攝的星軌照片，生動地展示了地球的自轉。儘管地球表面以超過每小時1,500公里的速度向東移動，這種運動肉眼難以察覺，但透過長時間曝光攝影可以顯現。這張由300張連續曝光組成的照片，捕捉到了星空在南天極周圍形成的優雅弧線，證明了行星的持續運動。
-- 地點：智利ESO帕拉納爾天文台
-- 技術：透過300次25秒連續曝光捕捉星軌
-- 重點：星軌以南天極為中心形成弧線</p>
+  <h3>President Honors NASA’s Artemis II Crew with Highest US Space Award</h3>
+  <p class="summary">週五，美國總統唐納·川普在NASA休士頓詹森太空中心，向阿提米絲二號 (Artemis II) 任務的四名太空人——Reid Wiseman、Victor Glover、Christina Koch和Jeremy Hansen——頒發了「國會太空榮譽勳章」。此舉旨在表彰他們在4月1日至10日執行此歷史性任務中的卓越表現，創下了人類有史以來離地球最遠的飛行紀錄。這項榮譽不僅肯定了太空人的英勇與貢獻，也彰顯了美國在太空探索領域的領導地位，並為後續的月球及火星任務奠定基礎。
+
+主要成就包括：
+- 阿提米絲二號是首次載人使用SLS火箭和獵戶座飛船，完成了繞月飛行。
+- 該任務為美國重返月球（Artemis IV）及建立月球基地鋪平了道路。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>文章提到地球自轉速度比海平面音速還快，但為何我們感覺不到這種運動？</summary>
-    <p>我們之所以感覺不到地球自轉的速度，是因為地球及其上的一切都在以相同的恆定速度運動。如同坐在平穩行駛的列車中感受不到速度一樣，我們沒有外部參考點來感知這種持續的運動。</p>
+    <summary>阿提米絲計畫的總體目標是什麼？</summary>
+    <p>阿提米絲計畫旨在讓美國太空人重返月球表面，並建立一個月球基地進行長期探索。最終目標是為將第一批人類太空人送往火星奠定基礎。</p>
   </details>
   
   <details>
-    <summary>圖片中提到的「南天極」是什麼，它對於星軌照片有何重要性？</summary>
-    <p>南天極是地球自轉軸向南延伸至宇宙中的假想點。在南半球，所有恆星都看似圍繞著這個點旋轉，因此在長時間曝光的星軌照片中，星軌會以南天極為中心形成同心圓弧。</p>
+    <summary>阿提米絲二號任務為何被視為「歷史性」且「創紀錄」的？</summary>
+    <p>這項任務是首次載人使用NASA的太空發射系統 (SLS) 火箭和獵戶座飛船。其太空人飛行距離地球達252,756英里，超越了阿波羅13號的紀錄，成為人類史上離地球最遠的太空飛行。</p>
   </details>
   
   <details>
-    <summary>歐洲南方天文台（ESO）的帕拉納爾天文台主要進行哪些天文觀測？</summary>
-    <p>帕拉納爾天文台是世界領先的光學和紅外線天文台之一，主要用於深空觀測，包括研究行星、恆星形成、星系演化以及宇宙學等。它配備了包括甚大望遠鏡（VLT）在內的多個大型望遠鏡，能捕獲來自遙遠宇宙的微弱光線。</p>
+    <summary>在阿提米絲二號任務之後，阿提米絲計畫接下來的步驟是什麼？</summary>
+    <p>接下來是2027年的阿提米絲三號 (Artemis III) 測試飛行，旨在低地球軌道上驗證獵戶座飛船與商業載人著陸系統的交會對接能力。隨後，2028年的阿提米絲四號 (Artemis IV) 任務將把美國太空人送回月球表面。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-28-65b3b0e581.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/image-article/apod-2026-august-28-the-sky-turns-above-paranal/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-29-117b406214.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/president-honors-nasas-artemis-ii-crew-with-highest-us-space-award/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>Does Computer Science Need Computers?</h3>
+  <p class="summary">電腦科學是否需要電腦？本文探討了這個經典問題，從迪克斯特拉著名的「電腦科學與電腦的關係如同天文學與望遠鏡」類比出發。儘管電腦科學的核心在於抽象的計算理論、演算法及「什麼可以被計算」與「如何計算」的根本數學問題，但歷史表明，實際的電腦和工程應用往往是激發並揭示這些深奧理論問題的關鍵。因此，電腦雖然不是電腦科學的直接研究對象，卻是引導我們發現其深刻理論結構的不可或缺的工具和催化劑。
+
+- 電腦科學著重於理論與抽象計算。
+- 實踐中的電腦驅動了理論問題的發現與探索。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>迪克斯特拉「電腦科學不關乎電腦，如同天文學不關乎望遠鏡」這句話的本意是什麼？</summary>
+    <p>他的本意是強調電腦科學的理論本質，認為其研究的是抽象的計算概念和演算法，而非具體的機器硬體。迪克斯特拉認為過度關注實際電腦會分散對更深層次數學問題的探索，例如他曾將某些程式語言比作「嬰兒疾病」。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到電腦是發現理論問題的「催化劑」，這在其他科學領域也有類似的例子嗎？</summary>
+    <p>有的。文章以熱力學第二定律為例，指出該定律儘管被視為描述宇宙演化的基本法則，卻是在人們建造蒸汽機以解決實際問題時才被思考與發現。這顯示了實踐與理論之間複雜且相互促進的關係，而非單向由理論驅動實踐。</p>
+  </details>
+  
+  <details>
+    <summary>透過電腦的發展，電腦科學究竟揭示了哪些深刻的理論問題？</summary>
+    <p>其中一個例子是計算複雜性理論，它研究不同問題在根本上解決的難易程度，與電腦的速度或程式設計者的聰明才智無關。另一個例子是從複雜性理論中衍生出的新數學證明概念，例如互動式證明和零知識證明，這些都遠遠超越了傳統計算的範疇。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="article/2026-08-29-13ae586e2d.html">全文（約 10 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/does-computer-science-need-computers-20260828/">原文網頁</a></p>
 </article>
 
 

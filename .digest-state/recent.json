@@ -1,61 +1,4 @@
 {
-  "2026-08-14": [
-    {
-      "source": "Hacker News",
-      "summary": "「理解是新的瓶頸」：在2026年7月的AI工程師大會上，一位講者指出，隨著AI代理人編寫的程式碼越來越多，人類理解這些程式碼的能力已成為專案發展的關鍵瓶頸。演講強調人類理解的重要性，不僅是為了驗證AI的工作，更是為了積極參與創造性過程並推動創新。為此，演講提出了一些受教育啟發的有效理解技術，例如結構化的程式碼解釋文件、測驗和可互動的微觀世界，旨在幫助開發者更好地與AI協作。\n\n*   人工智慧代理人生成的程式碼量激增，導致人類理解能力成為專案進度的新瓶頸。\n*   人類理解程式碼的目的已從單純「驗證」轉變為「參與」和「創新」。\n*   建議利用解釋文件、測驗、互動式微觀世界等教育性工具來提升理解效率。",
-      "title": "Understanding is the new bottleneck"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "Cerebras 和 OpenAI 於今日推出 GPT-5.6 Sol 的「Ultrafast Mode」服務層級，最初透過 OpenAI API 提供給部分客戶。此模式由 Cerebras 的 Wafer-Scale Engine 架構驅動，旨在提供每秒高達 750 個輸出 token 的極速推理能力，且不犧牲模型品質，解決了 AI 速度與智慧之間的權衡。它能將尖端 AI 智慧帶入對時間敏感的關鍵任務，例如法律文件、金融建模及網路安全，大幅提升工作效率和響應能力。\n* 最高輸出速度達每秒 750 個 token，且不影響品質。\n* 由 Cerebras 的 Wafer-Scale Engine 架構提供支援，解決了大規模模型推理的記憶體瓶頸。",
-      "title": "Accelerating GPT-5.6 Sol Ultrafast"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "根據一份技術報告，systemd-journald 服務在 Debian 13 (使用 systemd 257.9 和 Linux kernel 6.12.57+) 系統上寫入日誌時，導致了嚴重的磁碟 I/O 過載。單一條日誌在 ext4 檔案系統上可產生超過 49KB 的寫入量，而在 btrfs 上則超過 110KB，這遠高於傳統 syslog 的效率，導致虛擬機即使每秒只寫入兩行日誌也會產生約 50 IOPS 的高負載。\n\n* 虛擬機性能因過度 I/O 操作而顯著下降。\n* journald 的日誌格式效率低下，且有在非正常關機後損壞的風險。",
-      "title": "Single log line is 49KB+ (ext4) / 110KB+ (btrfs) of systemd-journald disk writes"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "諾貝爾和平獎得主、俄羅斯《新報》前總編輯德米特里·穆拉托夫（Dmitry Muratov）近日向英國廣播公司（BBC）表示，俄羅斯總統普丁已無法宣稱在烏克蘭取得勝利。他指出，這場持續近五年的衝突，已導致數百萬斯拉夫民族的人民遭受嚴重破壞，無論結局如何都不能稱之為勝利。穆拉托夫同時揭露了俄羅斯對獨立媒體和異議人士的嚴酷打壓，包括其報社被國有化、網站被封鎖，以及至少1500名反戰人士入獄，情況比蘇聯時期更甚。他更對俄羅斯國家電視台頻繁討論使用核武器表示深切憂慮。\n* 穆拉托夫強調，烏克蘭可能被摧毀，但絕不可能被征服。\n* 大量批評政府的記者和反戰人士被判刑或在拘留期間死亡，凸顯俄羅斯言論自由的嚴峻現狀。",
-      "title": "Putin can no longer claim victory in Ukraine, Nobel Peace Prize winner tells BBC"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "在被佔領的約旦河西岸庫斯拉村，約十幾個巴勒斯坦家庭於週四被勒令離開家園，此前以色列軍方展開行動，以移除自週日起圍困多戶住家並切斷水電供應的以色列定居者。以色列軍方宣稱庫斯拉為軍事禁區，並將部分騰空的巴勒斯坦房屋用作軍營，儘管其目標是「保護居民」並譴責定居者行為。此事件突顯了定居者暴力升級的問題，這些定居者因以色列政府快速擴張國際法下非法的定居點而膽大妄為，導致巴勒斯坦社區的流離失所和動盪不安。\n* 關鍵點：定居者暴力事件頻傳，以色列政府擴張定居點導致緊張局勢加劇。\n* 關鍵點：巴勒斯坦居民被迫遷離，突顯國際法下定居點的非法性。",
-      "title": "Palestinians told to leave homes in village where Israeli settlers besieged houses"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "羅馬尼亞因長期高溫導致多瑙河水位極低，已關閉其唯一的切爾納沃德核電廠。該廠的兩個反應爐供應全國約20%的電力，其中一個已於7月停運，另一個則於本週四稍早關閉，且預計未來10天內不會重啟。\n這項措施突顯了氣候變遷對歐洲能源供應的直接衝擊，並促使羅馬尼亞須仰賴進口電力與其他能源來彌補缺口。\n- 主要原因：歐洲持續熱浪，多瑙河水位降至30年來最低，影響核電廠冷卻系統。\n- 影響：羅馬尼亞20%電力供應受影響，需透過進口及其他能源補充，凸顯氣候變遷對基礎設施的威脅。",
-      "title": "Romania shuts only nuclear plant as heat causes huge drop in Danube River level"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "美國太空總署 (NASA) 的一架737飛機本週在奧克拉荷馬州重新塗漆，這是其改裝成減重力測試飛機的進程之一。這架飛機於六月從美國空軍接收，將用於阿提米斯任務，在休士頓的詹森太空中心進行模擬月球重力的拋物線飛行，以驗證太空人的月球太空服及相關乘員系統。此外，它也將支援飛行測試自主性、感測器及其他數位系統的系統整合研究。\n\n關鍵要點：\n* 驗證阿提米斯任務的月球太空服及乘員系統。\n* 支援飛行測試自主性、感測器及其他數位系統的系統整合研究。",
-      "title": "NASA’s 737 Reveals New Paint"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "8月10日，來自西維吉尼亞州的電腦工程師Fletcher Newell與48位同事，在美國國家航空暨太空總署（NASA）的凱瑟琳·詹森獨立驗證與確認設施（IV&V）宣誓成為NASA公務員。Newell從小對太空探索充滿熱情，儘管曾就讀史丹佛大學並有機會前往矽谷發展，但他選擇回到家鄉為NASA工作，這不僅展現了他對太空任務的熱情，也體現了NASA將關鍵職位納入公務員體系以強化長期技術能力的策略。他目前主要負責任務安全和保障，特別是在人工智慧系統的負責任整合和登月計畫方面，貢獻卓著。\n\n* Newell在高中和大學時期即在IV&V實習，專精電腦科學及AI，畢業後選擇回到家鄉加入NASA。\n* 他因在太空船任務安全上的卓越貢獻（例如發現Gateway超過70個問題）被評為2025年度IV&V工程師，並將協助NASA重返月球。",
-      "title": "For West Virginia Engineer, Home Is Where the Heart Is… and NASA, Too"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "英仙座流星雨是年度最亮、最受歡迎的流星雨之一，自七月初開始增強，並將持續閃耀至八月底。今年的高峰期發生在8月12日夜晚至8月13日清晨，提供觀賞者目睹壯觀天象的絕佳機會。\n\n* 主要觀賞時間：七月初至八月底\n* 最佳觀賞時機：8月12日晚間至8月13日清晨",
-      "title": "Perseids Meteor Shower"
-    },
-    {
-      "source": "Aeon",
-      "summary": "這篇文章介紹了在新墨西哥州一處歷時半個世紀建造的「觀測站」。它被描述為一個令人驚嘆的藝術品，讓觀看者能夠體驗時間的壓縮，進而探索未來和過去共13,000年的時光。儘管其運作原理未被詳述，但它旨在提供一種沉浸式的時間感知體驗。\n關鍵點：\n- 地點：新墨西哥州的偏遠沙漠\n- 目的：透過藝術裝置，體驗時間的深邃與流逝",
-      "title": "Where the earth meets the sky"
-    },
-    {
-      "source": "Aeon",
-      "summary": "作者艾薩尼亞．伊姆蒂亞茲．帕特爾前往伊斯蘭聖城麥加朝聖，旨在尋求心靈更新，卻發現這座城市已因高度現代化和商業化而面目全非。文章探討了麥加如何從傳統的宗教聖地轉變為一個充滿現代設施與購物中心氛圍的環境，使得原有的神聖朝聖體驗被世俗化元素所沖淡。這段個人旅程凸顯了信仰與消費主義之間的張力，並對在當代背景下朝聖的真正意義及其對心靈淨化的影響提出了深刻質疑。\n\n- 麥加的傳統面貌被現代商業發展所取代。\n- 朝聖經驗從精神洗滌轉變為世俗消費體驗。",
-      "title": "Mecca and the mall"
-    }
-  ],
   "2026-08-15": [
     {
       "source": "Hacker News",
@@ -742,6 +685,58 @@
       "source": "NASA Breaking News",
       "summary": "這篇文章介紹了一張在智利ESO帕拉納爾天文台拍攝的星軌照片，生動地展示了地球的自轉。儘管地球表面以超過每小時1,500公里的速度向東移動，這種運動肉眼難以察覺，但透過長時間曝光攝影可以顯現。這張由300張連續曝光組成的照片，捕捉到了星空在南天極周圍形成的優雅弧線，證明了行星的持續運動。\n- 地點：智利ESO帕拉納爾天文台\n- 技術：透過300次25秒連續曝光捕捉星軌\n- 重點：星軌以南天極為中心形成弧線",
       "title": "APOD: 2026 August 28 – The Sky Turns Above Paranal"
+    }
+  ],
+  "2026-08-29": [
+    {
+      "source": "Hacker News",
+      "summary": "OpenAI 已通知 SpaceX，由於對其遵守服務條款的能力缺乏信心，將於 2026 年 11 月 12 日終止向其旗下程式碼編輯器 Cursor 提供 OpenAI 模型服務的合約。此決定是因為 Elon Musk 旗下公司過去曾違反 OpenAI 的合約條款，例如 Twitter (現為 X) 和 xAI。儘管這是一個艱難的決定，OpenAI 仍給予最長的合約通知期，以最大程度地減少對開發者的影響。\n關鍵重點：\n- 合約終止日期：2026 年 11 月 12 日。\n- 主要原因：對 SpaceX 及其關聯公司遵守 OpenAI 服務條款的信心不足。",
+      "title": "Our decision on Cursor following its acquisition by SpaceX"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "vphone-cli 是一款新工具，讓用戶能夠在搭載 Apple Silicon 的 macOS 15 (Sequoia) 或更高版本的電腦上，透過 Apple 的 Virtualization.framework 啟動虛擬 iPhone。這項工具為 iOS 裝置提供了強大的虛擬化環境，支援從建立、組態到啟動、管理虛擬機的完整流程。它特別之處在於能安裝客製化韌體（CFW），並提供多種變體選項，包括實現全面越獄（jailbreak）及進階安全繞過功能，對於iOS研究與開發極具價值。\n- 支援多種修補變體，從維持 iOS 緩解措施的「無補丁」模式，到包含全面越獄及反虛擬機偵測研究補丁的「實驗性」模式。\n- 提供豐富的命令列介面，可用於虛擬機的建立、克隆、匯出、匯入、設定（CPU/記憶體）以及韌體準備與修補。",
+      "title": "Boot a Virtual iPhone via Apple's Virtualization.framework"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "OCaml cohttp 函式庫的維護者近日發布了 6.3.0 版本的安全修補程式，修復了一個路徑遍歷漏洞。然而，在修補程式的公開 PR 提出僅數分鐘後，作者的伺服器日誌就偵測到針對此漏洞的探測行為。這凸顯了由於 AI 代理的快速漏洞生成能力，傳統的安全應對措施（如漏洞封鎖）已不再有效，攻擊者現在可以在補丁發布之前就利用漏洞，使得開源維護者面臨巨大的挑戰。\n*   AI 代理如 DeepSeek V4 Pro 能夠僅憑大致方向，在短時間內自行找到並生成漏洞利用程式。\n*   漏洞被利用的平均時間已變成負值，意味著攻擊行為常發生在修補程式發布之前。\n*   開源專案需要改變安全響應策略，以應對這種自動化威脅。",
+      "title": "Just the rumour of a bug is enough to find an exploit these days"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "美國總統唐納·川普宣布達成一項「歷史性」協議，美國將透過一家合資企業控制委內瑞拉650億桶石油儲備，此舉將使美國石油儲備增加一倍以上，並有望大幅降低汽油價格。委內瑞拉臨時總統德爾西·羅德里格斯也讚揚該協議，稱其將帶來近1000億美元的私人投資，並在大幅促進委內瑞拉的經濟復興和重建，尤其是在其前總統尼古拉斯·馬杜羅被捕之後。這項極不尋常的協議賦予美國在17個戰略油田為期100年的特許經營權中55%的控制權。\n- 這項協議預計將顯著增加美國的石油供應並降低國內汽油價格。\n- 委內瑞拉將獲得巨額投資，以支持其經濟復甦和產業現代化。",
+      "title": "Trump hails 'historic' deal for US to control 65bn barrels of Venezuela's oil"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "近日，尼泊爾與西藏邊境的吉隆口岸（Gyirong Port）發生嚴重洪災，洪水沖毀一切，造成數百人死亡與失蹤。儘管中國已展開大規模救援行動，但中國境內對此災情的報導卻受到嚴格審查，與全球廣泛流傳的災難影片形成鮮明對比。這反映了北京在西藏問題上高度的敏感性，旨在維護社會穩定並控制信息流動，導致外界對實際災情與受害者情況知之甚少。\n\n*   全球媒體廣泛報導的戲劇性洪水畫面，在中國國內媒體和網路平台卻幾乎消失無蹤。\n*   中國政府的資訊管制阻礙了倖存者證詞、用戶生成內容以及失蹤者家屬聲音的傳播。",
+      "title": "Footage of Tibet floods isn't being shown in China - and we know little about victims there"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "前9/11劫機者及沙烏地阿拉伯間諜嫌疑人奧馬爾·巴約米（Omar al-Bayoumi）的房東霍莉·拉奇福德（Holly Ratchford）首次向英國廣播公司（BBC）公開她對巴約米的觀察細節，這些說法與巴約米向調查人員的供詞相悖。巴約米被控在9/11事件中協助劫機者，目前在9/11受害者家屬對沙烏地阿拉伯提起的萬億美元訴訟中扮演關鍵角色。法院先前已裁定有「合理推斷」巴約米在協助劫機者時與沙烏地政府協調，而拉奇福德的證詞進一步強化了沙烏地政府可能涉案的說法。 \n * 拉奇福德的證詞或能為追究沙烏地政府在9/11事件中的潛在責任提供新的證據。 \n * 此案將於十月提交美國上訴法院，其結果對9/11受害者家屬的求償至關重要。",
+      "title": "Landlady to 9/11 hijackers reveals their links to alleged Saudi spy"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "2026年8月28日，美國總統唐納·川普向參與Artemis II任務的四位太空人——NASA的Victor Glover、Christina Koch、Reid Wiseman以及加拿大太空總署（CSA）的Jeremy Hansen——頒發了國會太空榮譽獎章。此獎章旨在表彰太空人在執行任務時所展現的非凡勇氣、卓越貢獻及對國家與人類福祉的付出。他們因在Artemis II任務中的服務而獲此殊榮，使得該獎章的受獎人數增至34位。\n* 該獎章自1969年設立，過去也曾追授給阿波羅1號、挑戰者號和哥倫比亞號的殉職組員。",
+      "title": "NASA’s Artemis II Crew Receives Congressional Space Medal of Honor"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "美國太空總署（NASA）近日在「月球回收挑戰賽」（LunaRecycle Challenge）第二階段中，將首獎頒發給麻省理工學院（MIT）的CERBERUZ團隊。該團隊因其創新技術，能將太空任務中的混合廢棄物（如織物、塑膠、泡沫和金屬）研磨成細粉，再用於注塑或3D列印，對減少月球及深空任務垃圾至關重要，共獲得775,000美元獎金。\n- CERBERUZ團隊的技術能將混合垃圾，包括Zotek泡沫，轉化為強化材料，用於製造零件。\n- 他們同時贏得了原型開發和虛擬模型（數位分身）兩個賽道的第一名。",
+      "title": "NASA Awards First Prize in Phase 2 of Agency’s LunaRecycle Challenge"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "週五，美國總統唐納·川普在NASA休士頓詹森太空中心，向阿提米絲二號 (Artemis II) 任務的四名太空人——Reid Wiseman、Victor Glover、Christina Koch和Jeremy Hansen——頒發了「國會太空榮譽勳章」。此舉旨在表彰他們在4月1日至10日執行此歷史性任務中的卓越表現，創下了人類有史以來離地球最遠的飛行紀錄。這項榮譽不僅肯定了太空人的英勇與貢獻，也彰顯了美國在太空探索領域的領導地位，並為後續的月球及火星任務奠定基礎。\n\n主要成就包括：\n- 阿提米絲二號是首次載人使用SLS火箭和獵戶座飛船，完成了繞月飛行。\n- 該任務為美國重返月球（Artemis IV）及建立月球基地鋪平了道路。",
+      "title": "President Honors NASA’s Artemis II Crew with Highest US Space Award"
+    },
+    {
+      "source": "Quanta Magazine",
+      "summary": "電腦科學是否需要電腦？本文探討了這個經典問題，從迪克斯特拉著名的「電腦科學與電腦的關係如同天文學與望遠鏡」類比出發。儘管電腦科學的核心在於抽象的計算理論、演算法及「什麼可以被計算」與「如何計算」的根本數學問題，但歷史表明，實際的電腦和工程應用往往是激發並揭示這些深奧理論問題的關鍵。因此，電腦雖然不是電腦科學的直接研究對象，卻是引導我們發現其深刻理論結構的不可或缺的工具和催化劑。\n\n- 電腦科學著重於理論與抽象計算。\n- 實踐中的電腦驅動了理論問題的發現與探索。",
+      "title": "Does Computer Science Need Computers?"
     }
   ]
 }

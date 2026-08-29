@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Just the rumour of a bug is enough to find an exploit these days</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-08-29-c7ae024cae-p17.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Just the rumour of a bug is enough to find an exploit these days</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 17 / 17 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://anil.recoil.org/notes/rumour-is-the-exploit">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-29-c7ae024cae-p16-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 17 / 17 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">And if anyone from Project Glasswing is listening, team OCaml could use access now :-)</p>
+
+<p class="fulltext">(The cohttp fix was not a solo effort. Sapphire Livingstone found and reported the issue, guided the fix and co-developed the remediation; Michael Dales, Török Edwin and Patrick Ferris reviewed the patch; Hannes Mehnert coordinated the advisory; and Thomas Gazagnaire has been thinking through the wider triage problem. Thank you all! The bugonomics may be against us, but we will crest this hump.)</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>報告中提到「漏洞利用現在先於補丁」，這具體是什麼意思？這種情況如何發展？</summary>
+  <p>這表示攻擊者能夠在安全補丁公開發布之前，就發現並利用軟體中的漏洞。根據文章，這個「平均利用時間」已從 2018-19 年的 63 天縮短到 2024 年的負 7 天，顯示利用速度大幅加快，主要原因歸咎於 AI 代理的普及。</p>
+</details>
+
+<details>
+  <summary>文章中提到的「bugonomics」概念是什麼？為什麼它現在對開源軟體維護者不利？</summary>
+  <p>「bugonomics」（漏洞經濟學）描述了軟體漏洞的經濟動態，指出瓶頸已從漏洞發現轉移到「防禦者修復吞吐量」。大型語言模型能夠迅速生成漏洞利用程式，但維護者驗證、分類和發布修復的速度未能跟上，導致開源維護者處於劣勢。</p>
+</details>
+
+<details>
+  <summary>為了應對這種快速的自動化漏洞利用，文章提出了哪些潛在的解決方案或研究方向？</summary>
+  <p>文章建議結合輕量級的開源貢獻者信任網絡、改進開源打包流程，以及更高效的持續發布和分類機制。研究方向包括建立一個「反機器人防禦測試平台」以實現快速、本地化的緩解措施，以及將 Lean 規範編譯成運行時強制執行自動機。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-08-29-c7ae024cae-p16-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 17 / 17 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
