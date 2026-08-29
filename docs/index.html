@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-08-29</title>
+<title>每日 AI 文摘 2026-08-30</title>
 <style>
   body {
     font-family: Georgia, "Times New Roman", serif;
@@ -75,9 +75,9 @@
 <p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
 <p class="fontswitch"><a href="index-sans.html">切換為無襯線字體顯示</a></p>
 
-<h1>每日 AI 文摘 2026-08-29</h1>
+<h1>每日 AI 文摘 2026-08-30</h1>
 <p class="meta">
-2026-08-29
+2026-08-30
 
  ｜ <a href="archive/index.html">存檔列表</a>
  ｜ <a href="deepread.html">每日深讀</a>
@@ -89,7 +89,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日要聞聚焦於科技、地緣政治與太空探索的動態。科技界見證了 OpenAI 終止與 SpaceX 的合作，以及 AI 代理加速網路安全威脅的雙面效應。地緣政治方面，美國與委內瑞拉達成石油大協議，而 9/11 劫機者與沙烏地間諜的新證據浮出水面，同時中國對西藏洪水的資訊審查亦受矚目。此外，NASA 在太空探索領域持續取得進展，阿提米絲二號任務組員獲頒榮譽，並透過創新競賽推動月球資源回收。</p>
+<p>今日新聞焦點涵蓋了科技發展與社會倫理的雙重面向：騰訊發布了強大的開源AI模型，展現技術新里程碑，但也有評論指出企業文化對於生產力的影響實則超越了AI工具。與此同時，各國政府行為引發對權力界限的關注，如美國國土安全部涉嫌濫用法律監控記者，烏克蘭因軍事彈藥庫儲存不當導致平民傷亡，以及一位高調主張嚴格移民管制的評論員因逾期居留遭遣返，均突顯了人權、新聞自由與公共安全在社會運作中的關鍵地位。</p>
 </div>
 
 
@@ -99,307 +99,156 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>Our decision on Cursor following its acquisition by SpaceX</h3>
-  <p class="summary">OpenAI 已通知 SpaceX，由於對其遵守服務條款的能力缺乏信心，將於 2026 年 11 月 12 日終止向其旗下程式碼編輯器 Cursor 提供 OpenAI 模型服務的合約。此決定是因為 Elon Musk 旗下公司過去曾違反 OpenAI 的合約條款，例如 Twitter (現為 X) 和 xAI。儘管這是一個艱難的決定，OpenAI 仍給予最長的合約通知期，以最大程度地減少對開發者的影響。
-關鍵重點：
-- 合約終止日期：2026 年 11 月 12 日。
-- 主要原因：對 SpaceX 及其關聯公司遵守 OpenAI 服務條款的信心不足。</p>
+  <h3>Tencent Releases and Open-Sources Tencent Hy4 Preview</h3>
+  <p class="summary">騰訊近日發布並開源了其新一代大型語言模型「Tencent Hy4 preview」，此模型擁有7700億總參數及超過100萬token的上下文視窗。目前已透過WorkBuddy、CodeBuddy及API等管道在全球開放使用，並在編碼、辦公、科研和遊戲開發等實際生產力任務中展現卓越性能，躋身頂級開源模型之列。
+
+其關鍵亮點包括：
+- 在騰訊內部評測中表現優於其他領先模型，且具備自主優化開發和推理流程的能力。
+- 提供高效能且具成本效益的API定價，旨在普及先進AI應用。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>OpenAI為何特別提到Elon Musk旗下公司過去的違約行為？</summary>
-    <p>OpenAI 指出，過去 SpaceX 旗下的 Twitter (現為 X) 曾違反其合約條款，而 xAI 的 Elon Musk 也在宣誓下承認違反了 OpenAI 的服務條款。這些經歷導致 OpenAI 對 SpaceX 未來會遵守其服務條款缺乏信心，因此決定終止與 Cursor 的合作。</p>
+    <summary>Hy4 preview 與其前身 Hy3 相比有何主要改進？</summary>
+    <p>Hy4 preview 在模型規模、上下文長度和數據量上都比 Hy3 有了顯著擴展。預訓練和後訓練的進步使其整體智慧有了質的飛躍，使其在各類複雜的實際生產力任務中表現更為出色。同時，騰訊也將Hy3在部分平台的免費使用期限延長至九月底。</p>
   </details>
   
   <details>
-    <summary>這項決定將如何影響目前透過 Cursor 使用 OpenAI 模型的開發者？</summary>
-    <p>OpenAI 意識到此決定將對依賴其模型於 Cursor 中的開發者產生影響。儘管終止日期設定在 2026 年 11 月 12 日，提供了充足的過渡期，OpenAI 也表示將會提供額外支持，以幫助開發者順利過渡。</p>
+    <summary>Hy4 preview 在遊戲開發和科學研究領域具體提供了哪些幫助？</summary>
+    <p>在遊戲開發方面，Hy4 preview能從單一自然語言請求生成可玩原型，並有效與遊戲引擎協作，開發者可透過多輪互動精煉複雜專案。在科學研究方面，它在理解、推理和解決複雜研究問題上展現了更強能力，尤其在AI研發、分子動力學模擬、凝聚態物理和基礎數學等領域有顯著提升。</p>
   </details>
   
   <details>
-    <summary>文章中提到的「Astra」是什麼，它與此決定有何關聯？</summary>
-    <p>Astra 是 OpenAI 即將推出的模型。隨著 AI 能力的進步，OpenAI 認為有更高的責任確保其未來模型（包括 Astra）被正確使用並符合其服務條款。這也是 OpenAI 在評估與大型合作夥伴如 SpaceX 的合作時，更為謹慎考量合約遵守問題的原因之一。</p>
+    <summary>文章中提到的「遞歸式自我改進循環」是什麼，它對模型有何益處？</summary>
+    <p>遞歸式自我改進循環是指 Hy4 preview 首次參與了自身開發過程，透過提出方法、運行實驗並根據結果迭代，自動優化訓練方法、數據策略、評估框架和底層運算符。這不僅有助於模型持續學習和提升自身性能，它還能自主分析並優化推理系統，將端到端吞吐量提高了31.8%，展現了自主優化基礎設施的能力。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-29-3ac5377561.html">全文（約 2 分鐘）</a> ｜ <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-30-f9935fd338.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Boot a Virtual iPhone via Apple's Virtualization.framework</h3>
-  <p class="summary">vphone-cli 是一款新工具，讓用戶能夠在搭載 Apple Silicon 的 macOS 15 (Sequoia) 或更高版本的電腦上，透過 Apple 的 Virtualization.framework 啟動虛擬 iPhone。這項工具為 iOS 裝置提供了強大的虛擬化環境，支援從建立、組態到啟動、管理虛擬機的完整流程。它特別之處在於能安裝客製化韌體（CFW），並提供多種變體選項，包括實現全面越獄（jailbreak）及進階安全繞過功能，對於iOS研究與開發極具價值。
-- 支援多種修補變體，從維持 iOS 緩解措施的「無補丁」模式，到包含全面越獄及反虛擬機偵測研究補丁的「實驗性」模式。
-- 提供豐富的命令列介面，可用於虛擬機的建立、克隆、匯出、匯入、設定（CPU/記憶體）以及韌體準備與修補。</p>
+  <h3>Good Culture Is the Biggest Productivity Hack, Not AI</h3>
+  <p class="summary">這篇文章指出，在當前科技業過度專注於AI工具以提升生產力的趨勢中，良好的企業文化才是真正的生產力利器。作者憑藉其13年的工程產業經驗強調，儘管AI工具很重要，但若沒有健康的文化作為基礎，將無法發揮最大效益，甚至可能因降低員工的心理安全感而造成反效果。他認為，就像健康之於人類，優良的文化是組織有效協作、順暢溝通並產出高品質成果的先決條件。
+
+- 企業文化優於AI工具，是最大的生產力提升關鍵。
+- 不健康的文化會削弱心理安全感，阻礙組織效率。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>「vphone-cli」的運行需要哪些特定的硬體和軟體環境？</summary>
-    <p>它需要搭載 Apple Silicon 的 macOS 15 (Sequoia) 或更高版本作業系統。此外，還需安裝 Xcode 及 iOS SDK，並且系統的安全保護機制（SIP/AMFI）可能需要放鬆，以允許使用未簽署的二進位檔案和私有權利。</p>
+    <summary>為什麼文章中特別強調「心理安全感」對於生產力如此重要？</summary>
+    <p>心理安全感是指團隊成員認為在承擔人際風險時是安全的。當員工感到心理安全時，他們更願意提出問題、承認錯誤、分享想法並挑戰現狀，這有助於團隊更有效地學習和創新，進而提升整體生產力。如果員工擔心因使用AI而失去工作或被評斷，他們就不會投入，甚至會抵抗新工具的導入。</p>
   </details>
   
   <details>
-    <summary>為什麼這項工具對於iOS研究和開發特別重要？它能實現哪些傳統虛擬機無法做到的功能？</summary>
-    <p>該工具的價值在於它能提供深層次的系統控制，允許安裝自訂韌體和多種安全繞過補丁，甚至實現全面越獄。這使得開發者和研究人員能夠在虛擬環境中測試和分析通常受限於物理裝置的行為，例如系統級別的修改和安全漏洞的探討。</p>
+    <summary>文章提到「不健康的文化」會影響最終產品，具體來說，不健康的文化在日常運作中會如何體現？</summary>
+    <p>不健康的文化可能體現在部門間互相指責、缺乏有效溝通、員工間互不信任以及對錯誤的懲罰而非學習。當團隊成員不願合作或分享知識時，會導致重複勞動、決策緩慢，最終反映在產品品質不佳、延遲交付或無法滿足用戶需求上，正如康威定律所闡述的。</p>
   </details>
   
   <details>
-    <summary>「vphone-cli」提供的不同「變體」（variants）有何區別，這些變體對虛擬機的功能有何影響？</summary>
-    <p>「vphone-cli」提供「less」、「regular」、「dev」、「jb」和「exp」等多種變體。這些變體代表不同程度的系統修補和安全繞過，從僅保留 iOS 緩解措施的「less」模式，到包含完整越獄（如自動安裝 Sileo、TrollStore）的「jb」模式，甚至還有用於反虛擬機偵測研究的「exp」模式，為使用者提供靈活的控制能力。</p>
+    <summary>在一個強調AI提升生產力的時代，企業領導者除了建立良好文化外，還應該如何應對員工對AI可能取代工作的擔憂？</summary>
+    <p>企業領導者應明確溝通AI導入的目標是輔助而非取代人類工作，並提供員工接受AI工具培訓和技能再提升的機會。同時，應建立獎勵機制，鼓勵員工積極探索AI的應用潛力，並讓他們看到透過AI提升效率後，能將精力投入到更有價值、更具創造性的工作上，而非僅是增加工作量或面臨裁員的風險。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-29-58021e8b5c.html">全文（約 6 分鐘）</a> ｜ <a href="https://github.com/Lakr233/vphone-cli">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-30-6472bbcb12.html">全文（約 10 分鐘）</a> ｜ <a href="https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Just the rumour of a bug is enough to find an exploit these days</h3>
-  <p class="summary">OCaml cohttp 函式庫的維護者近日發布了 6.3.0 版本的安全修補程式，修復了一個路徑遍歷漏洞。然而，在修補程式的公開 PR 提出僅數分鐘後，作者的伺服器日誌就偵測到針對此漏洞的探測行為。這凸顯了由於 AI 代理的快速漏洞生成能力，傳統的安全應對措施（如漏洞封鎖）已不再有效，攻擊者現在可以在補丁發布之前就利用漏洞，使得開源維護者面臨巨大的挑戰。
-*   AI 代理如 DeepSeek V4 Pro 能夠僅憑大致方向，在短時間內自行找到並生成漏洞利用程式。
-*   漏洞被利用的平均時間已變成負值，意味著攻擊行為常發生在修補程式發布之前。
-*   開源專案需要改變安全響應策略，以應對這種自動化威脅。</p>
+  <h3>DHS is using obscure law to snoop on journalists, non-profits, unions</h3>
+  <p class="summary">川普政府時期的國土安全部（DHS）被指控濫用一項關於海關進口稅的鮮為人知法律（19 USC 1509），在沒有司法監督的情況下，秘密獲取記者、非營利組織和工會的私人資訊。此舉引起廣泛警惕，特別是在明尼亞波利斯，DHS 在法官駁回針對記者 Georgia Fort 的搜查令後，仍透過行政傳票取得了她的電話與YouTube紀錄，此舉被視為規避司法審查。這種做法嚴重威脅新聞自由與公民隱私，專家批評其為「無法無天」的行為，且與該法律的原始目的完全無關。
+*   DHS利用行政傳票，規避司法審查，獲取個人資料。
+*   所依據的《19 USC 1509》法條原為海關稅務調查用途，與國內事務無關。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>報告中提到「漏洞利用現在先於補丁」，這具體是什麼意思？這種情況如何發展？</summary>
-    <p>這表示攻擊者能夠在安全補丁公開發布之前，就發現並利用軟體中的漏洞。根據文章，這個「平均利用時間」已從 2018-19 年的 63 天縮短到 2024 年的負 7 天，顯示利用速度大幅加快，主要原因歸咎於 AI 代理的普及。</p>
+    <summary>國土安全部（DHS）是如何利用《19 USC 1509》這項法律來獲取資訊，以及該法律的原始用途是什麼？</summary>
+    <p>DHS是透過發出行政傳票，援引《19 USC 1509》來要求Google或T-Mobile等公司交出使用者資料，且無需法官批准。這項法律最初是為了賦予DHS廣泛權力，以檢查記錄並確定進口物品的關稅和稅收是否正確徵收，與國內的記者採訪或抗議活動完全無關。</p>
   </details>
   
   <details>
-    <summary>文章中提到的「bugonomics」概念是什麼？為什麼它現在對開源軟體維護者不利？</summary>
-    <p>「bugonomics」（漏洞經濟學）描述了軟體漏洞的經濟動態，指出瓶頸已從漏洞發現轉移到「防禦者修復吞吐量」。大型語言模型能夠迅速生成漏洞利用程式，但維護者驗證、分類和發布修復的速度未能跟上，導致開源維護者處於劣勢。</p>
+    <summary>國土安全部規避司法審查的行為，對新聞自由和記者有何具體影響？</summary>
+    <p>這種做法特別令人擔憂，因為它使政府能夠在沒有獨立司法機構審查的情況下，獲取記者的通話和網路活動記錄。這些資訊可能洩露記者的機密消息來源，進而對新聞報導的獨立性造成寒蟬效應，嚴重侵犯新聞自由。</p>
   </details>
   
   <details>
-    <summary>為了應對這種快速的自動化漏洞利用，文章提出了哪些潛在的解決方案或研究方向？</summary>
-    <p>文章建議結合輕量級的開源貢獻者信任網絡、改進開源打包流程，以及更高效的持續發布和分類機制。研究方向包括建立一個「反機器人防禦測試平台」以實現快速、本地化的緩解措施，以及將 Lean 規範編譯成運行時強制執行自動機。</p>
+    <summary>過去是否曾有人挑戰國土安全部濫用《19 USC 1509》傳票的行為？結果如何？</summary>
+    <p>是的，例如Twitter和Meta都曾收到DHS的1509傳票，並在法庭上提出質疑。在幾起案件中，DHS在法官裁決其合法性之前撤回了傳票，這可能是一種避免建立不利判例的策略。國土安全部的監察長也曾在2017年報告中指出，該傳票存在「不一致且不當」的使用情況。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-08-29-c7ae024cae.html">全文（約 9 分鐘）</a> ｜ <a href="https://anil.recoil.org/notes/rumour-is-the-exploit">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-08-30-c7cdf2bd5e.html">全文（約 10 分鐘）</a> ｜ <a href="https://www.theguardian.com/us-news/2026/aug/29/trump-dhs-1509-summons-records-journalists-nonprofits">原文網頁</a></p>
 </article>
 
 
 <h2>國際 World</h2>
 
 <article>
-  <h3>Trump hails 'historic' deal for US to control 65bn barrels of Venezuela's oil</h3>
-  <p class="summary">美國總統唐納·川普宣布達成一項「歷史性」協議，美國將透過一家合資企業控制委內瑞拉650億桶石油儲備，此舉將使美國石油儲備增加一倍以上，並有望大幅降低汽油價格。委內瑞拉臨時總統德爾西·羅德里格斯也讚揚該協議，稱其將帶來近1000億美元的私人投資，並在大幅促進委內瑞拉的經濟復興和重建，尤其是在其前總統尼古拉斯·馬杜羅被捕之後。這項極不尋常的協議賦予美國在17個戰略油田為期100年的特許經營權中55%的控制權。
-- 這項協議預計將顯著增加美國的石油供應並降低國內汽油價格。
-- 委內瑞拉將獲得巨額投資，以支持其經濟復甦和產業現代化。</p>
+  <h3>At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot</h3>
+  <p class="summary">週五晚間，俄羅斯無人機襲擊了基輔郊區米拉村（Myla）一個儲存烏克蘭軍用武器的彈藥庫，造成至少37人死亡、近400人疏散，並損壞了約130棟房屋，包括一家養老院。烏克蘭總統澤倫斯基嚴厲批評將爆炸物儲存在居民區附近的「可怕疏忽」和「絕對不可接受」的決定，並已展開刑事調查。
+這起事件引發了對烏克蘭軍方在人口稠密地區儲存彈藥的嚴重質疑，尤其是在近期發生過類似襲擊之後。
+* 調查重點：彈藥儲存合法性及相關官員的行為。
+* 影響：引發居民憤怒，要求嚴懲負責人。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>委內瑞拉前總統尼古拉斯·馬杜羅（Nicolás Maduro）是如何被捕的？這與美國控制委內瑞拉石油儲備的協議有何關聯？</summary>
-    <p>馬杜羅及其夫人西莉亞·弗洛雷斯於1月3日在一場經川普授權的美國特種部隊行動中被捕。在突襲後的數小時內，川普聲稱美國將無限期控制委內瑞拉石油的銷售，直到該國實現「安全、適當和明智的過渡」，這為此次石油協議奠定了基礎。</p>
+    <summary>為什麼這個武器彈藥庫會設在居民區附近，尤其在之前發生過類似事件後？</summary>
+    <p>烏克蘭總統澤倫斯基表示，該儲存地點「絕對不應該在那裡」，並已對此啟動刑事調查。文章指出，這已經是近期第二次發生此類事件，烏克蘭總理科雷茨基也對未從7月維什涅夫（Vyshneve）的彈藥庫爆炸中吸取教訓表示遺憾，暗示這是嚴重的管理疏忽問題。</p>
   </details>
   
   <details>
-    <summary>為什麼這項協議被稱為「極不尋常」？它對國家主權有何影響？</summary>
-    <p>這項協議被認為極不尋常，因為它似乎賦予美國對外國主權國家資源的直接治理權，這與過去的國際慣例有所不同。其範圍甚至比美國在2003年推翻薩達姆·侯賽因後對伊拉克石油收入的控制更廣泛，引發了對其法律和憲法挑戰的可能性。</p>
+    <summary>對於將爆炸物儲存於居民區附近並造成嚴重傷亡的相關負責人，將面臨何種後果？</summary>
+    <p>澤倫斯基總統已啟動了針對「官方疏忽」的刑事訴訟，並表示將對做出相關決策的官員的行為進行調查。烏克蘭總理科雷茨基也呼籲，所有負責人，無一例外，都必須受到嚴厲懲罰，以確保此類情況不再發生。</p>
   </details>
   
   <details>
-    <summary>除了經濟復甦，委內瑞拉從這項石油協議中還能獲得哪些具體的經濟利益？</summary>
-    <p>根據協議，委內瑞拉預計將獲得近1000億美元的私人投資，以及超過2090億美元的國家稅收。這些資金將用於恢復和現代化其石油工業，推動國家經濟增長，並有助於半球的能源安全及國際市場的平衡。</p>
+    <summary>除了這次襲擊，文章中還提到了烏俄雙方近期有哪些其他的軍事行動或襲擊事件？</summary>
+    <p>文章提及在基輔的博里斯皮爾區和奧博隆斯基區也發生了其他俄羅斯襲擊，導致兒童死亡或多人受傷。同時，烏克蘭也加強了對俄羅斯經濟目標的空襲，包括襲擊了俄羅斯幾家大型在線零售商的物流中心。俄羅斯方面則報告了在別爾哥羅德和羅斯托夫地區遭遇烏克蘭襲擊，造成人員傷亡。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-08-29-d1fd3bc001.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx2zlwe7qj1o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-08-30-2458fe404e.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c86xwqez4npo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Footage of Tibet floods isn't being shown in China - and we know little about victims there</h3>
-  <p class="summary">近日，尼泊爾與西藏邊境的吉隆口岸（Gyirong Port）發生嚴重洪災，洪水沖毀一切，造成數百人死亡與失蹤。儘管中國已展開大規模救援行動，但中國境內對此災情的報導卻受到嚴格審查，與全球廣泛流傳的災難影片形成鮮明對比。這反映了北京在西藏問題上高度的敏感性，旨在維護社會穩定並控制信息流動，導致外界對實際災情與受害者情況知之甚少。
+  <h3>Right-wing commentator Milo Yiannopoulos deported from US to UK</h3>
+  <p class="summary">英國右翼評論員米羅·揚諾普洛斯（Milo Yiannopoulos）因逾期居留簽證，於週五被美國移民及海關執法局（ICE）從美國遣返回英國。這位41歲的評論員於8月27日抵達紐奧良機場後遭到拘留，而他本人諷刺地曾多次呼籲美國應實施嚴格的移民管制，甚至支持即時遣返。此次遣返凸顯了美國移民法律的執行，即使是對那些公開支持相關措施的人也不例外。
 
-*   全球媒體廣泛報導的戲劇性洪水畫面，在中國國內媒體和網路平台卻幾乎消失無蹤。
-*   中國政府的資訊管制阻礙了倖存者證詞、用戶生成內容以及失蹤者家屬聲音的傳播。</p>
+*   **關鍵點1:** 揚諾普洛斯曾高調支持驅逐數百萬非法移民，並主張對無法證明合法身份者進行即時遣返。
+*   **關鍵點2:** 他過去曾因涉及戀童癖的爭議言論而被迫辭職，並與另類右翼（alt-right）運動有聯繫，其煽動性言論常引起廣泛批評。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為什麼中國政府對西藏的災情資訊進行如此嚴格的審查？</summary>
-    <p>文章指出，西藏在1950年代被北京併吞後，長期抵抗中共統治，且曾發生多次抗議。中國政府擔心類似災難可能引發社會不滿或成為團結藏人的因素，因此透過審查來維持社會秩序和穩定。</p>
+    <summary>米羅·揚諾普洛斯在被遣返之前，曾因哪些具體言論或行為而引發過爭議？</summary>
+    <p>揚諾普洛斯以其對跨性別者、穆斯林、黑人的命也是命運動、女權主義者和同性戀者的挑釁性言論而聞名。他曾在2017年因涉及戀童癖的評論而被迫辭去Breitbart新聞編輯一職，並曾與另類右翼運動有聯繫。</p>
   </details>
   
   <details>
-    <summary>資訊審查對西藏當地居民和外界了解災情造成了什麼影響？</summary>
-    <p>資訊審查使得外界難以獲得第一手資料，包括倖存者證詞或受害者家屬的聲音。同時，在中國境內的藏人也難以與外界記者接觸或發布政府不樂見的內容，使得藏族社群內外都難以了解親屬安危。</p>
+    <summary>揚諾普洛斯本人長期倡導嚴格的移民管制，這次他自己卻因逾期居留被遣返，這反映了什麼樣的諷刺？</summary>
+    <p>這種情況極具諷刺意味，因為揚諾普洛斯曾呼籲「即時遣返任何無法證明在美國合法身份的人」，並支持ICE的執法行動。他自己的遣返表明，美國移民法律對所有違規者一視同仁，無論其公開政治立場如何。</p>
   </details>
   
   <details>
-    <summary>中國政府在處理一般災難時，資訊透明度是否也如此之低？與西藏的特殊情況有何不同？</summary>
-    <p>文章暗示，對西藏災情的處理方式顯著不同於其他地區。通常情況下，雖然中國也有審查，但在西藏，由於其特殊的政治歷史和敏感性，審查更為嚴格，甚至連國外記者都難以獲准進入該地區進行獨立報導。</p>
+    <summary>揚諾普洛斯在政治上曾與哪些知名人物或團體有合作或聯繫，而這些關係後來又發生了哪些變化？</summary>
+    <p>他曾是唐納德·川普2016年競選的早期支持者，並擔任饒舌歌手肯伊·威斯特（Kanye West）競選總統的政治助手。他還曾為瑪喬麗·泰勒·格林工作。然而，他後來轉為批評川普，稱其「迷失方向，被外國利益收買」。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-08-29-929aeaf9b4.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx2z415w2gpo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>Landlady to 9/11 hijackers reveals their links to alleged Saudi spy</h3>
-  <p class="summary">前9/11劫機者及沙烏地阿拉伯間諜嫌疑人奧馬爾·巴約米（Omar al-Bayoumi）的房東霍莉·拉奇福德（Holly Ratchford）首次向英國廣播公司（BBC）公開她對巴約米的觀察細節，這些說法與巴約米向調查人員的供詞相悖。巴約米被控在9/11事件中協助劫機者，目前在9/11受害者家屬對沙烏地阿拉伯提起的萬億美元訴訟中扮演關鍵角色。法院先前已裁定有「合理推斷」巴約米在協助劫機者時與沙烏地政府協調，而拉奇福德的證詞進一步強化了沙烏地政府可能涉案的說法。 
- * 拉奇福德的證詞或能為追究沙烏地政府在9/11事件中的潛在責任提供新的證據。 
- * 此案將於十月提交美國上訴法院，其結果對9/11受害者家屬的求償至關重要。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>奧馬爾·巴約米在9/11事件中被指控扮演了什麼角色？他與劫機者之間的互動具體為何？</summary>
-    <p>據指控，巴約米協助了最先抵達美國的兩名9/11劫機者——納瓦夫·阿爾-哈茲米（Nawaf al-Hazmi）和哈立德·阿爾-米赫達爾（Khalid al-Mihdhar），他向他們提供了住處及其他幫助。房東拉奇福德見證了他與劫機者的互動，並表示巴約米為他們提供了關鍵的支持。法官認為有「合理推斷」他協調了沙烏地政府以提供這些協助。</p>
-  </details>
-  
-  <details>
-    <summary>霍莉·拉奇福德的證詞對目前針對沙烏地阿拉伯的訴訟為何如此重要？</summary>
-    <p>拉奇福德的證詞首次公開了她作為房東的親身觀察，直接挑戰了巴約米此前向調查人員提供的說法。她的目擊證詞強化了巴約米並非僅是「好撒瑪利亞人」，而是可能根據沙烏地政府指示提供幫助的論點，這對證明沙烏地政府在9/11事件中的責任至關重要。</p>
-  </details>
-  
-  <details>
-    <summary>沙烏地阿拉伯對這些指控和訴訟的官方立場是什麼？他們正在採取哪些法律辯護？</summary>
-    <p>沙烏地阿拉伯堅決否認與9/11事件有任何關聯，並否認奧馬爾·巴約米是其代理人或對襲擊有任何預知。他們主要的法律辯護是主張享有「主權豁免權」，即國家應免於某些類型的民事訴訟和刑事起訴。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">BBC World News ｜ <a href="article/2026-08-29-fde97915fc.html">全文（約 14 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c99dvm39mreo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
-</article>
-
-
-<h2>科學 Science</h2>
-
-<article>
-  <h3>NASA’s Artemis II Crew Receives Congressional Space Medal of Honor</h3>
-  <p class="summary">2026年8月28日，美國總統唐納·川普向參與Artemis II任務的四位太空人——NASA的Victor Glover、Christina Koch、Reid Wiseman以及加拿大太空總署（CSA）的Jeremy Hansen——頒發了國會太空榮譽獎章。此獎章旨在表彰太空人在執行任務時所展現的非凡勇氣、卓越貢獻及對國家與人類福祉的付出。他們因在Artemis II任務中的服務而獲此殊榮，使得該獎章的受獎人數增至34位。
-* 該獎章自1969年設立，過去也曾追授給阿波羅1號、挑戰者號和哥倫比亞號的殉職組員。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>國會太空榮譽獎章的設立宗旨和歷史背景為何？</summary>
-    <p>該獎章於1969年由美國國會授權設立，旨在表彰太空人在執行任務中表現出非凡的勇氣、卓越的努力以及對國家和人類福祉的貢獻。自設立以來，這項榮譽已頒發給34位太空人，其中包括追授給阿波羅1號、挑戰者號和哥倫比亞號的殉職組員。</p>
-  </details>
-  
-  <details>
-    <summary>Artemis II任務的具體目標和重要性是什麼？</summary>
-    <p>儘管文章未詳述，但Artemis II任務被廣泛預期為載人繞月飛行，旨在為後續的月球登陸任務（如Artemis III）奠定基礎。這項任務不僅標誌著人類重返深空的關鍵一步，也促進了國際間在太空探索領域的合作。</p>
-  </details>
-  
-  <details>
-    <summary>之前追授給阿波羅1號、挑戰者號和哥倫比亞號組員的獎章，其背後有何特殊意義？</summary>
-    <p>追授給這些太空人的國會太空榮譽獎章，是為了紀念他們在太空任務中為國家和人類所做的最終犧牲。這強調了太空探索的固有風險，同時也緬懷了那些在追求知識和超越人類極限過程中獻出生命的勇士。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-29-4bee60c7db.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/nasas-artemis-ii-crew-receives-congressional-space-medal-of-honor/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>NASA Awards First Prize in Phase 2 of Agency’s LunaRecycle Challenge</h3>
-  <p class="summary">美國太空總署（NASA）近日在「月球回收挑戰賽」（LunaRecycle Challenge）第二階段中，將首獎頒發給麻省理工學院（MIT）的CERBERUZ團隊。該團隊因其創新技術，能將太空任務中的混合廢棄物（如織物、塑膠、泡沫和金屬）研磨成細粉，再用於注塑或3D列印，對減少月球及深空任務垃圾至關重要，共獲得775,000美元獎金。
-- CERBERUZ團隊的技術能將混合垃圾，包括Zotek泡沫，轉化為強化材料，用於製造零件。
-- 他們同時贏得了原型開發和虛擬模型（數位分身）兩個賽道的第一名。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>為何太空任務中的廢棄物回收如此重要？</summary>
-    <p>在月球或深空任務中，將所有物資從地球運送過去成本高昂且空間有限。透過回收利用廢棄物，可以大幅減少補給需求，延長任務持續時間，並支持建立更永續的太空基地，對於人類的深空探索至關重要。</p>
-  </details>
-  
-  <details>
-    <summary>這項廢棄物回收技術除了應用於太空任務外，在地球上是否有潛在用途？</summary>
-    <p>當然。該技術將混合廢棄物轉化為可用的注塑零件或3D列印耗材，這在地球上也具有巨大的潛力，例如處理都市垃圾、工業廢棄物或用於災區重建。這有助於推動循環經濟，減少地球上的廢棄物堆積。</p>
-  </details>
-  
-  <details>
-    <summary>「月球回收挑戰賽」分為兩階段進行，這兩階段之間有何不同？整個挑戰的最終目標是什麼？</summary>
-    <p>第一階段鼓勵全球創新者提交設計概念，而第二階段則要求美國團隊開發並展示實際原型，並可選擇提交虛擬模型。整個「月球回收挑戰賽」的最終目標是激發創新，為NASA開發出能夠有效減少和再利用月球及深空任務中產生廢棄物的技術，以支持未來的長期太空探索和居住。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-29-fa3a90c04b.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/centennial-challenges/nasa-awards-first-prize-in-phase-2-of-agencys-lunarecycle-challenge/">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>President Honors NASA’s Artemis II Crew with Highest US Space Award</h3>
-  <p class="summary">週五，美國總統唐納·川普在NASA休士頓詹森太空中心，向阿提米絲二號 (Artemis II) 任務的四名太空人——Reid Wiseman、Victor Glover、Christina Koch和Jeremy Hansen——頒發了「國會太空榮譽勳章」。此舉旨在表彰他們在4月1日至10日執行此歷史性任務中的卓越表現，創下了人類有史以來離地球最遠的飛行紀錄。這項榮譽不僅肯定了太空人的英勇與貢獻，也彰顯了美國在太空探索領域的領導地位，並為後續的月球及火星任務奠定基礎。
-
-主要成就包括：
-- 阿提米絲二號是首次載人使用SLS火箭和獵戶座飛船，完成了繞月飛行。
-- 該任務為美國重返月球（Artemis IV）及建立月球基地鋪平了道路。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>阿提米絲計畫的總體目標是什麼？</summary>
-    <p>阿提米絲計畫旨在讓美國太空人重返月球表面，並建立一個月球基地進行長期探索。最終目標是為將第一批人類太空人送往火星奠定基礎。</p>
-  </details>
-  
-  <details>
-    <summary>阿提米絲二號任務為何被視為「歷史性」且「創紀錄」的？</summary>
-    <p>這項任務是首次載人使用NASA的太空發射系統 (SLS) 火箭和獵戶座飛船。其太空人飛行距離地球達252,756英里，超越了阿波羅13號的紀錄，成為人類史上離地球最遠的太空飛行。</p>
-  </details>
-  
-  <details>
-    <summary>在阿提米絲二號任務之後，阿提米絲計畫接下來的步驟是什麼？</summary>
-    <p>接下來是2027年的阿提米絲三號 (Artemis III) 測試飛行，旨在低地球軌道上驗證獵戶座飛船與商業載人著陸系統的交會對接能力。隨後，2028年的阿提米絲四號 (Artemis IV) 任務將把美國太空人送回月球表面。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-08-29-117b406214.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/president-honors-nasas-artemis-ii-crew-with-highest-us-space-award/">原文網頁</a></p>
-</article>
-
-
-<h2>長文 Long Reads</h2>
-
-<article>
-  <h3>Does Computer Science Need Computers?</h3>
-  <p class="summary">電腦科學是否需要電腦？本文探討了這個經典問題，從迪克斯特拉著名的「電腦科學與電腦的關係如同天文學與望遠鏡」類比出發。儘管電腦科學的核心在於抽象的計算理論、演算法及「什麼可以被計算」與「如何計算」的根本數學問題，但歷史表明，實際的電腦和工程應用往往是激發並揭示這些深奧理論問題的關鍵。因此，電腦雖然不是電腦科學的直接研究對象，卻是引導我們發現其深刻理論結構的不可或缺的工具和催化劑。
-
-- 電腦科學著重於理論與抽象計算。
-- 實踐中的電腦驅動了理論問題的發現與探索。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>迪克斯特拉「電腦科學不關乎電腦，如同天文學不關乎望遠鏡」這句話的本意是什麼？</summary>
-    <p>他的本意是強調電腦科學的理論本質，認為其研究的是抽象的計算概念和演算法，而非具體的機器硬體。迪克斯特拉認為過度關注實際電腦會分散對更深層次數學問題的探索，例如他曾將某些程式語言比作「嬰兒疾病」。</p>
-  </details>
-  
-  <details>
-    <summary>文章中提到電腦是發現理論問題的「催化劑」，這在其他科學領域也有類似的例子嗎？</summary>
-    <p>有的。文章以熱力學第二定律為例，指出該定律儘管被視為描述宇宙演化的基本法則，卻是在人們建造蒸汽機以解決實際問題時才被思考與發現。這顯示了實踐與理論之間複雜且相互促進的關係，而非單向由理論驅動實踐。</p>
-  </details>
-  
-  <details>
-    <summary>透過電腦的發展，電腦科學究竟揭示了哪些深刻的理論問題？</summary>
-    <p>其中一個例子是計算複雜性理論，它研究不同問題在根本上解決的難易程度，與電腦的速度或程式設計者的聰明才智無關。另一個例子是從複雜性理論中衍生出的新數學證明概念，例如互動式證明和零知識證明，這些都遠遠超越了傳統計算的範疇。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Quanta Magazine ｜ <a href="article/2026-08-29-13ae586e2d.html">全文（約 10 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/does-computer-science-need-computers-20260828/">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-08-30-627c6dfa54.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cqlw52vr0dwo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 
