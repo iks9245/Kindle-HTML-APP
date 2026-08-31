@@ -1,98 +1,4 @@
 {
-  "2026-08-15": [
-    {
-      "source": "Hacker News",
-      "summary": "「AI by Hand」公司推出了一套創新工具和技術，旨在將人類的精湛工藝、直覺與嚴謹性融入人工智慧的基礎設施開發流程中。這項服務透過在數據準備、模型開發和營運維護等關鍵環節中引入人類洞察力，幫助企業建立更為可靠且適合生產環境的AI系統。其核心價值在於提升AI模型的品質與生產就緒性。\n- 結合人類智慧與AI自動化，解決現有AI系統的挑戰。\n- 提供從數據策展到模型監控的全方位解決方案。",
-      "title": "AI by Hand"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "本文旨在指導開發者如何最佳化其 Claude Code 編碼會話，以最大化每個 token 的價值。鑑於像 Claude Code 這樣的代理編碼工具會根據 token 使用量計費，效率對於控制成本至關重要。文章強調透過有效的上下文管理、理解 token 定價模型（輸入與輸出 token、模型選擇、快取效益），以及善用指令如 `/clear`、`/compact` 和 `subagents` 來避免不必要的 GPU 運算，從而確保使用的 token 都專注於實際任務。\n\n* **關鍵點：**\n* 使用 `/clear` 移除無關的歷史上下文，減少 token 消耗。\n* 定期使用 `/compact` 總結對話並利用快取，尤其是在休息前。\n* 善用 subagents 處理產生大量不需保留輸出的任務，以隔離上下文。",
-      "title": "Maximizing the value of your Claude Code sessions"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "RustDesk 團隊近期發布了一個預覽版本，為基於 Debian/Ubuntu 的 x86_64 系統帶來 Wayland 上的真正無人值守遠端存取功能，同時支援多螢幕設置。這項重大進展解決了 Linux 遠端桌面在 Wayland 支援上的長期挑戰，允許使用者在無人值守的情況下，即使從重新啟動後的登入畫面也能進行連接，無需遠端設備上的任何人工批准。此舉將 RustDesk 定位於此領域的領先地位，超越了目前在 Wayland 支援上仍有限制的其他主要產品。\n\n要點：\n- 實現了 Wayland 環境下真正無需手動批准的遠端連線。\n- 目前為預覽版本，優先支援 Debian/Ubuntu-based x86_64 系統。",
-      "title": "RustDesk now supports true unattended remote access on Wayland"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "BBC調查發現，Instagram帳號正積極助長休達（Ceuta）的移民危機，透過提供付費建議並發布具煽動性但具誤導性的內容，鼓勵人們從摩洛哥非法越境進入這個西班牙飛地。這些帳號（部分源自摩洛哥）利用社群媒體演算法，將危險的旅程描繪得輕鬆安全，導致近期大批移民湧入，數千人抵達，許多人喪生。這種行為不僅危及移民生命，也加劇了摩洛哥與西班牙之間的外交緊張。\n* 重點：這些帳號收取數百英鎊，提供越境的「資訊」。\n* 重點：Instagram的演算法無意中擴大了這些有害內容的傳播。",
-      "title": "Instagram accounts fuelling Ceuta crisis with paid advice for help to cross"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "近日，約旦河西岸被佔領區庫斯拉（Qusra）的巴勒斯坦家庭住所遭以色列屯墾者圍困多日，水電供應被切斷。巴勒斯坦協助團體近日試圖運送援助物資，但遭以色列軍方阻止直接送達，僅能放置於屋外。此事件凸顯了屯墾者暴力問題日益加劇，以及以色列軍方在處理此類事件時面臨的挑戰。\n\n* 屯墾者切斷了被圍困家庭的水電供應並阻擋道路，意圖迫使巴勒斯坦居民離開。\n* 聯合國指出，自2023年1月以來，約旦河西岸已有超過6,390名巴勒斯坦人因屯墾者暴力、拆遷和驅逐而流離失所。",
-      "title": "Activists try to deliver aid to Palestinians in homes besieged by Israeli settlers"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "自塔利班於2021年重新控制阿富汗以來，至今已五年，BBC報導指出，阿富汗婦女和女孩的生活變得面目全非，其權利受到嚴重侵蝕。\n塔利班實施了嚴厲的伊斯蘭律法，禁止12歲以上女孩接受中等和高等教育、限制女性在無男性監護人陪同下旅行，並將她們排除在許多工作場所之外，導致阿富汗女性僅7%有工作。\n許多女性的夢想因此破滅，生存成為她們的首要任務，國際社會被呼籲關注並聲援她們的權利。",
-      "title": "Afghan women tell the BBC their lives are unrecognisable after five years of Taliban rule"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "美國國家航空暨太空總署（NASA）宣布將於 11 月 7 日至 8 日在佛羅里達州甘迺迪太空中心舉辦「MAX POWER」航太博覽會暨航空展。此活動為慶祝美國建國 250 週年，旨在展示美國航空與太空領域的創新成果及未來技術，並集結公眾、業界人士共同探索下一代航空器、太空飛行器與自動駕駛系統。透過飛行表演、專家講座及中心導覽等活動，MAX POWER 旨在激發探索精神並啟發未來的航太人才。\n- 重點：慶祝美國建國 250 週年。\n- 重點：展示下一代航太技術和創新。",
-      "title": "NASA Announces MAX POWER: America’s Newest Aerospace Expo, Airshow"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "志願者 Namai Chandra 為美國太空總署（NASA）支持的「太空雲觀察」（Space Cloud Watch）計畫開發了一款機器學習工具，旨在更有效地辨識「夜光雲」（NLCs）。這些夜光雲正以異常頻率和較低高度出現，對氣候變遷研究具有重要意義。\n該工具透過自動預篩選、雲分類和信心度審查，協助觀察者確認他們所見是否為夜光雲，從而減輕了計畫領導者的手動驗證負擔，並鼓勵更多公眾參與。\n主要重點：\n- 夜光雲（NLCs）出現異常，可能與地球長期天氣模式變化有關。\n- 新工具提升了志願者辨識夜光雲的效率，降低了錯誤提交的機率。",
-      "title": "Volunteer Develops Machine-Learning Tool to Identify Rare Clouds"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "美國國家航空暨太空總署（NASA）正邀請美國大學團隊提交2027年「革命性航空航太系統概念—學術連結」（RASC-AL）競賽的創新提案。此競賽旨在徵集關於月球未來運作，特別是月球南極地區的技術和概念，以加速推進NASA實現月球永續探索的任務，同時培育下一代航空航太人才。這些概念將協助NASA描繪一個由新科技塑造的月球未來。提案截止日期為2027年2月24日，入圍團隊將於2027年6月7日至10日在佛羅里達州可可海灘的論壇上展示其成果。\n* 競賽主題涵蓋極端探索、運輸路徑建設、月球資源探勘及智能彈性月球棲息地。\n* 最終入圍團隊將獲得7,500美元獎金，用於資助其參與最終階段競賽。",
-      "title": "NASA Competition Invites Students to Help Imagine a Future Enabled by Lunar Technologies"
-    },
-    {
-      "source": "Aeon",
-      "summary": "本文探討聖地牙哥的自建房屋，其核心論點是這些家園本質上既不穩定又持續變化。這些房屋同時處於「存在」與「生成」的狀態，意味著它們並非靜態物件，而是一個永無止境的建造與適應過程。這反映了居住者對環境的持續回應，以及其居住空間在物理和社會層面上的流動性本質。",
-      "title": "The neverending house"
-    },
-    {
-      "source": "Quanta Magazine",
-      "summary": "曹俊越細胞生物學家的研究指出，衰老並非分子或細胞的隨機損害累積，而是一個有階段性、有程序的過程。他的團隊透過高通量單細胞基因組學技術，在小鼠身上識別出衰老的離散階段，這些階段由特定細胞群體和其基因表達的協調性變化所定義，類似於胚胎發育。這項「細胞社會重塑」的過程很早就開始，人類可能在30歲前即啟動，涉及特定細胞的耗盡和隨後衰老相關免疫細胞的擴張，暗示著一個上游的信號機制在驅動此進程。\n* 關鍵點：\n* 衰老是一個有程序、有階段的過程，而非隨機損害。\n* 過程中涉及特定細胞群體的協調性變化與重塑。\n* 干預應趁早，目標是脆弱細胞或重新編程老化機制。",
-      "title": "Why Aging May Be a Program, Not a Breakdown"
-    }
-  ],
-  "2026-08-16": [
-    {
-      "source": "Hacker News",
-      "summary": "AI在解決複雜數學問題上的能力，可能並非源於其卓越的推理能力，而是來自於它相較於人腦擁有龐大得多的「工作記憶」或符號工作空間。人類一次只能在腦中記住少量不熟悉的元素，而AI卻能同時處理整個問題陳述、數百個中間方程式以及先前放棄的方法等大量資訊。這項顯著的優勢，類似於擁有一張無限大的草稿紙，使AI得以克服人類數學表現的一項關鍵生物限制。\n* AI的上下文窗口功能類似於無限的草稿紙，大大擴展了其處理能力。\n* 儘管人類專家會透過「組塊化」來壓縮資訊，但這並未根本消除工作記憶的限制。",
-      "title": "AI has access to a vastly larger working memory than the human brain"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "一項具爭議性的阿茲海默症手術據稱能逆轉患者症狀，此消息引發醫學界高度關注。這項潛在突破若獲證實，將對全球數百萬名阿茲海默症患者及其家屬帶來重大影響。\n\n關鍵點：\n* 手術的有效性與安全性仍存爭議\n* 可能為阿茲海默症治療帶來新希望",
-      "title": "A controversial Alzheimer's surgery is said to reverse symptoms"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "近期研究指出，常用於治療第二型糖尿病和體重管理的藥物索馬魯肽（Semaglutide），可能與降低預期的失智症風險有關。\n這項發現為阿茲海默症及其他形式的失智症的預防或治療提供了潛在的新方向。\n由於索馬魯肽已廣泛應用，此連結若能進一步證實，將對公共健康產生重大影響。\n\n關鍵點：\n* 索馬魯肽是一種GLP-1受體促效劑，目前用於糖尿病和體重管理。\n* 此研究提示其可能具有神經保護作用，進而降低失智症風險。",
-      "title": "Semaglutide linked to lower predicted dementia risk"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "摩洛哥當局近日在靠近休達（Ceuta）的弗尼德克（Fnideq）地區，攔截並拘留了數十名試圖越境進入這個西班牙北非飛地的撒哈拉以南非洲移民。此舉是在兩週前約78,000名移民大規模湧入，以及社群媒體上出現再次大規模越境的呼籲後，摩洛哥和西班牙當局大幅加強邊境安全措施的背景下進行的。此次事件凸顯了該地區持續的移民壓力，並曾引發歐盟國家間因邊境管制和申根協議而產生的外交緊張。\n\n- 超過100名移民在距休達3公里處的弗尼德克附近被攔截/拘留，其中多數來自撒哈拉以南非洲。\n- 摩洛哥（部署軍隊、海軍、無人機）和西班牙（增派1500名安全人員、設置圍欄和浮動屏障）大幅加強了安全部署。\n- 此前的大規模移民潮涉及78,000人，造成100人死亡，並引發歐盟內部的申根協議爭議。",
-      "title": "Morocco detains dozens of migrants trying to cross into Ceuta, reports say"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "週六清晨，印尼弗洛勒斯島發生芮氏規模7.7強震，造成至少47人死亡，數百棟建築在多個省份受損。救援隊正在積極搜尋倖存者並運送援助物資，儘管偏遠山區的災情全貌仍在評估中。\n*最初發布的海嘯警報已解除。\n*至少47人罹難，死亡人數恐將上升。\n*房屋、學校、醫療設施和基礎設施受到廣泛破壞。",
-      "title": "Rescuers search for survivors of powerful Indonesia earthquake"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "以色列軍隊近日對黎巴嫩南部發動空襲，造成至少11人死亡，其中包括兒童和婦女，這標誌著自六月旨在減少敵對行動的協議以來，最致命的襲擊之一。這些發生在安薩爾和迪爾阿爾扎赫拉尼的襲擊引發黎巴嫩總理強烈譴責，稱以色列刻意針對平民，但以色列則聲稱已擊斃一名真主黨指揮官。\n- 襲擊造成包括3名兒童和2名婦女在內的11人喪生。\n- 儘管有六月停火框架，雙方仍相互指責對方違反協議。",
-      "title": "Eleven killed in Israeli strikes on southern Lebanon, authorities say"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "APOD於2026年8月15日發布了一張在瑞典格里斯勒港附近拍攝的英仙座流星雨照片，圖中捕捉到兩顆明亮的流星及一顆流星的水面倒影。這個以明亮快速流星聞名的年度天文景觀，源自斯威夫特-塔特爾彗星留下的塵埃。今年流星雨的高峰（約8月12日）恰逢新月，使得觀測條件極佳，未受月光影響，許多人也在觀賞日食後見證了這場流星雨。\n* 最佳觀測條件：新月減少了光害。\n* 時間巧合：與2026年8月12日的日食觀測時間接近。",
-      "title": "APOD: 2026 August 15 – Bright Perseids from Sweden"
-    }
-  ],
   "2026-08-17": [
     {
       "source": "Hacker News",
@@ -764,6 +670,53 @@
       "source": "BBC World News",
       "summary": "英國右翼評論員米羅·揚諾普洛斯（Milo Yiannopoulos）因逾期居留簽證，於週五被美國移民及海關執法局（ICE）從美國遣返回英國。這位41歲的評論員於8月27日抵達紐奧良機場後遭到拘留，而他本人諷刺地曾多次呼籲美國應實施嚴格的移民管制，甚至支持即時遣返。此次遣返凸顯了美國移民法律的執行，即使是對那些公開支持相關措施的人也不例外。\n\n*   **關鍵點1:** 揚諾普洛斯曾高調支持驅逐數百萬非法移民，並主張對無法證明合法身份者進行即時遣返。\n*   **關鍵點2:** 他過去曾因涉及戀童癖的爭議言論而被迫辭職，並與另類右翼（alt-right）運動有聯繫，其煽動性言論常引起廣泛批評。",
       "title": "Right-wing commentator Milo Yiannopoulos deported from US to UK"
+    }
+  ],
+  "2026-08-31": [
+    {
+      "source": "Hacker News",
+      "summary": "Haiku作業系統近期發布了R1/beta6版本，這是其邁向最終穩定R1版本的重要里程碑。此版本通常著重於錯誤修復、性能改進及潛在的新功能，旨在提升系統的穩定性和用戶體驗。這次更新對Haiku的開源社群和用戶意義重大，象徵著該專案持續的發展動力與承諾。\n- 專注於錯誤修復和系統穩定性提升\n- 朝向穩定R1版本發布的關鍵一步",
+      "title": "Haiku R1/beta6 has been released"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "在1990年代後期，一位名為rs1n的作者為其《超級銀河戰士》攻略，在單一字距（monospace）文字中，透過手工精選詞彙，將長達17,000字的內容完美地進行了右對齊，且沒有任何多餘的空格或連字號。這項壯舉在一般文本檔案中極為罕見且令人驚訝，因其解決了單一字距排版中對齊的固有挑戰，例如過大的空白間距和不自然的連字符。這凸顯了作者對排版細節的極致追求，並展示了在沒有特殊工具輔助下，僅憑文字選擇就能達成的高度精準。\n- 完全手動選擇詞語以實現每行右側完美對齊。\n- 避免了單一字距文本常見的間距和連字問題。",
+      "title": "“I just chose words carefully”"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "Ryan Komoroske 於 2024 年 6 月 3 日發表的文章「Coordination Headwind: How Organizations Are Like Slime Molds」中，將組織在協調合作上面臨的挑戰比喻為黏菌（slime molds）的行為。作者指出，如同黏菌透過分散式智能探索並強化最佳路徑，組織也面臨著「協調逆風」(coordination headwind)——即多人合作的固有成本與難度。這篇文章探討了組織如何從黏菌的運作模式中學習，透過擁抱自發性、優化信息流動，以及賦予地方決策權來提升效率，以應對規模擴大時協調成本非線性增長的問題。\n\n關鍵點：\n- 「協調逆風」是組織合作的固有成本，隨規模擴大而非線性增長。\n- 黏菌的去中心化、自組織模式為組織提供了解決協調挑戰的啟示。",
+      "title": "Coordination Headwind: How Organizations Are Like Slime Molds"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "美國軍隊週日對伊朗的拉臘克島發動了自七月下旬以來首次已知的襲擊，摧毀了伊朗的兩個發射器。此次襲擊是因為觀察到伊朗革命衛隊正準備在重要的荷姆茲海峽部署水雷，該海峽是全球航運的關鍵水道。此事件迅速升級，伊朗革命衛隊稱其為「戰略性且致命的錯誤」，並發誓「報復和懲罰」，隨後向約旦的美國軍事基地發射彈道導彈，但約旦軍方成功攔截了這些導彈。這次襲擊加劇了因美國重啟經濟制裁和伊朗對海峽航運的管制而持續升溫的緊張局勢。\n- 拉臘克島位於荷姆茲海峽的戰略位置，是全球石油運輸的關鍵咽喉，戰前承載全球約20%的石油和液化天然氣運輸。\n- 伊朗近期一直要求經過拉臘克島附近的油輪進行檢查，並據報收取200萬美元過境費。",
+      "title": "US strikes Iranian launchers on Larak Island in first known attack in weeks"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "冰島近日投票反對重啟加入歐盟的談判，此前談判已中斷13年，52.8%的選民否決了政府的提案。此決定主要源於對失去對其佔出口近40%的豐厚漁業資源控制權的擔憂，而非安全考量。總理克里斯圖倫·弗羅斯塔多蒂爾表示，在其政府任期內不會再重提此議題，這明確了冰島維護國家獨立和漁業利益的堅定立場。\n* 國內漁業權益和民族認同感是關鍵決定因素。\n* 高達82.5%的投票率顯示民眾對此議題的高度關注。",
+      "title": "Iceland votes against restarting EU membership talks"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "一艘載有259名乘客和8名船員的客輪，在從基里尼亞出發後，於北賽普勒斯海岸翻覆，造成至少8人死亡，十餘人失蹤。儘管天氣惡劣，該船據報仍被兩波巨浪擊中後翻覆。自稱北賽普勒斯土耳其共和國和土耳其當局已展開大規模搜救行動，同時船長和七名船員已被拘留，以調查可能的過失。\n- 據報導，該艘私人擁有的Filo Jet客輪此前因天氣延誤，但最終仍啟航。\n- 翻覆前，船隻前方據稱已有損壞。",
+      "title": "Eight killed and others missing after ferry capsizes off northern Cyprus"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "美國國家航空暨太空總署（NASA）領導層於2026年8月25日在加州巴斯托附近的金石綜合設施，為新落成的深空站23號（DSS-23）天線舉行了剪綵儀式。這個34米的多頻束波導天線是深空網絡（DSN）孔徑增強計畫的最新成果，旨在擴建和升級網絡，以提升與遠程太空船的通訊能力。DSS-23將顯著增強多項任務在不同無線電頻率上的追蹤、指令傳送和科學數據接收能力，對未來的深空探索至關重要。\n\n* DSS-23是DSN孔徑增強計畫中六個新型34米多頻率束波導天線的其中一個。\n* 這些天線對於追蹤、發送指令及接收來自遙遠太空船的科學數據至關重要。",
+      "title": "Ribbon-Cutting Event for NASA Deep Space Network’s Deep Space Station 23"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "美國太空總署（NASA）的深空網絡（DSN）位於加州巴斯托附近的戈爾德斯通綜合設施，於2026年8月25日正式啟用一座全新的34米多頻束波導天線DSS-23。\n這是深空網絡孔徑增強計畫的一部分，旨在顯著提升DSN的通訊容量，並在未來數十年內強化NASA與遙遠太空船進行通訊、發送指令及接收科學數據的能力。這項擴建對於支援多個使用不同無線電頻率的深空任務至關重要。",
+      "title": "NASA Deep Space Network’s New Goldstone Antenna Goes Online"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "2026年8月25日，位於美國加州巴斯托附近的深空網路（DSN）金石綜合體舉行了新完成的DSS-23天線剪綵儀式。這座34米波束波導天線是DSN孔徑增強計畫的一部分，旨在升級和擴展網路，以增強太空任務的追蹤、指令發送和科學數據接收能力。\n該計畫自2009年啟動，目標是新增六座34米多頻率波束波導天線，這些多功能天線將支援不同無線電頻率的太空任務。\n\n- DSS-23是DSN孔徑增強計畫中新增的34米波束波導天線之一。\n- DSN由NASA噴氣推進實驗室管理，負責與遠距離太空船進行通訊。",
+      "title": "Panorama Showcasing the 34-Meter Antennas of the DSN’s Goldstone Complex"
     }
   ]
 }
