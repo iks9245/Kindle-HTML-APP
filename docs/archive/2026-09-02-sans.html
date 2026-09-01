@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-09-02</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-09-02.html">切換為襯線字體顯示</a></p>
+
+<h1>每日 AI 文摘 2026-09-02</h1>
+<p class="meta">
+2026-09-02
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="index-sans.html">存檔列表</a>
+
+
+
+ ｜ <a href="2026-09-01-sans.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今天的新聞揭示了全球多重面向的挑戰與進展。科技界一方面聚焦於蘋果與OpenAI的知識產權爭議，以及瀏覽器多元化的呼籲；另一方面，地緣政治衝突加劇，包括德國指控俄羅斯發動無人機襲擊、美國恢復對伊朗的打擊，以及阿富汗大規模的人道遣返危機。儘管挑戰重重，人類仍持續探索宇宙，美國國家航空暨太空總署（NASA）積極推進火星通訊網路建設及「阿提米絲三號」登月任務。在這些宏大事件的同時，也有對現代社會中「遊戲」與「意義」本質的深刻反思。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>Apple reveals 'shocking evidence' from ex-employee's MacBook in OpenAI suit</h3>
+  <p class="summary">蘋果在對OpenAI及其前員工的商業機密竊盜訴訟中提交新文件，聲稱從前工程師Chang Liu的MacBook中發現了「令人震驚的證據」。這些證據顯示，Liu不僅下載並在OpenAI的工作中使用了蘋果的機密電路圖，還與OpenAI的同事知曉其未經授權的訪問，並在蘋果內部調查後試圖銷毀證據。蘋果利用這些發現推動加速發現程序，強調其商業機密正被使用且有證據被銷毀，並特別擔憂機密資訊可能被AI模型學習後造成不可逆的影響。
+
+重點：
+• 劉某被指控在OpenAI工作期間使用了從蘋果竊取的機密電路圖。
+• 蘋果擔心商業機密被AI模型學習後可能造成「不可逆轉且持續傳播地」的影響。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>蘋果在Chang Liu的MacBook上具體發現了哪些「令人震驚的證據」？</summary>
+    <p>初步的鑑識分析顯示，Liu不僅下載了蘋果的機密電路圖並在OpenAI的工作中使用，而且他與OpenAI的同事知悉其未經授權的訪問行為。更嚴重的是，Liu在得知蘋果的內部調查後，曾向OpenAI的同事發送銷毀證據的指示，對方也確認會遵從。此外，Liu還被發現使用與蘋果內部應用程式同名的工具。</p>
+  </details>
+  
+  <details>
+    <summary>蘋果為何特別擔憂其商業機密被輸入AI代理或模型中？</summary>
+    <p>蘋果認為，一旦商業機密資訊被輸入到會從中學習的AI代理或模型中，這種學習「可能會造成商業機密不可逆轉且持續傳播的使用」。這意味著機密資訊一旦被AI吸收，其影響將難以追溯和控制，可能對其競爭力造成長期損害，因此蘋果對此表達嚴重關切。</p>
+  </details>
+  
+  <details>
+    <summary>面對這些新證據，蘋果在訴訟中的下一步是什麼？這些證據對案件的重要性何在？</summary>
+    <p>蘋果正利用這些「令人震驚的證據」大力推動加速發現程序，要求法庭允許其更快速地獲取文件並對OpenAI的關鍵員工進行質詢。蘋果認為，這些證據證明其商業機密正在被使用，並且有銷毀證據的行為，這顯示他們並非在進行「漫無目的的調查」，而是有確鑿的理由要求加速取證，包括獲取劉某的Mac mini數據。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-09-02-0f4eaad475-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>The ChatGPT/Codex app bundles a full copy of LibreOffice</h3>
+  <p class="summary">2026年9月1日，有用戶在檢查其`~/.cache/`資料夾時，發現OpenAI的ChatGPT（前身為Codex）桌面應用程式在其`codex-primary-runtime`子目錄中，捆綁了包含LibreOffice開源辦公套件、Python、Node.js、Poppler和git等約1.7GB的軟體。這項發現表明該應用程式可能為了執行文件處理或複雜任務而預先配置了廣泛的本地工具。
+- 捆綁了約1.7GB的軟體。
+- 包含完整的LibreOffice、Python、Node.js、Poppler和git等。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼ChatGPT桌面應用程式需要捆綁像LibreOffice這樣完整的辦公套件？</summary>
+    <p>捆綁LibreOffice可能表示ChatGPT應用程式具備或計畫支援處理文件、編輯文檔或執行其他與辦公軟體相關的複雜任務。其內部「技能」文件指示Codex如何利用這些二進位檔案，使其能夠直接在本地環境中處理各種文件格式。</p>
+  </details>
+  
+  <details>
+    <summary>應用程式捆綁如此大量的軟體（1.7GB）對用戶有什麼影響？</summary>
+    <p>捆綁1.7GB的軟體可能意味著應用程式的安裝包會比較大，佔用更多本地儲存空間。然而，這也可能帶來好處，例如減少對外部服務的依賴，提高某些任務的執行效率，或在離線狀態下也能處理特定類型的文件。</p>
+  </details>
+  
+  <details>
+    <summary>LibreOffice是什麼？它被捆綁在ChatGPT應用程式中有何意義？</summary>
+    <p>LibreOffice是一個免費且開源的辦公軟體套件，包含文書處理、試算表、簡報等工具，是OpenOffice.org的後繼者。它被捆綁在ChatGPT應用程式中，表明該AI可能被賦予了強大的本地文件處理能力，使其能夠直接讀取、寫入或操作多種常見的辦公文件格式，而無需將內容上傳至雲端。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-09-02-4060d5fb1d-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://simonwillison.net/2026/Sep/1/codex-libreoffice/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Hang on to Your Firefox</h3>
+  <p class="summary">「保留你的Firefox！」這篇文章發表於2026年8月31日，作者呼籲讀者不要因為Firefox在X平台上的存在等「細微困擾」而放棄它。作者認為，Firefox是瀏覽器引擎多樣性和競爭的「最後一線希望」，並指出其在X平台上推廣可能是因應其市場份額萎縮而急於接觸新用戶的策略。如果沒有Firefox，網路將可能被Google Chrome及其衍生產品主導，只剩下Apple Safari作為被強制預設的選項。這對網路的未來健康發展至關重要，用戶應支持Firefox。
+
+要點：
+- 維護瀏覽器引擎多樣性，避免Google Chrome獨大。
+- Firefox正在努力爭取用戶，以保持其在市場中的地位。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>作者為何特別針對Firefox在X平台上的存在進行辯護？</summary>
+    <p>文章指出，有些人因為Firefox在X平台上的存在而轉用其他瀏覽器，儘管這些替代品（如Vivaldi）也常駐於類似平台。作者認為這種對Firefox的批評是「因小失大」，忽略了Firefox維護網路多樣性的重要性。</p>
+  </details>
+  
+  <details>
+    <summary>如果Firefox最終未能維持其市場地位，網路瀏覽器市場將面臨哪些潛在問題？</summary>
+    <p>如果Firefox式微，網路瀏覽器市場將主要由Google Chrome及其基於Chromium的衍生產品主導。這將導致瀏覽器引擎多樣性的大幅降低，可能限制網路創新，並讓單一公司對網路標準和用戶體驗擁有過多影響力。</p>
+  </details>
+  
+  <details>
+    <summary>文章如何看待Apple Safari在瀏覽器引擎多樣性中的角色，它與Firefox有何不同？</summary>
+    <p>文章指出，Apple Safari之所以能在市場中佔有一席之地，是因為它是iPhone上的「強制預設」瀏覽器。與Firefox透過自身引擎（Gecko）提供獨立選擇不同，Safari的市場地位更多是基於蘋果生態系統的封閉性，而非其在開放網路競爭中的獨立選擇。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-09-02-db27e9b84b-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.newsonaut.com/articles/hang-on-to-your-firefox">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Germany says Russia behind Leipzig airport drone attack</h3>
+  <p class="summary">德國政府宣布，上個月在德國東部萊比錫/哈勒機場發生的無人機襲擊事件，幕後黑手是俄羅斯。8月4日，一枚裝有爆炸裝置的無人機在機場被發現但未能引爆，該機場是德國軍方、北約盟友運輸軍事物資的重要樞紐，也是烏克蘭安托諾夫航空公司（負責烏克蘭大部分空運貨物）的基地。德國外交部長約翰·瓦德普夫宣布採取多項反制措施，包括關閉波昂的俄羅斯領事館、終止柏林俄羅斯之家合約，並加強對俄羅斯國民的入境管制，此舉導致德俄關係空前緊張。
+主要發現：
+* 襲擊無人機的引爆器失靈，另有第二架無人機被懷疑與貨機相撞，數日後又發現第三架無人機。
+* 德國根據設備檢查和情報結果，認為這是俄羅斯在歐洲「混合行動」的既定模式。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>萊比錫/哈勒機場為何成為俄羅斯潛在的襲擊目標？</summary>
+    <p>萊比錫/哈勒機場在戰略上極為重要，它不僅是德國軍方和北約盟友運輸軍事物資的樞紐，更是烏克蘭安托諾夫航空公司的主基地，負責該國大部分的空中貨物運輸。因此，該機場被視為對烏克蘭軍事和後勤支援的關鍵節點。</p>
+  </details>
+  
+  <details>
+    <summary>德國針對此次襲擊採取了哪些具體反制措施？俄羅斯對此有何反應？</summary>
+    <p>德國外長宣布將關閉波昂的俄羅斯領事館，終止柏林俄羅斯之家的運營合約，並加強對俄羅斯國民的入境管制，同時將加大對俄羅斯「影子艦隊」的施壓。俄羅斯外交部發言人則稱德方指控荒謬，並揚言將採取「鏡像」回應，俄羅斯大使館更將此視為「俄德關係空前升級」。</p>
+  </details>
+  
+  <details>
+    <summary>這次無人機襲擊事件是否為孤立個案，還是屬於更廣泛的俄羅斯戰略模式？</summary>
+    <p>德國內政部長指出，萊比錫機場的襲擊事件符合「俄羅斯在歐洲混合行動的既定模式」。過去一年來，多個北約成員國也報告了在機場、軍事和工業場所發現無人機的事件，顯示這可能是俄羅斯對西方支持烏克蘭的一系列蓄意破壞行動的一部分。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-09-02-10a1cf7344-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c5ylm3m67n2o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>'I've never been to Afghanistan': Six million deportees forced to start over under the Taliban</h3>
+  <p class="summary">在過去近三年，全球約六百萬阿富汗人被巴基斯坦和伊朗強行遣返，其中今年約有一百萬人。這些難民，包括許多從未踏足阿富汗或已離鄉數十年的人，被迫在塔利班統治下從零開始，形成世界最大規模的跨國人口遷徙。此舉在阿富汗引發嚴峻人道危機，估計全國近半人口急需援助，百萬兒童面臨生命危險的營養不良。
+* 巴基斯坦與伊朗以國家安全和經濟負擔為由進行遣返，且行動範圍已擴大至註冊難民。
+* 塔利班政府雖承認需要援助，但其對婦女和女孩的限制嚴重阻礙了國際社會的支持。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>巴基斯坦和伊朗為何要大規模遣返阿富汗難民？</summary>
+    <p>兩國聲稱這是出於國家安全考量，並指部分阿富汗難民造成經濟負擔。特別是巴基斯坦，在去年與阿富汗邊境衝突升級後，對無證移民及已註冊難民的遣返和騷擾行為顯著加劇。</p>
+  </details>
+  
+  <details>
+    <summary>大量遣返人口對阿富汗及其塔利班政府造成了哪些衝擊？</summary>
+    <p>這導致阿富汗面臨極其嚴重的人道危機，全國近半人口急需援助，且有百萬兒童面臨生命危險的營養不良。塔利班政府雖承認需要國際幫助，但其對婦女和女孩的嚴格限制，嚴重阻礙了國際社會提供援助的意願。</p>
+  </details>
+  
+  <details>
+    <summary>國際社會對阿富汗的人道危機有何反應？塔利班政府如何看待其在國際上的孤立地位？</summary>
+    <p>聯合國難民署（UNHCR）強調這是前所未有的大規模遣返，呼籲國際支持，但指出塔利班的限制令援助工作更難獲得國際資金。塔利班外交部長則表示這屬於「內部事務」，並聲稱他們已加強與中國、印度及中亞鄰國的關係。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-09-02-24aade0850-sans.html">全文（約 6 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c2e074nn8eko?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>US strikes Iran as state media reports four killed at wedding party</h3>
+  <p class="summary">美國中央司令部週二宣布，美軍已恢復對伊朗的打擊，以回應伊斯蘭革命衛隊（IRGC）近期在荷姆茲海峽對商業航運和美國駐地人員的攻擊。伊朗紅新月會報告稱，在伊朗南部錫里克，一枚美國飛彈的碎片擊中一場婚禮，導致包括一名幼童在內的四人死亡，五十多人受傷。隨後，伊朗聲稱已對美國在約旦的軍事目標發動報復性襲擊，儘管約旦方面未報告傷亡，此事件標誌著在停火協議過期後，兩國敵意再次升級。
+- 美國聲明其打擊目標是IRGC，而非平民，但平民傷亡引發關注。
+- 美國前總統川普警告，若伊朗報復，美國將以更猛烈的方式回擊。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這場衝突的重新爆發與先前的停火協議有何關係？該協議的內容為何？</summary>
+    <p>美國與伊朗曾在六月簽署一份稱為《諒解備忘錄》的停火協議，旨在延長兩國間的停火。然而，該協議已過期，導致敵對行動重新開始，因此美軍恢復了對伊朗的打擊。</p>
+  </details>
+  
+  <details>
+    <summary>荷姆茲海峽在此次衝突中扮演什麼角色？美國和伊朗之間的海上行動為何？</summary>
+    <p>荷姆茲海峽是重要的航運要道，伊斯蘭革命衛隊近期曾試圖襲擊該海峽的商船，是美國此次打擊伊朗的原因之一。自停火協議過期以來，兩國都曾向船隻開火，伊朗針對未經其允許試圖穿越海峽的船隻，而美國則對伊朗港口實施海軍封鎖。</p>
+  </details>
+  
+  <details>
+    <summary>美國前總統川普的「更嚴厲打擊」威脅可能意味著什麼？這對區域穩定有何潛在影響？</summary>
+    <p>川普的威脅表明，若伊朗繼續報復，美國可能會採取規模更大、強度更高的軍事行動，這可能包括更廣泛的空襲或對伊朗戰略目標的打擊。這類升級將極大地加劇中東地區的緊張局勢，可能導致更廣泛的衝突，並對國際石油供應和航運造成嚴重影響。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-09-02-eef742c721-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cj06q4ynpmjo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>NASA Selects Blue Origin as Mars Telecommunications Network Provider</h3>
+  <p class="summary">美國國家航空暨太空總署（NASA）週二將一份價值約7億美元的合約授予藍色起源（Blue Origin），以開發火星電信網路。該網路旨在為當前和未來的火星任務提供可靠、高頻寬的通訊和導航服務，預計於2028年底前交付高性能火星通訊軌道器，並於2030年投入運作。
+此舉為NASA擴展地球和月球之外的通訊服務奠定基礎，對未來數十年火星的持續探索至關重要，同時也體現了NASA利用私營部門能力來推動深空探索的策略。
+- 藍色起源將負責該網路的設計、開發、整合、發射及營運。
+- 新網路將支援火星探測器傳輸科學數據、圖像、導航資訊及關鍵任務通訊。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼NASA需要開發新的火星電信網路，而不是沿用現有的系統？</summary>
+    <p>隨著火星任務數量的增加，對數據的需求也持續增長。NASA需要一個專門建造的網路，以提供更大的容量、更高的可靠性和操作靈活性，從而支持更多任務並為未來的載人探索鋪平道路。</p>
+  </details>
+  
+  <details>
+    <summary>這項火星電信網路的發展，與NASA的「阿提米絲計畫」有何關聯？</summary>
+    <p>「阿提米絲計畫」旨在將太空人送上月球，並為未來的火星任務做準備。新的火星電信網路將為機器人任務和最終的人類探索提供必要的通訊基礎設施，確保數據傳輸和導航服務，是NASA深空探索戰略的關鍵一環。</p>
+  </details>
+  
+  <details>
+    <summary>NASA選擇藍色起源等商業夥伴來開發此類關鍵基礎設施，反映了其怎樣的策略轉變？</summary>
+    <p>這反映了NASA越來越傾向於利用私營部門的能力來提供運輸和通訊服務，使其自身能夠更專注於太空探索和科學發現的核心使命。這種模式不僅能提高效率，也能促進太空產業的發展。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-09-02-543167fdb4-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-selects-blue-origin-as-mars-telecommunications-network-provider/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Historic Engines Take Their Place on Artemis III</h3>
+  <p class="summary">NASA技師於8月24日在佛羅里達州的甘迺迪太空中心，開始為Artemis III任務的太空發射系統（SLS）火箭安裝四具RS-25引擎。這些引擎預計將於2027年載運Artemis III太空人前往近地軌道，此次安裝標誌著前往月球任務的一個重要里程碑。特別的是，這些RS-25引擎都曾參與過多次太空梭任務，具有獨特的飛行歷史。
+- 其中一具引擎（E2048）曾於1998年載運高齡77歲的太空先驅約翰·葛倫，使他成為當時進入太空最年長的人。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Artemis計畫的主要目標是什麼？</summary>
+    <p>Artemis計畫旨在將人類再次送上月球，特別是讓女性和有色人種太空人首次登陸月球表面。它也為未來的火星載人任務奠定基礎，透過在月球周圍和表面建立長期存在來測試新技術。</p>
+  </details>
+  
+  <details>
+    <summary>為什麼NASA選擇重複使用太空梭時代的RS-25引擎，而不是開發全新的引擎用於SLS火箭？</summary>
+    <p>NASA重複使用RS-25引擎是為了節省開發成本並利用其經過驗證的可靠性。這些引擎在太空梭任務中表現出色，並且已經過嚴格測試，但需要進行翻新和升級以適應SLS火箭的更高推力要求。</p>
+  </details>
+  
+  <details>
+    <summary>約翰·葛倫於1998年第二次進入太空的任務有何特別意義？</summary>
+    <p>約翰·葛倫在77歲高齡時搭乘發現號太空梭執行STS-95任務，使他成為當時進入太空最年長的人。這次飛行不僅是為了研究高齡對太空飛行的影響，也象徵著太空探索精神的延續，激勵了無數人。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-09-02-e3b8d4de3b-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/historic-engines-take-their-place-on-artemis-iii/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>What’s Up: September 2026 Skywatching Tips from NASA</h3>
+  <p class="summary">NASA發布了2026年9月的觀星指南，提供了多個不容錯過的天文事件。觀星者可在9月中旬（14-20日）利用月亮尋找天蠍座的心宿二和人馬座的茶壺星群，並有機會在暗空中觀賞銀河系中心。9月18日，金星將在傍晚時分達到最亮，而9月26日則可見到豐收月與土星及海王星一同升起。此外，9月22日是秋分，標誌著北半球秋季的開始和南半球春季的開始。
+
+* 9月18日：金星在傍晚西方天空亮度達到頂峰。
+* 9月26日：豐收月伴隨土星和海王星在東方升起。
+* 9月19日：國際觀月夜，鼓勵全球觀測月球並了解其科學與文化意義。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>茶壺星群與銀河系中心之間有什麼關聯？</summary>
+    <p>人馬座的茶壺星群位於通往銀河系中心的方向上。如果觀測條件足夠黑暗，觀星者可以沿著茶壺的「壺嘴」方向觀察，就能看到銀河系最稠密的部分，即銀河系的核心區域。這使得茶壺星群成為尋找銀河系中心的絕佳指引。</p>
+  </details>
+  
+  <details>
+    <summary>觀測土星和海王星時，有什麼不同的挑戰或建議嗎？</summary>
+    <p>觀測土星相對容易，用肉眼即可清楚看到它。而海王星的亮度約為8等，肉眼無法識別，因此需要使用雙筒望遠鏡或望遠鏡才能觀測到它。在更黑暗的天空和良好的觀測條件下，將有助於發現海王星。</p>
+  </details>
+  
+  <details>
+    <summary>九月秋分除了標誌季節變化之外，還有什麼特別的意義？</summary>
+    <p>九月秋分是太陽直射地球赤道的時刻，這使得全球各地幾乎都能體驗到晝夜等長。從這一刻起，北半球的白天會逐漸縮短，而南半球的白天則會逐漸延長，直到冬至和夏至。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-09-02-9ba8446252-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://science.nasa.gov/solar-system/skywatching/whats-up-september-2026-skywatching-tips-from-nasa/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>More nothing now</h3>
+  <p class="summary">這篇文章探討了現代社會，特別是數位文化，如何將自由、自發、非結構化的「嬉戲」（paidia）轉變為競爭、優化和量化的「遊戲」（agôn）。作者指出，這種「價值捕獲」導致休閒活動變得像工作，我們追逐產出而非創造意義，進而失去了與自身及世界的真實連結。透過引用多位思想家如胡伊津加、溫尼科特和席勒的觀點，文章強調了遊戲在創造力、自我實現和感受生命意義上的關鍵作用。文章最終呼籲擁抱「無所事事」的狀態，培養自發性、無目的的遊戲精神，即古希臘人所稱的「善玩」（eutrapelia），以重拾真實感和生命的完整性。
+
+* 現代生活將「嬉戲」轉化為「遊戲」，犧牲了意義與創造力。
+* 「玩」不僅是娛樂，更是人類保持真實感與探索內在世界的核心方式。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是文章中提到的「嬉戲」（paidia）和「遊戲」（agôn）？它們之間最主要的區別是什麼？</summary>
+    <p>「嬉戲」（paidia）指的是自由、自發、非結構化的玩耍，沒有明確的規則、分數或競爭目標。而「遊戲」（agôn）則是有既定規則、目標和競爭的活動，通常伴隨著計分或排行榜。主要的區別在於其目的：嬉戲本身就是目的，而遊戲則追求特定的結果或勝利。</p>
+  </details>
+  
+  <details>
+    <summary>為什麼文章認為現代數位文化尤其容易導致「價值捕獲」並扼殺了「嬉戲」？</summary>
+    <p>現代數位文化充斥著演算法、優化和量化指標，將許多休閒活動「遊戲化」，例如健身應用程式、冥想軟體或語言學習工具。這些外部指標和獎勵機制會取代活動本身的內在意義，使人們為了維持連勝紀錄或排行榜上的位置而行動，而非出於好奇心或享受活動本身。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到了哪些具體方法或心態，可以幫助我們在日常生活中重新找回「嬉戲」或進入「過渡空間」？</summary>
+    <p>文章建議我們擁抱「無所事事」的狀態，例如不帶目的地散步、進行手工藝創作、參與即興對話，或是讓思緒自由漫遊。關鍵在於停止過度優化和量化，允許內在世界與外在物質互動，創造出無法預測的新事物，在其中體驗到真實感和創造性。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-09-02-53a39213f0-sans.html">全文（約 13 分鐘）</a> ｜ <a href="https://aeon.co/essays/play-is-doing-its-work-even-if-were-not-keeping-score">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>
