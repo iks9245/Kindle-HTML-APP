@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-09-01</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-09-01.html">切換為襯線字體顯示</a></p>
+
+<h1>每日 AI 文摘 2026-09-01</h1>
+<p class="meta">
+2026-09-01
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="index-sans.html">存檔列表</a>
+
+
+
+ ｜ <a href="2026-08-31-sans.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日消息反映了科技進步與全球挑戰的並存。在科技領域，Google更新瀏覽器擴充功能引發用戶功能性的討論，但同時也有將攝影機轉為智慧鳥類識別系統的巧妙創新，以及NASA在太空探索上的重大進展，包括發射新望遠鏡和迎接土耳其加入月球探索協議，更有數學界在相變理論上的突破。然而，全球各地挑戰不斷，尼泊爾洪災導致水電工人受困、瑞士發生致命槍擊案，以及美國歌手捲入謀殺案，這些事件皆凸顯了社會安全與人道救援的迫切性。此外，新加坡在水資源與糧食安全上的策略探討，則為各國應對資源管理問題提供了寶貴的經驗。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>Google Has Removed MV2 Extensions from the Chrome Web Store, Including UBO</h3>
+  <p class="summary">Google 已將包括 UBlock Origin (UBO) 在內的 MV2 擴充功能從 Chrome 線上應用程式商店中移除。此舉意味著數百萬用戶將無法再安裝或更新這些舊版的擴充功能，這對廣受歡迎的廣告阻擋器等工具造成了直接影響。此舉是 Google 推動其 Manifest V3 (MV3) 標準的一部分，旨在提升安全性和效能，但同時也引發了對擴充功能功能受限的擔憂。
+* MV2 擴充功能不再可用於安裝或更新。
+* 廣受歡迎的 UBlock Origin 是受影響的擴充功能之一。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是 MV2 和 MV3？Google 為何要從 MV2 轉換到 MV3？</summary>
+    <p>MV2 和 MV3 是 Chrome 擴充功能開發者用來構建擴充功能的不同架構版本，其中 MV 代表 Manifest 版本。Google 推動 MV3 是為了提高瀏覽器擴充功能的安全性、隱私保護和效能，並為開發者提供更現代的開發平台。</p>
+  </details>
+  
+  <details>
+    <summary>廣大用戶如果依賴像 UBlock Origin 這類 MV2 擴充功能，現在該怎麼辦？</summary>
+    <p>對於已經安裝的 MV2 擴充功能，它們可能會繼續工作一段時間，但無法再接收更新或重新安裝。用戶應尋找已升級到 MV3 的替代擴充功能，或等待開發者發布其 MV3 版本。UBlock Origin 等受歡迎的擴充功能通常會有 MV3 替代方案或官方升級路徑。</p>
+  </details>
+  
+  <details>
+    <summary>這種從 MV2 到 MV3 的轉變是否引起了爭議或批評？</summary>
+    <p>是的，這種轉變引起了社群的廣泛爭議，特別是關於 MV3 對某些類型的擴充功能（尤其是廣告阻擋器）功能限制的擔憂。批評者認為，MV3 的某些 API 限制可能會削弱廣告阻擋器的效力，或增加開發複雜度，進而影響用戶的瀏覽體驗。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-09-01-51c6745b6d-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://webiterate.dev/google-removed-extensions-ublock-origin-108/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>A walkable ASCII cyberpunk city in one HTML file [video]</h3>
+  <p class="summary">這則資訊介紹了一個名為「ASCII 城市」的專案，它是一個以ASCII字元構建的、可在單一HTML檔案中漫遊的賽博龐克城市。透過提供的影片更新，展示了該城市在交通、細節、內部空間、高低層次以及摩天大樓等方面的持續進展。這個專案之所以引人注目，在於它僅用極簡的技術實現了複雜且沉浸式的虛擬環境，展現了網頁技術的創意極限。
+*   使用ASCII字元在單一HTML檔案中呈現。
+*   具備可漫遊性，展現賽博龐克風格。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這個「ASCII 城市」是如何在單一HTML檔案中實現可漫遊的3D效果的？</summary>
+    <p>這個專案可能利用了JavaScript和HTML Canvas或純粹的DOM操作來動態生成和更新ASCII字元，模擬視角移動和深度。透過巧妙的演算法，它能根據玩家位置和方向，即時渲染出城市的各個部分，營造出3D的錯覺。</p>
+  </details>
+  
+  <details>
+    <summary>玩家在「ASCII 城市」中漫遊時，能期待體驗到什麼樣的互動或內容？</summary>
+    <p>根據影片描述，玩家可以期待在城市中漫遊，觀看交通流動、探索建築內部，並欣賞不同高低層次的設計。雖然互動可能限於移動和視角變化，但其獨特的ASCII藝術風格和賽博龐克氛圍本身就是一種沉浸式的體驗。</p>
+  </details>
+  
+  <details>
+    <summary>像「ASCII 城市」這樣僅用單一HTML檔案製作的輕量級專案，在現代網頁開發中具有什麼意義或潛力？</summary>
+    <p>這種專案展現了網頁技術的極限創意和高效利用，證明即使是簡單的工具也能創造出複雜的互動體驗。它對於資源受限的環境、藝術性網頁設計，或是作為教育工具來展示基礎網頁技術的潛力，都具有重要的參考價值。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-09-01-3daaa6115b-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.youtube.com/watch?v=3YtygAx_C6A">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>I turned my security cameras into an automatic bird identification system</h3>
+  <p class="summary">一位作者成功將家中現有的保全攝影機升級為一個24/7自動鳥類識別系統。該系統透過利用攝影機的麥克風，搭配BirdNet-Go軟體在地端即時分析鳥鳴聲，不僅能自動識別鳥類、蝙蝠甚至青蛙，還能追蹤新物種並發送警報，顯著提升了觀察和享受周遭野生動物的便利與樂趣。
+*   此系統完全在本地硬體上運行，確保數據隱私且無需訂閱費用。
+*   具備物種追蹤、即時警報功能，並可整合至Home Assistant等智慧家庭平台，亦可選擇與BirdWeather社區平台分享數據。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這個自動鳥類識別系統是如何運作的？</summary>
+    <p>該系統利用現有IP攝影機的RTSP串流音訊，將其輸入到在Docker容器中運行的BirdNet-Go軟體。BirdNet-Go使用本地AI模型（如Google Perch v2）即時分析音訊，識別鳥類、蝙蝠甚至青蛙的聲音。</p>
+  </details>
+  
+  <details>
+    <summary>與使用手機應用程式手動識別鳥類相比，這種自動化系統有何主要優勢？</summary>
+    <p>主要優勢在於全天候自動監測與記錄，無需人工干預。它能不間斷地捕捉所有聲音，追蹤新物種並發出警報，甚至能與智慧家庭系統整合，提供持續且全面的鳥類觀察體驗，同時確保數據隱私。</p>
+  </details>
+  
+  <details>
+    <summary>除了鳥類之外，該系統還能識別其他動物嗎？用戶是否可以選擇將數據分享出去？</summary>
+    <p>是的，該系統也能偵測蝙蝠和青蛙。此外，用戶可以選擇將其鳥類偵測數據與BirdWeather社區平台整合並分享，有助於研究人員和其他鳥類愛好者了解當地物種活動。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-09-01-1dd429c0ba-sans.html">全文（約 6 分鐘）</a> ｜ <a href="https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Nepal rescuers blast hillside in search of hydropower workers as families wait anxiously</h3>
+  <p class="summary">尼泊爾與西藏邊境洪災導致數百名水力發電廠工人受困於特里舒利河沿岸的泥漿隧道中。救援隊正使用炸藥開挖山坡並向被困區域灌輸空氣，以期在關鍵時刻營救生還者。目前洪災已造成尼泊爾939人死亡、3,925人失蹤，其中約六分之一為水力發電廠工人；家屬對救援進度緩慢感到極度焦慮，希望能盡快找到親人。
+
+* 救援行動面臨巨大挑戰，地形複雜且有如「月球景觀」，需爆破比房屋還大的巨石才能進入隧道。
+* 下游地區因屍體過多，且冷凍設備不足，已開始進行臨時性埋葬，並採集DNA以供未來辨識。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼尼泊爾有這麼多工人在水力發電專案中工作？</summary>
+    <p>尼泊爾嚴重依賴水力發電，並多年來在其山區河系中開發水力發電計畫。這些計畫對國家的能源供應和經濟發展至關重要，因此吸引了大量勞工參與。</p>
+  </details>
+  
+  <details>
+    <summary>救援隊在尋找被困工人時面臨哪些主要挑戰？</summary>
+    <p>救援隊面臨的挑戰極其巨大，包括地形被洪水破壞得面目全非，變成「月球景觀」。他們必須爆破比房屋還大的巨石才能進入被泥漿堵塞的隧道，且時間緊迫，搜救進度緩慢。</p>
+  </details>
+  
+  <details>
+    <summary>除了受困工人之外，這次洪災還給尼泊爾帶來了哪些其他嚴重的後果？</summary>
+    <p>除了大量人員失蹤和受困外，這場洪災已導致尼泊爾939人死亡，並迫使下游地區因屍體過多且冷凍設備不足而進行臨時性埋葬。此外，當局也正在處理關於洪災的「不實資訊」傳播問題。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-09-01-1c9ffcd8b2-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c5ylvgq9q71o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>US singer D4vd's celebrity lawyers withdraw from murder case</h3>
+  <p class="summary">美國歌手D4vd（本名David Anthony Burke）的明星律師團隊已退出其謀殺案，洛杉磯縣公設辯護人辦公室現已接手此案。21歲的Burke被控謀殺14歲的Celeste Rivas Hernandez，後者的遺體在他登記的特斯拉車輛地址被發現；他已於洛杉磯法院否認所有指控，包括一級謀殺、肢解屍體及兒童性虐待。檢察官指控他因受害者威脅揭露其與未成年人關係並破壞其音樂事業而犯案，此案可能面臨死刑判決。
+
+關鍵點：
+- 檢察官稱D4vd犯案動機是阻止受害者揭露其與未成年人的關係，以免毀掉其數百萬美元的音樂事業。
+- 此案已進入審判程序，首次預審聽證會定於10月19日舉行。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼美國歌手D4vd的明星律師會退出他的謀殺案？</summary>
+    <p>報導指出，法院核准了律師團隊的退出請求，並表示D4vd「符合指定辯護律師的資格」，這暗示可能與其經濟狀況有關。原律師團隊也表達了對D4vd的持續支持，並感謝公設辯護人辦公室接手此案。</p>
+  </details>
+  
+  <details>
+    <summary>D4vd面臨哪些具體指控，以及這些指控可能帶來什麼樣的後果？</summary>
+    <p>D4vd被控一級謀殺、肢解人類遺體和兒童性虐待。謀殺罪名中包含「與經濟利益相關的特殊情況」，這可能使他面臨死刑判決。</p>
+  </details>
+  
+  <details>
+    <summary>律師團隊的變動可能對D4vd的審判產生什麼影響？</summary>
+    <p>檢察官承認，律師的變動可能會導致審理程序延遲、需要額外時間審查證據，甚至可能提出撤案動議。不過，洛杉磯縣公設辯護人辦公室表示，他們將致力於為D4vd提供周全的辯護。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-09-01-e8c45666a1-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/crr451lpl4no?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Man arrested after Swiss rave shooting that killed woman</h3>
+  <p class="summary">瑞士阿勞市（Aarau）一場科技音樂狂歡派對於週日凌晨發生槍擊事件，造成一名22歲義大利籍女子 Maria Spinelli 死亡，另有五人受傷。警方在案發約24小時後，於週一凌晨逮捕了一名43歲的瑞士男子，懷疑他單獨犯案。此事件引起義大利總理關切並派官員協助調查，目前槍擊的背景與動機仍在釐清中。
+
+*   嫌犯：43歲瑞士男子
+*   受害者：22歲義大利籍女子 Maria Spinelli 死亡，另有五人輕重傷</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼義大利政府會特別關注這起在瑞士發生的槍擊案？</summary>
+    <p>義大利政府之所以高度關注此案，是因為在槍擊事件中喪生的22歲女子 Maria Spinelli 是義大利公民。義大利總理喬治亞·梅洛尼已對此表達關切，並指示義大利外交部派官員前往蘇黎世，密切追蹤調查進度，以確保事件真相水落石出並追究相關責任。</p>
+  </details>
+  
+  <details>
+    <summary>瑞士的槍枝管制狀況如何？類似的暴力槍擊事件在當地常見嗎？</summary>
+    <p>瑞士在歐洲擁有最高的槍枝持有率之一，但暴力槍擊事件在該國相對罕見。儘管槍枝普及，近年來瑞士已實施更嚴格的槍枝管制措施，而上次大規模的致命槍擊案則發生在2001年，因此這次事件引起了廣泛關注。</p>
+  </details>
+  
+  <details>
+    <summary>目前對這起槍擊事件的確切動機或詳細過程有何進展？</summary>
+    <p>目前警方仍在對槍擊事件的確切發生過程、背後原因以及可能的動機進行深入調查。儘管一名43歲的瑞士男子已被捕，且警方初步研判嫌犯是單獨行動，但尚未公佈更多關於作案動機或具體細節的資訊。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-09-01-cd10da3480-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cddv92n194vo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>NASA Welcomes Türkiye as Newest Artemis Accords Signatory</h3>
+  <p class="summary">週一，土耳其共和國在華盛頓的NASA總部簽署了「阿提米絲協議」，正式成為第71個致力於和平、透明太空探索的國際聯盟成員。此舉為土耳其參與未來由NASA主導的月球探索任務（如提供硬體、科學酬載等）打開了大門，共同推進人類重返月球並奠定火星探索的基礎。土耳其近期在太空領域展現積極態度，包括成功完成兩次載人太空任務，並即將發射其首個月球任務AYAP-1。
+
+*   「阿提米絲協議」由NASA和美國國務院於2020年與七個國家共同建立，旨在確保月球、火星及更遠探索活動的安全性、協調性與和平原則。
+*   土耳其將於今年十月在安塔利亞主辦國際太空聯盟大會，預計將有許多協議簽署國出席討論太空探索的未來。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>「阿提米絲協議」的核心原則是什麼？</summary>
+    <p>根據協議，簽署國承諾以和平、透明的方式探索太空，並在需要時提供援助。此外，協議也強調分享科學數據、確保太空活動不相互干擾，並保護具有歷史意義的遺址和文物。這些原則旨在提升各國在月球、火星及更遠太空探索中的安全性與協調性。</p>
+  </details>
+  
+  <details>
+    <summary>簽署「阿提米絲協議」將為土耳其帶來哪些具體機會？</summary>
+    <p>簽署協議後，土耳其將有機會參與NASA未來的月球探索任務。這包括為阿提米絲任務提供關鍵硬體、科學酬載、技術展示、立方衛星及其他能力，從而推進人類重返月球的目標。這也代表土耳其能夠在全球太空探索的「黃金時代」中扮演更重要的角色。</p>
+  </details>
+  
+  <details>
+    <summary>土耳其近期在太空探索領域的成就如何展現其對太空的承諾？</summary>
+    <p>土耳其在2024年成功派遣首位太空人Alper Gezervaci前往國際太空站進行科學研究，同年第二位太空人Tuva Atasever也完成了次軌道任務。此外，土耳其即將發射其首次月球任務AYAP-1。這些里程碑事件明確顯示土耳其在載人太空飛行和自主月球探索方面的雄心與能力，使其成為「阿提米絲協議」的理想夥伴。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-09-01-8cd5a4ac52-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/organizations/oiir/artemis-accords/nasa-welcomes-turkiye-as-newest-artemis-accords-signatory/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NASA’s Nancy Grace Roman Space Telescope Launches</h3>
+  <p class="summary">NASA的南希·格蕾絲·羅曼太空望遠鏡於2026年8月30日從佛羅里達州的甘迺迪太空中心發射升空，由SpaceX獵鷹重型火箭搭載。這座望遠鏡以NASA首位首席天文學家命名，其視野比哈伯望遠鏡廣闊得多，將用於探測數十億顆恆星和星系，幫助科學家研究暗能量、系外行星以及宇宙的演化。
+- 探索暗能量、系外行星與宇宙演化
+- 視野比哈伯望遠鏡更廣闊</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>羅曼太空望遠鏡為何以「南希·格蕾絲·羅曼」命名？</summary>
+    <p>羅曼太空望遠鏡是為了紀念美國國家航空暨太空總署（NASA）的首位首席天文學家南希·格蕾絲·羅曼女士而命名。她的貢獻對NASA的太空天文學計畫具有深遠影響。</p>
+  </details>
+  
+  <details>
+    <summary>羅曼太空望遠鏡的「視野比哈伯望遠鏡廣闊得多」具體意味著什麼？這對其科學任務有何影響？</summary>
+    <p>這意味著羅曼望遠鏡能夠在單次觀測中覆蓋比哈伯望遠鏡更大的天空區域，使其進行大規模巡天任務時效率更高。更廣闊的視野使其能更有效地進行宇宙演化、暗能量分佈和系外行星普查的研究。</p>
+  </details>
+  
+  <details>
+    <summary>羅曼太空望遠鏡將如何幫助科學家研究「暗能量」和「系外行星」？</summary>
+    <p>透過其廣闊的視野和高解析度成像，羅曼望遠鏡將繪製宇宙中數十億個星系的三維分佈圖，以了解暗能量如何影響宇宙的膨脹。同時，它還將利用微重力透鏡法來探測和描述大量系外行星，包括那些可能位於恆星宜居帶內的行星。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-09-01-403d6e497f-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/nasas-nancy-grace-roman-space-telescope-launches/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>September 2026 Satellite Puzzler</h3>
+  <p class="summary">NASA地球觀測站已發布其每月特色「2026年9月衛星影像謎題」，邀請讀者辨識影像中所顯示的地球地點。
+這項挑戰旨在鼓勵公眾透過觀察衛星影像來探索地球地理，並分享他們對該地點的見解與興趣，成功者將獲得「謎題吹噓權」。
+
+- 參與者需透過指定表格提交答案，可包含地點線索、衛星資訊或個人故事。
+- 謎題答案將約在一週後揭曉，並表揚首位正確猜中者及分享獨到見解的讀者。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這些每月衛星謎題的目的是什麼？</summary>
+    <p>這些謎題旨在吸引公眾參與，鼓勵他們觀察和學習地球地理，並提高對衛星影像及其所揭示的地球細節的認識。這也是一種有趣的互動方式，讓讀者能深入探索我們的星球。</p>
+  </details>
+  
+  <details>
+    <summary>讀者可以透過什麼方式提交答案，並提供哪些細節來增加其答案的趣味性？</summary>
+    <p>讀者需要透過指定的線上表格提交答案，並選擇「謎題答案」作為主題。除了簡單猜測地點外，他們還可以提供捕獲影像的衛星及儀器名稱、使用的光譜波段，甚至指出該地區地質或歷史的細微之處，或分享個人連結來展現其知識與獨特性。</p>
+  </details>
+  
+  <details>
+    <summary>除了「謎題吹噓權」之外，挑戰結束後還有哪些後續活動或獎勵？</summary>
+    <p>大約一週後，答案將在頁面頂部公布，並附上地球觀測站「每日影像」故事的連結，詳細解釋該影像。首位正確猜測地點的人將被表揚，同時也會特別提及分享了尤其深思熟慮或有趣答案的讀者。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-09-01-9ee4654b74-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/earth-observatory/september-2026-satellite-puzzler/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>‘Stunning’ Percolation Proof Solves Decades-Old Puzzle About Phase Transitions</h3>
+  <p class="summary">這個「滲濾」理論的突破性證明解決了數十年來關於相變的難題。一組數學家證明了針對所有無限傳遞圖的「超臨界銳度猜想」，該猜想闡述了當流體流動的可能性略高於臨界閾值時，流體幾乎會覆蓋整個網路。其關鍵在於透過一個出人意料的簡化方法，運用了「灑水」技術的逆向分析，證明了大型孤立水池幾乎不可能存在。這項「令人驚嘆」的發現為理解物理系統中的相變提供了基礎性工具。
+*   **主要論點：** 針對所有無限傳遞圖的超臨界銳度猜想現已獲證實，表明在臨界概率以上，流體會迅速且幾乎完全地滲透整個網絡。
+*   **證明方法：** 巧妙地逆轉了「灑水」技術的分析順序，從而極大地簡化並推廣了證明，使其適用於所有無限傳遞圖。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>滲濾理論（Percolation Theory）在現實世界中有哪些實際應用？</summary>
+    <p>滲濾理論可用於描述多種流動現象，例如病毒在城市中的傳播、氣體通過濾網、森林火災的蔓延，以及液體滲透咖啡渣等。它提供了一個簡化的數學模型來理解這些複雜系統中的連接性與流動。</p>
+  </details>
+  
+  <details>
+    <summary>證明了所有無限傳遞圖的「超臨界銳度猜想」對於未來的滲濾理論研究或相關領域有何重要意義？</summary>
+    <p>這個證明解決了滲濾理論中一個長期存在的重大難題，為理解更廣泛類型的網絡中的相變提供了堅實的理論基礎。它不僅加深了我們對隨機過程與幾何之間關係的理解，也可能激發新的工具和方法，應用於研究更複雜的物理系統或非傳遞圖。</p>
+  </details>
+  
+  <details>
+    <summary>儘管這項突破解決了滲濾理論中的一個主要問題，文章中提到仍有一個未解之謎。這個問題是什麼？</summary>
+    <p>該證明雖然涵蓋了所有無限傳遞圖，但對於三維晶格（最接近物理系統的圖形），當概率恰好處於臨界點時會發生什麼仍是未解之謎。具體來說，數學家們想知道在那個精確的臨界概率下，是否存在一個無限大的流體區域。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="../article/2026-09-01-7ac64b377b-sans.html">全文（約 10 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/stunning-percolation-proof-solves-decades-old-puzzle-about-phase-transitions-20260831/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>The Singapore strategies</h3>
+  <p class="summary">本文分析國家追求「安全優先」策略，特別是在糧食方面，經常忽視機會成本和比較優勢。作者以汶萊的稻米自給自足計畫失敗為例，接著深入探討新加坡在水資源和糧食安全方面的策略。新加坡成功透過「四個國家水喉」確保水資源供應，但其「30 by 30」糧食自給目標則因機會成本高且與其比較優勢不符而備受質疑，最終政府亦降低了該目標。
+
+* 水資源策略：新加坡透過長期規劃、技術創新（如新生水和海水淡化）及有效定價，成功解決水資源短缺問題，被視為典範。
+* 糧食策略：「30 by 30」計畫初期旨在提高本地糧食生產，但作者認為這與新加坡在全球貿易、物流及高科技等方面的比較優勢相悖，且機會成本過高。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>新加坡為何如此重視水資源安全，特別是對馬來西亞的依賴？</summary>
+    <p>新加坡作為一個小島國，淡水供應有限，長期高度仰賴從馬來西亞柔佛州進口水。1965年獨立時，馬來西亞領導人曾暗示若新加坡外交政策不利於馬國利益，可能威脅斷水，這讓新加坡深感不安，從此將水資源安全視為國家存亡的關鍵。</p>
+  </details>
+  
+  <details>
+    <summary>作者提到追求糧食自給自足策略時可能產生「機會成本」，這具體指的是什麼？</summary>
+    <p>「機會成本」指的是將資源投入於本地糧食生產，而非投入到新加坡更具比較優勢的領域，例如金融、物流、高科技製造或研發。這意味著新加坡可能錯失了在這些高附加值產業中獲得更高回報的機會，從而影響整體經濟效益。</p>
+  </details>
+  
+  <details>
+    <summary>針對本地糧食生產的批評，作者建議新加坡應該如何確保糧食安全？</summary>
+    <p>作者建議新加坡應繼續發揮其在全球貿易、物流、金融和高科技等方面的比較優勢。透過全球參與、建立多元且高效的供應鏈，新加坡能從世界各地的豐富糧食產區獲得所需，這比在有限空間內低效生產更為經濟且安全。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-09-01-8ddce4bcce-sans.html">全文（約 19 分鐘）</a> ｜ <a href="https://aeon.co/essays/did-singapore-go-wrong-in-its-quest-for-food-security">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>

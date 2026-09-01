@@ -1,41 +1,4 @@
 {
-  "2026-08-17": [
-    {
-      "source": "Hacker News",
-      "summary": "近期，AI模型正刻意犧牲龐大的事實知識儲存，轉而專注於強化其推理能力，導致模型在特定基準測試上表現出「更聰明」的表現，儘管整體知識儲備減少。這種趨勢使得模型參數數量大幅下降，例如GLM-5.2和Qwen3.5等，使其更小、更高效，足以在消費級GPU上運行。此策略旨在將容易過時且佔用空間的事實知識外包給外部工具或檢索系統，而模型本身則作為一個強大的「推理引擎」，以此解決幻覺問題並延長模型的核心價值。\n* 模型目的性地捨棄大量事實知識，轉而提升推理能力。\n* 這使得模型體積更小，能在消費級硬體上高效運行。\n* 最終目標是結合外部知識庫，大幅減少幻覺並保持知識更新。",
-      "title": "Models Are Getting Dumber on Purpose"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "近日，用戶「stagas」報告指出，當他將網站名稱伺服器切換至 Cloudflare 並啟用其代理服務時，Cloudflare 預設在其網站中靜默注入了 JavaScript 分析代碼。多位其他用戶也證實了這一情況，指出即使未明確啟用分析功能，Cloudflare 也可能自動加入 `beacon.min.js` 追蹤腳本，並認為這種做法具有侵入性，應改為選擇啟用。\n* 該問題主要影響使用 Cloudflare 代理服務（DNS 設置中的橙色雲朵）的網站。\n* 用戶需進入 Cloudflare 分析儀表板手動啟用後再停用，或將域名設置為「僅限 DNS」（灰色雲朵）以移除該腳本。",
-      "title": "Tell HN: Cloudflare silently injects its analytics when you switch nameservers"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "一位來自千里達及托巴哥的嵌入式工程師 Armstrong Subero 回應了 Dmitry Grinberg 對 RISC-V 架構的批評，指出 Grinberg 忽略了 RISC-V 對「第三世界」國家普及嵌入式技術的關鍵意義。作者認為，RISC-V 的真正優勢在於其極低的成本和易於獲取性，而非其架構的優雅，這使得當地工程師和學生能夠以可負擔的價格獲得開發硬體。\n*   重點：RISC-V 的價格優勢和開放生態系統。\n*   重點：實現了全球範圍內，特別是開發中國家嵌入式系統教育和開發的普及化。",
-      "title": "A 3rd World Embedded Engineer Responds to \"RISC-V They Should Have Known Better\""
-    },
-    {
-      "source": "BBC World News",
-      "summary": "俄羅斯表示，烏克蘭發動了今年（2026年）規模最大的襲擊，至少造成7人死亡，其中莫斯科地區遭600架無人機鎖定，共822架無人機參與，導致莫斯科附近的一個大型線上零售商Wildberries倉庫受損。與此同時，俄羅斯對烏克蘭的襲擊也造成至少7人死亡及逾39人受傷，雙方空戰升級，目標涵蓋基礎設施及平民區。\n* 此次烏克蘭襲擊是2026年最大規模，凸顯其深入俄羅斯境內打擊能力的提升。\n* 雙方攻擊均造成嚴重平民傷亡和財產損失，加劇了人道危機。",
-      "title": "Russia says at least seven killed in largest Ukrainian attack of 2026"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "美國前總統唐納·川普宣布，美國將「大幅減少」與韓國的聯合軍事演習，理由是他與北韓領導人金正恩的「良好關係」，以及這些演習成本高昂且傳達了「不恰當和敵對」的信號。此外，他還指出韓國近期拒絕加入美國對伊朗的「去核化」行動。此舉發生在北韓進行彈道飛彈試射之後，儘管美韓日前才宣布將舉行「乙支自由之盾」聯合軍演。\n* 川普認為軍演耗資巨大且具挑釁意味。\n* 韓國拒絕參與美國對伊朗的去核化倡議。",
-      "title": "Trump says US to scale back military drills with South Korea after it stayed out of Iran war"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "美國總統川普的中東特使庫許納週日在埃及會見了哈瑪斯新任領導人哈亞，以推動美國支持的加薩和平計畫。該計畫旨在實現哈瑪斯解除武裝、以色列撤軍以及加薩由新的巴勒斯坦民事政府重建。然而，以色列上週已拒絕此計畫，堅持必須先全面解除哈瑪斯武裝，此舉遭到八個穆斯林國家的譴責，認為這威脅到川普的和平努力。\n* 庫許納的會晤是自去年停火協議以來，與哈瑪斯在這一層級的首次接觸。\n* 會談據報導聚焦於哈瑪斯武器的解除，以及以色列撤軍和人道救援工作。",
-      "title": "Trump envoy Kushner meets Hamas leader to push Gaza peace plan"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "APOD（每日一天文圖）於 2026 年 8 月 16 日刊載了一張由 Dave Lane 於 2014 年拍攝的壯麗全景圖，展示了美國懷俄明州黃石國家公園硫磺泉（Silex Spring）上方橫跨天際的銀河系。這張由 16 張照片合成的影像，巧妙地結合了地球獨特的地質奇觀與浩瀚的宇宙景致，突顯了自然界的雙重魅力。文章同時提醒，黃石熱點的岩漿活動與過去的超級火山爆發有關，未來仍潛藏影響北美洲大片區域的潛在威脅。\n\n- 硫磺泉鮮豔的色彩源自生長在熱泉中的細菌層，而非天文現象。\n- 黃石熱點曾引發大規模超級火山爆發，未來仍有再次噴發的潛在威脅。",
-      "title": "APOD: 2026 August 16 – Milky Way over Yellowstone"
-    }
-  ],
   "2026-08-18": [
     {
       "source": "Hacker News",
@@ -717,6 +680,63 @@
       "source": "NASA Breaking News",
       "summary": "2026年8月25日，位於美國加州巴斯托附近的深空網路（DSN）金石綜合體舉行了新完成的DSS-23天線剪綵儀式。這座34米波束波導天線是DSN孔徑增強計畫的一部分，旨在升級和擴展網路，以增強太空任務的追蹤、指令發送和科學數據接收能力。\n該計畫自2009年啟動，目標是新增六座34米多頻率波束波導天線，這些多功能天線將支援不同無線電頻率的太空任務。\n\n- DSS-23是DSN孔徑增強計畫中新增的34米波束波導天線之一。\n- DSN由NASA噴氣推進實驗室管理，負責與遠距離太空船進行通訊。",
       "title": "Panorama Showcasing the 34-Meter Antennas of the DSN’s Goldstone Complex"
+    }
+  ],
+  "2026-09-01": [
+    {
+      "source": "Hacker News",
+      "summary": "Google 已將包括 UBlock Origin (UBO) 在內的 MV2 擴充功能從 Chrome 線上應用程式商店中移除。此舉意味著數百萬用戶將無法再安裝或更新這些舊版的擴充功能，這對廣受歡迎的廣告阻擋器等工具造成了直接影響。此舉是 Google 推動其 Manifest V3 (MV3) 標準的一部分，旨在提升安全性和效能，但同時也引發了對擴充功能功能受限的擔憂。\n* MV2 擴充功能不再可用於安裝或更新。\n* 廣受歡迎的 UBlock Origin 是受影響的擴充功能之一。",
+      "title": "Google Has Removed MV2 Extensions from the Chrome Web Store, Including UBO"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "這則資訊介紹了一個名為「ASCII 城市」的專案，它是一個以ASCII字元構建的、可在單一HTML檔案中漫遊的賽博龐克城市。透過提供的影片更新，展示了該城市在交通、細節、內部空間、高低層次以及摩天大樓等方面的持續進展。這個專案之所以引人注目，在於它僅用極簡的技術實現了複雜且沉浸式的虛擬環境，展現了網頁技術的創意極限。\n*   使用ASCII字元在單一HTML檔案中呈現。\n*   具備可漫遊性，展現賽博龐克風格。",
+      "title": "A walkable ASCII cyberpunk city in one HTML file [video]"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "一位作者成功將家中現有的保全攝影機升級為一個24/7自動鳥類識別系統。該系統透過利用攝影機的麥克風，搭配BirdNet-Go軟體在地端即時分析鳥鳴聲，不僅能自動識別鳥類、蝙蝠甚至青蛙，還能追蹤新物種並發送警報，顯著提升了觀察和享受周遭野生動物的便利與樂趣。\n*   此系統完全在本地硬體上運行，確保數據隱私且無需訂閱費用。\n*   具備物種追蹤、即時警報功能，並可整合至Home Assistant等智慧家庭平台，亦可選擇與BirdWeather社區平台分享數據。",
+      "title": "I turned my security cameras into an automatic bird identification system"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "尼泊爾與西藏邊境洪災導致數百名水力發電廠工人受困於特里舒利河沿岸的泥漿隧道中。救援隊正使用炸藥開挖山坡並向被困區域灌輸空氣，以期在關鍵時刻營救生還者。目前洪災已造成尼泊爾939人死亡、3,925人失蹤，其中約六分之一為水力發電廠工人；家屬對救援進度緩慢感到極度焦慮，希望能盡快找到親人。\n\n* 救援行動面臨巨大挑戰，地形複雜且有如「月球景觀」，需爆破比房屋還大的巨石才能進入隧道。\n* 下游地區因屍體過多，且冷凍設備不足，已開始進行臨時性埋葬，並採集DNA以供未來辨識。",
+      "title": "Nepal rescuers blast hillside in search of hydropower workers as families wait anxiously"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "美國歌手D4vd（本名David Anthony Burke）的明星律師團隊已退出其謀殺案，洛杉磯縣公設辯護人辦公室現已接手此案。21歲的Burke被控謀殺14歲的Celeste Rivas Hernandez，後者的遺體在他登記的特斯拉車輛地址被發現；他已於洛杉磯法院否認所有指控，包括一級謀殺、肢解屍體及兒童性虐待。檢察官指控他因受害者威脅揭露其與未成年人關係並破壞其音樂事業而犯案，此案可能面臨死刑判決。\n\n關鍵點：\n- 檢察官稱D4vd犯案動機是阻止受害者揭露其與未成年人的關係，以免毀掉其數百萬美元的音樂事業。\n- 此案已進入審判程序，首次預審聽證會定於10月19日舉行。",
+      "title": "US singer D4vd's celebrity lawyers withdraw from murder case"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "瑞士阿勞市（Aarau）一場科技音樂狂歡派對於週日凌晨發生槍擊事件，造成一名22歲義大利籍女子 Maria Spinelli 死亡，另有五人受傷。警方在案發約24小時後，於週一凌晨逮捕了一名43歲的瑞士男子，懷疑他單獨犯案。此事件引起義大利總理關切並派官員協助調查，目前槍擊的背景與動機仍在釐清中。\n\n*   嫌犯：43歲瑞士男子\n*   受害者：22歲義大利籍女子 Maria Spinelli 死亡，另有五人輕重傷",
+      "title": "Man arrested after Swiss rave shooting that killed woman"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "週一，土耳其共和國在華盛頓的NASA總部簽署了「阿提米絲協議」，正式成為第71個致力於和平、透明太空探索的國際聯盟成員。此舉為土耳其參與未來由NASA主導的月球探索任務（如提供硬體、科學酬載等）打開了大門，共同推進人類重返月球並奠定火星探索的基礎。土耳其近期在太空領域展現積極態度，包括成功完成兩次載人太空任務，並即將發射其首個月球任務AYAP-1。\n\n*   「阿提米絲協議」由NASA和美國國務院於2020年與七個國家共同建立，旨在確保月球、火星及更遠探索活動的安全性、協調性與和平原則。\n*   土耳其將於今年十月在安塔利亞主辦國際太空聯盟大會，預計將有許多協議簽署國出席討論太空探索的未來。",
+      "title": "NASA Welcomes Türkiye as Newest Artemis Accords Signatory"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "NASA的南希·格蕾絲·羅曼太空望遠鏡於2026年8月30日從佛羅里達州的甘迺迪太空中心發射升空，由SpaceX獵鷹重型火箭搭載。這座望遠鏡以NASA首位首席天文學家命名，其視野比哈伯望遠鏡廣闊得多，將用於探測數十億顆恆星和星系，幫助科學家研究暗能量、系外行星以及宇宙的演化。\n- 探索暗能量、系外行星與宇宙演化\n- 視野比哈伯望遠鏡更廣闊",
+      "title": "NASA’s Nancy Grace Roman Space Telescope Launches"
+    },
+    {
+      "source": "NASA Breaking News",
+      "summary": "NASA地球觀測站已發布其每月特色「2026年9月衛星影像謎題」，邀請讀者辨識影像中所顯示的地球地點。\n這項挑戰旨在鼓勵公眾透過觀察衛星影像來探索地球地理，並分享他們對該地點的見解與興趣，成功者將獲得「謎題吹噓權」。\n\n- 參與者需透過指定表格提交答案，可包含地點線索、衛星資訊或個人故事。\n- 謎題答案將約在一週後揭曉，並表揚首位正確猜中者及分享獨到見解的讀者。",
+      "title": "September 2026 Satellite Puzzler"
+    },
+    {
+      "source": "Quanta Magazine",
+      "summary": "這個「滲濾」理論的突破性證明解決了數十年來關於相變的難題。一組數學家證明了針對所有無限傳遞圖的「超臨界銳度猜想」，該猜想闡述了當流體流動的可能性略高於臨界閾值時，流體幾乎會覆蓋整個網路。其關鍵在於透過一個出人意料的簡化方法，運用了「灑水」技術的逆向分析，證明了大型孤立水池幾乎不可能存在。這項「令人驚嘆」的發現為理解物理系統中的相變提供了基礎性工具。\n*   **主要論點：** 針對所有無限傳遞圖的超臨界銳度猜想現已獲證實，表明在臨界概率以上，流體會迅速且幾乎完全地滲透整個網絡。\n*   **證明方法：** 巧妙地逆轉了「灑水」技術的分析順序，從而極大地簡化並推廣了證明，使其適用於所有無限傳遞圖。",
+      "title": "‘Stunning’ Percolation Proof Solves Decades-Old Puzzle About Phase Transitions"
+    },
+    {
+      "source": "Aeon",
+      "summary": "本文分析國家追求「安全優先」策略，特別是在糧食方面，經常忽視機會成本和比較優勢。作者以汶萊的稻米自給自足計畫失敗為例，接著深入探討新加坡在水資源和糧食安全方面的策略。新加坡成功透過「四個國家水喉」確保水資源供應，但其「30 by 30」糧食自給目標則因機會成本高且與其比較優勢不符而備受質疑，最終政府亦降低了該目標。\n\n* 水資源策略：新加坡透過長期規劃、技術創新（如新生水和海水淡化）及有效定價，成功解決水資源短缺問題，被視為典範。\n* 糧食策略：「30 by 30」計畫初期旨在提高本地糧食生產，但作者認為這與新加坡在全球貿易、物流及高科技等方面的比較優勢相悖，且機會成本過高。",
+      "title": "The Singapore strategies"
     }
   ]
 }
