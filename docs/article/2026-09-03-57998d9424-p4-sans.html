@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fable 5.1 World Modeling</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-09-03-57998d9424-p4.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Fable 5.1 World Modeling</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 4 / 4 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://github.com/PhiloLabs/fable51-worlds">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-03-57998d9424-p3-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 4 / 4 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Code and generated assets: MIT. Geometry is derived from OpenStreetMap (ODbL) and USGS 3DEP (public domain). Reference photographs are not redistributed here — their provenance is recorded per sector in each world's refs/*/SOURCES.md. Brand names and logos identify the real businesses at their real locations and belong to their owners.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>這個系統強調「無需遊戲引擎」和「純 Three.js 應用」，這有什麼好處？</summary>
+  <p>這表示生成的世界模型可以直接在網頁瀏覽器中運行，無需安裝任何專用軟體或外掛。同時，它避免了專有遊戲引擎的授權費用和開發限制，提供了更高的靈活性和可訪問性。</p>
+</details>
+
+<details>
+  <summary>這些重建的數位世界在真實性方面如何？它們是如何確保與現實世界的高度一致性？</summary>
+  <p>這些模型力求高度真實，不僅包含詳細的建築物、店面和交通，還有行人與交通燈號。系統採用「相機匹配品質驗證」流程，將生成的模型截圖與真實照片進行比對，並由獨立審閱代理進行報告，以確保準確性。</p>
+</details>
+
+<details>
+  <summary>除了在瀏覽器中探索真實地點之外，這項技術未來還有哪些潛在的應用場景？</summary>
+  <p>這項技術的潛力廣闊，例如城市規劃與模擬、虛擬觀光導覽、房地產虛擬看房、自動駕駛車輛的訓練環境，甚至是擴增實境(AR)體驗的基礎建設，能為多個領域提供精準且可互動的數位孿生。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-03-57998d9424-p3-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 4 / 4 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
