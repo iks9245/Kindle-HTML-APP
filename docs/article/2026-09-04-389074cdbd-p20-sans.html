@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAI's GPT-6 Astra on ARC-AGI-3</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-09-04-389074cdbd-p20.html">切換為襯線字體顯示</a></p>
+
+
+<h1>OpenAI's GPT-6 Astra on ARC-AGI-3</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 20 / 20 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://arcprize.org/blog/astra">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-04-389074cdbd-p19-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 20 / 20 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Thank you to François Chollet, Mike Knoop, Matt Mazur, Ethan Bond, and Derek Smith for early review of this post.</p>
+
+<p class="fulltext">- Assuming 20 W of brain metabolic power and an electricity price of $0.20/kWh: 0.020 kW × 1.5 hours = 0.030 kWh, worth $0.006 per session, or $0.006 ÷ 9 ≈ $0.00067 per attempted game.</p>
+
+<p class="fulltext">- See the ARC-AGI-3 human testing paper.</p>
+
+<p class="fulltext">- No evidence of trying to break out of the sandbox was observed.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>什麼是 ARC-AGI-3 基準測試，以及它旨在評估 AI 的哪些能力？</summary>
+  <p>ARC-AGI-3 是一個用於研究代理智能的基準測試，透過新穎、抽象的回合制環境來評估 AI。它旨在衡量當前人工智慧與通用人工智慧 (AGI) 之間的「殘餘差距」，特別是系統探索、建模、設定目標和規劃執行等代理能力。</p>
+</details>
+
+<details>
+  <summary>GPT-6 Astra 能夠建立符號世界模型和領域專屬語言，這對人工智慧的發展有何意義？</summary>
+  <p>這項能力表明 Astra 在理解和抽象化複雜環境方面取得了顯著進展，使其能將遊戲機制表示為邏輯規則並高效規劃行動。這標誌著前沿模型能力的一次明顯飛躍，展現了朝向泛化和更強大問題解決能力的重要進步。</p>
+</details>
+
+<details>
+  <summary>儘管 GPT-6 Astra 在 ARC-AGI-3 上表現出色，為何仍不被視為通用人工智慧 (AGI)，且 ARC-AGI 系列的未來發展方向為何？</summary>
+  <p>雖然 Astra 取得了重大進展，但 ARC-AGI-3 基準測試的範圍有限，環境具有確定性和封閉性，不代表現實世界的複雜性。因此，OpenAI 不將其視為 AGI。未來的 ARC-AGI 基準將繼續演進，旨在評估遞歸自我改進和開放式創新等更高級的 AI 能力。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-04-389074cdbd-p19-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 20 / 20 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
