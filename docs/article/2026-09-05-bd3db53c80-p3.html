@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shutting down our public encrypted DNS</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-09-05-bd3db53c80-p3-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>Shutting down our public encrypted DNS</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 3 / 3 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-05-bd3db53c80-p2.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 3 / 3 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Mullvad Browser users who have kept the default DoH settings or the included ad blocking one, will automatically be migrated to Quad9.</p>
+
+<p class="fulltext">If you have customized the DoH, we will not change them. If you have manually configured a variant of the Mullvad DoH (base, extended, family. etc.), please make sure to change it back to the default.</p>
+
+<p class="fulltext">iOS and macOS profiles</p>
+
+<p class="fulltext">Any existing iOS and macOS Mullvad DoH profile will stop working, please make sure to replace them with Quad9 iOS profiles or macOS profiles.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Mullvad 為何選擇贊助 Quad9 而非繼續自行營運公共 DNS 服務或選擇其他供應商？</summary>
+  <p>Mullvad 認為營運一個注重隱私的公共 DNS 服務是一項高度專業化的工作。Quad9 Foundation 在此領域被公認為無可爭議的領導者，Mullvad 選擇透過財務支持 Quad9，而非重複其努力，以確保用戶獲得最佳服務。</p>
+</details>
+
+<details>
+  <summary>這項變更對使用 Mullvad VPN 內部 DNS 服務的 VPN 用戶有影響嗎？</summary>
+  <p>對於正在使用 Mullvad VPN 並透過其內部 DNS 處理查詢的用戶來說，這項變更並無影響。因為當 VPN 啟用時，流量已加密，且其內部 DNS 會處理所有查詢，公共加密 DNS 伺服器對這些用戶而言是多餘的。</p>
+</details>
+
+<details>
+  <summary>加密 DNS (DoH) 究竟是什麼，它對用戶隱私為何重要？</summary>
+  <p>加密 DNS (DoH) 是一種透過 HTTPS 協定來解析網域名稱的技術，能加密 DNS 查詢流量。這可以防止網路服務供應商 (ISP) 或其他第三方窺探用戶訪問了哪些網站，從而提高網路隱私和安全性。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-05-bd3db53c80-p2.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 3 / 3 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
