@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bzip3</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-09-08-f640cbd417-p13-sans.html">切換為無襯線字體顯示</a></p>
+
+
+<h1>bzip3</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 13 / 13 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://github.com/iczelia/bzip3">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-08-f640cbd417-p12.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 13 / 13 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">bzip3 as a whole is licensed under LGPLv3 only. It is not dual-licensed under LGPLv3 and Apache 2.0.</p>
+
+<p class="fulltext">- Ilya Grebnov for his libsais library used for BWT construction in BZip3 and the LZP encoder which I had used as a reference implementation to improve myself.</p>
+
+<p class="fulltext">- Caleb Maclennan for configuring autotools as a packaging-friendly build system for BZip3.</p>
+
+<p class="fulltext">- Ilya Muravyov for his public domain BWT post-coder, a derivative of which is used in this project.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>bzip3 相較於其前身 bzip2，主要透過哪些技術改進來提升壓縮效能和速度？</summary>
+  <p>bzip3 採用了多項先進技術，包括零階上下文混合熵編碼器、利用後綴陣列的快速 Burrows-Wheeler 變換，以及結合了 LZ77 風格字串匹配和 PPM 風格上下文建模的 RLE（行程長度編碼）。這些技術共同作用，使其在壓縮比和解壓縮速度上均超越了 bzip2。</p>
+</details>
+
+<details>
+  <summary>從文章提供的基準測試結果來看，bzip3 在不同配置下與其他主流壓縮工具（如 xz 和 zstd）的表現如何？</summary>
+  <p>根據基準測試，在壓縮 Perl5 程式碼檔案時，bzip3 在最佳配置（如 `-b 511`）下能達到所有受測工具中最小的壓縮檔大小，甚至優於 xz。在解壓縮時間方面，bzip3 也顯著快於 bzip2 和 xz，與 zstd 相比則具有競爭力，有時甚至更勝一籌。</p>
+</details>
+
+<details>
+  <summary>除了單獨使用，bzip3 在結合其他工具時有何特殊優勢？文章中提到了哪種組合方式？</summary>
+  <p>文章提到 bzip3 在與長程去重複工具 lrzip 結合使用時，能實現極高的壓縮比。例如，將經過 lrzip 處理的檔案再用 bzip3 壓縮，得到的最終檔案大小顯著小於 lrzip 結合 lzma 或 bzip2 的結果，顯示了其在處理具有長程冗餘資料方面的強大潛力。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-08-f640cbd417-p12.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 13 / 13 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
