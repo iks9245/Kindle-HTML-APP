@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    padding: 1em 1.2em 2em;
+    max-width: 38em;
+    line-height: 1.5;
+  }
+  .page { font-size: 20px; }
+  h1 { font-size: 1.3em; border-bottom: 2px solid #000; padding-bottom: .3em; margin-bottom: .3em; }
+  h2 { font-size: 1.1em; margin-top: 1.6em; border-bottom: 1px solid #000; padding-bottom: .2em; }
+  h3 { font-size: 1.05em; margin-bottom: .2em; }
+  p { margin: .4em 0; }
+  .meta { color: #333; font-size: .85em; margin-bottom: 1em; }
+  .summary { margin: 0 0 .3em 0; white-space: pre-line; }
+  .summary.secondary { color: #333; border-top: 1px dashed #999; padding-top: .3em; margin-top: .3em; }
+  .fulltext { margin: .8em 0; }
+  .brief { border: 1px solid #000; padding: .5em .8em; margin: 0 0 1.4em 0; }
+  .brief-label { font-size: .75em; font-weight: bold; letter-spacing: .15em; margin: 0 0 .3em 0; }
+  .brief p:last-child { margin: 0; }
+  .source { font-size: .8em; color: #333; }
+  a { color: #000; }
+  article { margin-bottom: 1.4em; padding-bottom: 1em; border-bottom: 1px dashed #999; }
+  ul.toc { padding-left: 1.1em; }
+  ul.toc li { margin: .3em 0; }
+  dl.glossary dt { font-weight: bold; margin-top: .6em; }
+  dl.glossary dd { margin: .1em 0 0 1em; }
+
+  .fontsize { font-size: 16px; margin: 0 0 1em 0; }
+  .fontsize a {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: .2em .4em;
+    margin-right: .4em;
+    border: 1px solid #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  #font-anchor-small, #font-anchor-medium, #font-anchor-large { display: none; }
+  #font-anchor-small:target ~ .page { font-size: 16px; }
+  #font-anchor-large:target ~ .page { font-size: 26px; }
+
+  .fontswitch { font-size: 16px; margin: 0 0 1em 0; }
+  .fontswitch a { text-decoration: underline; }
+
+  .pager { margin: 1.2em 0; overflow: hidden; }
+  .pager .pager-prev, .pager .pager-next {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  .pager .pager-prev { float: left; }
+  .pager .pager-next { float: right; font-weight: bold; }
+  .pager .pager-off { color: #999; border-color: #999; }
+  .pager .pager-num { display: block; text-align: center; padding-top: .6em; color: #333; font-size: .85em; }
+
+  .qa { margin: .5em 0 0 0; }
+  .qa details { margin: .35em 0; border: 1px solid #999; padding: .4em .6em; }
+  .qa summary { cursor: pointer; font-size: .9em; }
+  .qa p { margin: .4em 0 0 0; font-size: .9em; }
+</style>
+</head>
+<body>
+<span id="font-anchor-small"></span><span id="font-anchor-medium"></span><span id="font-anchor-large"></span>
+<div class="page">
+<p class="fontsize"><a href="#font-anchor-small">A-</a><a href="#font-anchor-medium">A</a><a href="#font-anchor-large">A+</a></p>
+<p class="fontswitch"><a href="2026-09-09-1f2ecc4c6e-p22.html">切換為襯線字體顯示</a></p>
+
+
+<h1>Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 22 / 22 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://github.com/argonautlabsai/deltafin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-09-1f2ecc4c6e-p21-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 22 / 22 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Exact provenance and distribution boundaries are recorded in Third-party provenance and notices.</p>
+
+<p class="fulltext">Deltafin's tracked project code is MIT. Kimi K3 weights, the DSpark checkpoint, optional Qwen checkpoints and all other third-party material retain their upstream terms. Deltafin is an independent project with no affiliation to Moonshot AI.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Kimi K3 模型為何在消費級硬體上運行如此困難，而 Deltafin 專案的成功為何意義重大？</summary>
+  <p>Kimi K3 是一個具有 2.8 兆參數的 MoE 模型，通常需要企業級的基礎設施，例如 16 個節點和 4.8 TB 的聚合 VRAM，預計成本高達 200 萬美元。Deltafin 專案證明了透過高效的串流技術，可以在約 1.5 萬美元的消費級 MacBook Pro 上運行此類模型，這對於推動邊緣 AI 和自託管大型模型具有重大意義。</p>
+</details>
+
+<details>
+  <summary>該專案透過「從四個 SSD 流式傳輸專家權重」來運行 Kimi K3，這種方法有何特別之處？</summary>
+  <p>Kimi K3 擁有 1.45 TB 的專家權重，遠超過 MacBook Pro 的 128 GB 記憶體容量。透過多個 SSD 流式傳輸專家權重，使得在記憶體不足的情況下也能按需加載所需部分，這是一種創新的記憶體管理策略。研究還發現，使用多個 SSD 比單個 SSD 能顯著提高速度，儘管最慢的讀取速度會限制整體表現。</p>
+</details>
+
+<details>
+  <summary>專案中提到的「預填充」過程緩慢的問題（512 token 提示約需 6.3 分鐘），其原因為何？開發團隊是否已找到解決方案？</summary>
+  <p>預填充緩慢的主要原因是系統在處理每個層的專家權重時會重複讀取 8 次。開發團隊已經找到了這個問題的原因並計劃進行修復。一旦修復完成，預填充的速度有望大幅提升，進一步改善模型在消費級硬體上的整體可用性。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-09-1f2ecc4c6e-p21-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 22 / 22 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
