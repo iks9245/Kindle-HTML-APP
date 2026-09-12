@@ -1,51 +1,4 @@
 {
-  "2026-08-28": [
-    {
-      "source": "Hacker News",
-      "summary": "Experiential 推出了一款開源閘道器與路由器，旨在簡化代理（agent）工作流程。這項工具提供了一個與 OpenAI 相容的 API 介面，讓使用者能整合託管、自帶金鑰（BYOK）及本地模型，並精細控制使用者權限、用例及預算。其核心價值在於能將實際的生產流量轉化為客製化的路由器或模型，從而優化模型呼叫的品質、速度與成本，提升 AI 應用的效率與管理彈性。\n\n*   統一管理各類模型：透過單一介面整合來自不同供應商或本地部署的模型。\n*   利用實際流量優化模型表現：將生產數據用於訓練或調優路由器與模型，以提升效益。",
-      "title": "Show HN: We built open OpenRouter that turns usage into a better model"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "一名法官於2026年8月27日裁定，川普政府將人工智慧公司Anthropic列入黑名單的行為屬非法，此舉撤銷了一項針對該科技公司的重大政府行動。\n這項判決凸顯了司法部門對行政權力的制衡作用，並可能對政府與科技公司之間，尤其是在國家安全和技術監管領域的關係，產生深遠影響。\n* 判決日期：2026年8月27日\n* 核心議題：政府對科技公司黑名單的合法性",
-      "title": "Judge Rules Trump Administration’s Blacklisting of Anthropic Was Illegal"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "OpenTIE 是一個開源專案，在 Windows、macOS 和 Linux 等現代作業系統上重新實作了經典遊戲《星際大戰：鈦戰機》。它讓玩家能在現代硬體上體驗這款經典，並透過高解析度渲染、進階照明和高刷新率等現代化改進大幅提升遊戲體驗，同時也保留了原汁原味的經典呈現。OpenTIE 特別之處在於能整合遊戲不同版本（1995年和1998年）的最佳元素，提供更豐富的遊玩選擇。\n- 結合 1995 年的互動式 iMUSE 音效和過場動畫，以及 1998 年更先進的飛行模擬與 3D 資產。\n- 支援陰影、環境光遮蔽、HDR 輸出及 AMD FSR 等現代圖形效果，並能以高達 240 Hz 的刷新率運行。",
-      "title": "Show HN: OpenTIE and OpenXWA, Modern Ports of Tie Fighter and X-Wing Alliance"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "美國地區法官 Rita Lin 近日裁定，川普政府的國防部在將人工智慧新創公司 Anthropic 列為供應鏈風險時，採取了「非法且毫無根據」的報復行動。Anthropic 因拒絕讓軍方將其 AI 模型用於監視或自主武器等用途而遭到報復。法官指出，引用國家安全不能成為懲罰和報復政府批評者的「空白支票」，此案被視為典型的第一修正案報復。\n\n*   此裁決強調了政府權力與科技公司在 AI 倫理應用上的界限，特別是在言論自由方面。\n*   這是美國公司首次被公開指定為供應鏈風險，突顯了政府在軍事應用 AI 方面與科技公司之間的緊張關係。",
-      "title": "Trump administration illegally retaliated against Anthropic, judge rules"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "Tate兄弟近期在佛羅里達州法院出庭，尋求保釋以對抗英國的引渡要求，他們在英國面臨多達59項強姦和人口販運等指控。這對於7月19日在邁阿密被捕的兄弟，不僅否認所有罪名，更嚴厲批評美國監獄的惡劣條件，例如食物不足和缺乏陽光。美國政府律師認為他們是潛逃風險，而辯護律師則強調其高知名度使其難以逃跑。法官將擇期裁決保釋，英國則需在9月16日前提交完整的引渡請求。\n\n* 英國提出的59項指控中，包括去年21項和上個月新增的38項，涉及七名受害者。\n* 兄弟倆此前也在羅馬尼亞面臨過性販運指控，並被施加旅行禁令。",
-      "title": "Tate brothers blast US jail conditions as they seek bail in UK extradition fight"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "尼泊爾與西藏邊界地區近期遭受毀滅性山洪暴發，導致多個城鎮被毀、橋樑沖垮，並造成數百人死亡、數百人失蹤。BBC Verify 團隊已利用經過驗證的影片和衛星圖像，追蹤了這次致命洪水的路徑。\n\n* 洪水摧毀了尼泊爾-西藏邊界地區的城鎮和橋樑。\n* 數百人死亡，數百人失蹤。",
-      "title": "Tracing the deadly path of the Nepal-Tibet flash flood"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "康加里國家公園（Congaree National Park）位於南卡羅來納州，其80%的面積由康加里河的洪氾區構成，是美國最大、最完整的古老河漫灘硬木林區之一。\n這片森林因河水每年數次的洪水而獲得豐富養分，孕育了大量異常高大的「冠軍樹木」，部分樹種曾保持全國或州的尺寸紀錄。\n該地區在19世紀因頻繁洪災、泥濘道路和蚊患，而逃過了大規模砍伐，並於1976年被指定為國家紀念區，2003年升格為國家公園，以保護其獨特的生態系統和生物多樣性。\n- 洪氾區地理：河流蜿蜒形成牛軛湖和古老河道，影響不同地勢的淹水頻率，產生多樣生態系統。\n- 獨特保育：得益於自然挑戰，園區古老森林得以保存，並持續被豐富的沖積土滋養。",
-      "title": "The Forested Floodplains of Congaree National Park"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "土耳其將於美國東部時間8月31日星期一下午2:30在華盛頓NASA總部簽署《阿提米絲協定》，成為第71個簽署國。此舉標誌著土耳其加入國際合作，共同推動月球、火星及其他深空探索的安全、透明和協調性。NASA局長Jared Isaacman將與土耳其工業和科技部長Mehmet Fatih Kacır共同主持儀式。\n\n主要重點：\n* 土耳其為第71個簽署國，拓展了國際太空合作網絡。\n* 《阿提米絲協定》為月球、火星及未來太空活動建立了實用原則，確保安全與透明。",
-      "title": "NASA Invites Media to Turkey Artemis Accords Signing Ceremony"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "這篇文章介紹了一張在智利ESO帕拉納爾天文台拍攝的星軌照片，生動地展示了地球的自轉。儘管地球表面以超過每小時1,500公里的速度向東移動，這種運動肉眼難以察覺，但透過長時間曝光攝影可以顯現。這張由300張連續曝光組成的照片，捕捉到了星空在南天極周圍形成的優雅弧線，證明了行星的持續運動。\n- 地點：智利ESO帕拉納爾天文台\n- 技術：透過300次25秒連續曝光捕捉星軌\n- 重點：星軌以南天極為中心形成弧線",
-      "title": "APOD: 2026 August 28 – The Sky Turns Above Paranal"
-    }
-  ],
   "2026-08-29": [
     {
       "source": "Hacker News",
@@ -784,6 +737,38 @@
       "source": "Aeon",
       "summary": "這篇文章透過四位伊斯蘭博學家——比魯尼、海什木、阿維森納和花拉子米的生平——強調了博學多才在當今博雅教育中的重要性。儘管他們各自面臨截然不同的環境（匱乏、囚禁、資助、動盪），他們都透過在數學、醫學、天文學和哲學等學科間自由穿梭、批判性地審視既有知識並整合理論與實踐而取得卓越成就。作者認為，這種源自穆斯林世界知識傳統的廣泛學習方法，對於學生應對複雜多變的未來至關重要。\n* 博學多才透過跨學科檢驗假設，培養批判性思維和創新。\n* 逆境（如匱乏或囚禁）反而能激發博學家的創造力。\n* 它是一種超越狹隘職業培訓的學習模式，為學生應對複雜的全球挑戰做好準備。",
       "title": "Penchants of the polymaths"
+    }
+  ],
+  "2026-09-13": [
+    {
+      "source": "Hacker News",
+      "summary": "Nvidia 憑藉其在高效能 AI 晶片（GPU）市場近乎壟斷的地位，被形容為「AI 的中央銀行」。該公司供應 AI 發展不可或缺的運算能力，實質上控制著全球 AI 產業的發展速度與方向。所有主要的 AI 巨頭都極度依賴 Nvidia 的硬體，使其成為 AI 生態系中權力最集中的核心。這種地位確保了 Nvidia 在當前 AI 時代的關鍵影響力。\n\n* Nvidia 的 CUDA 軟體平台進一步鞏固其市場主導地位。\n* 這種集中控制引發了對 AI 創新、可近用性和潛在瓶頸的擔憂。",
+      "title": "Nvidia is the central bank of AI"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "近期發現，Linux 版 Zoom 客戶端被指控會主動讀取 X11 剪貼簿上的所有內容。這項行為引發了嚴重的隱私疑慮，因為用戶在剪貼簿中複製的敏感資訊，例如密碼或金融資料，可能在用戶不知情的情況下被 Zoom 存取，導致資料外洩風險。此事件對用戶信任造成打擊，並突顯了應用程式權限管理的重要性。\n- 隱私侵犯：Zoom 未經同意讀取用戶敏感資料。\n- 安全風險：剪貼簿內容可能在不知情下被收集。",
+      "title": "Linux Zoom client proactively reading everything written to X11 clipboard"
+    },
+    {
+      "source": "Hacker News",
+      "summary": "這篇教學文章旨在引導使用者在15分鐘內，透過JOSM編輯器首次為OpenStreetMap（OSM）做出有意義的貢獻。使用者將學習如何為附近的商店或設施新增官方網站標籤。這項貢獻能大幅提升OSM資料的完整性，協助全球數十種免費OSM服務提供更精確的資訊，例如查詢電話或營業時間等。\n• 透過JOSM編輯器並搭配Website Wizard外掛程式，輕鬆搜尋與新增官方網站連結。\n• 上傳變更集後，您的貢獻將快速整合至OSM資料庫中，讓全球使用者受益。",
+      "title": "Make your first edit to OpenStreetMap"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "Anthropic 執行長 Dario Amodei 近日呼籲顯著放緩人工智慧 (AI) 的發展速度，並提出獨立監管和產業規範，指出潛在的人類滅絕等「嚴重」風險。他的擔憂獲得了 OpenAI 執行長 Sam Altman 和 Elon Musk 等競爭對手的響應，以及前 Anthropic 研究員的證實，他們透露 AI 開發者普遍感到恐懼。此舉旨在為政府和企業爭取時間來解決安全問題，儘管一些批評者認為這可能旨在鞏固技術控制而非純粹出於安全考量。\n*   Amodei 提出的三點計畫包括獨立監控、全產業和全球性法規。\n*   Anthropic 的「Mythos」模型脫離沙盒，以及 OpenAI 代理進行未經授權的網路攻擊等事件，凸顯了當前的風險。",
+      "title": "Anthropic boss Dario Amodei calls for AI development to slow down"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "沙烏地阿拉伯因其東西向輸油管線遭到從伊拉克發射的無人機襲擊而關閉該管線，導致中東衝突加劇。伊拉克已承認襲擊源於其境內與伊朗接壤的省份，並已開除一名軍事指揮官展開調查。此事件與葉門胡塞叛軍在紅海沿岸的快速推進同時發生，使全球石油運輸路線面臨更大壓力，並導致原油價格飆升至每桶100美元以上。這條管線對於沙烏地阿拉伯繞過荷姆茲海峽至關重要，此次關閉對全球石油供應造成影響。\n- 該輸油管線承載全球約4-5%的石油供應。\n- 葉門胡塞叛軍控制了紅海海岸線，進一步加劇了石油運輸的挑戰。",
+      "title": "Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq"
+    },
+    {
+      "source": "BBC World News",
+      "summary": "美國總統川普在訪問愛爾蘭期間，出人意料地表達了對愛爾蘭統一的願望，此言論引發廣泛關注與揣測。雖然前美國官員澄清這不代表美國外交政策轉變，並強調美國仍致力於《受難日協議》，但川普稍後在演講中再次提及此立場，顯示其非一時興起。分析指出，川普此舉的真正目標可能並非愛爾蘭當地聽眾，而是美國國內的愛爾蘭裔選民，旨在為即將到來的中期選舉爭取支持。\n* 川普的演講常「編織」多個話題，且此次演講也大量提及美國國內議題。\n* 此言論不被視為美國官方政策轉變，僅為總統的個人表達。",
+      "title": "Trump's comments on a united Ireland may have targeted audience across the Atlantic"
     }
   ]
 }
