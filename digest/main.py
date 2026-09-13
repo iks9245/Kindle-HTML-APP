@@ -9,7 +9,9 @@ from .dedup import is_similar, normalize_title
 from .fetch import extract_full_text, fetch_feed_entries
 from .rank import score_article
 from .render import (
+    DEEPREAD_DIR,
     estimate_reading_minutes,
+    page_exists,
     prune_old_archives,
     prune_old_article_pages,
     prune_old_companion_pages,
@@ -80,6 +82,54 @@ def _warn(message: str) -> None:
         print(f"warning: {message}", file=sys.stderr)
 
 
+def _emit_github_output(key: str, value: str) -> None:
+    """Hand a value to later steps of the GitHub Actions job, if we're in one."""
+    path = os.environ.get("GITHUB_OUTPUT")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(f"{key}={value}\n")
+
+
+def _article_record(article: dict) -> dict:
+    """The part of an article worth keeping in state.
+
+    Everything the digest page needs to re-render the entry, minus `full_text`
+    — that is already on disk as its own offline page, and keeping it here
+    would bloat the state file by an order of magnitude.
+    """
+    return {k: v for k, v in article.items() if k != "full_text"}
+
+
+def _carry_forward(stored: list, fetched: list) -> list:
+    """Articles already published today that this run did not fetch again.
+
+    Matched by URL, falling back to the normalized title for records written
+    before the state file carried links.
+    """
+    fetched_links = {a["link"] for a in fetched if a.get("link")}
+    fetched_titles = {normalize_title(a.get("title", "")) for a in fetched}
+    carried = []
+    for record in stored:
+        link = record.get("link")
+        if link:
+            if link in fetched_links:
+                continue
+        elif normalize_title(record.get("title", "")) in fetched_titles:
+            continue
+        carried.append(record)
+    return carried
+
+
+def _by_category(records: list, conf: dict) -> dict:
+    grouped: dict[str, list] = {}
+    for record in records:
+        grouped.setdefault(record.get("category") or "General", []).append(record)
+    for items in grouped.values():
+        items.sort(key=lambda a: -score_article(a, conf["interests"]))
+    return grouped
+
+
 def _new_feed_stat(name: str) -> dict:
     return {
         "name": name,
@@ -118,6 +168,12 @@ def build_digest() -> None:
     tz = ZoneInfo(conf["timezone"])
     date_str = datetime.now(tz).strftime("%Y-%m-%d")
 
+    # The workflow labels its commit with this date rather than calling
+    # `date -u` itself: the digest is stamped in conf["timezone"], so a run in
+    # the hours before midnight UTC — which is exactly when the 22:00 schedule
+    # fires — would otherwise be committed under the previous day's date.
+    _emit_github_output("date", date_str)
+
     seen = load_seen()
     run_titles: list[str] = []  # normalized titles already picked this run
 
@@ -150,7 +206,15 @@ def build_digest() -> None:
                 continue
 
             fallback = entry.get("summary", "")
-            text, has_full_text = extract_full_text(link, fallback)
+            try:
+                text, has_full_text = extract_full_text(link, fallback)
+            except Exception as exc:
+                # trafilatura normally reports a bad page by returning nothing,
+                # but anything it does raise would otherwise take the whole
+                # digest down over one article. Fall back to the feed's own
+                # summary, the same as any other failed extraction.
+                _warn(f"extraction failed for {title!r} ({feed['name']}): {exc}")
+                text, has_full_text = fallback, False
             if not text:
                 stat["no_text"] += 1
                 continue
@@ -191,11 +255,7 @@ def build_digest() -> None:
     for articles in categories.values():
         articles.sort(key=lambda a: -score_article(a, conf["interests"]))
 
-    todays_articles = [
-        {"title": a["title"], "summary": a["summary"], "source": a["source"]}
-        for articles in categories.values()
-        for a in articles
-    ]
+    fetched = [a for articles in categories.values() for a in articles]
 
     # No new articles this run — e.g. a second run the same day, after the first
     # already claimed every item via seen-state, or a genuinely quiet fetch.
@@ -203,7 +263,7 @@ def build_digest() -> None:
     # quiz with an empty "no articles" page, so instead keep the last good pages
     # and only do housekeeping (prune + refresh archive index + persist state).
     # This makes re-running the workflow safe and idempotent.
-    if not todays_articles:
+    if not fetched:
         print("no new articles this run; keeping existing pages", file=sys.stderr)
         render_stylesheet()
         prune_old_archives(conf["archive_retention_days"])
@@ -214,12 +274,29 @@ def build_digest() -> None:
         save_recent(load_recent(), conf["seen_retention_days"])
         return
 
+    recent = load_recent()
+
+    # A re-run partway through a day has to ADD to that day, not replace it.
+    # Only the articles fetched this time have full text in memory, so their
+    # offline pages are the only ones rendered — the earlier batches' pages are
+    # already on disk under stable, date-prefixed slugs. The digest page itself
+    # is rendered from the union, so nothing published earlier today falls off
+    # it. Without this, a mid-day run that found three new stories replaced a
+    # nine-story page with those three.
+    day_records = _carry_forward(recent.get(date_str, []), fetched)
+    carried_over = len(day_records)
+    day_records += [_article_record(a) for a in fetched]
+    day_categories = _by_category(day_records, conf)
+    if carried_over:
+        print(f"  carrying {carried_over} article(s) already published today", file=sys.stderr)
+
     # Editor's brief: one short cross-article overview of the day, baked into
-    # both today's front page and its archived copy.
+    # both today's front page and its archived copy. Written from the whole
+    # day, so a re-run's brief still describes everything on the page.
     brief = ""
-    if todays_articles and conf["editor_brief"]:
+    if conf["editor_brief"]:
         try:
-            brief = generate_brief(todays_articles, conf)
+            brief = generate_brief(day_records, conf)
         except Exception as exc:
             _warn(f"editor brief failed: {exc}")
 
@@ -229,11 +306,14 @@ def build_digest() -> None:
     # and score by substance — reading time, interest matches, and a bonus for
     # long-form pieces — rather than raw character count, which favours pages
     # heavy on boilerplate over genuinely meaty ones.
+    # A day keeps the deep read it was first given: a re-run adds articles to
+    # the day, so replacing the companion piece with a pick from the later
+    # batch would churn the page for no gain — and it saves the call.
     deep = None
     deep_article = None
-    all_articles = [a for articles in categories.values() for a in articles]
-    if all_articles and conf["deep_read"]:
-        candidates = [a for a in all_articles if a.get("has_full_text")] or all_articles
+    already_has_deep = page_exists(f"{DEEPREAD_DIR}/{date_str}.html")
+    if fetched and conf["deep_read"] and not already_has_deep:
+        candidates = [a for a in fetched if a.get("has_full_text")] or fetched
 
         def _deep_score(a: dict) -> float:
             return (
@@ -251,8 +331,7 @@ def build_digest() -> None:
             _warn(f"deep read failed: {exc}")
 
     # Recall quiz: questions come from the previous day's articles (spaced
-    # review), and today's articles are stashed for tomorrow's quiz.
-    recent = load_recent()
+    # review), and the whole of today is stashed for tomorrow's quiz.
     prev_articles, prev_date = _previous_entry(recent, date_str)
     quiz_items: list = []
     if prev_articles and conf["quiz_questions"] > 0:
@@ -260,8 +339,7 @@ def build_digest() -> None:
             quiz_items = generate_quiz(prev_articles, conf, conf["quiz_questions"])
         except Exception as exc:
             _warn(f"quiz generation failed: {exc}")
-    if todays_articles:
-        recent[date_str] = todays_articles
+    recent[date_str] = day_records
 
     # Weekly roundup: once a week, theme up the last 7 days from recent state.
     # Only regenerated on the roundup weekday; other days keep the last one.
@@ -292,13 +370,15 @@ def build_digest() -> None:
     # its dated deep read page, which therefore has to exist by then.
     if deep:
         render_deep_read(deep, deep_article, conf, date_str=date_str)
-    elif conf["deep_read"]:
+    elif conf["deep_read"] and not already_has_deep:
         _warn("no deep read generated this run; keeping any existing deep read page")
 
-    render_digest(date_str, categories, conf, brief=brief)
+    # The day's own pages show everything published today; only this run's
+    # articles have full text to render offline pages from.
+    render_digest(date_str, day_categories, conf, brief=brief)
     if roundup:
         render_weekly(roundup, week_label, conf, date_str=date_str)
-    render_index(date_str, categories, conf, brief=brief)
+    render_index(date_str, day_categories, conf, brief=brief)
 
     if quiz_items:
         render_quiz(quiz_items, prev_date, conf)

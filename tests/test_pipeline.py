@@ -4,11 +4,15 @@ These cover the failure modes that were silent in production: pages replaced by
 an empty state, feeds dying without a trace, and companion pages overwritten a
 day after they were generated.
 """
+import json
+import re
 from datetime import date
 
 from conftest import write_feed
 
+from digest import main as main_mod
 from digest import render
+from digest import state
 
 
 class TestHappyPath:
@@ -221,3 +225,94 @@ class TestDeduplication:
         ])
         site.run(fresh_articles=False)
         assert site.read("index.html").count("</article>") == 2
+
+class TestRerunAddsToTheDay:
+    """A second run partway through a day must add to it, not replace it."""
+
+    def _articles(self, site, *parts):
+        return site.read(*parts).count("</article>")
+
+    def test_the_day_page_keeps_the_earlier_batch(self, site):
+        site.run(on=date(2026, 9, 13))
+        first = self._articles(site, "index.html")
+        assert first == 3
+
+        site.run(on=date(2026, 9, 13))  # same day, three more stories
+        assert self._articles(site, "index.html") == first + 3
+
+    def test_the_archived_copy_of_the_day_matches(self, site):
+        site.run(on=date(2026, 9, 13))
+        site.run(on=date(2026, 9, 13))
+        assert self._articles(site, "archive", "2026-09-13.html") == 6
+
+    def test_every_variant_of_the_day_is_merged(self, site):
+        site.run(on=date(2026, 9, 13))
+        site.run(on=date(2026, 9, 13))
+        for family, size in render.VARIANTS:
+            name = render._with_suffix("index.html", family, size)
+            assert self._articles(site, name) == 6
+
+    def test_the_earlier_batch_still_links_to_its_offline_pages(self, site):
+        site.run(on=date(2026, 9, 13))
+        before = set(site.listdir("article"))
+        site.run(on=date(2026, 9, 13))
+        assert before <= set(site.listdir("article")), "earlier pages must survive"
+
+        html = site.read("index.html")
+        broken = [
+            href for href in re.findall(r'href="(article/[^"]+)"', html)
+            if not site.exists(*href.split("/"))
+        ]
+        assert broken == []
+
+    def test_state_records_the_whole_day(self, site):
+        site.run(on=date(2026, 9, 13))
+        site.run(on=date(2026, 9, 13))
+        stored = json.loads(open(state.RECENT_PATH, encoding="utf-8").read())
+        assert len(stored["2026-09-13"]) == 6
+
+    def test_a_new_day_starts_clean(self, site):
+        site.run(on=date(2026, 9, 13))
+        site.run(on=date(2026, 9, 14))
+        assert self._articles(site, "index.html") == 3
+
+    def test_the_day_keeps_its_first_deep_read(self, site):
+        site.run(on=date(2026, 9, 13))
+        assert "脈絡 #1" in site.read("deepread", "2026-09-13.html")
+        site.run(on=date(2026, 9, 13))
+        assert "脈絡 #1" in site.read("deepread", "2026-09-13.html"), (
+            "a re-run should not churn the day's companion piece"
+        )
+
+    def test_the_brief_is_rewritten_from_the_whole_day(self, site, monkeypatch):
+        counts = []
+
+        def brief(articles, conf):
+            counts.append(len(articles))
+            return "導讀"
+
+        monkeypatch.setattr(main_mod, "generate_brief", brief)
+        site.run(on=date(2026, 9, 13))
+        site.run(on=date(2026, 9, 13))
+        assert counts == [3, 6], "the second brief must see the whole day"
+
+    def test_a_quiet_rerun_changes_nothing(self, site):
+        site.run(on=date(2026, 9, 13))
+        before = site.read("index.html")
+        site.run(fresh_articles=False)  # every link already seen
+        assert site.read("index.html") == before
+
+    def test_old_state_records_without_links_are_carried_safely(self, site):
+        """State written before the records carried a link or category."""
+        site.run(on=date(2026, 9, 13))
+        stored = json.loads(open(state.RECENT_PATH, encoding="utf-8").read())
+        stored["2026-09-13"] = [
+            {"title": "舊格式文章", "summary": "舊摘要", "source": "Old Feed"}
+        ]
+        with open(state.RECENT_PATH, "w", encoding="utf-8") as f:
+            json.dump(stored, f, ensure_ascii=False)
+
+        site.run(on=date(2026, 9, 13))  # must not raise
+        html = site.read("index.html")
+        assert "舊格式文章" in html
+        assert self._articles(site, "index.html") == 4

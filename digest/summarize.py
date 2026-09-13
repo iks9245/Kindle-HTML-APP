@@ -200,7 +200,14 @@ def _parse_response(raw: str) -> dict:
     return {"summary": summary, "summary_secondary": summary_secondary, "qa": qa}
 
 
-def _complete(prompt: str, conf: dict, max_tokens: int) -> str:
+def _complete(prompt: str, conf: dict, openai_max_tokens: int) -> str:
+    """Run one prompt through the configured provider.
+
+    The output cap is OpenAI-only on purpose, which is why it is named for it.
+    Gemini 2.5 models spend output budget on internal reasoning before emitting
+    anything, so a limit sized for a non-thinking model can be swallowed whole
+    by that and return nothing at all; the API's own default is safer here.
+    """
     provider = conf["provider"]
     model = conf["model"]
 
@@ -220,7 +227,7 @@ def _complete(prompt: str, conf: dict, max_tokens: int) -> str:
         resp = _call_with_retry(
             lambda: client.chat.completions.create(
                 model=model,
-                max_tokens=max_tokens,
+                max_tokens=openai_max_tokens,
                 response_format={"type": "json_object"},
                 messages=[{"role": "user", "content": prompt}],
             )
@@ -244,12 +251,12 @@ def summarize_article(title: str, text: str, conf: dict, long_form: bool = False
         long_form=long_form,
         source_chars=_source_chars(conf, long_form),
     )
-    return _parse_response(_complete(prompt, conf, max_tokens=800))
+    return _parse_response(_complete(prompt, conf, openai_max_tokens=800))
 
 
 def generate_quiz(articles: list, conf: dict, num_questions: int) -> list:
     prompt = _build_quiz_prompt(articles, conf["language"], num_questions)
-    data = _loads_lenient(_complete(prompt, conf, max_tokens=700))
+    data = _loads_lenient(_complete(prompt, conf, openai_max_tokens=700))
     items = []
     for item in data.get("quiz", [])[:num_questions]:
         question = str(item.get("question", "")).strip()
@@ -261,7 +268,7 @@ def generate_quiz(articles: list, conf: dict, num_questions: int) -> list:
 
 def generate_brief(articles: list, conf: dict) -> str:
     prompt = _build_brief_prompt(articles, conf["language"])
-    data = _loads_lenient(_complete(prompt, conf, max_tokens=400))
+    data = _loads_lenient(_complete(prompt, conf, openai_max_tokens=400))
     return str(data.get("brief", "")).strip()
 
 
@@ -273,7 +280,7 @@ def generate_deep_read(article: dict, conf: dict) -> dict:
         conf["language"],
         source_chars=_source_chars(conf, long_form),
     )
-    data = _loads_lenient(_complete(prompt, conf, max_tokens=1000))
+    data = _loads_lenient(_complete(prompt, conf, openai_max_tokens=1000))
     points = [str(p).strip() for p in data.get("points", []) if str(p).strip()]
     glossary = [
         {"term": str(g.get("term", "")).strip(), "definition": str(g.get("definition", "")).strip()}
@@ -290,7 +297,7 @@ def generate_deep_read(article: dict, conf: dict) -> dict:
 
 def generate_weekly_roundup(articles: list, conf: dict) -> dict:
     prompt = _build_weekly_prompt(articles[:_WEEKLY_MAX_ARTICLES], conf["language"])
-    data = _loads_lenient(_complete(prompt, conf, max_tokens=1500))
+    data = _loads_lenient(_complete(prompt, conf, openai_max_tokens=1500))
     themes = [
         {"title": str(t.get("title", "")).strip(), "body": str(t.get("body", "")).strip()}
         for t in data.get("themes", [])

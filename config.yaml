@@ -43,9 +43,11 @@ long_form_categories:
 archive_retention_days: 60
 
 # How many days to remember an article's URL so it isn't summarized again
-# if it lingers near the top of a feed on later runs. Also used as the
-# window for skipping cross-feed duplicates picked up in earlier runs.
-# State is kept in .digest-state/seen.json.
+# if it lingers near the top of a feed on later runs. Matching across runs is
+# by URL alone: the same story reaching two feeds under slightly different
+# headlines is collapsed by title similarity, but only within a single run —
+# across days, two feeds' copies of one story have different URLs and both can
+# appear. State is kept in .digest-state/seen.json.
 seen_retention_days: 14
 
 # Number of questions in the daily recall quiz (docs/quiz.html), generated
