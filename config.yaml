@@ -1,7 +1,10 @@
 # Kindle AI Daily Digest configuration
 
-# Language the AI should write summaries in (any language name/code works,
-# it's just fed into the prompt). Also used for a couple of UI labels.
+# Language the AI should write summaries in. Any language name/code works for
+# the content — it's just fed into the prompt — and it also selects the pages'
+# own navigation and headings from digest/strings.py. That file currently
+# translates zh and en; any other value gets English navigation around
+# summaries in your language. Adding a language means adding one entry there.
 language: zh-TW
 
 # Optional second language for side-by-side bilingual summaries — each

@@ -4,6 +4,8 @@ from datetime import date, datetime, timedelta
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from .strings import strings_for
+
 _HERE = os.path.dirname(__file__)
 TEMPLATES_DIR = os.path.join(_HERE, "..", "templates")
 DOCS_DIR = os.path.join(_HERE, "..", "docs")
@@ -24,17 +26,17 @@ _env = Environment(
 # serif + medium keeps the plain "index.html" / "<slug>.html" names that
 # existing bookmarks and already-generated archive pages point at.
 FAMILIES = {
-    "serif": {"suffix": "", "label": "襯線", "css": 'Georgia, "Times New Roman", serif'},
-    "sans": {"suffix": "-sans", "label": "無襯線", "css": "Helvetica, Arial, sans-serif"},
+    "serif": {"suffix": "", "css": 'Georgia, "Times New Roman", serif'},
+    "sans": {"suffix": "-sans", "css": "Helvetica, Arial, sans-serif"},
 }
 
 # `scale` stretches conf["article_page_lines"] — which is tuned for the medium
 # size — so every size still fits about one e-ink screen: bigger text, fewer
 # paragraphs per page.
 SIZES = {
-    "small": {"suffix": "-s", "label": "小", "px": 16, "scale": 20 / 16},
-    "medium": {"suffix": "", "label": "中", "px": 20, "scale": 1.0},
-    "large": {"suffix": "-l", "label": "大", "px": 26, "scale": 20 / 26},
+    "small": {"suffix": "-s", "px": 16, "scale": 20 / 16},
+    "medium": {"suffix": "", "px": 20, "scale": 1.0},
+    "large": {"suffix": "-l", "px": 26, "scale": 20 / 26},
 }
 
 SIZE_ORDER = ["small", "medium", "large"]
@@ -107,18 +109,18 @@ def _existing_variant(dir_path: str, base_name: str, family: str, size: str) -> 
     return _with_suffix(base_name, family, size)
 
 
-def _prefs(base_name: str, family: str, size: str) -> dict:
+def _prefs(base_name: str, family: str, size: str, t: dict) -> dict:
     """Switcher links for a page whose variants all share one file name."""
     other = _other_family(family)
     return {
         "family": family,
         "size": size,
         "size_links": [
-            (SIZES[s]["label"], _with_suffix(base_name, family, s), s == size)
+            (t["sizes"][s], _with_suffix(base_name, family, s), s == size)
             for s in SIZE_ORDER
         ],
         "family_href": _with_suffix(base_name, other, size),
-        "family_label": FAMILIES[other]["label"],
+        "family_label": t["families"][other],
     }
 
 
@@ -235,8 +237,8 @@ def _existing_dates(exclude: str | None = None) -> list:
     return sorted(dates)
 
 
-def _digest_title(date_str: str, language: str) -> str:
-    return f"每日 AI 文摘 {date_str}" if language.startswith("zh") else f"Daily AI Digest {date_str}"
+def _digest_title(date_str: str, t: dict) -> str:
+    return t["digest_title"].format(date=date_str)
 
 
 def render_stylesheet() -> None:
@@ -250,6 +252,7 @@ def render_stylesheet() -> None:
 
 
 def render_digest(date_str: str, categories: dict, conf: dict, brief: str = "") -> None:
+    t = strings_for(conf["language"])
     prev_dates = _existing_dates(exclude=date_str)
     prev_base = f"{prev_dates[-1]}.html" if prev_dates else None
 
@@ -261,7 +264,8 @@ def render_digest(date_str: str, categories: dict, conf: dict, brief: str = "") 
     base_name = f"{date_str}.html"
     for family, size in VARIANTS:
         html = tmpl.render(
-            title=_digest_title(date_str, conf["language"]),
+            title=_digest_title(date_str, t),
+            t=t,
             generated_at=date_str,
             categories=categories,
             brief=brief,
@@ -281,7 +285,7 @@ def render_digest(date_str: str, categories: dict, conf: dict, brief: str = "") 
             ),
             article_prefix="../article/",
             article_suffix=FAMILIES[family]["suffix"] + SIZES[size]["suffix"],
-            **_prefs(base_name, family, size),
+            **_prefs(base_name, family, size, t),
         )
         path = os.path.join(_archive_dir(), _with_suffix(base_name, family, size))
         with open(path, "w", encoding="utf-8") as f:
@@ -290,10 +294,12 @@ def render_digest(date_str: str, categories: dict, conf: dict, brief: str = "") 
 
 def render_index(date_str: str, categories: dict, conf: dict, brief: str = "") -> None:
     os.makedirs(DOCS_DIR, exist_ok=True)
+    t = strings_for(conf["language"])
     tmpl = _env.get_template("digest.html.j2")
     for family, size in VARIANTS:
         html = tmpl.render(
-            title=_digest_title(date_str, conf["language"]),
+            title=_digest_title(date_str, t),
+            t=t,
             generated_at=date_str,
             categories=categories,
             brief=brief,
@@ -307,7 +313,7 @@ def render_index(date_str: str, categories: dict, conf: dict, brief: str = "") -
             quiz_href=_variant_href("quiz.html", family, size),
             deepread_href=_variant_href("deepread.html", family, size),
             weekly_href=_variant_href("weekly.html", family, size),
-            **_prefs("index.html", family, size),
+            **_prefs("index.html", family, size, t),
         )
         path = os.path.join(DOCS_DIR, _with_suffix("index.html", family, size))
         with open(path, "w", encoding="utf-8") as f:
@@ -335,6 +341,7 @@ def render_articles(date_str: str, categories: dict, conf: dict) -> None:
     paragraph the reader is currently looking at, rather than to the same page
     number, which would land somewhere else in the article.
     """
+    t = strings_for(conf["language"])
     tmpl = _env.get_template("article.html.j2")
     paginate = conf.get("paginate_articles", True)
     base_lines = conf.get("article_page_lines", 14)
@@ -371,7 +378,7 @@ def render_articles(date_str: str, categories: dict, conf: dict) -> None:
                         )
                         size_links = [
                             (
-                                SIZES[s]["label"],
+                                t["sizes"][s],
                                 _with_suffix(
                                     _article_page_name(
                                         slug, _page_for_para(pagination[s], start)
@@ -385,6 +392,7 @@ def render_articles(date_str: str, categories: dict, conf: dict) -> None:
                         ]
                         html = tmpl.render(
                             title=a["title"],
+                            t=t,
                             lang=conf["language"],
                             source=a["source"],
                             original_link=a["link"],
@@ -406,7 +414,7 @@ def render_articles(date_str: str, categories: dict, conf: dict) -> None:
                             size=size,
                             size_links=size_links,
                             family_href=_with_suffix(base_name, other, size),
-                            family_label=FAMILIES[other]["label"],
+                            family_label=t["families"][other],
                         )
                         path = os.path.join(
                             _article_dir(), _with_suffix(base_name, family, size)
@@ -451,19 +459,19 @@ def prune_old_archives(retention_days: int) -> None:
 def render_quiz(quiz_items: list, source_date: str | None, conf: dict) -> None:
     """A single rolling recall-quiz page (docs/quiz.html) in every variant."""
     os.makedirs(DOCS_DIR, exist_ok=True)
-    zh = conf["language"].startswith("zh")
-    title = "昨日回顧小考" if zh else "Daily Recall Quiz"
+    t = strings_for(conf["language"])
     tmpl = _env.get_template("quiz.html.j2")
     for family, size in VARIANTS:
         html = tmpl.render(
-            title=title,
+            title=t["quiz_title"],
+            t=t,
             lang=conf["language"],
             quiz=quiz_items,
             source_date=source_date,
             css_href=STYLESHEET,
             home_href=_with_suffix("index.html", family, size),
             archive_href=_with_suffix("archive/index.html", family, size),
-            **_prefs("quiz.html", family, size),
+            **_prefs("quiz.html", family, size, t),
         )
         path = os.path.join(DOCS_DIR, _with_suffix("quiz.html", family, size))
         with open(path, "w", encoding="utf-8") as f:
@@ -478,8 +486,7 @@ def render_weekly(roundup: dict | None, date_label: str, conf: dict, date_str: s
     letting the next one overwrite it.
     """
     os.makedirs(DOCS_DIR, exist_ok=True)
-    zh = conf["language"].startswith("zh")
-    title = "本週主題回顧" if zh else "This Week in Themes"
+    t = strings_for(conf["language"])
     tmpl = _env.get_template("weekly.html.j2")
 
     targets = [("", DOCS_DIR, "weekly.html")]
@@ -489,14 +496,15 @@ def render_weekly(roundup: dict | None, date_label: str, conf: dict, date_str: s
     for up, out_dir, base_name in targets:
         for family, size in VARIANTS:
             html = tmpl.render(
-                title=title,
+                title=t["weekly_title"],
+                t=t,
                 lang=conf["language"],
                 roundup=roundup,
                 date_label=date_label,
                 css_href=f"{up}{STYLESHEET}",
                 home_href=_with_suffix(f"{up}index.html", family, size),
                 archive_href=_with_suffix(f"{up}archive/index.html", family, size),
-                **_prefs(base_name, family, size),
+                **_prefs(base_name, family, size, t),
             )
             path = os.path.join(out_dir, _with_suffix(base_name, family, size))
             with open(path, "w", encoding="utf-8") as f:
@@ -512,8 +520,7 @@ def render_deep_read(deep: dict | None, article: dict | None, conf: dict, date_s
     readable after tomorrow's run replaces the rolling copy.
     """
     os.makedirs(DOCS_DIR, exist_ok=True)
-    zh = conf["language"].startswith("zh")
-    title = "每日深讀" if zh else "Deep Read of the Day"
+    t = strings_for(conf["language"])
     tmpl = _env.get_template("deepread.html.j2")
 
     # (path prefix back to docs/, output directory, file name)
@@ -529,7 +536,8 @@ def render_deep_read(deep: dict | None, article: dict | None, conf: dict, date_s
                     f"{up}article/{article['slug']}.html", family, size
                 )
             html = tmpl.render(
-                title=title,
+                title=t["deepread_title"],
+                t=t,
                 lang=conf["language"],
                 deep=deep,
                 date_str=date_str,
@@ -544,7 +552,7 @@ def render_deep_read(deep: dict | None, article: dict | None, conf: dict, date_s
                     if date_str
                     else None
                 ),
-                **_prefs(base_name, family, size),
+                **_prefs(base_name, family, size, t),
             )
             path = os.path.join(out_dir, _with_suffix(base_name, family, size))
             with open(path, "w", encoding="utf-8") as f:
@@ -552,6 +560,7 @@ def render_deep_read(deep: dict | None, article: dict | None, conf: dict, date_s
 
 
 def render_archive_index(conf: dict) -> None:
+    t = strings_for(conf["language"])
     dates = list(reversed(_existing_dates()))
     deep_dates = set(_dated_page_dates(DEEPREAD_DIR))
     weekly_dates = list(reversed(_dated_page_dates(WEEKLY_DIR)))
@@ -574,7 +583,8 @@ def render_archive_index(conf: dict) -> None:
             for d in weekly_dates
         ]
         html = tmpl.render(
-            title="文摘存檔" if conf["language"].startswith("zh") else "Digest Archive",
+            title=t["archive_title"],
+            t=t,
             lang=conf["language"],
             date_links=date_links,
             weekly_links=weekly_links,
@@ -584,7 +594,7 @@ def render_archive_index(conf: dict) -> None:
             # run they may not have been written yet, and a link to the nearest
             # existing front page beats one that 404s.
             home_href=f"../{_existing_variant(DOCS_DIR, 'index.html', family, size)}",
-            **_prefs("index.html", family, size),
+            **_prefs("index.html", family, size, t),
         )
         path = os.path.join(_archive_dir(), _with_suffix("index.html", family, size))
         with open(path, "w", encoding="utf-8") as f:

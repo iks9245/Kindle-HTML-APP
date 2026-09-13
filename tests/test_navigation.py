@@ -12,6 +12,7 @@ from datetime import date
 import pytest
 
 from digest import render
+from digest.strings import strings_for
 
 PREFS_RE = re.compile(r'<p class="prefs">.*?</p>', re.S)
 BODY_CLASS_RE = re.compile(r'<body class="([^"]+)"')
@@ -175,7 +176,8 @@ class TestSizeSwitchKeepsYourPlace:
     def test_the_switcher_marks_the_current_choice(self, built):
         html = built.read("index-sans-l.html")
         prefs = PREFS_RE.search(html).group(0)
-        assert f'<span class="pref-on">{render.SIZES["large"]["label"]}</span>' in prefs
+        label = strings_for("zh-TW")["sizes"]["large"]
+        assert f'<span class="pref-on">{label}</span>' in prefs
 
     def test_the_family_switch_preserves_the_size(self, built):
         html = built.read("index-sans-l.html")

@@ -21,6 +21,12 @@ _ITEM_XML = "<item><title>{title}</title><link>{link}</link><description>blurb</
 ARTICLE_PARAGRAPHS = [f"第{i}段落。" + "字" * 60 for i in range(1, 41)]
 ARTICLE_TEXT = "\n\n".join(ARTICLE_PARAGRAPHS)
 
+# An ASCII-only variant. Feed content is whatever the sources publish, quite
+# separately from the UI language, so a test that wants to prove no Chinese
+# *furniture* leaks into an English page needs content that carries none.
+ARTICLE_PARAGRAPHS_ASCII = [f"Paragraph {i}. " + "word " * 60 for i in range(1, 41)]
+ARTICLE_TEXT_ASCII = "\n\n".join(ARTICLE_PARAGRAPHS_ASCII)
+
 
 def write_feed(path, items, name="Test Feed"):
     """Write an RSS file. `items` is an iterable of (title, link)."""
@@ -45,6 +51,9 @@ class Site:
         self.fail = set()
         self.deep_n = 0
         self.day_n = 0
+        self.ascii_content = False
+        self.category = "科技 Tech"
+        self._overrides = {}
 
     # -- setup ---------------------------------------------------------------
 
@@ -71,6 +80,7 @@ class Site:
 
     def configure(self, **overrides):
         """Rewrite config.yaml. Keys given here override the defaults below."""
+        self._overrides.update(overrides)
         conf = {
             "language": "zh-TW",
             "timezone": "Asia/Taipei",
@@ -83,10 +93,10 @@ class Site:
             "seen_retention_days": 14,
             "article_page_lines": 14,
         }
-        conf.update(overrides)
+        conf.update(self._overrides)
         lines = [f"{k}: {v}" for k, v in conf.items()]
         lines += ["feeds:", "  - name: Test Feed", f"    url: {self.feed_path}",
-                  "    category: 科技 Tech"]
+                  f"    category: {self.category}"]
         with open(self.config_path, "w", encoding="utf-8") as f:
             f.write("\n".join(lines) + "\n")
 
@@ -108,20 +118,25 @@ class Site:
             raise RuntimeError(f"stubbed {step} failure (429 rate limit)")
 
     def _extract(self, url, fallback=""):
-        return ARTICLE_TEXT, True
+        return (ARTICLE_TEXT_ASCII if self.ascii_content else ARTICLE_TEXT), True
 
     def _summary(self, title, text, conf, long_form=False):
         self._fail_if("summary")
-        return {"summary": f"{title} 摘要", "summary_secondary": "",
+        tail = "summary" if self.ascii_content else "摘要"
+        return {"summary": f"{title} {tail}", "summary_secondary": "",
                 "qa": [{"question": "q", "answer": "a"}]}
 
     def _brief(self, articles, conf):
         self._fail_if("brief")
-        return "今日導讀"
+        return "Today in brief" if self.ascii_content else "今日導讀"
 
     def _deep(self, article, conf):
         self._fail_if("deep")
         self.deep_n += 1
+        if self.ascii_content:
+            return {"background": f"Context #{self.deep_n}", "points": ["Point"],
+                    "implications": "Impact",
+                    "glossary": [{"term": "Term", "definition": "Definition"}]}
         return {"background": f"脈絡 #{self.deep_n}", "points": ["重點"],
                 "implications": "影響", "glossary": [{"term": "詞", "definition": "解釋"}]}
 
@@ -131,6 +146,8 @@ class Site:
 
     def _weekly(self, articles, conf):
         self._fail_if("weekly")
+        if self.ascii_content:
+            return {"intro": "The week", "themes": [{"title": "Theme", "body": "Body"}]}
         return {"intro": "本週導言", "themes": [{"title": "主題", "body": "內容"}]}
 
     # -- driving -------------------------------------------------------------
@@ -152,11 +169,30 @@ class Site:
         "央行宣布維持基準利率不變",
         "研究團隊提出新的半導體製程",
     ]
+    _HEADLINES_ASCII = [
+        "Space telescope finds another exoplanet",
+        "Central bank holds its benchmark rate",
+        "Researchers propose a new chip process",
+    ]
+
+    def use_ascii_content(self):
+        """Make every piece of *content* ASCII: feed titles, body text, category.
+
+        Content language is whatever the sources publish and the model writes,
+        quite separately from the UI language. A test proving no Chinese
+        furniture leaks into an English page needs content carrying none, so
+        any CJK left on the page can only have come from the string table.
+        """
+        self.ascii_content = True
+        self.category = "Tech"
+        self.configure()
+        write_feed(self.feed_path, self._items())
 
     def _items(self):
+        headlines = self._HEADLINES_ASCII if self.ascii_content else self._HEADLINES
         return [
-            (f"{h}（{self.day_n}）", f"http://example.com/{self.day_n}-{i}")
-            for i, h in enumerate(self._HEADLINES)
+            (f"{h} ({self.day_n})", f"http://example.com/{self.day_n}-{i}")
+            for i, h in enumerate(headlines)
         ]
 
     # -- inspection ----------------------------------------------------------
