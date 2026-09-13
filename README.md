@@ -111,9 +111,13 @@ docs/                       # 產生出來的靜態網站（GitHub Pages 發佈�
    Branch 選 `main`（本專案的預設分支；每天的 GitHub Actions 會把新產生的 `docs/`
    推回這個分支，Pages 也是從它發佈，所以請確認 repo 的預設分支就是 `main`），
    資料夾選 `/docs`。
-5. **確認排程**：`.github/workflows/daily-digest.yml` 預設每天 UTC 22:00（台灣時間
-   早上 6 點）執行一次，也可以到 Actions 分頁手動觸發 `Daily AI Digest` 立即產生
-   第一份文摘。
+5. **確認排程**：`.github/workflows/daily-digest.yml` 的 cron 設在每天 UTC 22:00。
+   但 GitHub 的排程觸發是 best-effort、常有延遲，整點（`0 22`）又是最擁擠的時段，
+   所以**實際不會準時**：本專案 2026-09 期間量到的 13 次排程，最快慢 1 小時 27 分、
+   通常慢 1 小時 40 分到 1 小時 55 分，實際落在 UTC 23:30 前後——也就是**台北早上
+   七點半左右，不是六點**。想早一點的話，把 cron 往前挪並避開整點（例如
+   `37 21 * * *`）通常會比較準。等不及的話，到 Actions 分頁手動觸發
+   `Daily AI Digest` 就會立刻產生一份。
 
 ## 在 Kindle 上使用
 
