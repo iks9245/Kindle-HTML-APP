@@ -59,8 +59,9 @@ paginate_articles: true
 
 # Roughly how many on-screen text lines to fit per page when paginate_articles
 # is on. Lower = shorter pages / more page turns; higher = longer pages. 14 is
-# about one Kindle screen at the default font size. Whole paragraphs are never
-# split across a page break.
+# about one Kindle screen at the medium text size; the small and large sizes
+# scale this automatically so each still fills about one screen. Whole
+# paragraphs are never split across a page break.
 article_page_lines: 14
 
 # Show an AI "editor's brief" at the top of each day's digest: one short

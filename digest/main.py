@@ -20,6 +20,7 @@ from .render import (
     render_digest,
     render_index,
     render_quiz,
+    render_stylesheet,
     render_weekly,
 )
 from .state import load_recent, load_seen, save_recent, save_seen
@@ -205,6 +206,7 @@ def build_digest() -> None:
     # This makes re-running the workflow safe and idempotent.
     if not todays_articles:
         print("no new articles this run; keeping existing pages", file=sys.stderr)
+        render_stylesheet()
         prune_old_archives(conf["archive_retention_days"])
         prune_old_article_pages(conf["archive_retention_days"])
         prune_old_companion_pages(conf["archive_retention_days"])
@@ -276,6 +278,7 @@ def build_digest() -> None:
             except Exception as exc:
                 _warn(f"weekly roundup failed: {exc}")
 
+    render_stylesheet()
     render_articles(date_str, categories, conf)
 
     # The quiz and deep read are single rolling pages, so rendering them with
