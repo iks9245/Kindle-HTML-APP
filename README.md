@@ -73,6 +73,7 @@ digest/                     # 產生文摘的 Python 程式
   render.py                   # 用 Jinja2 產生靜態 HTML
   main.py                     # 串起以上流程的入口
 templates/                  # Kindle 友善的 HTML 模板（大字體、高對比、無 JS）
+tests/                      # pytest 測試（全離線，不需要 API 金鑰）
 docs/                       # 產生出來的靜態網站（GitHub Pages 發佈來源）
   style.css                   # 全站共用樣式（不再內嵌在每一頁）
   index.html                  # 今日文摘
@@ -129,6 +130,29 @@ python -m digest.main
 ```
 
 執行完成後 `docs/` 目錄會更新，可以直接用瀏覽器打開 `docs/index.html` 預覽。
+
+## 測試
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest
+```
+
+測試完全離線：RSS 用臨時檔案、LLM 呼叫全部 stub 掉，整個網站產生到 pytest 的暫存目錄，
+不會碰到 repo 裡的 `docs/`，也不需要任何 API 金鑰。幾秒鐘跑完。
+
+涵蓋的東西大致分三層：
+
+- **純函式**：去重、興趣排序、設定預設值、狀態保留期，以及 `summarize` 裡那些處理 LLM
+  不聽話輸出的地方（JSON 被包在 markdown code fence 裡、前後夾雜寒暄、長文截斷要保留頭尾）
+- **描繪**：分頁邊界（段落不被切斷、頁面連續無缺漏）、變體檔名、跨字級的段落對應、
+  各種修剪規則
+- **整條管線**：`build_digest()` 端對端——重跑同一天不會清空、LLM 失敗時舊頁面要留著、
+  來源掛掉要進報表、深讀與週回顧要進存檔；以及**爬站測試**：從任一變體出發走訪每一個
+  內部連結，斷言變體不會在途中被換掉、且沒有任何連結指向不存在的檔案
+
+`.github/workflows/tests.yml` 會在每個 PR 和 push 到 `main` 時跑（每日文摘那種只動 `docs/`
+的 commit 會跳過）。
 
 ## 之後可以擴充的方向
 

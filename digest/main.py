@@ -10,7 +10,6 @@ from .fetch import extract_full_text, fetch_feed_entries
 from .rank import score_article
 from .render import (
     estimate_reading_minutes,
-    page_exists,
     prune_old_archives,
     prune_old_article_pages,
     prune_old_companion_pages,
@@ -282,29 +281,29 @@ def build_digest() -> None:
     render_articles(date_str, categories, conf)
 
     # The quiz and deep read are single rolling pages, so rendering them with
-    # nothing to show replaces a perfectly good page with the empty "nothing
-    # yet" state — the same wipe the no-new-articles branch above guards the
-    # digest against, and it happens whenever one LLM call fails or the feature
-    # is switched off in config. Keep the last good page instead. The one case
-    # worth writing an empty page for is the first run, where the front page
-    # links to a file that doesn't exist yet.
+    # nothing to show would replace a perfectly good page with the empty
+    # "nothing yet" state — the same wipe the no-new-articles branch above
+    # guards the digest against, and it happens whenever one LLM call fails or
+    # the feature is switched off in config. Only write them when there is
+    # something to write; render_index links them only if the file is there, so
+    # a page that has never been generated simply isn't advertised.
     #
     # The deep read goes first because render_digest links the archived day to
     # its dated deep read page, which therefore has to exist by then.
-    if deep or not page_exists("deepread.html"):
+    if deep:
         render_deep_read(deep, deep_article, conf, date_str=date_str)
     elif conf["deep_read"]:
-        _warn("no deep read generated this run; keeping the existing deep read page")
+        _warn("no deep read generated this run; keeping any existing deep read page")
 
     render_digest(date_str, categories, conf, brief=brief)
     if roundup:
         render_weekly(roundup, week_label, conf, date_str=date_str)
     render_index(date_str, categories, conf, brief=brief)
 
-    if quiz_items or not page_exists("quiz.html"):
+    if quiz_items:
         render_quiz(quiz_items, prev_date, conf)
     elif conf["quiz_questions"] > 0:
-        _warn("no quiz generated this run; keeping the existing quiz page")
+        _warn("no quiz generated this run; keeping any existing quiz page")
 
     prune_old_archives(conf["archive_retention_days"])
     prune_old_article_pages(conf["archive_retention_days"])

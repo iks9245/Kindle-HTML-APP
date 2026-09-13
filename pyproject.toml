@@ -1,0 +1,5 @@
+[tool.pytest.ini_options]
+# Repo root on sys.path so `digest` imports whether you run `pytest` or
+# `python -m pytest`; tests/ too, for the shared conftest helpers.
+pythonpath = [".", "tests"]
+testpaths = ["tests"]

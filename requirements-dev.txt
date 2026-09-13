@@ -1,0 +1,3 @@
+# Test-only dependencies. The daily workflow installs requirements.txt alone.
+-r requirements.txt
+pytest>=7.0
