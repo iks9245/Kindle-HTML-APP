@@ -25,13 +25,18 @@ JavaScript 的 HTML，推送到 `docs/` 目錄由 GitHub Pages 發佈。Kindle �
 每週結算日（預設週日）還會出一篇 **本週主題回顧**（`docs/weekly.html`）：把過去 7 天的
 文章分主題整理成一篇綜述長文。資料直接來自每天已在存的 `recent.json`，幾乎沒有額外
 成本，卻讓週末多一份大份量的閱讀。可用 `weekly_roundup` 關閉、`weekly_roundup_weekday`
-（0＝週一 … 6＝週日）調整結算日。
+（0＝週一 … 6＝週日）調整結算日。每一週的回顧都會另存一份到 `docs/weekly/<日期>.html`，
+存檔列表下方可以翻閱過去幾週。
 
 每天還會挑出當天**最有份量的一篇**做成 **每日深讀**（`docs/deepread.html`）：LLM 產出
 一篇延伸導讀，含脈絡、重點、影響與延伸、還有一個小辭典，適合坐下來慢讀。文摘與全文頁
 也會標出**預估閱讀時間**，方便你挑長短。搭配 `config.yaml` 裡新增的「長文 Long Reads」
 來源（Quanta、Aeon 等長篇文章），每天可讀的內容明顯變多。深讀可用 `deep_read: false`
 關閉。
+
+每天的深讀都會另存一份到 `docs/deepread/<日期>.html`，不會被隔天的蓋掉；存檔列表上每
+一天旁邊都有「深讀」連結，該天的文摘存檔頁也連得回去。跟文摘存檔一樣受
+`archive_retention_days` 控制保留天數。
 
 每天的文摘最上方還有一段 **AI 主編導讀**：把當天所有摘要餵給 LLM，寫成一段跨文章的
 「今日大局」，讓文摘從「一堆摘要」變成有編輯視角的一份報紙。導讀會一併烤進當天的
@@ -60,6 +65,8 @@ docs/                       # 產生出來的靜態網站（GitHub Pages 發佈�
   quiz.html                   # 昨日回顧小考（純 CSS，無 JS）
   archive/                    # 過去每日文摘存檔
   article/                    # 每篇文章的離線全文頁
+  deepread/                   # 過去每天的深讀存檔
+  weekly/                     # 過去每週的主題回顧存檔
 .github/workflows/          # 每日排程的 GitHub Actions
 ```
 

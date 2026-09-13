@@ -25,6 +25,14 @@ FONTS = {
 }
 
 
+# Dated copies of the two companion pages live in their own directories, so
+# each day's deep read and each week's roundup survives the next run instead of
+# being overwritten by it. The rolling docs/deepread.html and docs/weekly.html
+# stay put as "the latest one" — that's what the front page links to.
+DEEPREAD_DIR = "deepread"
+WEEKLY_DIR = "weekly"
+
+
 def _other_font(font: str) -> str:
     return "sans" if font == "serif" else "serif"
 
@@ -34,6 +42,17 @@ def _with_suffix(html_name: str, font: str) -> str:
     if not suffix:
         return html_name
     return html_name[: -len(".html")] + suffix + ".html"
+
+
+def page_exists(html_name: str) -> bool:
+    """True when every font variant of a docs/ page is already on disk.
+
+    Lets callers tell "this rolling page already has good content from an
+    earlier run" apart from "this is the first run and the page is missing".
+    """
+    return all(
+        os.path.exists(os.path.join(DOCS_DIR, _with_suffix(html_name, font))) for font in FONTS
+    )
 
 
 def _archive_dir() -> str:
@@ -46,6 +65,34 @@ def _article_dir() -> str:
     d = os.path.join(DOCS_DIR, "article")
     os.makedirs(d, exist_ok=True)
     return d
+
+
+def _dated_dir(name: str) -> str:
+    d = os.path.join(DOCS_DIR, name)
+    os.makedirs(d, exist_ok=True)
+    return d
+
+
+def _parse_date(name: str):
+    try:
+        return datetime.strptime(name, "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+
+def _dated_page_dates(dir_name: str) -> list:
+    """Canonical (serif-filename) dates of the dated pages under docs/<dir_name>/."""
+    d = os.path.join(DOCS_DIR, dir_name)
+    if not os.path.isdir(d):
+        return []
+    dates = []
+    for f in os.listdir(d):
+        if not f.endswith(".html") or f.endswith("-sans.html"):
+            continue
+        name = f[: -len(".html")]
+        if _parse_date(name):
+            dates.append(name)
+    return sorted(dates)
 
 
 def _split_paragraphs(text: str) -> list:
@@ -121,6 +168,10 @@ def render_digest(date_str: str, categories: dict, conf: dict, brief: str = "") 
     prev_dates = _existing_dates(exclude=date_str)
     prev_base = f"{prev_dates[-1]}.html" if prev_dates else None
 
+    # An archived day links to its own deep read when one was generated, so a
+    # past day's digest and its companion piece stay connected.
+    has_deep = page_exists(f"{DEEPREAD_DIR}/{date_str}.html")
+
     tmpl = _env.get_template("digest.html.j2")
     for font in FONTS:
         other = _other_font(font)
@@ -132,6 +183,7 @@ def render_digest(date_str: str, categories: dict, conf: dict, brief: str = "") 
             lang=conf["language"],
             home_href=_with_suffix("../index.html", font),
             archive_href=_with_suffix("index.html", font),
+            deepread_href=_with_suffix(f"../{DEEPREAD_DIR}/{date_str}.html", font) if has_deep else None,
             prev_href=_with_suffix(prev_base, font) if prev_base else None,
             font_family=FONTS[font]["family"],
             font_href=_with_suffix(f"{date_str}.html", other),
@@ -235,12 +287,14 @@ def render_articles(date_str: str, categories: dict, conf: dict) -> None:
                         f.write(html)
 
 
-def prune_old_article_pages(retention_days: int) -> None:
+def _prune_dated_dir(path: str, retention_days: int) -> None:
+    """Drop pages in `path` whose leading YYYY-MM-DD is older than the cutoff."""
     if not retention_days or retention_days <= 0:
         return
+    if not os.path.isdir(path):
+        return
     cutoff = date.today() - timedelta(days=retention_days)
-    d = _article_dir()
-    for fname in os.listdir(d):
+    for fname in os.listdir(path):
         if not fname.endswith(".html"):
             continue
         try:
@@ -248,7 +302,17 @@ def prune_old_article_pages(retention_days: int) -> None:
         except ValueError:
             continue
         if file_date < cutoff:
-            os.remove(os.path.join(d, fname))
+            os.remove(os.path.join(path, fname))
+
+
+def prune_old_article_pages(retention_days: int) -> None:
+    _prune_dated_dir(_article_dir(), retention_days)
+
+
+def prune_old_companion_pages(retention_days: int) -> None:
+    """Dated deep-read and weekly-roundup pages, on the archive's schedule."""
+    _prune_dated_dir(os.path.join(DOCS_DIR, DEEPREAD_DIR), retention_days)
+    _prune_dated_dir(os.path.join(DOCS_DIR, WEEKLY_DIR), retention_days)
 
 
 def prune_old_archives(retention_days: int) -> None:
@@ -294,69 +358,108 @@ def render_quiz(quiz_items: list, source_date: str | None, conf: dict) -> None:
             f.write(html)
 
 
-def render_weekly(roundup: dict | None, date_label: str, conf: dict) -> None:
-    """A single rolling weekly-roundup page (docs/weekly.html)."""
+def render_weekly(roundup: dict | None, date_label: str, conf: dict, date_str: str = "") -> None:
+    """The weekly roundup page, rolling and dated.
+
+    Same split as the deep read: docs/weekly.html is the latest one, and a dated
+    copy under docs/weekly/ keeps every past week's roundup around instead of
+    letting the next one overwrite it.
+    """
     os.makedirs(DOCS_DIR, exist_ok=True)
     zh = conf["language"].startswith("zh")
     title = "本週主題回顧" if zh else "This Week in Themes"
     tmpl = _env.get_template("weekly.html.j2")
-    for font in FONTS:
-        other = _other_font(font)
-        html = tmpl.render(
-            title=title,
-            lang=conf["language"],
-            roundup=roundup,
-            date_label=date_label,
-            home_href=_with_suffix("index.html", font),
-            archive_href=_with_suffix("archive/index.html", font),
-            font_family=FONTS[font]["family"],
-            font_href=_with_suffix("weekly.html", other),
-            font_label=FONTS[other]["label"],
-        )
-        path = os.path.join(DOCS_DIR, _with_suffix("weekly.html", font))
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(html)
+
+    targets = [("", DOCS_DIR, "weekly.html")]
+    if roundup and date_str:
+        targets.append(("../", _dated_dir(WEEKLY_DIR), f"{date_str}.html"))
+
+    for up, out_dir, base_name in targets:
+        for font in FONTS:
+            other = _other_font(font)
+            html = tmpl.render(
+                title=title,
+                lang=conf["language"],
+                roundup=roundup,
+                date_label=date_label,
+                home_href=_with_suffix(f"{up}index.html", font),
+                archive_href=_with_suffix(f"{up}archive/index.html", font),
+                font_family=FONTS[font]["family"],
+                font_href=_with_suffix(base_name, other),
+                font_label=FONTS[other]["label"],
+            )
+            path = os.path.join(out_dir, _with_suffix(base_name, font))
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(html)
 
 
-def render_deep_read(deep: dict | None, article: dict | None, conf: dict) -> None:
-    """A single rolling 'deep read of the day' page (docs/deepread.html)."""
+def render_deep_read(deep: dict | None, article: dict | None, conf: dict, date_str: str = "") -> None:
+    """The 'deep read of the day' page, rolling and dated.
+
+    docs/deepread.html is the rolling copy the front page links to. When there
+    is real content it is also written to docs/deepread/<date>.html, so the
+    day's deep read — the most expensive thing the run generates — is still
+    readable after tomorrow's run replaces the rolling copy.
+    """
     os.makedirs(DOCS_DIR, exist_ok=True)
     zh = conf["language"].startswith("zh")
     title = "每日深讀" if zh else "Deep Read of the Day"
     tmpl = _env.get_template("deepread.html.j2")
-    for font in FONTS:
-        other = _other_font(font)
-        article_href = None
-        if article and article.get("slug"):
-            article_href = _with_suffix(f"article/{article['slug']}.html", font)
-        html = tmpl.render(
-            title=title,
-            lang=conf["language"],
-            deep=deep,
-            article_title=article["title"] if article else None,
-            article_href=article_href,
-            original_link=article["link"] if article else None,
-            home_href=_with_suffix("index.html", font),
-            archive_href=_with_suffix("archive/index.html", font),
-            font_family=FONTS[font]["family"],
-            font_href=_with_suffix("deepread.html", other),
-            font_label=FONTS[other]["label"],
-        )
-        path = os.path.join(DOCS_DIR, _with_suffix("deepread.html", font))
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(html)
+
+    # (path prefix back to docs/, output directory, file name)
+    targets = [("", DOCS_DIR, "deepread.html")]
+    if deep and date_str:
+        targets.append(("../", _dated_dir(DEEPREAD_DIR), f"{date_str}.html"))
+
+    for up, out_dir, base_name in targets:
+        for font in FONTS:
+            other = _other_font(font)
+            article_href = None
+            if article and article.get("slug"):
+                article_href = _with_suffix(f"{up}article/{article['slug']}.html", font)
+            html = tmpl.render(
+                title=title,
+                lang=conf["language"],
+                deep=deep,
+                date_str=date_str,
+                article_title=article["title"] if article else None,
+                article_href=article_href,
+                original_link=article["link"] if article else None,
+                home_href=_with_suffix(f"{up}index.html", font),
+                archive_href=_with_suffix(f"{up}archive/index.html", font),
+                digest_href=_with_suffix(f"{up}archive/{date_str}.html", font) if date_str else None,
+                font_family=FONTS[font]["family"],
+                font_href=_with_suffix(base_name, other),
+                font_label=FONTS[other]["label"],
+            )
+            path = os.path.join(out_dir, _with_suffix(base_name, font))
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(html)
 
 
 def render_archive_index(conf: dict) -> None:
     dates = list(reversed(_existing_dates()))
+    deep_dates = set(_dated_page_dates(DEEPREAD_DIR))
+    weekly_dates = list(reversed(_dated_page_dates(WEEKLY_DIR)))
     tmpl = _env.get_template("archive_index.html.j2")
     for font in FONTS:
         other = _other_font(font)
-        date_links = [(d, _with_suffix(f"{d}.html", font)) for d in dates]
+        date_links = [
+            (
+                d,
+                _with_suffix(f"{d}.html", font),
+                _with_suffix(f"../{DEEPREAD_DIR}/{d}.html", font) if d in deep_dates else None,
+            )
+            for d in dates
+        ]
+        weekly_links = [
+            (d, _with_suffix(f"../{WEEKLY_DIR}/{d}.html", font)) for d in weekly_dates
+        ]
         html = tmpl.render(
             title="文摘存檔" if conf["language"].startswith("zh") else "Digest Archive",
             lang=conf["language"],
             date_links=date_links,
+            weekly_links=weekly_links,
             home_href=_with_suffix("../index.html", font),
             font_family=FONTS[font]["family"],
             font_href=_with_suffix("index.html", other),
