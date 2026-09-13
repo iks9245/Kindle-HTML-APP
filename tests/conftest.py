@@ -46,6 +46,9 @@ class Site:
         self.config_path = os.path.join(root, "config.yaml")
         self._mp = monkeypatch
         self.today = date(2026, 9, 13)  # a Sunday, so the weekly roundup fires
+        # Set instead of `today` to pin an exact UTC instant, for the cases
+        # where the UTC date and the configured timezone's date disagree.
+        self.now_utc = None
         # Names of LLM steps that should raise on the next run: any of
         # "summary", "brief", "deep", "quiz", "weekly".
         self.fail = set()
@@ -106,6 +109,8 @@ class Site:
         class FakeDatetime(datetime):
             @classmethod
             def now(cls, tz=None):
+                if site.now_utc is not None:
+                    return site.now_utc.astimezone(tz) if tz else site.now_utc
                 d = site.today
                 return datetime(d.year, d.month, d.day, 8, 0, tzinfo=tz)
 
@@ -156,10 +161,16 @@ class Site:
         """Run one build. `on` sets the date; articles are new unless told otherwise."""
         if on is not None:
             self.today = on
+            self.now_utc = None
         if fresh_articles:
             self.day_n += 1
             write_feed(self.feed_path, self._items())
         main.build_digest()
+
+    def run_at_utc(self, moment, fresh_articles=True):
+        """Run with the clock at an exact UTC instant."""
+        self.now_utc = moment
+        self.run(fresh_articles=fresh_articles)
 
     # Headlines have to be unlike each other: near-duplicate titles are
     # deliberately collapsed within a run, which would otherwise silently

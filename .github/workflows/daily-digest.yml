@@ -29,6 +29,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Generate digest
+        id: digest
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -39,5 +40,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs .digest-state
-          git diff --cached --quiet || git commit -m "chore: update daily digest $(date -u +%F)"
+          # The digest stamps itself in config.yaml's timezone; `date -u` here
+          # would label a 22:00 UTC run with the previous day.
+          DIGEST_DATE="${{ steps.digest.outputs.date }}"
+          git diff --cached --quiet || git commit -m "chore: update daily digest ${DIGEST_DATE:-$(date -u +%F)}"
           git push

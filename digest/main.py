@@ -80,6 +80,15 @@ def _warn(message: str) -> None:
         print(f"warning: {message}", file=sys.stderr)
 
 
+def _emit_github_output(key: str, value: str) -> None:
+    """Hand a value to later steps of the GitHub Actions job, if we're in one."""
+    path = os.environ.get("GITHUB_OUTPUT")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(f"{key}={value}\n")
+
+
 def _new_feed_stat(name: str) -> dict:
     return {
         "name": name,
@@ -118,6 +127,12 @@ def build_digest() -> None:
     tz = ZoneInfo(conf["timezone"])
     date_str = datetime.now(tz).strftime("%Y-%m-%d")
 
+    # The workflow labels its commit with this date rather than calling
+    # `date -u` itself: the digest is stamped in conf["timezone"], so a run in
+    # the hours before midnight UTC — which is exactly when the 22:00 schedule
+    # fires — would otherwise be committed under the previous day's date.
+    _emit_github_output("date", date_str)
+
     seen = load_seen()
     run_titles: list[str] = []  # normalized titles already picked this run
 
@@ -150,7 +165,15 @@ def build_digest() -> None:
                 continue
 
             fallback = entry.get("summary", "")
-            text, has_full_text = extract_full_text(link, fallback)
+            try:
+                text, has_full_text = extract_full_text(link, fallback)
+            except Exception as exc:
+                # trafilatura normally reports a bad page by returning nothing,
+                # but anything it does raise would otherwise take the whole
+                # digest down over one article. Fall back to the feed's own
+                # summary, the same as any other failed extraction.
+                _warn(f"extraction failed for {title!r} ({feed['name']}): {exc}")
+                text, has_full_text = fallback, False
             if not text:
                 stat["no_text"] += 1
                 continue
