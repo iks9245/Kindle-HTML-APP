@@ -36,6 +36,17 @@ def _with_suffix(html_name: str, font: str) -> str:
     return html_name[: -len(".html")] + suffix + ".html"
 
 
+def page_exists(html_name: str) -> bool:
+    """True when every font variant of a docs/ page is already on disk.
+
+    Lets callers tell "this rolling page already has good content from an
+    earlier run" apart from "this is the first run and the page is missing".
+    """
+    return all(
+        os.path.exists(os.path.join(DOCS_DIR, _with_suffix(html_name, font))) for font in FONTS
+    )
+
+
 def _archive_dir() -> str:
     d = os.path.join(DOCS_DIR, "archive")
     os.makedirs(d, exist_ok=True)

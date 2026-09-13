@@ -7,9 +7,32 @@ import trafilatura
 MIN_FULLTEXT_CHARS = 400
 
 
-def fetch_feed_entries(feed_url: str, limit: int) -> list:
+def fetch_feed_entries(feed_url: str, limit: int) -> tuple[list, str]:
+    """Newest entries from a feed, plus a short description of what went wrong.
+
+    feedparser never raises: a dead host, an HTTP error page and a healthy feed
+    that simply has no items all come back as an empty ``entries`` list. That is
+    why a broken source used to just vanish from the digest with no trace in the
+    log. The second element is ``""`` when the fetch looks fine and a one-line
+    problem description otherwise, so callers can report it.
+
+    ``bozo`` on its own is not treated as a failure — plenty of real feeds parse
+    fine while tripping a minor XML warning — so it is only reported when it
+    left us with nothing to read.
+    """
     parsed = feedparser.parse(feed_url)
-    return parsed.entries[:limit]
+
+    status = getattr(parsed, "status", None)
+    if isinstance(status, int) and status >= 400:
+        return [], f"HTTP {status}"
+
+    entries = parsed.entries[:limit]
+    if not entries:
+        exc = getattr(parsed, "bozo_exception", None)
+        if exc:
+            return [], f"{type(exc).__name__}: {exc}"
+        return [], "feed returned no entries"
+    return entries, ""
 
 
 def extract_full_text(url: str, fallback: str = "") -> tuple[str, bool]:

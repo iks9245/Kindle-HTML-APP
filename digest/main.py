@@ -1,4 +1,5 @@
 import hashlib
+import os
 import sys
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -9,6 +10,7 @@ from .fetch import extract_full_text, fetch_feed_entries
 from .rank import score_article
 from .render import (
     estimate_reading_minutes,
+    page_exists,
     prune_old_archives,
     prune_old_article_pages,
     render_archive_index,
@@ -64,6 +66,52 @@ def _is_long_form(category: str, conf: dict) -> bool:
     return any(str(x).lower() in c for x in conf.get("long_form_categories", []))
 
 
+def _warn(message: str) -> None:
+    """Report a problem, annotated so GitHub Actions surfaces it on the run page.
+
+    The job succeeds even when a feed dies or a summary fails, so plain stderr
+    output scrolls past unnoticed; ``::warning::`` puts it in the run summary
+    where a silently broken source is actually visible.
+    """
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print(f"::warning::{message}")
+    else:
+        print(f"warning: {message}", file=sys.stderr)
+
+
+def _new_feed_stat(name: str) -> dict:
+    return {
+        "name": name,
+        "fetched": 0,  # entries the feed handed us this run
+        "dup": 0,  # skipped: seen in an earlier run, or a near-duplicate title
+        "no_text": 0,  # skipped: neither full text nor a feed summary to work with
+        "failed": 0,  # skipped: the summarization call raised
+        "blurb": 0,  # kept, but full-text extraction fell back to the feed summary
+        "kept": 0,
+        "error": "",  # the feed itself could not be read
+    }
+
+
+def _report_run(stats: list, date_str: str) -> None:
+    """Per-feed accounting for the run, so a source that quietly stops
+    contributing is visible in the log instead of just missing from the page."""
+    print(f"digest summary for {date_str}:")
+    for s in stats:
+        if s["error"]:
+            detail = f"feed unreadable — {s['error']}"
+        else:
+            detail = (
+                f"{s['fetched']} fetched, {s['dup']} seen/dup, "
+                f"{s['no_text']} no text, {s['failed']} summarize failed, "
+                f"{s['blurb']} blurb-only"
+            )
+        print(f"  {s['name']:<22} {s['kept']:>2} kept  ({detail})")
+    broken = [s["name"] for s in stats if s["error"]]
+    print(f"  total: {sum(s['kept'] for s in stats)} article(s) from {len(stats)} feed(s)")
+    if broken:
+        _warn(f"{len(broken)} feed(s) could not be read: {', '.join(broken)}")
+
+
 def build_digest() -> None:
     conf = load_config()
     tz = ZoneInfo(conf["timezone"])
@@ -73,29 +121,45 @@ def build_digest() -> None:
     run_titles: list[str] = []  # normalized titles already picked this run
 
     categories: dict[str, list] = {}
+    stats: list[dict] = []
     for feed in conf["feeds"]:
         category = feed.get("category", "General")
         long_form = _is_long_form(category, conf)
-        entries = fetch_feed_entries(feed["url"], conf["max_articles_per_feed"])
+        stat = _new_feed_stat(feed["name"])
+        stats.append(stat)
+
+        entries, feed_error = fetch_feed_entries(feed["url"], conf["max_articles_per_feed"])
+        if feed_error:
+            stat["error"] = feed_error
+            _warn(f"feed {feed['name']!r} unreadable: {feed_error}")
+            continue
+        stat["fetched"] = len(entries)
+
         articles = []
         for entry in entries:
             title = entry.get("title", "Untitled")
             link = entry.get("link", "")
 
             if link in seen:
+                stat["dup"] += 1
                 continue
             normalized = normalize_title(title)
             if any(is_similar(normalized, t) for t in run_titles):
+                stat["dup"] += 1
                 continue
 
             fallback = entry.get("summary", "")
             text, has_full_text = extract_full_text(link, fallback)
             if not text:
+                stat["no_text"] += 1
                 continue
+            if not has_full_text:
+                stat["blurb"] += 1
             try:
                 result = summarize_article(title, text, conf, long_form=long_form)
             except Exception as exc:
-                print(f"warning: skipping {title!r} ({feed['name']}): {exc}", file=sys.stderr)
+                stat["failed"] += 1
+                _warn(f"skipping {title!r} ({feed['name']}): {exc}")
                 continue
 
             slug = f"{date_str}-{hashlib.sha1((link or title).encode('utf-8')).hexdigest()[:10]}"
@@ -117,8 +181,11 @@ def build_digest() -> None:
             )
             run_titles.append(normalized)
             seen[link] = date_str
+            stat["kept"] += 1
         if articles:
             categories.setdefault(category, []).extend(articles)
+
+    _report_run(stats, date_str)
 
     for articles in categories.values():
         articles.sort(key=lambda a: -score_article(a, conf["interests"]))
@@ -151,7 +218,7 @@ def build_digest() -> None:
         try:
             brief = generate_brief(todays_articles, conf)
         except Exception as exc:
-            print(f"warning: editor brief failed: {exc}", file=sys.stderr)
+            _warn(f"editor brief failed: {exc}")
 
     # Deep read: pick the meatiest article of the day and generate a longer
     # companion piece on its own page. We only consider articles we actually
@@ -178,7 +245,7 @@ def build_digest() -> None:
             if result["background"] or result["points"] or result["implications"] or result["glossary"]:
                 deep = result
         except Exception as exc:
-            print(f"warning: deep read failed: {exc}", file=sys.stderr)
+            _warn(f"deep read failed: {exc}")
 
     # Recall quiz: questions come from the previous day's articles (spaced
     # review), and today's articles are stashed for tomorrow's quiz.
@@ -189,7 +256,7 @@ def build_digest() -> None:
         try:
             quiz_items = generate_quiz(prev_articles, conf, conf["quiz_questions"])
         except Exception as exc:
-            print(f"warning: quiz generation failed: {exc}", file=sys.stderr)
+            _warn(f"quiz generation failed: {exc}")
     if todays_articles:
         recent[date_str] = todays_articles
 
@@ -205,15 +272,30 @@ def build_digest() -> None:
                 if result["intro"] or result["themes"]:
                     roundup = result
             except Exception as exc:
-                print(f"warning: weekly roundup failed: {exc}", file=sys.stderr)
+                _warn(f"weekly roundup failed: {exc}")
 
     render_articles(date_str, categories, conf)
     render_digest(date_str, categories, conf, brief=brief)
     if roundup:
         render_weekly(roundup, week_label, conf)
     render_index(date_str, categories, conf, brief=brief)
-    render_quiz(quiz_items, prev_date, conf)
-    render_deep_read(deep, deep_article, conf)
+    # The quiz and deep read are single rolling pages, so rendering them with
+    # nothing to show replaces a perfectly good page with the empty "nothing
+    # yet" state — the same wipe the no-new-articles branch above guards the
+    # digest against, and it happens whenever one LLM call fails or the feature
+    # is switched off in config. Keep the last good page instead. The one case
+    # worth writing an empty page for is the first run, where the front page
+    # links to a file that doesn't exist yet.
+    if quiz_items or not page_exists("quiz.html"):
+        render_quiz(quiz_items, prev_date, conf)
+    elif conf["quiz_questions"] > 0:
+        _warn("no quiz generated this run; keeping the existing quiz page")
+
+    if deep or not page_exists("deepread.html"):
+        render_deep_read(deep, deep_article, conf)
+    elif conf["deep_read"]:
+        _warn("no deep read generated this run; keeping the existing deep read page")
+
     prune_old_archives(conf["archive_retention_days"])
     prune_old_article_pages(conf["archive_retention_days"])
     render_archive_index(conf)
