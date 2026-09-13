@@ -1,22 +1,22 @@
 {% extends "base.html.j2" %}
 {% block content %}
 <h1>{{ title }}</h1>
-<p class="meta"><a href="{{ home_href }}">回到首頁</a></p>
+<p class="meta"><a href="{{ home_href }}">{{ t.back_home }}</a></p>
 {% if not date_links %}
-<p>目前還沒有存檔。</p>
+<p>{{ t.archive_empty }}</p>
 {% else %}
 <ul class="toc">
 {% for d, href, deep_href in date_links %}
-<li><a href="{{ href }}">{{ d }}</a>{% if deep_href %} ｜ <a href="{{ deep_href }}">深讀</a>{% endif %}</li>
+<li><a href="{{ href }}">{{ d }}</a>{% if deep_href %}{{ t.sep }}<a href="{{ deep_href }}">{{ t.archive_deep }}</a>{% endif %}</li>
 {% endfor %}
 </ul>
 {% endif %}
 
 {% if weekly_links %}
-<h2>本週主題回顧</h2>
+<h2>{{ t.archive_weekly_heading }}</h2>
 <ul class="toc">
 {% for d, href in weekly_links %}
-<li><a href="{{ href }}">{{ d }} 那一週</a></li>
+<li><a href="{{ href }}">{{ t.archive_week_of.format(date=d) }}</a></li>
 {% endfor %}
 </ul>
 {% endif %}

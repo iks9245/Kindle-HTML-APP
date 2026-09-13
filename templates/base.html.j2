@@ -8,7 +8,7 @@
 </head>
 <body class="f-{{ family }} z-{{ size }}">
 <div class="page">
-<p class="prefs">{% for label, href, current in size_links %}{% if current %}<span class="pref-on">{{ label }}</span>{% else %}<a href="{{ href }}">{{ label }}</a>{% endif %}{% endfor %}<a class="pref-family" href="{{ family_href }}">切換為{{ family_label }}</a></p>
+<p class="prefs">{% for label, href, current in size_links %}{% if current %}<span class="pref-on">{{ label }}</span>{% else %}<a href="{{ href }}">{{ label }}</a>{% endif %}{% endfor %}<a class="pref-family" href="{{ family_href }}">{{ t.switch_font.format(font=family_label) }}</a></p>
 {% block content %}{% endblock %}
 </div>
 </body>

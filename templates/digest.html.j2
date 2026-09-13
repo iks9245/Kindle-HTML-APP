@@ -3,23 +3,23 @@
 <h1>{{ title }}</h1>
 <p class="meta">
 {{ generated_at }}
-{% if home_href %} ｜ <a href="{{ home_href }}">首頁</a>{% endif %}
-{% if archive_href %} ｜ <a href="{{ archive_href }}">存檔列表</a>{% endif %}
-{% if deepread_href %} ｜ <a href="{{ deepread_href }}">每日深讀</a>{% endif %}
-{% if weekly_href %} ｜ <a href="{{ weekly_href }}">本週主題</a>{% endif %}
-{% if quiz_href %} ｜ <a href="{{ quiz_href }}">昨日小考</a>{% endif %}
-{% if prev_href %} ｜ <a href="{{ prev_href }}">← 前一日</a>{% endif %}
+{% if home_href %}{{ t.sep }}<a href="{{ home_href }}">{{ t.home }}</a>{% endif %}
+{% if archive_href %}{{ t.sep }}<a href="{{ archive_href }}">{{ t.archive }}</a>{% endif %}
+{% if deepread_href %}{{ t.sep }}<a href="{{ deepread_href }}">{{ t.nav_deepread }}</a>{% endif %}
+{% if weekly_href %}{{ t.sep }}<a href="{{ weekly_href }}">{{ t.nav_weekly }}</a>{% endif %}
+{% if quiz_href %}{{ t.sep }}<a href="{{ quiz_href }}">{{ t.nav_quiz }}</a>{% endif %}
+{% if prev_href %}{{ t.sep }}<a href="{{ prev_href }}">{{ t.prev_day }}</a>{% endif %}
 </p>
 
 {% if brief %}
 <div class="brief">
-<p class="brief-label">主編導讀</p>
+<p class="brief-label">{{ t.editor_brief }}</p>
 <p>{{ brief }}</p>
 </div>
 {% endif %}
 
 {% if not categories %}
-<p>今日沒有新文章。</p>
+<p>{{ t.no_articles }}</p>
 {% endif %}
 
 {% for category, articles in categories.items() %}
@@ -41,7 +41,7 @@
   {% endfor %}
   </div>
   {% endif %}
-  <p class="source">{{ a.source }}{% if a.slug %} ｜ <a href="{{ article_prefix }}{{ a.slug }}{{ article_suffix }}.html">全文{% if a.read_minutes %}（約 {{ a.read_minutes }} 分鐘）{% endif %}</a>{% endif %} ｜ <a href="{{ a.link }}">原文網頁</a></p>
+  <p class="source">{{ a.source }}{% if a.slug %}{{ t.sep }}<a href="{{ article_prefix }}{{ a.slug }}{{ article_suffix }}.html">{% if a.read_minutes %}{{ t.full_text_minutes.format(minutes=a.read_minutes) }}{% else %}{{ t.full_text }}{% endif %}</a>{% endif %}{{ t.sep }}<a href="{{ a.link }}">{{ t.original }}</a></p>
 </article>
 {% endfor %}
 {% endfor %}
