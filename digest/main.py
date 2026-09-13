@@ -13,6 +13,7 @@ from .render import (
     page_exists,
     prune_old_archives,
     prune_old_article_pages,
+    prune_old_companion_pages,
     render_archive_index,
     render_articles,
     render_deep_read,
@@ -206,6 +207,7 @@ def build_digest() -> None:
         print("no new articles this run; keeping existing pages", file=sys.stderr)
         prune_old_archives(conf["archive_retention_days"])
         prune_old_article_pages(conf["archive_retention_days"])
+        prune_old_companion_pages(conf["archive_retention_days"])
         render_archive_index(conf)
         save_seen(seen, conf["seen_retention_days"])
         save_recent(load_recent(), conf["seen_retention_days"])
@@ -275,10 +277,7 @@ def build_digest() -> None:
                 _warn(f"weekly roundup failed: {exc}")
 
     render_articles(date_str, categories, conf)
-    render_digest(date_str, categories, conf, brief=brief)
-    if roundup:
-        render_weekly(roundup, week_label, conf)
-    render_index(date_str, categories, conf, brief=brief)
+
     # The quiz and deep read are single rolling pages, so rendering them with
     # nothing to show replaces a perfectly good page with the empty "nothing
     # yet" state — the same wipe the no-new-articles branch above guards the
@@ -286,18 +285,27 @@ def build_digest() -> None:
     # is switched off in config. Keep the last good page instead. The one case
     # worth writing an empty page for is the first run, where the front page
     # links to a file that doesn't exist yet.
+    #
+    # The deep read goes first because render_digest links the archived day to
+    # its dated deep read page, which therefore has to exist by then.
+    if deep or not page_exists("deepread.html"):
+        render_deep_read(deep, deep_article, conf, date_str=date_str)
+    elif conf["deep_read"]:
+        _warn("no deep read generated this run; keeping the existing deep read page")
+
+    render_digest(date_str, categories, conf, brief=brief)
+    if roundup:
+        render_weekly(roundup, week_label, conf, date_str=date_str)
+    render_index(date_str, categories, conf, brief=brief)
+
     if quiz_items or not page_exists("quiz.html"):
         render_quiz(quiz_items, prev_date, conf)
     elif conf["quiz_questions"] > 0:
         _warn("no quiz generated this run; keeping the existing quiz page")
 
-    if deep or not page_exists("deepread.html"):
-        render_deep_read(deep, deep_article, conf)
-    elif conf["deep_read"]:
-        _warn("no deep read generated this run; keeping the existing deep read page")
-
     prune_old_archives(conf["archive_retention_days"])
     prune_old_article_pages(conf["archive_retention_days"])
+    prune_old_companion_pages(conf["archive_retention_days"])
     render_archive_index(conf)
     save_seen(seen, conf["seen_retention_days"])
     save_recent(recent, conf["seen_retention_days"])
