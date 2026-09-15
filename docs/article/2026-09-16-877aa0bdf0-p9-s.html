@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building a Linux GPU Driver for the M4 Mac Mini in One Month</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-16-877aa0bdf0-p13.html">中</a><a href="2026-09-16-877aa0bdf0-p14-l.html">大</a><a class="pref-family" href="2026-09-16-877aa0bdf0-p9-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Building a Linux GPU Driver for the M4 Mac Mini in One Month</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 9 / 25 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://codyho.dev/blog/gpu-driver/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-16-877aa0bdf0-p8-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-16-877aa0bdf0-p10-s.html">下一頁 →</a>
+<span class="pager-num">第 9 / 25 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The second, and only major blocking, issue was compute. The AGX, broadly, supports two kinds of work: compute and render. In the regular GUI path, compute work is only scheduled after a significant amount of render work was already executed. Thus, it took a long time to get a clean capture of a compute workload, and when Codex finally did it was 336 MB and impossible to replay (it tried, for a long time). It also tried to construct the objects itself by looking at the capture, and spent over a week doing this, but was ultimately unsuccessful. There was just too much nonsense to sift through. This was exacerbated by issues on my side– after getting render working, I expected that submitting compute work would be simpler (the firmware ABI for compute is indeed simpler, so I was correct here), but lost my humility and thought it would be a cakewalk that would only take a few hours. Thus, I didn’t scaffold out the task properly for the LLM.</p>
+
+<p class="fulltext">The fix actually was given to me in another Codex session. In essence:</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-16-877aa0bdf0-p8-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-16-877aa0bdf0-p10-s.html">下一頁 →</a>
+<span class="pager-num">第 9 / 25 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

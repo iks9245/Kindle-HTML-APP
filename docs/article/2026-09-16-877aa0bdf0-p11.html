@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building a Linux GPU Driver for the M4 Mac Mini in One Month</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-16-877aa0bdf0-p7-s.html">小</a><span class="pref-on">中</span><a href="2026-09-16-877aa0bdf0-p12-l.html">大</a><a class="pref-family" href="2026-09-16-877aa0bdf0-p11-sans.html">切換為無襯線</a></p>
+
+
+<h1>Building a Linux GPU Driver for the M4 Mac Mini in One Month</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 11 / 36 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://codyho.dev/blog/gpu-driver/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-16-877aa0bdf0-p10.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-16-877aa0bdf0-p12.html">下一頁 →</a>
+<span class="pager-num">第 11 / 36 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">There were three major issues, and all were caused by our inability to get a clean capture of host work:</p>
+
+<p class="fulltext">The first issue was render work submitted after the GPU firmware started. We could prestage work before the firmware started, start the GPU, and that work would be completed as expected, but once the firmware started any work submitted would just be ACKed and retired without actually doing anything. Once the firmware has started, capturing state is much harder because everything becomes dynamic and the firmware becomes a stateful object with state you can’t easily replay.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-16-877aa0bdf0-p10.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-16-877aa0bdf0-p12.html">下一頁 →</a>
+<span class="pager-num">第 11 / 36 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

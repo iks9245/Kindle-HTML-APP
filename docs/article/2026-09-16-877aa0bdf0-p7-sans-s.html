@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building a Linux GPU Driver for the M4 Mac Mini in One Month</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-16-877aa0bdf0-p10-sans.html">中</a><a href="2026-09-16-877aa0bdf0-p11-sans-l.html">大</a><a class="pref-family" href="2026-09-16-877aa0bdf0-p7-s.html">切換為襯線</a></p>
+
+
+<h1>Building a Linux GPU Driver for the M4 Mac Mini in One Month</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 7 / 25 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://codyho.dev/blog/gpu-driver/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-16-877aa0bdf0-p6-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-16-877aa0bdf0-p8-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 7 / 25 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">When I described this approach to the LLM, it took replay extremely literally: the first thing it did was wait for the first firmware visible event (these are called “kicks”), then saved a copy of the entire GPU memory state. After a reboot, it copied the saved memory state straight back into host memory, performed the kick, and saw the output pages change. It would then try to reconstruct these objects in code, following all the pointers and making sense of the contents. Over successive experiments, Codex would reduce the number of pages it copied until there was no more replayed state and everything was built from source. 4 Amazingly, I noticed Codex had good taste regarding when it should poke the hardware some more and when it should just run the hypervisor and capture the state itself.</p>
+
+<p class="fulltext">There were three major issues, and all were caused by our inability to get a clean capture of host work:</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-16-877aa0bdf0-p6-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-16-877aa0bdf0-p8-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 7 / 25 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

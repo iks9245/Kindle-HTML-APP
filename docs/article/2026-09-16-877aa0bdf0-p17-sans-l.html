@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building a Linux GPU Driver for the M4 Mac Mini in One Month</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-09-16-877aa0bdf0-p11-sans-s.html">小</a><a href="2026-09-16-877aa0bdf0-p16-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-09-16-877aa0bdf0-p17-l.html">切換為襯線</a></p>
+
+
+<h1>Building a Linux GPU Driver for the M4 Mac Mini in One Month</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 17 / 43 頁
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="https://codyho.dev/blog/gpu-driver/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-16-877aa0bdf0-p16-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-16-877aa0bdf0-p18-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 17 / 43 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Partial renders ended up being one of the hardest things to figure out. They occur when the Tiled Vertex Buffer (TVB) isn’t large enough to store the current geometry (ie, there’s just too many triangles to draw). In these cases, there are two options, and the driver needs to support both: either increase the size of the TVB, or perform a partial render, ie, render part of the geometry, then reload the buffer with the rest of the triangles, and finish the partial render. These partial renders turned out to be very, very finicky, even more so than the rest of the work because they essentially mean adding save and resume to the GPU driver.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-16-877aa0bdf0-p16-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-16-877aa0bdf0-p18-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 17 / 43 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
