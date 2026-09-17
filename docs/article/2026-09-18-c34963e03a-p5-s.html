@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bend – A language that blocks AI mistakes via proof, on CPU and GPU</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-18-c34963e03a-p6.html">中</a><a href="2026-09-18-c34963e03a-p8-l.html">大</a><a class="pref-family" href="2026-09-18-c34963e03a-p5-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Bend – A language that blocks AI mistakes via proof, on CPU and GPU</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 5 / 5 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://bend-lang.com/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-18-c34963e03a-p4-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 5 / 5 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Hints: ask it to write laws for whatever should never break, and to parallelize everything you want running fast. Bend is young: if anything goes wrong, ask it to open an issue. Bend works best on the back-end, on Linux and on macOS. Enjoy! <3</p>
+
+<p class="fulltext">Guide: GUIDE.md is the whole language; bend guide prints it.</p>
+
+<p class="fulltext">Paper: BendTT, an affine dependent type theory, Bend's core.</p>
+
+<p class="fulltext">Paper: BendRT, a parallel runtime for CPUs and GPUs, the VM.</p>
+
+<p class="fulltext">Bend is still evolving. Expect bugs, and please report them.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Bend 語言主要解決了 AI 開發中的什麼核心問題？</summary>
+  <p>Bend 語言主要解決了在 AI 驅動的開發中，如何確保 AI 所編寫的程式碼完全符合人類的意圖，並避免錯誤的問題。它透過形式化證明的方式，使得 AI 無法引入違反預設規則的錯誤，從而提高系統的可靠性。</p>
+</details>
+
+<details>
+  <summary>Bend 如何確保 AI 所生成的程式碼能夠嚴格遵守人類所設定的「法律」（laws）？</summary>
+  <p>Bend 透過引入 `LAWS.bend` 檔案來讓人類定義關鍵規則和規範。當 AI 編寫程式碼時，它必須在 `PROOF.bend` 中提供形式化證明，以驗證其程式碼確實遵守了這些法律，否則無法提交，從而從數學上防止錯誤的發生。</p>
+</details>
+
+<details>
+  <summary>相較於傳統程式語言或其他的證明系統，Bend 在效能和效率方面有哪些主要優勢？</summary>
+  <p>Bend 語言在單核上可達到接近 C 語言的執行速度，並且能自動化地利用多核 CPU 和 GPU 進行平行運算，速度可提升百倍。此外，其證明檢查器只需幾秒鐘即可完成中型程式碼庫的驗證，這比傳統的形式驗證系統快得多，使其能與 AI 開發流程緊密結合。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-18-c34963e03a-p4-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 5 / 5 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
