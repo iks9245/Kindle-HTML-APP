@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-17-2a70d59635-p71.html">中</a><a href="2026-09-17-2a70d59635-p90-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p53-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 53 / 80 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p52-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p54-s.html">下一頁 →</a>
+<span class="pager-num">第 53 / 80 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Another consideration with agent trajectories is determining which tokens our model should actually be predicting. The model never produces certain tokens in a trajectory, like the system prompt, any user prompts or the results of a tool call after a harness executes it. The model should still see these tokens when predicting the next token though; they’re still part of the context, but we should only compute losses for tokens the model is responsible for predicting. We can employ a strategy called loss-masking here. A loss-masking library lets us label the parts of a teacher trajectory that are context-only, versus the parts our student model is responsible for predicting.</p>
+
+<p class="fulltext">Finally, when fine-tuning over agent trajectories, we generally don’t include the entire trajectory as a single trainable unit. Instead, the trajectory is broken up into a set of (context, reply) pairs. The context in these pairs is additive and includes previous model replies.</p>
+
+<p class="fulltext">Low-rank adaptation (LoRA)</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p52-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p54-s.html">下一頁 →</a>
+<span class="pager-num">第 53 / 80 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

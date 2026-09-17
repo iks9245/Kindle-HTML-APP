@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日深讀</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-17-s.html">小</a><span class="pref-on">中</span><a href="2026-09-17-l.html">大</a><a class="pref-family" href="2026-09-17-sans.html">切換為無襯線</a></p>
+
+<h1>每日深讀</h1>
+<p class="meta">
+2026-09-17 ｜ 本篇：Training a 4B model to produce 81% faster query plans than Postgres
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/2026-09-17.html">當天文摘</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="../article/2026-09-17-2a70d59635.html">讀全文</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<h2>脈絡</h2>
+<p>資料庫查詢優化器負責規劃SQL查詢的最快執行路徑，然而，即便經過數十年研究，傳統優化器仍常產生次優解，特別是在處理複雜的連接順序（一個已知的NP難題）時。本文作者進行實驗，利用小型語言模型，透過監督式微調與強化學習來提升Postgres查詢計畫的效率。</p>
+
+
+<h2>重點</h2>
+<ul>
+<li>小型語言模型能有效訓練以生成比資料庫預設優化器快得多的查詢計畫。</li><li>查詢計畫品質（執行時間）易於驗證的特性，使其成為強化學習的理想應用場景。</li><li>實驗顯示，一個4B模型在複雜且連接繁重的查詢上達成了44.7%的延遲降低。</li><li>成功的關鍵在於開發了定制測量裝置、改良的GRPO變體、分散式強化學習及離策略蒸餾等多種創新訓練技術。</li><li>語言模型展現出解決查詢優化器中NP難問題（如連接順序）的巨大潛力。</li>
+</ul>
+
+
+<h2>影響與延伸</h2>
+<p>這項研究為資料庫優化開闢了新典範，超越了傳統的基於規則或啟發式方法，預示著更具適應性和高效能的資料庫未來。它可能帶來更快資料處理與顯著的系統效率提升，未來此類模型或能整合到生產環境資料庫中，並探索解決其他資料庫中的NP難題。</p>
+
+
+<h2>小辭典</h2>
+<dl class="glossary">
+
+<dt>查詢優化器</dt>
+<dd>資料庫管理系統中的軟體組件，旨在找出執行SQL查詢最有效率的路徑。</dd>
+
+<dt>連接順序 (Join Ordering)</dt>
+<dd>資料庫系統合併多個資料表以執行查詢的特定順序。此順序對查詢性能影響巨大，且為一個已知的NP難題。</dd>
+
+<dt>NP難題 (NP-hard)</dt>
+<dd>一類計算問題，目前已知不存在多項式時間的有效演算法，表示解決所需時間可能隨輸入規模呈指數級增長。</dd>
+
+<dt>強化學習 (Reinforcement Learning)</dt>
+<dd>一種機器學習方法，智能體通過在環境中執行動作並根據結果獲得獎勵或懲罰來學習決策。在此案例中，「更快的查詢計畫」即為獎勵。</dd>
+
+</dl>
+
+
+
+</div>
+</body>
+</html>

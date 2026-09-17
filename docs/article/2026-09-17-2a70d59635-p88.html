@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-17-2a70d59635-p65-s.html">小</a><span class="pref-on">中</span><a href="2026-09-17-2a70d59635-p112-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p88-sans.html">切換為無襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 88 / 107 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p87.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p89.html">下一頁 →</a>
+<span class="pager-num">第 88 / 107 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The first few RL runs I did using this reward resulted in a model that was terrified of producing invalid plans due to the extremely harsh -3 condition. The model played it safe instead, returning Postgres’s default plan over and over again, accepting the smaller 0.05 reward hits.</p>
+
+<p class="fulltext">GRPO exacerbated this issue. The plain GRPO algorithm converts multiple rollout rewards into relative “advantages”:</p>
+
+<p class="fulltext">Let’s say we perform four rollouts for a given query resulting in the following plans, execution speeds and rewards:</p>
+
+<p class="fulltext">We’re reinforcing bad behavior by telling the model it’s okay to produce plans that end up being equivalent to Postgres’s default plan!</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p87.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p89.html">下一頁 →</a>
+<span class="pager-num">第 88 / 107 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-17-2a70d59635-p37-sans.html">中</a><a href="2026-09-17-2a70d59635-p46-sans-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p28-s.html">切換為襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 28 / 80 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p27-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p29-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 28 / 80 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- The operating system has its own filesystem cache doing the same thing one level down</p>
+
+<p class="fulltext">If we run the exact same query on Postgres 20 times in a row, it won’t take the same amount of time each run. In day-to-day work, this isn’t a big deal. But the whole thesis, and the training process itself, relies on measuring whether one way of running a query is faster than the Postgres default. This means we need to do everything in our power to de-noise Postgres.</p>
+
+<p class="fulltext">First, I needed to understand just how noisy Postgres query executions are.</p>
+
+<p class="fulltext">I started by building a “calibration” capability into my experimentation workflow. The calibration process was simple: run Docker containers built from a Postgres image, each given a fixed slice of CPU cores and RAM to use. I set to begin; anything lower might make future training far too slow, and anything higher might lead to more CPU contention, which means more noise. Each container was given 4 cores to use and capped at 8 GB of memory.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p27-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p29-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 28 / 80 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-17-2a70d59635-p22-sans.html">中</a><a href="2026-09-17-2a70d59635-p28-sans-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p17-s.html">切換為襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 17 / 80 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p16-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p18-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 17 / 80 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">My first idea was to give the model the query and the exact same set of information Postgres’s planner has. This amounts to seeing if we could build a better cardinality estimator. I came to the conclusion this is not a worthwhile avenue to explore; we would be fighting decades of cardinality estimation research. Furthermore, the inference latency alone would far outweigh any learned usefulness compared to Postgres’s ultra-fast query optimizer.</p>
+
+<p class="fulltext">The second idea—and what I believe is the correct formulation—lies in a specific database usage pattern: heavy analytic workloads. If queries are getting run thousands of times using sub-optimal default Postgres plans, efficiency gains are being left on the table. Instead, a model could be trained to find a better way to run a specific query. The training process might require execution of that query tens to hundreds of times upfront, but the amortized cost across all runs of the query would be drastically lower.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p16-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p18-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 17 / 80 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

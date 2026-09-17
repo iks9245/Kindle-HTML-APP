@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-09-17-2a70d59635-p67-sans-s.html">小</a><a href="2026-09-17-2a70d59635-p91-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-09-17-2a70d59635-p116-l.html">切換為襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 116 / 139 頁
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p115-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p117-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 116 / 139 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">…as soon as I built out a mechanism for Postgres measurements to happen on FLOPper and training/inference to happen on the 2x H100 node. I would have loved to keep Postgres measurements on the Lambda node; alas, I ran a bunch of Postgres calibrations on their boxes and am reasonably confident I was sharing the non-GPU bits of the box with other folks, as the noise was off the charts compared to FLOPper.</p>
+
+<p class="fulltext">I connected FLOPper to the Lambda node via Tailscale; the resulting process would be:</p>
+
+<p class="fulltext">- Query rollouts would begin on FLOPper and hold an available Postgres container for their full lifetime</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p115-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p117-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 116 / 139 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

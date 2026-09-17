@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-17-2a70d59635-p15-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-09-17-2a70d59635-p26-sans-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p20.html">切換為襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 20 / 107 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p19-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p21-sans.html">下一頁 →</a>
+<span class="pager-num">第 20 / 107 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Postgres always picks the plan with the lowest cost, and we can’t change its cost model without modifying its source code, so how can we actually steer it to pick different plans that have higher costs?</p>
+
+<p class="fulltext">Enter pg_hint_plan.</p>
+
+<p class="fulltext">pg_hint_plan is a beautifully simple third-party extension: just by adding structured “hints” as comments above SQL statements, you can nudge Postgres towards plans that use the instructions provided in the hint. For example:</p>
+
+<p class="fulltext">The hint mandates usage of a HashJoin for joining pgbench_accounts and pgbench_branches, and doing a sequential scan of the pgbench_accounts table; the actual query plan follows suit nicely.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p19-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p21-sans.html">下一頁 →</a>
+<span class="pager-num">第 20 / 107 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

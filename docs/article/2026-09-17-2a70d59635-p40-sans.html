@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-17-2a70d59635-p30-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-09-17-2a70d59635-p49-sans-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p40.html">切換為襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 40 / 107 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p39-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p41-sans.html">下一頁 →</a>
+<span class="pager-num">第 40 / 107 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Whenever Postgres executes a query, it asks the operating system (in our case, Linux) for pages of data. Linux first checks its own filesystem cache, the page cache. If the pages are present, Linux sends them over; else it reads them from disk, stores them in its cache and then sends them over. Postgres, in turn, keeps received pages in its own shared_buffers cache for easy reuse. When shared_buffers begins to overflow, Postgres evicts pages. If it needs those pages again, it must ask Linux once more.</p>
+
+<p class="fulltext">Every time there’s a cache hit in shared_buffers for a page, Postgres increments a counter called “shared hit blocks” (SHBs). If it has to ask Linux, it increments “shared read blocks” (SRBs).</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p39-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p41-sans.html">下一頁 →</a>
+<span class="pager-num">第 40 / 107 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

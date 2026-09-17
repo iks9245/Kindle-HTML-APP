@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-17-2a70d59635-p26-s.html">小</a><span class="pref-on">中</span><a href="2026-09-17-2a70d59635-p43-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p35-sans.html">切換為無襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 35 / 107 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p34.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p36.html">下一頁 →</a>
+<span class="pager-num">第 35 / 107 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The real issue is making sure we’re not overfitting to JOB query templates during training over CEB. The model should learn IMDb in a way where given any query, even for structural query families it hasn’t seen before, it’s still capable of producing a good plan. In practice, this means we need to prune CEB queries that have the same shape as any of the JOB queries.</p>
+
+<p class="fulltext">Query topology mapping</p>
+
+<p class="fulltext">Let’s define a query’s “topology” as its structural join-graph (de-aliased table names as nodes and joins as edges). The join graph excludes all selectivity predicates; we’re only interested in joins here.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p34.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p36.html">下一頁 →</a>
+<span class="pager-num">第 35 / 107 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

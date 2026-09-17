@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-17-2a70d59635-p72.html">中</a><a href="2026-09-17-2a70d59635-p92-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p54-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 54 / 80 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p53-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p55-s.html">下一頁 →</a>
+<span class="pager-num">第 54 / 80 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Our 4B model has 4.66 billion tunable parameters. If we wanted to update all of these parameters in a single pass during SFT, we would need a GPU with at least 64 GB of VRAM. I wanted to test my hypotheses first on my consumer-grade RTX 3090s, each of which carries 24 GB of VRAM, so I needed something more parameter-efficient here.</p>
+
+<p class="fulltext">Low-rank adapters, or LoRAs, are the canonical way to do this. At a high-level, they work by freezing the model’s weights as they are, instead letting you train a much smaller pair of matrices that when multiplied together, result in an adjustment to selected weights in your original model.</p>
+
+<p class="fulltext">4.66 billion weights come in at 9.32 GB in bf16. The tiny LoRA I actually ended up training was only 42.5 MB and contained only 21.2 million trainable parameters.</p>
+
+<p class="fulltext">Teacher model selection</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p53-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p55-s.html">下一頁 →</a>
+<span class="pager-num">第 54 / 80 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

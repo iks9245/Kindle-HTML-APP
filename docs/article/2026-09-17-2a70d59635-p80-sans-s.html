@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-17-2a70d59635-p106-sans.html">中</a><a href="2026-09-17-2a70d59635-p138-sans-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p80-s.html">切換為襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 80 / 80 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p79-sans-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 80 / 80 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, Y. K. Li, Y. Wu, and Daya Guo. “DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models.” arXiv preprint arXiv:2402.03300 (2024). doi:10.48550/arXiv.2402.03300.</p>
+
+<p class="fulltext">- DeepSeek-AI (Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Peiyi Wang, Qihao Zhu, Runxin Xu, et al.). “DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.” arXiv preprint arXiv:2501.12948 (2025). Published as “DeepSeek-R1 Incentivizes Reasoning in LLMs Through Reinforcement Learning.” Nature 645, no. 8081 (2025): 633–638. doi:10.1038/s41586-025-09422-z.</p>
+
+<p class="fulltext">- Ryan Marcus, Parimarjan Negi, Hongzi Mao, Nesime Tatbul, Mohammad Alizadeh, and Tim Kraska. “Bao: Learning to Steer Query Optimizers.” arXiv preprint arXiv:2004.03814 (2020). Published as “Bao: Making Learned Query Optimization Practical.” Proceedings of the 2021 International Conference on Management of Data (SIGMOD ’21) (2021): 1275–1288. doi:10.1145/3448016.3452838.</p>
+
+<p class="fulltext">- Kevin Lu, in collaboration with others at Thinking Machines. “On-Policy Distillation.” Thinking Machines Lab (blog), October 27, 2025.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>目前的查詢最佳化器為何在處理連接順序等任務時常不盡理想？</summary>
+  <p>查詢最佳化器，特別是在處理多表連接（join ordering）時，面臨著巨大的計算複雜性，因為連接順序的排列組合數量會隨著表數量的增加而呈指數級增長，這是一個已知的NP-hard問題。因此，傳統的最佳化器往往只能採用啟發式演算法，無法保證找到全局最優解，導致其生成的查詢計畫可能不夠高效。</p>
+</details>
+
+<details>
+  <summary>語言模型通常用於處理文本，它是如何學會最佳化資料庫查詢計畫的？</summary>
+  <p>語言模型學習最佳化查詢計畫的關鍵在於其具備學習具有易於驗證輸出的任務的能力。由於查詢計畫的優劣可以透過實際執行時間直接衡量，作者透過監督式微調（SFT）教授模型產生基本計畫，再利用強化學習（RL）根據計畫的執行速度給予獎勵，不斷強化模型生成更快計畫的行為。</p>
+</details>
+
+<details>
+  <summary>這項研究對於資料庫管理系統或其他複雜最佳化問題有何潛在的更廣泛影響？</summary>
+  <p>這項研究顯示，透過AI（特別是強化學習）來解決資料庫最佳化等複雜NP-hard問題具有巨大潛力，未來可能導致更智能、自適應的資料庫管理系統。這種方法也可推廣到其他需要從海量可能解中找出最佳方案的工程或科學領域，例如供應鏈最佳化、資源調度或演算法設計。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p79-sans-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 80 / 80 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

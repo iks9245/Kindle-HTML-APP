@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-17-2a70d59635-p27.html">中</a><a href="2026-09-17-2a70d59635-p34-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p21-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 21 / 80 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p20-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p22-s.html">下一頁 →</a>
+<span class="pager-num">第 21 / 80 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">An agent is useless without something to benchmark its performance against. Fortunately for us, the hard work of creating these benchmarks was already done.</p>
+
+<p class="fulltext">The Join Order Benchmark</p>
+
+<p class="fulltext">Leis et al. introduced the Join Order Benchmark (JOB) in How Good Are Query Optimizers, Really?. They used it to evaluate cardinality estimation and join-order optimization using our familiar IMDb dataset.</p>
+
+<p class="fulltext">It consists of 113 queries spread across 33 query templates. Query templates differ via their relational skeleton. They reference different tables and connect them with different join predicates. You can think about them as a structural family of questions that can be answered. Queries derived from templates preserve the tables used and the join graph topology but change selection predicates.</p>
+
+<p class="fulltext">Looking at an example:</p>
+
+<p class="fulltext">…and here are two real queries from JOB derived from this template:</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p20-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p22-s.html">下一頁 →</a>
+<span class="pager-num">第 21 / 80 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

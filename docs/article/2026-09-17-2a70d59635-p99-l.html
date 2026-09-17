@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-09-17-2a70d59635-p58-s.html">小</a><a href="2026-09-17-2a70d59635-p78.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-09-17-2a70d59635-p99-sans-l.html">切換為無襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 99 / 139 頁
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="../archive/index-l.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p98-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p100-l.html">下一頁 →</a>
+<span class="pager-num">第 99 / 139 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">I began by generating 120 Astra trajectories over a random slice of queries from CEB, with reasoning summaries enabled. 100 trajectories would be used for training, and 20 would be used as a held-out validation set. All trajectories were rendered via Prime Intellect’s renderers library into Qwen format, loss-masked appropriately and unrolled and packed into usable training demonstrations. I then used Prime Intellect’s prime-rl library to run SFT, training the smaller ~21 million parameter LoRA. 100 Astra trajectories became 382 training rows after unrolling and packing. I allowed training to run for just a single epoch, meaning every example was trained on exactly once, and used a batch size of one (each demonstration updated the weights). Finally, I evaluated the resulting LoRA over JOB:</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p98-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p100-l.html">下一頁 →</a>
+<span class="pager-num">第 99 / 139 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

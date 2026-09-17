@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-09-17-2a70d59635-p35-sans-s.html">小</a><a href="2026-09-17-2a70d59635-p47-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-09-17-2a70d59635-p58-l.html">切換為襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 58 / 139 頁
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p57-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p59-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 58 / 139 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">To de-noise during actual agent runs, I couldn’t just run the agent’s proposed plan a single time. Instead, I ran three interleaved (candidate, default) pairs sequentially. Three was picked somewhat arbitrarily to provide some measure of variability while being small enough to prevent agent evaluation runs from spending most of their time in Postgres. Once the three candidate/default execution time tuples were obtained, the medians of both the three candidates and the three defaults were taken and expressed as a ratio of each other to determine the final speedup or slowdown. If the two medians differed by less than an arbitrarily declared 5%, it was a tie. Outside of that tie zone, a candidate could be declared as a speedup or a slowdown.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p57-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p59-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 58 / 139 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

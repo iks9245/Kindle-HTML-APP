@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training a 4B model to produce 81% faster query plans than Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-17-2a70d59635-p53.html">中</a><a href="2026-09-17-2a70d59635-p66-l.html">大</a><a class="pref-family" href="2026-09-17-2a70d59635-p40-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Training a 4B model to produce 81% faster query plans than Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 40 / 80 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://rohanbansal.com/qorl">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p39-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p41-s.html">下一頁 →</a>
+<span class="pager-num">第 40 / 80 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- work_mem decides how much memory a single sort/hash operation can get before spilling to disk</p>
+
+<p class="fulltext">I ran four calibrations:</p>
+
+<p class="fulltext">| shared_buffers | work_mem | No-op error rate (run 1 / 2) | p90 query | Median CV | Total runtime |</p>
+
+<p class="fulltext">|---|---|---|---|---|---|</p>
+
+<p class="fulltext">| 128 MB | 4 MB | 5.0% / 5.4% | 13% / 20% | 2.3% | 95 s |</p>
+
+<p class="fulltext">| 2 GB | 4 MB | 1.8% / 1.2% | 1.3% / 0% | 1.1% | 60 s |</p>
+
+<p class="fulltext">| 128 MB | 32 MB | 7.0% / 6.6% | 20% / 23% | 2.6% | 94 s |</p>
+
+<p class="fulltext">| 2 GB | 32 MB | 1.7% / 1.3% | 0% / 0% | 1.2% | 60 s |</p>
+
+<p class="fulltext">Surprisingly, work_mem had no effect on noise at all, and shared_buffers carried all of the weight!</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-17-2a70d59635-p39-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-17-2a70d59635-p41-s.html">下一頁 →</a>
+<span class="pager-num">第 40 / 80 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
