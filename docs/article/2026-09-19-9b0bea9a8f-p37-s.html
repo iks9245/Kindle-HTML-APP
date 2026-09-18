@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code now reads AGENTS.md if there is no Claude.md</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-19-9b0bea9a8f-p49.html">中</a><a href="2026-09-19-9b0bea9a8f-p63-l.html">大</a><a class="pref-family" href="2026-09-19-9b0bea9a8f-p37-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Claude Code now reads AGENTS.md if there is no Claude.md</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 37 / 861 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://code.claude.com/docs/en/changelog">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-19-9b0bea9a8f-p36-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-19-9b0bea9a8f-p38-s.html">下一頁 →</a>
+<span class="pager-num">第 37 / 861 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Fixed extra empty editor windows opening at startup on Linux under Wayland when running inside the Cursor or VS Code terminal</p>
+
+<p class="fulltext">- Fixed an unhandled promise rejection in the Claude apps gateway when Postgres drops a connection during a spend check</p>
+
+<p class="fulltext">- Fixed Claude apps gateway cutting every open stream on SIGTERM: it now lets in-flight requests finish for up to 25 seconds before exiting (CLAUDE_GATEWAY_DRAIN_TIMEOUT_MS )</p>
+
+<p class="fulltext">- Fixed installed_plugins.json being rewritten on nearly every start-up when plugin policy comes from remote managed settings, which made Claude Desktop reload every open session’s plugins</p>
+
+<p class="fulltext">- Fixed headless and SDK sessions making a separate model call for every background task that finished; completions already queued are now answered by one call</p>
+
+<p class="fulltext">- Fixed the Bash tool re-sourcing the shell profile (a multi-second stall on the next command) after every plugin reload; it now does so only when the plugins’ bin/ directories changed</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-19-9b0bea9a8f-p36-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-19-9b0bea9a8f-p38-s.html">下一頁 →</a>
+<span class="pager-num">第 37 / 861 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

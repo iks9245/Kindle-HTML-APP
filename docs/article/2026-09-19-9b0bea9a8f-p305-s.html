@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code now reads AGENTS.md if there is no Claude.md</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-19-9b0bea9a8f-p405.html">中</a><a href="2026-09-19-9b0bea9a8f-p532-l.html">大</a><a class="pref-family" href="2026-09-19-9b0bea9a8f-p305-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Claude Code now reads AGENTS.md if there is no Claude.md</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 305 / 861 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://code.claude.com/docs/en/changelog">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-19-9b0bea9a8f-p304-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-19-9b0bea9a8f-p306-s.html">下一頁 →</a>
+<span class="pager-num">第 305 / 861 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Changed subagents to no longer spawn nested subagents by default; set CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH to allow deeper nesting</p>
+
+<p class="fulltext">- Fixed --max-budget-usd not stopping background subagents: once the cap is reached, new spawns are denied and running background agents are halted</p>
+
+<p class="fulltext">July 20, 2026</p>
+
+<p class="fulltext">- Added sandbox.filesystem.disabled setting to skip filesystem isolation while keeping network egress control</p>
+
+<p class="fulltext">- Fixed a slowdown in long sessions where message normalization cost grew quadratically with the number of turns, causing multi-second stalls and slow resumes</p>
+
+<p class="fulltext">- Fixed auto mode denying commands with “HTTP 401” classifier errors after the OAuth token expired or rotated mid-session</p>
+
+<p class="fulltext">- Fixed AskUserQuestion telling Claude to continue even when your answer asked it to wait or explain first — free-text answers now get neutral wording</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-19-9b0bea9a8f-p304-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-19-9b0bea9a8f-p306-s.html">下一頁 →</a>
+<span class="pager-num">第 305 / 861 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

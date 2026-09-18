@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code now reads AGENTS.md if there is no Claude.md</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-19-9b0bea9a8f-p452-sans.html">中</a><a href="2026-09-19-9b0bea9a8f-p592-sans-l.html">大</a><a class="pref-family" href="2026-09-19-9b0bea9a8f-p340-s.html">切換為襯線</a></p>
+
+
+<h1>Claude Code now reads AGENTS.md if there is no Claude.md</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 340 / 861 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://code.claude.com/docs/en/changelog">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-19-9b0bea9a8f-p339-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-19-9b0bea9a8f-p341-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 340 / 861 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Fixed a memory blowup when reading files with extremely long single lines using offset/limit — the read now returns a clean error instead of loading the whole line</p>
+
+<p class="fulltext">- Fixed multi-second per-turn slowdowns in sessions with many permission deny/ask rules — rule matchers are now compiled once and cached</p>
+
+<p class="fulltext">- Improved input responsiveness while agent task lists update — task updates no longer re-render the entire UI</p>
+
+<p class="fulltext">- Reduced per-tool-call CPU overhead in print/SDK sessions with many MCP tools by caching tool-pool assembly (up to 7x faster tool rounds at high tool counts)</p>
+
+<p class="fulltext">- Reduced memory usage by bounding the file edit read cache to 16 MB instead of pinning up to 1,000 full files</p>
+
+<p class="fulltext">- Reduced session transcript size (up to 79x in edit-heavy sessions) and bounded checkpoint disk usage by pruning superseded file-history backups</p>
+
+<p class="fulltext">- Reduced memory usage when resuming sessions with background agents or forks spawned from large conversations</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-19-9b0bea9a8f-p339-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-19-9b0bea9a8f-p341-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 340 / 861 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

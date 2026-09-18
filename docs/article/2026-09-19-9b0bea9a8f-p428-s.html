@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code now reads AGENTS.md if there is no Claude.md</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-19-9b0bea9a8f-p568.html">中</a><a href="2026-09-19-9b0bea9a8f-p743-l.html">大</a><a class="pref-family" href="2026-09-19-9b0bea9a8f-p428-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Claude Code now reads AGENTS.md if there is no Claude.md</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 428 / 861 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://code.claude.com/docs/en/changelog">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-19-9b0bea9a8f-p427-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-19-9b0bea9a8f-p429-s.html">下一頁 →</a>
+<span class="pager-num">第 428 / 861 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Fixed WebFetch permission rules not being applied to built-in preapproved domains; explicit WebFetch(domain:...) deny/ask/allow rules now take precedence over the preapproved-host auto-allow</p>
+
+<p class="fulltext">- Fixed Windows permission rules never matching when spelled with backslashes (~\ ,\\server\share ) or case-variant paths, and Read deny rules not hiding files from Glob/Grep results</p>
+
+<p class="fulltext">- Fixed an interrupt (Esc) sent at the very start of a turn being silently dropped in stream-json/SDK sessions, leaving the turn running with no “Interrupted” feedback</p>
+
+<p class="fulltext">- Fixed API 400 no low surrogate in string errors for classifier side-queries and MCP server descriptions containing emoji near a truncation boundary</p>
+
+<p class="fulltext">- Fixed MCP per-server timeout config values below 1000 ms being floored to a 1-second watchdog that aborted every tool call; sub-1000 ms values are now ignored (falling back toMCP_TOOL_TIMEOUT or default), andclaude mcp get annotates them accordingly</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-19-9b0bea9a8f-p427-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-19-9b0bea9a8f-p429-s.html">下一頁 →</a>
+<span class="pager-num">第 428 / 861 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
