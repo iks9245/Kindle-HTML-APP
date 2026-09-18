@@ -2,7 +2,10 @@ name: Daily AI Digest
 
 on:
   schedule:
-    # 22:00 UTC = 06:00 Asia/Taipei. Adjust to taste.
+    # Nominally 06:00 Asia/Taipei. GitHub's scheduler is best-effort and
+    # busiest on the hour, so this fires late every time — 13 runs measured in
+    # September 2026 were 1h27m to 2h57m behind, clustering around 23:40 UTC
+    # (≈07:40 Taipei). Moving off the hour (e.g. "37 21 * * *") usually helps.
     - cron: "0 22 * * *"
   workflow_dispatch: {}
 
