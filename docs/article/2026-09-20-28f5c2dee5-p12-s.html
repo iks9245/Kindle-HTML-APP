@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin: full-text search for Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-20-28f5c2dee5-p16.html">中</a><a href="2026-09-20-28f5c2dee5-p20-l.html">大</a><a class="pref-family" href="2026-09-20-28f5c2dee5-p12-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Tin: full-text search for Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 12 / 30 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p11-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p13-s.html">下一頁 →</a>
+<span class="pager-num">第 12 / 30 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Conjunction, disjunction, and phrase queries; top-10</p>
+
+<p class="fulltext">┌────────────────────────────────────────────────────────────────────┐</p>
+
+<p class="fulltext">│                            QPS        p99    MB/query     Updates  │</p>
+
+<p class="fulltext">├─────────────────────────┬───────┬──────────┬───────────┬───────────┤</p>
+
+<p class="fulltext">│ TIN - read-only         │  199  │   256ms  │       65  │           │</p>
+
+<p class="fulltext">│     - with updates      │  172  │   284ms  │       88  │  271,398  │</p>
+
+<p class="fulltext">├─────────────────────────┼───────┼──────────┼───────────┼───────────┤</p>
+
+<p class="fulltext">│ ParadeDB - read-only    │  7.9  │ 6,765ms  │      582  │           │</p>
+
+<p class="fulltext">│          - with updates │  6.0  │ 7,990ms  │      591  │  193,487  │</p>
+
+<p class="fulltext">└─────────────────────────┴───────┴──────────┴───────────┴───────────┘</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p11-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p13-s.html">下一頁 →</a>
+<span class="pager-num">第 12 / 30 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin: full-text search for Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-20-28f5c2dee5-sans.html">中</a><a href="2026-09-20-28f5c2dee5-sans-l.html">大</a><a class="pref-family" href="2026-09-20-28f5c2dee5-s.html">切換為襯線</a></p>
+
+
+<h1>Tin: full-text search for Postgres</h1>
+<p class="meta">
+Hacker News ｜ 約 16 分鐘閱讀
+ ｜ 第 1 / 30 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<span class="pager-prev pager-off">← 上一頁</span>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p2-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 1 / 30 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">One of the Postgres features our customers ask us for the most is full-text search. Today, we are excited to announce TIN: a fast, full-featured, reliable full-text search extension for Postgres. TIN stands for "Text INdex," and that is what it does.</p>
+
+<p class="fulltext">TIN is available immediately as a GA release for all Postgres and Neki databases. Check it out:</p>
+
+<p class="fulltext">CREATE INDEX an_index_name ON table_name USING tin(text_column_name);</p>
+
+<p class="fulltext">SELECT * FROM table_name</p>
+
+<p class="fulltext">WHERE text_column_name ==> 'some words';</p>
+
+<p class="fulltext">We built TIN because we believe a good text index should support:</p>
+
+<p class="fulltext">- Boolean expressions, phrase queries, and span queries</p>
+
+<p class="fulltext">- Fuzzy, wildcard, and regular-expression matching for terms</p>
+
+
+
+
+
+
+<nav class="pager">
+<span class="pager-prev pager-off">← 上一頁</span>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p2-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 1 / 30 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

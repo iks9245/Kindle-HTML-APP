@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin: full-text search for Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-20-28f5c2dee5-p41.html">中</a><a href="2026-09-20-28f5c2dee5-p51-l.html">大</a><a class="pref-family" href="2026-09-20-28f5c2dee5-p30-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Tin: full-text search for Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 30 / 30 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p29-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 30 / 30 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">If you want to see how fast TIN is on your text data, read more about the features or jump straight to the getting started guide. We look forward to seeing what you build with it.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>為什麼在 Postgres 已有多個現有全文檢索索引的情況下，TIN 仍被開發出來？</summary>
+  <p>文章指出，儘管 Postgres 存在至少三種現有全文檢索索引，但它們都無法滿足開發者對速度、功能完整性以及在高併發和複雜查詢環境下可靠性的所有要求。TIN 的開發旨在填補這些空白，提供一個能同時支援所有關鍵特性的解決方案。</p>
+</details>
+
+<details>
+  <summary>對於應用程式開發者來說，使用 TIN 主要能帶來哪些好處？</summary>
+  <p>開發者可以使用 TIN 構建多種搜尋功能，例如電商平台的熱門商品搜尋、法律查詢平台的關鍵字文件檢索或照片標籤的精確計數。TIN 提供了極快的性能、豐富的查詢功能以及對持續更新的良好支持，確保查詢結果的即時性和準確性。</p>
+</details>
+
+<details>
+  <summary>TIN 相較於其他解決方案，是如何實現其顯著的速度提升的？</summary>
+  <p>TIN 的高性能主要歸因於其核心設計：使用 Postgres 的 ctid 值作為文件識別符。這項選擇避免了在索引段合併時重新編號文件的問題，從而大大減少了寫入放大效應，節省了大量的 CPU 和 I/O 成本，使其在基準測試中至少快了 8 倍。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p29-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 30 / 30 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin: full-text search for Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-20-28f5c2dee5-p7-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-09-20-28f5c2dee5-p12-sans-l.html">大</a><a class="pref-family" href="2026-09-20-28f5c2dee5-p10.html">切換為襯線</a></p>
+
+
+<h1>Tin: full-text search for Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 10 / 41 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p9-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p11-sans.html">下一頁 →</a>
+<span class="pager-num">第 10 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">For each scenario, we measured the performance of TIN v1.0.2 against all the other Postgres text-search indexes that were capable of running the workload at all: ParadeDB v0.25.2, pg_textsearch v1.4.0, and the GIN index built into Postgres v18.6. Aside from TIN, only ParadeDB was able to complete all of the benchmarks.</p>
+
+<p class="fulltext">Index build time and size</p>
+
+<p class="fulltext">Indexes range from 33% to 61% of the size of the corpus, and they took from 8 to 129 minutes to prepare, build, and finalize. The three engines other than TIN failed with the container's configured 32 GB limit, so for index builds only, we increased the available RAM as shown in the table. Before running queries, we set the container back to 32 GB of RAM for everyone.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p9-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p11-sans.html">下一頁 →</a>
+<span class="pager-num">第 10 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

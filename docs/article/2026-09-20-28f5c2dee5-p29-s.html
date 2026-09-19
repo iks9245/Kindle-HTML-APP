@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin: full-text search for Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-20-28f5c2dee5-p39.html">中</a><a href="2026-09-20-28f5c2dee5-p49-l.html">大</a><a class="pref-family" href="2026-09-20-28f5c2dee5-p29-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Tin: full-text search for Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 29 / 30 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p28-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p30-s.html">下一頁 →</a>
+<span class="pager-num">第 29 / 30 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">TIN does not suffer the renumbering problem nor its downstream write-amplification effects.</p>
+
+<p class="fulltext">Because TIN uses Postgres' ctid values as its document identifiers, there is nothing to renumber. A posting like (190, 17) means the same thing in every segment. Page-level and offset-level bitmaps mean the same thing in every segment. When TIN merges segments, many bitmaps from each old segment can be reused intact in the new segment. They don't have to be recompressed or even copied; TIN can simply transfer ownership of bitmaps stored on disk from the old segments to the new one. This reduces write amplification and saves most of the CPU and I/O costs normally associated with merging segments.</p>
+
+<p class="fulltext">Summary</p>
+
+<p class="fulltext">So that's why TIN is at least 8× faster in every benchmark: the downstream effects of choosing ctid as the native format for each posting in the index.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p28-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p30-s.html">下一頁 →</a>
+<span class="pager-num">第 29 / 30 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin: full-text search for Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-20-28f5c2dee5-p13.html">中</a><a href="2026-09-20-28f5c2dee5-p16-l.html">大</a><a class="pref-family" href="2026-09-20-28f5c2dee5-p10-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Tin: full-text search for Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 10 / 30 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p9-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p11-s.html">下一頁 →</a>
+<span class="pager-num">第 10 / 30 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Disjunction queries with concurrent writes</p>
+
+<p class="fulltext">Our third result compares TIN against both ParadeDB and pg_textsearch, for a workload with disjunction queries, top-10 results by BM25 score, and a concurrent client targeting 1,000 UPDATE queries per second. TIN handles 36× as many queries as pg_textsearch and 57× as many queries as ParadeDB, with p99 latencies 24× and 36× lower, respectively. Over the course of a ten-minute run, TIN completes 270,279 updates, while ParadeDB completes 185,584, and pg_textsearch completes only 735.</p>
+
+<p class="fulltext">ParadeDB's approach to accepting writes sacrifices read throughput and latency. pg_textsearch maintains the same 3.5 QPS for readers both with and without writes because continuous read traffic prevents write traffic from ever getting the locks it needs, so writes stall after just a few seconds. GIN is again absent because it runs out of memory on disjunction queries.</p>
+
+<p class="fulltext">When the index fits in memory</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p9-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p11-s.html">下一頁 →</a>
+<span class="pager-num">第 10 / 30 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

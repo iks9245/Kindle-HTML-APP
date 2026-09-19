@@ -12,44 +12,44 @@
 
 <h1>每日深讀</h1>
 <p class="meta">
-2026-09-19 ｜ 本篇：Claude Code now reads AGENTS.md if there is no Claude.md
+2026-09-20 ｜ 本篇：Tin: full-text search for Postgres
  ｜ <a href="index-s.html">首頁</a>
- ｜ <a href="archive/2026-09-19-s.html">當天文摘</a>
+ ｜ <a href="archive/2026-09-20-s.html">當天文摘</a>
  ｜ <a href="archive/index-s.html">存檔列表</a>
- ｜ <a href="article/2026-09-19-9b0bea9a8f-s.html">讀全文</a>
- ｜ <a href="https://code.claude.com/docs/en/changelog">原文網頁</a>
+ ｜ <a href="article/2026-09-20-28f5c2dee5-s.html">讀全文</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
 </p>
 
 
 
 <h2>脈絡</h2>
-<p>這篇文章是一份關於「Claude Code」工具的詳細更新日誌，涵蓋了從2025年4月到2026年9月的一系列新增功能、改進和錯誤修復。它揭示了該工具如何透過更靈活的配置選項、強化的代理互動能力和提升的用戶體驗，將Anthropic的Claude AI整合到開發工作流程中。這些更新旨在全面提高Claude Code的穩定性、功能性以及對開發者的友好度。</p>
+<p>Postgres用戶對高性能、功能齊全的全文檢索功能需求日益增加，但現有的解決方案未能完全滿足他們對於複雜性、整合度和速度的要求。在這樣背景下，TIN（Text INdex）被開發出來，作為一個全新的Postgres擴充功能，旨在解決這些痛點。它承諾提供一個快速、可靠且具備所有必要功能的全文檢索能力，直接內建於Postgres資料庫中。</p>
 
 
 <h2>重點</h2>
 <ul>
-<li>新增了對`AGENTS.md`文件的支援，作為`CLAUDE.md`的替代，用於配置專案中的Claude代理指令，提升了代理設定的靈活性。</li><li>大量錯誤修復顯著改善了Claude Code的整體穩定性和可靠性，包括處理內部錯誤、對話問題及各種工具行為。</li><li>引入了多項新的開發者工具和界面功能，例如新的網頁抓取工具、改進的MCP伺服器管理、檔案自動完成及自訂斜線命令。</li><li>新增了「思考模式」（如「think」、「ultrathink」），讓Claude能進行更深入的規劃與推理，以應對複雜任務。</li><li>強化了Claude應用程式閘道器和外掛程式的配置選項，賦予用戶更大的控制權和定制能力。</li>
+<li>TIN是一個為Postgres設計的全文檢索擴充功能，支援布林、詞組、模糊、萬用字元及正則表達式等多種進階查詢類型。</li><li>它解決了現有Postgres全文檢索方案的不足，能無縫處理JOIN、複雜WHERE子句、連續更新、複製與交易可見性等核心資料庫功能。</li><li>TIN的獨特之處在於它利用Postgres的ctid（元組ID）作為文件識別符，這消除了在索引合併時重新編號的性能瓶頸。</li><li>這項ctid設計極大地減少了寫入放大和CPU/I/O開銷，使其在基準測試中比其他方案快至少8倍。</li><li>TIN適用於廣泛的應用場景，包括電商產品搜尋、法律文件檢索的非排名結果，以及精確計數的標籤查詢。</li>
 </ul>
 
 
 <h2>影響與延伸</h2>
-<p>這些更新表明Claude Code正朝著成為一個更強大、更具彈性的AI輔助開發工具邁進，特別是在管理和整合AI代理於專案中的能力。透過提供更豐富的配置選項和先進的AI推理模式，開發者將能更有效地利用Claude來解決複雜的程式設計和協作挑戰。持續的穩定性改進和新工具的加入也預示著其在開發者生態系統中將扮演更為核心的角色。</p>
+<p>TIN的推出為Postgres使用者提供了期待已久的內建高性能全文檢索功能，顯著降低了對外部檢索服務的依賴。其創新的ctid使用方式解決了長期存在的索引合併性能問題，使得在Postgres中進行即時、大規模的全文檢索變得更加可行和高效。這將賦予開發者更強大的能力，在不犧牲性能和複雜度的情況下，直接在Postgres應用中構建更靈活且功能豐富的搜尋體驗。</p>
 
 
 <h2>小辭典</h2>
 <dl class="glossary">
 
-<dt>Claude Code</dt>
-<dd>一款整合Anthropic的Claude AI到開發環境中的工具，支援程式碼編輯、代理互動等多種功能，旨在提升開發者的生產力。</dd>
+<dt>全文檢索 (Full-text search)</dt>
+<dd>一種搜尋技術，允許用戶在文件或資料庫的整個文本內容中搜尋關鍵字或詞組，而不僅限於預定義的欄位，提供更全面的內容搜尋能力。</dd>
 
-<dt>AGENTS.md / CLAUDE.md</dt>
-<dd>專案中用於存放給Claude AI代理指令或背景資訊的Markdown文件，指導其在專案中的行為和上下文理解。</dd>
+<dt>ctid (元組ID)</dt>
+<dd>Postgres中用於唯一識別資料表中特定行（元組）的物理位址。TIN巧妙地利用它作為文件識別符，避免了傳統索引合併中需要重新編號的問題，從而大幅提升性能。</dd>
 
-<dt>MCP (Managed Compute Platform)</dt>
-<dd>一種管理運算資源或服務的平台，在此文中指涉其伺服器配置和管理功能，可能與Claude AI的運行環境或擴展服務相關。</dd>
+<dt>BM25 (Best Match 25)</dt>
+<dd>一種在資訊檢索領域廣泛使用的排名函數，根據查詢詞在文件中的頻率、文件長度等因素來評估文件與查詢的相關性，通常用於對搜尋結果進行排序和打分。</dd>
 
-<dt>思考模式 (Thinking mode)</dt>
-<dd>Claude AI的新功能，允許其在處理請求前進行更深入、有結構的規劃和推理，以生成更精確或全面的回應。</dd>
+<dt>寫入放大 (Write Amplification)</dt>
+<dd>在資料儲存系統中，由於內部處理（如垃圾回收、數據整理或索引合併），實際寫入儲存裝置的資料量遠大於應用程式請求寫入的資料量的現象，會影響儲存性能和儲存裝置壽命。</dd>
 
 </dl>
 

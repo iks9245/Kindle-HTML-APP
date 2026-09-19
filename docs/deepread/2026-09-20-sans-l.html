@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日深讀</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-09-20-sans-s.html">小</a><a href="2026-09-20-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-09-20-l.html">切換為襯線</a></p>
+
+<h1>每日深讀</h1>
+<p class="meta">
+2026-09-20 ｜ 本篇：Tin: full-text search for Postgres
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/2026-09-20-sans-l.html">當天文摘</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="../article/2026-09-20-28f5c2dee5-sans-l.html">讀全文</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<h2>脈絡</h2>
+<p>Postgres用戶對高性能、功能齊全的全文檢索功能需求日益增加，但現有的解決方案未能完全滿足他們對於複雜性、整合度和速度的要求。在這樣背景下，TIN（Text INdex）被開發出來，作為一個全新的Postgres擴充功能，旨在解決這些痛點。它承諾提供一個快速、可靠且具備所有必要功能的全文檢索能力，直接內建於Postgres資料庫中。</p>
+
+
+<h2>重點</h2>
+<ul>
+<li>TIN是一個為Postgres設計的全文檢索擴充功能，支援布林、詞組、模糊、萬用字元及正則表達式等多種進階查詢類型。</li><li>它解決了現有Postgres全文檢索方案的不足，能無縫處理JOIN、複雜WHERE子句、連續更新、複製與交易可見性等核心資料庫功能。</li><li>TIN的獨特之處在於它利用Postgres的ctid（元組ID）作為文件識別符，這消除了在索引合併時重新編號的性能瓶頸。</li><li>這項ctid設計極大地減少了寫入放大和CPU/I/O開銷，使其在基準測試中比其他方案快至少8倍。</li><li>TIN適用於廣泛的應用場景，包括電商產品搜尋、法律文件檢索的非排名結果，以及精確計數的標籤查詢。</li>
+</ul>
+
+
+<h2>影響與延伸</h2>
+<p>TIN的推出為Postgres使用者提供了期待已久的內建高性能全文檢索功能，顯著降低了對外部檢索服務的依賴。其創新的ctid使用方式解決了長期存在的索引合併性能問題，使得在Postgres中進行即時、大規模的全文檢索變得更加可行和高效。這將賦予開發者更強大的能力，在不犧牲性能和複雜度的情況下，直接在Postgres應用中構建更靈活且功能豐富的搜尋體驗。</p>
+
+
+<h2>小辭典</h2>
+<dl class="glossary">
+
+<dt>全文檢索 (Full-text search)</dt>
+<dd>一種搜尋技術，允許用戶在文件或資料庫的整個文本內容中搜尋關鍵字或詞組，而不僅限於預定義的欄位，提供更全面的內容搜尋能力。</dd>
+
+<dt>ctid (元組ID)</dt>
+<dd>Postgres中用於唯一識別資料表中特定行（元組）的物理位址。TIN巧妙地利用它作為文件識別符，避免了傳統索引合併中需要重新編號的問題，從而大幅提升性能。</dd>
+
+<dt>BM25 (Best Match 25)</dt>
+<dd>一種在資訊檢索領域廣泛使用的排名函數，根據查詢詞在文件中的頻率、文件長度等因素來評估文件與查詢的相關性，通常用於對搜尋結果進行排序和打分。</dd>
+
+<dt>寫入放大 (Write Amplification)</dt>
+<dd>在資料儲存系統中，由於內部處理（如垃圾回收、數據整理或索引合併），實際寫入儲存裝置的資料量遠大於應用程式請求寫入的資料量的現象，會影響儲存性能和儲存裝置壽命。</dd>
+
+</dl>
+
+
+
+</div>
+</body>
+</html>

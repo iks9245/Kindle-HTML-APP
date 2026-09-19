@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin: full-text search for Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-20-28f5c2dee5-p7-s.html">小</a><span class="pref-on">中</span><a href="2026-09-20-28f5c2dee5-p11-l.html">大</a><a class="pref-family" href="2026-09-20-28f5c2dee5-p9-sans.html">切換為無襯線</a></p>
+
+
+<h1>Tin: full-text search for Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 9 / 41 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p8.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p10.html">下一頁 →</a>
+<span class="pager-num">第 9 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">To drive the search traffic against the Postgres containers, we used the ParadeDB Benchmarker. We have a forked version that pre-warms before beginning measurement and adds metrics for bytes read and WAL bytes written. We left all Postgres parameters at the defaults that the Benchmarker supplies, except for three: we set max_parallel_workers to 8 (from 40), shared_buffers to 24 GB (from 128 MB), and maintenance_work_mem to 24 GB (from 64 MB), to best match the resources of the container. We ran the Benchmarker on the same EC2 instance as the target Postgres server, to ensure that network latency did not impact the measurements.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p8.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p10.html">下一頁 →</a>
+<span class="pager-num">第 9 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

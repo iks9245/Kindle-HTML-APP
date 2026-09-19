@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin: full-text search for Postgres</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-20-28f5c2dee5-p26-s.html">小</a><span class="pref-on">中</span><a href="2026-09-20-28f5c2dee5-p45-l.html">大</a><a class="pref-family" href="2026-09-20-28f5c2dee5-p36-sans.html">切換為無襯線</a></p>
+
+
+<h1>Tin: full-text search for Postgres</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 36 / 41 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://planetscale.com/blog/introducing-tin">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p35.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p37.html">下一頁 →</a>
+<span class="pager-num">第 36 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Not all data is static, of course, and in the case of mutated heaps, TIN does additional optimizations to ensure it's only counting visible rows by performing direct intersections with Postgres' visibility map. TIN's page-level bitmaps are exactly the right mechanism to intersect efficiently against Postgres visibility maps, which are also page-level bitmaps. Only ctids on not-all-visible pages need to be checked against the heap. Normally, a Postgres index returns all ctids that match regardless of visibility, and the Postgres executor checks visibility for each one. TIN plans custom scans that move visibility checks into TIN itself, where they can take advantage of vector instructions on page-level bitmaps.</p>
+
+<p class="fulltext">VACUUM and TIN's liveness bitmap</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-20-28f5c2dee5-p35.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-20-28f5c2dee5-p37.html">下一頁 →</a>
+<span class="pager-num">第 36 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
