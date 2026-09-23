@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAML: A fractal of bad design</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-23-766be4c87b-p11-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-09-23-766be4c87b-p18-sans-l.html">大</a><a class="pref-family" href="2026-09-23-766be4c87b-p15.html">切換為襯線</a></p>
+
+
+<h1>SAML: A fractal of bad design</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 15 / 26 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-766be4c87b-p14-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-23-766be4c87b-p16-sans.html">下一頁 →</a>
+<span class="pager-num">第 15 / 26 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Enveloped signature concerns are a not-too-distant cousin of canonicalization. In short, if you’re trying to insert the signature into the data payload that you’re signing, you’re going to have a bad time. Let’s compare and contrast JWT and SAML in this way:</p>
+
+<p class="fulltext">In the JWT example above, the blue signature is detached from the JSON payload and delimited in the JWT with a period (“.”). In the SAML example, the Signature element is inserted (“enveloped”) in the Assertion element. The problem here is that it is very difficult to get a byte-for-byte, canonically equivalent representation of the data when you’re also modifying it! Even more so when you have a complex format like XML and complex canonicalization rules.</p>
+
+<p class="fulltext">“Kitchen-sink” design</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-766be4c87b-p14-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-23-766be4c87b-p16-sans.html">下一頁 →</a>
+<span class="pager-num">第 15 / 26 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

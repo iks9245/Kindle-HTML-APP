@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAML: A fractal of bad design</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-23-766be4c87b-p12-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-09-23-766be4c87b-p20-sans-l.html">大</a><a class="pref-family" href="2026-09-23-766be4c87b-p16.html">切換為襯線</a></p>
+
+
+<h1>SAML: A fractal of bad design</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 16 / 26 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-766be4c87b-p15-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-23-766be4c87b-p17-sans.html">下一頁 →</a>
+<span class="pager-num">第 16 / 26 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">This design deficiency essentially transposes to you aren’t gonna need it (YAGNI). It’s not an entirely fair characterization because the portions of the SAML specification that are used in the real-world have changed over the past 20 years (sorry, SOAP and artifact binding). However, the fact of the matter is that 99% of modern SAML implementations use a very similar data shape and subset of the specification. Any given SAML authentication you would encounter in the wild today probably avoids 90% of the specification. This adds significant complexity for largely unused features.</p>
+
+<p class="fulltext">If I was adding SAML support to something new, I’d consider beyond all the standard SAML checks also rejecting any message that doesn’t have the same shape as what Okta, Onelogin, Google, or Shib generates.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-766be4c87b-p15-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-23-766be4c87b-p17-sans.html">下一頁 →</a>
+<span class="pager-num">第 16 / 26 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

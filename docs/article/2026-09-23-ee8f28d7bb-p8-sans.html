@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-23-ee8f28d7bb-p7-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-09-23-ee8f28d7bb-p11-sans-l.html">大</a><a class="pref-family" href="2026-09-23-ee8f28d7bb-p8.html">切換為襯線</a></p>
+
+
+<h1>Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 8 / 10 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://foxscript.org/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-ee8f28d7bb-p7-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-23-ee8f28d7bb-p9-sans.html">下一頁 →</a>
+<span class="pager-num">第 8 / 10 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">oServer = FoxScript.Http.CreateServer()</p>
+
+<p class="fulltext">oServer.Get("/api/v1/customers/:id", LAMBDA(req, res)</p>
+
+<p class="fulltext">LOCAL lnId</p>
+
+<p class="fulltext">lnId = VAL(req.Params("id"))</p>
+
+<p class="fulltext">SELECT * FROM customer WHERE cust_id = lnId INTO CURSOR c_cust</p>
+
+<p class="fulltext">IF RECCOUNT("c_cust") > 0</p>
+
+<p class="fulltext">res.Status(200).Json(FoxScript.Data.CursorToJson("c_cust"))</p>
+
+<p class="fulltext">ELSE</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-ee8f28d7bb-p7-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-23-ee8f28d7bb-p9-sans.html">下一頁 →</a>
+<span class="pager-num">第 8 / 10 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

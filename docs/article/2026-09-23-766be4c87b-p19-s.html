@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAML: A fractal of bad design</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-23-766be4c87b-p26.html">中</a><a href="2026-09-23-766be4c87b-p32-l.html">大</a><a class="pref-family" href="2026-09-23-766be4c87b-p19-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>SAML: A fractal of bad design</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 19 / 19 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-766be4c87b-p18-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 19 / 19 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Contact us if you’re interested in a protocol design audit or would like a review of your authentication system.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>SAML 究竟是什麼，它最初的用途是什麼？</summary>
+  <p>SAML 是「安全斷言標記語言」的縮寫，它是一種基於 XML 的標記語言，用於交換安全斷言資訊。它由 OASIS 於 2002 年創建，旨在為網路服務提供一種標準化的方式，讓使用者可以透過單一登入 (SSO) 驗證身份，特別是在 Web 2.0 初期學術界和企業對此需求旺盛。</p>
+</details>
+
+<details>
+  <summary>為什麼 OpenID Connect (OIDC) 被認為是比 SAML 更好的替代方案？</summary>
+  <p>OIDC 被視為更好的替代方案，主要是因為它比 SAML 更簡單、更現代。SAML 基於複雜的 XML，尤其其 XML 簽章驗證被認為是其核心問題和安全漏洞的來源，而 OIDC 則建立在更輕量級的 JSON Web Token (JWT) 和 OAuth 2.0 框架上，這使其更容易實作和維護，也較不易出現安全設計缺陷。</p>
+</details>
+
+<details>
+  <summary>對於希望從 SAML 遷移的組織來說，有哪些建議的步驟？</summary>
+  <p>對於服務供應商 (SP)，建議直接支援 OIDC 並避免使用 SAML。對於身份或認證供應商 (IdP)，則應制定詳細的淘汰計畫，包括向客戶溝通、停止為新客戶提供 SAML 整合、為現有客戶提供 OIDC 配置替代方案，並設定一個最終停用日期。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-766be4c87b-p18-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 19 / 19 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

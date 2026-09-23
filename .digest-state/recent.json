@@ -1,51 +1,4 @@
 {
-  "2026-09-08": [
-    {
-      "source": "Hacker News",
-      "summary": "加州理工學院將於10月30日至11月1日舉辦首屆「數學馬拉松」，這是一場專注於研究級數學的駭客松。該活動旨在集結全球頂尖數學人才，利用前沿AI模型解決開放性猜想並建立新的數學理論，以探討AI如何加速數學研究及重新定義數學家的角色。\n近年來，AI在純粹數學領域取得了突破性進展，例如推翻了愛多士的平面單位距離猜想。\n本次活動將評選並獎勵最有潛力且解釋充分的成果，並在數學界驗證後提供第二輪獎勵。\n\n主要重點：\n• AI近期在純粹數學方面取得重大突破，包括解決多個長期未解的數學問題。\n• 活動旨在探討AI對數學研究流程的加速潛力，以及數學家在AI時代的角色轉變。",
-      "title": "Caltech Mathathon – first hackathon ever devoted to research level mathematics"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "這是一個關於洛杉磯建築發展的互動式視覺化工具，展示從1880年到2026年間，每一棟現存建築物在洛杉磯建成時的樣貌。此工具並非呈現洛杉磯的完整歷史建築，而是聚焦於那些經年累月後依然存在的「倖存城市」景觀。它利用洛杉磯縣評估員的數據，讓使用者得以觀察洛杉磯如何隨時間推移，一棟棟建築地建成。\n*   此視覺化僅顯示目前仍存在的建築物，已拆除的建築不在其中。\n*   數據來源包括LARIAC 2020建築輪廓及洛杉磯縣評估員資料。",
-      "title": "Watch Los Angeles get built, one building at a time (1880–2026)"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "bzip3 作為 bzip2 的精神繼承者推出，旨在提供更高的壓縮比和更佳的性能。它採用了零階上下文混合熵編碼器、利用後綴陣列的快速 Burrows-Wheeler 變換以及基於 LZ77 風格字串匹配和 PPM 風格上下文建模的 RLE 等先進技術。根據對 Perl5 原始碼檔案的基準測試，bzip3 在特定配置下能實現比 bzip2、xz 和 zstd 更小的壓縮檔大小，並提供快速的解壓縮速度。\n* 顯著提升了文本或程式碼的壓縮效率。\n* 在與 lrzip 結合使用時，壓縮比表現尤為出色。",
-      "title": "bzip3"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "在邁阿密國際機場，一架由21 Air營運的亞馬遜貨運波音767-300飛機於週日下午衝出跑道墜毀，造成五人死亡、五人重傷。美國國家運輸安全委員會（NTSB）已尋獲飛行紀錄器，並將其送往總部進行評估，但目前首要任務仍是罹難者遺體的復原。這起事故發生在勞動節假期週末，造成嚴重破壞與機場部分關閉，NTSB正調查事故原因，以期未來避免類似悲劇。\n- 事故飛機在衝出跑道後撞上導航設備、兩輛車，最終停在跑道外約394公尺處。\n- NTSB將特別檢視跑道是否應配備工程材料攔截系統（EMAS）。",
-      "title": "Flight recorders recovered from 'devastating' Amazon cargo plane crash"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "在被佔領的約旦河西岸，巴勒斯坦的阿爾穆蓋爾村莊，由於定居者襲擊和以色列部隊相關暴力的急劇增加，當地家長對孩子們重返校園感到極度擔憂。今年以來，已有六人（包括阿爾穆蓋爾男校的三名學生）在定居者相關暴力中喪生，其中一名14歲學生在校門外被定居者槍殺。不斷升級的暴力促使學校安裝鐵絲網並加固校門，同時家長自願站崗守護，凸顯該地區教育和安全面臨的嚴重日常威脅。儘管國際社會對以色列的壓力日益增加，以色列定居點的擴張仍使局勢更加惡化。\n- 學童死亡人數增加，校園安全令人堪憂。\n- 定居者襲擊頻繁，迫使學校與社區採取自衛措施。",
-      "title": "Palestinian parents fear for children's lives at school as settler attacks grow"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "德國極右翼政黨「德國另類選擇黨」（AfD）在東部薩克森-安哈爾特邦的地方選舉中取得歷史性勝利，距離絕對多數僅差三席。AfD現正要求其他政黨與其合作組建政府，聲稱「民主的要求」如此，儘管大多數德國主要政黨拒絕與其合作，這導致當地政局陷入僵局。此次勝利意義重大，因為自二戰以來，從未有極右翼政黨掌控德國邦政府，此舉將賦予其掌管警政與地方教育的權力。\n\n關鍵要點：\n* AfD的爭議政策包括將難民兒童分班和大規模驅逐移民。\n* 薩克森-安哈爾特邦的選舉結果被視為對整個德國發出的強烈信號，並引發國際關注。",
-      "title": "Germany's far-right AfD says 'democracy demands' parties work with them after state election win"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "鹈鹕星云（IC 5070）是一个活跃的恒星形成区域，其气体云正在演化。來自美國猶他州的深空影像經過25小時曝光，捕捉到其細膩的絲狀塵埃。年輕恆星的能量正將星雲中的冷氣體轉化為熱氣體，形成清晰的電離前沿，預計數百萬年後，其外觀將與現在截然不同。\n關鍵點：\n- 與北美洲星雲被分子雲隔開。\n- 電離前沿是冷熱氣體轉化的可見邊界。",
-      "title": "APOD: 2026 September 7 – The Pelican Nebula in Gas, Dust, and Stars"
-    },
-    {
-      "source": "NASA Breaking News",
-      "summary": "在2026年8月24日，NASA-USGS Landsat 8衛星在南極圈附近的桑德斯島（Saunders Island）清晰地捕捉到麥可山（Mount Michael）火山的活躍景象，揭示其山頂火山口存在一個持續的熔岩湖。這張影像透過紅外訊號顯示了熱量，並有火山羽流和變暗的雪，證實了這個偏遠火山正在持續活動。麥可山的熔岩湖是一種罕見的現象，全球只有少數火山擁有此特徵，因此衛星監測對理解其活動至關重要。\n\n* 麥可山位於南桑威奇群島，地處偏遠，科學家主要仰賴衛星數據進行研究。\n* 該火山的熔岩湖特性是透過分析Landsat、Sentinel和ASTER等衛星長達30年的熱異常數據而確認。",
-      "title": "A Bright Spot at Mount Michael"
-    },
-    {
-      "source": "Aeon",
-      "summary": "這篇文章探討了阿提米絲二號任務期間，太空人Reid Wiseman拍攝並由Reddit用戶組合成的地球夜面縮時影像。知名YouTuber Hank Green指出，這組影像與「地球升起」或「黯淡藍點」等過往太空影像一樣令人敬畏，但其核心訊息截然不同。過去的影像強調人類的渺小，而這組新影像透過自然與人造現象的交織，展現了人類日益增長的重要性——無論是好是壞。\n\n*   不同於以往強調人類渺小的觀點，此影像聚焦於人類對地球的巨大影響力。\n*   它以視覺方式呈現了自然界與人類活動在地球夜間景觀中的共存與互動。",
-      "title": "The planet is… up to something"
-    }
-  ],
   "2026-09-09": [
     {
       "source": "Hacker News",
@@ -2511,6 +2464,268 @@
       "summary": "這篇文章深入探討了羅馬哲學家西塞羅所採用的「學術懷疑主義」及其「可信意見」（probabilia）的概念。這種方法提供了一種以校準過的信心持有信念的方式，既避免了僵化的教條主義，也避免了虛無的懷疑論。它強調根據現有最佳證據採取行動，同時保持對修正的開放態度，這對於科學發展、健康的民主運作和個人成長都至關重要。\n*   「可信意見」（probabilia）指的是「值得認可的」，而非現代統計學上的「機率」。\n*   信念應根據其經受審查的程度進行分級，並隨證據更新。\n*   這是一種「分級、可檢驗的程序」，而非籠統的開放心態。",
       "summary_secondary": "",
       "title": "He was probably right"
+    }
+  ],
+  "2026-09-23": [
+    {
+      "category": "科技 Tech",
+      "has_full_text": false,
+      "link": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "以色列軍方聲稱其攻擊目標是哈馬斯武裝分子和基礎設施。調查發現，是AI系統在識別目標時出現過度依賴的情況，可能將非軍事目標誤判為合法目標。",
+          "question": "以色列聲稱的原始目標是什麼，而AI系統在這次襲擊中扮演了什麼角色？"
+        },
+        {
+          "answer": "此事件引發了對軍事AI系統的道德審查和國際人道法適用性的嚴重關切。它強調了確保AI系統的透明度、可解釋性以及不可或缺的人類監督，以避免類似悲劇。",
+          "question": "這起事件對軍事領域使用AI的倫理與規範有何影響？"
+        },
+        {
+          "answer": "五角大廈的報告暗示需加強對軍事AI系統的倫理審查和人類監督。國際社會正持續討論制定關於自主武器系統的國際規範，以確保AI的部署符合負責任和道德原則。",
+          "question": "國際社會或相關組織為避免未來發生類似AI誤擊事件，提出了哪些可能的應對措施？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-09-23-64bb0df64d",
+      "source": "Hacker News",
+      "summary": "美國五角大廈的內部調查報告指出，以色列軍方於2023年10月對加薩走廊一所聯合國學校的飛彈襲擊，造成數十名平民（多為婦女和兒童）死亡，其中一個關鍵因素是過度依賴人工智慧（AI）系統進行目標識別。此事件突顯了在軍事行動中，AI系統的誤判可能導致嚴重的人道災難，並強調了足夠人類監督的重要性。\n* AI在戰場上的應用存在誤判風險，可能造成無辜平民傷亡。\n* 軍事AI系統需要更嚴格的人類監督與倫理審查機制。",
+      "summary_secondary": "",
+      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://foxscript.org/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "FoxDev Studio 確保大多數現有 FoxPro 檔案能直接運行，但它將原有的 32 位元檔案處理限制提升至 64 位元。這意味著，一旦資料表在 FoxDev Studio 中增長超過 2GB，其內部結構會被更新以支持更大容量，從而使其與僅支持 32 位元檔案的 Visual FoxPro 不再兼容。這對仍需同時使用新舊版本的用戶來說，是一個重要的單向選擇。",
+          "question": "既然 FoxDev Studio 承諾無需重寫或轉換，那麼為什麼文中又提到超過 2GB 的資料表將無法在舊版 Visual FoxPro 中開啟，這對用戶有何影響？"
+        },
+        {
+          "answer": "FoxDev Studio 主要解決了 Visual FoxPro 的 32 位元記憶體和檔案大小限制，使其能夠處理數百 GB 的資料，並在現代 64 位元系統上高效運行。引入 FoxScript 則讓 FoxPro 應用程式能夠輕鬆處理 HTTP 請求，例如構建 RESTful API 或 Web 服務，將傳統的桌面應用擴展到現代網路環境中，賦予其新的生命力。",
+          "question": "FoxDev Studio 的復興主要解決了 Visual FoxPro 哪些長期存在的痛點？引入 FoxScript 等新功能將為 FoxPro 應用帶來哪些現代化可能性？"
+        },
+        {
+          "answer": "採用 Rust 和 WebAssembly 技術為 FoxPro 應用帶來了多重優勢。Rust 提供了更高的性能和記憶體安全，而 WebAssembly 則確保了應用程式可以自包含、快速啟動並在不同的環境中運行，提供了一個比原有 P-code 執行環境更現代、更高效且更可靠的基礎。",
+          "question": "FoxDev Studio 採用 Rust 編譯器和 WebAssembly 運行時，這項技術選擇為 FoxPro 的應用程式帶來了哪些具體的技術優勢？"
+        }
+      ],
+      "read_minutes": 5,
+      "slug": "2026-09-23-ee8f28d7bb",
+      "source": "Hacker News",
+      "summary": "FoxDev Studio 宣布成功復興了微軟於 2007 年終止的 FoxPro 程式語言，推出「FoxDev Studio」開發環境。這個新平台允許用戶直接執行現有的 FoxPro 專案、表單和資料表，無需任何重寫或轉換，直接讀取舊檔案。\n它將 Visual FoxPro 的 32 位元限制提升至 64 位元架構，顯著擴大了檔案容量上限，並引入了現代化的 Rust/WebAssembly 運行時和支援網路請求的 FoxScript 功能，為老舊應用程式帶來新生。\n\n* 直接開啟和編輯現有 FoxPro 檔案，無需遷移。\n* 克服 32 位元限制，支援 64 位元處理及數百 GB 的資料表容量。\n* 採用 Rust/WebAssembly 運行時，提供現代且高效的執行環境。\n* 引入 FoxScript 擴展，使 FoxPro 應用程式能處理 HTTP 請求。",
+      "summary_secondary": "",
+      "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "SAML 是「安全斷言標記語言」的縮寫，它是一種基於 XML 的標記語言，用於交換安全斷言資訊。它由 OASIS 於 2002 年創建，旨在為網路服務提供一種標準化的方式，讓使用者可以透過單一登入 (SSO) 驗證身份，特別是在 Web 2.0 初期學術界和企業對此需求旺盛。",
+          "question": "SAML 究竟是什麼，它最初的用途是什麼？"
+        },
+        {
+          "answer": "OIDC 被視為更好的替代方案，主要是因為它比 SAML 更簡單、更現代。SAML 基於複雜的 XML，尤其其 XML 簽章驗證被認為是其核心問題和安全漏洞的來源，而 OIDC 則建立在更輕量級的 JSON Web Token (JWT) 和 OAuth 2.0 框架上，這使其更容易實作和維護，也較不易出現安全設計缺陷。",
+          "question": "為什麼 OpenID Connect (OIDC) 被認為是比 SAML 更好的替代方案？"
+        },
+        {
+          "answer": "對於服務供應商 (SP)，建議直接支援 OIDC 並避免使用 SAML。對於身份或認證供應商 (IdP)，則應制定詳細的淘汰計畫，包括向客戶溝通、停止為新客戶提供 SAML 整合、為現有客戶提供 OIDC 配置替代方案，並設定一個最終停用日期。",
+          "question": "對於希望從 SAML 遷移的組織來說，有哪些建議的步驟？"
+        }
+      ],
+      "read_minutes": 12,
+      "slug": "2026-09-23-766be4c87b",
+      "source": "Hacker News",
+      "summary": "「安全斷言標記語言」(SAML) 是一種自 2002 年起廣泛應用於學術界和企業 IT 部門的認證協議，為單一登入 (SSO) 服務奠定了基礎。然而，由於其設計上的複雜性，特別是在 XML 簽章驗證方面的脆弱性，作者認為 SAML 已成為「糟糕設計的碎形」，是時候退役了。文章呼籲組織應轉向現代替代方案，例如 OpenID Connect (OIDC)。\n- SAML 的核心問題在於其基於 XML 的複雜性及 XML 簽章驗證的不可靠性，導致實作困難且存在安全隱患。\n- OpenID Connect (OIDC) 因其更簡潔、更現代化的設計，被推薦為新整合和遷移的首選。",
+      "summary_secondary": "",
+      "title": "SAML: A fractal of bad design"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/cqevwpmvpekeo?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "該夥伴關係將利用人工智慧技術來保護關鍵國家基礎設施。文章中提到，這項合作是繼英美兩國首次成功從英國無人潛航器發射美國魚雷後宣布的，表明其可能涉及水下防禦等尖端科技應用，例如保護深海數據電纜。",
+          "question": "這個新的AI與自主合作夥伴關係具體將如何保護關鍵國家基礎設施？"
+        },
+        {
+          "answer": "這項突破標誌著水下作戰能力的一個重大進展，使其不再僅限於載人潛艇。它是首次從無人潛水器發射魚雷的嘗試，被視為保護深海數據電纜等重要基礎設施的有效手段，提高了英美兩國在海域安全和監測方面的能力。",
+          "question": "英美首次從無人潛航器發射魚雷的「突破」有何重要意義？"
+        },
+        {
+          "answer": "查戈斯群島（包括迪亞哥加西亞島）是英屬印度洋領地，但模里西斯聲稱擁有主權，且該島嶼設有重要的美英聯合軍事基地。英國政府曾尋求將群島歸還模里西斯，然後租賃回迪亞哥加西亞基地的運營權。然而，此協議因川普在四月撤回支持而無限期暫停，文章未詳述其撤回支持的具體原因。",
+          "question": "為什麼查戈斯群島的協議會被川普撤回支持而暫停？這個問題的背景是什麼？"
+        }
+      ],
+      "read_minutes": 3,
+      "slug": "2026-09-23-90bc39ceb7",
+      "source": "BBC World News",
+      "summary": "英國首相安迪·伯納姆在紐約市舉行的聯合國大會期間，於週二首次與美國總統唐納德·川普進行面對面會談。伯納姆期望雙方能找到「共同點」，以加強英美兩國關係，並推動人工智慧合作、烏克蘭和平及中東衝突解決等議題。他還將宣布英美啟動一項新的AI與自主合作夥伴關係，專注於利用AI技術保護關鍵國家基礎設施。\n*   英美兩國首次成功從英國無人潛航器發射美國魚雷，這項突破被視為保護深海數據電纜等重要基礎設施的里程碑。\n*   涉及查戈斯群島與模里西斯的協議因川普撤回支持而暫停，伯納姆已承諾將努力尋求解決方案。",
+      "summary_secondary": "",
+      "title": "Burnham expects to find 'common ground' with Trump in first meeting"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/c9dr74g32g8go?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "美國總統川普曾聲稱格陵蘭具有重要的戰略國防位置和豐富的礦產資源，並擔憂其易受俄羅斯和中國等對手的影響。因此，加強軍事存在被視為鞏固美國國家安全和其在北極地區影響力的一部分。",
+          "question": "美國為何如此積極地加強其在格陵蘭的軍事存在？"
+        },
+        {
+          "answer": "該協議明確禁止非北約國家在格陵蘭建立軍事設施，這有助於鞏固北約在北極地區的安全地位，並阻止潛在對手的影響力擴張。在不斷變化的全球安全局勢中，格陵蘭被視為北美和大西洋安全的重要組成部分。",
+          "question": "這項新協議對於更廣泛的北極地區及北約的戰略有何意義？"
+        },
+        {
+          "answer": "這些模式和技術細節指的是新基地具體的運作方式、設施配置及其他相關安排。它們的重要性在於，根據協議，這些細節仍需美國、丹麥和格陵蘭三方共同同意，確保了丹麥主權和格陵蘭自決權的維護，而非讓美國單方面決定。",
+          "question": "文章中提到的「基地模式和技術細節」為何如此重要？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-09-23-f1e92339a9",
+      "source": "BBC World News",
+      "summary": "美國、丹麥和格陵蘭在聯合國大會上簽署了一項新的國防協議，允許美國在格陵蘭建立兩個新的軍事基地，並擴建其現有的皮圖菲克太空基地。此協議更新了1951年的防禦協定，顯著加強了美國在北極地區的軍事存在，並明確禁止非北約國家在格陵蘭建立軍事設施。這項協議解決了前美國總統川普曾試圖購買格陵蘭所引發的緊張局勢，同時重申了丹麥的主權和格陵蘭的自決權。\n*   新基地將設於格陵蘭南部的納爾薩蘇瓦克 (Narsarsuaq) 和東部的梅斯特斯維格 (Mestersvig)。\n*   該協議被視為美國、丹麥和格陵蘭的三贏局面，並對歐洲及北約的安全具有重要意義。",
+      "summary_secondary": "",
+      "title": "US to build two military bases in Greenland under new deal with Denmark"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/c52e0ywl9pr7o?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "川普將目前與伊朗的衝突歸因於阻止德黑蘭取得核武器，並在演講中表示他正權衡是與伊朗達成協議讓他們重建，還是迅速「殲滅」他們。他強調了其「以實力求和平」的外交理念。",
+          "question": "川普在聯合國大會上對伊朗發出「殲滅」威脅的具體原因是什麼？"
+        },
+        {
+          "answer": "這正體現了川普的「脅迫外交」策略，即在保持談判管道暢通的同時，威脅施加壓倒性武力。他認為這種雙管齊下的方法可能促使伊朗妥協，並曾預測伊朗協議或許能在11月選舉後達成。",
+          "question": "儘管川普發出嚴厲威脅，美國官員仍與伊朗代表團會面，這顯示了什麼外交策略？"
+        },
+        {
+          "answer": "川普的演講內容廣泛，除了伊朗議題，他還強調了美國的經濟成就、拒絕「全球政府」理念、誓言促成俄烏和平，以及確保美國在人工智慧領域的領先地位。此外，他還簽署了加強美國在格陵蘭軍事存在的協議，並批評了古巴。",
+          "question": "除了伊朗問題，川普在這次聯合國大會的演講中還提及了哪些其他重要的國際或國內事務？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-09-23-67154007da",
+      "source": "BBC World News",
+      "summary": "美國總統川普週二在紐約聯合國大會上，對伊朗發出若衝突未解將「殲滅」的威脅，此舉突顯其「以實力求和平」的脅迫外交策略。然而，同時美國官員也在大會場邊與伊朗代表團進行了「富有成效」的會談，顯示了其在外交上的雙重手法。\n- 川普在演講中也談及拒絕「全球政府」、承諾促成俄烏和平，並確保美國在人工智慧領域的領先地位。\n- 他還簽署了加強美國在格陵蘭軍事存在的協議，並批評古巴為「失敗國家」。",
+      "summary_secondary": "",
+      "title": "Trump threatens to 'annihilate' Iran in UN speech as officials meet on sidelines"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/organizations/ochmo/risks-of-decompression-sickness-and-venous-thromboembolism-during-spaceflight-and-patent-foramen-ovale-implications/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "減壓病（DCS）是太空人因快速減壓導致體內氣體形成氣泡的風險。靜脈血栓栓塞（VTE）指血管內血栓形成。而開放性卵圓孔（PFO）是心臟結構上的小開口，可能讓氣泡或血栓從靜脈進入動脈循環，這三者都可能在太空飛行中危及太空人健康。",
+          "question": "「減壓病（DCS）」、「靜脈血栓栓塞（VTE）」和「開放性卵圓孔（PFO）」在太空飛行中具體指的是什麼風險？"
+        },
+        {
+          "answer": "工作組認為PFO與靜脈血栓栓塞（VTE）的形成或其併發症沒有顯著關聯，因此不建議改變現有的太空人選拔標準。對於較大的PFO（3級或以上），專家意見不一，但工作組未建議普遍篩查或排除，而是強調通過協議設計和持續數據收集來進行風險緩解。如果太空人接受評估，應告知其PFO狀態並提供封閉手術的選擇。",
+          "question": "關於開放性卵圓孔（PFO），工作組對太空人的選拔標準和處理方式有何具體建議？"
+        },
+        {
+          "answer": "明確的藥物使用指南至關重要，因為某些止痛藥（如乙醯胺酚和布洛芬）可能掩蓋減壓病（DCS）的症狀，延誤診斷和治療。此外，指南也需涵蓋阿司匹林等藥物在預防DCS和緩解疼痛方面的使用。制定清晰的指南有助於確保太空人在EVA期間的健康與安全，並能及時應對潛在的醫療問題。",
+          "question": "為何艙外活動（EVA）前後的藥物使用需要明確的臨床指南？這對太空人的安全有何影響？"
+        }
+      ],
+      "read_minutes": 2,
+      "slug": "2026-09-23-918f955a5b",
+      "source": "NASA Breaking News",
+      "summary": "NASA的一個專家工作組最近審查了與其Artemis（阿提米絲）月球及更遠任務相關的太空飛行健康風險，特別針對太空人在艙外活動（EVA）期間可能遇到的減壓病（DCS）、靜脈血栓栓塞（VTE）及開放性卵圓孔（PFO）的影響。此工作組整合了最新數據與多項NASA報告，並提出了新的建議，以優化太空人的選拔標準、安全協議及醫療管理，旨在降低未來深空任務的風險。\n\n* 不建議因開放性卵圓孔(PFO)而改變太空人選拔標準，PFO與VTE的關聯性不高。\n* 需要制定關於EVA前後藥物使用的明確臨床指南，特別是止痛藥可能掩蓋DCS症狀。",
+      "summary_secondary": "",
+      "title": "Risks of Decompression Sickness and Venous Thromboembolism during Spaceflight and Patent Foramen Ovale Implications"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://science.nasa.gov/science-research/planetary-science/nasa-funded-research-finds-complex-life-defying-record-heat/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "真核生物細胞內有細胞核和膜狀胞器，這些複雜的結構被認為更容易在高溫下受損。過去的研究主要集中在結構較簡單的原核生物（細菌和古菌）的耐熱性，因此發現真核生物能承受如此高溫，極大地擴展了我們對複雜生命在極端環境中生存能力的認知。",
+          "question": "為什麼真核生物能在如此高溫下生存，特別有意義？與其他類型的生物有何不同？"
+        },
+        {
+          "answer": "透過研究像「瀑布火焰變形蟲」這樣的嗜極生物，科學家能更深入了解地球生命生存的生物化學和生理極限。這有助於NASA擴展地外生命探索的範圍，指導他們在條件不如地球友好的其他星球上尋找可能存在的複雜生命。",
+          "question": "這項發現如何有助於美國太空總署（NASA）的宇宙生物學研究或地外生命探索？"
+        },
+        {
+          "answer": "研究人員指出，除了溫度，生存還取決於一個包含多種相互關聯因素的完整生態系統。這包括適當的酸鹼度、氧氣水平、壓力、充足的水源以及食物來源。「瀑布火焰變形蟲」無法單獨生存，它需要其他生命形式的支持才能存活。",
+          "question": "除了溫度，對於這種在極端環境中生存的嗜極生物來說，還有哪些關鍵因素是不可或缺的？"
+        }
+      ],
+      "read_minutes": 5,
+      "slug": "2026-09-23-4a34e8e7a3",
+      "source": "NASA Breaking News",
+      "summary": "美國太空總署（NASA）資助的科學家在加州拉森火山國家公園發現了一種名為「瀑布火焰變形蟲」（Incendiamoeba cascadensis）的阿米巴原蟲，它能在高達攝氏63度（華氏145度）的環境下繁殖。這項發表於《細胞》期刊的發現，刷新了已知真核生物（複雜生命形式）的耐熱極限，推翻了以往對複雜細胞熱穩定性的假設。這項突破性研究極大地擴展了我們對複雜生命在地球及其他星球上生存潛力的理解。\n* 真核生物耐熱上限創新紀錄。\n* 擴展對複雜生命在極端環境下生存能力及地外生命搜尋的認知。",
+      "summary_secondary": "",
+      "title": "NASA-Funded Research Finds Complex Life Defying Record Heat"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/image-article/nasas-chandra-finds-unusual-objects-in-pinwheel-galaxy/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "文章並未明確說明這些天體是什麼，只指出它們具有異常的低能量X射線和強烈紫外線輻射的獨特組合。天文學家認為它們可能代表了一種新型或未知的宇宙現象，有待進一步研究以確定其確切性質。",
+          "question": "這些新發現的天體究竟是什麼？"
+        },
+        {
+          "answer": "文章中並未具體說明這些天體有望解決的兩個長期存在的宇宙物理學問題是什麼。讀者可能需要查閱更多相關研究或報告以獲取這些詳細資訊，因為這些問題是天體物理學界的重要討論焦點。",
+          "question": "這些天體有望解決哪兩個長期存在的宇宙物理學問題？"
+        },
+        {
+          "answer": "錢德拉X射線天文台是透過偵測它們發出的X射線來發現這些天體的，特別是其異常低的X射線能量。結合其強烈的紫外線輻射，這些獨特的訊號使這些天體從周圍環境中脫穎而出，引起了研究人員的關注。",
+          "question": "錢德拉X射線天文台是如何探測到這些天體的？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-09-23-c4b4bc30a5",
+      "source": "NASA Breaking News",
+      "summary": "美國NASA的錢德拉X射線天文台的研究人員發現了一些不尋常的天體，這些天體釋放出異常低的X射線能量，但卻有強烈的紫外線輻射。這些天體在其他星系中被發現，其中包括M101（風車星系），相關圖像於2026年9月9日發布。天文學家認為，這些新發現可能對於解決兩個長期存在的宇宙物理學問題有所幫助。\n\n* 特徵：低能量X射線和高強度紫外線輻射的獨特組合。\n* 意義：有望解開兩個天體物理學的長期謎團。",
+      "summary_secondary": "",
+      "title": "NASA’s Chandra Finds Unusual Objects in Pinwheel Galaxy"
+    },
+    {
+      "category": "長文 Long Reads",
+      "has_full_text": true,
+      "link": "https://aeon.co/essays/a-scientists-search-for-answers-about-amanita-muscaria-gummies",
+      "long_form": true,
+      "qa": [
+        {
+          "answer": "飛蠅傘及其活性成分鵝膏蕈醇的法律地位比裸蓋菇素複雜。許多此類產品並未明確列入受控物質清單，製造商因此得以鑽法律漏洞，將它們作為「膳食補充劑」或「草藥」在一般零售管道銷售。",
+          "question": "為何飛蠅傘產品能在不受嚴格監管的情況下銷售？其法律地位為何？"
+        },
+        {
+          "answer": "裸蓋菇素轉化為裸蓋菇素，主要作用於血清素 5-HT2A 受體，增強皮質神經活動，導致知覺改變和連結性增強。而鵝膏蕈醇則主要作用於 GABA-A 受體，抑制神經活動，產生鎮靜、混亂和夢境般的體驗，而非典型的迷幻效果。",
+          "question": "裸蓋菇素和鵝膏蕈醇對大腦的作用機制有何核心差異？"
+        },
+        {
+          "answer": "消費者應避免購買和使用標示不清、來源不明的「魔菇」產品，尤其是在沒有充分安全資訊和劑量指南的情況下。由於產品可能含有未申報的危險物質，建議尋求專業醫療建議並優先選擇有嚴格監管和透明標示的替代品。",
+          "question": "考慮到這些產品缺乏透明度與潛在風險，消費者在面對「魔菇」產品時應如何應對？"
+        }
+      ],
+      "read_minutes": 19,
+      "slug": "2026-09-23-1d787579a9",
+      "source": "Aeon",
+      "summary": "這篇文章探討了飛蠅傘（Amanita muscaria）產品在美國煙草店等地的非受管制銷售問題，指出其主要活性成分鵝膏蕈醇（muscimol）與裸蓋菇素（psilocybin）在藥理作用上截然不同，前者為中樞神經抑制劑，可能導致鎮靜、混亂及潛在毒性，且缺乏現代人體劑量研究。\n\n作者作為公衛科學家，發現這些「魔菇」產品常被誤標、含有未申報的各式精神活性物質（如 psilocin、psilacetin），並已與不良反應甚至死亡案例相關聯，消費者無從得知其真實內容與風險。文章核心論點是，雖然成人應有自主權決定攝取何種物質，但製造商銷售精神活性產品時，必須提供透明的標示、準確的劑量資訊及安全證明，以防止欺騙並保障消費者健康，此為當前市場亟需彌補的標準。\n\n*   飛蠅傘與裸蓋菇素在作用機制和風險上存在根本差異，前者毒性更高，藥效難以預測。\n*   當前市場缺乏對飛蠅傘產品的透明標示、準確劑量資訊及安全證明，對消費者構成嚴重欺騙與健康風險。",
+      "summary_secondary": "",
+      "title": "Toadstools and toxins"
     }
   ]
 }

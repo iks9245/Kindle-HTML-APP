@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-23-ee8f28d7bb-p4.html">中</a><a href="2026-09-23-ee8f28d7bb-p6-l.html">大</a><a class="pref-family" href="2026-09-23-ee8f28d7bb-p4-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 4 / 9 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://foxscript.org/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-ee8f28d7bb-p3-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-23-ee8f28d7bb-p5-s.html">下一頁 →</a>
+<span class="pager-num">第 4 / 9 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Visual FoxPro compiled your program to p-code and shipped a runtime to execute it. This is the same arrangement, made again: a compiler and a bytecode interpreter written in Rust and compiled to WebAssembly, so one machine runs your code wherever the application runs. The editor checks what you type through that very compiler, so what it underlines and what the runtime refuses cannot drift apart.</p>
+
+<p class="fulltext">A running program is a fiber. When it needs something from the world outside (a message box, a modal form, the next record) it does not call out and block; it yields, the work is done while the machine is off the stack, and the answer is handed back. That is why MESSAGEBOX() stops your program without freezing the window behind it, why READ EVENTS waits without spinning, and whySetFocus can fire GotFocus, and Init can run while a form is still being built, in the order FoxPro always did it.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-23-ee8f28d7bb-p3-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-23-ee8f28d7bb-p5-s.html">下一頁 →</a>
+<span class="pager-num">第 4 / 9 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
