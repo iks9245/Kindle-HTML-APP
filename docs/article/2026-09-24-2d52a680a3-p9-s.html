@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Once Claude can measure something, it can make it faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-24-2d52a680a3-p13.html">中</a><a href="2026-09-24-2d52a680a3-p16-l.html">大</a><a class="pref-family" href="2026-09-24-2d52a680a3-p9-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Once Claude can measure something, it can make it faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 9 / 18 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://claude.dev/blog/how-we-made-claude-ai-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-24-2d52a680a3-p8-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-24-2d52a680a3-p10-s.html">下一頁 →</a>
+<span class="pager-num">第 9 / 18 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">After the event deployed, Claude read the field data and found that 31% of web page loads moved something after the page was usable, without any user interaction. From there, Claude worked through the causes by name: a header row that arrived late, a caret that slid sideways once the user’s name loaded, a list that moved when the scrollbar popped in. Claude fixed the top offenders as a batch, and when they were gone, it found the next batch.</p>
+
+<p class="fulltext">That was one thread. During the sprint, we ran more than a hundred and fifty at a time.</p>
+
+<p class="fulltext">Once the loop worked on one thread, running it on more was just a matter of opening them. Instead of closing a thread once its original request had been fulfilled, Claude would keep going. An individual thread would put up fifty, sometimes a hundred, optimization PRs. Increasingly, it was Claude, not one of us, opening new threads to chase opportunities it had found on its own, as part of a separate investigation or nightly job. Shelley, one of the engineers in the channel, observed, “[This model] is a numbers demon.”</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-24-2d52a680a3-p8-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-24-2d52a680a3-p10-s.html">下一頁 →</a>
+<span class="pager-num">第 9 / 18 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

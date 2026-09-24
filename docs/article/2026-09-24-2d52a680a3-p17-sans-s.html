@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Once Claude can measure something, it can make it faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-24-2d52a680a3-p24-sans.html">中</a><a href="2026-09-24-2d52a680a3-p31-sans-l.html">大</a><a class="pref-family" href="2026-09-24-2d52a680a3-p17-s.html">切換為襯線</a></p>
+
+
+<h1>Once Claude can measure something, it can make it faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 17 / 18 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://claude.dev/blog/how-we-made-claude-ai-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-24-2d52a680a3-p16-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-24-2d52a680a3-p18-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 17 / 18 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Once the mechanism and ambition were established, Claude got to work. Each painted frame had a budget of 8.33 milliseconds, so Claude stepped through a long reply frame by frame, timing each one to find the slow parts. It eliminated O(message length) work per chunk by memoizing finished blocks, moved tokenization logic for growing code fences to a worker, and revealed tables cell by cell.</p>
+
+<p class="fulltext">In that one thread, we landed nearly sixty PRs. Long replies blocked the main thread for about 200 milliseconds in total where they used to block it for about 750, ran on about a third of the CPU, and held 120 fps from start to finish on a 120 Hz MacBook. The 120 Hz rig itself became a nightly job, with Claude watching for regressions.</p>
+
+<p class="fulltext">When we started the sprint, we hadn’t planned to hill climb on the milliseconds between frames while streaming. But it turned out we could count them — and anything we could count, Claude could climb.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-24-2d52a680a3-p16-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-24-2d52a680a3-p18-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 17 / 18 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
