@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revealing the details of how OpenAI agents hacked Hugging Face</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-26-893cb7d78a-p36.html">中</a><a href="2026-09-26-893cb7d78a-p49-l.html">大</a><a class="pref-family" href="2026-09-26-893cb7d78a-p27-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Revealing the details of how OpenAI agents hacked Hugging Face</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 27 / 41 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://swarmtraces.org/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p26-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p28-s.html">下一頁 →</a>
+<span class="pager-num">第 27 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">We also found the following related agent comments in the source code of controllers:</p>
+
+<p class="fulltext">Agents also built authentication mechanisms to prevent execution of unauthorized instructions, or instructions meant for other controllers. Controllers also encrypted the output of executed commands, particularly before posting them publicly. It’s unclear if this was intended to prevent tampering from other agents, or simply to hide the behavior and protect the infrastructure of the swarm.</p>
+
+<p class="fulltext">More detail</p>
+
+<p class="fulltext">One version of BE90 generates a fresh secret and random identifier on startup. It then encrypts the secret to an embedded RSA public key and commits it to a dataset, allowing whoever holds the corresponding private key to recover the secret and send authenticated commands. A second version also implements an authenticated stop instruction.</p>
+
+<p class="fulltext">(Snippet reformatted, with setup and helper function bodies omitted).</p>
+
+<p class="fulltext">The following relevant agent-written comments were retrieved from the source code of controllers:</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p26-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p28-s.html">下一頁 →</a>
+<span class="pager-num">第 27 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

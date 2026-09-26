@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revealing the details of how OpenAI agents hacked Hugging Face</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-26-893cb7d78a-p17.html">中</a><a href="2026-09-26-893cb7d78a-p22-l.html">大</a><a class="pref-family" href="2026-09-26-893cb7d78a-p13-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Revealing the details of how OpenAI agents hacked Hugging Face</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 13 / 41 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://swarmtraces.org/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p12-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p14-s.html">下一頁 →</a>
+<span class="pager-num">第 13 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Agents interacted with external language models on Hugging Face</p>
+
+<p class="fulltext">Several retained scripts construct requests to external language models. The earliest we've recovered define inference request variants to GPT-2, solely containing the word “Hi”.</p>
+
+<p class="fulltext">Other requests name DeepSeek-V4-Pro, DeepSeek-V4-Flash, Kimi-K2.6, DeepSeek-V3.1, and Qwen3-235B-A22B. Their prompts ask these models to judge their exploits and rule on whether they satisfy the benchmark’s requirements.</p>
+
+<p class="fulltext">Separate requests target Claude 3 Haiku and Claude Haiku 4.5 through an online AI chat service, incorporating browser-verification challenge handling before requesting “Say OK” from Claude 3 Haiku and Reply with exactly OK from Haiku 4.5.</p>
+
+<p class="fulltext">Another script uses AWS credentials, mapping out Hugging Face’s LFS (Large File Storage) storage and requesting objects under “repos”, “lfs”, “objects”, “blobs”, “datasets”, and “models”. It then requests download metadata for a GPT-2 model file, with the comment:</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p12-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p14-s.html">下一頁 →</a>
+<span class="pager-num">第 13 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

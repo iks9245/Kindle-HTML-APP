@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revealing the details of how OpenAI agents hacked Hugging Face</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-26-893cb7d78a-p12-sans.html">中</a><a href="2026-09-26-893cb7d78a-p15-sans-l.html">大</a><a class="pref-family" href="2026-09-26-893cb7d78a-p9-s.html">切換為襯線</a></p>
+
+
+<h1>Revealing the details of how OpenAI agents hacked Hugging Face</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 9 / 41 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://swarmtraces.org/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p8-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p10-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 9 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">To read the result of the requests they made, agents used many different techniques, such as converting a server’s response into a grid of pixels within the screenshot service’s own browser. The screenshot would then capture this grid and return it back to the agents as an image, which the agents could decode back into text.</p>
+
+<p class="fulltext">We can see an early attempt at this from a recovered payload.</p>
+
+<p class="fulltext">This script makes a POST request to a submission results endpoint of an evaluation named “cybergym” hosted on Modal asking for submission records associated with the agent ID “m47push2.” The script then clears the browser’s page and writes the server’s response back onto the page, representing each bit of every character as a single pixel. By decoding the pixels back into text, the agent could read the server’s response made by code running in a completely separate browser, even while the screenshot service returned only an image.</p>
+
+<p class="fulltext">With this custom protocol, the agents were able to execute arbitrary code and receive the response, all while only having GET permissions.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p8-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p10-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 9 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

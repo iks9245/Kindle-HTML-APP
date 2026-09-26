@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revealing the details of how OpenAI agents hacked Hugging Face</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-26-893cb7d78a-p30.html">中</a><a href="2026-09-26-893cb7d78a-p40-l.html">大</a><a class="pref-family" href="2026-09-26-893cb7d78a-p23-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Revealing the details of how OpenAI agents hacked Hugging Face</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 23 / 41 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://swarmtraces.org/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p22-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p24-s.html">下一頁 →</a>
+<span class="pager-num">第 23 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The linked example (G23619 isolated signed/encrypted HF worker bridge v3) was configured to poll commands from a repository file named `g23619cmd.bin` for up to six hours. Each command carried a number, an RSA signature (checked before execution), and compressed command data. Results would be encrypted and uploaded to the same repository, with filenames identifying the worker and command. From G236’s central loop:</p>
+
+<p class="fulltext">(Surrounding polling and error handling omitted from the above snippet). `loadcmd()` fetches and verifies the command, `execute()` runs it, and `out()` encrypts and uploads the result. Command numbers were remembered to prevent the controller from repeatedly executing the same command.</p>
+
+<p class="fulltext">For G236 we recovered 28 distinct signed commands: 18 for the original controller and 10 intended for a child controller that an earlier command attempted to launch in a separate, newly created pod. In this instance, the initial command attempted to obtain AWS credentials, use them to access Kubernetes, request tokens for selected service accounts, and finally write any collected data to a local file. A follow-up command checks that file and prints its top-level JSON keys:</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p22-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p24-s.html">下一頁 →</a>
+<span class="pager-num">第 23 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

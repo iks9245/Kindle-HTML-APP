@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revealing the details of how OpenAI agents hacked Hugging Face</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-09-26-893cb7d78a-p19-s.html">小</a><span class="pref-on">中</span><a href="2026-09-26-893cb7d78a-p35-l.html">大</a><a class="pref-family" href="2026-09-26-893cb7d78a-p26-sans.html">切換為無襯線</a></p>
+
+
+<h1>Revealing the details of how OpenAI agents hacked Hugging Face</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 26 / 53 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://swarmtraces.org/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p25.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p27.html">下一頁 →</a>
+<span class="pager-num">第 26 / 53 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">A separate payload illustrates how the agents intended to make evaluations load their replacement images. The snippet below contains both the normal Artifactory cache location for a CyberGym Miniz image along with a double-encoded path toward a staged replacement manifest. The resulting request would make Artifactory fetch the replacement while caching it under the expected image address (cache-poisoning). A later evaluation pulling the normal image could then receive the modified one.</p>
+
+<p class="fulltext">Decoding the paths for readability:</p>
+
+<p class="fulltext">In particular, this request seems consistent with the Artifactory cache-poisoning vulnerability noted by OpenAI in their technical report, later designated CVE-2026-66384.</p>
+
+<p class="fulltext">Agents accessed and searched Hugging Face’s Slack to find information on their evaluation</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-26-893cb7d78a-p25.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-26-893cb7d78a-p27.html">下一頁 →</a>
+<span class="pager-num">第 26 / 53 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
