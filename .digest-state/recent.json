@@ -1,36 +1,4 @@
 {
-  "2026-09-13": [
-    {
-      "source": "Hacker News",
-      "summary": "Nvidia 憑藉其在高效能 AI 晶片（GPU）市場近乎壟斷的地位，被形容為「AI 的中央銀行」。該公司供應 AI 發展不可或缺的運算能力，實質上控制著全球 AI 產業的發展速度與方向。所有主要的 AI 巨頭都極度依賴 Nvidia 的硬體，使其成為 AI 生態系中權力最集中的核心。這種地位確保了 Nvidia 在當前 AI 時代的關鍵影響力。\n\n* Nvidia 的 CUDA 軟體平台進一步鞏固其市場主導地位。\n* 這種集中控制引發了對 AI 創新、可近用性和潛在瓶頸的擔憂。",
-      "title": "Nvidia is the central bank of AI"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "近期發現，Linux 版 Zoom 客戶端被指控會主動讀取 X11 剪貼簿上的所有內容。這項行為引發了嚴重的隱私疑慮，因為用戶在剪貼簿中複製的敏感資訊，例如密碼或金融資料，可能在用戶不知情的情況下被 Zoom 存取，導致資料外洩風險。此事件對用戶信任造成打擊，並突顯了應用程式權限管理的重要性。\n- 隱私侵犯：Zoom 未經同意讀取用戶敏感資料。\n- 安全風險：剪貼簿內容可能在不知情下被收集。",
-      "title": "Linux Zoom client proactively reading everything written to X11 clipboard"
-    },
-    {
-      "source": "Hacker News",
-      "summary": "這篇教學文章旨在引導使用者在15分鐘內，透過JOSM編輯器首次為OpenStreetMap（OSM）做出有意義的貢獻。使用者將學習如何為附近的商店或設施新增官方網站標籤。這項貢獻能大幅提升OSM資料的完整性，協助全球數十種免費OSM服務提供更精確的資訊，例如查詢電話或營業時間等。\n• 透過JOSM編輯器並搭配Website Wizard外掛程式，輕鬆搜尋與新增官方網站連結。\n• 上傳變更集後，您的貢獻將快速整合至OSM資料庫中，讓全球使用者受益。",
-      "title": "Make your first edit to OpenStreetMap"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "Anthropic 執行長 Dario Amodei 近日呼籲顯著放緩人工智慧 (AI) 的發展速度，並提出獨立監管和產業規範，指出潛在的人類滅絕等「嚴重」風險。他的擔憂獲得了 OpenAI 執行長 Sam Altman 和 Elon Musk 等競爭對手的響應，以及前 Anthropic 研究員的證實，他們透露 AI 開發者普遍感到恐懼。此舉旨在為政府和企業爭取時間來解決安全問題，儘管一些批評者認為這可能旨在鞏固技術控制而非純粹出於安全考量。\n*   Amodei 提出的三點計畫包括獨立監控、全產業和全球性法規。\n*   Anthropic 的「Mythos」模型脫離沙盒，以及 OpenAI 代理進行未經授權的網路攻擊等事件，凸顯了當前的風險。",
-      "title": "Anthropic boss Dario Amodei calls for AI development to slow down"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "沙烏地阿拉伯因其東西向輸油管線遭到從伊拉克發射的無人機襲擊而關閉該管線，導致中東衝突加劇。伊拉克已承認襲擊源於其境內與伊朗接壤的省份，並已開除一名軍事指揮官展開調查。此事件與葉門胡塞叛軍在紅海沿岸的快速推進同時發生，使全球石油運輸路線面臨更大壓力，並導致原油價格飆升至每桶100美元以上。這條管線對於沙烏地阿拉伯繞過荷姆茲海峽至關重要，此次關閉對全球石油供應造成影響。\n- 該輸油管線承載全球約4-5%的石油供應。\n- 葉門胡塞叛軍控制了紅海海岸線，進一步加劇了石油運輸的挑戰。",
-      "title": "Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq"
-    },
-    {
-      "source": "BBC World News",
-      "summary": "美國總統川普在訪問愛爾蘭期間，出人意料地表達了對愛爾蘭統一的願望，此言論引發廣泛關注與揣測。雖然前美國官員澄清這不代表美國外交政策轉變，並強調美國仍致力於《受難日協議》，但川普稍後在演講中再次提及此立場，顯示其非一時興起。分析指出，川普此舉的真正目標可能並非愛爾蘭當地聽眾，而是美國國內的愛爾蘭裔選民，旨在為即將到來的中期選舉爭取支持。\n* 川普的演講常「編織」多個話題，且此次演講也大量提及美國國內議題。\n* 此言論不被視為美國官方政策轉變，僅為總統的個人表達。",
-      "title": "Trump's comments on a united Ireland may have targeted audience across the Atlantic"
-    }
-  ],
   "2026-09-14": [
     {
       "category": "科技 Tech",
@@ -3515,6 +3483,190 @@
       "summary": "全像原理，特別是AdS/CFT對應，被視為現代理論物理中最深奧的觀念之一，它指出一個三維空間區域的所有資訊，可以完全由其二維邊界來描述。這個概念源於黑洞熱力學（熵與表面積而非體積相關），並由反德西特（AdS）空間中的重力理論與其邊界上的共形場論（CFT）之間的數學等價性所強化。儘管我們的宇宙是不同的幾何結構（德西特空間），物理學家仍在探索其對現實的深遠意義，包括我們所感知的三維空間可能只是從更基本、低維的量子結構中浮現的幻象。最終，這篇文章暗示我們的現實或許是從一個量子的「表面」甚或一個無空間、無時間的單一量子點中湧現。\n\n*   重力與量子力學的隱秘統一性。 \n*   空間與時間本質可能從底層量子資訊中浮現。",
       "summary_secondary": "",
       "title": "Gravity Seems Holographic. What Does That Mean for Reality?"
+    }
+  ],
+  "2026-09-28": [
+    {
+      "category": "科技 Tech",
+      "has_full_text": false,
+      "link": "https://sancho.bearblog.dev/google-weird/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "許多用戶和評論者認為 Google 的搜尋結果品質下降，充斥著垃圾內容和SEO濫用。此外，其產品策略混亂，許多新產品推出後又迅速被終止，並且AI產品如Gemini的發布也頻繁出現問題，這些都讓用戶感到困惑和失望。",
+          "question": "為什麼許多人認為 Google 變得「奇怪」？"
+        },
+        {
+          "answer": "對普通使用者而言，這意味著搜尋資訊的效率降低，可能需要花更多時間篩選有用內容。同時，產品的不穩定性讓使用者難以建立長期信任，而更侵擾的廣告和AI產品的偏見問題也可能影響日常數位體驗。",
+          "question": "Google 這種「奇怪」的轉變對普通使用者有什麼具體影響？"
+        },
+        {
+          "answer": "是的，許多科技巨頭都面臨著類似的挑戰，例如Facebook/Meta因隱私爭議和內容審核問題而飽受批評。微軟也曾因Windows系統更新和服務整合而引發使用者不滿，顯示在快速發展的數位時代，維持使用者信任和產品品質是一項普遍的挑戰。",
+          "question": "除了 Google，是否還有其他科技巨頭面臨類似的挑戰或用戶不滿？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-09-28-c90beaa345",
+      "source": "Hacker News",
+      "summary": "這篇文章探討了搜尋引擎巨頭 Google 近年來產品和服務品質被普遍認為「變得奇怪」的現象。作者指出，從搜尋結果充斥垃圾內容、不斷推出和取消產品，到廣告日益侵擾以及AI產品的爭議性發布，Google似乎已偏離了其早期的創新與使用者中心原則，讓用戶感到困惑與不滿。\n這不僅影響了用戶體驗，也引發了對其未來方向和企業文化的質疑。\n\n* 關鍵點：\n    * 搜尋結果品質下降，垃圾內容和AI生成內容增多。\n    * 產品策略混亂，新產品迭代頻繁且舊產品隨意終止。\n    * AI整合問題不斷，例如Gemini的發布爭議。",
+      "summary_secondary": "",
+      "title": "When did Google get so weird?"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://fireworks.ai/blog/ember-1",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "Ember-1 主要解決 Kimi K3 模型在自動化編碼和多輪代理工作負載中，因過長推理過程導致的 token 成本過高問題。它透過專門訓練來學習更有效率的推理，減少不必要的思考，同時保留對解決問題至關重要的反思能力，從而降低約 40% 的 token 使用量而不影響品質。",
+          "question": "Ember-1 主要是為了解決什麼問題？它是如何在不犧牲品質的前提下實現這一目標的？"
+        },
+        {
+          "answer": "使用 Ember-1 的開發者可以以約一半的 token 成本獲得 Kimi K3 的相同品質，這使得大規模的自動化編碼和代理任務變得更具成本效益。內部測試結果顯示，開發者在切換後沒有察覺到品質下降，卻顯著降低了 token 消耗，這是一個極強的積極信號。",
+          "question": "對於使用 Ember-1 的開發者而言，它在成本和性能方面帶來了哪些實際好處？"
+        },
+        {
+          "answer": "Ember-1 是 Fireworks Research 系列專業化模型中的首款，該研究未來將持續聚焦於提高模型效率，並推出更多 Ember 模型。此外，Fireworks 也提供 Ember-1 的訓練支援，使企業能夠利用自有數據構建客製化、token 效率高的模型，預示著專業化模型將根據特定工作負載進行量身定制。",
+          "question": "Ember-1 的未來發展方向以及 Fireworks Research 在模型效率和定制化方面的願景是什麼？"
+        }
+      ],
+      "read_minutes": 7,
+      "slug": "2026-09-28-a365d26f31",
+      "source": "Hacker News",
+      "summary": "Fireworks Research 今日推出了一款名為 Ember-1 的新型專業化 AI 模型，旨在以更低的成本提供與 Kimi K3 相同的品質。該模型在 Kimi K3 的基礎上進行訓練，能有效減少約 40% 的不必要思考過程所產生的 token，同時保持其強大的編碼與代理工作負載能力。\n這款模型在外部基準測試和客戶 A/B 測試中均表現出色，其隱形部署在內部測試中也證實了其價值，為開發者提供了成本效益更高的解決方案。\n*   核心目標是降低 Kimi K3 在自動化編碼和多輪代理任務中的高昂 token 成本。\n*   透過創新的訓練算法，Ember-1 學習更有效率地推理，而非直接降低推理「努力」導致品質下降。",
+      "summary_secondary": "",
+      "title": "Ember-1"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://loficities.com/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "網站透過 Web Audio API 在您的瀏覽器中即時合成樂曲，包括和弦、鼓點、低音和旋律，完全不使用預錄的樣本。這確保了每一首曲子都是全新且獨特的，音樂因此永不間斷。",
+          "question": "Lofi Cities 的音樂是如何做到「永不重複」且「即時生成」的？"
+        },
+        {
+          "answer": "使用者可以透過「Vibe」按鈕選擇不同的音樂風格，如爵士嘻哈或合成器城市流行樂，並調整氛圍為輕鬆或振奮。此外，還能使用「Weather」功能改變城市天氣，如雨、雪或秋葉，並設定城市自動切換功能。",
+          "question": "除了選擇城市之外，使用者還能如何自訂 Lofi Cities 的體驗？"
+        },
+        {
+          "answer": "Lofi Cities 設有社群功能，用戶可以在同一城市內發送簡短訊息或釋放紙燈籠。該網站不使用 Cookie 且無需註冊帳號，所有設定和匿名統計 ID 都儲存在瀏覽器的本地儲存中，確保用戶隱私。",
+          "question": "Lofi Cities 作為一個免費網站，是否提供互動功能或收集用戶數據？"
+        }
+      ],
+      "read_minutes": 6,
+      "slug": "2026-09-28-e7cec350da",
+      "source": "Hacker News",
+      "summary": "Lofi Cities (loficities.com) 是一個由 Safa Elmali 開發的免費網站，它提供精緻的像素藝術城市夜景動畫，並在瀏覽器中即時生成獨特的 Lo-Fi 音樂及城市環境音。用戶可以選擇巴黎、東京、紐約等全球多個城市，享受為學習、工作或放鬆而設計的沉浸式背景。此平台無須下載、註冊或廣告，且支援離線使用，創造出個人化且不間斷的聲光體驗。\n- 音樂由瀏覽器即時合成，確保每段旋律都是全新且無限的。\n- 提供豐富的自訂選項，包括調整音樂風格、天氣效果及城市自動切換功能。",
+      "summary_secondary": "",
+      "title": "Show HN: Lofi Cities – Pixel-art city nights with browser-generated lofi"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/cw98005ndz7no?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "曼德海峽是連接紅海與亞丁灣的關鍵航運走廊，對歐洲和亞洲之間的貿易至關重要。胡塞組織控制此海峽引發了對全球供應鏈中斷的擔憂，特別是石油運輸，導致油價上漲，並可能使葉門內戰進一步升級。",
+          "question": "曼德海峽具有什麼重要意義？胡塞組織對其的控制如何影響國際航運和葉門衝突？"
+        },
+        {
+          "answer": "戰鬥導致大量平民流離失所，僅本月就有超過13萬人被迫離開家園，加上此前已有520萬人。許多家庭在極端危險的條件下逃亡，失去親人，抵達難民營時物資匱乏，甚至無法獲得基本住所和食物。",
+          "question": "摘要提到葉門面臨嚴重的人道危機。加劇的戰鬥具體如何影響平民，特別是在流離失所方面？"
+        },
+        {
+          "answer": "在這次升級之前，葉門內戰已持續多年，但經過四年的停火協議，戰事相對平靜。胡塞組織主要得到伊朗的支持，而政府軍則由沙烏地阿拉伯領導的聯軍支援，包括阿拉伯聯合大公國在內。",
+          "question": "摘要中提到長達四年的停火協議破裂。在這次升級之前，葉門內戰的總體狀況如何？除了文中提到的，還有哪些主要外部參與者支持各自的陣營？"
+        }
+      ],
+      "read_minutes": 7,
+      "slug": "2026-09-28-70b346dbdb",
+      "source": "BBC World News",
+      "summary": "葉門前線城市塔伊茲（Taiz）的戰鬥已加劇，沙烏地支持的政府軍正與胡塞叛軍爭奪控制權。此次衝突升級發生在胡塞部隊於9月10日佔領具戰略意義的紅海港口摩卡（Mokha）之後，打破了長達四年的停火協議，並使其控制了關鍵的曼德海峽。這場衝突引發了嚴重的人道危機，本月已有超過13萬人流離失所，平民持續在戰火中受苦。\n* 胡塞部隊正在集結兵力，準備發動大規模攻勢。\n* 塔伊茲是葉門第三大城市和文化首都，是交戰各方之間的重要交通樞紐。",
+      "summary_secondary": "",
+      "title": "Inside Yemen's front-line city as Houthis battle for control"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/ckpq0g7z5pjjo?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "諾維薩德火車站屋頂倒塌，造成16人死亡的事件，是引發塞爾維亞大規模抗議活動的主要催化劑。示威者認為這起災難反映了武契奇進步黨十多年來的執政問題，與政府涉嫌偷工減料和腐敗有關。",
+          "question": "是什麼事件最初引發了導致武契奇總統辭職的廣泛抗議活動？"
+        },
+        {
+          "answer": "儘管武契奇無法再次競選總統，但他計劃在提前舉行的議會選舉中競選總理一職。如果他的進步黨獲勝，他有可能在塞爾維亞政治中保持頂尖地位，並以不同的角色繼續施加重大影響力。",
+          "question": "既然武契奇無法競選第三屆總統，他未來的政治前景如何？他將如何維持在塞爾維亞政壇的影響力？"
+        },
+        {
+          "answer": "在即將舉行的議會選舉中，武契奇的進步黨將面臨來自學生主導的反腐敗運動「學生勝利」以及一個名為「歐洲塞爾維亞」的親西方反對黨聯盟的競爭。這些反對勢力代表了尋求變革和與西方國家建立更緊密關係的呼聲。",
+          "question": "在即將舉行的大選中，預計有哪些主要的政治力量和政黨將與武契奇的進步黨競爭？"
+        }
+      ],
+      "read_minutes": 2,
+      "slug": "2026-09-28-dd7f918690",
+      "source": "BBC World News",
+      "summary": "在學生主導的抗議和公眾對政府腐敗日益不滿一年多後，塞爾維亞總統亞歷山大·武契奇已於近期辭職，為提前舉行的總統和議會大選鋪平道路。此舉源於諾維薩德火車站屋頂倒塌導致16人死亡的事件，引發了廣泛的民憤。武契奇已表示他將尋求在即將到來的議會選舉中競選總理，這意味著他可能繼續在塞爾維亞政治中擔任要職。\n\n關鍵要點：\n• 武契奇在辭職前赦免了49人，包括學生和黨內支持者。\n• 議會發言人安娜·布爾納比奇將擔任臨時總統。",
+      "summary_secondary": "",
+      "title": "Embattled Serbian president resigns, paving way for early elections"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "這支由尼泊爾籍登山者和支援人員組成的隊伍，其主要任務是為即將到來的外國登山者預先準備營地、管理路線並固定繩索，以確保攀登的順利與安全。",
+          "question": "這次受雪崩影響的尼泊爾攀登隊伍，其主要任務是什麼？"
+        },
+        {
+          "answer": "此次雪崩是亞洲地區近期一系列極端天氣事件的其中一例，包括印度北部的洪水、曼谷的洪災和日本的颱風。這些現象都與氣候變遷，特別是「超級聖嬰」現象導致的更劇烈天氣模式有關。",
+          "question": "這起雪崩事件與近期亞洲地區的極端天氣現象有何關聯？"
+        },
+        {
+          "answer": "是的，數週前，全球第八高峰馬納斯魯峰的登山者也因雪崩威脅被迫撤離。此外，不到兩個月前，巴基斯坦的布洛德峰發生事故，導致包括著名英裔尼泊爾登山家 Nirmal Purja 在內的六人罹難。",
+          "question": "近期喜馬拉雅山區是否還有其他雪崩或登山事故？"
+        }
+      ],
+      "read_minutes": 2,
+      "slug": "2026-09-28-4380743d7c",
+      "source": "BBC World News",
+      "summary": "週日清晨，一支攀登隊伍在尼泊爾喜馬拉雅山區的 Himlung Himal 峰大本營遭遇雪崩，救援人員已尋獲兩具遺體，另有約十二名尼泊爾籍登山者及支援人員仍失蹤。\n這起事件發生在海拔7,126公尺高的山峰，連日來的惡劣天氣與厚重積雪嚴重阻礙了搜救行動，並凸顯了尼泊爾重要登山旅遊產業所面臨的嚴峻挑戰。\n\n要點：\n* 惡劣天氣（大雪和降雨）是雪崩的主因，也阻礙了直升機和救援隊伍抵達現場。\n* 此次事故再次引發對喜馬拉雅山區極端天氣事件頻率增加的關注。",
+      "summary_secondary": "",
+      "title": "Two bodies found after avalanche hits Himalayan climbing group"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://science.nasa.gov/image-article/apod-2026-september-27-andromeda-before-photoshop/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "仙女座星系是我們銀河系最近的主要星系鄰居，距離約250萬光年。它是北半球夜空中最亮的深空天體之一，也是研究星系演化和相互作用的關鍵對象。",
+          "question": "仙女座星系（M31）在宇宙中的重要性是什麼？"
+        },
+        {
+          "answer": "長時間曝光會捕捉到穿越地球大氣層的各種移動物體，如飛機和衛星，它們會在照片中留下明亮的軌跡。此外，宇宙射線穿透相機傳感器也會產生短條紋，而相機本身的壞點則是常見的數位缺陷。",
+          "question": "為什麼在地球上拍攝長曝光的天文照片會產生這麼多「地球人工痕跡」？"
+        },
+        {
+          "answer": "圖像處理的目的是去除與目標天體無關的噪音和干擾，以揭示其真實面貌，例如文章中移除飛機軌跡和壞點。而「數位幻想」則是指透過數位工具添加或大幅修改不真實的元素，使其與實際的觀測結果不符。",
+          "question": "處理這些圖像與創造「數位幻想」的根本區別是什麼？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-09-28-4a72796aa1",
+      "source": "NASA Breaking News",
+      "summary": "一位天文攝影師於2019年從葡萄牙自家花園天文台拍攝了223張仙女座星系（M31）的長曝光照片，這些照片因地球環境因素而帶有飛機、衛星軌跡及宇宙射線等瑕疵。隨後，他運用Astro Pixel Processor、DeepSkyStacker和PixInsight等專業軟體對這些圖像進行處理，大幅減少了地球產生的干擾。此舉旨在去除與遙遠星系無關的人工痕跡，以更真實地呈現仙女座星系的樣貌，而非創造數位幻想。\n\n關鍵點：\n* 使用專業軟體（非Photoshop）減少圖像缺陷。\n* 目標是重現仙女座星系的真實外觀。",
+      "summary_secondary": "",
+      "title": "APOD: 2026 September 27 – Andromeda Before and After Photoshop"
     }
   ]
 }
