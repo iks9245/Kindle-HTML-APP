@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-29-5e33c23505-p15.html">中</a><a href="2026-09-29-5e33c23505-p18-l.html">大</a><a class="pref-family" href="2026-09-29-5e33c23505-p13-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 13 / 16 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/firelex/jeff">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-29-5e33c23505-p12-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-29-5e33c23505-p14-s.html">下一頁 →</a>
+<span class="pager-num">第 13 / 16 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">an hour on one GPU and moved held-out accuracy from 31.7% to 95.8%, at about 40 ms per decision on an M4 Max:</p>
+
+<p class="fulltext">autojev-train --initial-checkpoint <jeff> --epochs 1 ... .</p>
+
+<p class="fulltext">- Pick the size for the job. For fast option picking the 0.8B is the sweet spot: the 2B is more cautious and plays the games worse, despite scoring higher on the benchmarks.</p>
+
+<p class="fulltext">uv run autojev-mix ...          # build the training set (public data, synthetic data, leak filter)</p>
+
+<p class="fulltext">scripts/train.sh RUN data/mix/public.jsonl data/mix 5e-6 40 Qwen/Qwen3.5-0.8B <revision> --epochs 1</p>
+
+<p class="fulltext">uv run autojev-evaluate --data data/panel.jsonl --local --checkpoint checkpoints/RUN/selected --output runs/eval/RUN.json</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-29-5e33c23505-p12-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-29-5e33c23505-p14-s.html">下一頁 →</a>
+<span class="pager-num">第 13 / 16 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

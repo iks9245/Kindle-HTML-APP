@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-29-5e33c23505-p16.html">中</a><a href="2026-09-29-5e33c23505-p20-l.html">大</a><a class="pref-family" href="2026-09-29-5e33c23505-p14-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 14 / 16 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/firelex/jeff">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-29-5e33c23505-p13-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-29-5e33c23505-p15-s.html">下一頁 →</a>
+<span class="pager-num">第 14 / 16 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The full pipeline (synthetic data from a local teacher, leak filter, learning-rate sweeps, dashboard) is described in scripts/train_all.sh, and every training source with its licence in docs/data-sources.md. Training recipe: full-weight fine-tuning, one epoch, batches of 256, cross-entropy over the option letters, then one fitted temperature for calibration; checkpoints are chosen on a development set, never on the benchmark panel. At least half of each training family follows the panel's layout conventions (formats only; no panel item is ever trained on).</p>
+
+<p class="fulltext">- Small models don't reason. Expect fast, calibrated choices between the options you describe, not multi-step reasoning. At 0.8B–2B parameters this holds for every model, not just Jeff.</p>
+
+<p class="fulltext">- Jeff-2B is a weaker game player than Jeff-0.8B. The untrained 2B already appears more risk-averse than the untrained 0.8B, and our training seems to have made that worse. This needs more investigation.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-29-5e33c23505-p13-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-29-5e33c23505-p15-s.html">下一頁 →</a>
+<span class="pager-num">第 14 / 16 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-29-5e33c23505-p4-sans.html">中</a><a href="2026-09-29-5e33c23505-p5-sans-l.html">大</a><a class="pref-family" href="2026-09-29-5e33c23505-p4-s.html">切換為襯線</a></p>
+
+
+<h1>Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 4 / 16 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/firelex/jeff">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-29-5e33c23505-p3-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-29-5e33c23505-p5-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 4 / 16 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">JEFF_BACKEND=mlx JEFF_CHECKPOINT=checkpoints/jeff-0.8b PORT=8765 uv run jeff-servecurl -s localhost:8765/v1/systemone -H 'content-type: application/json' -d '{</p>
+
+<p class="fulltext">"model": "jeff-latest",</p>
+
+<p class="fulltext">"state": "Refund request: the customer says the parcel arrived crushed and wants their money back.",</p>
+
+<p class="fulltext">"questions": {</p>
+
+<p class="fulltext">"route": {"type": "choice", "instructions": "Which team should handle this?",</p>
+
+<p class="fulltext">"criteria": {"1": "Refunds and payments", "2": "Damaged or lost parcels", "3": "Account and login problems"}},</p>
+
+<p class="fulltext">"angry": {"type": "noul", "instructions": "Is the customer angry?"}</p>
+
+<p class="fulltext">}</p>
+
+<p class="fulltext">}'</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-29-5e33c23505-p3-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-29-5e33c23505-p5-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 4 / 16 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
