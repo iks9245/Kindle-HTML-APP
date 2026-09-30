@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livenerf: Has Opus 5.5 been nerfed yet?</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-30-bf2e738d2e-p30-sans.html">中</a><a href="2026-09-30-bf2e738d2e-p39-sans-l.html">大</a><a class="pref-family" href="2026-09-30-bf2e738d2e-p23-s.html">切換為襯線</a></p>
+
+
+<h1>Livenerf: Has Opus 5.5 been nerfed yet?</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 23 / 23 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/ninjahawk/livenerf">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-30-bf2e738d2e-p22-sans-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 23 / 23 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">If you find livenerf helpful in your research cite simply as:</p>
+
+<p class="fulltext">@misc{livenerf,</p>
+
+<p class="fulltext">author = {ninjahawk},</p>
+
+<p class="fulltext">title = {livenerf: tracking post-launch capability drift in frontier models},</p>
+
+<p class="fulltext">year = {2026},</p>
+
+<p class="fulltext">publisher = {GitHub},</p>
+
+<p class="fulltext">url = {https://github.com/ninjahawk/livenerf}</p>
+
+<p class="fulltext">}</p>
+
+<p class="fulltext">Not yet chosen.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>為什麼要創建 livenerf 這個專案來監測模型效能？</summary>
+  <p>創建 livenerf 是為了回應社群中長期存在的傳聞，即像 Anthropic 的 Claude 等前沿大型語言模型在發布後，可能會在不告知用戶的情況下被「削弱」或降低效能。由於缺乏乾淨的「發布日」基準線，先前的討論都停留在主觀感受層面，因此 livenerf 旨在提供客觀數據來驗證這些說法。</p>
+</details>
+
+<details>
+  <summary>livenerf 如何確保其測試結果的可靠性和公正性？</summary>
+  <p>livenerf 透過多種方法確保結果可靠：它使用固定的提示、精確的評分器和原始日誌，讓除了模型本身以外的所有變數都保持確定性。統計分析遵循 Anthropic 自己的方法論，並且整個測試是基於預先註冊的協議進行，以避免事後調整。所有數據和測試方法都公開透明，旨在讓使用者無需信任作者，也能驗證結果。</p>
+</details>
+
+<details>
+  <summary>livenerf 能夠檢測到哪些類型的效能變化，其局限性是什麼？</summary>
+  <p>livenerf 能夠檢測到在 10 天窗口內約 7.5 個百分點的準確性變化，尤其在輸出標記量（token）方面，效能下降會更為明顯。然而，它有其局限性，例如在當前的驗證樣本量下，它尚無法區分 Claude Opus 5.5 和 Opus 5 之間微小的性能差異，這意味著它可能無法檢測到同系列模型中較小幅度的替換。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-30-bf2e738d2e-p22-sans-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 23 / 23 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livenerf: Has Opus 5.5 been nerfed yet?</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-09-30-bf2e738d2e-p16-sans.html">中</a><a href="2026-09-30-bf2e738d2e-p21-sans-l.html">大</a><a class="pref-family" href="2026-09-30-bf2e738d2e-p13-s.html">切換為襯線</a></p>
+
+
+<h1>Livenerf: Has Opus 5.5 been nerfed yet?</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 13 / 23 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/ninjahawk/livenerf">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-30-bf2e738d2e-p12-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-30-bf2e738d2e-p14-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 13 / 23 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">You can't get the same answer twice from Opus 5.5, so the whole design is about getting a distribution you can trust, noticing when it moves, and spending as little compute as possible to do it.</p>
+
+<p class="fulltext">- Only informative questions. A question the model always gets right can't show a drop, and running it wastes tokens. Calibration keeps only the GPQA Diamond, MMLU-Pro and competition-math questions the model gets right sometimes. That also filters out memorized questions. Under a common logit-shift model, a question with pass rate p carries information p(1−p) per sample. livenerf.design puts every such question in the panel and picks the lowest sampling rate that reaches the target minimum detectable effect (MDE) within the budget.</p>
+
+<p class="fulltext">- Paired, repeated items. The same questions run every week and are compared against their own baseline, so question difficulty drops out. Scores are exact-match: no LLM judge, ever, since the judge would drift too.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-09-30-bf2e738d2e-p12-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-09-30-bf2e738d2e-p14-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 13 / 23 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
