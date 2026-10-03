@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zig v0.17.0</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-03-0a4cfd02f5-p18-s.html">小</a><span class="pref-on">中</span><a href="2026-10-03-0a4cfd02f5-p30-l.html">大</a><a class="pref-family" href="2026-10-03-0a4cfd02f5-p24-sans.html">切換為無襯線</a></p>
+
+
+<h1>Zig v0.17.0</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 24 / 115 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://ziglang.org/download/0.17.0/release-notes.html">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-03-0a4cfd02f5-p23.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-03-0a4cfd02f5-p25.html">下一頁 →</a>
+<span class="pager-num">第 24 / 115 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Zig's formal grammar.peg and the actual language implementation did not agree in many places. Probably, the formal grammar has never actually 100% matched the actual handwritten tokenizer and parser.</p>
+
+<p class="fulltext">This problem is now fixed and unblocks future grammar changes and language specification work.</p>
+
+<p class="fulltext">At a high level, the approach was to write a tool that accepts Zig's grammar.peg as input and outputs a</p>
+
+<p class="fulltext">simple recursive descent parser. This generated parser is then used as an oracle for fuzz testing and the</p>
+
+<p class="fulltext">handwritten std.zig.Ast.parse() is compared against it. This approach ensures a</p>
+
+<p class="fulltext">single source of truth and allows for easy iteration as the grammar changes.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-03-0a4cfd02f5-p23.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-03-0a4cfd02f5-p25.html">下一頁 →</a>
+<span class="pager-num">第 24 / 115 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

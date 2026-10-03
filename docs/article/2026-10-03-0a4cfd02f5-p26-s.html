@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zig v0.17.0</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-03-0a4cfd02f5-p33.html">中</a><a href="2026-10-03-0a4cfd02f5-p43-l.html">大</a><a class="pref-family" href="2026-10-03-0a4cfd02f5-p26-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Zig v0.17.0</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 26 / 88 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://ziglang.org/download/0.17.0/release-notes.html">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-03-0a4cfd02f5-p25-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-03-0a4cfd02f5-p27-s.html">下一頁 →</a>
+<span class="pager-num">第 26 / 88 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">-        return @enumFromInt(graph.generated_files.items.len - 1);</p>
+
+<p class="fulltext">+        return @fromBackingInt(@intCast(graph.generated_files.items.len - 1));</p>
+
+<p class="fulltext">}</p>
+
+<p class="fulltext">pub fn dupeString(graph: *const Graph, bytes: []const u8) []const u8 {</p>
+
+<p class="fulltext">@@ -2607,7 +2607,7 @@ pub const LazyPath = union(enum) {</p>
+
+<p class="fulltext">.src_path, .cwd_relative, .relative, .dependency => {},</p>
+
+<p class="fulltext">.generated => |gen| {</p>
+
+<p class="fulltext">const graph = other_step.owner.graph;</p>
+
+<p class="fulltext">-                const generated_owner_step = graph.generated_files.items[@intFromEnum(gen.index)];</p>
+
+<p class="fulltext">+                const generated_owner_step = graph.generated_files.items[@backingInt(gen.index)];</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-03-0a4cfd02f5-p25-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-03-0a4cfd02f5-p27-s.html">下一頁 →</a>
+<span class="pager-num">第 26 / 88 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

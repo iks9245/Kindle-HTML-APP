@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zig v0.17.0</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-03-0a4cfd02f5-p90-sans.html">中</a><a href="2026-10-03-0a4cfd02f5-p115-sans-l.html">大</a><a class="pref-family" href="2026-10-03-0a4cfd02f5-p69-s.html">切換為襯線</a></p>
+
+
+<h1>Zig v0.17.0</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 69 / 88 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://ziglang.org/download/0.17.0/release-notes.html">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-03-0a4cfd02f5-p68-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-03-0a4cfd02f5-p70-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 69 / 88 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">In the previous release of Zig, we were forced to disable a key LLVM optimization pass—loop vectorization—to work around a miscompilation which affected the Zig compiler.</p>
+
+<p class="fulltext">Since we first introduced that workaround, a fix has been merged into LLVM's main branch. However, the fix is not available in LLVM 22, the LLVM version used by Zig 0.17.0. Therefore, this workaround remains enabled for now.</p>
+
+<p class="fulltext">Zig 0.18.0 will upgrade to LLVM 23, so will allow us to re-enable this optimization pass.</p>
+
+<p class="fulltext">Zig 0.17.0 distributes musl 1.2.5 plus backported security and portability fixes. Meanwhile, upstream has tagged 1.2.6. Zig 0.18.0 will update to musl 1.2.6.</p>
+
+<p class="fulltext">When targeting musl statically, many functions are now provided by zig libc rather than source files copied from musl. Therefore, if you encounter bugs with musl libc provided by Zig, please respect upstream by reporting them to Zig's issue tracker rather than musl's.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-03-0a4cfd02f5-p68-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-03-0a4cfd02f5-p70-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 69 / 88 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
