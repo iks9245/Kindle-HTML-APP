@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turn off Apple Intelligence on macOS 27 and get its disk space back</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-05-fb514e83ae-p5-s.html">小</a><span class="pref-on">中</span><a href="2026-10-05-fb514e83ae-p8-l.html">大</a><a class="pref-family" href="2026-10-05-fb514e83ae-p7-sans.html">切換為無襯線</a></p>
+
+
+<h1>Turn off Apple Intelligence on macOS 27 and get its disk space back</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 7 / 7 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://github.com/omlahore/RemoveMacAI">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-05-fb514e83ae-p6.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 7 / 7 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">| macOS | Status |</p>
+
+<p class="fulltext">|---|---|</p>
+
+<p class="fulltext">| 27 | Supported, tested on 27.0. On 27.0.1, use 0.2.3 or later. |</p>
+
+<p class="fulltext">| 26 and earlier | Not supported |</p>
+
+<p class="fulltext">Run removemacai revert, then brew uninstall removemacai if it was installed with Homebrew.</p>
+
+<p class="fulltext">RemoveMacAI is built on pared, a complete working tool by 4evy that first mapped the asset service, the model sets and several of the settings keys. Its license is in THIRD-PARTY-NOTICES.md.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>為什麼 macOS 27 的用戶需要像 RemoveMacAI 這樣的第三方工具來管理 Apple Intelligence？</summary>
+  <p>macOS 27 並沒有提供一個單一的開關來完全停用 Apple Intelligence，且即使將相關功能關閉，其預載或下載的 AI 模型仍會持續佔用大量的磁碟空間。RemoveMacAI 解決了這個問題，它能徹底移除這些模型並防止其重新下載，從而幫助用戶釋放寶貴的儲存空間。</p>
+</details>
+
+<details>
+  <summary>RemoveMacAI 如何在不影響系統完整性或安全性的情況下移除 Apple Intelligence 模型？</summary>
+  <p>RemoveMacAI 的運作方式是安裝一個配置描述檔，此描述檔會應用 Apple 的限制鍵並強制執行設定，同時將已移除模型的下載請求重新導向到一個本地的封閉端口，以阻止系統再次下載。它利用 Apple 的資產服務來安全移除模型，並保持系統完整性保護 (SIP) 啟用，不直接修改 `/System` 下的檔案。所有更改都可以被還原，確保系統安全與可恢復性。</p>
+</details>
+
+<details>
+  <summary>哪些具體的 Apple Intelligence 功能會在安裝 RemoveMacAI 後停止運作？語音聽寫等其他相關功能是否受影響？</summary>
+  <p>安裝 RemoveMacAI 後，Siri（包括「嘿 Siri」）、寫作工具、Genmoji、圖像遊樂場、ChatGPT 擴展、郵件和訊息中的摘要、郵件智慧回覆、內聯文本預測、空間照片、照片清理和 Xcode 預測性程式碼補全等 Apple Intelligence 相關服務將會停止運作。然而，語音聽寫 (Dictation) 由於是一個獨立的設定，並使用不同的語音模型，因此不會受到影響，仍可正常使用。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-05-fb514e83ae-p6.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 7 / 7 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

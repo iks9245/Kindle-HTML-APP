@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-10-05</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-05.html">中</a><a href="2026-10-05-l.html">大</a><a class="pref-family" href="2026-10-05-sans-s.html">切換為無襯線</a></p>
+
+<h1>每日 AI 文摘 2026-10-05</h1>
+<p class="meta">
+2026-10-05
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="index-s.html">存檔列表</a>
+
+
+
+ ｜ <a href="2026-10-04-s.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日新聞反映了科技發展的兩面性與地緣政治的緊張局勢。人工智慧技術不斷深化，大型模型已能運行於消費級硬體，但同時也引發了用戶對其資源佔用（如Apple Intelligence移除工具）及資料中心龐大耗能（如Google洩露數據）的關注。在全球衝突區域，葉門政府宣布對胡塞武裝發動全面戰爭，俄羅斯亦持續以無人機猛攻烏克蘭首都基輔，情勢日益升級。然而，人類對未知世界的探索並未止步，NASA正有條不紊地為未來的月球與火星任務填補知識鴻溝，好奇號火星車也持續在火星上進行鑽探取樣，展現了探索的決心。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>Turn off Apple Intelligence on macOS 27 and get its disk space back</h3>
+  <p class="summary">針對 macOS 27 用戶，一個名為「RemoveMacAI」的第三方工具現已推出，能徹底關閉 Apple Intelligence 功能並回收其佔用的磁碟空間。由於 macOS 27 並未提供一個簡單的開關來完全停用這些 AI 功能，且即使停用後相關模型仍會保留在磁碟上，RemoveMacAI 應運而生，它能移除已下載的 AI 模型並阻止系統再次下載。這對於希望釋放儲存空間或不使用特定 AI 功能的用戶來說，是個實用的解決方案。
+- 該工具透過指令稿或 Homebrew 安裝，並利用配置描述檔來管理設定和阻止模型重新下載，而不直接修改系統核心檔案。
+- 受影響的功能包括 Siri、寫作工具、Genmoji、圖像遊樂場以及郵件和訊息中的多項智慧摘要服務。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼 macOS 27 的用戶需要像 RemoveMacAI 這樣的第三方工具來管理 Apple Intelligence？</summary>
+    <p>macOS 27 並沒有提供一個單一的開關來完全停用 Apple Intelligence，且即使將相關功能關閉，其預載或下載的 AI 模型仍會持續佔用大量的磁碟空間。RemoveMacAI 解決了這個問題，它能徹底移除這些模型並防止其重新下載，從而幫助用戶釋放寶貴的儲存空間。</p>
+  </details>
+  
+  <details>
+    <summary>RemoveMacAI 如何在不影響系統完整性或安全性的情況下移除 Apple Intelligence 模型？</summary>
+    <p>RemoveMacAI 的運作方式是安裝一個配置描述檔，此描述檔會應用 Apple 的限制鍵並強制執行設定，同時將已移除模型的下載請求重新導向到一個本地的封閉端口，以阻止系統再次下載。它利用 Apple 的資產服務來安全移除模型，並保持系統完整性保護 (SIP) 啟用，不直接修改 `/System` 下的檔案。所有更改都可以被還原，確保系統安全與可恢復性。</p>
+  </details>
+  
+  <details>
+    <summary>哪些具體的 Apple Intelligence 功能會在安裝 RemoveMacAI 後停止運作？語音聽寫等其他相關功能是否受影響？</summary>
+    <p>安裝 RemoveMacAI 後，Siri（包括「嘿 Siri」）、寫作工具、Genmoji、圖像遊樂場、ChatGPT 擴展、郵件和訊息中的摘要、郵件智慧回覆、內聯文本預測、空間照片、照片清理和 Xcode 預測性程式碼補全等 Apple Intelligence 相關服務將會停止運作。然而，語音聽寫 (Dictation) 由於是一個獨立的設定，並使用不同的語音模型，因此不會受到影響，仍可正常使用。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-05-fb514e83ae-s.html">全文（約 3 分鐘）</a> ｜ <a href="https://github.com/omlahore/RemoveMacAI">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s</h3>
+  <p class="summary">Strata 應用程式現已推出，讓使用者能在配備 NVIDIA 或 AMD 顯示卡（需 12GB VRAM 或更多）的消費級個人電腦上運行通常需要伺服器才能執行的大型 125 億參數 AI 模型 Qwen3.8-Flash-Next。
+這款免費開源工具可在 Windows 或 Linux 系統上運作，允許用戶在本地進行 AI 聊天、編寫程式碼及圖像理解等任務，確保數據不離開個人電腦。測試顯示，例如 RTX 3090 可達每秒 100-140 個 token 的寫入速度，足以提供流暢的使用體驗。
+- 支援多種消費級顯示卡，最低要求 12GB VRAM 和 32GB RAM。
+- 採用創新技術將模型分擔於顯示卡、RAM 和處理器之間，實現高效運行。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Strata 如何實現將 125 億參數的大型 AI 模型在消費級硬體上運行，而不需要伺服器等級的資源？</summary>
+    <p>Strata 運用了獨特的技術，將模型的工作量分擔到整個 PC 硬體中，例如將常用的模型「專家」儲存在顯示卡 VRAM 中，其餘則由系統 RAM 和處理器協同處理，同時結合預測與檢查機制，大幅提升了在有限資源下的運行效率。</p>
+  </details>
+  
+  <details>
+    <summary>在本地個人電腦上運行 Qwen3.8-Flash-Next AI 模型，對於使用者資料的隱私保護有何具體優勢？</summary>
+    <p>在本地 PC 上運行 Qwen3.8-Flash-Next AI 模型意味著所有數據處理都在使用者自己的設備上完成，無需上傳至雲端伺服器。這確保了所有互動內容和個人資訊都保留在本地，極大地提升了數據隱私和安全性。</p>
+  </details>
+  
+  <details>
+    <summary>對於想嘗試 Strata 的使用者，建議的最低硬體配置為何？安裝過程是否對一般使用者友好？</summary>
+    <p>建議的最低配置是具有 12GB 或更多 VRAM 的 NVIDIA 或 AMD 顯示卡，以及 32GB 或更多系統 RAM。安裝過程非常簡便，只需下載並執行自動安裝腳本（Windows 用戶雙擊 .bat 文件，Linux 用戶運行 .sh 腳本），它會引導使用者選擇模型和設定，並自動下載所需文件。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-05-bca476fd34-s.html">全文（約 8 分鐘）</a> ｜ <a href="https://github.com/Niko1221/Strata">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Improper redaction reveals Google Data Center water and electricity usage</h3>
+  <p class="summary">一份提交給內布拉斯加州水、能源與環境部門的年度報告中，由於不當的塗黑處理，意外揭露了Google在該州的資料中心（包括林肯的Agate LLC）的用水量和用電量。Agate LLC去年尖峰用電量為52.65兆瓦，用水量達1329.9萬加侖，約可填滿20個奧運標準泳池。此外，報告也揭露Google在內布拉斯加州的三個資料中心預計將從2025年的稅務中獲得巨額退款，其中Agate LLC預計退款超過5500萬美元。這些被揭露的資訊引起了公眾對資料中心資源消耗及稅務優惠的關注。
+* 主要資料中心為Agate LLC (林肯), Fireball Group LLC (帕皮利恩), Westwood Solutions LLC (奧馬哈)。
+* 六個資料中心去年的總用水量達7.65億加侖。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼這些本應保密的資訊會因為不當遮蓋而被揭露？</summary>
+    <p>這些資訊是透過電腦游標選取報告中被遮蓋的文本框，然後複製貼上到另一個文件而揭露的。這顯示原始的遮蓋方式並未徹底隱藏資訊。</p>
+  </details>
+  
+  <details>
+    <summary>Google資料中心揭露的用水量和用電量數字對內布拉斯加州有何意義？</summary>
+    <p>這些數字提供了資料中心對當地資源影響的具體數據。例如，Agate LLC去年的用水量足以填滿約20個奧運標準泳池，而所有資料中心總用水量高達7.65億加侖，這些數據有助於公眾和政府評估其環境足跡及資源管理策略。</p>
+  </details>
+  
+  <details>
+    <summary>Google在內布拉斯加州的資料中心為何能獲得如此巨額的稅務退款？</summary>
+    <p>報告指出Google資料中心利用或預計利用「內布拉斯加州優勢法案」(Nebraska Advantage Act) 下的銷售和使用稅豁免。這些退款是該州為吸引和留住大型企業而提供的稅務激勵措施的一部分。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-05-1954cb720f-s.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Yemen's government announces all-out war to reclaim land from Houthis</h3>
+  <p class="summary">葉門國際承認政府於週日宣布將對伊朗支持的胡塞武裝發動全面戰爭，旨在奪回其佔領的剩餘領土並在全國範圍內擴展國家權威。此舉是在胡塞武裝上個月控制葉門整個紅海海岸線（包括重要的曼德海峽）以及近期胡塞武裝與沙特領導聯軍之間持續交火的背景下進行的，恐加劇該國的人道危機。
+
+- 胡塞武裝近日切斷了連接政府臨時首都亞丁與關鍵城市塔伊茲的補給線，有效包圍了塔伊茲。
+- 胡塞武裝聲稱已襲擊沙特阿美石油設施，顯示衝突可能進一步升級並影響全球能源供應。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>葉門內戰的根源是什麼？是什麼導致了國際勢力的介入？</summary>
+    <p>葉門內戰始於2014年，當時胡塞武裝從沙特支持的政府手中奪取了首都薩那。2015年，沙特阿拉伯領導一個國際聯軍介入，以恢復政府權威並遏制伊朗在中東地區的影響力。這場衝突也反映了什葉派（胡塞武裝）與遜尼派（沙特及其盟友）之間的地區性宗派對抗。</p>
+  </details>
+  
+  <details>
+    <summary>這場全面戰爭對葉門人道危機和地區穩定會產生怎樣的影響？</summary>
+    <p>葉門是世界上最貧困的國家之一，全面戰爭的重燃無疑將使當地本已嚴峻的人道危機雪上加霜，導致更多平民傷亡、流離失所和糧食短缺。此外，衝突升級可能蔓延至更廣泛的中東地區，尤其是若胡塞武裝持續襲擊沙特石油設施，將威脅全球能源供應鏈，引發國際油價波動。</p>
+  </details>
+  
+  <details>
+    <summary>胡塞武裝佔領紅海海岸線和切斷塔伊茲補給線對戰局有何重要戰略意義？</summary>
+    <p>胡塞武裝控制葉門整個紅海海岸線，包括曼德海峽這一關鍵航運要道，使其能夠影響國際海上貿易，也阻止沙特將此作為替代石油出口路線。切斷連接塔伊茲與亞丁的補給線，則成功孤立了塔伊茲這座政府軍控制的關鍵城市，對政府軍構成重大戰略壓力，為其進一步行動創造了有利條件。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-05-c663564d4e-s.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit</h3>
+  <p class="summary">俄羅斯軍隊連續四天對烏克蘭首都基輔的關鍵基礎設施發動無人機襲擊，特別是主要橋樑，造成兩人受傷並嚴重影響交通。這次襲擊正值德國總理梅爾茨（Friedrich Merz）突訪基輔，表達對烏克蘭的支持，並與烏克蘭總統澤倫斯基（Volodymyr Zelensky）達成超過13億歐元的新援助協議。俄羅斯聲明將加劇對基輔及其他地區的打擊，而烏克蘭則強調需要更多防空支援。
+- 基輔的北部和南部橋樑屢遭襲擊，儘管橋樑仍站立，但交通受阻嚴重。
+- 德國承諾提供武器和能源部門支援，並強調其安全也與烏克蘭戰爭結果息息相關。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>俄羅斯為何特別針對基輔的橋樑和關鍵基礎設施發動密集攻擊？</summary>
+    <p>俄羅斯軍方表示，其目的是打擊烏克蘭用來運輸部隊的橋樑，並作為對烏克蘭襲擊俄羅斯煉油廠的回應。這些攻擊旨在削弱烏克蘭的物流和作戰能力，並可能試圖在冬季來臨前對烏克蘭造成更大壓力。</p>
+  </details>
+  
+  <details>
+    <summary>基輔的基礎設施持續遭受襲擊，對當地居民和烏克蘭的戰爭努力會產生什麼更廣泛的影響？</summary>
+    <p>這些攻擊導致基輔部分地區交通嚴重堵塞，影響市民的日常通勤，並可能導致關鍵服務（如熱水供應）中斷。雖然專家認為無人機難以徹底摧毀橋樑，但重複襲擊可能迫使其關閉，削弱結構，影響交通，進而對首都的經濟和士氣造成負面影響。</p>
+  </details>
+  
+  <details>
+    <summary>德國對烏克蘭的巨額援助和堅定支持，在當前的衝突階段中扮演什麼樣的角色？</summary>
+    <p>德國已成為烏克蘭最大的單一捐助國，其提供的超過13億歐元新援助，特別是武器和能源部門的支持，對烏克蘭在關鍵時期維持防禦能力至關重要。這不僅展現了國際社會對烏克蘭的持續承諾，也體現了德國認為自身安全與烏克蘭戰爭結果密切相關的立場。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-05-64aa4378c7-s.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Watch: What we know about Russian strikes on Kyiv bridges</h3>
+  <p class="summary">俄羅斯在過去四天內加強了對烏克蘭首都基輔的襲擊，鎖定該市的主要橋樑為目標。北橋（Pivnichnyi）已連續兩天遭到攻擊，而南橋（Pivdennyi）本週稍早也多次被擊中。最新一次襲擊發生在德國總理弗里德里希·梅爾茨週日訪問基輔之際，顯示莫斯科正升級其在烏克蘭的攻擊行動。
+* 基輔兩座主要橋樑——北橋和南橋——在四天內遭到多次襲擊。
+* 襲擊正值德國總理訪基輔，凸顯俄羅斯加強攻勢。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這些橋樑為何成為俄羅斯襲擊的目標？</summary>
+    <p>橋樑是城市重要交通動脈，連接基輔的不同區域，並可能用於軍事物資運輸。襲擊橋樑旨在阻礙烏克蘭的物流和運輸能力，對基輔造成更大的壓力和破壞。</p>
+  </details>
+  
+  <details>
+    <summary>德國總理訪問基輔期間發生襲擊有何意義？</summary>
+    <p>襲擊發生在德國總理弗里德里希·梅爾茨訪問基輔期間，可能是一種挑釁行為，旨在傳達俄羅斯對國際外交努力的不屑，並向支持烏克蘭的西方國家展示其繼續攻擊的決心。</p>
+  </details>
+  
+  <details>
+    <summary>這些對基輔橋樑的襲擊對當地居民有何影響？</summary>
+    <p>這些襲擊可能導致交通中斷、出行困難，並可能影響日常物資的運輸和供應。持續的空襲警報和基礎設施損壞也會加劇基輔居民的恐懼和生活不確定性。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-05-c464349ff4-s.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>Mapping the Gaps in NASA’s Return to the Moon, featuring Richard Spolzino</h3>
+  <p class="summary">任職於美國太空總署（NASA）蘭利研究中心的 Richard Spolzino 負責識別並文件化其月球及火星任務的「資料鴻溝」（即知識缺口）。這項工作旨在確保在重返月球任務中，所有關鍵的未知資訊都能在造成問題前被發現並解決，對太空船的設計和儀器開發至關重要。他的團隊去年處理了約25個資料鴻溝，目標是今年底達到60個，有效引導合作夥伴的貢獻方向。他強調，NASA 並非萬事俱備，這為早期職業員工提供了實質性貢獻的機會。
+
+*   **資料鴻溝定義**：指關於月球土壤特性等關鍵未知資訊，及其對任務的潛在影響。
+*   **實際應用**：透過明確的目標，引導合作夥伴針對缺失的知識進行補充，以支持未來任務決策。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>在 Spolzino 的工作中，「資料鴻溝」具體指的是什麼？</summary>
+    <p>資料鴻溝是指美國太空總署在月球和火星任務中尚不清楚的資訊，例如月球土壤的承重能力或剪切強度。它會正式記錄所需但缺乏的知識、其重要性、現有資訊的不足之處，以及合作夥伴可以努力實現的具體可測量目標。這些資訊對於確保太空飛行器、居住艙和儀器的安全設計至關重要。</p>
+  </details>
+  
+  <details>
+    <summary>識別這些資料鴻溝如何實際幫助美國太空總署的任務？</summary>
+    <p>識別資料鴻溝能為產業和國際合作夥伴提供明確的目標，讓他們知道應將資源投入何處。例如，這些資訊影響著陸器的設計和儀器開發決策，確保任務在關鍵未知資訊被解決後才推進。這使得外部貢獻能直接填補NASA的知識空白，加速安全且成功的太空探索。</p>
+  </details>
+  
+  <details>
+    <summary>考慮到 Spolzino 本身的職涯道路，他對有興趣進入美國太空總署工作的人有何建議？</summary>
+    <p>Spolzino 建議，學業成績的重要性不如人們想像，更關鍵的是參與實際專案並展現成果。他強調，NASA 內部仍有許多「正在摸索中」的問題，因此早期職業員工只要願意承擔超出職責範圍的任務，便有機會做出實質性貢獻，而非僅僅執行既有劇本。因此，積極參與俱樂部、建立作品並展現解決問題的能力，比單純的學歷更重要。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-05-6bc4726749-s.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.nasa.gov/general/mapping-the-gaps-in-nasas-return-to-the-moon-featuring-richard-spolzino/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>APOD: 2026 October 4 – Supernumerary Rainbows over New Jersey</h3>
+  <p class="summary">2018年，當颶風佛羅倫斯殘餘勢力經過美國紐澤西州澤西海岸後，太陽從一個方向出現，但在相反方向卻出現了不尋常的「過剩虹」（Supernumerary Rainbows）奇景。在接下來的半小時內，攝影師及其女兒目睹了多道鮮豔的過剩虹漸隱漸現，其中一張特色照片捕捉到至少五道。
+
+過剩虹僅在落下的水滴大小幾乎一致且通常小於一毫米時形成，並且是光波干涉的結果，而非單純的反射，這項存在證據在19世紀初被視為光具有波動性質的早期證明。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>過剩虹與一般彩虹有何不同？</summary>
+    <p>一般彩虹主要是由光線在水滴中反射和折射形成，而過剩虹除了這些現象外，還涉及光波的干涉作用。它們通常以彩虹主弓內側出現的多道平行、色彩較淡的窄帶形式存在，且需要非常特定的大氣條件才能形成。</p>
+  </details>
+  
+  <details>
+    <summary>形成過剩虹需要哪些特殊條件？</summary>
+    <p>過剩虹的形成需要落下的水滴大小幾乎一致，並且通常小於一毫米。這種均勻且微小的水滴尺寸是產生光波干涉的關鍵，使得光線在水滴內部相互作用，產生額外的彩虹帶。</p>
+  </details>
+  
+  <details>
+    <summary>過剩虹的發現對科學理解有何重要性？</summary>
+    <p>過剩虹的存在無法僅憑光的幾何光學理論解釋，必須透過光的波動理論才能完全理解。因此，19世紀初觀察到的過剩虹現象，被視為支持光具有波動性質的早期重要證據之一。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-05-32716ff772-s.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/image-article/apod-2026-october-4-supernumerary-rainbows-over-new-jersey/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Curiosity Blog, Sols 5022-5028: Cashing in at Cache Creek</h3>
+  <p class="summary">好奇號火星車最近進入了火星上的「Cache Creek」探測區，並於本週（約2026年9月25日）成功鑽取了第48個岩石目標「Basque Lakes」。這項重要成就涉及詳細的接觸科學探測，包括APXS和MAHLI成像，以在電力限制下評估岩石。科學家們正熱切期待對鑽取樣本進行CheMin和SAM分析，希望能揭示其礦物成分並了解岩石的地質歷史，這可能與不列顛哥倫比亞省Cache Creek多樣的地質特徵有相似之處。樣本分析結果將有助於了解火星岩石的礦物組成與地質變遷史。
+- 成功鑽取了火星上的第48個岩石樣本。
+- 樣本分析將有助於了解火星岩石的礦物組成與地質變遷史。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>好奇號火星車探索的「Cache Creek」區域為何如此命名，它有何特殊意義？</summary>
+    <p>「Cache Creek」區域是根據加拿大不列顛哥倫比亞省一個地質多樣的地區命名，該地區包含海洋地殼、海相沉積物、火山岩和冰川沉積物。此外，那裡還有化學成分不尋常的湖泊，可能與火星上曾經存在的湖泊相似。</p>
+  </details>
+  
+  <details>
+    <summary>CheMin和SAM儀器將從鑽取的樣本中提供哪些具體資訊？</summary>
+    <p>CheMin儀器會進行X射線繞射分析，以識別樣本中存在的礦物種類。而SAM（火星樣本分析儀）將揭示更多關於該岩石的歷史和化學成分，提供其形成和變質過程的深入見解。</p>
+  </details>
+  
+  <details>
+    <summary>好奇號在這次鑽探和分析過程中面臨了哪些挑戰？除了主要任務外，它還進行了哪些其他活動？</summary>
+    <p>好奇號面臨了顯著的電力限制，並且作為一台老化的探測車。儘管有這些挑戰，它還利用Mastcam拍攝了周圍地形，使用ChemCam分析了另一個基岩目標「Peace River」，並利用Navcam和Mastcam監測了蓋爾隕石坑的環境和大氣狀況。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-05-6f680eb4c9-s.html">全文（約 3 分鐘）</a> ｜ <a href="https://science.nasa.gov/blog/curiosity-blog-sols-5022-5028-cashing-in-at-cache-creek/">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>
