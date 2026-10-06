@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-10-05</title>
+<title>每日 AI 文摘 2026-10-06</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="f-sans z-medium">
 <div class="page">
 <p class="prefs"><a href="index-sans-s.html">小</a><span class="pref-on">中</span><a href="index-sans-l.html">大</a><a class="pref-family" href="index.html">切換為襯線</a></p>
 
-<h1>每日 AI 文摘 2026-10-05</h1>
+<h1>每日 AI 文摘 2026-10-06</h1>
 <p class="meta">
-2026-10-05
+2026-10-06
 
  ｜ <a href="archive/index-sans.html">存檔列表</a>
  ｜ <a href="deepread-sans.html">每日深讀</a>
@@ -24,7 +24,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日新聞反映了科技發展的兩面性與地緣政治的緊張局勢。人工智慧技術不斷深化，大型模型已能運行於消費級硬體，但同時也引發了用戶對其資源佔用（如Apple Intelligence移除工具）及資料中心龐大耗能（如Google洩露數據）的關注。在全球衝突區域，葉門政府宣布對胡塞武裝發動全面戰爭，俄羅斯亦持續以無人機猛攻烏克蘭首都基輔，情勢日益升級。然而，人類對未知世界的探索並未止步，NASA正有條不紊地為未來的月球與火星任務填補知識鴻溝，好奇號火星車也持續在火星上進行鑽探取樣，展現了探索的決心。</p>
+<p>今天的頭條聚焦於人工智慧對社會與倫理的衝擊，從AI圖像盜用藝術家簽名侵犯智慧財產權，到AI監控透明度受阻，甚至顛覆數學研究模式，皆引發了對科技界線的深刻反思。全球局勢也動盪不安，包括航空恐襲陰謀、美國撤回戰略轟炸機以應對威脅，以及法國大規模學潮，凸顯地緣政治與社會矛盾升級。在這些挑戰之外，NASA火星任務持續探索宇宙奧秘，而新技術如城市路線規劃工具及文化藝術創作則豐富了我們的生活與自我認知。</p>
 </div>
 
 
@@ -34,273 +34,377 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>Turn off Apple Intelligence on macOS 27 and get its disk space back</h3>
-  <p class="summary">針對 macOS 27 用戶，一個名為「RemoveMacAI」的第三方工具現已推出，能徹底關閉 Apple Intelligence 功能並回收其佔用的磁碟空間。由於 macOS 27 並未提供一個簡單的開關來完全停用這些 AI 功能，且即使停用後相關模型仍會保留在磁碟上，RemoveMacAI 應運而生，它能移除已下載的 AI 模型並阻止系統再次下載。這對於希望釋放儲存空間或不使用特定 AI 功能的用戶來說，是個實用的解決方案。
-- 該工具透過指令稿或 Homebrew 安裝，並利用配置描述檔來管理設定和阻止模型重新下載，而不直接修改系統核心檔案。
-- 受影響的功能包括 Siri、寫作工具、Genmoji、圖像遊樂場以及郵件和訊息中的多項智慧摘要服務。</p>
+  <h3>ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons</h3>
+  <p class="summary">OpenAI的ChatGPT圖像生成器被發現未經授權，盜用《紐約客》等知名卡通漫畫家的真實簽名，並將其加到AI生成的假漫畫上，這類作品已在社群媒體上廣泛流傳，造成漫畫家如布倫丹·洛珀的困擾。此舉被視為對藝術家身份權和「公開權」的嚴重侵犯，因為簽名不僅是個人品牌，更是作品真偽的證明。儘管OpenAI已增設警示機制，但此問題仍持續存在，並引發了人工智慧對創作者生計構成威脅的廣泛擔憂，部分媒體甚至已開始使用AI漫畫取代人類藝術家。
+
+* 藝術家簽名被視為作品的「真品證書」和個人品牌，AI的盜用是對其人身權的侵犯。
+* 此事件凸顯了AI技術對創作者智慧財產權和生計的潛在威脅，尤其是在媒體行業已出現用AI取代人類工作的案例。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為什麼 macOS 27 的用戶需要像 RemoveMacAI 這樣的第三方工具來管理 Apple Intelligence？</summary>
-    <p>macOS 27 並沒有提供一個單一的開關來完全停用 Apple Intelligence，且即使將相關功能關閉，其預載或下載的 AI 模型仍會持續佔用大量的磁碟空間。RemoveMacAI 解決了這個問題，它能徹底移除這些模型並防止其重新下載，從而幫助用戶釋放寶貴的儲存空間。</p>
+    <summary>為什麼對於漫畫家來說，作品上的簽名如此重要？</summary>
+    <p>簽名不僅是創作者的個人標誌，更是作品原創性和真偽的「真品證書」。在數位時代，簽名還能像浮水印一樣，將作品與其合法創作者連結，防止未經授權的轉載和盜用，因此被視為藝術家的品牌和人身權的體現。</p>
   </details>
   
   <details>
-    <summary>RemoveMacAI 如何在不影響系統完整性或安全性的情況下移除 Apple Intelligence 模型？</summary>
-    <p>RemoveMacAI 的運作方式是安裝一個配置描述檔，此描述檔會應用 Apple 的限制鍵並強制執行設定，同時將已移除模型的下載請求重新導向到一個本地的封閉端口，以阻止系統再次下載。它利用 Apple 的資產服務來安全移除模型，並保持系統完整性保護 (SIP) 啟用，不直接修改 `/System` 下的檔案。所有更改都可以被還原，確保系統安全與可恢復性。</p>
+    <summary>漫畫家對於AI盜用簽名的行為，可能有哪些法律追訴的依據？</summary>
+    <p>漫畫家可能會依據各州法律中的「公開權」（right of publicity）提出訴訟。這項法律旨在保護個人姓名或身份不被未經授權地用於商業目的，若能證明AI生成漫畫被用於商業用途，則有追訴的基礎。</p>
   </details>
   
   <details>
-    <summary>哪些具體的 Apple Intelligence 功能會在安裝 RemoveMacAI 後停止運作？語音聽寫等其他相關功能是否受影響？</summary>
-    <p>安裝 RemoveMacAI 後，Siri（包括「嘿 Siri」）、寫作工具、Genmoji、圖像遊樂場、ChatGPT 擴展、郵件和訊息中的摘要、郵件智慧回覆、內聯文本預測、空間照片、照片清理和 Xcode 預測性程式碼補全等 Apple Intelligence 相關服務將會停止運作。然而，語音聽寫 (Dictation) 由於是一個獨立的設定，並使用不同的語音模型，因此不會受到影響，仍可正常使用。</p>
+    <summary>除了簽名盜用，AI對專業卡通漫畫家的生計還造成了哪些具體威脅？</summary>
+    <p>AI不僅可能取代人類的創作工作，例如《巴爾的摩太陽報》已用AI漫畫取代了資深漫畫家，引發業界廣泛擔憂。對於《紐約客》等雜誌的漫畫家而言，他們的作品常是「敲門磚」，用來爭取其他商業工作、書籍插畫等，而這些才是最受AI威脅的生計來源。美國編輯漫畫家協會已明確譴責AI這種剽竊藝術家作品、威脅原創思維的行為。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-10-05-fb514e83ae-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://github.com/omlahore/RemoveMacAI">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-10-06-80dc4d7e04-sans.html">全文（約 9 分鐘）</a> ｜ <a href="https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s</h3>
-  <p class="summary">Strata 應用程式現已推出，讓使用者能在配備 NVIDIA 或 AMD 顯示卡（需 12GB VRAM 或更多）的消費級個人電腦上運行通常需要伺服器才能執行的大型 125 億參數 AI 模型 Qwen3.8-Flash-Next。
-這款免費開源工具可在 Windows 或 Linux 系統上運作，允許用戶在本地進行 AI 聊天、編寫程式碼及圖像理解等任務，確保數據不離開個人電腦。測試顯示，例如 RTX 3090 可達每秒 100-140 個 token 的寫入速度，足以提供流暢的使用體驗。
-- 支援多種消費級顯示卡，最低要求 12GB VRAM 和 32GB RAM。
-- 採用創新技術將模型分擔於顯示卡、RAM 和處理器之間，實現高效運行。</p>
+  <h3>Texas city demands $2M for public records on Flock usage</h3>
+  <p class="summary">美國德州沃斯堡郊區的北里奇蘭希爾斯市官員，向一個隱私倡議團體提出高達230萬美元的巨額費用，以回應其對Flock監控系統公共紀錄的資訊請求。此舉被批評為旨在阻礙對警方使用配備AI的車牌辨識攝影機的審查，因為這些系統的使用已引發對隱私侵犯和警方濫用職權的擔憂。此類高額費用阻礙了公眾對警方監控技術透明度的了解，而過往的紀錄顯示，資訊透明有助於揭露不法行為並促使政策改革。
+
+關鍵點：
+* 德州城市索取巨額費用以阻礙Flock監控系統的資訊公開。
+* Flock系統的濫用（如警方跟蹤個人）已成為嚴峻問題。
+* 公眾監督與資訊透明有助於揭露違法行為並推動政策變革。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>Strata 如何實現將 125 億參數的大型 AI 模型在消費級硬體上運行，而不需要伺服器等級的資源？</summary>
-    <p>Strata 運用了獨特的技術，將模型的工作量分擔到整個 PC 硬體中，例如將常用的模型「專家」儲存在顯示卡 VRAM 中，其餘則由系統 RAM 和處理器協同處理，同時結合預測與檢查機制，大幅提升了在有限資源下的運行效率。</p>
+    <summary>Flock系統是什麼？它是如何運作的？</summary>
+    <p>Flock系統是一種利用AI技術的車牌辨識攝影機，主要用於追蹤通過其視野的每一輛車輛。執法機構使用它來識別嫌疑車輛，但其廣泛的數據收集也引發了隱私和濫用問題。</p>
   </details>
   
   <details>
-    <summary>在本地個人電腦上運行 Qwen3.8-Flash-Next AI 模型，對於使用者資料的隱私保護有何具體優勢？</summary>
-    <p>在本地 PC 上運行 Qwen3.8-Flash-Next AI 模型意味著所有數據處理都在使用者自己的設備上完成，無需上傳至雲端伺服器。這確保了所有互動內容和個人資訊都保留在本地，極大地提升了數據隱私和安全性。</p>
+    <summary>文章中提到Flock監控系統主要有哪些令人擔憂的問題？</summary>
+    <p>主要問題包括警方可能濫用系統進行個人跟蹤、隱私侵犯，以及缺乏透明度。高昂的紀錄查詢費用也阻礙了公眾監督，使得難以追究責任並防止濫用。</p>
   </details>
   
   <details>
-    <summary>對於想嘗試 Strata 的使用者，建議的最低硬體配置為何？安裝過程是否對一般使用者友好？</summary>
-    <p>建議的最低配置是具有 12GB 或更多 VRAM 的 NVIDIA 或 AMD 顯示卡，以及 32GB 或更多系統 RAM。安裝過程非常簡便，只需下載並執行自動安裝腳本（Windows 用戶雙擊 .bat 文件，Linux 用戶運行 .sh 腳本），它會引導使用者選擇模型和設定，並自動下載所需文件。</p>
+    <summary>根據文章，德州公開Flock系統使用資訊的努力帶來了什麼具體成果？</summary>
+    <p>德州透過公共紀錄請求揭露了一名警員濫用Flock系統進行跟蹤的行為，導致其被捕並認罪。此事件促使德州州長Greg Abbott迅速停止了對Flock系統的資助並停止發放相關許可證，顯示透明度能有效促成政策改變。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-10-05-bca476fd34-sans.html">全文（約 8 分鐘）</a> ｜ <a href="https://github.com/Niko1221/Strata">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-10-06-e2ed63c890-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://arstechnica.com/tech-policy/2026/10/texas-city-demands-2m-for-public-records-on-flock-usage/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Improper redaction reveals Google Data Center water and electricity usage</h3>
-  <p class="summary">一份提交給內布拉斯加州水、能源與環境部門的年度報告中，由於不當的塗黑處理，意外揭露了Google在該州的資料中心（包括林肯的Agate LLC）的用水量和用電量。Agate LLC去年尖峰用電量為52.65兆瓦，用水量達1329.9萬加侖，約可填滿20個奧運標準泳池。此外，報告也揭露Google在內布拉斯加州的三個資料中心預計將從2025年的稅務中獲得巨額退款，其中Agate LLC預計退款超過5500萬美元。這些被揭露的資訊引起了公眾對資料中心資源消耗及稅務優惠的關注。
-* 主要資料中心為Agate LLC (林肯), Fireball Group LLC (帕皮利恩), Westwood Solutions LLC (奧馬哈)。
-* 六個資料中心去年的總用水量達7.65億加侖。</p>
+  <h3>Find the flattest route between any two points in SF</h3>
+  <p class="summary">這是一個由Drew Edwards開發的工具，可以在舊金山（SF）找到任何兩點之間最平坦的路線。它利用USGS 1米雷射雷達高程數據和Overture/OpenStreetMap街道圖，在瀏覽器中計算超過160,000個街道段的路線。使用者可以透過滑桿調整距離和爬升之間的權衡，選擇最短或最平坦的路徑，這對於步行或騎自行車穿越舊金山等高低起伏的城市非常有用。
+
+關鍵點：
+- 使用USGS雷射雷達高程數據和OpenStreetMap街道圖。
+- 允許使用者調整距離與爬升的權衡，選擇最平坦的路線。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為什麼這些本應保密的資訊會因為不當遮蓋而被揭露？</summary>
-    <p>這些資訊是透過電腦游標選取報告中被遮蓋的文本框，然後複製貼上到另一個文件而揭露的。這顯示原始的遮蓋方式並未徹底隱藏資訊。</p>
+    <summary>這個工具是如何計算「最平坦」路線的？它具體使用了哪些數據源？</summary>
+    <p>該工具利用USGS 1米雷射雷達高程數據和Overture/OpenStreetMap街道圖，在瀏覽器中計算超過160,000個街道段的路線。它找出在距離和爬升兩方面都無法被超越的路線，並允許使用者調整權衡，例如將一英尺的爬升視為200英尺的步行距離。</p>
   </details>
   
   <details>
-    <summary>Google資料中心揭露的用水量和用電量數字對內布拉斯加州有何意義？</summary>
-    <p>這些數字提供了資料中心對當地資源影響的具體數據。例如，Agate LLC去年的用水量足以填滿約20個奧運標準泳池，而所有資料中心總用水量高達7.65億加侖，這些數據有助於公眾和政府評估其環境足跡及資源管理策略。</p>
+    <summary>哪些人會從這個最平坦路線尋找器中受益最大？為什麼它在舊金山特別有用？</summary>
+    <p>行人、自行車騎士以及任何有行動不便考量的人都會受益匪淺，因為它可以幫助避免費力的上坡路段。舊金山以其多山的地形而聞名，因此一個優先考慮最小高程增益的工具對於舒適地穿梭於這座城市來說，尤其具有價值。</p>
   </details>
   
   <details>
-    <summary>Google在內布拉斯加州的資料中心為何能獲得如此巨額的稅務退款？</summary>
-    <p>報告指出Google資料中心利用或預計利用「內布拉斯加州優勢法案」(Nebraska Advantage Act) 下的銷售和使用稅豁免。這些退款是該州為吸引和留住大型企業而提供的稅務激勵措施的一部分。</p>
+    <summary>除了尋找最平坦路徑之外，這個工具在路線客製化或特定交通方式方面還提供哪些獨特功能？</summary>
+    <p>該工具提供一個滑桿來調整距離和爬升之間的權衡，讓使用者可以在最短路徑和最平坦路徑之間做選擇。此外，它還區分步行路線允許樓梯，而自行車路線則排除樓梯，並提供舊金山的離線地點搜索功能。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-10-05-1954cb720f-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-10-06-aea63d4435-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://flattensf.com/">原文網頁</a></p>
 </article>
 
 
 <h2>國際 World</h2>
 
 <article>
-  <h3>Yemen's government announces all-out war to reclaim land from Houthis</h3>
-  <p class="summary">葉門國際承認政府於週日宣布將對伊朗支持的胡塞武裝發動全面戰爭，旨在奪回其佔領的剩餘領土並在全國範圍內擴展國家權威。此舉是在胡塞武裝上個月控制葉門整個紅海海岸線（包括重要的曼德海峽）以及近期胡塞武裝與沙特領導聯軍之間持續交火的背景下進行的，恐加劇該國的人道危機。
+  <h3>Trump says 'threat' led US to pull bombers from RAF Fairford</h3>
+  <p class="summary">美國總統川普表示，由於基地面臨「一些威脅」，美國已將其轟炸機（據信約十幾架B-1轟炸機）從英國皇家空軍費爾福德基地撤回美國本土。此舉發生在9月27日該基地附近發生「可疑車輛」事件並引發恐怖主義調查之後，儘管伊朗否認涉入，但美國官員暗示伊朗可能參與其中。這次撤離減少了美國從英國快速打擊伊朗的能力，但該基地對攻擊性行動的限制已存在。
 
-- 胡塞武裝近日切斷了連接政府臨時首都亞丁與關鍵城市塔伊茲的補給線，有效包圍了塔伊茲。
-- 胡塞武裝聲稱已襲擊沙特阿美石油設施，顯示衝突可能進一步升級並影響全球能源供應。</p>
+* 威脅性質不明，但華盛頓消息人士猜測可能涉及破壞或打擊敏感飛機。
+* 英國與美國國務卿對威脅的嚴重性及撤離原因有不同看法。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>葉門內戰的根源是什麼？是什麼導致了國際勢力的介入？</summary>
-    <p>葉門內戰始於2014年，當時胡塞武裝從沙特支持的政府手中奪取了首都薩那。2015年，沙特阿拉伯領導一個國際聯軍介入，以恢復政府權威並遏制伊朗在中東地區的影響力。這場衝突也反映了什葉派（胡塞武裝）與遜尼派（沙特及其盟友）之間的地區性宗派對抗。</p>
+    <summary>川普總統提及的「威脅」具體是什麼？目前已知有哪些相關細節？</summary>
+    <p>威脅的確切性質仍不清楚，但華盛頓消息人士推測可能涉及破壞行為或攻擊敏感且昂貴的飛機。此撤離發生在9月27日費爾福德基地附近發現三輛「可疑車輛」之後，該事件目前正由反恐警察調查中。川普聲稱美國「知道那些製造威脅的人」，但未透露身份。</p>
   </details>
   
   <details>
-    <summary>這場全面戰爭對葉門人道危機和地區穩定會產生怎樣的影響？</summary>
-    <p>葉門是世界上最貧困的國家之一，全面戰爭的重燃無疑將使當地本已嚴峻的人道危機雪上加霜，導致更多平民傷亡、流離失所和糧食短缺。此外，衝突升級可能蔓延至更廣泛的中東地區，尤其是若胡塞武裝持續襲擊沙特石油設施，將威脅全球能源供應鏈，引發國際油價波動。</p>
+    <summary>此次撤離對美國在中東地區的軍事行動或戰略有何影響？</summary>
+    <p>這次從皇家空軍費爾福德基地的重新部署，將減少美國「迅速增援對伊朗的攻擊次數」的能力，在一定程度上降低了威脅級別。這符合倫敦先前規定該基地僅可用於對伊朗進行防禦性打擊的限制。未來這些飛機可能會被派往迪戈加西亞或波斯灣的基地，以減少空中加油的需求。</p>
   </details>
   
   <details>
-    <summary>胡塞武裝佔領紅海海岸線和切斷塔伊茲補給線對戰局有何重要戰略意義？</summary>
-    <p>胡塞武裝控制葉門整個紅海海岸線，包括曼德海峽這一關鍵航運要道，使其能夠影響國際海上貿易，也阻止沙特將此作為替代石油出口路線。切斷連接塔伊茲與亞丁的補給線，則成功孤立了塔伊茲這座政府軍控制的關鍵城市，對政府軍構成重大戰略壓力，為其進一步行動創造了有利條件。</p>
+    <summary>關於此次威脅的嚴重性及轟炸機撤離的原因，美國和英國官員之間是否存在不同看法？</summary>
+    <p>是的，存在不同看法。美國總統川普和白宮方面強調是因「威脅」而撤離，並暗示伊朗涉入；然而，美國國務卿盧比奧則淡化威脅，稱軍事資產的調動「並不罕見」。英國首相府發言人最初堅稱費爾福德基地是安全的，但白廳消息人士並未否認華盛頓的撤離決定是對事件的回應。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-10-05-c663564d4e-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-10-06-3b72a7ddc9-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cwj3413e5m1lo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit</h3>
-  <p class="summary">俄羅斯軍隊連續四天對烏克蘭首都基輔的關鍵基礎設施發動無人機襲擊，特別是主要橋樑，造成兩人受傷並嚴重影響交通。這次襲擊正值德國總理梅爾茨（Friedrich Merz）突訪基輔，表達對烏克蘭的支持，並與烏克蘭總統澤倫斯基（Volodymyr Zelensky）達成超過13億歐元的新援助協議。俄羅斯聲明將加劇對基輔及其他地區的打擊，而烏克蘭則強調需要更多防空支援。
-- 基輔的北部和南部橋樑屢遭襲擊，儘管橋樑仍站立，但交通受阻嚴重。
-- 德國承諾提供武器和能源部門支援，並強調其安全也與烏克蘭戰爭結果息息相關。</p>
+  <h3>Flydubai co-pilot planned to crash plane into Tel Aviv airport or building, reports say</h3>
+  <p class="summary">報告指出，Flydubai副機長（一名阿曼國民，據報名為Hamam al-Hammami）於上週三試圖將從杜拜飛往特拉維夫的FZ1073航班墜毀在特拉維夫的本古里安機場或市區高樓。
+他在駕駛艙內用應急斧襲擊機長，隨後被乘客制伏，成功阻止了一場潛在的「9/11式」災難。
+此事件引發了對航空公司招募和審查流程的重大安全擔憂，尤其該副機長據報曾因極端主義觀點被其他航空公司禁止飛行。
+
+*   該副機長被指控為「獨狼」極端分子，調查顯示他有預謀地實施此次恐怖襲擊。
+*   事件暴露了航空安全漏洞，尤其是在招聘國際飛行員和審查飛往以色列航班的機組人員方面。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>俄羅斯為何特別針對基輔的橋樑和關鍵基礎設施發動密集攻擊？</summary>
-    <p>俄羅斯軍方表示，其目的是打擊烏克蘭用來運輸部隊的橋樑，並作為對烏克蘭襲擊俄羅斯煉油廠的回應。這些攻擊旨在削弱烏克蘭的物流和作戰能力，並可能試圖在冬季來臨前對烏克蘭造成更大壓力。</p>
+    <summary>副機長的背景是什麼？為何他會被Flydubai雇用並獲准執飛？</summary>
+    <p>該名副機長是一名阿曼國民，據報曾因極端主義觀點被阿曼國家航空公司Oman Air禁止飛行，並轉為行政職位。儘管如此，他隨後在通過了標準安全檢查後被Flydubai雇用，這些檢查據稱未深入審查其激進化跡象。</p>
   </details>
   
   <details>
-    <summary>基輔的基礎設施持續遭受襲擊，對當地居民和烏克蘭的戰爭努力會產生什麼更廣泛的影響？</summary>
-    <p>這些攻擊導致基輔部分地區交通嚴重堵塞，影響市民的日常通勤，並可能導致關鍵服務（如熱水供應）中斷。雖然專家認為無人機難以徹底摧毀橋樑，但重複襲擊可能迫使其關閉，削弱結構，影響交通，進而對首都的經濟和士氣造成負面影響。</p>
+    <summary>此次事件具體暴露了哪些航空安全漏洞？</summary>
+    <p>事件暴露了幾項嚴重的安全漏洞，包括Flydubai在招聘副機長時未能充分檢視其極端主義背景。此外，儘管以色列航空規定禁止與以色列無外交關係國家的公民執飛至該國的航班，該副機長仍獲准執飛，這突顯了對外國航空公司機組人員名單審查的不足。</p>
   </details>
   
   <details>
-    <summary>德國對烏克蘭的巨額援助和堅定支持，在當前的衝突階段中扮演什麼樣的角色？</summary>
-    <p>德國已成為烏克蘭最大的單一捐助國，其提供的超過13億歐元新援助，特別是武器和能源部門的支持，對烏克蘭在關鍵時期維持防禦能力至關重要。這不僅展現了國際社會對烏克蘭的持續承諾，也體現了德國認為自身安全與烏克蘭戰爭結果密切相關的立場。</p>
+    <summary>以色列與阿聯酋當局對於此事件的後續反應和調查進展如何？</summary>
+    <p>阿聯酋總檢察長已表示將徹底調查此事件的全部情況、動機及任何相關連結。以色列總理納坦雅胡已指示國家安全委員會審查所有針對外國民航飛往以色列的安全方面，以防止類似事件再次發生。同時，澳大利亞當局也正在調查該副機長與其在澳洲留學期間的聯繫。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-10-05-64aa4378c7-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-10-06-3def3bf8ef-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cm3691y79xp5o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Watch: What we know about Russian strikes on Kyiv bridges</h3>
-  <p class="summary">俄羅斯在過去四天內加強了對烏克蘭首都基輔的襲擊，鎖定該市的主要橋樑為目標。北橋（Pivnichnyi）已連續兩天遭到攻擊，而南橋（Pivdennyi）本週稍早也多次被擊中。最新一次襲擊發生在德國總理弗里德里希·梅爾茨週日訪問基輔之際，顯示莫斯科正升級其在烏克蘭的攻擊行動。
-* 基輔兩座主要橋樑——北橋和南橋——在四天內遭到多次襲擊。
-* 襲擊正值德國總理訪基輔，凸顯俄羅斯加強攻勢。</p>
+  <h3>France braces for national day of school protests after injuries and mass arrests</h3>
+  <p class="summary">法國正準備迎接全國性的學生抗議行動，此前一週的示威已導致數百所學校被封鎖、至少190名學生受傷、超過5,000人被捕。學生們要求政府增加教育投資以改善教室過度擁擠、校舍老舊和教師短缺等問題，但組織者認為政府提出的措施「沒有具體內容」。此次抗議活動已引發嚴重衝突，甚至有學生在衝突中手部被炸斷，週二的動員預計將加劇法國的政治僵局。
+* 抗議活動主要針對法國教育系統的長期問題，包括教室擁擠、設施破舊及教師短缺。
+* 示威過程中發生了暴力事件，導致學生嚴重受傷，並引發了對警方執法尺度的廣泛爭議和政治兩極化。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>這些橋樑為何成為俄羅斯襲擊的目標？</summary>
-    <p>橋樑是城市重要交通動脈，連接基輔的不同區域，並可能用於軍事物資運輸。襲擊橋樑旨在阻礙烏克蘭的物流和運輸能力，對基輔造成更大的壓力和破壞。</p>
+    <summary>這些抗議活動的具體訴求是什麼？</summary>
+    <p>學生主要抗議教室過度擁擠、校舍年久失修以及教師短缺的問題。他們要求政府增加對教育的投資，以改善學習環境和資源。這些訴求反映了法國教育系統面臨的長期挑戰。</p>
   </details>
   
   <details>
-    <summary>德國總理訪問基輔期間發生襲擊有何意義？</summary>
-    <p>襲擊發生在德國總理弗里德里希·梅爾茨訪問基輔期間，可能是一種挑釁行為，旨在傳達俄羅斯對國際外交努力的不屑，並向支持烏克蘭的西方國家展示其繼續攻擊的決心。</p>
+    <summary>抗議活動中發生的暴力事件造成了哪些嚴重後果？</summary>
+    <p>抗議活動已造成嚴重的人身傷害，包括一名15歲學生在衝突中手部被炸斷，以及另一名14歲學生被催淚彈擊中頭部導致頜骨骨折。此外，逾5,000人被捕，其中大部分是未成年人，導致數千人面臨起訴。暴力事件還包括學校被焚燒和洗劫。</p>
   </details>
   
   <details>
-    <summary>這些對基輔橋樑的襲擊對當地居民有何影響？</summary>
-    <p>這些襲擊可能導致交通中斷、出行困難，並可能影響日常物資的運輸和供應。持續的空襲警報和基礎設施損壞也會加劇基輔居民的恐懼和生活不確定性。</p>
+    <summary>法國政府和主要政治人物如何看待和應對這些抗議？</summary>
+    <p>法國總理雖然宣布了一些措施以回應教育需求，但強調不會對暴力行為讓步。政府和右翼政治人物將抗議歸咎於極左翼黨派的煽動，而極左翼領袖則指責警方濫用權力。這場運動已經高度政治化，顯示出法國社會在應對青年不滿和執法問題上的深刻分歧。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-10-05-c464349ff4-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-10-06-14b5dd909b-sans.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cr4g1q1elxnjo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 
 <h2>科學 Science</h2>
 
 <article>
-  <h3>Mapping the Gaps in NASA’s Return to the Moon, featuring Richard Spolzino</h3>
-  <p class="summary">任職於美國太空總署（NASA）蘭利研究中心的 Richard Spolzino 負責識別並文件化其月球及火星任務的「資料鴻溝」（即知識缺口）。這項工作旨在確保在重返月球任務中，所有關鍵的未知資訊都能在造成問題前被發現並解決，對太空船的設計和儀器開發至關重要。他的團隊去年處理了約25個資料鴻溝，目標是今年底達到60個，有效引導合作夥伴的貢獻方向。他強調，NASA 並非萬事俱備，這為早期職業員工提供了實質性貢獻的機會。
-
-*   **資料鴻溝定義**：指關於月球土壤特性等關鍵未知資訊，及其對任務的潛在影響。
-*   **實際應用**：透過明確的目標，引導合作夥伴針對缺失的知識進行補充，以支持未來任務決策。</p>
+  <h3>Curiosity Blog, Sols 5029-5035: Back in the Lab</h3>
+  <p class="summary">好奇號火星車在Sols 5029至5035期間，主要在火星上執行高度專業的「實驗室活動」，專注於分析來自「巴斯克湖」(Basque Lakes)鑽孔的樣本。此任務利用CheMin儀器完成樣本分析，並隨後由SAM儀器的可調諧雷射光譜儀(TLS)進行揮發物分析。這些實驗室分析極為耗電，但對於充分發揮好奇號「火星科學實驗室」的設計宗旨，以及獲取寶貴的火星岩石化學組成數據至關重要。
+* CheMin的數據是SAM決定分析樣本的關鍵。
+* SAM將等待TLS結果來決定是否進行進一步的質譜分析。
+* 儘管實驗室活動優先，其他儀器如Mastcam和ChemCam仍進行了360度全景成像及環境監測，以提供鑽孔位置的背景資訊。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>在 Spolzino 的工作中，「資料鴻溝」具體指的是什麼？</summary>
-    <p>資料鴻溝是指美國太空總署在月球和火星任務中尚不清楚的資訊，例如月球土壤的承重能力或剪切強度。它會正式記錄所需但缺乏的知識、其重要性、現有資訊的不足之處，以及合作夥伴可以努力實現的具體可測量目標。這些資訊對於確保太空飛行器、居住艙和儀器的安全設計至關重要。</p>
+    <summary>CheMin和SAM是什麼樣的儀器？它們在分析火星樣本中扮演什麼角色？</summary>
+    <p>CheMin（化學與礦物學分析儀）用於識別岩石和土壤中的礦物組成，而SAM（樣本分析儀）則分析有機化學物質和揮發性化合物。它們是好奇號上最重要的科學儀器，能直接在火星上進行精密實驗室分析，揭示火星的地質歷史和潛在宜居性。</p>
   </details>
   
   <details>
-    <summary>識別這些資料鴻溝如何實際幫助美國太空總署的任務？</summary>
-    <p>識別資料鴻溝能為產業和國際合作夥伴提供明確的目標，讓他們知道應將資源投入何處。例如，這些資訊影響著陸器的設計和儀器開發決策，確保任務在關鍵未知資訊被解決後才推進。這使得外部貢獻能直接填補NASA的知識空白，加速安全且成功的太空探索。</p>
+    <summary>文章提到實驗室活動「極為耗電」，並且其他儀器「大多退居次要位置」，這項工作的獨特之處和重要性是什麼？</summary>
+    <p>這些實驗室活動的重要性在於它們能夠提供其他儀器無法獲取的詳細化學和礦物數據，例如樣本的揮發物組成。雖然耗電且限制了其他科學活動，但這些分析是實現好奇號作為「火星科學實驗室」核心任務的關鍵，有助於深入理解火星岩石的形成條件和演化過程。</p>
   </details>
   
   <details>
-    <summary>考慮到 Spolzino 本身的職涯道路，他對有興趣進入美國太空總署工作的人有何建議？</summary>
-    <p>Spolzino 建議，學業成績的重要性不如人們想像，更關鍵的是參與實際專案並展現成果。他強調，NASA 內部仍有許多「正在摸索中」的問題，因此早期職業員工只要願意承擔超出職責範圍的任務，便有機會做出實質性貢獻，而非僅僅執行既有劇本。因此，積極參與俱樂部、建立作品並展現解決問題的能力，比單純的學歷更重要。</p>
+    <summary>雖然實驗室活動優先，但文章也提到其他儀器收集了數據。除了CheMin和SAM之外，其他載荷器在此期間還進行了哪些科學觀察或監測？</summary>
+    <p>儘管實驗室活動優先，Mastcam仍完成了周圍環境的360度全景成像以提供地質背景，並與Navcam進行了光度測量。ChemCam則對鑽孔內部、沙丘和散落的碎屑進行了化學分析。同時，REMS、RAD和DAN也持續進行了常規環境監測，包括大氣塵埃、雲層和塵捲風活動。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-05-6bc4726749-sans.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.nasa.gov/general/mapping-the-gaps-in-nasas-return-to-the-moon-featuring-richard-spolzino/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-06-f8f6bf1cba-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://science.nasa.gov/blog/curiosity-blog-sols-5029-5035-back-in-the-lab/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>APOD: 2026 October 4 – Supernumerary Rainbows over New Jersey</h3>
-  <p class="summary">2018年，當颶風佛羅倫斯殘餘勢力經過美國紐澤西州澤西海岸後，太陽從一個方向出現，但在相反方向卻出現了不尋常的「過剩虹」（Supernumerary Rainbows）奇景。在接下來的半小時內，攝影師及其女兒目睹了多道鮮豔的過剩虹漸隱漸現，其中一張特色照片捕捉到至少五道。
-
-過剩虹僅在落下的水滴大小幾乎一致且通常小於一毫米時形成，並且是光波干涉的結果，而非單純的反射，這項存在證據在19世紀初被視為光具有波動性質的早期證明。</p>
+  <h3>NASA to Stream SpaceX Crew-12 Return, Splashdown Live</h3>
+  <p class="summary">NASA 與 SpaceX 計畫於美國東部時間 10 月 7 日星期三上午 8:05，讓 SpaceX Crew-12 任務太空船脫離國際太空站。此任務載有 NASA 太空人 Jessica Meir 和 Jack Hathaway、ESA 太空人 Sophie Adenot 以及 Roscosmos 太空人 Andrey Fedyaev，預計於 10 月 8 日星期四上午 11:34 在加州海岸濺落。NASA 將全程直播此次返航過程，確保四名國際太空人安全返回地球。
+* 重點摘要：
+* 預計脫離日期：10 月 7 日
+* 預計濺落日期：10 月 8 日
+* 乘員：來自 NASA、ESA 和 Roscosmos 的四名太空人</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>過剩虹與一般彩虹有何不同？</summary>
-    <p>一般彩虹主要是由光線在水滴中反射和折射形成，而過剩虹除了這些現象外，還涉及光波的干涉作用。它們通常以彩虹主弓內側出現的多道平行、色彩較淡的窄帶形式存在，且需要非常特定的大氣條件才能形成。</p>
+    <summary>Crew-12 任務的目的是什麼？</summary>
+    <p>Crew-12 任務是 NASA 與 SpaceX 合作的商業載人計畫的一部分，負責將太空人送往國際太空站執行科學研究與站務維護。這次返航標誌著其在太空站任務的結束。</p>
   </details>
   
   <details>
-    <summary>形成過剩虹需要哪些特殊條件？</summary>
-    <p>過剩虹的形成需要落下的水滴大小幾乎一致，並且通常小於一毫米。這種均勻且微小的水滴尺寸是產生光波干涉的關鍵，使得光線在水滴內部相互作用，產生額外的彩虹帶。</p>
+    <summary>哪些因素可能影響 Crew-12 任務的脫離和濺落時程？</summary>
+    <p>脫離與濺落的時程主要受天氣條件影響，尤其是加州海岸太平洋的回收區天氣。此外，太空船整備情況、回收團隊的準備狀況以及其他操作因素也可能導致時間表變動。</p>
   </details>
   
   <details>
-    <summary>過剩虹的發現對科學理解有何重要性？</summary>
-    <p>過剩虹的存在無法僅憑光的幾何光學理論解釋，必須透過光的波動理論才能完全理解。因此，19世紀初觀察到的過剩虹現象，被視為支持光具有波動性質的早期重要證據之一。</p>
+    <summary>公眾如何觀看 Crew-12 任務的返航直播？</summary>
+    <p>大眾可以透過 NASA 提供的多個平台線上觀看 Crew-12 任務的返航直播。NASA 將在脫離和濺落的關鍵時刻提供實時轉播，詳細的觀看資訊將由 NASA 公佈。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-05-32716ff772-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/image-article/apod-2026-october-4-supernumerary-rainbows-over-new-jersey/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-06-f33a490284-sans.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-to-stream-spacex-crew-12-return-splashdown-live/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Curiosity Blog, Sols 5022-5028: Cashing in at Cache Creek</h3>
-  <p class="summary">好奇號火星車最近進入了火星上的「Cache Creek」探測區，並於本週（約2026年9月25日）成功鑽取了第48個岩石目標「Basque Lakes」。這項重要成就涉及詳細的接觸科學探測，包括APXS和MAHLI成像，以在電力限制下評估岩石。科學家們正熱切期待對鑽取樣本進行CheMin和SAM分析，希望能揭示其礦物成分並了解岩石的地質歷史，這可能與不列顛哥倫比亞省Cache Creek多樣的地質特徵有相似之處。樣本分析結果將有助於了解火星岩石的礦物組成與地質變遷史。
-- 成功鑽取了火星上的第48個岩石樣本。
-- 樣本分析將有助於了解火星岩石的礦物組成與地質變遷史。</p>
+  <h3>A Journey to the Depths of Ancient Mars?</h3>
+  <p class="summary">「毅力號」探測車最近在火星耶澤羅隕石坑西緣外的「魅力湖」地區，發現了一大片不尋常的淺色岩石。其中許多已被鑑定為輝長岩，這是一種通常在行星地殼深處緩慢冷卻形成的火成岩，表明火星古老的地下物質已被揭露。探測車也正在調查一處角礫岩露頭，這可能解釋了這些深層岩石是如何被帶到地表，或許與古老的撞擊事件有關。這項發現為早期火星的地質歷史和地下組成提供了重要線索。
+
+* 毅力號在火星上發現罕見的淺色岩石，暗示深層地質構造。
+* 輝長岩的發現意味著早期火星地殼深處的物質被揭示。
+* 團隊正在探討角礫岩與這些深層岩石如何被帶到地表的機制，可能涉及古老撞擊。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>好奇號火星車探索的「Cache Creek」區域為何如此命名，它有何特殊意義？</summary>
-    <p>「Cache Creek」區域是根據加拿大不列顛哥倫比亞省一個地質多樣的地區命名，該地區包含海洋地殼、海相沉積物、火山岩和冰川沉積物。此外，那裡還有化學成分不尋常的湖泊，可能與火星上曾經存在的湖泊相似。</p>
+    <summary>什麼是輝長岩？為什麼在火星上發現它很重要？</summary>
+    <p>輝長岩是一種富含鐵和鎂礦物的火成岩，通常由岩漿在地殼深處緩慢冷卻結晶形成。在火星表面發現輝長岩，意味著火星古老的地下深層物質被帶到地表，為了解火星內部結構和早期地質演變提供了直接證據。</p>
   </details>
   
   <details>
-    <summary>CheMin和SAM儀器將從鑽取的樣本中提供哪些具體資訊？</summary>
-    <p>CheMin儀器會進行X射線繞射分析，以識別樣本中存在的礦物種類。而SAM（火星樣本分析儀）將揭示更多關於該岩石的歷史和化學成分，提供其形成和變質過程的深入見解。</p>
+    <summary>科學家們認為這些深層岩石是如何被帶到火星表面的？</summary>
+    <p>科學團隊正在調查的一種可能性是，這些淺色岩石是從角礫岩中侵蝕出來的。角礫岩通常透過劇烈的地質過程形成，例如早期火星上的小行星撞擊，這些撞擊可能導致岩石破裂和運輸，從而將深層物質挖掘並暴露在地表。</p>
   </details>
   
   <details>
-    <summary>好奇號在這次鑽探和分析過程中面臨了哪些挑戰？除了主要任務外，它還進行了哪些其他活動？</summary>
-    <p>好奇號面臨了顯著的電力限制，並且作為一台老化的探測車。儘管有這些挑戰，它還利用Mastcam拍攝了周圍地形，使用ChemCam分析了另一個基岩目標「Peace River」，並利用Navcam和Mastcam監測了蓋爾隕石坑的環境和大氣狀況。</p>
+    <summary>這項發現對我們了解火星的早期歷史有何意義？</summary>
+    <p>這項發現提供了火星在遙遠過去曾有活躍地質過程的證據，包括深層岩漿活動以及可能改變地表的劇烈撞擊事件。它幫助科學家重建火星地殼的形成和演化歷史，進而更深入地理解火星的整體行星演變過程。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-05-6f680eb4c9-sans.html">全文（約 3 分鐘）</a> ｜ <a href="https://science.nasa.gov/blog/curiosity-blog-sols-5022-5028-cashing-in-at-cache-creek/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-06-d68e18aad0-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/blog/a-journey-to-the-depths-of-ancient-mars/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>Is AI the End of Math As We Know It?</h3>
+  <p class="summary">這篇文章探討了人工智慧對數學領域帶來的顛覆性影響。隨著AI模型能夠迅速證明數十年未解的數學猜想，人類數學家面臨著專業意義上的深刻危機，因為數學的核心價值不僅在於答案本身，更在於理解、直覺和解決問題的探索過程。AI生成的證明缺乏可讀性與上下文，使人類難以獲得「理解」，這嚴重挑戰了以問題解決和公開合作為基礎的現有數學文化和激勵機制。
+*   AI的快速證明能力威脅了傳統數學的價值觀。
+*   數學家需重新定義角色，專注於理解、溝通與提出新問題。
+*   未來數學的發展取決於該領域能否成功適應並重建其生態系統。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>摘要中提到AI生成的證明缺乏「理解」。在數學領域，「理解」的具體含義是什麼？為何它對人類數學家如此重要？</summary>
+    <p>在數學中，「理解」不僅指知道定理為真，更涉及掌握其邏輯建構、與其他數學概念的聯繫、以及背後可能的新思路。它能啟發新的研究方向、工具和理論框架，是數學進步的基石，而非單純的答案。</p>
+  </details>
+  
+  <details>
+    <summary>文章提到數學社群需要改變其「激勵結構」以應對AI的挑戰。目前數學界正在考慮或提出哪些具體的變革措施？</summary>
+    <p>數學家們正在重新思考學生培養、論文發表和招聘標準。例如，可能要求論文附帶口頭報告以促進交流，並鼓勵研究者側重於溝通知識、發展廣闊視野和提出原創想法，而非僅僅證明定理。</p>
+  </details>
+  
+  <details>
+    <summary>摘要中提到數學的未來可能走向「黯淡」或「充滿希望」。如果數學領域能成功適應AI，其「充滿希望的未來」會是什麼樣子？</summary>
+    <p>在充滿希望的未來中，數學家將從證明定理的繁重工作中解放出來，轉而專注於解釋AI生成的證明、尋找更優雅的論證、建立理論框架、提出新猜想及傳播知識。他們將成為理解和塑造數學文化的核心，享受更深層次的創造性工作。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="article/2026-10-06-e037620a06-sans.html">全文（約 13 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/is-ai-the-end-of-math-as-we-know-it-20261005/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>All-around junior male</h3>
+  <p class="summary">短片《全能少年男》由因紐特電影製作人琳賽·麥金泰爾執導，記錄了因紐特傳統運動「單腳高踢」。這項運動曾是獵人成功捕獵的標誌，要求極高的力量、平衡和控制，選手需雙腳起跳擊中懸掛目標，並單腳落地。
+麥金泰爾透過單色手沖洗膠片，抽象化周圍環境，聚焦於運動員肖恩·烏庫圖克的面部與身體動作，結合環境配樂，營造出沉浸式的夢幻意境。
+- 遊戲反映因紐特文化及高超體能
+- 影片藝術風格獨特，強調抽象與沉浸感</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>「單腳高踢」這項因紐特傳統運動的起源或歷史背景為何？</summary>
+    <p>文章指出，「單腳高踢」曾是獵人成功捕獵後用來表示慶祝與成功的標誌。這項運動深植於因紐特人的狩獵文化中，是他們傳統生活方式的一部分。</p>
+  </details>
+  
+  <details>
+    <summary>電影製作人琳賽·麥金泰爾被稱為「因紐特」電影人，這代表什麼意義？</summary>
+    <p>「因紐特」指的是加拿大北極地區的原住民。琳賽·麥金泰爾作為因紐特電影人，意味著她來自這個族群，並可能透過她的作品來探索、記錄和傳達因紐特文化、傳統與視角。</p>
+  </details>
+  
+  <details>
+    <summary>影片中「單色手沖洗膠片」的藝術選擇如何增強其「夢幻般」的沉浸式質感？</summary>
+    <p>單色和手沖洗膠片能夠將周圍環境抽象化，引導觀眾將注意力完全集中在運動員的身體動作和表情上。這種獨特的視覺風格，搭配環境配樂，使得影像脫離日常現實，營造出一種空靈且深刻的夢幻體驗。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="article/2026-10-06-c44bf45ed9-sans.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/a-traditional-inuit-game-of-balance-and-strength-stylishly-captured">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>A life in episodes</h3>
+  <p class="summary">這篇文章探討了在社群媒體時代，公開書寫自傳如何顛覆傳統、私密的生命敘事模式。作者透過分享個人生活片段並與讀者即時互動，發現記憶和自我形象的建構是一個持續的對話過程，而非孤立的成果。他質疑將生命強行整合成一個連貫敘事的必要性，主張應忠於片段的真實性，並將自傳視為一種與過去共存、不斷自我審視和重新理解的開放式實踐。
+- 公開書寫和讀者互動重塑自傳與自我理解。
+- 挑戰傳統自傳的連貫性要求，擁抱生命的碎片與複雜性。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>作者提到他曾以「存在主義科學傳記」的方法書寫他人生命，這種方法與他現在的公開自傳實踐有何共通或相異之處？</summary>
+    <p>「存在主義科學傳記」強調將人物的私人生活與科學研究視為一個整體，注重個人背景對科學家的影響。這與他現在的自傳實踐有共通之處，即都注重個人深層的自我理解；然而，公開自傳更進一步，透過即時互動，讓讀者的視角參與並重塑敘事，強調過程的開放性而非最終的連貫成品。</p>
+  </details>
+  
+  <details>
+    <summary>作者為何會認為傳統上追求生命敘事的「連貫性」可能是一種「錯誤的安慰」？</summary>
+    <p>作者認為，強行追求連貫性可能導致作者為了符合統一的敘事而刻意淡化矛盾、抹平裂痕，甚至忽略生命中不可預測、混亂和難以歸類的部分。他主張，生命的真實性往往存在於這些未經修飾的片段中，過於整齊的敘事反而會使其失去深度和真實性。</p>
+  </details>
+  
+  <details>
+    <summary>在公開書寫生命片段的過程中，讀者的「即時回應」對作者的自我理解和敘事建構產生了什麼關鍵影響？</summary>
+    <p>讀者的即時回應促使作者從不同的角度審視自己的記憶和經歷，揭示了他自己未能察覺的盲點（例如他對個人傷痛的表達方式）。這些外部視角挑戰並豐富了作者的自我認知，甚至幫助他發現被遺忘的關聯，使自傳成為一個動態的、共同建構的過程。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="article/2026-10-06-ac1db33c95-sans.html">全文（約 25 分鐘）</a> ｜ <a href="https://aeon.co/essays/what-i-have-learned-from-posting-episodes-of-my-life-on-facebook">原文網頁</a></p>
 </article>
 
 
