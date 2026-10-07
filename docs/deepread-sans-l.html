@@ -12,44 +12,44 @@
 
 <h1>每日深讀</h1>
 <p class="meta">
-2026-10-06 ｜ 本篇：A life in episodes
+2026-10-07 ｜ 本篇：Decisions API is in public beta
  ｜ <a href="index-sans-l.html">首頁</a>
- ｜ <a href="archive/2026-10-06-sans-l.html">當天文摘</a>
+ ｜ <a href="archive/2026-10-07-sans-l.html">當天文摘</a>
  ｜ <a href="archive/index-sans-l.html">存檔列表</a>
- ｜ <a href="article/2026-10-06-ac1db33c95-sans-l.html">讀全文</a>
- ｜ <a href="https://aeon.co/essays/what-i-have-learned-from-posting-episodes-of-my-life-on-facebook">原文網頁</a>
+ ｜ <a href="article/2026-10-07-a585154abd-sans-l.html">讀全文</a>
+ ｜ <a href="https://developers.openai.com/api/docs/guides/decisions">原文網頁</a>
 </p>
 
 
 
 <h2>脈絡</h2>
-<p>這篇文章探討了作者從私密回憶到公開自傳寫作的轉變，尤其強調社群媒體如何顛覆傳統自傳模式。作者分享了他發現母親日記中關於他出生那一刻的震驚，以及後來撰寫免疫學家Niels Kaj Jerne傳記的經驗，這啟發了他對「存在科學傳記」的思考。退休後，他決定將自己的生活作為寫作對象，並通過連載形式在社群媒體上發表。</p>
+<p>Decisions API 是一個用於快速評估文字、圖像或兩者的工具，能以比 Responses API 快十倍的速度返回特定類型的答案。這項服務的目標是幫助應用程式進行內容分類、請求路由以及工作優先排序，目前處於公開測試階段，並僅支援 gpt-6-luna 模型。</p>
 
 
 <h2>重點</h2>
 <ul>
-<li>社群媒體徹底改變了自傳寫作，將其從個人獨白轉化為與讀者持續互動的公開對話。</li><li>在公開場合塑造個人生命敘事，深刻影響了自我形象的形成與重塑過程。</li><li>作者質疑將人生框定為單一連貫敘事的可能性，並認為擁抱碎片化而非強加統一性更具解放意義。</li><li>讀者的即時反饋和詮釋，揭示了敘事如何在接收過程中而非僅是寫作行為中浮現。</li><li>自傳成為一種持續與過去共存的方式，藉由反思、調整判斷並嘗試不同描述來不斷理解自身。</li>
+<li>Decisions API 能以極快的速度處理輸入，提供比傳統回應 API 更高效的決策能力。</li><li>它支援同時評估文字和圖像內容，使其適用於更廣泛的應用場景，如產品檢測。</li><li>API 提供「判斷式 (predicate)」、「選擇 (choice)」和「評分 (score)」三種核心問題類型。</li><li>Decisions API 專注於返回預定義的答案類型，與用於生成自定義 JSON 結構的 Responses API 或用於調用工具的 Function Calling 有所不同。</li><li>該 API 僅對輸入 tokens 收費，不產生緩存讀寫或輸出 tokens 的費用，有助於成本控制。</li>
 </ul>
 
 
 <h2>影響與延伸</h2>
-<p>這種公開、分段式的自傳寫作方式，顛覆了傳統上對「完成」或「固定」的生命敘事的理解，轉而強調自我認識是一個持續進行的過程。它為傳記和歷史研究提供了新的方法論，鼓勵將讀者參與和即時反饋納入敘事建構中。這也暗示了記憶和身份的本質是流動且動態的，會隨著互動和時間而不斷演變。</p>
+<p>Decisions API 的推出預示著應用程式能更快速、更自動地處理大量輸入並做出決策，顯著提升營運效率。這對於需要即時分類、審核或路由的場景（如內容審核、客服分流、品質控制）尤其重要，有望降低人工干預的需求並加速業務流程。</p>
 
 
 <h2>小辭典</h2>
 <dl class="glossary">
 
-<dt>存在科學傳記 (Existential scientific biography)</dt>
-<dd>一種由作者發展的傳記寫作方法，旨在將傳主私密的個人生活與其科學工作視為一個整合的整體進行探討，深受齊克果哲學的啟發。</dd>
+<dt>Decisions API</dt>
+<dd>一種高效能的 API，專為快速評估文字或圖像，並返回特定答案類型（如機率、選擇或評分）而設計。</dd>
 
-<dt>連載式自傳 (Feuilleton-style autobiography)</dt>
-<dd>指作者在社群媒體上以分段、連續發表的形式撰寫個人生命故事，這不僅挑戰了傳統自傳的界限，也允許讀者參與敘事的共同建構。</dd>
+<dt>gpt-6-luna</dt>
+<dd>目前 Decisions API 唯一支援的模型，負責執行內容評估和決策生成。</dd>
 
-<dt>未經檢視的人生不值得一過 (The unexamined life is not worth living)</dt>
-<dd>蘇格拉底的一句著名格言，意指若不反思或檢視自己的生活，則該生活不值得一過；這句話激勵作者在晚年展開自我生命寫作。</dd>
+<dt>Predicate question (判斷式問題)</dt>
+<dd>一種問題類型，用於檢查某個條件是否為真，並返回該條件為真的機率（0 到 1 之間）。例如，檢查產品是否有可見損壞。</dd>
 
-<dt>善終之術 (Ars moriendi)</dt>
-<dd>中世紀晚期及近代早期關於如何安然面對死亡的指南；作者將其當代的自傳寫作視為一種「健康老化」的自我照護與反思。</dd>
+<dt>Zero Data Retention (ZDR) (零資料保留)</dt>
+<dd>一項資料隱私功能，確保提交給 API 的資料不會被永久儲存，以保障客戶的資料安全性。</dd>
 
 </dl>
 
