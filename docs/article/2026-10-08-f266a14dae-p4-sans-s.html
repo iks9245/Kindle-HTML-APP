@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Push ifs up and fors down: The idiom, its algebra, and its limits</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-08-f266a14dae-p5-sans.html">中</a><a href="2026-10-08-f266a14dae-p6-sans-l.html">大</a><a class="pref-family" href="2026-10-08-f266a14dae-p4-s.html">切換為襯線</a></p>
+
+
+<h1>Push ifs up and fors down: The idiom, its algebra, and its limits</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 4 / 12 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://debasishg.github.io/blog/push-ifs-up-fors-down/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-08-f266a14dae-p3-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-08-f266a14dae-p5-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 4 / 12 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The same principle appears in database query optimization. In SQL query planning, it’s well-known that one should perform projections and selections as early as possible and defer joins or expansive operations until later. But the vocabulary runs upside-down. A query plan is a tree whose leaves are table scans and whose root produces the result. Data flows up from the leaves, so "down the tree" means "earlier in execution". When an optimizer talks about pushing a predicate down, it means evaluating it as early as possible, which is the database counterpart of what the rest of this post calls "up" or "early".</p>
+
+<p class="fulltext">Early projections and selections (Push down): In database terms, a projection (e.g., SELECT with specific columns) reduces the dataset's width by selecting only the necessary columns early in the query execution. And selections (WHERE clause) act as the filter. Both are pushed down as part of the plan tree so that they get to execute early and filter out irrelevant data, reducing the amount of data passed to later operations.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-08-f266a14dae-p3-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-08-f266a14dae-p5-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 4 / 12 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

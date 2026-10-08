@@ -1,266 +1,4 @@
 {
-  "2026-09-23": [
-    {
-      "category": "科技 Tech",
-      "has_full_text": false,
-      "link": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "以色列軍方聲稱其攻擊目標是哈馬斯武裝分子和基礎設施。調查發現，是AI系統在識別目標時出現過度依賴的情況，可能將非軍事目標誤判為合法目標。",
-          "question": "以色列聲稱的原始目標是什麼，而AI系統在這次襲擊中扮演了什麼角色？"
-        },
-        {
-          "answer": "此事件引發了對軍事AI系統的道德審查和國際人道法適用性的嚴重關切。它強調了確保AI系統的透明度、可解釋性以及不可或缺的人類監督，以避免類似悲劇。",
-          "question": "這起事件對軍事領域使用AI的倫理與規範有何影響？"
-        },
-        {
-          "answer": "五角大廈的報告暗示需加強對軍事AI系統的倫理審查和人類監督。國際社會正持續討論制定關於自主武器系統的國際規範，以確保AI的部署符合負責任和道德原則。",
-          "question": "國際社會或相關組織為避免未來發生類似AI誤擊事件，提出了哪些可能的應對措施？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-09-23-64bb0df64d",
-      "source": "Hacker News",
-      "summary": "美國五角大廈的內部調查報告指出，以色列軍方於2023年10月對加薩走廊一所聯合國學校的飛彈襲擊，造成數十名平民（多為婦女和兒童）死亡，其中一個關鍵因素是過度依賴人工智慧（AI）系統進行目標識別。此事件突顯了在軍事行動中，AI系統的誤判可能導致嚴重的人道災難，並強調了足夠人類監督的重要性。\n* AI在戰場上的應用存在誤判風險，可能造成無辜平民傷亡。\n* 軍事AI系統需要更嚴格的人類監督與倫理審查機制。",
-      "summary_secondary": "",
-      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school"
-    },
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://foxscript.org/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "FoxDev Studio 確保大多數現有 FoxPro 檔案能直接運行，但它將原有的 32 位元檔案處理限制提升至 64 位元。這意味著，一旦資料表在 FoxDev Studio 中增長超過 2GB，其內部結構會被更新以支持更大容量，從而使其與僅支持 32 位元檔案的 Visual FoxPro 不再兼容。這對仍需同時使用新舊版本的用戶來說，是一個重要的單向選擇。",
-          "question": "既然 FoxDev Studio 承諾無需重寫或轉換，那麼為什麼文中又提到超過 2GB 的資料表將無法在舊版 Visual FoxPro 中開啟，這對用戶有何影響？"
-        },
-        {
-          "answer": "FoxDev Studio 主要解決了 Visual FoxPro 的 32 位元記憶體和檔案大小限制，使其能夠處理數百 GB 的資料，並在現代 64 位元系統上高效運行。引入 FoxScript 則讓 FoxPro 應用程式能夠輕鬆處理 HTTP 請求，例如構建 RESTful API 或 Web 服務，將傳統的桌面應用擴展到現代網路環境中，賦予其新的生命力。",
-          "question": "FoxDev Studio 的復興主要解決了 Visual FoxPro 哪些長期存在的痛點？引入 FoxScript 等新功能將為 FoxPro 應用帶來哪些現代化可能性？"
-        },
-        {
-          "answer": "採用 Rust 和 WebAssembly 技術為 FoxPro 應用帶來了多重優勢。Rust 提供了更高的性能和記憶體安全，而 WebAssembly 則確保了應用程式可以自包含、快速啟動並在不同的環境中運行，提供了一個比原有 P-code 執行環境更現代、更高效且更可靠的基礎。",
-          "question": "FoxDev Studio 採用 Rust 編譯器和 WebAssembly 運行時，這項技術選擇為 FoxPro 的應用程式帶來了哪些具體的技術優勢？"
-        }
-      ],
-      "read_minutes": 5,
-      "slug": "2026-09-23-ee8f28d7bb",
-      "source": "Hacker News",
-      "summary": "FoxDev Studio 宣布成功復興了微軟於 2007 年終止的 FoxPro 程式語言，推出「FoxDev Studio」開發環境。這個新平台允許用戶直接執行現有的 FoxPro 專案、表單和資料表，無需任何重寫或轉換，直接讀取舊檔案。\n它將 Visual FoxPro 的 32 位元限制提升至 64 位元架構，顯著擴大了檔案容量上限，並引入了現代化的 Rust/WebAssembly 運行時和支援網路請求的 FoxScript 功能，為老舊應用程式帶來新生。\n\n* 直接開啟和編輯現有 FoxPro 檔案，無需遷移。\n* 克服 32 位元限制，支援 64 位元處理及數百 GB 的資料表容量。\n* 採用 Rust/WebAssembly 運行時，提供現代且高效的執行環境。\n* 引入 FoxScript 擴展，使 FoxPro 應用程式能處理 HTTP 請求。",
-      "summary_secondary": "",
-      "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived"
-    },
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "SAML 是「安全斷言標記語言」的縮寫，它是一種基於 XML 的標記語言，用於交換安全斷言資訊。它由 OASIS 於 2002 年創建，旨在為網路服務提供一種標準化的方式，讓使用者可以透過單一登入 (SSO) 驗證身份，特別是在 Web 2.0 初期學術界和企業對此需求旺盛。",
-          "question": "SAML 究竟是什麼，它最初的用途是什麼？"
-        },
-        {
-          "answer": "OIDC 被視為更好的替代方案，主要是因為它比 SAML 更簡單、更現代。SAML 基於複雜的 XML，尤其其 XML 簽章驗證被認為是其核心問題和安全漏洞的來源，而 OIDC 則建立在更輕量級的 JSON Web Token (JWT) 和 OAuth 2.0 框架上，這使其更容易實作和維護，也較不易出現安全設計缺陷。",
-          "question": "為什麼 OpenID Connect (OIDC) 被認為是比 SAML 更好的替代方案？"
-        },
-        {
-          "answer": "對於服務供應商 (SP)，建議直接支援 OIDC 並避免使用 SAML。對於身份或認證供應商 (IdP)，則應制定詳細的淘汰計畫，包括向客戶溝通、停止為新客戶提供 SAML 整合、為現有客戶提供 OIDC 配置替代方案，並設定一個最終停用日期。",
-          "question": "對於希望從 SAML 遷移的組織來說，有哪些建議的步驟？"
-        }
-      ],
-      "read_minutes": 12,
-      "slug": "2026-09-23-766be4c87b",
-      "source": "Hacker News",
-      "summary": "「安全斷言標記語言」(SAML) 是一種自 2002 年起廣泛應用於學術界和企業 IT 部門的認證協議，為單一登入 (SSO) 服務奠定了基礎。然而，由於其設計上的複雜性，特別是在 XML 簽章驗證方面的脆弱性，作者認為 SAML 已成為「糟糕設計的碎形」，是時候退役了。文章呼籲組織應轉向現代替代方案，例如 OpenID Connect (OIDC)。\n- SAML 的核心問題在於其基於 XML 的複雜性及 XML 簽章驗證的不可靠性，導致實作困難且存在安全隱患。\n- OpenID Connect (OIDC) 因其更簡潔、更現代化的設計，被推薦為新整合和遷移的首選。",
-      "summary_secondary": "",
-      "title": "SAML: A fractal of bad design"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/cqevwpmvpekeo?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "該夥伴關係將利用人工智慧技術來保護關鍵國家基礎設施。文章中提到，這項合作是繼英美兩國首次成功從英國無人潛航器發射美國魚雷後宣布的，表明其可能涉及水下防禦等尖端科技應用，例如保護深海數據電纜。",
-          "question": "這個新的AI與自主合作夥伴關係具體將如何保護關鍵國家基礎設施？"
-        },
-        {
-          "answer": "這項突破標誌著水下作戰能力的一個重大進展，使其不再僅限於載人潛艇。它是首次從無人潛水器發射魚雷的嘗試，被視為保護深海數據電纜等重要基礎設施的有效手段，提高了英美兩國在海域安全和監測方面的能力。",
-          "question": "英美首次從無人潛航器發射魚雷的「突破」有何重要意義？"
-        },
-        {
-          "answer": "查戈斯群島（包括迪亞哥加西亞島）是英屬印度洋領地，但模里西斯聲稱擁有主權，且該島嶼設有重要的美英聯合軍事基地。英國政府曾尋求將群島歸還模里西斯，然後租賃回迪亞哥加西亞基地的運營權。然而，此協議因川普在四月撤回支持而無限期暫停，文章未詳述其撤回支持的具體原因。",
-          "question": "為什麼查戈斯群島的協議會被川普撤回支持而暫停？這個問題的背景是什麼？"
-        }
-      ],
-      "read_minutes": 3,
-      "slug": "2026-09-23-90bc39ceb7",
-      "source": "BBC World News",
-      "summary": "英國首相安迪·伯納姆在紐約市舉行的聯合國大會期間，於週二首次與美國總統唐納德·川普進行面對面會談。伯納姆期望雙方能找到「共同點」，以加強英美兩國關係，並推動人工智慧合作、烏克蘭和平及中東衝突解決等議題。他還將宣布英美啟動一項新的AI與自主合作夥伴關係，專注於利用AI技術保護關鍵國家基礎設施。\n*   英美兩國首次成功從英國無人潛航器發射美國魚雷，這項突破被視為保護深海數據電纜等重要基礎設施的里程碑。\n*   涉及查戈斯群島與模里西斯的協議因川普撤回支持而暫停，伯納姆已承諾將努力尋求解決方案。",
-      "summary_secondary": "",
-      "title": "Burnham expects to find 'common ground' with Trump in first meeting"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/c9dr74g32g8go?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "美國總統川普曾聲稱格陵蘭具有重要的戰略國防位置和豐富的礦產資源，並擔憂其易受俄羅斯和中國等對手的影響。因此，加強軍事存在被視為鞏固美國國家安全和其在北極地區影響力的一部分。",
-          "question": "美國為何如此積極地加強其在格陵蘭的軍事存在？"
-        },
-        {
-          "answer": "該協議明確禁止非北約國家在格陵蘭建立軍事設施，這有助於鞏固北約在北極地區的安全地位，並阻止潛在對手的影響力擴張。在不斷變化的全球安全局勢中，格陵蘭被視為北美和大西洋安全的重要組成部分。",
-          "question": "這項新協議對於更廣泛的北極地區及北約的戰略有何意義？"
-        },
-        {
-          "answer": "這些模式和技術細節指的是新基地具體的運作方式、設施配置及其他相關安排。它們的重要性在於，根據協議，這些細節仍需美國、丹麥和格陵蘭三方共同同意，確保了丹麥主權和格陵蘭自決權的維護，而非讓美國單方面決定。",
-          "question": "文章中提到的「基地模式和技術細節」為何如此重要？"
-        }
-      ],
-      "read_minutes": 4,
-      "slug": "2026-09-23-f1e92339a9",
-      "source": "BBC World News",
-      "summary": "美國、丹麥和格陵蘭在聯合國大會上簽署了一項新的國防協議，允許美國在格陵蘭建立兩個新的軍事基地，並擴建其現有的皮圖菲克太空基地。此協議更新了1951年的防禦協定，顯著加強了美國在北極地區的軍事存在，並明確禁止非北約國家在格陵蘭建立軍事設施。這項協議解決了前美國總統川普曾試圖購買格陵蘭所引發的緊張局勢，同時重申了丹麥的主權和格陵蘭的自決權。\n*   新基地將設於格陵蘭南部的納爾薩蘇瓦克 (Narsarsuaq) 和東部的梅斯特斯維格 (Mestersvig)。\n*   該協議被視為美國、丹麥和格陵蘭的三贏局面，並對歐洲及北約的安全具有重要意義。",
-      "summary_secondary": "",
-      "title": "US to build two military bases in Greenland under new deal with Denmark"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/c52e0ywl9pr7o?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "川普將目前與伊朗的衝突歸因於阻止德黑蘭取得核武器，並在演講中表示他正權衡是與伊朗達成協議讓他們重建，還是迅速「殲滅」他們。他強調了其「以實力求和平」的外交理念。",
-          "question": "川普在聯合國大會上對伊朗發出「殲滅」威脅的具體原因是什麼？"
-        },
-        {
-          "answer": "這正體現了川普的「脅迫外交」策略，即在保持談判管道暢通的同時，威脅施加壓倒性武力。他認為這種雙管齊下的方法可能促使伊朗妥協，並曾預測伊朗協議或許能在11月選舉後達成。",
-          "question": "儘管川普發出嚴厲威脅，美國官員仍與伊朗代表團會面，這顯示了什麼外交策略？"
-        },
-        {
-          "answer": "川普的演講內容廣泛，除了伊朗議題，他還強調了美國的經濟成就、拒絕「全球政府」理念、誓言促成俄烏和平，以及確保美國在人工智慧領域的領先地位。此外，他還簽署了加強美國在格陵蘭軍事存在的協議，並批評了古巴。",
-          "question": "除了伊朗問題，川普在這次聯合國大會的演講中還提及了哪些其他重要的國際或國內事務？"
-        }
-      ],
-      "read_minutes": 4,
-      "slug": "2026-09-23-67154007da",
-      "source": "BBC World News",
-      "summary": "美國總統川普週二在紐約聯合國大會上，對伊朗發出若衝突未解將「殲滅」的威脅，此舉突顯其「以實力求和平」的脅迫外交策略。然而，同時美國官員也在大會場邊與伊朗代表團進行了「富有成效」的會談，顯示了其在外交上的雙重手法。\n- 川普在演講中也談及拒絕「全球政府」、承諾促成俄烏和平，並確保美國在人工智慧領域的領先地位。\n- 他還簽署了加強美國在格陵蘭軍事存在的協議，並批評古巴為「失敗國家」。",
-      "summary_secondary": "",
-      "title": "Trump threatens to 'annihilate' Iran in UN speech as officials meet on sidelines"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://www.nasa.gov/organizations/ochmo/risks-of-decompression-sickness-and-venous-thromboembolism-during-spaceflight-and-patent-foramen-ovale-implications/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "減壓病（DCS）是太空人因快速減壓導致體內氣體形成氣泡的風險。靜脈血栓栓塞（VTE）指血管內血栓形成。而開放性卵圓孔（PFO）是心臟結構上的小開口，可能讓氣泡或血栓從靜脈進入動脈循環，這三者都可能在太空飛行中危及太空人健康。",
-          "question": "「減壓病（DCS）」、「靜脈血栓栓塞（VTE）」和「開放性卵圓孔（PFO）」在太空飛行中具體指的是什麼風險？"
-        },
-        {
-          "answer": "工作組認為PFO與靜脈血栓栓塞（VTE）的形成或其併發症沒有顯著關聯，因此不建議改變現有的太空人選拔標準。對於較大的PFO（3級或以上），專家意見不一，但工作組未建議普遍篩查或排除，而是強調通過協議設計和持續數據收集來進行風險緩解。如果太空人接受評估，應告知其PFO狀態並提供封閉手術的選擇。",
-          "question": "關於開放性卵圓孔（PFO），工作組對太空人的選拔標準和處理方式有何具體建議？"
-        },
-        {
-          "answer": "明確的藥物使用指南至關重要，因為某些止痛藥（如乙醯胺酚和布洛芬）可能掩蓋減壓病（DCS）的症狀，延誤診斷和治療。此外，指南也需涵蓋阿司匹林等藥物在預防DCS和緩解疼痛方面的使用。制定清晰的指南有助於確保太空人在EVA期間的健康與安全，並能及時應對潛在的醫療問題。",
-          "question": "為何艙外活動（EVA）前後的藥物使用需要明確的臨床指南？這對太空人的安全有何影響？"
-        }
-      ],
-      "read_minutes": 2,
-      "slug": "2026-09-23-918f955a5b",
-      "source": "NASA Breaking News",
-      "summary": "NASA的一個專家工作組最近審查了與其Artemis（阿提米絲）月球及更遠任務相關的太空飛行健康風險，特別針對太空人在艙外活動（EVA）期間可能遇到的減壓病（DCS）、靜脈血栓栓塞（VTE）及開放性卵圓孔（PFO）的影響。此工作組整合了最新數據與多項NASA報告，並提出了新的建議，以優化太空人的選拔標準、安全協議及醫療管理，旨在降低未來深空任務的風險。\n\n* 不建議因開放性卵圓孔(PFO)而改變太空人選拔標準，PFO與VTE的關聯性不高。\n* 需要制定關於EVA前後藥物使用的明確臨床指南，特別是止痛藥可能掩蓋DCS症狀。",
-      "summary_secondary": "",
-      "title": "Risks of Decompression Sickness and Venous Thromboembolism during Spaceflight and Patent Foramen Ovale Implications"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://science.nasa.gov/science-research/planetary-science/nasa-funded-research-finds-complex-life-defying-record-heat/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "真核生物細胞內有細胞核和膜狀胞器，這些複雜的結構被認為更容易在高溫下受損。過去的研究主要集中在結構較簡單的原核生物（細菌和古菌）的耐熱性，因此發現真核生物能承受如此高溫，極大地擴展了我們對複雜生命在極端環境中生存能力的認知。",
-          "question": "為什麼真核生物能在如此高溫下生存，特別有意義？與其他類型的生物有何不同？"
-        },
-        {
-          "answer": "透過研究像「瀑布火焰變形蟲」這樣的嗜極生物，科學家能更深入了解地球生命生存的生物化學和生理極限。這有助於NASA擴展地外生命探索的範圍，指導他們在條件不如地球友好的其他星球上尋找可能存在的複雜生命。",
-          "question": "這項發現如何有助於美國太空總署（NASA）的宇宙生物學研究或地外生命探索？"
-        },
-        {
-          "answer": "研究人員指出，除了溫度，生存還取決於一個包含多種相互關聯因素的完整生態系統。這包括適當的酸鹼度、氧氣水平、壓力、充足的水源以及食物來源。「瀑布火焰變形蟲」無法單獨生存，它需要其他生命形式的支持才能存活。",
-          "question": "除了溫度，對於這種在極端環境中生存的嗜極生物來說，還有哪些關鍵因素是不可或缺的？"
-        }
-      ],
-      "read_minutes": 5,
-      "slug": "2026-09-23-4a34e8e7a3",
-      "source": "NASA Breaking News",
-      "summary": "美國太空總署（NASA）資助的科學家在加州拉森火山國家公園發現了一種名為「瀑布火焰變形蟲」（Incendiamoeba cascadensis）的阿米巴原蟲，它能在高達攝氏63度（華氏145度）的環境下繁殖。這項發表於《細胞》期刊的發現，刷新了已知真核生物（複雜生命形式）的耐熱極限，推翻了以往對複雜細胞熱穩定性的假設。這項突破性研究極大地擴展了我們對複雜生命在地球及其他星球上生存潛力的理解。\n* 真核生物耐熱上限創新紀錄。\n* 擴展對複雜生命在極端環境下生存能力及地外生命搜尋的認知。",
-      "summary_secondary": "",
-      "title": "NASA-Funded Research Finds Complex Life Defying Record Heat"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://www.nasa.gov/image-article/nasas-chandra-finds-unusual-objects-in-pinwheel-galaxy/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "文章並未明確說明這些天體是什麼，只指出它們具有異常的低能量X射線和強烈紫外線輻射的獨特組合。天文學家認為它們可能代表了一種新型或未知的宇宙現象，有待進一步研究以確定其確切性質。",
-          "question": "這些新發現的天體究竟是什麼？"
-        },
-        {
-          "answer": "文章中並未具體說明這些天體有望解決的兩個長期存在的宇宙物理學問題是什麼。讀者可能需要查閱更多相關研究或報告以獲取這些詳細資訊，因為這些問題是天體物理學界的重要討論焦點。",
-          "question": "這些天體有望解決哪兩個長期存在的宇宙物理學問題？"
-        },
-        {
-          "answer": "錢德拉X射線天文台是透過偵測它們發出的X射線來發現這些天體的，特別是其異常低的X射線能量。結合其強烈的紫外線輻射，這些獨特的訊號使這些天體從周圍環境中脫穎而出，引起了研究人員的關注。",
-          "question": "錢德拉X射線天文台是如何探測到這些天體的？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-09-23-c4b4bc30a5",
-      "source": "NASA Breaking News",
-      "summary": "美國NASA的錢德拉X射線天文台的研究人員發現了一些不尋常的天體，這些天體釋放出異常低的X射線能量，但卻有強烈的紫外線輻射。這些天體在其他星系中被發現，其中包括M101（風車星系），相關圖像於2026年9月9日發布。天文學家認為，這些新發現可能對於解決兩個長期存在的宇宙物理學問題有所幫助。\n\n* 特徵：低能量X射線和高強度紫外線輻射的獨特組合。\n* 意義：有望解開兩個天體物理學的長期謎團。",
-      "summary_secondary": "",
-      "title": "NASA’s Chandra Finds Unusual Objects in Pinwheel Galaxy"
-    },
-    {
-      "category": "長文 Long Reads",
-      "has_full_text": true,
-      "link": "https://aeon.co/essays/a-scientists-search-for-answers-about-amanita-muscaria-gummies",
-      "long_form": true,
-      "qa": [
-        {
-          "answer": "飛蠅傘及其活性成分鵝膏蕈醇的法律地位比裸蓋菇素複雜。許多此類產品並未明確列入受控物質清單，製造商因此得以鑽法律漏洞，將它們作為「膳食補充劑」或「草藥」在一般零售管道銷售。",
-          "question": "為何飛蠅傘產品能在不受嚴格監管的情況下銷售？其法律地位為何？"
-        },
-        {
-          "answer": "裸蓋菇素轉化為裸蓋菇素，主要作用於血清素 5-HT2A 受體，增強皮質神經活動，導致知覺改變和連結性增強。而鵝膏蕈醇則主要作用於 GABA-A 受體，抑制神經活動，產生鎮靜、混亂和夢境般的體驗，而非典型的迷幻效果。",
-          "question": "裸蓋菇素和鵝膏蕈醇對大腦的作用機制有何核心差異？"
-        },
-        {
-          "answer": "消費者應避免購買和使用標示不清、來源不明的「魔菇」產品，尤其是在沒有充分安全資訊和劑量指南的情況下。由於產品可能含有未申報的危險物質，建議尋求專業醫療建議並優先選擇有嚴格監管和透明標示的替代品。",
-          "question": "考慮到這些產品缺乏透明度與潛在風險，消費者在面對「魔菇」產品時應如何應對？"
-        }
-      ],
-      "read_minutes": 19,
-      "slug": "2026-09-23-1d787579a9",
-      "source": "Aeon",
-      "summary": "這篇文章探討了飛蠅傘（Amanita muscaria）產品在美國煙草店等地的非受管制銷售問題，指出其主要活性成分鵝膏蕈醇（muscimol）與裸蓋菇素（psilocybin）在藥理作用上截然不同，前者為中樞神經抑制劑，可能導致鎮靜、混亂及潛在毒性，且缺乏現代人體劑量研究。\n\n作者作為公衛科學家，發現這些「魔菇」產品常被誤標、含有未申報的各式精神活性物質（如 psilocin、psilacetin），並已與不良反應甚至死亡案例相關聯，消費者無從得知其真實內容與風險。文章核心論點是，雖然成人應有自主權決定攝取何種物質，但製造商銷售精神活性產品時，必須提供透明的標示、準確的劑量資訊及安全證明，以防止欺騙並保障消費者健康，此為當前市場亟需彌補的標準。\n\n*   飛蠅傘與裸蓋菇素在作用機制和風險上存在根本差異，前者毒性更高，藥效難以預測。\n*   當前市場缺乏對飛蠅傘產品的透明標示、準確劑量資訊及安全證明，對消費者構成嚴重欺騙與健康風險。",
-      "summary_secondary": "",
-      "title": "Toadstools and toxins"
-    }
-  ],
   "2026-09-24": [
     {
       "category": "科技 Tech",
@@ -3875,6 +3613,320 @@
       "summary": "NASA Earth Observatory 每月推出一項「衛星拼圖」挑戰，而「2026 年 10 月拼圖」現已發布，邀請全球讀者辨識一張衛星影像中所示的地球地點。參與者需透過指定表格提交答案，並可分享辨識線索、該地的獨特之處，甚至提供拍攝影像的技術細節。此活動旨在提升大眾對地球觀測和科學的興趣，成功解答者將獲得「拼圖吹牛權」及可能在官方頁面被表揚。答案將於約一週後公布，並附有詳細的影像解釋。",
       "summary_secondary": "",
       "title": "October 2026 Satellite Puzzler"
+    }
+  ],
+  "2026-10-08": [
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "漢密爾頓團隊開發的軟體在登月艙下降過程中發揮了關鍵作用，成功避免了電腦因低優先級任務過載而崩潰。透過異步處理和優先級排程，系統能夠識別並專注於關鍵的導航功能，確保了太空人能安全著陸月球表面。這項創新展示了軟體在緊急情況下的韌性與重要性。",
+          "question": "漢密爾頓的軟體在阿波羅任務中是如何確保登月成功的，尤其是在關鍵時刻？"
+        },
+        {
+          "answer": "在漢密爾頓提出「軟體工程」之前，軟體開發常被視為硬體的一個次要部分，缺乏系統化的方法。她意識到軟體可靠性不足，且沒有被視為一門嚴謹的工程學科，因此倡導將其獨立。這有助於賦予軟體及其開發者應有的尊重和合法性，並促進了對軟體設計、開發和測試的結構化思考。",
+          "question": "在漢密爾頓提出「軟體工程」一詞之前，軟體開發的狀況如何？為何她認為有必要將其確立為一個獨立的學科？"
+        },
+        {
+          "answer": "漢密爾頓的遺產在當代社會中持續激勵著無數人，她成為了科學和技術領域女性的標誌性人物，其經典照片和樂高人偶在全球廣為流傳。此外，她在阿波羅計畫中協助開發的完整軟體已被上傳至GitHub，讓後代研究者和開發者得以學習其開創性的工作，從中獲取寶貴知識與靈感。",
+          "question": "除了在阿波羅計畫和軟體工程領域的貢獻外，漢密爾頓的遺產在當代社會中如何被認可和傳承，特別是對後代而言？"
+        }
+      ],
+      "read_minutes": 7,
+      "slug": "2026-10-08-ffaeefda6d",
+      "source": "Hacker News",
+      "summary": "電腦科學家瑪格麗特·漢密爾頓於9月30日逝世，享耆壽90歲。她最廣為人知的成就是領導麻省理工學院儀器實驗室在美國太空總署阿波羅計畫期間的軟體工程團隊，她開發的軟體對人類首次登月任務至關重要。漢密爾頓不僅是一位計算先驅，更協助將「軟體工程」確立為一門獨立的學科，並為此奮鬥，對整個行業產生了深遠影響。\n關鍵要點：\n* 阿波羅任務關鍵軟體架構的領導者。\n* 確立現代軟體工程學科地位。",
+      "summary_secondary": "",
+      "title": "Margaret Hamilton has died"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "兩家公司此舉主要是為了有效控制日益增長的 AI 支出，並將資源轉向自家開發的 AI 編碼工具。隨著 AI 助手日益成為日常軟體營運的關鍵，管理相關成本變得至關重要。",
+          "question": "為什麼 Meta 和 Microsoft 會突然大幅削減對 Claude AI 的內部使用？"
+        },
+        {
+          "answer": "不會。報導指出，雖然兩家公司限制了內部員工使用 Claude，但他們仍然是 Anthropic 的重要客戶，並且透過 Microsoft 企業平台向客戶提供的 Anthropic 模型支出仍在增加。這項策略調整主要關乎內部營運而非客戶服務。",
+          "question": "Meta 和 Microsoft 減少內部使用 Claude AI，是否意味著他們將停止向客戶提供 Anthropic 的服務？"
+        },
+        {
+          "answer": "無法完全消除。文章強調，即使轉換工具，自動化存取敏感檔案、指令和憑證的風險依然存在。過去的漏洞事件（如 Claude Code 和 GitHub Copilot）凸顯了實施嚴格權限、使用可信專案設定以及徹底評估 AI 生成操作的重要性。",
+          "question": "轉換到不同的 AI 編碼工具是否能完全消除與這些技術相關的網路安全風險？"
+        }
+      ],
+      "read_minutes": 2,
+      "slug": "2026-10-08-c51d015770",
+      "source": "Hacker News",
+      "summary": "Meta 和 Microsoft 於 10 月 5 日報導指出，已大幅減少員工對 Anthropic Claude AI 的內部使用。此舉旨在轉向使用自家專有編碼工具，如 Microsoft 的 GitHub Copilot 和 OpenAI 框架，以及 Meta 的 MetaCode 和 Muse Code，以更有效地管理 AI 支出並加強內部投資。此策略調整反映了科技巨頭在 AI 領域中日益增長的成本控制需求和產品策略整合。\n\n* Microsoft 將內部 AI 支出上限從每名員工每月 10 萬美元降至約 1 萬美元。\n* Meta 的 Claude Code 用戶數從約 6 萬驟降至 3 萬，主因是轉向自家解決方案。",
+      "summary_secondary": "",
+      "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "透過讓呼叫者處理條件分支，例如在傳入 `Option<Walrus>` 前先處理 `None` 的情況，可以使被呼叫的函數只接收明確、已驗證的輸入。這樣一來，決策點集中在較高的層次，並且函數的型別簽章便能清楚地表達其所需的前置條件，降低內部複雜性。",
+          "question": "「將 If 語句上推」具體是如何達到集中控制流和明確前置條件的呢？"
+        },
+        {
+          "answer": "向量化是一種利用處理器單指令多資料 (SIMD) 能力的優化技術，能同時處理多個資料元素。將迴圈下放至批次處理函數內部，可以創造出一個沒有分支條件的「熱迴圈」(hot loop)，這種連續、預測性高的資料處理模式，非常適合現代處理器的向量化指令集，從而顯著提升執行速度。",
+          "question": "為什麼「將 For 迴圈下放」有助於向量化 (vectorization)？"
+        },
+        {
+          "answer": "在資料庫查詢計畫中，資料流是從底層（表掃描）向上流向根部（結果），因此「向下推動」謂詞（predicates）意味著在執行流程中盡早評估它們。這就等同於程式設計中「將 If 語句上推」，即盡早進行選擇（`WHERE` 子句）和投影（`SELECT` 特定欄位），以減少後續操作處理的資料量，達到早期過濾的效果。",
+          "question": "文章提到此原則在資料庫查詢優化中，術語會「顛倒」，這是什麼意思？資料庫中「將 If 語句上推」的等效操作是什麼？"
+        }
+      ],
+      "read_minutes": 7,
+      "slug": "2026-10-08-f266a14dae",
+      "source": "Hacker News",
+      "summary": "「將 If 語句上推，將 For 迴圈下放」是一種程式設計原則，旨在提升程式碼的清晰度與執行效能。此原則建議將條件判斷 (if 語句) 移至呼叫者或處理流程的早期階段，以集中控制流並明確前置條件。同時，將迭代迴圈 (for 迴圈) 推遲到批次處理或資料過濾之後執行，以減少不必要的計算並有助於向量化，此模式也見於資料庫查詢優化。\n*   將條件判斷上推，提早篩選輸入。\n*   將迴圈下放，進行批次處理以提升效率。",
+      "summary_secondary": "",
+      "title": "Push ifs up and fors down: The idiom, its algebra, and its limits"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/c6e3x21ev9wwo?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "Maricarmen Abascal原本每月500歐元的租金被房產公司Urbagestión提高到2,650歐元。儘管公司後來提出將租金降至1,650歐元，這仍遠超出她每月約500歐元的養老金，使其無力支付而面臨驅逐。",
+          "question": "導致Maricarmen Abascal被驅逐的具體財務狀況是什麼？"
+        },
+        {
+          "answer": "Maricarmen的案件加劇了公眾對住房危機的不滿，導致全國性抗議。在政府的緊急住房立法被議會否決後，西班牙首相佩德羅·桑切斯因此宣布提前舉行全國大選，希望獲得更大的進步多數來推動住房改革。",
+          "question": "Maricarmen的案件如何影響西班牙的政治局勢？"
+        },
+        {
+          "answer": "在Maricarmen去世後，數千名抗議者持續在馬德里的太陽門廣場紮營，舉行悼念活動並遊行至國會。他們的主要訴求是要求政府提供更多可負擔的住房，並高呼「我們不會再容忍任何一次驅逐」，誓言為解決住房問題持續奮鬥。",
+          "question": "目前抗議活動的狀況如何？抗議者的主要訴求是什麼？"
+        }
+      ],
+      "read_minutes": 5,
+      "slug": "2026-10-08-852aba6fb8",
+      "source": "BBC World News",
+      "summary": "西班牙馬德里一名87歲的老婦人Maricarmen Abascal，於9月23日因無法負擔租金上漲而被強制驅逐，並在住院後不幸去世。她的去世再次點燃了全國對西班牙住房危機的抗議活動，並引發了政治風暴，導致緊急住房法案被否決及提前舉行大選。\n\n她的故事成為了西班牙住房危機的象徵，抗議者誓言將繼續為可負擔住房而戰，並將她的遭遇視為國家歷史的轉捩點。\n\n重點：\n- 租金從每月500歐元暴漲至2,650歐元，儘管後來降至1,650歐元，仍超出其養老金。\n- 此事件導致緊急住房立法失敗，並促使政府提前舉行大選，反映了嚴峻的社會經濟問題。",
+      "summary_secondary": "",
+      "title": "Spanish pensioner whose eviction sparked nationwide protests dies, union says"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/cwkgj0g30m5jo?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "2023年10月7日，哈馬斯武裝分子從加薩地帶對以色列南部發動了大規模突襲。他們襲擊了多個基布茲社區和Nova音樂節，造成約1200名以色列人死亡，並劫持了251名人質，震驚國際社會。",
+          "question": "2023年10月7日的哈馬斯襲擊具體發生了什麼？"
+        },
+        {
+          "answer": "襲擊之後，以色列對加薩發動了大規模軍事進攻，導致哈馬斯掌控的衛生部門稱超過74,200名巴勒斯坦人死亡。加薩地帶近80%的建築物被毀或損壞，約2.1百萬人口流離失所，面臨極度嚴峻的人道危機，許多人擔心被迫永遠離開家園。",
+          "question": "此次襲擊對加薩地帶的居民造成了哪些主要影響？"
+        },
+        {
+          "answer": "納坦雅胡總理表示以色列將「完成任務」並繼續追究所有兇手的責任，承諾會記住所有犧牲者。然而，他同時面臨以色列民眾的抗議，要求對2023年10月7日的安全失誤進行獨立調查，並對政府未能保護公民負責。",
+          "question": "以色列總理納坦雅胡在此次紀念活動中傳達了什麼信息，以及他面臨的國內壓力是什麼？"
+        }
+      ],
+      "read_minutes": 7,
+      "slug": "2026-10-08-515b2afcaf",
+      "source": "BBC World News",
+      "summary": "以色列人民在哈馬斯於2023年10月7日發動致命襲擊的三週年之際，全國各地舉行了紀念活動，悼念約1200名受害者並緬懷被劫持的人質。此次襲擊不僅造成巨大傷亡，更引發了加薩戰爭，導致該地帶數萬名巴勒斯坦人死亡，並引發了嚴峻的人道危機。以色列總理納坦雅胡承諾將追究兇手責任，但同時面臨民眾要求對當天安全失誤進行獨立調查的抗議。\n關鍵點：\n• 加薩地帶約80%的建築物被毀或損壞，2.1百萬人口流離失所，生活條件極度惡劣。\n• 哈馬斯稱此次襲擊是其「持續鬥爭項目」中的「歷史性里程碑」，是以色列「痛苦苦難」的「自然回應」。",
+      "summary_secondary": "",
+      "title": "Israelis mourn 7 October attack victims three years after deadly Hamas raid"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/c5zjx7xx3487o?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "以色列民眾要求獨立調查是為了確保透明度和公正性，避免政治干預，徹底釐清導致安全失敗的根本原因。然而，納坦雅胡總理拒絕由最高法院主導的獨立調查，聲稱司法機構對他存在偏見，並提出由政黨任命成員的替代方案，但該法案未能通過。",
+          "question": "以色列民眾為何特別要求「獨立」調查，而總理納坦雅胡對此持何立場？"
+        },
+        {
+          "answer": "納坦雅胡對責任的否認已成為選舉的核心議題，儘管他擔任以色列歷史上最嚴重安全失敗的領導人，他仍以「安全先生」的形象競選連任。民意調查顯示選情膠著，選民普遍將10月7日襲擊的教訓納入考量，這場選舉也再次將以色列分為支持者與批評者兩派。",
+          "question": "問責制的問題對納坦雅胡的政治地位和即將到來的選舉產生了什麼影響？"
+        },
+        {
+          "answer": "襲擊前數月，駐紮在加薩邊境的年輕女兵曾多次向上級警告哈馬斯可能的襲擊準備。此外，據報導，包括埃及和阿拉伯聯合大公國在內的區域鄰國也曾向納坦雅胡發出警告，但這些警告均被總理辦公室否認或無視。",
+          "question": "在10月7日襲擊事件之前，有哪些具體的警告據稱被忽視了？"
+        }
+      ],
+      "read_minutes": 8,
+      "slug": "2026-10-08-ab1cc787d8",
+      "source": "BBC World News",
+      "summary": "以色列民眾在哈馬斯2023年10月7日襲擊事件三年後，持續要求政府對當時的安全失敗負責。這次襲擊造成約1200人死亡、251人被劫持，是以色列建國以來最嚴重的安全失誤。儘管總理納坦雅胡在事件發生時負責，他至今仍拒絕進行獨立國家調查，並將責任歸咎於其安全主管。隨著即將到來的選舉，納坦雅胡的問責制問題已成為選民決策的關鍵因素。\n*   年輕女兵和區域盟友事前曾發出潛在襲擊警告，但據稱被忽視。\n*   納坦雅胡將此議題定調為安全能力之爭，但批評者認為他的政治生存危及國家安全。",
+      "summary_secondary": "",
+      "title": "Israelis demand accountability over 7 October failures three years after attacks"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-spacex-35th-station-resupply-launch-arrival/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "iROSA 是國際太空站升級其電力系統的重要組成部分。它們能大幅增加太空站的可用電力，支持更多科學實驗和未來操作，這次運送的是最後一批，將完成太空站的太陽能電池陣列升級。",
+          "question": "國際太空站捲軸式太陽能電池陣列 (iROSA) 在這次任務中扮演什麼角色？"
+        },
+        {
+          "answer": "這些在微重力環境下進行的實驗具有改變醫療領域的潛力。例如，微重力有助於製造更均勻的組織或研究疾病進程，進而可能為治療失明、心臟疾病及阿茲海默症、帕金森氏症等多種神經退行性疾病提供新的洞察和治療標靶。",
+          "question": "這次任務運送的科學實驗，例如人造視網膜和腦類器官，對地球上的醫療研究有何潛在影響？"
+        },
+        {
+          "answer": "飛龍號太空船預計將在太空站停留至 11 月中旬。屆時，它會裝載時間敏感的研究樣本和貨物，脫離太空站並返回地球，最終在加州海岸外濺落。",
+          "question": "飛龍號太空船在完成補給任務後會如何處置？"
+        }
+      ],
+      "read_minutes": 3,
+      "slug": "2026-10-08-2d1ff4fb2a",
+      "source": "NASA Breaking News",
+      "summary": "美國太空總署（NASA）與 SpaceX 預計於美東時間 10 月 13 日（週二）上午 6:33，從佛羅里達州卡納維爾角太空軍基地發射第 35 次商業補給任務。此次任務將使用 SpaceX 飛龍號太空船搭載獵鷹 9 號火箭，為國際太空站（ISS）運送超過 6,300 磅的科學研究設備、物資及裝備，其中包括最後一批國際太空站捲軸式太陽能電池陣列（iROSA）。這批重要補給不僅確保太空站的持續運作和升級，更將推動多項前沿的微重力科學實驗，對地球上的醫療和材料科學發展具有關鍵意義。\n- 主要貨物包含：最後一批 iROSA、製造人造視網膜的硬體、3D 心臟組織模型、新型玻璃研究材料，以及用於神經退行性疾病研究的腦類器官。\n- 飛龍號預計於 10 月 15 日（週四）上午 11 點自動對接到太空站的 Harmony 模組。",
+      "summary_secondary": "",
+      "title": "NASA Sets Coverage for SpaceX 35th Station Resupply Launch, Arrival"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/general/nasas-spacex-35th-commercial-resupply-mission-overview/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "文章中提到的LambdaVision-1實驗研究在微重力下製造人工視網膜，可能為地球上患有視網膜疾病的患者帶來視力恢復的希望。Stellar Spheroids實驗則研究微重力對3D人類心臟組織模型的影響，有助於開發更逼真的疾病研究模型，並支持未來太空任務的藥物測試。此外，ELF-Unconventional Glass 2研究非傳統玻璃在微重力下的形成，其成果可能為太空船、棲息地和其他探索技術提供更高強度和耐用性的材料。",
+          "question": "這些在國際太空站上進行的科學實驗，如何具體地支持NASA的月球和火星探測計畫，以及對地球上的生活有何益處？"
+        },
+        {
+          "answer": "IROSA是國際太空站的新型太陽能電池陣列，旨在增強太空站的電力生成能力。升級電力系統至關重要，因為它能支援更多的科學實驗、維持太空站的關鍵操作，包括未來的安全受控脫軌，並為載人任務提供必要的能源。這項升級確保太空站能持續進行研究並支持更長期的探索任務。",
+          "question": "國際太空站滾動式太陽能電池陣列（IROSA）是什麼？為何太空站的電力系統升級對其運作如此重要？"
+        },
+        {
+          "answer": "Dragon太空船將帶回故障的加拿大臂2號（Canadarm2）關節，以便地面團隊進行詳細分析和翻新。此外，還將攜帶一套太空服進行翻新、一個來自尿液處理器的流體壓力控制泵組件，以及水處理器組件的過濾單元。將這些設備帶回地球有助於工程師診斷故障原因，改進未來太空任務的設計，並重複利用或維修昂貴的太空硬體，提高任務效率。",
+          "question": "除了科學樣本，此次Dragon太空船從國際太空站返回地球時，還將帶回哪些關鍵硬體？將這些設備帶回地球進行分析有何重要性？"
+        }
+      ],
+      "read_minutes": 3,
+      "slug": "2026-10-08-1b71204127",
+      "source": "NASA Breaking News",
+      "summary": "NASA與SpaceX計劃於10月13日（週二）左右，從佛羅里州卡納維拉爾角太空軍基地發射Dragon太空船，執行第35次商業補給任務，為國際太空站運送超過6,300磅的科學實驗、補給和設備。此任務將支持對月球和火星的長期探測計畫，並透過一系列創新實驗造福人類，同時也將帶回重要的科學樣本與設備。\n\n重點項目：\n* 運送多項前沿科學實驗，包括人工視網膜製造、3D心臟組織生長、非傳統玻璃形成及神經退化性疾病研究。\n* 搭載國際太空站滾動式太陽能電池陣列（IROSA）的最後一對，以完成太空站的電力系統升級。",
+      "summary_secondary": "",
+      "title": "NASA’s SpaceX 35th Commercial Resupply Mission Overview"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://science.nasa.gov/photojournal/nasas-prima-spacecraft-artists-concept/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "PRIMA 是 NASA 探測者計畫中「探測器探索者」任務的首例，它主要透過觀測遠紅外線光來研究宇宙。這種獨特的觀測能力使其能穿透厚重的宇宙塵埃，探索傳統望遠鏡難以觀測的區域。",
+          "question": "PRIMA 任務與其他天文物理任務有何不同或獨特之處？"
+        },
+        {
+          "answer": "遠紅外線光能夠穿透宇宙塵埃雲，揭示其內部隱藏的恆星、行星和黑洞形成區域。透過分析這些塵埃雲中的分子成分，科學家也能追溯水的形成與傳播路徑，從而探討地球水的來源。",
+          "question": "為何觀測遠紅外線光對於研究被塵埃遮蔽的宇宙物體以及地球上水的起源如此重要？"
+        },
+        {
+          "answer": "NASA 的「探測者計畫」是一個長期運行且成本效益高的太空任務系列，旨在研究宇宙和地球。而「探測器探索者」是該計畫下一個新的任務類別，旨在執行中等規模的科學探索任務，PRIMA 則是此類任務的第一個。",
+          "question": "該文章提到的 NASA「探測者計畫」和「探測器探索者」任務類別是什麼？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-10-08-d3b6ceee5e",
+      "source": "NASA Breaking News",
+      "summary": "NASA 於 2026 年 9 月選定了 PRobe far-Infrared Mission for Astrophysics (PRIMA) 任務的設計概念。這項任務是 NASA 探測者計畫中新一類「探測器探索者」任務的首個，預計於 2033 年發射，為期五年。PRIMA 將透過觀測遠紅外線光，深入研究被塵埃嚴重遮蔽的宇宙物體，從而揭示行星、恆星、黑洞的形成過程，甚至地球上水的起源。",
+      "summary_secondary": "",
+      "title": "NASA’s PRIMA Spacecraft (Artist’s Concept)"
+    },
+    {
+      "category": "長文 Long Reads",
+      "has_full_text": true,
+      "link": "https://www.quantamagazine.org/as-ai-closed-in-on-unique-games-proof-researchers-raced-to-beat-the-machines-20261007/",
+      "long_form": true,
+      "qa": [
+        {
+          "answer": "獨特博弈猜想是一個關於同時滿足多個約束問題難度的猜想。如果被證明為真，它將意味著許多看似無關問題的現有解決方法無法再改進，並能幫助建立計算難度統一理論。",
+          "question": "「獨特博弈猜想」究竟是什麼？為何在理論電腦科學中如此重要？"
+        },
+        {
+          "answer": "Minzer團隊的證明是七年努力的成果，體現了從多次失敗中學習的傳統研究過程。OpenAI的AI證明則是在短時間內大規模生成，雖然高效，但其缺乏人類編輯和獨立專家審查，引發了對數學研究健康發展和發現過程價值的擔憂。",
+          "question": "Minzer團隊的人類證明與OpenAI的AI生成證明有何不同？AI生成證明引發了哪些對研究過程的擔憂？"
+        },
+        {
+          "answer": "AI證明可能會為研究者開闢新方向，但同時也可能讓人類研究者感到氣餒，尤其是在長期、宏大的項目上。此外，AI證明理解和驗證的難度，以及其對「失敗」在研究中價值的忽視，都是需要深思的問題。",
+          "question": "AI生成複雜數學證明的現象，對理論電腦科學和數學領域的長期影響可能有哪些？"
+        }
+      ],
+      "read_minutes": 10,
+      "slug": "2026-10-08-03128b2e62",
+      "source": "Quanta Magazine",
+      "summary": "「獨特博弈猜想」是理論電腦科學中關於約束滿足問題難度的核心開放問題。2026年9月，麻省理工學院的Dor Minzer及其團隊在OpenAI即將發布相關證明前夕，緊急發表了他們關於Khot「2對1博弈猜想」變體的證明。此證明是經過七年努力的成果，並在數十年來懸而未決的圖形著色問題上取得了重要突破。數週後，OpenAI果然發布了獨特博弈猜想及其變體的AI生成證明。\n* 傳統人類研究：Minzer團隊強調了從失敗中學習的重要性，並透過「老式方法」解決問題。\n* AI帶來的衝擊：OpenAI的AI生成證明雖然高效，但也引發了學術界對於研究過程、同行評審以及AI可能導致人類研究者氣餒的擔憂。",
+      "summary_secondary": "",
+      "title": "As AI Closed In on ‘Unique Games’ Proof, Researchers Raced to Beat the Machines"
+    },
+    {
+      "category": "長文 Long Reads",
+      "has_full_text": true,
+      "link": "https://aeon.co/videos/an-iranian-couple-seek-out-the-recipient-of-their-late-sons-heart",
+      "long_form": true,
+      "qa": [
+        {
+          "answer": "塔雷比導演以其細膩和同理心著稱，擅長將普通人的故事以詩意的方式呈現於銀幕。他深入探索人們的內心世界，尤其是在面對艱難抉擇時所展現的人性光輝。",
+          "question": "亞瑟·塔雷比導演的電影通常有什麼特色？"
+        },
+        {
+          "answer": "這部影片除了器官捐贈的倫理困境，還深入探討了人類面對失去的悲傷、家庭紐帶的力量，以及生與死的意義。它凸顯了生命中那些沉重而又充滿人性的時刻。",
+          "question": "《我不會孤單》除了器官捐贈，還可能觸及哪些深層主題？"
+        },
+        {
+          "answer": "文章中還提到了塔雷比的另一部作品《命運》（Sarnevesht，又名《女兒》）。這部影片講述了一位18歲伊朗鄉村女孩努力平衡教育與家庭責任的故事。",
+          "question": "文章中提到導演塔雷比還有哪些其他作品？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-10-08-85b9f8358c",
+      "source": "Aeon",
+      "summary": "伊朗導演亞瑟·塔雷比（Yaser Talebi）的紀錄片《我不會孤單》（I Won’t Remain Alone）以細膩和同理心，講述了一對伊朗北部村莊老夫婦的感人故事。他們面臨兒子被診斷腦死後，是否同意捐贈器官的痛苦抉擇。塔雷比捕捉了他們深沉的悲傷，以及這個決定所帶來的巨大影響，以詩意的手法呈現了普通人面對人生考驗時的掙扎與人性。\n\n重點：\n- 影片探討了器官捐贈倫理與個人悲痛的衝突。\n- 展現了普通人在極端情況下的人性掙扎與抉擇。",
+      "summary_secondary": "",
+      "title": "I won’t remain alone"
+    },
+    {
+      "category": "長文 Long Reads",
+      "has_full_text": true,
+      "link": "https://aeon.co/essays/the-life-saving-scientific-knowledge-hiding-in-plain-sight",
+      "long_form": true,
+      "qa": [
+        {
+          "answer": "文章指出，這是由於體制性原因。科學家為了職涯發展需要不斷發表論文，而記者則追求最新、最吸睛的研究以獲取點擊率。這導致了很少有人投入時間去系統性地整理和評估現有知識。",
+          "question": "為什麼科學家和記者傾向於專注於單一研究而非綜合現有證據？"
+        },
+        {
+          "answer": "這些方法徹底改變了現代醫學。透過系統性文獻回顧，許多過去基於傳統觀念或資深醫生意見的醫療實踐（例如分娩時剃毛或會陰切開術）被證明缺乏證據甚至有害，從而促使醫療實踐根據可靠的證據進行改革。",
+          "question": "證據綜合方法如何具體影響了醫療決策？"
+        },
+        {
+          "answer": "人工智慧有望自動化證據綜合中繁瑣的資料尋找、篩選和整理工作，極大地加速並簡化這一過程。然而，也存在擔憂，例如AI可能產生不準確的科學評論，或者人們可能因此繞過嚴謹的綜合評估，直接依賴可能存在幻覺或資料庫不完整的AI工具。",
+          "question": "人工智慧在證據綜合中可能扮演什麼角色，又有哪些潛在顧慮？"
+        }
+      ],
+      "read_minutes": 16,
+      "slug": "2026-10-08-9a83cf07c3",
+      "source": "Aeon",
+      "summary": "這篇文章指出，單獨報導科學研究導致公眾對科學發現產生混淆和不信任，例如咖啡和藥物療效的報導前後矛盾。真正的問題在於科學界和媒體未能系統地整合現有知識，而非單一研究的矛盾。作者強調「證據綜合」的重要性，這是一種透過如統合分析和系統性文獻回顧等方法，尋找、篩選並結合大量研究結果，從而形成全面且可靠結論的過程。這項不起眼但關鍵的工作能揭示整體圖景，而非僅是個別樹木，對於解決複雜問題和做出明智決策至關重要。\n*   個人研究和媒體報導常因缺乏整合，導致資訊碎片化和誤導。\n*   證據綜合工具（如統合分析和系統性文獻回顧）能有效整理並評估大量研究，提供更全面的科學理解。",
+      "summary_secondary": "",
+      "title": "How to assemble science"
     }
   ]
 }

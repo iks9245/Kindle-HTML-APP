@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Push ifs up and fors down: The idiom, its algebra, and its limits</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-08-f266a14dae-p2-s.html">小</a><span class="pref-on">中</span><a href="2026-10-08-f266a14dae-p3-l.html">大</a><a class="pref-family" href="2026-10-08-f266a14dae-p3-sans.html">切換為無襯線</a></p>
+
+
+<h1>Push ifs up and fors down: The idiom, its algebra, and its limits</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 3 / 16 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://debasishg.github.io/blog/push-ifs-up-fors-down/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-08-f266a14dae-p2.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-08-f266a14dae-p4.html">下一頁 →</a>
+<span class="pager-num">第 3 / 16 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Pushing conditionals ("ifs") up: If a function branches on its input, consider moving that branch to the caller. Consider the example from the post - instead of frobnicate(walrus: Option<Walrus>) unpacking the option internally, the caller handles the None case and the function takes a plain Walrus. The function's type now states its precondition, the input state space becomes narrower and acts as a form of filtering. But the point is where the decision lives, not how much data flows downstream.</p>
+
+<p class="fulltext">Pushing loops ("fors") down: Deferring loops until after filtering or reducing the dataset minimizes unnecessary computations. Rather than calling frobnicate(walrus) in a loop, provide frobnicate_batch(walruses) and let the loop live inside it. So the hot loop runs without a branch and is a candidate for vectorization.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-08-f266a14dae-p2.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-08-f266a14dae-p4.html">下一頁 →</a>
+<span class="pager-num">第 3 / 16 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

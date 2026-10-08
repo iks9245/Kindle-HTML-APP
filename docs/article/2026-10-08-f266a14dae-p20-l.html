@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Push ifs up and fors down: The idiom, its algebra, and its limits</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-08-f266a14dae-p12-s.html">小</a><a href="2026-10-08-f266a14dae-p16.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-08-f266a14dae-p20-sans-l.html">切換為無襯線</a></p>
+
+
+<h1>Push ifs up and fors down: The idiom, its algebra, and its limits</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 20 / 20 頁
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="../archive/index-l.html">存檔列表</a>
+ ｜ <a href="https://debasishg.github.io/blog/push-ifs-up-fors-down/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-08-f266a14dae-p19-l.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 20 / 20 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">So, it's the algebra that tells you which rewrites are legal. In the filter/map case above, it's the naturality of catMaybes that drives the legality and helps you reason about the overall structure of the code.</p>
+
+<p class="fulltext">For the "fors-down" part, it's more about the cost than the equivalence. You change the shape of the arrow from A -> B to [A] -> [B] so that you pay the setup cost once per batch.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>「將 If 語句上推」具體是如何達到集中控制流和明確前置條件的呢？</summary>
+  <p>透過讓呼叫者處理條件分支，例如在傳入 `Option<Walrus>` 前先處理 `None` 的情況，可以使被呼叫的函數只接收明確、已驗證的輸入。這樣一來，決策點集中在較高的層次，並且函數的型別簽章便能清楚地表達其所需的前置條件，降低內部複雜性。</p>
+</details>
+
+<details>
+  <summary>為什麼「將 For 迴圈下放」有助於向量化 (vectorization)？</summary>
+  <p>向量化是一種利用處理器單指令多資料 (SIMD) 能力的優化技術，能同時處理多個資料元素。將迴圈下放至批次處理函數內部，可以創造出一個沒有分支條件的「熱迴圈」(hot loop)，這種連續、預測性高的資料處理模式，非常適合現代處理器的向量化指令集，從而顯著提升執行速度。</p>
+</details>
+
+<details>
+  <summary>文章提到此原則在資料庫查詢優化中，術語會「顛倒」，這是什麼意思？資料庫中「將 If 語句上推」的等效操作是什麼？</summary>
+  <p>在資料庫查詢計畫中，資料流是從底層（表掃描）向上流向根部（結果），因此「向下推動」謂詞（predicates）意味著在執行流程中盡早評估它們。這就等同於程式設計中「將 If 語句上推」，即盡早進行選擇（`WHERE` 子句）和投影（`SELECT` 特定欄位），以減少後續操作處理的資料量，達到早期過濾的效果。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-08-f266a14dae-p19-l.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 20 / 20 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
