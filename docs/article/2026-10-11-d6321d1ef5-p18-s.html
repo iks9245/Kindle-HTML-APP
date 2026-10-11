@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why DuckDB 2.0 is faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-11-d6321d1ef5-p23.html">中</a><a href="2026-10-11-d6321d1ef5-p30-l.html">大</a><a class="pref-family" href="2026-10-11-d6321d1ef5-p18-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Why DuckDB 2.0 is faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 18 / 21 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p17-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p19-s.html">下一頁 →</a>
+<span class="pager-num">第 18 / 21 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Triggers. The table runs a bit of SQL by itself when rows change. For instance, update some prices, and the trigger sees each row before and after the change (the "transition tables") and writes both into a history table. Before, every tool that touched the table had to remember to write that history row somewhere. Now it can be done directly on the database side.</p>
+
+<p class="fulltext">Copy code</p>
+
+<p class="fulltext">CREATE TRIGGER price_history AFTER UPDATE ON prices</p>
+
+<p class="fulltext">REFERENCING OLD TABLE AS before_rows NEW TABLE AS after_rows FOR EACH STATEMENT</p>
+
+<p class="fulltext">INSERT INTO price_history (id, old_price, new_price)</p>
+
+<p class="fulltext">SELECT a.id, b.price, a.price FROM before_rows b JOIN after_rows a USING (id);</p>
+
+<p class="fulltext">Nested schemas: CREATE SCHEMA finance.reports; and tables inside it.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p17-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p19-s.html">下一頁 →</a>
+<span class="pager-num">第 18 / 21 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

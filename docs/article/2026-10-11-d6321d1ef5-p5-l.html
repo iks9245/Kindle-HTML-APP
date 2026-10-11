@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why DuckDB 2.0 is faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-11-d6321d1ef5-p3-s.html">小</a><a href="2026-10-11-d6321d1ef5-p3.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-11-d6321d1ef5-p5-sans-l.html">切換為無襯線</a></p>
+
+
+<h1>Why DuckDB 2.0 is faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 5 / 35 頁
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="../archive/index-l.html">存檔列表</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p4-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p6-l.html">下一頁 →</a>
+<span class="pager-num">第 5 / 35 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">| DuckDB 2.0 alpha | 7.7 s |</p>
+
+<p class="fulltext">Quick caveat: as I said in the introduction, this is my home internet to us-east-1, so both numbers are slow. Expect things to go faster if you run this from cloud compute.</p>
+
+<p class="fulltext">So what's the black magic here? The file is cut into 2268 row groups of about 122,000 rows. For every row group DuckDB downloads the bytes, decodes the Parquet, counts votes per type, and merges the partial counts at the end. Two kinds of work: waiting on the network, and crunching on the CPU.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p4-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p6-l.html">下一頁 →</a>
+<span class="pager-num">第 5 / 35 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why DuckDB 2.0 is faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-11-d6321d1ef5-p16-s.html">小</a><a href="2026-10-11-d6321d1ef5-p20.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-11-d6321d1ef5-p27-sans-l.html">切換為無襯線</a></p>
+
+
+<h1>Why DuckDB 2.0 is faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 27 / 35 頁
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="../archive/index-l.html">存檔列表</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p26-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p28-l.html">下一頁 →</a>
+<span class="pager-num">第 27 / 35 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- VARIANT is 2.7 times smaller than the JSON string, and you can see why with pragma_storage_info('ev'): the object is split into sub-columns, the event kind is stored as a dictionary. EXPLAIN shows the filter pushed into the scan, so a query on payload.type reads one sub-column.</p>
+
+<p class="fulltext">- On the queries that touch shredded fields, a filter or a sum on a numeric sub-field, VARIANT is about 6 times faster than parsing the JSON text and within 20 percent of the typed columns. Compared to VARIANT in 1.5.5 it is 78 times faster, because 1.5.5 had the type but not the shredding.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p26-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p28-l.html">下一頁 →</a>
+<span class="pager-num">第 27 / 35 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

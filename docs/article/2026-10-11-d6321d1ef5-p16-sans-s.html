@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why DuckDB 2.0 is faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-11-d6321d1ef5-p20-sans.html">中</a><a href="2026-10-11-d6321d1ef5-p26-sans-l.html">大</a><a class="pref-family" href="2026-10-11-d6321d1ef5-p16-s.html">切換為襯線</a></p>
+
+
+<h1>Why DuckDB 2.0 is faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 16 / 21 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p15-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p17-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 16 / 21 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">What can we see here?</p>
+
+<p class="fulltext">- VARIANT is 2.7 times smaller than the JSON string, and you can see why with pragma_storage_info('ev'): the object is split into sub-columns, the event kind is stored as a dictionary. EXPLAIN shows the filter pushed into the scan, so a query on payload.type reads one sub-column.</p>
+
+<p class="fulltext">- On the queries that touch shredded fields, a filter or a sum on a numeric sub-field, VARIANT is about 6 times faster than parsing the JSON text and within 20 percent of the typed columns. Compared to VARIANT in 1.5.5 it is 78 times faster, because 1.5.5 had the type but not the shredding.</p>
+
+<p class="fulltext">- The list query is the exception. Casting a VARIANT list to VARCHAR[] costs two seconds in this alpha, slower than the JSON path. Field access is where shredding pays today; lists are not there yet.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p15-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p17-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 16 / 21 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why DuckDB 2.0 is faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-11-d6321d1ef5-p16-sans-s.html">小</a><a href="2026-10-11-d6321d1ef5-p21-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-11-d6321d1ef5-p28-l.html">切換為襯線</a></p>
+
+
+<h1>Why DuckDB 2.0 is faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 28 / 35 頁
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p27-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p29-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 28 / 35 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- The list query is the exception. Casting a VARIANT list to VARCHAR[] costs two seconds in this alpha, slower than the JSON path. Field access is where shredding pays today; lists are not there yet.</p>
+
+<p class="fulltext">So the golden rule of modeling is still valid: model what you know. The fields every query touches deserve real columns, and promoting one is two statements:</p>
+
+<p class="fulltext">Copy code</p>
+
+<p class="fulltext">ALTER TABLE ev ADD COLUMN type VARCHAR;</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p27-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p29-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 28 / 35 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why DuckDB 2.0 is faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-11-d6321d1ef5-p5-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-10-11-d6321d1ef5-p9-sans-l.html">大</a><a class="pref-family" href="2026-10-11-d6321d1ef5-p7.html">切換為襯線</a></p>
+
+
+<h1>Why DuckDB 2.0 is faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 7 / 27 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p6-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p8-sans.html">下一頁 →</a>
+<span class="pager-num">第 7 / 27 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">TL;DR: reading data over S3 is 2x to 3x faster in 2.0 with zero query changes, because a separate pool downloads ahead of the workers. It is on by default (read_ahead_depth = -1); 0 gives you the old behaviour.</p>
+
+<p class="fulltext">Recursive CTEs: a boost for deep parent/child datasets</p>
+
+<p class="fulltext">The DuckDB team rewrote the recursive CTE engine and claims 40x on graph reachability. Don't worry, I'll explain what that means on a table you already know.</p>
+
+<p class="fulltext">A recursive CTE is a loop over a table. Take an employees table with two columns, manager and employee. You want to answer a simple question: who reports to whom.</p>
+
+<p class="fulltext">| manager | employee |</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p6-sans.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p8-sans.html">下一頁 →</a>
+<span class="pager-num">第 7 / 27 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

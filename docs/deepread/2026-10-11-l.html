@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日深讀</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-11-s.html">小</a><a href="2026-10-11.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-11-sans-l.html">切換為無襯線</a></p>
+
+<h1>每日深讀</h1>
+<p class="meta">
+2026-10-11 ｜ 本篇：Why DuckDB 2.0 is faster
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="../archive/2026-10-11-l.html">當天文摘</a>
+ ｜ <a href="../archive/index-l.html">存檔列表</a>
+ ｜ <a href="../article/2026-10-11-d6321d1ef5-l.html">讀全文</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<h2>脈絡</h2>
+<p>DuckDB 2.0 的預覽版已發布，預計今年秋季正式推出，主打顯著的速度與效能提升。本文深入探討其對資料工程師和資料管道建構者的實際影響，特別是如何透過理解資料形狀與模型來充分利用新版本帶來的加速。</p>
+
+
+<h2>重點</h2>
+<ul>
+<li>非同步I/O機制顯著加速了S3上的資料查詢，無需修改查詢語句即可實現2到3倍的性能提升。</li><li>重寫後的遞迴式通用資料表運算式 (CTE) 引擎，處理階層或圖形資料集的速度可提升數十倍。</li><li>新增的觸發器功能和CTE內部的DML操作，強化了資料庫的自動化管理與資料移動能力。</li><li>外部檔案快取溢出功能，允許將遠端檔案區塊暫存於磁碟，極大加速了大型遠端檔案的重複讀取。</li><li>新增Spark SQL兼容模式及CLI工具改進，進一步提升了使用者體驗與從其他平台遷移的便利性。</li>
+</ul>
+
+
+<h2>影響與延伸</h2>
+<p>這些全面的更新使DuckDB在處理本地和雲端資料方面更具競爭力，資料專業人員能以更少的工作量實現更快、更可靠的資料處理。新功能也簡化了以往需要外部工具或複雜腳本才能完成的資料管理任務，進一步提升了資料管道的效率與可靠性。</p>
+
+
+<h2>小辭典</h2>
+<dl class="glossary">
+
+<dt>非同步I/O (Asynchronous I/O)</dt>
+<dd>一種資料輸入/輸出技術，允許資料的下載與CPU的處理在不同的執行緒池中同時進行，從而顯著減少等待時間，特別有利於從網路或遠端儲存讀取大量資料。</dd>
+
+<dt>遞迴式通用資料表運算式 (Recursive CTE)</dt>
+<dd>SQL語言中的一種強大功能，允許一個查詢透過自我參考來處理具有層次結構或圖形結構的資料，例如計算組織架構中員工的上下級關係。</dd>
+
+<dt>Parquet</dt>
+<dd>一種開源的欄式儲存檔案格式，針對資料分析工作負載進行了優化，廣泛應用於大型資料集和資料湖環境中，以提供高效的查詢性能。</dd>
+
+<dt>S3</dt>
+<dd>Amazon Simple Storage Service，亞馬遜網路服務(AWS)提供的一種高度可擴展、耐用且安全的物件儲存服務，常用於雲端資料湖中儲存大量非結構化或半結構化資料。</dd>
+
+</dl>
+
+
+
+</div>
+</body>
+</html>

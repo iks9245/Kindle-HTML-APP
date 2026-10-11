@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why DuckDB 2.0 is faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-11-d6321d1ef5-p12-s.html">小</a><span class="pref-on">中</span><a href="2026-10-11-d6321d1ef5-p21-l.html">大</a><a class="pref-family" href="2026-10-11-d6321d1ef5-p16-sans.html">切換為無襯線</a></p>
+
+
+<h1>Why DuckDB 2.0 is faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 16 / 27 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p15.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p17.html">下一頁 →</a>
+<span class="pager-num">第 16 / 27 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The event kind is always text, user.id is always a number, props.amount is always a decimal. Those fields get pulled out into their own real columns under the hood. The rare fields, and the fields that are a number in one row and text in the next, stay together in a binary remainder. So the consistent part of your JSON is stored like a normal table, and only the messy part is stored as a blob.</p>
+
+<p class="fulltext">The perfect case is structured logs. level, service, latency_ms, trace_id are in every line and always the same kind of value, so they all shred. The odd extra object stays in the remainder, still queryable, just slower. The trap: a latency_ms that is 231 in one line and "231ms" in the next falls into the remainder too. Keep value kinds consistent.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p15.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-11-d6321d1ef5-p17.html">下一頁 →</a>
+<span class="pager-num">第 16 / 27 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

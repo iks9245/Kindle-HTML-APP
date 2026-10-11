@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why DuckDB 2.0 is faster</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-11-d6321d1ef5-p21-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-10-11-d6321d1ef5-p35-sans-l.html">大</a><a class="pref-family" href="2026-10-11-d6321d1ef5-p27.html">切換為襯線</a></p>
+
+
+<h1>Why DuckDB 2.0 is faster</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 27 / 27 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p26-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 27 / 27 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">~/.duckdb/cli/latest/duckdb -c "SELECT version()"</p>
+
+<p class="fulltext">And of course, MotherDuck will support 2.0 close to the release, so feel free to get your hands on the duck in the cloud and enjoy all the nuggets we talked about here.</p>
+
+<p class="fulltext">Table of contents</p>
+
+<p class="fulltext">Read Next</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>DuckDB 2.0 中針對 S3 查詢的非同步 I/O 功能，具體是如何實現 2 到 3 倍的速度提升？</summary>
+  <p>DuckDB 1.5.5 中，每個工作執行緒輪流執行網路下載和資料解碼。而在 2.0 版本中，DuckDB 引入了一個獨立的執行緒池專門負責資料下載，並將資料緩衝起來。這使得工作執行緒可以持續地從緩衝區中獲取資料進行解碼，實現網路和 CPU 的同時高效利用，從而顯著加速查詢。</p>
+</details>
+
+<details>
+  <summary>遞迴 CTEs 的改進對於哪些資料處理任務或場景會帶來最大的效益？</summary>
+  <p>遞迴 CTEs 的強化對於處理具有深層次父子關係的資料集，如組織架構圖、社交網絡圖或物料清單（BOM）等，效益最為顯著。例如，在分析圖形的可達性、查找層次結構中的所有祖先或後代，或是追蹤複雜數據流時，其大幅提升的性能將大大縮短查詢時間。</p>
+</details>
+
+<details>
+  <summary>除了主要的性能提升之外，DuckDB 2.0 還引入了哪些其他新功能來增強其對資料工程師和分析師的實用性？</summary>
+  <p>DuckDB 2.0 引入了多項新的 SQL 功能，包括資料庫端的觸發器（Triggers），允許在 CTE 中執行資料操作語言（DML），以及巢狀結構的 Schema 定義。此外，它還支援 Spark SQL 相容模式，並能將遠端檔案緩存溢出到磁碟，這些都極大地提升了資料處理的靈活性、自動化能力及效率。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-11-d6321d1ef5-p26-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 27 / 27 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
