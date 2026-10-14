@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemini 4 Argon for Robotics</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-14-c64515c7bf-p5-s.html">小</a><a href="2026-10-14-c64515c7bf-p6.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-14-c64515c7bf-p8-sans-l.html">切換為無襯線</a></p>
+
+
+<h1>Gemini 4 Argon for Robotics</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 8 / 41 頁
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="../archive/index-l.html">存檔列表</a>
+ ｜ <a href="https://developers.googleblog.com/gemini-4-argon-for-robotics/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-14-c64515c7bf-p7-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-14-c64515c7bf-p9-l.html">下一頁 →</a>
+<span class="pager-num">第 8 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">3. Send motion primitives (`POST /plan`) and verify visually after every turn in the updated `wrist_cam.png`. If `status == "grasp_failed"`, call `robot.look_at(...)` to re-observe and recover closed-loop.</p>
+
+<p class="fulltext">## Code-as-Policies Primitives (`POST http://127.0.0.1:8081/plan`)</p>
+
+<p class="fulltext">robot.look_at(x=0.35, y=0.13, z=0.14, grid_z=0.015)</p>
+
+<p class="fulltext">x, y = robot.deproject(u=0.52, v=0.48, z_plane=0.015)</p>
+
+<p class="fulltext">robot.grasp(x=x, y=y, z=0.015, yaw_deg=-35, pitch_deg=90)</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-14-c64515c7bf-p7-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-14-c64515c7bf-p9-l.html">下一頁 →</a>
+<span class="pager-num">第 8 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

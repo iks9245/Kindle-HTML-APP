@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemini 4 Argon for Robotics</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-14-c64515c7bf-p6-sans.html">中</a><a href="2026-10-14-c64515c7bf-p7-sans-l.html">大</a><a class="pref-family" href="2026-10-14-c64515c7bf-p5-s.html">切換為襯線</a></p>
+
+
+<h1>Gemini 4 Argon for Robotics</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 5 / 24 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://developers.googleblog.com/gemini-4-argon-for-robotics/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-14-c64515c7bf-p4-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-14-c64515c7bf-p6-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 5 / 24 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Fine Visual Servoing (8–20 calls): `look_at` -> `grasp` -> pre-pose `goto` -> closed-loop `move_by` / `move_until_contact` -> `done`</p>
+
+<p class="fulltext">3. Send motion primitives (`POST /plan`) and verify visually after every turn in the updated `wrist_cam.png`. If `status == "grasp_failed"`, call `robot.look_at(...)` to re-observe and recover closed-loop.</p>
+
+<p class="fulltext">## Code-as-Policies Primitives (`POST http://127.0.0.1:8081/plan`)</p>
+
+<p class="fulltext">robot.look_at(x=0.35, y=0.13, z=0.14, grid_z=0.015)</p>
+
+<p class="fulltext">x, y = robot.deproject(u=0.52, v=0.48, z_plane=0.015)</p>
+
+<p class="fulltext">robot.grasp(x=x, y=y, z=0.015, yaw_deg=-35, pitch_deg=90)</p>
+
+<p class="fulltext">robot.place(x=0.24, y=0.06, z=0.075)</p>
+
+<p class="fulltext">robot.place_until_contact(x=0.24, y=0.06, z=0.015, max_lag=0.012, relief=0.002)</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-14-c64515c7bf-p4-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-14-c64515c7bf-p6-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 5 / 24 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
