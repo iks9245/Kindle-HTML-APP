@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCode 2.0</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-15-a4e6a72e3a-p7-s.html">小</a><a href="2026-10-15-a4e6a72e3a-p10.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-15-a4e6a72e3a-p13-sans-l.html">切換為無襯線</a></p>
+
+
+<h1>OpenCode 2.0</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 13 / 13 頁
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="../archive/index-l.html">存檔列表</a>
+ ｜ <a href="https://anoma.ly/notes/opencode-2-0/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-15-a4e6a72e3a-p12-l.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 13 / 13 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">tui.json config is moved to json</p>
+
+<p class="fulltext">There are a lot of other changes but they are backwards compatible. It is worth pointing OpenCode at this doc so it can migrate things for you.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>OpenCode 2.0 的核心服務作為單一背景行程自動運行，這對使用者或開發者有何實際益處？</summary>
+  <p>這種設計讓所有 OpenCode 介面（如 TUI、網頁介面、桌面應用程式）都能與同一個中央行程溝通，確保資料與狀態的一致性。它還能讓透過程式化客戶端（@opencode/client）編寫的腳本自動發現並使用本地服務，特別適合用於排程任務，從而簡化了開發和管理流程。</p>
+</details>
+
+<details>
+  <summary>OpenCode 2.0 的「程式碼模式」具體是如何運作的，它能讓代理程式實現哪些以往難以達成的高效操作？</summary>
+  <p>程式碼模式內建了一個精簡的 JavaScript 解譯器，能將 MCP 伺服器或 OpenAPI 端點轉換為代理程式可呼叫的函數。這使得代理程式可以在單一往返中，編寫腳本來呼叫工具、處理結果再呼叫另一個工具，大幅減少了傳統上需要多次單獨呼叫的複雜性，提升了任務執行效率。</p>
+</details>
+
+<details>
+  <summary>OpenCode 2.0 的強化插件系統和背景任務處理能力，如何進一步擴展代理程式的功能和開發彈性？</summary>
+  <p>插件系統現在有超過 80 個內部插件，保證了 API 的維護性，並支援熱重載，讓代理程式可以在會話中即時編寫並使用新插件。背景任務能力則允許主代理程式啟動子代理或異步執行殼層命令，實現多工處理，即便長時間運行任務也不會阻礙主代理的工作，極大提升了代理程式的平行處理和自定義能力。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-15-a4e6a72e3a-p12-l.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 13 / 13 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
