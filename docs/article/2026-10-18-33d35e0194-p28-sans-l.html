@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Development statistics for the 7.2 kernel</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-18-33d35e0194-p20-sans-s.html">小</a><a href="2026-10-18-33d35e0194-p25-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-18-33d35e0194-p28-l.html">切換為襯線</a></p>
+
+
+<h1>Development statistics for the 7.2 kernel</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 28 / 85 頁
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="https://lwn.net/Articles/1088776/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-18-33d35e0194-p27-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-18-33d35e0194-p29-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 28 / 85 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Out of curiosity, I checked what results this would give in the existing kernel code. Here's an analysis of the entire (excluding pre-git) linux.git history. First, I created a shortlog (at the moment my copy seems to be checking out, which is 0e35b9b6ec0f (2026-07-06; "Merge tag 'mm-hotfixes-stable-2026-07-06-17-49' of git://git.kernel.org/pub/scm/linux/kernel/git/akpm/mm")): Then I edited manually to keep only those with 5k commits or more, which gives us 28 authors. Then I created another file with the LoC additions, deletions, and net total for each of those authors, using the script from https://stackoverflow.com/a/7010890/6872717 with some minor changes. Then I manually edited that to get a format I liked more, and then I paste(1)d both files: After some manual white-space alignment, I also added manually a division between the net total and the number of commits, to see a ratio.  It looks like this: From this list, I suspect (without knowing the work of most of them) I'd like Dan Carpenter's work most.  At +4/-4 LoC per patch and a net total of  In general, I also expect I'll tend to like the most those with single-digit ratios, and also those with negative ratios (regardless of their absolute value).  In some cases, large negative ratios are due to removals of entire files, which masks a little bit the other work of those contributors, but removing entire files is per se a good thing (especially, if the functionality remains). Having said this, I'm also curious to check myself. Here are the same statistics for the contributors to shadow-utils that have more than 100 commits: My ratio is negative and 2-digit.  It's a bit larger than it used to be, due to the recent removal of entire programs and features in 4.20.0, but even before those removals, I had been proud of keeping a negative ratio (except for a few times, my ratio used to be consistently negative and single-digit). And here are same statistics for the contributors to the Linux man-pages that have more than 100 commits: I'm proud of maintaining that ratio single-digit even after so many additions.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-18-33d35e0194-p27-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-18-33d35e0194-p29-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 28 / 85 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

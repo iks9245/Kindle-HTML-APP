@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日深讀</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-18-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-10-18-sans-l.html">大</a><a class="pref-family" href="2026-10-18.html">切換為襯線</a></p>
+
+<h1>每日深讀</h1>
+<p class="meta">
+2026-10-18 ｜ 本篇：Development statistics for the 7.2 kernel
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/2026-10-18-sans.html">當天文摘</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="../article/2026-10-18-33d35e0194-sans.html">讀全文</a>
+ ｜ <a href="https://lwn.net/Articles/1088776/">原文網頁</a>
+</p>
+
+
+
+<h2>脈絡</h2>
+<p>Linux核心的每個版本發布都代表了全球數千名開發者協作的成果。文章深入分析了7.2核心的開發數據，顯示這是一個異常繁忙的週期，新增了近60萬行程式碼。這個版本在提交數量和參與開發者人數上都創下了新高，反映了開源社群持續的活力與成長。透過這些統計數據，我們可以深入了解核心開發社群的演變。</p>
+
+
+<h2>重點</h2>
+<ul>
+<li>Linux 7.2 核心的開發週期是歷史上最繁忙之一，僅次於6.7版本，且在非合併提交數量上超出了7.1。</li><li>此次發布吸引了2,652名開發者貢獻，創下新的紀錄，顯示核心開發社群的持續擴大。</li><li>在貢獻者中，Uwe Kleine-König 在提交次數方面領先，而 Matthew Stewart 則在更改程式碼行數方面名列前茅，後者主要來自自動生成的檔案。</li><li>帶有「Reviewed-by」標籤的提交數量呈現溫和下降趨勢，但帶有「Fixes」標籤的提交顯著增加，可能與大型語言模型 (LLMs) 被用於尋找錯誤有關。</li>
+</ul>
+
+
+<h2>影響與延伸</h2>
+<p>7.2核心的開發數據反映出開源專案持續壯大，但也引發了對程式碼審查品質和自動生成程式碼影響的討論。隨著LLM技術的參與，未來核心錯誤修復的模式可能會發生變化，同時也需關注大量自動生成或LLM輔助程式碼對開發流程及維護的長遠影響。</p>
+
+
+<h2>小辭典</h2>
+<dl class="glossary">
+
+<dt>Linus Torvalds (林納斯·托瓦茲)</dt>
+<dd>Linux 核心的創造者及主要維護者，對每個核心版本的發布擁有最終決定權，並會定期發布新版本。</dd>
+
+<dt>Commits (提交)</dt>
+<dd>開發者向程式碼儲存庫提交的單一或一系列程式碼變更，通常包含對特定功能、錯誤修復或改進的描述，是版本控制系統中的基本單位。</dd>
+
+<dt>Tested-by / Reviewed-by tags (測試者/審閱者標籤)</dt>
+<dd>這些標籤附加在核心提交中，表明特定程式碼已經過指定人員的測試或審閱。它們是開源專案中品質保證、協作和追溯責任的關鍵環節。</dd>
+
+<dt>LLM (大型語言模型)</dt>
+<dd>指的是能夠理解、生成人類語言的人工智慧模型。文章中提到其可能被用於自動發現軟體錯誤，從而加速錯誤修復的過程。</dd>
+
+</dl>
+
+
+
+</div>
+</body>
+</html>
