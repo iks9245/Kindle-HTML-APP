@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-10-17</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-17-sans.html">中</a><a href="2026-10-17-sans-l.html">大</a><a class="pref-family" href="2026-10-17-s.html">切換為襯線</a></p>
+
+<h1>每日 AI 文摘 2026-10-17</h1>
+<p class="meta">
+2026-10-17
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="index-sans-s.html">存檔列表</a>
+ ｜ <a href="../deepread/2026-10-17-sans-s.html">每日深讀</a>
+
+
+ ｜ <a href="2026-10-16-sans-s.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日新聞聚焦於科技發展的兩面性：一方面，人工智慧如Anthropic的Claude正深入軟體開發，大型語言模型的記憶機制也揭示其驚人潛力；但另一方面，AI基準測試面臨作弊挑戰，Home Assistant的隱私疑慮也提醒我們技術倫理不容忽視。同時，NASA的阿提米絲計畫在穩步推進深空探索，全球地緣政治卻因烏克蘭戰事中星鏈系統的限制，以及約旦河西岸不斷升級的定居者暴力而更趨複雜。奧勒岡校園槍擊案的英勇事蹟與對古羅馬男性氣概的歷史反思，則為今日新聞增添了社會與人文的深度。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>How the Claude Code team does code review</h3>
+  <p class="summary">Anthropic 的 Claude Code 團隊已徹底改革其程式碼審查流程，以應對 AI 生成程式碼的龐大數量。從六月到九月，儘管合併的拉取請求數量翻倍，但被還原的比例卻下降了超過 40%，這表明他們成功地優化了人類審查時間，同時不增加錯誤或事件。現在，大部分程式碼審查工作在拉取請求開啟前由機器持續進行，並由 Claude 處理例行性錯誤，使人類工程師能夠專注於更高層次的挑戰和獨特問題。
+
+*關鍵點：*
+- Claude 負責生成約 90% 的程式碼，並在審查中執行初步的錯誤修復。
+- 團隊的目標是減少每次更改所需的人工時間，同時維持或降低程式碼回溯率和事件發生率。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>鑑於 Claude 程式碼團隊中的 AI 撰寫了約 90% 的程式碼，他們如何確保這些 AI 生成的程式碼在人工審查之前就具有高品質？</summary>
+    <p>團隊讓 Claude 在程式碼提交為拉取請求之前進行驗證，例如運行測試、建構或比較螢幕截圖。此外，Claude 在早期階段就透過子代理審查差異並修正錯誤，大幅減少了人類需關注的例行性問題。</p>
+  </details>
+  
+  <details>
+    <summary>在這種優化的人工智慧輔助程式碼審查流程下，人類工程師在程式碼審查中的最終角色或目標是什麼？</summary>
+    <p>最終目標是讓大多數拉取請求在只有一名人類參與（可以是作者本人）的情況下合併，且不會增加程式碼回溯率或事件發生率。人類工程師的角色被保留用於解決只有人類才能處理的獨特、高層次問題和新型挑戰。</p>
+  </details>
+  
+  <details>
+    <summary>團隊如何衡量和確保減少人工審查時間不會導致程式碼品質下降或問題增加？</summary>
+    <p>團隊透過追蹤每次拉取請求的人工審批次數、人工評論和拉取請求等待人工處理的時間來衡量人工時間。同時，程式碼回溯率和事件發生率被視為「護欄」指標；如果這些比率上升，則表示團隊並未真正節省人工時間，只是將問題轉移了。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-17-9a73944324-sans-s.html">全文（約 12 分鐘）</a> ｜ <a href="https://claude.dev/blog/solving-code-review-at-anthropic/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>I never authorized an integration that scans my secrets</h3>
+  <p class="summary">一名 Home Assistant (HA) 使用者於 2026 年 10 月 16 日在 GitHub 專案中提交了一項問題，指稱未經授權的秘密掃描功能侵犯了隱私，並質疑其安全性。HA 團隊澄清此密碼檢查功能已存在多年，會先在本地將密碼雜湊化，僅將雜湊值的前五個字元發送給 Have I Been Pwned (HIBP) 服務進行比對，且完整的秘密資料不會離開使用者系統。
+儘管初期回應較為輕視，團隊隨後致歉並確認此功能可透過 `ha security options --pwned=false` 指令關閉，並承諾將更新相關說明文件。
+*   HA 的 Supervisor 長期以來內建密碼洩漏檢查功能。
+*   檢查過程在本地完成，僅傳送雜湊值部分到 HIBP 進行初步篩選。
+*   使用者可透過 CLI 指令選擇停用此功能。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>使用者為何會突然注意到 Home Assistant 的密碼掃描功能？</summary>
+    <p>因為最近的一次版本更新修正了一個相關的警告訊息顯示問題，使得這個多年來已存在於 Supervisor 中的功能變得更明顯，才讓使用者首次察覺到它的存在。</p>
+  </details>
+  
+  <details>
+    <summary>Home Assistant 如何確保使用者密碼的隱私，即使它與 Have I Been Pwned 服務整合？</summary>
+    <p>Home Assistant 的 Supervisor 會在本地端對密碼進行雜湊處理，然後僅將 SHA-1 雜湊值的前五個字元發送給 Have I Been Pwned 服務。匹配過程也在使用者本機實例上進行，確保完整的秘密資料不會離開系統，從而維護隱私。</p>
+  </details>
+  
+  <details>
+    <summary>如果使用者不希望 Home Assistant 執行密碼掃描，他們該如何關閉這項功能？</summary>
+    <p>使用者可以透過執行指令 `ha security options --pwned=false` 來關閉此功能。Home Assistant 團隊也承諾將會更新相關文件，以明確說明此功能及其關閉方式。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-17-70d10452e1-sans-s.html">全文（約 5 分鐘）</a> ｜ <a href="https://github.com/home-assistant/home-assistant.io/issues/49314">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>You could have invented transformers from memory</h3>
+  <p class="summary">這篇文章深入探討了大型語言模型如何儲存與回想資訊，將其類比為不同類型的記憶儲存庫。作者透過直觀的方式，將線性層、多層感知器 (MLP) 及自注意力機制（轉換器模型的核心）視為記憶儲存演進的三個階段。文章指出，隨著記憶儲存模型從線性層演進到自注意力機制，其記憶容量和資訊回想能力大幅提升，同時有效降低了記憶間的干擾。
+- 關鍵衡量指標：訊號干擾比 (interference-to-signal ratio)
+- 記憶容量演進：從約 64 個記憶（線性層），到約 2,700 個（MLP），再到超過一百萬個（自注意力機制）。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>摘要中提及的「訊號干擾比」是什麼？它在記憶儲存庫的脈絡中為何如此重要？</summary>
+    <p>訊號干擾比衡量的是在回憶特定資訊時，其他記憶造成的干擾程度。這個指標對於評估記憶儲存庫的效率至關重要，因為當干擾與所需訊號一樣大時，記憶儲存庫便達到其容量極限，難以有效回想資訊。</p>
+  </details>
+  
+  <details>
+    <summary>文章提到自注意力機制能儲存「潛在無限」或「超過一百萬個」記憶，它是如何超越線性層和MLP的？</summary>
+    <p>自注意力機制透過其獨特的「門控」機制來實現。與線性層或MLP將所有儲存記憶的相似度加權求和不同，自注意力機制會讓每個查詢選擇「最佳」匹配，有效隔離所需記憶並大幅降低來自其他記憶的干擾，從而顯著提高了其記憶容量和回想精確度。</p>
+  </details>
+  
+  <details>
+    <summary>文章結尾提到理解機器記憶或許能幫助理解人類記憶，這有什麼深層的意義？</summary>
+    <p>這意味著儘管文章側重於機器記憶的計算原理，但其提出的關於管理干擾、有效儲存與檢索資訊的觀點，可能與生物記憶系統的運作方式存在共通之處。這種跨領域的類比，或許能為認知科學和人類記憶研究帶來新的啟發。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-17-7f14563d8d-sans-s.html">全文（約 22 分鐘）</a> ｜ <a href="https://alexwang.ai/posts/associative-memory/">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Inside Ukrainian offensive pushing Russia back - with Starlink playing a key role</h3>
+  <p class="summary">烏克蘭軍隊近日成功完成了代號為「韋瓦第行動」(Operation Vivaldi) 的反攻，在東部頓巴斯地區解放了277平方公里領土，有效阻止了俄羅斯的鉗形攻勢，並據稱造成俄軍8,000人傷亡。此次行動確保了有利的戰略位置，為未來進一步的軍事行動奠定基礎。然而，美國星鏈（Starlink）軍用版「星盾」（Starshield）系統在行動期間突遭限制，引發了烏克蘭對關鍵技術依賴性的擔憂。儘管烏克蘭與華盛頓之間出現外交摩擦，前線士兵的士氣依然高昂，對贏得戰爭充滿信心。
+
+- 星鏈系統在烏克蘭的空戰及指揮通訊中扮演關鍵角色，但其突如其來的限制對烏軍能力產生了影響。
+- 此次行動對俄羅斯的入侵造成了重大挫折，但烏克蘭仍面臨複雜的戰場形勢和外部支持的不確定性。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>韋瓦第行動的主要目標是什麼？這次行動取得了哪些具體成果？</summary>
+    <p>韋瓦第行動的主要目標是阻止俄羅斯在頓巴斯東部地區包圍烏克蘭控制的關鍵城市，並收復失地。行動成功解放了277平方公里的領土，瓦解了俄軍的鉗形攻勢，並為烏克蘭後續的軍事行動奠定了有利的戰略基礎。</p>
+  </details>
+  
+  <details>
+    <summary>星鏈系統對烏克蘭軍方的作戰能力有多重要？其使用限制可能帶來什麼影響？</summary>
+    <p>星鏈系統的軍用版「星盾」對烏克蘭在戰場上的寬頻通訊至關重要，尤其在攔截機和中程打擊無人機的操作中扮演關鍵角色。其使用限制可能會削弱烏克蘭的空中偵察與打擊能力，並對烏軍整體協同作戰構成挑戰，引發對技術依賴性的深切擔憂。</p>
+  </details>
+  
+  <details>
+    <summary>文章提到烏克蘭與華盛頓之間關係緊張，具體指哪些方面？這對烏克蘭有何潛在影響？</summary>
+    <p>文章指出，烏克蘭總統澤倫斯基感到被川普「背叛」，而川普則表示他「不是」澤倫斯基的「粉絲」，並聲稱烏克蘭襲擊俄羅斯煉油廠導致油價上漲。這些外交分歧可能影響美國未來對烏克蘭的軍事和財政援助水平，進而對烏克蘭的長期抗戰造成不確定性。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-17-acc3dc264d-sans-s.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cvx284w16z1po?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Oregon teacher fought school attacker before armed dad shot suspect 'multiple times'</h3>
+  <p class="summary">週四，奧勒岡州班德市的銀軌小學發生校園槍擊案，一名16歲的前學生開槍，造成四人死亡、兩人受傷。一名教師英勇地與槍手搏鬥，隨後一位名叫Kaylub Giamanco的武裝父親目睹襲擊後進入學校，開槍擊斃了嫌犯，阻止了更多傷亡。警方讚揚他們的英勇行為幾乎肯定避免了更多流血事件。
+* 槍手是一名16歲的前學生，攜帶約44發散彈槍子彈。
+* 介入的父親是該校學生的家長，他合法持有並攜帶槍枝。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>槍手Griffin J. John II的犯案動機為何？他有何背景？</summary>
+    <p>警方表示，16歲的槍手Griffin J. John II曾是該校的特殊教育學生，但其確切的犯案動機仍在調查中，目前尚不清楚。警方已對其住家進行搜查。</p>
+  </details>
+  
+  <details>
+    <summary>介入的父親Kaylub Giamanco在法律上是否會面臨任何問題，或此類行為在美國有何法律規範？</summary>
+    <p>Kaylub Giamanco合法持有並攜帶槍枝，他在目睹槍擊案後，為阻止更多傷亡而開槍擊斃了嫌犯。警方讚揚其英雄行為，總統川普也稱其為「偉大的英雄」，因此他預計不會面臨法律問題，反而是受表彰的對象。美國許多州允許公民在特定條件下合法持槍並在自衛或保護他人時使用。</p>
+  </details>
+  
+  <details>
+    <summary>事件發生後，社區對此事件及Kaylub Giamanco的英雄行為有何反應？</summary>
+    <p>警方和奧勒岡州州長科泰克皆讚揚Kaylub Giamanco的英勇行為阻止了更多生命損失，但科泰克也指出這種行為會帶來沉重的情感負擔。Giamanco的家人表示他不是在尋求認可，並向急救人員、學校人員和社區表達感謝，同時也請求外界給予隱私。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-17-8d691fdb10-sans-s.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack</h3>
+  <p class="summary">近期在被佔領的約旦河西岸，數十名蒙面以色列定居者於年度橄欖收成期間襲擊巴勒斯坦農民，焚燒車輛與橄欖樹，造成至少12名巴勒斯坦人受傷，其中包括四名巴勒斯坦裔美國公民。一名華盛頓郵報記者也在報導過程中遭到圍攻受傷。這些攻擊事件是日益加劇的定居者暴力模式的一部分，聯合國報告指出，今年收成季的襲擊次數已超過去年總和，反映出以色列親定居點政策的影響。
+關鍵重點：
+* 襲擊事件發生在巴勒斯坦村莊Abu Falah附近，當地定居點和非法前哨站不斷擴張。
+* 美國國務院譴責此類暴力，並呼籲進行調查與起訴。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這些攻擊為何特別發生在橄欖收成期間？</summary>
+    <p>橄欖收成不僅是巴勒斯坦家庭的重要生計來源，也被視為他們對土地所有權的聲明。對定居者而言，此舉是向巴勒斯坦人施壓，阻止他們耕種土地，並以此推動以色列對這些土地的主張，加劇了該地區的緊張局勢。</p>
+  </details>
+  
+  <details>
+    <summary>以色列在約旦河西岸的定居點和前哨站的國際法律地位為何？</summary>
+    <p>根據國際法，所有以色列定居點均屬非法。此外，小型的前哨站即使在以色列法律下也是非法的，但文章指出，其中許多前哨站仍獲得國家支持，這進一步複雜化了該地區的法律與政治問題。</p>
+  </details>
+  
+  <details>
+    <summary>以色列政府對這些定居者襲擊事件有何立場或回應？</summary>
+    <p>儘管有影像證據和證詞，以色列總理辦公室表示事實仍不明確且正在調查中。以色列國防軍(IDF)則稱已派員處理「暴力衝突報告」，並會審查所有情況。然而，文章指出，以色列軍隊常以向巴勒斯坦農田發射催淚瓦斯來結束衝突，這是一種管理這些衝突的慣用模式，且政府被描述為「強烈親定居點」。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-17-363fbc099b-sans-s.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>NASA Names Stephen Cash Marshall Space Flight Center Director</h3>
+  <p class="summary">NASA局長Jared Isaacman已任命資深工程師Stephen Cash為亨茨維爾馬歇爾太空飛行中心主任，自10月19日（週一）起生效。Cash在該中心開啟其超過四十年的職業生涯，此次回歸將領導該中心在推進、太空系統、科學研究和技術開發方面的廣泛任務。
+此任命至關重要，因Marshall中心在NASA的阿爾忒彌斯計劃中扮演核心角色，負責開發太空發射系統(SLS)火箭和人類登陸系統，並將在先進推進、核能及深空探索系統方面發揮關鍵作用。
+Cash的領導力將確保中心在未來火星任務中持續創新，鞏固其作為推進技術卓越中心的地位。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Stephen Cash過去在NASA及航太產業有何重要經歷？</summary>
+    <p>Cash於1982年在Marshall中心開始其NASA職業生涯，曾擔任太空梭推進辦公室經理，監督關鍵推進系統。退休後，他在Axient擔任先進太空系統副總裁，並於2024年入選阿拉巴馬工程名人堂，表彰其在工程和國家太空計畫的貢獻。</p>
+  </details>
+  
+  <details>
+    <summary>馬歇爾太空飛行中心在NASA的阿爾忒彌斯計劃中扮演什麼具體角色？</summary>
+    <p>Marshall中心在阿爾忒彌斯計劃中扮演核心角色，包括開發NASA的太空發射系統（SLS）火箭，以及管理人類登陸系統計劃。這些是實現月球持續探索和未來火星任務的關鍵能力，中心還提供其他支持深空探索的技術。</p>
+  </details>
+  
+  <details>
+    <summary>Marshall中心在Stephen Cash的領導下，未來在太空探索領域有哪些新的發展重點？</summary>
+    <p>在Stephen Cash的領導下，Marshall中心將繼續加強其在製造、結構負載和動力學以及推進能力方面的專業知識，這些是NASA探索企業的基礎。未來，中心預計將在先進推進和核能領域扮演更關鍵的角色，特別是支持將人類送往火星的任務，以推動深空探索的發展。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-17-628aec087c-sans-s.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-names-stephen-cash-marshall-space-flight-center-director/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Artemis II Heat Shield After Splashdown</h3>
+  <p class="summary">美國海軍潛水員於2026年4月10日NASA Artemis II任務濺落後，拍攝了獵戶座飛船隔熱罩的水下影像。隨後數月，NASA對其熱防護系統進行了嚴格分析，以確認其在太空船重返地球大氣層時能有效保護船員及系統。分析結果證實隔熱罩表現符合預期，這對於未來的載人深空任務至關重要，保障了人類深空探索的安全性。
+- 任務時間：2026年4月10日濺落，後續數月分析。
+- 關鍵發現：隔熱罩成功保護了太空船和船員。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Artemis II任務的主要目標是什麼？</summary>
+    <p>Artemis II是NASA阿提米絲計畫中的首次載人飛行測試，其主要目標是載運太空人繞月飛行，測試獵戶座飛船和太空發射系統在深空環境下的性能和生命支持系統。</p>
+  </details>
+  
+  <details>
+    <summary>獵戶座飛船的隔熱罩為何如此重要？它在重返大氣層時扮演什麼角色？</summary>
+    <p>隔熱罩對於太空船及船員的安全至關重要，因為它能保護飛船免受重返地球大氣層時產生的高溫和高壓影響。在大氣層摩擦下，隔熱罩會承受數千度的高溫，有效耗散熱能以確保內部系統和太空人的安全。</p>
+  </details>
+  
+  <details>
+    <summary>隔熱罩成功通過測試，對阿提米絲計畫的後續任務有何意義？</summary>
+    <p>隔熱罩的成功確認為Artemis III及未來載人登月任務奠定了堅實基礎。它證明了獵戶座飛船的關鍵技術可行性，增強了NASA實現人類重返月球並最終前往火星目標的信心。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-17-1484a996e7-sans-s.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>I Am Artemis: Allison Mjoen</h3>
+  <p class="summary">NASA探索地面系統計畫營運經理Allison Mjoen，在位於佛羅里達州的甘迺迪太空中心擁有20年資歷，她為阿提米絲計畫（Artemis Program）的地面系統與營運做出了關鍵貢獻，該計畫旨在將人類再次送上月球。她負責協調發射前的整合計畫和獵戶座太空船的營運，對確保任務成功至關重要。Mjoen將其在太空梭與國際太空站計畫中的豐富經驗，應用於這項人類重返月球的遠大目標上，展現了專業成長與團隊合作的重要性。
+
+* 曾參與太空梭計畫與國際太空站計畫，累積了豐富的太空任務經驗。
+* 目前主要負責協調阿提米絲計畫中的地面營運，特別是助推器和獵戶座（Orion）太空船的處理。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>阿提米絲計畫（Artemis Program）的目標是什麼？</summary>
+    <p>阿提米絲計畫是NASA一項雄心勃勃的太空探索計畫，旨在將人類再次送上月球，並建立可持續的人類存在。該計畫的長期目標是為未來火星載人任務奠定基礎。它不僅是重返月球，更是為了「留下」。</p>
+  </details>
+  
+  <details>
+    <summary>Allison Mjoen在阿提米絲計畫中扮演什麼具體角色？</summary>
+    <p>Allison Mjoen擔任探索地面系統計畫的營運經理，主要職責是協調發射前地面營運工作。她特別專注於助推器和獵戶座（Orion）太空船的整合計畫及處理，確保所有系統在發射前能安全、正確地運作。她的工作涵蓋了太空船離線作業經理的職責，需要與多個團隊協調。</p>
+  </details>
+  
+  <details>
+    <summary>Allison Mjoen過去在NASA的經驗如何幫助她勝任目前的阿提米絲計畫工作？</summary>
+    <p>Mjoen在NASA的20年職業生涯中，曾為太空梭計畫擔任飛行組員系統工程師，後又為國際太空站計畫擔任酬載整合工程師。這些經驗讓她熟悉了複雜太空任務的各個層面，包括硬體整合、酬載配置與團隊協調。這些寶貴的知識和技能，對她目前在阿提米絲計畫中負責地面營運與整合工作至關重要，使她能有效應對挑戰。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-17-f1d3f2b84f-sans-s.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.nasa.gov/missions/station/i-am-artemis-allison-mjoen/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>He Wants AI Benchmarking To Be a Science, Not a Dark Art</h3>
+  <p class="summary">本文深入探討了AI基準測試作為衡量進步工具的根本缺陷。電腦科學家Moritz Hardt指出，儘管過去幾十年來，機器學習領域的基準測試意外地透過相對排名的穩定性推動了進步，但其絕對分數的有效性一直受到質疑。在大型語言模型（LLM）時代，由於模型可能針對特定基準進行「訓練作弊」或「優化」（benchmaxxed），這種「意外的可靠性」已不復存在，導致當前的基準測試體系陷入危機。
+Hardt建議，解決之道是將基準測試視為一種「高海拔訓練」：透過標準化模型在測試前的準備過程，可以重新建立排名的有效性，使基準測試再次成為可靠的進步指標，即使這仍然無法揭示模型運作的內在機制。
+
+* 歷史上，基準測試的進步依賴於模型排名的穩定性，而非絕對分數的精確性。
+* LLM時代，「訓練作弊」行為破壞了排名的可靠性，需要新的測試協議來確保公平性。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>傳統的AI基準測試是如何在本身存在缺陷的情況下，「意外地」推動機器學習的進步，而這又為何被視為一種「運氣」？</summary>
+    <p>儘管模型開發者因公開測試集而能「優化」模型，導致絕對分數不準確，但不同模型之間的相對排名卻出乎意料地穩定。這種穩定性使得基準測試能可靠地指示哪種模型表現更好，從而推動了進步，但由於這種現象缺乏堅實的理論基礎，因此被認為是一種「幸運」。</p>
+  </details>
+  
+  <details>
+    <summary>在大型語言模型（LLMs）的背景下，「訓練作弊」或「優化」（benchmaxxing）具體指的是什麼？為何它比過去的問題更能嚴重地破壞基準測試的可靠性？</summary>
+    <p>「訓練作弊」是指LLM開發者在模型發布前，利用已知的基準測試數據集進行額外的訓練或微調，以人工提高模型在這些特定測試上的表現。這比過去的問題更嚴重，因為LLM的訓練數據龐大且不透明，使得無法判斷模型是真正進步，還是僅僅是針對測試集進行了「死記硬背」，從而嚴重削弱了排名的真實性。</p>
+  </details>
+  
+  <details>
+    <summary>文中提出的AI模型「高海拔訓練」（altitude training）概念在實踐中會是什麼樣子？它將如何改善基準測試？</summary>
+    <p>AI模型的「高海拔訓練」意味著在進行基準測試前，所有參與測試的模型都必須遵循一套標準化的準備協議，例如允許它們在與基準測試相關的數據上進行有限的「預訓練」。這樣做的目的是確保所有模型都在公平的起跑線上，讓它們都能充分利用測試前的準備，從而恢復相對排名的有效性，即使這會讓絕對分數看起來被「膨脹」了。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="../article/2026-10-17-8d4656f002-sans-s.html">全文（約 8 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/he-wants-ai-benchmarking-to-be-a-science-not-a-dark-art-20261016/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>How to be a (Roman) man</h3>
+  <p class="summary">這篇文章探討了古羅馬男性氣概的複雜性與演變，特別透過西塞羅的生平與著作。文章指出，羅馬男性氣概不僅體現於戰場上的勇氣，更在於公民生活中，尤其透過雄辯術、公共服務及後期的哲學美德來展現。羅馬男性氣概需要刻意「表演」並符合嚴格的社會規範，其定義在當時即已不斷受到質疑與討論，這與現代社會有異曲同工之妙。最終，西塞羅的著作對後世精英對受過教育的男性氣概的理解產生了深遠影響。
+- 羅馬男性氣概從早期的「戰爭勇氣」（virtus）擴展到「穿長袍的公民成就」，如演說和治理。
+- 西塞羅在政治挫敗後，將男性氣概重新定義為透過哲學追求道德卓越和自我控制，以服務國家。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>文章中提及的「virtus」一詞，在古羅馬社會中其意義是如何隨著時間演變的？</summary>
+    <p>最初，「virtus」主要指戰場上的「勇氣」或「軍事英勇」。然而，隨著羅馬社會的發展，尤其是在西塞羅的時代，它的涵義擴展到公民領域的卓越表現，如公共演說和政治服務。在西塞羅晚年轉向哲學時，「virtus」進一步被理解為一種更廣泛的「道德美德」或「精神卓越」，強調自我控制與智慧。</p>
+  </details>
+  
+  <details>
+    <summary>羅馬精英男性為了展現其男性氣概，在公共場合中需要注意哪些「表演」細節？</summary>
+    <p>羅馬男性在公共場合需遵循嚴格的行為規範，包括著裝（如長袍的正確披掛）、言談風格（避免「陰柔」或過於粗糙）、手勢以及整體舉止。這些細節都受到社會的嚴密審視，任何「不當」的表現都可能被視為缺乏男性氣概而遭到批評。</p>
+  </details>
+  
+  <details>
+    <summary>西塞羅在個人與政治生涯遭遇挫折後，轉向哲學對他理解「成為一個男人」有何關鍵影響？</summary>
+    <p>西塞羅在政治流放和女兒去世的雙重打擊下，將重心轉向哲學，開始透過探討痛苦管理、自我控制及道德卓越來重新定義男性氣概。他認為在動盪的政治環境中，撰寫哲學著作也是一種服務國家的方式，展現了在逆境中鍛造 manhood 的新途徑。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-10-17-dc33c8a50b-sans-s.html">全文（約 16 分鐘）</a> ｜ <a href="https://aeon.co/essays/the-politics-of-masculinity-at-the-end-of-the-roman-republic">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>

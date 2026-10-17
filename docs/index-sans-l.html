@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 文摘 2026-10-16</title>
+<title>每日 AI 文摘 2026-10-17</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="f-sans z-large">
 <div class="page">
 <p class="prefs"><a href="index-sans-s.html">小</a><a href="index-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="index-l.html">切換為襯線</a></p>
 
-<h1>每日 AI 文摘 2026-10-16</h1>
+<h1>每日 AI 文摘 2026-10-17</h1>
 <p class="meta">
-2026-10-16
+2026-10-17
 
  ｜ <a href="archive/index-sans-l.html">存檔列表</a>
  ｜ <a href="deepread-sans-l.html">每日深讀</a>
@@ -24,7 +24,7 @@
 
 <div class="brief">
 <p class="brief-label">主編導讀</p>
-<p>今日全球焦點集中在烏克蘭恢復對俄羅斯能源設施的打擊，此舉不僅使地緣政治緊張升級，也凸顯了與盟友關係的微妙挑戰。在科技領域，Withings對基本服務收費引發消費者對數據主權與信任的質疑，促使更多人思考自行託管的重要性，同時也警示了自動化系統面臨的潛在威脅。此外，科學界正積極探索宇宙奧秘，如NASA升級太空站電力並規劃火星衛星任務，並觀測到歷史性的聖嬰現象，而關於死刑直播的倫理爭議則引發了對正義與人權的深思。</p>
+<p>今日新聞聚焦於科技發展的兩面性：一方面，人工智慧如Anthropic的Claude正深入軟體開發，大型語言模型的記憶機制也揭示其驚人潛力；但另一方面，AI基準測試面臨作弊挑戰，Home Assistant的隱私疑慮也提醒我們技術倫理不容忽視。同時，NASA的阿提米絲計畫在穩步推進深空探索，全球地緣政治卻因烏克蘭戰事中星鏈系統的限制，以及約旦河西岸不斷升級的定居者暴力而更趨複雜。奧勒岡校園槍擊案的英勇事蹟與對古羅馬男性氣概的歷史反思，則為今日新聞增添了社會與人文的深度。</p>
 </div>
 
 
@@ -34,369 +34,340 @@
 <h2>科技 Tech</h2>
 
 <article>
-  <h3>New Withings Users Must Pay $99/Year for Apple Health Syncing</h3>
-  <p class="summary">Withings 宣布自 2026 年 10 月 13 日起，任何新註冊的帳戶必須支付每年 99.99 美元的 Withings+ 訂閱費用，才能將其健康數據同步到 Apple Health。這項變動將過去一直免費且普遍的功能鎖定在付費牆後，被消費者批評為「反消費者」的「圈錢」行為，破壞了對品牌的信任，因為數據同步到 Apple Health 本質上是一個簡單的本地 API 調用，並不需要複雜的雲端或 AI 技術。
-- 主要影響：新 Withings 帳戶將無法免費自動同步數據至 Apple Health。
-- 消費者反應：多數人認為這是 Withings 品牌的「圈錢」行為，破壞了使用者信任。</p>
+  <h3>How the Claude Code team does code review</h3>
+  <p class="summary">Anthropic 的 Claude Code 團隊已徹底改革其程式碼審查流程，以應對 AI 生成程式碼的龐大數量。從六月到九月，儘管合併的拉取請求數量翻倍，但被還原的比例卻下降了超過 40%，這表明他們成功地優化了人類審查時間，同時不增加錯誤或事件。現在，大部分程式碼審查工作在拉取請求開啟前由機器持續進行，並由 Claude 處理例行性錯誤，使人類工程師能夠專注於更高層次的挑戰和獨特問題。
+
+*關鍵點：*
+- Claude 負責生成約 90% 的程式碼，並在審查中執行初步的錯誤修復。
+- 團隊的目標是減少每次更改所需的人工時間，同時維持或降低程式碼回溯率和事件發生率。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>為什麼 Withings 聲稱這項收費是必要的？</summary>
-    <p>Withings 客戶服務聲稱此舉是為了新的「隱私措施」和「AI 連接器」。然而，文章作者指出，將數據寫入 Apple Health 僅需透過 HealthKit 進行本機 API 調用，並不需要複雜的雲端運算或任何 AI 技術。</p>
+    <summary>鑑於 Claude 程式碼團隊中的 AI 撰寫了約 90% 的程式碼，他們如何確保這些 AI 生成的程式碼在人工審查之前就具有高品質？</summary>
+    <p>團隊讓 Claude 在程式碼提交為拉取請求之前進行驗證，例如運行測試、建構或比較螢幕截圖。此外，Claude 在早期階段就透過子代理審查差異並修正錯誤，大幅減少了人類需關注的例行性問題。</p>
   </details>
   
   <details>
-    <summary>舊的 Withings 用戶是否也會受到影響？</summary>
-    <p>根據文章內容，此變動僅適用於自 2026 年 10 月 13 日起創建的「新 Withings 帳戶」。現有的 Withings 用戶應該不受此限制的影響。</p>
+    <summary>在這種優化的人工智慧輔助程式碼審查流程下，人類工程師在程式碼審查中的最終角色或目標是什麼？</summary>
+    <p>最終目標是讓大多數拉取請求在只有一名人類參與（可以是作者本人）的情況下合併，且不會增加程式碼回溯率或事件發生率。人類工程師的角色被保留用於解決只有人類才能處理的獨特、高層次問題和新型挑戰。</p>
   </details>
   
   <details>
-    <summary>除了付費訂閱，還有其他方法將數據導出到 Apple Health 嗎？</summary>
-    <p>文章提到用戶仍然可以手動導出 CSV 檔案，但作者認為在 2026 年，手動導入 CSV 檔案並不實際。市面上許多最便宜的無名智慧秤都能免費提供自動 Apple Health 同步功能。</p>
+    <summary>團隊如何衡量和確保減少人工審查時間不會導致程式碼品質下降或問題增加？</summary>
+    <p>團隊透過追蹤每次拉取請求的人工審批次數、人工評論和拉取請求等待人工處理的時間來衡量人工時間。同時，程式碼回溯率和事件發生率被視為「護欄」指標；如果這些比率上升，則表示團隊並未真正節省人工時間，只是將問題轉移了。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-10-16-6327bf4d20-sans-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-10-17-9a73944324-sans-l.html">全文（約 12 分鐘）</a> ｜ <a href="https://claude.dev/blog/solving-code-review-at-anthropic/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>What I Self-Host</h3>
-  <p class="summary">在2026年10月10日，一位作者在viceconsole.fyi部落格上發表了一篇名為「我自行託管了什麼」的文章，詳細介紹了他們選擇自行託管而非依賴第三方供應商的各種網路服務。這篇文章對於那些關心個人數據隱私、渴望技術自主性及優化數位生活體驗的讀者來說深具參考價值。
-關鍵重點：
-- 透過自建服務實現數據主權與增強安全性。
-- 涵蓋了多種常見應用，如雲儲存、媒體伺服器等。
-- 強調了開源和高度客製化的優勢。</p>
+  <h3>I never authorized an integration that scans my secrets</h3>
+  <p class="summary">一名 Home Assistant (HA) 使用者於 2026 年 10 月 16 日在 GitHub 專案中提交了一項問題，指稱未經授權的秘密掃描功能侵犯了隱私，並質疑其安全性。HA 團隊澄清此密碼檢查功能已存在多年，會先在本地將密碼雜湊化，僅將雜湊值的前五個字元發送給 Have I Been Pwned (HIBP) 服務進行比對，且完整的秘密資料不會離開使用者系統。
+儘管初期回應較為輕視，團隊隨後致歉並確認此功能可透過 `ha security options --pwned=false` 指令關閉，並承諾將更新相關說明文件。
+*   HA 的 Supervisor 長期以來內建密碼洩漏檢查功能。
+*   檢查過程在本地完成，僅傳送雜湊值部分到 HIBP 進行初步篩選。
+*   使用者可透過 CLI 指令選擇停用此功能。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>什麼是「自行託管」（Self-Hosting）？人們為何會選擇這種方式？</summary>
-    <p>「自行託管」是指個人或組織在其自己的硬體上運行和管理網路服務，而不是使用第三方供應商的雲端服務。人們選擇自行託管通常是為了更好地控制數據隱私、增強安全性、享受更大的客製化彈性，並學習相關技術。</p>
+    <summary>使用者為何會突然注意到 Home Assistant 的密碼掃描功能？</summary>
+    <p>因為最近的一次版本更新修正了一個相關的警告訊息顯示問題，使得這個多年來已存在於 Supervisor 中的功能變得更明顯，才讓使用者首次察覺到它的存在。</p>
   </details>
   
   <details>
-    <summary>自行託管有哪些主要的挑戰或潛在缺點？</summary>
-    <p>自行託管主要的挑戰包括初始設置的複雜性、持續的維護工作（如系統更新、安全補丁）、需要一定的技術知識、以及確保網路連接和電源的穩定性。此外，家庭網路的頻寬和電力成本也可能是考量因素。</p>
+    <summary>Home Assistant 如何確保使用者密碼的隱私，即使它與 Have I Been Pwned 服務整合？</summary>
+    <p>Home Assistant 的 Supervisor 會在本地端對密碼進行雜湊處理，然後僅將 SHA-1 雜湊值的前五個字元發送給 Have I Been Pwned 服務。匹配過程也在使用者本機實例上進行，確保完整的秘密資料不會離開系統，從而維護隱私。</p>
   </details>
   
   <details>
-    <summary>人們通常會自行託管哪些常見的服務或應用程式？</summary>
-    <p>人們經常自行託管的服務包括個人雲儲存（如Nextcloud）、媒體伺服器（如Plex或Jellyfin）、密碼管理器、筆記應用、VPN服務、部落格平台以及智慧家庭自動化系統等。這些服務能讓用戶在自己的掌控下管理數位生活。</p>
+    <summary>如果使用者不希望 Home Assistant 執行密碼掃描，他們該如何關閉這項功能？</summary>
+    <p>使用者可以透過執行指令 `ha security options --pwned=false` 來關閉此功能。Home Assistant 團隊也承諾將會更新相關文件，以明確說明此功能及其關閉方式。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-10-16-cce7776caf-sans-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-10-17-70d10452e1-sans-l.html">全文（約 5 分鐘）</a> ｜ <a href="https://github.com/home-assistant/home-assistant.io/issues/49314">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Someone on Torrent Sites Kept Fucking with My Sonarr</h3>
-  <p class="summary">一位 Sonarr 用戶發現其自動化媒體管理系統持續受到公共種子網站上的惡意行為干擾。不知名的實體更改了種子的標題，導致 Sonarr 下載了錯誤的電視節目集數和季節，嚴重擾亂了用戶的媒體庫管理。這揭示了自動化媒體管理系統對元數據信任的潛在漏洞，並促使用戶開發了自定義解決方案來驗證種子內容，以抵禦這種「巨魔」行為。
-關鍵點：
-- 攻擊者透過惡意重新標記種子名稱來欺騙 Sonarr 系統。
-- 用戶透過轉向私有追蹤器和開發自定義驗證腳本來解決問題。</p>
+  <h3>You could have invented transformers from memory</h3>
+  <p class="summary">這篇文章深入探討了大型語言模型如何儲存與回想資訊，將其類比為不同類型的記憶儲存庫。作者透過直觀的方式，將線性層、多層感知器 (MLP) 及自注意力機制（轉換器模型的核心）視為記憶儲存演進的三個階段。文章指出，隨著記憶儲存模型從線性層演進到自注意力機制，其記憶容量和資訊回想能力大幅提升，同時有效降低了記憶間的干擾。
+- 關鍵衡量指標：訊號干擾比 (interference-to-signal ratio)
+- 記憶容量演進：從約 64 個記憶（線性層），到約 2,700 個（MLP），再到超過一百萬個（自注意力機制）。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>Sonarr 是什麼？它與 torrent（種子）有何關聯？</summary>
-    <p>Sonarr 是一款開源的 PVR（個人錄影機）應用程式，專門用於自動化管理電視節目的下載。它會自動監控 RSS 訂閱或索引站點，尋找新劇集，並與 torrent 客戶端整合以自動下載並將文件組織到適當的目錄中。</p>
+    <summary>摘要中提及的「訊號干擾比」是什麼？它在記憶儲存庫的脈絡中為何如此重要？</summary>
+    <p>訊號干擾比衡量的是在回憶特定資訊時，其他記憶造成的干擾程度。這個指標對於評估記憶儲存庫的效率至關重要，因為當干擾與所需訊號一樣大時，記憶儲存庫便達到其容量極限，難以有效回想資訊。</p>
   </details>
   
   <details>
-    <summary>這些在種子網站上進行惡意操縱的動機是什麼？</summary>
-    <p>文章指出，動機可能包括惡作劇、網路釣魚（trolling）、試圖注入自己團隊的發行版，或者單純是為了擾亂依賴這些自動化系統的用戶。這種行為雖然沒有直接的經濟利益，但卻能對受害者造成顯著的不便。</p>
+    <summary>文章提到自注意力機制能儲存「潛在無限」或「超過一百萬個」記憶，它是如何超越線性層和MLP的？</summary>
+    <p>自注意力機制透過其獨特的「門控」機制來實現。與線性層或MLP將所有儲存記憶的相似度加權求和不同，自注意力機制會讓每個查詢選擇「最佳」匹配，有效隔離所需記憶並大幅降低來自其他記憶的干擾，從而顯著提高了其記憶容量和回想精確度。</p>
   </details>
   
   <details>
-    <summary>其他 Sonarr 用戶如何保護自己免受類似攻擊？</summary>
-    <p>其他用戶可以採取多種保護措施，例如使用私有種子追蹤器以獲得更可靠的種子來源、設定更精確的搜尋過濾條件、仔細檢查下載文件的哈希值，或者像文章作者一樣開發自定義腳本來在 Sonarr 處理文件之前進行額外驗證。這有助於確保自動下載的內容是正確且沒有被篡改的。</p>
+    <summary>文章結尾提到理解機器記憶或許能幫助理解人類記憶，這有什麼深層的意義？</summary>
+    <p>這意味著儘管文章側重於機器記憶的計算原理，但其提出的關於管理干擾、有效儲存與檢索資訊的觀點，可能與生物記憶系統的運作方式存在共通之處。這種跨領域的類比，或許能為認知科學和人類記憶研究帶來新的啟發。</p>
   </details>
   
   </div>
   
-  <p class="source">Hacker News ｜ <a href="article/2026-10-16-32a34d9916-sans-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup">原文網頁</a></p>
+  <p class="source">Hacker News ｜ <a href="article/2026-10-17-7f14563d8d-sans-l.html">全文（約 22 分鐘）</a> ｜ <a href="https://alexwang.ai/posts/associative-memory/">原文網頁</a></p>
 </article>
 
 
 <h2>國際 World</h2>
 
 <article>
-  <h3>Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume</h3>
-  <p class="summary">在美國要求暫停後，烏克蘭已恢復對俄羅斯能源基礎設施的打擊，俄羅斯指責基輔於週四襲擊了莫斯科附近的一座煉油廠。烏克蘭總統澤倫斯基表示，由於俄羅斯持續大規模襲擊烏克蘭城市和能源設施，因此停止了為期三天的打擊限制。澤倫斯基還表示對美國感到背叛，指責華盛頓撤回情報共享並限制星鏈衛星服務，以施壓烏克蘭停止攻擊，此舉遭到歐洲領導人的批評，導致美烏關係緊張，並預示著衝突可能進一步升級。
+  <h3>Inside Ukrainian offensive pushing Russia back - with Starlink playing a key role</h3>
+  <p class="summary">烏克蘭軍隊近日成功完成了代號為「韋瓦第行動」(Operation Vivaldi) 的反攻，在東部頓巴斯地區解放了277平方公里領土，有效阻止了俄羅斯的鉗形攻勢，並據稱造成俄軍8,000人傷亡。此次行動確保了有利的戰略位置，為未來進一步的軍事行動奠定基礎。然而，美國星鏈（Starlink）軍用版「星盾」（Starshield）系統在行動期間突遭限制，引發了烏克蘭對關鍵技術依賴性的擔憂。儘管烏克蘭與華盛頓之間出現外交摩擦，前線士兵的士氣依然高昂，對贏得戰爭充滿信心。
 
-*   美國曾要求烏克蘭暫停對俄羅斯能源基礎設施的打擊，以換取能源停火協議。
-*   澤倫斯基總統指控美國撤回情報共享並限制星鏈服務，以施壓烏克蘭停止攻擊。</p>
+- 星鏈系統在烏克蘭的空戰及指揮通訊中扮演關鍵角色，但其突如其來的限制對烏軍能力產生了影響。
+- 此次行動對俄羅斯的入侵造成了重大挫折，但烏克蘭仍面臨複雜的戰場形勢和外部支持的不確定性。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>美國為何要求烏克蘭暫停對俄羅斯能源設施的打擊？</summary>
-    <p>根據文章，美國總統曾提出「能源停火」協議，可能希望藉此穩定全球燃料價格。澤倫斯基也批評美國與俄羅斯達成石油交易，認為這實際上是資助俄羅斯戰爭的行為。</p>
+    <summary>韋瓦第行動的主要目標是什麼？這次行動取得了哪些具體成果？</summary>
+    <p>韋瓦第行動的主要目標是阻止俄羅斯在頓巴斯東部地區包圍烏克蘭控制的關鍵城市，並收復失地。行動成功解放了277平方公里的領土，瓦解了俄軍的鉗形攻勢，並為烏克蘭後續的軍事行動奠定了有利的戰略基礎。</p>
   </details>
   
   <details>
-    <summary>美國限制對烏克蘭的情報共享和星鏈服務會帶來什麼影響？</summary>
-    <p>文章指出，烏克蘭軍隊依賴美國的預警系統來防禦俄羅斯空襲，並利用星鏈服務引導無人機和保護領空。義大利國防部長認為此舉是「徹底的錯誤」，將剝奪烏克蘭自我防衛的機會，並可能讓普丁認為有機會獲勝而繼續戰爭。</p>
+    <summary>星鏈系統對烏克蘭軍方的作戰能力有多重要？其使用限制可能帶來什麼影響？</summary>
+    <p>星鏈系統的軍用版「星盾」對烏克蘭在戰場上的寬頻通訊至關重要，尤其在攔截機和中程打擊無人機的操作中扮演關鍵角色。其使用限制可能會削弱烏克蘭的空中偵察與打擊能力，並對烏軍整體協同作戰構成挑戰，引發對技術依賴性的深切擔憂。</p>
   </details>
   
   <details>
-    <summary>烏克蘭總統澤倫斯基為何感覺受到美國的背叛？</summary>
-    <p>澤倫斯基表示，美國官員告知烏克蘭，如果不停止打擊，美國將阻止情報共享。此外，美國與俄羅斯達成釋放30萬噸柴油的協議，澤倫斯基認為這是在資助俄羅斯的戰爭努力，加劇了他的背叛感。</p>
+    <summary>文章提到烏克蘭與華盛頓之間關係緊張，具體指哪些方面？這對烏克蘭有何潛在影響？</summary>
+    <p>文章指出，烏克蘭總統澤倫斯基感到被川普「背叛」，而川普則表示他「不是」澤倫斯基的「粉絲」，並聲稱烏克蘭襲擊俄羅斯煉油廠導致油價上漲。這些外交分歧可能影響美國未來對烏克蘭的軍事和財政援助水平，進而對烏克蘭的長期抗戰造成不確定性。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-10-16-98fb856ff2-sans-l.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-10-17-acc3dc264d-sans-l.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cvx284w16z1po?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Bus hits train stopped on French side of Channel Tunnel, with 19 injured</h3>
-  <p class="summary">週四傍晚，一輛載有卡車司機的巴士在加萊附近英吉利海峽隧道的法國裝載平台撞上了一列靜止的貨運列車。此次事件造成19人受傷，其中巴士司機和一名乘客傷勢嚴重，但均無生命危險。
-雖然事故導致短暫停運以疏散傷員，但歐洲之星客運和貨運交通並未受到嚴重影響。當局已展開調查，這被當地官員稱為歐洲隧道裝載平台首次發生此類事件。
-
-* 事故造成19人受傷，其中兩人重傷，但無生命危險。
-* 歐洲之星和貨運服務未受長期影響。</p>
+  <h3>Oregon teacher fought school attacker before armed dad shot suspect 'multiple times'</h3>
+  <p class="summary">週四，奧勒岡州班德市的銀軌小學發生校園槍擊案，一名16歲的前學生開槍，造成四人死亡、兩人受傷。一名教師英勇地與槍手搏鬥，隨後一位名叫Kaylub Giamanco的武裝父親目睹襲擊後進入學校，開槍擊斃了嫌犯，阻止了更多傷亡。警方讚揚他們的英勇行為幾乎肯定避免了更多流血事件。
+* 槍手是一名16歲的前學生，攜帶約44發散彈槍子彈。
+* 介入的父親是該校學生的家長，他合法持有並攜帶槍枝。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>英吉利海峽隧道（Channel Tunnel）主要提供哪些服務？</summary>
-    <p>英吉利海峽隧道連接英國和法國，主要提供三種鐵路服務：載客的歐洲之星列車（Eurostar）、運輸貨物的貨運列車，以及載運車輛的穿梭列車（Le Shuttle）。</p>
+    <summary>槍手Griffin J. John II的犯案動機為何？他有何背景？</summary>
+    <p>警方表示，16歲的槍手Griffin J. John II曾是該校的特殊教育學生，但其確切的犯案動機仍在調查中，目前尚不清楚。警方已對其住家進行搜查。</p>
   </details>
   
   <details>
-    <summary>此次事件對英吉利海峽隧道的安全或營運有何影響？</summary>
-    <p>雖然這次事件造成人員受傷，且是裝載平台首次發生此類事故，但官方表示歐洲之星客運和貨運服務未受長期影響。當局已展開調查，預計將檢視裝載平台的安全規程，以防止未來再發生類似事件。</p>
+    <summary>介入的父親Kaylub Giamanco在法律上是否會面臨任何問題，或此類行為在美國有何法律規範？</summary>
+    <p>Kaylub Giamanco合法持有並攜帶槍枝，他在目睹槍擊案後，為阻止更多傷亡而開槍擊斃了嫌犯。警方讚揚其英雄行為，總統川普也稱其為「偉大的英雄」，因此他預計不會面臨法律問題，反而是受表彰的對象。美國許多州允許公民在特定條件下合法持槍並在自衛或保護他人時使用。</p>
   </details>
   
   <details>
-    <summary>事故中涉及的巴士與列車具體是什麼類型？</summary>
-    <p>事故涉及一輛載運準備搭乘Le Shuttle服務的卡車司機（或稱工作人員）的迷你巴士。它撞上了一列正在裝載重型貨物準備穿越海峽的靜止貨運列車。</p>
+    <summary>事件發生後，社區對此事件及Kaylub Giamanco的英雄行為有何反應？</summary>
+    <p>警方和奧勒岡州州長科泰克皆讚揚Kaylub Giamanco的英勇行為阻止了更多生命損失，但科泰克也指出這種行為會帶來沉重的情感負擔。Giamanco的家人表示他不是在尋求認可，並向急救人員、學校人員和社區表達感謝，同時也請求外界給予隱私。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-10-16-00114a70b3-sans-l.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c6wyrnmgzn01o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-10-17-8d691fdb10-sans-l.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Trump calls off livestream of Fort Hood attacker's execution by firing squad</h3>
-  <p class="summary">美國前總統川普已取消直播2009年胡德堡基地槍擊案兇手尼達爾·哈桑的處決計畫，該處決將於2026年12月3日以槍決方式進行，這將是美國60多年來的首次軍事處決。儘管川普最初批准此舉，但在美國國內外廣泛批評下（包括聯合國的譴責），他撤回了直播決定，儘管他曾認為直播可能具震懾作用。受害者家屬仍可親身到場觀看處決，但直播風波已對軍事司法系統留下污點。
-* 尼達爾·哈桑在2009年胡德堡基地開槍殺害13人並造成32人受傷，是美國軍事基地最致命的非戰鬥攻擊事件。
-* 處決直播計畫因違反軍隊規定且引發人權爭議而飽受抨擊，且哈桑本身是胸部以下癱瘓者。</p>
+  <h3>Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack</h3>
+  <p class="summary">近期在被佔領的約旦河西岸，數十名蒙面以色列定居者於年度橄欖收成期間襲擊巴勒斯坦農民，焚燒車輛與橄欖樹，造成至少12名巴勒斯坦人受傷，其中包括四名巴勒斯坦裔美國公民。一名華盛頓郵報記者也在報導過程中遭到圍攻受傷。這些攻擊事件是日益加劇的定居者暴力模式的一部分，聯合國報告指出，今年收成季的襲擊次數已超過去年總和，反映出以色列親定居點政策的影響。
+關鍵重點：
+* 襲擊事件發生在巴勒斯坦村莊Abu Falah附近，當地定居點和非法前哨站不斷擴張。
+* 美國國務院譴責此類暴力，並呼籲進行調查與起訴。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>尼達爾·哈桑為何被處決？胡德堡基地襲擊事件有何重大意義？</summary>
-    <p>尼達爾·哈桑因在2009年胡德堡基地開槍，造成13名手無寸鐵的美國軍事人員死亡、32人受傷而被判處死刑。這起事件是美國軍事基地歷史上最致命的非戰鬥攻擊，對美國國防安全造成了深遠影響。</p>
+    <summary>這些攻擊為何特別發生在橄欖收成期間？</summary>
+    <p>橄欖收成不僅是巴勒斯坦家庭的重要生計來源，也被視為他們對土地所有權的聲明。對定居者而言，此舉是向巴勒斯坦人施壓，阻止他們耕種土地，並以此推動以色列對這些土地的主張，加劇了該地區的緊張局勢。</p>
   </details>
   
   <details>
-    <summary>廣泛批評處決直播的主要原因是什麼？川普最終為何會撤銷其直播決定？</summary>
-    <p>批評主要來自人權團體和國際社會，他們認為公開處決「令人憎惡」且可能違反軍隊規定。儘管川普最初認為直播能起震懾作用，但他最終表示「許多善良且用意良好的人不希望看到他死去」，並可能受到內部顧問和法律因素的影響而取消直播。</p>
+    <summary>以色列在約旦河西岸的定居點和前哨站的國際法律地位為何？</summary>
+    <p>根據國際法，所有以色列定居點均屬非法。此外，小型的前哨站即使在以色列法律下也是非法的，但文章指出，其中許多前哨站仍獲得國家支持，這進一步複雜化了該地區的法律與政治問題。</p>
   </details>
   
   <details>
-    <summary>除了是軍事處決外，尼達爾·哈桑的處決還有哪些不尋常之處？這對美國軍事司法系統可能產生什麼長期影響？</summary>
-    <p>哈桑的處決是美國60多年來的首次軍事處決。此外，他因槍擊導致胸部以下癱瘓，而川普在批准直播計畫時據稱並不知情。其律師指出，這起直播風波已對軍事司法系統造成了永久性的污點。</p>
+    <summary>以色列政府對這些定居者襲擊事件有何立場或回應？</summary>
+    <p>儘管有影像證據和證詞，以色列總理辦公室表示事實仍不明確且正在調查中。以色列國防軍(IDF)則稱已派員處理「暴力衝突報告」，並會審查所有情況。然而，文章指出，以色列軍隊常以向巴勒斯坦農田發射催淚瓦斯來結束衝突，這是一種管理這些衝突的慣用模式，且政府被描述為「強烈親定居點」。</p>
   </details>
   
   </div>
   
-  <p class="source">BBC World News ｜ <a href="article/2026-10-16-4732b5d0bc-sans-l.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/crx23qlnj27qo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+  <p class="source">BBC World News ｜ <a href="article/2026-10-17-363fbc099b-sans-l.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
 </article>
 
 
 <h2>科學 Science</h2>
 
 <article>
-  <h3>NASA Satellites Observe Historic 2026 El Niño</h3>
-  <p class="summary">美國國家航空暨太空總署（NASA）正密切監測一場自1950年以來最強烈的聖嬰現象，此現象於2026年秋季在赤道太平洋地區展開，並已被衛星觀測到顯著變化。科學家透過追蹤暖水開爾文波、海平面上升、海面溫度升高及海洋顏色變化等跡象，指出這將對全球天氣模式、農業、消防和沿海社區產生深遠影響。此次聖嬰現象被視為歷史性的事件，比日食更罕見，比單一風暴系統更強大。
-* 美國國家海洋暨大氣總署（NOAA）預測，此次聖嬰現象有83%的機率為自1950年以來最強。
-* 其主要影響包括擾亂貿易風、重新分配海洋熱量、改變降雨模式，並透過影響浮游植物而波及海洋食物網。</p>
+  <h3>NASA Names Stephen Cash Marshall Space Flight Center Director</h3>
+  <p class="summary">NASA局長Jared Isaacman已任命資深工程師Stephen Cash為亨茨維爾馬歇爾太空飛行中心主任，自10月19日（週一）起生效。Cash在該中心開啟其超過四十年的職業生涯，此次回歸將領導該中心在推進、太空系統、科學研究和技術開發方面的廣泛任務。
+此任命至關重要，因Marshall中心在NASA的阿爾忒彌斯計劃中扮演核心角色，負責開發太空發射系統(SLS)火箭和人類登陸系統，並將在先進推進、核能及深空探索系統方面發揮關鍵作用。
+Cash的領導力將確保中心在未來火星任務中持續創新，鞏固其作為推進技術卓越中心的地位。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>聖嬰現象是如何透過「開爾文波」啟動的？</summary>
-    <p>開爾文波是從西太平洋 Micronesia 附近出現的慢速移動暖水脈衝。這些波浪將熱量從西向東穿越太平洋，加熱其上方的空氣。這會削弱甚至逆轉通常從美洲吹向亞洲的貿易風，導致東太平洋海平面進一步上升和水溫升高，從而引發聖嬰現象的連鎖反應。</p>
+    <summary>Stephen Cash過去在NASA及航太產業有何重要經歷？</summary>
+    <p>Cash於1982年在Marshall中心開始其NASA職業生涯，曾擔任太空梭推進辦公室經理，監督關鍵推進系統。退休後，他在Axient擔任先進太空系統副總裁，並於2024年入選阿拉巴馬工程名人堂，表彰其在工程和國家太空計畫的貢獻。</p>
   </details>
   
   <details>
-    <summary>除了影響全球天氣模式外，NASA的衛星還觀察到聖嬰現象帶來哪些具體的環境變化？</summary>
-    <p>NASA衛星觀察到多項具體變化。這包括東太平洋海平面因暖水膨脹而上升約30-40公分，而印尼和澳洲北部海平面則下降15-20公分。此外，海洋顏色也變得更藍，這是由於聖嬰現象導致營養物質供應減少，使得浮游植物數量下降所致，進而影響海洋食物鏈。</p>
+    <summary>馬歇爾太空飛行中心在NASA的阿爾忒彌斯計劃中扮演什麼具體角色？</summary>
+    <p>Marshall中心在阿爾忒彌斯計劃中扮演核心角色，包括開發NASA的太空發射系統（SLS）火箭，以及管理人類登陸系統計劃。這些是實現月球持續探索和未來火星任務的關鍵能力，中心還提供其他支持深空探索的技術。</p>
   </details>
   
   <details>
-    <summary>NASA如何利用衛星技術監測聖嬰現象，以及2026年的觀測有何特別之處？</summary>
-    <p>NASA自1993年以來便利用衛星測高儀精確追蹤海面高度，現今由 Sentinel-6 衛星繼續提供數據。此外，微波和紅外輻射計衛星測量海面溫度。2026年的觀測特別之處在於，2024年發射的 PACE 衛星首次在此次聖嬰期間運作，它能提供超光譜海洋顏色數據，精確監測浮游植物的變化。</p>
+    <summary>Marshall中心在Stephen Cash的領導下，未來在太空探索領域有哪些新的發展重點？</summary>
+    <p>在Stephen Cash的領導下，Marshall中心將繼續加強其在製造、結構負載和動力學以及推進能力方面的專業知識，這些是NASA探索企業的基礎。未來，中心預計將在先進推進和核能領域扮演更關鍵的角色，特別是支持將人類送往火星的任務，以推動深空探索的發展。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-16-b4fa6a814a-sans-l.html">全文（約 5 分鐘）</a> ｜ <a href="https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-17-628aec087c-sans-l.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-names-stephen-cash-marshall-space-flight-center-director/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>Power Up: Roll Out Solar Arrays Boost Space Station Power Supply</h3>
-  <p class="summary">NASA在國際太空站（ISS）上全面升級了其電力系統，透過安裝八個下一代「國際太空站捲式太陽能電池陣列」（IROSAs），顯著提升了太空站的發電能力。這些IROSAs於2021年至2023年間陸續部署，並在2023年完成了最後一批的發射與安裝，使其總發電量增加了超過160千瓦。這項升級對於支援太空站的生命維持系統、日常運作以及數百項科學研究至關重要，同時也為地球上的生活帶來改善，並為未來的人類深空探索奠定基礎。
-* IROSAs設計輕巧緊湊，展開時如瑜伽墊般，每個可產生約28千瓦的額外電力。
-* 新系統支援NASA在近地軌道的遺產任務，並推動超越地球軌道探索所需技術的發展。</p>
+  <h3>Artemis II Heat Shield After Splashdown</h3>
+  <p class="summary">美國海軍潛水員於2026年4月10日NASA Artemis II任務濺落後，拍攝了獵戶座飛船隔熱罩的水下影像。隨後數月，NASA對其熱防護系統進行了嚴格分析，以確認其在太空船重返地球大氣層時能有效保護船員及系統。分析結果證實隔熱罩表現符合預期，這對於未來的載人深空任務至關重要，保障了人類深空探索的安全性。
+- 任務時間：2026年4月10日濺落，後續數月分析。
+- 關鍵發現：隔熱罩成功保護了太空船和船員。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>國際太空站捲式太陽能電池陣列（IROSAs）與太空站原有的太陽能陣列相比，在設計和效率上有何主要區別？</summary>
-    <p>IROSAs的設計更加輕巧緊湊，發射時呈圓柱形，安裝後可像瑜伽墊般自動展開。儘管尺寸約為舊陣列的一半，但每個IROSAs仍能產生約28千瓦的額外電力，顯著提升了太空站的整體發電效率。</p>
+    <summary>Artemis II任務的主要目標是什麼？</summary>
+    <p>Artemis II是NASA阿提米絲計畫中的首次載人飛行測試，其主要目標是載運太空人繞月飛行，測試獵戶座飛船和太空發射系統在深空環境下的性能和生命支持系統。</p>
   </details>
   
   <details>
-    <summary>這次電力系統升級將如何具體支持太空站上的研究工作，以及對NASA未來的深空探索任務有何重要意義？</summary>
-    <p>增加的電力將支援數百項科學研究，包括生命維持系統的運作和日常活動。對於NASA的深空探索，國際太空站將作為關鍵的試驗平台，測試例如行星防禦和載人火星任務所需的先進技術。</p>
+    <summary>獵戶座飛船的隔熱罩為何如此重要？它在重返大氣層時扮演什麼角色？</summary>
+    <p>隔熱罩對於太空船及船員的安全至關重要，因為它能保護飛船免受重返地球大氣層時產生的高溫和高壓影響。在大氣層摩擦下，隔熱罩會承受數千度的高溫，有效耗散熱能以確保內部系統和太空人的安全。</p>
   </details>
   
   <details>
-    <summary>這些先進的國際太空站捲式太陽能電池陣列（IROSAs）是由哪家公司負責設計和製造的？</summary>
-    <p>IROSAs是由Redwire公司根據與波音公司（Boeing）的合約所設計、製造和測試的。隨後的發射則由SpaceX的龍飛船（Dragon spacecraft）執行，將其運送至國際太空站。</p>
+    <summary>隔熱罩成功通過測試，對阿提米絲計畫的後續任務有何意義？</summary>
+    <p>隔熱罩的成功確認為Artemis III及未來載人登月任務奠定了堅實基礎。它證明了獵戶座飛船的關鍵技術可行性，增強了NASA實現人類重返月球並最終前往火星目標的信心。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-16-c6b6d28e28-sans-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/missions/station/iss-research/power-up-roll-out-solar-arrays-boost-space-station-power-supply/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-17-1484a996e7-sans-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>NASA to Help Unlock Mysteries of Mars’ Moons in Upcoming Mission</h3>
-  <p class="summary">NASA正與JAXA合作執行「火星衛星探索任務」（MMX），該任務預計於10月19日（美東時間）從日本發射，目標是探測火星的兩顆衛星火衛一（Phobos）和火衛二（Deimos），並將火衛一的樣本於2031年送回地球。此次任務旨在闡明這些衛星的起源，並藉此揭示太陽系的早期歷史，這對於NASA未來載人火星任務至關重要。
-* MMX將調查火星衛星的起源，並將火衛一的樣本帶回地球。
-* NASA提供重要的科學儀器、取樣技術與通訊支援，並將策劃部分返回樣本，對任務貢獻良多。</p>
+  <h3>I Am Artemis: Allison Mjoen</h3>
+  <p class="summary">NASA探索地面系統計畫營運經理Allison Mjoen，在位於佛羅里達州的甘迺迪太空中心擁有20年資歷，她為阿提米絲計畫（Artemis Program）的地面系統與營運做出了關鍵貢獻，該計畫旨在將人類再次送上月球。她負責協調發射前的整合計畫和獵戶座太空船的營運，對確保任務成功至關重要。Mjoen將其在太空梭與國際太空站計畫中的豐富經驗，應用於這項人類重返月球的遠大目標上，展現了專業成長與團隊合作的重要性。
+
+* 曾參與太空梭計畫與國際太空站計畫，累積了豐富的太空任務經驗。
+* 目前主要負責協調阿提米絲計畫中的地面營運，特別是助推器和獵戶座（Orion）太空船的處理。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>MMX 任務旨在解決火衛一和火衛二起源的哪些主要理論爭議？</summary>
-    <p>科學家們對火星兩顆衛星的起源存在爭議，主要理論包括它們可能是火星遭受巨大撞擊後形成的碎片，或是被火星引力捕獲的古老小行星。解決這個問題將有助於闡明太陽系早期內行星如何獲取水和有機化合物的歷史。</p>
+    <summary>阿提米絲計畫（Artemis Program）的目標是什麼？</summary>
+    <p>阿提米絲計畫是NASA一項雄心勃勃的太空探索計畫，旨在將人類再次送上月球，並建立可持續的人類存在。該計畫的長期目標是為未來火星載人任務奠定基礎。它不僅是重返月球，更是為了「留下」。</p>
   </details>
   
   <details>
-    <summary>MMX任務的數據和樣本將如何具體造福NASA未來載人火星探測計畫？</summary>
-    <p>MMX任務將深入了解火星衛星的起源和組成，為火星系統提供關鍵背景資訊。這些科學發現將有助於NASA為未來的載人火星任務做準備，例如評估潛在資源或降低太空人風險。此外，返回的樣本也將在數十年內提供給科學家進行研究，支持長期的科學探索。</p>
+    <summary>Allison Mjoen在阿提米絲計畫中扮演什麼具體角色？</summary>
+    <p>Allison Mjoen擔任探索地面系統計畫的營運經理，主要職責是協調發射前地面營運工作。她特別專注於助推器和獵戶座（Orion）太空船的整合計畫及處理，確保所有系統在發射前能安全、正確地運作。她的工作涵蓋了太空船離線作業經理的職責，需要與多個團隊協調。</p>
   </details>
   
   <details>
-    <summary>NASA在MMX任務中做出了哪些主要的技術貢獻，這些貢獻如何協助實現任務目標？</summary>
-    <p>NASA對MMX任務的主要技術貢獻包括「火星衛星伽馬射線和中子探索（MEGANE）」光譜儀，以及「氣動採樣器（P-Sampler）」技術。MEGANE將透過測量中子和伽馬射線來分析火衛一的化學組成，以揭示其起源；P-Sampler則能利用高壓氮氣採集地表樣本，與JAXA的採樣器相輔相成，確保樣本的全面性。</p>
+    <summary>Allison Mjoen過去在NASA的經驗如何幫助她勝任目前的阿提米絲計畫工作？</summary>
+    <p>Mjoen在NASA的20年職業生涯中，曾為太空梭計畫擔任飛行組員系統工程師，後又為國際太空站計畫擔任酬載整合工程師。這些經驗讓她熟悉了複雜太空任務的各個層面，包括硬體整合、酬載配置與團隊協調。這些寶貴的知識和技能，對她目前在阿提米絲計畫中負責地面營運與整合工作至關重要，使她能有效應對挑戰。</p>
   </details>
   
   </div>
   
-  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-16-55fd5b8e8f-sans-l.html">全文（約 3 分鐘）</a> ｜ <a href="https://science.nasa.gov/directorates/smd/planetary-science-division/nasa-to-help-unlock-mysteries-of-mars-moons-in-upcoming-mission/">原文網頁</a></p>
+  <p class="source">NASA Breaking News ｜ <a href="article/2026-10-17-f1d3f2b84f-sans-l.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.nasa.gov/missions/station/i-am-artemis-allison-mjoen/">原文網頁</a></p>
 </article>
 
 
 <h2>長文 Long Reads</h2>
 
 <article>
-  <h3>How Do Fungi Keep the Planet Healthy?</h3>
-  <p class="summary">菌根真菌在地下形成龐大網絡，與植物根部進行古老且普遍的共生貿易，每年吸收大量碳排放並肥沃土壤。演化生物學家 Toby Kiers 的研究揭示，這些看似無腦的真菌能策略性地選擇貿易夥伴，並將資源分配給「支付」較高的植物，展現出經濟學般的決策行為。這種關係中的「緊張」和競爭非但不是負面，反而驅動了創新和生物多樣性。鑑於其對地球健康至關重要，保護這些看不見的地下網絡刻不容緩。
-- 無腦真菌展現策略性貿易行為，優化資源分配。
-- 共生關係中的適度競爭是演化與創新的驅動力。</p>
+  <h3>He Wants AI Benchmarking To Be a Science, Not a Dark Art</h3>
+  <p class="summary">本文深入探討了AI基準測試作為衡量進步工具的根本缺陷。電腦科學家Moritz Hardt指出，儘管過去幾十年來，機器學習領域的基準測試意外地透過相對排名的穩定性推動了進步，但其絕對分數的有效性一直受到質疑。在大型語言模型（LLM）時代，由於模型可能針對特定基準進行「訓練作弊」或「優化」（benchmaxxed），這種「意外的可靠性」已不復存在，導致當前的基準測試體系陷入危機。
+Hardt建議，解決之道是將基準測試視為一種「高海拔訓練」：透過標準化模型在測試前的準備過程，可以重新建立排名的有效性，使基準測試再次成為可靠的進步指標，即使這仍然無法揭示模型運作的內在機制。
+
+* 歷史上，基準測試的進步依賴於模型排名的穩定性，而非絕對分數的精確性。
+* LLM時代，「訓練作弊」行為破壞了排名的可靠性，需要新的測試協議來確保公平性。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>這些沒有大腦或中央神經系統的真菌，如何能夠展現出如此策略性的貿易行為，例如選擇夥伴或分配資源？</summary>
-    <p>Kiers 的研究指出，這些真菌雖無大腦，卻能透過其網絡系統對不同植物夥伴的「支付」（即碳水化合物供應）做出反應。它們會將養分輸送到提供更多回報的植物，這種行為類似於去中心化的市場機制，而非簡單的合作。</p>
+    <summary>傳統的AI基準測試是如何在本身存在缺陷的情況下，「意外地」推動機器學習的進步，而這又為何被視為一種「運氣」？</summary>
+    <p>儘管模型開發者因公開測試集而能「優化」模型，導致絕對分數不準確，但不同模型之間的相對排名卻出乎意料地穩定。這種穩定性使得基準測試能可靠地指示哪種模型表現更好，從而推動了進步，但由於這種現象缺乏堅實的理論基礎，因此被認為是一種「幸運」。</p>
   </details>
   
   <details>
-    <summary>摘要中提到共生關係裡的「緊張」和「競爭」反而驅動了創新和生物多樣性，這具體是如何運作的？</summary>
-    <p>傳統認為衝突是負面，但Kiers的研究認為，生物體間的適度競爭和選擇壓力是演化的重要推動力。這種緊張關係迫使真菌和植物發展出更精妙的合作與競爭策略，從而促進了基因多樣性，並使生態系統更加複雜和具韌性。</p>
+    <summary>在大型語言模型（LLMs）的背景下，「訓練作弊」或「優化」（benchmaxxing）具體指的是什麼？為何它比過去的問題更能嚴重地破壞基準測試的可靠性？</summary>
+    <p>「訓練作弊」是指LLM開發者在模型發布前，利用已知的基準測試數據集進行額外的訓練或微調，以人工提高模型在這些特定測試上的表現。這比過去的問題更嚴重，因為LLM的訓練數據龐大且不透明，使得無法判斷模型是真正進步，還是僅僅是針對測試集進行了「死記硬背」，從而嚴重削弱了排名的真實性。</p>
   </details>
   
   <details>
-    <summary>文章強調保護這些菌根真菌網絡的重要性。這些網絡主要面臨哪些威脅，以及為何它們的保護常被忽視？</summary>
-    <p>這些地下網絡主要面臨棲息地破壞、農業化學品（如殺蟲劑和過度施肥）以及氣候變遷的威脅。由於它們隱藏在地下，不像動植物那樣顯眼，其對生態系統和氣候調節的關鍵作用常被忽視，因此未能獲得足夠的保護和關注。</p>
+    <summary>文中提出的AI模型「高海拔訓練」（altitude training）概念在實踐中會是什麼樣子？它將如何改善基準測試？</summary>
+    <p>AI模型的「高海拔訓練」意味著在進行基準測試前，所有參與測試的模型都必須遵循一套標準化的準備協議，例如允許它們在與基準測試相關的數據上進行有限的「預訓練」。這樣做的目的是確保所有模型都在公平的起跑線上，讓它們都能充分利用測試前的準備，從而恢復相對排名的有效性，即使這會讓絕對分數看起來被「膨脹」了。</p>
   </details>
   
   </div>
   
-  <p class="source">Quanta Magazine ｜ <a href="article/2026-10-16-442d91a26a-sans-l.html">全文（約 47 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/how-do-fungi-keep-the-planet-healthy-20261015/">原文網頁</a></p>
+  <p class="source">Quanta Magazine ｜ <a href="article/2026-10-17-8d4656f002-sans-l.html">全文（約 8 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/he-wants-ai-benchmarking-to-be-a-science-not-a-dark-art-20261016/">原文網頁</a></p>
 </article>
 
 <article>
-  <h3>The secrets of Hohle Fels cave</h3>
-  <p class="summary">德國南部的Hohle Fels洞穴自1870年被挖掘以來，一直是考古學家關注的焦點。該遺址發現了可追溯至43,000年前的早期具象藝術品和最古老的樂器，證明了冰河時期人類擁有複雜的象徵文化。
-挖掘隊長Nicholas Conard認為，建立在神話、信仰和儀式之上的精密象徵文化，可能賦予了人類相對於尼安德塔人等其他人屬物種的演化優勢，這從最近發現的兩隻象牙小鳥中可見一斑。
-關鍵論點：
-* 早期藝術與樂器顯示冰河時期人類的複雜文化
-* 象徵文化可能提供了演化上的優勢，超越其他古人類</p>
+  <h3>How to be a (Roman) man</h3>
+  <p class="summary">這篇文章探討了古羅馬男性氣概的複雜性與演變，特別透過西塞羅的生平與著作。文章指出，羅馬男性氣概不僅體現於戰場上的勇氣，更在於公民生活中，尤其透過雄辯術、公共服務及後期的哲學美德來展現。羅馬男性氣概需要刻意「表演」並符合嚴格的社會規範，其定義在當時即已不斷受到質疑與討論，這與現代社會有異曲同工之妙。最終，西塞羅的著作對後世精英對受過教育的男性氣概的理解產生了深遠影響。
+- 羅馬男性氣概從早期的「戰爭勇氣」（virtus）擴展到「穿長袍的公民成就」，如演說和治理。
+- 西塞羅在政治挫敗後，將男性氣概重新定義為透過哲學追求道德卓越和自我控制，以服務國家。</p>
   
   
   <div class="qa">
   
   <details>
-    <summary>冰河時期，除了早期人類，還有哪些其他人屬物種生活在地球上？</summary>
-    <p>根據文章，尼安德塔人是冰河時期與早期人類並存的其他人屬物種之一。科學家們正在研究為何早期人類最終能脫穎而出。</p>
+    <summary>文章中提及的「virtus」一詞，在古羅馬社會中其意義是如何隨著時間演變的？</summary>
+    <p>最初，「virtus」主要指戰場上的「勇氣」或「軍事英勇」。然而，隨著羅馬社會的發展，尤其是在西塞羅的時代，它的涵義擴展到公民領域的卓越表現，如公共演說和政治服務。在西塞羅晚年轉向哲學時，「virtus」進一步被理解為一種更廣泛的「道德美德」或「精神卓越」，強調自我控制與智慧。</p>
   </details>
   
   <details>
-    <summary>Hohle Fels洞穴發現的「早期具象藝術品」和「最古老樂器」具體是什麼？</summary>
-    <p>文章提到在Hohle Fels洞穴發現了兩隻微小的象牙鳥，作為早期具象藝術的例證。至於最古老的樂器，文章雖未具體說明種類，但這些發現皆指向冰河時期人類複雜的文化發展。</p>
+    <summary>羅馬精英男性為了展現其男性氣概，在公共場合中需要注意哪些「表演」細節？</summary>
+    <p>羅馬男性在公共場合需遵循嚴格的行為規範，包括著裝（如長袍的正確披掛）、言談風格（避免「陰柔」或過於粗糙）、手勢以及整體舉止。這些細節都受到社會的嚴密審視，任何「不當」的表現都可能被視為缺乏男性氣概而遭到批評。</p>
   </details>
   
   <details>
-    <summary>考古學家是如何確定Hohle Fels洞穴出土文物（如43,000年前的文物）的年代的？</summary>
-    <p>考古學家通常使用放射性碳定年法等科學技術來測定有機材料的年代，例如骨骼或木材。此外，地層學（研究地層）和類型學（比較文物風格）也有助於建立文物的相對和絕對年代。</p>
+    <summary>西塞羅在個人與政治生涯遭遇挫折後，轉向哲學對他理解「成為一個男人」有何關鍵影響？</summary>
+    <p>西塞羅在政治流放和女兒去世的雙重打擊下，將重心轉向哲學，開始透過探討痛苦管理、自我控制及道德卓越來重新定義男性氣概。他認為在動盪的政治環境中，撰寫哲學著作也是一種服務國家的方式，展現了在逆境中鍛造 manhood 的新途徑。</p>
   </details>
   
   </div>
   
-  <p class="source">Aeon ｜ <a href="article/2026-10-16-232adcd01d-sans-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/hohle-fels-cave-illuminates-the-rich-symbolic-world-of-ice-age-humans">原文網頁</a></p>
-</article>
-
-<article>
-  <h3>The ladder of knowledge</h3>
-  <p class="summary">這篇文章探討了知識基礎，特別是數學領域的歷史探求。它始於大衛·希爾伯特對數學知識完備性的信念，但隨後被庫爾特·哥德爾的不完備定理所徹底挑戰。哥德爾證明任何一致的算術公理系統都無法證明其所有真陳述，暗示了形式知識的內在限制。文章接著追溯了從康德到維也納學派的哲學回應，每一派都在努力定義數學和科學真理的本質。最終，它提出了麥可·鄧米特關於邏輯和真理由我們的語言實踐決定的觀點，這一概念後由托爾·桑德奎斯特進一步發展。這種觀點將哥德爾定理重新詮釋為知識「無限可擴展性」的指標，而非其局限，意味著真理是通過我們不斷演進的實踐所建構的，而非一個固定、預先存在的結構。
-
-* 哥德爾不完備定理顛覆了數學知識可被完全公理化的信念。
-* 鄧米特和桑德奎斯特的後續發展，將真理視為由語言和實踐所建構，強調知識的無限延伸性。</p>
-  
-  
-  <div class="qa">
-  
-  <details>
-    <summary>哥德爾不完備定理對數學究竟意味著什麼？</summary>
-    <p>哥德爾定理指出，在任何足夠強大且一致的公理系統（例如算術）中，總會存在一些真實但無法在該系統內被證明的陳述。這意味著數學不能被一套固定的規則完全囊括，且其自身的一致性也無法由系統內部證明。</p>
-  </details>
-  
-  <details>
-    <summary>如果真理是「透過我們不斷演進的實踐所建構」（無限可擴展性），這如何改變我們對科學發現或數學證明的理解？</summary>
-    <p>這種觀點認為，科學發現和數學證明不是在揭示一個預先存在、固定的真理，而是在通過我們的語言和實踐來構建和延伸概念。它強調了知識的動態性和演化性，每一次新的證明或理論都是在擴展我們理解和定義現實的「憲法」。</p>
-  </details>
-  
-  <details>
-    <summary>這些哲學發展，特別是轉向以實踐為基礎的邏輯，如何影響了現代領域如計算機科學或人工智慧？</summary>
-    <p>這種將邏輯根植於實踐的觀點對計算機科學和人工智慧有深遠影響，尤其是在形式驗證、程式語言理論和知識表示等領域。它促使研究者思考如何設計系統來處理不完備性，並將知識的「構建」視為一個持續的過程，而不僅僅是規則的應用。</p>
-  </details>
-  
-  </div>
-  
-  <p class="source">Aeon ｜ <a href="article/2026-10-16-5319409191-sans-l.html">全文（約 14 分鐘）</a> ｜ <a href="https://aeon.co/essays/the-century-long-search-for-the-limits-to-knowledge">原文網頁</a></p>
+  <p class="source">Aeon ｜ <a href="article/2026-10-17-dc33c8a50b-sans-l.html">全文（約 16 分鐘）</a> ｜ <a href="https://aeon.co/essays/the-politics-of-masculinity-at-the-end-of-the-roman-republic">原文網頁</a></p>
 </article>
 
 

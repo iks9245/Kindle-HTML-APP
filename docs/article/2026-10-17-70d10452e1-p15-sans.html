@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I never authorized an integration that scans my secrets</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-17-70d10452e1-p10-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-10-17-70d10452e1-p17-sans-l.html">大</a><a class="pref-family" href="2026-10-17-70d10452e1-p15.html">切換為襯線</a></p>
+
+
+<h1>I never authorized an integration that scans my secrets</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 15 / 15 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://github.com/home-assistant/home-assistant.io/issues/49314">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-17-70d10452e1-p14-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 15 / 15 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">frenck commentedon Oct 16, 2026</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>使用者為何會突然注意到 Home Assistant 的密碼掃描功能？</summary>
+  <p>因為最近的一次版本更新修正了一個相關的警告訊息顯示問題，使得這個多年來已存在於 Supervisor 中的功能變得更明顯，才讓使用者首次察覺到它的存在。</p>
+</details>
+
+<details>
+  <summary>Home Assistant 如何確保使用者密碼的隱私，即使它與 Have I Been Pwned 服務整合？</summary>
+  <p>Home Assistant 的 Supervisor 會在本地端對密碼進行雜湊處理，然後僅將 SHA-1 雜湊值的前五個字元發送給 Have I Been Pwned 服務。匹配過程也在使用者本機實例上進行，確保完整的秘密資料不會離開系統，從而維護隱私。</p>
+</details>
+
+<details>
+  <summary>如果使用者不希望 Home Assistant 執行密碼掃描，他們該如何關閉這項功能？</summary>
+  <p>使用者可以透過執行指令 `ha security options --pwned=false` 來關閉此功能。Home Assistant 團隊也承諾將會更新相關文件，以明確說明此功能及其關閉方式。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-17-70d10452e1-p14-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 15 / 15 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

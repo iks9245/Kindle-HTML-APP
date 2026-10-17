@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You could have invented transformers from memory</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-17-7f14563d8d-p33-sans-s.html">小</a><span class="pref-on">中</span><a href="2026-10-17-7f14563d8d-p57-sans-l.html">大</a><a class="pref-family" href="2026-10-17-7f14563d8d-p45.html">切換為襯線</a></p>
+
+
+<h1>You could have invented transformers from memory</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 45 / 45 頁
+ ｜ <a href="../index-sans.html">首頁</a>
+ ｜ <a href="../archive/index-sans.html">存檔列表</a>
+ ｜ <a href="https://alexwang.ai/posts/associative-memory/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-17-7f14563d8d-p44-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 45 / 45 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Transformers divide the similarities by $\sqrt{d_k}$ rather than multiplying. But their queries and keys have length about $\sqrt{d_k}$, so a matching pair has $q\transpose k \approx d_k$. Our keys and queries have unit length, so a matching pair has similarity 1. Hence we scale by $\beta = \sqrt{d_k}$ . ↩︎</p>
+
+<p class="fulltext">- In transformer notation, the similarity is $k_i\transpose q$ with $q = W_Q x$, scaled by $1/\sqrt{d_k}$. I fold $W_Q$ into the keys. Keys and queries in a transformer have length about $\sqrt{d_k}$, so that scaling matches $\beta = \sqrt{d_k}$ for unit-length keys like ours. ↩︎</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>摘要中提及的「訊號干擾比」是什麼？它在記憶儲存庫的脈絡中為何如此重要？</summary>
+  <p>訊號干擾比衡量的是在回憶特定資訊時，其他記憶造成的干擾程度。這個指標對於評估記憶儲存庫的效率至關重要，因為當干擾與所需訊號一樣大時，記憶儲存庫便達到其容量極限，難以有效回想資訊。</p>
+</details>
+
+<details>
+  <summary>文章提到自注意力機制能儲存「潛在無限」或「超過一百萬個」記憶，它是如何超越線性層和MLP的？</summary>
+  <p>自注意力機制透過其獨特的「門控」機制來實現。與線性層或MLP將所有儲存記憶的相似度加權求和不同，自注意力機制會讓每個查詢選擇「最佳」匹配，有效隔離所需記憶並大幅降低來自其他記憶的干擾，從而顯著提高了其記憶容量和回想精確度。</p>
+</details>
+
+<details>
+  <summary>文章結尾提到理解機器記憶或許能幫助理解人類記憶，這有什麼深層的意義？</summary>
+  <p>這意味著儘管文章側重於機器記憶的計算原理，但其提出的關於管理干擾、有效儲存與檢索資訊的觀點，可能與生物記憶系統的運作方式存在共通之處。這種跨領域的類比，或許能為認知科學和人類記憶研究帶來新的啟發。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-17-7f14563d8d-p44-sans.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 45 / 45 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

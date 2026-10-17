@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You could have invented transformers from memory</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-17-7f14563d8d-p12.html">中</a><a href="2026-10-17-7f14563d8d-p15-l.html">大</a><a class="pref-family" href="2026-10-17-7f14563d8d-p10-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>You could have invented transformers from memory</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 10 / 34 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://alexwang.ai/posts/associative-memory/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-17-7f14563d8d-p9-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-17-7f14563d8d-p11-s.html">下一頁 →</a>
+<span class="pager-num">第 10 / 34 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">When we store more memories than the key dimension, $M > d_k$, the least-squares solution is</p>
+
+<p class="fulltext">$$W = \parens*{\sum_i v_i k_i\transpose}\parens*{\sum_i k_i k_i\transpose}\inverse = V\transpose K\,(K\transpose K)\inverse.$$</p>
+
+<p class="fulltext">This is the outer-product store $V\transpose K$ with one change: before we compare the query with the keys, we multiply it by $(K\transpose K)\inverse$, which undoes the keys’ covariance $K\transpose K$. This whitens the keys, so the store no longer overweights directions that many keys share.</p>
+
+<p class="fulltext">When $M \leq d_k$, the regression can fit every memory exactly, as long as the keys are linearly independent. So the optimal store recalls with no interference at all, even when the keys aren’t orthogonal.</p>
+
+<p class="fulltext">When $M > d_k$, we start to get interference, since there are only $d_k$ directions for the memory store to work with. For random keys and values, our interference-to-signal ratio becomes</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-17-7f14563d8d-p9-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-17-7f14563d8d-p11-s.html">下一頁 →</a>
+<span class="pager-num">第 10 / 34 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

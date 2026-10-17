@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You could have invented transformers from memory</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-17-7f14563d8d-p23.html">中</a><a href="2026-10-17-7f14563d8d-p29-l.html">大</a><a class="pref-family" href="2026-10-17-7f14563d8d-p18-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>You could have invented transformers from memory</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 18 / 34 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://alexwang.ai/posts/associative-memory/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-17-7f14563d8d-p17-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-17-7f14563d8d-p19-s.html">下一頁 →</a>
+<span class="pager-num">第 18 / 34 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">A squared ReLU MLP is a GLU MLP whose gate and input projection share weights, since $\operatorname{ReLU}(Kx)^2 = \operatorname{ReLU}(Kx) \odot Kx$. The SwiGLU MLPs in today’s language models give the gate its own weights and use a Swish activation in place of the ReLU.</p>
+
+<p class="fulltext">In practice, MLPs store facts in superposition: many facts share the same weights, and the output is a blend of many memories. Garcia et al. build one explicitly: the hidden units of a GLU MLP compute random features $\phi(x)$ of the input, the second weight matrix is an outer-product store $\sum_i v_i \phi(k_i)\transpose$ over those features, and the MLP stores far more facts than it has hidden units. Still, trained transformers’ ReLU MLPs can activate as few as 1% of their hidden units for a given input, so each recall draws on a small fraction of the memories (Li et al.).</p>
+
+<p class="fulltext">The transformer authors already knew this</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-17-7f14563d8d-p17-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-17-7f14563d8d-p19-s.html">下一頁 →</a>
+<span class="pager-num">第 18 / 34 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
