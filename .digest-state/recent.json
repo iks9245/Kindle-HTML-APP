@@ -1,424 +1,4 @@
 {
-  "2026-10-04": [
-    {
-      "category": "科技 Tech",
-      "has_full_text": false,
-      "link": "https://notoriousbfg.com/hole-punch/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "在「Hole Punch」中，「引力彈弓」是一種利用天體（如行星或恆星）的重力來加速飛船或改變其軌道的技術。玩家需要精準地操縱飛船接近這些天體，利用其引力進行加速，從而節省燃料並達到更高的速度。",
-          "question": "「引力彈弓」在「Hole Punch」遊戲中具體是指什麼樣的機制？"
-        },
-        {
-          "answer": "遊戲挑戰主要圍繞著掌握複雜的軌道力學和精確的時機。玩家可能需要規劃長距離的星際航行、在多個引力場之間穿梭、或是達成特定的速度和方向目標，以完成任務或探索未知的宇宙區域。",
-          "question": "玩家在「Hole Punch」中可以期待哪些遊戲挑戰或目標？"
-        },
-        {
-          "answer": "「Hole Punch」的獨特之處在於其對引力彈弓機制的深入和核心應用，使其成為遊戲的核心玩法而非僅僅是一個功能。相較於其他更側重戰鬥或資源管理的太空遊戲，它更專注於物理軌道規劃和精準的空間操縱，提供更具策略性和物理挑戰性的體驗。",
-          "question": "「Hole Punch」與市面上其他太空模擬遊戲有何不同之處？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-10-04-49f39eb866",
-      "source": "Hacker News",
-      "summary": "「Hole Punch」是一款近期受到關注的遊戲或模擬器，讓玩家能夠運用重力場來擺盪飛船，進行高效能的星際旅行。這款作品的核心魅力在於精準掌握引力彈弓效應，為太空探索帶來獨特的物理學挑戰與策略性玩法。其精髓在於如何巧妙地利用行星或恆星的重力來加速或調整飛船軌道，以節省燃料並達成遠距離目標。\n- 玩家需要深入理解軌道力學，精確計算飛船與天體之間的相對運動。\n- 遊戲提供沉浸式的物理模擬，讓每一次航行都充滿策略性考驗。",
-      "summary_secondary": "",
-      "title": "Hole Punch: Sling your spaceship around gravitational fields"
-    },
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "Flock Safety是一種自動車牌辨識（ALPR）系統，它利用遍佈各地的攝影機來捕捉所有經過車輛的車牌資訊。這些數據會被記錄在一個可供執法部門按需搜尋的資料庫中，即使車輛是在公共場所行駛。",
-          "question": "Flock Safety系統究竟是什麼？它是如何運作的？"
-        },
-        {
-          "answer": "美國憲法第四修正案保障公民免於不合理搜查和扣押的權利，要求執法部門在進行搜查前必須有正當理由並取得搜查令。此案中，法官認為警方在沒有搜查令且無明確理由的情況下使用Flock系統搜尋車牌，侵犯了該女性的隱私權和免於不合理監控的權利。",
-          "question": "文章中提到的「第四修正案權利」具體指的是什麼？為何在此案件中如此重要？"
-        },
-        {
-          "answer": "對Flock Safety的批評主要集中在其可能導致的大規模監控和對公民隱私權的侵犯。許多地方政府已停止使用該技術，擔心其數據收集方式。參議員桑德斯提出的「Block Flock Act」旨在禁止聯邦機構使用Flock等自動車牌辨識系統，以遏制這種不分青紅皂白的監控行為。",
-          "question": "除了這起判決之外，對Flock Safety技術還有哪些主要的批評？參議員伯尼·桑德斯提出的「Block Flock Act」目標是什麼？"
-        }
-      ],
-      "read_minutes": 2,
-      "slug": "2026-10-04-7d68a08898",
-      "source": "Hacker News",
-      "summary": "本週，奧克拉荷馬州土爾沙的一位聯邦法官裁定，一名副警長在沒有搜查令的情況下，使用Flock Safety系統搜尋一名女性的車牌，侵犯了她的第四修正案權利。法官稱此為「不分青紅皂白的大規模監控」，並壓制了非法搜索後獲得的證據（91磅冰毒）。\n\n此裁決雖然不具約束力，但它標誌著聯邦法官首次判定Flock搜索違憲，對這項被廣泛使用的自動車牌辨識技術構成了重大打擊。這也與越來越多的州政府停止使用該技術以及參議員提出聯邦禁令的趨勢相符。\n\n* 法官明確指出，執法部門「不分青紅皂白地被動記錄個人行蹤」構成憲法問題。\n* 裁決導致在Flock搜索後獲得的所有證據被視為「毒樹之果」而排除。",
-      "summary_secondary": "",
-      "title": "Federal judge calls Flock 'indiscriminate mass surveillance'"
-    },
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "Opus 5.5的最大優勢在於其處理長期、多步驟任務的能力顯著提升。它能更好地完成複雜的編程任務，例如跨大型程式碼庫進行變更直到測試通過，並能長時間運行而無需太多監督。",
-          "question": "與先前的Opus模型相比，Opus 5.5的主要優勢為何，特別是對開發者和Claude Code使用者而言？"
-        },
-        {
-          "answer": "具體建議包括在一個訊息中給予完整的任務和明確的「完成線」，讓模型清楚知道何時算完成。此外，應移除如「仔細思考」等指令，因為Opus 5.5會自主決定思考深度，且不需額外提示。",
-          "question": "摘要提到需調整提示詞策略。為達到最佳效果，針對Opus 5.5有哪些具體的新提示詞建議？"
-        },
-        {
-          "answer": "Opus 5.5引入了Fable級別的生物和網路安全防護措施，可能會將有問題的訊息切換到舊模型。使用者還可以在任務運行中追加指令以進行即時調整，並透過CLAUDE.md文件設定模型何時應停止尋求輸入或繼續執行。",
-          "question": "除了核心任務執行外，Opus 5.5使用者還有哪些其他新功能或注意事項，尤其是在控制或安全性方面？"
-        }
-      ],
-      "read_minutes": 9,
-      "slug": "2026-10-04-979d52d891",
-      "source": "Hacker News",
-      "summary": "Anthropic發布了一份指南，說明如何在其Claude應用程式和Claude Code中最佳化利用最新模型Opus 5.5。該模型顯著提升了處理長期、多步驟任務的能力，且能自主思考並判斷，因此使用者應調整提示詞策略以充分發揮其潛力。指南建議在單一訊息中提供完整的任務與明確的「完成線」，並刪除如「仔細思考」等冗餘指令，同時鼓勵利用運行中追加指令和透過CLAUDE.md檔案設定停/續規則來提升工作效率。\n* 針對長期、多步驟任務的表現大幅提升。\n* 鼓勵單一完整提示和明確的完成條件。\n* 移除「仔細思考」等冗餘指令，因為模型會自行判斷思考深度。",
-      "summary_secondary": "",
-      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "Christa Pike於1995年她18歲時，與當時的男友Tadaryl Shipp一同毆打、折磨並殺害了19歲的Colleen Slemmer。她因此在1996年被判處死刑，成為田納西州唯一一名女死囚。",
-          "question": "Christa Pike當初是因何罪名被判死刑的？"
-        },
-        {
-          "answer": "Christa Pike於週三被注射了兩劑致命的戊巴比妥，但在過程中仍被聽到哭泣、嗚咽和大力呼吸，最終倖存下來。她隨後被送往醫院，目前情況危急。州政府尚未提供失敗的具體原因，但其矯正部門辯稱所使用的程序符合協議，不允許額外操作。",
-          "question": "這次處決失敗的具體情況為何？州政府對此有何解釋？"
-        },
-        {
-          "answer": "這次獨立審查可能會揭露田納西州死刑系統的深層次問題，特別是執行程序的缺陷和人道考量。暫停所有處決則為州政府提供時間，重新評估並可能修改死刑執行協議，以避免未來再次發生類似的失敗，並確保執行的合法性和人道性。Pike的律師希望這能導致對整個死刑系統的深刻反思。",
-          "question": "田納西州州長下令獨立審查並暫停所有處決，這可能會有什麼樣的影響或結果？"
-        }
-      ],
-      "read_minutes": 2,
-      "slug": "2026-10-04-47b6a95352",
-      "source": "BBC World News",
-      "summary": "田納西州監獄長Frank Strada在死囚Christa Pike的處決失敗後辭職。Pike於週三被注射兩劑致命藥物後倖存，目前在醫院情況危急，其律師正尋求減刑。此事件促使州長Bill Lee下令對此進行獨立審查，並暫停該州本年度所有處決，凸顯了田納西州死刑系統的嚴重問題。\n- 監獄長Frank Strada表示辭職是為了州的最佳利益，並稱對事件的調查「完全適當且必要」。\n- Pike的律師指出，此次失敗反映了「遠超任何個人」的系統性問題，希望獨立審查能揭露田納西州整個死刑系統的深層次問題。",
-      "summary_secondary": "",
-      "title": "Tennessee prison chief to resign after Christa Pike's failed execution"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "據美國媒體報導，這名副機長哈曼·阿爾-哈馬米在另一家航空公司（阿曼航空）工作時，曾因激進觀點而被取消飛行培訓資格。儘管如此，他被轉調到該航空公司的另一個職位，並於2023年在英國完成航空管理學位，這讓他有可能繼續從事航空業。",
-          "question": "這名副機長為何會被指控持有激進觀點，以及他如何能在被發現有這些觀點後仍擔任飛行員？"
-        },
-        {
-          "answer": "受傷的機長Smit Machchhar在危急時刻設法打開了駕駛艙門，讓幾位乘客得以進入。乘客Zvika Manes、Yaniv Hayun、Dr Shota Musayev和Asaf Rajuan隨後合力制服了襲擊者，阻止他破壞儀器，其中一人甚至短暫控制了飛機。最終，在兩名備用機師的協助下，飛機得以安全降落。",
-          "question": "乘客和機組人員具體採取了哪些關鍵行動來制服襲擊者並確保飛機安全？"
-        },
-        {
-          "answer": "鑒於此次事件涉及副機長在高度安全的航線上使用應急斧發動襲擊，預計將促使航空當局和航空公司重新評估駕駛艙內部安全措施和機組人員的心理健康篩選程序。特別是對於像杜拜-特拉維夫這樣的敏感路線，可能會加強對機組人員背景的審查和對機艙內部武器存放的規定，以防止類似事件再次發生。",
-          "question": "此次事件對於像杜拜-特拉維夫這類敏感航線的航空安全檢查和程序會產生什麼影響？"
-        }
-      ],
-      "read_minutes": 4,
-      "slug": "2026-10-04-e70657906e",
-      "source": "BBC World News",
-      "summary": "阿聯酋檢察總長表示，一名Flydubai副機長在從杜拜飛往特拉維夫的航班上，用應急斧襲擊了機長，並企圖控制飛機。該航班載有超過170人，在飛行途中驟降17,000英尺，但乘客們成功制服了襲擊者，隨後由兩名備用機師將飛機安全降落在沙特阿拉伯，避免了一場潛在的重大空難。阿聯酋總檢察長將此事件定性為「恐怖主義行為」，並指出調查仍在進行中，以釐清其動機和相關連結。\n\n- 調查指出，副機長此舉為「恐怖主義行為」，且以色列總理表示其有激進思想和自殺傾向。\n- 受傷機長Smit Machchhar及多名乘客的英勇反應，尤其是在機長受傷後打開駕駛艙門，讓乘客進入協助制服襲擊者，是防止悲劇的關鍵。",
-      "summary_secondary": "",
-      "title": "Flydubai co-pilot attacked captain with axe, UAE official says"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/ckly0leelnz4o?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "文章指出，校警雖進行了調查，但沒有提出任何指控。這促使Jane Doe對康乃爾大學提起民事訴訟，指控校方未盡保護責任。紐約州檢察總長現已被指派對此案進行刑事調查。",
-          "question": "儘管Jane Doe向校警報案，為何最初沒有提出任何指控？"
-        },
-        {
-          "answer": "校長Kotlikoff表示大學將「認真審視兄弟會和姐妹會在校園生活中的角色」。他強調必須培養性侵害不可原諒的文化，並確保社區成員理解知情同意的重要性。大學目標是創造一個讓性侵害受害者感到安全並被尊嚴對待的環境。",
-          "question": "康乃爾大學除了調查案件處理方式外，還將採取哪些具體措施來解決校園文化和兄弟會的問題？"
-        },
-        {
-          "answer": "紐約州州長Kathy Hochul對康乃爾大學處理此案的方式表示深感不安，因此指派了檢察總長James領導對此案的刑事調查。校長Kotlikoff也支持這項決定，並歡迎律師事務所對康乃爾大學處理此事的獨立審查。",
-          "question": "紐約州檢察總長Letitia James對此案的審查範圍為何？"
-        }
-      ],
-      "read_minutes": 3,
-      "slug": "2026-10-04-19da801905",
-      "source": "BBC World News",
-      "summary": "康乃爾大學校長Michael Kotlikoff表示，在一名化名Jane Doe的20歲學生指控她於2024年10月19日在Chi Phi兄弟會被七名男子下藥性侵後，校方「必須做得更好」。這起事件在學生向警方報案後並未提出指控，促使Jane Doe對大學提起民事訴訟，指控校方未能保護她並未充分懲罰涉案人員，引發了對校園文化和案件處理方式的質疑。\n* 紐約州州長Kathy Hochul已指派檢察總長Letitia James審查此案。\n* 校長Kotlikoff承諾將深入調查案件處理方式，並呼籲改革校園文化，認為這是大學歷史上的「決定性時刻」。",
-      "summary_secondary": "",
-      "title": "Cornell president says university 'must do better' after frat house rape allegations"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://science.nasa.gov/image-article/apod-2026-october-3-selfie-at-vera-rubin-ridge/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "維拉魯賓山脊是火星蓋爾隕石坑內的一個地質特徵，其岩石層記錄了火星早期水存在的證據和環境變化。好奇號在此探測是為了研究這些沉積岩的構成，進一步了解火星過去的氣候和宜居性。",
-          "question": "維拉魯賓山脊（Vera Rubin Ridge）在火星探測中扮演什麼角色？好奇號為何會在此處進行探索？"
-        },
-        {
-          "answer": "夏普山是蓋爾隕石坑中央的巨大山峰，其多層岩石結構記錄了火星數十億年的地質歷史。好奇號沿山坡上升，可以逐層探測不同的地質年代和環境條件，以了解火星氣候如何隨著時間演變，並尋找有機分子和生命跡象。",
-          "question": "文章提到好奇號在夏普山（Mount Sharp）的攀升，這對其任務有何重要性？"
-        },
-        {
-          "answer": "好奇號使用其「火星手持透鏡成像儀」（MAHLI）相機拍攝多張照片，這些照片是在手臂伸出不同位置時拍攝的。科學家們將這些照片拼接起來，並透過數位編輯移除包含機械臂的部分，從而合成出沒有手臂遮擋的完整自拍照。",
-          "question": "文章提到自拍照中移除了拍攝手臂，好奇號是如何完成這張自拍的？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-10-04-88cdab3eac",
-      "source": "NASA Breaking News",
-      "summary": "2018年1月23日（火星日1943），好奇號火星探測車在火星維拉魯賓山脊（Vera Rubin Ridge）南緣拍攝了一張自拍照。這張由61張照片拼接而成的全景影像，巧妙地移除了拍攝手臂，展現了探測車的周遭環境及其探索任務的進展。背景中可見高聳的夏普山，象徵著好奇號自蓋爾隕石坑底部以來已攀升一公里，截至2026年8月26日總計上升了一公里。\n\n主要重點：\n* 自拍時間為火星日1943，地球日期2018年1月23日。\n* 影像為多張照片合成，移除了機械臂以呈現完整視角。",
-      "summary_secondary": "",
-      "title": "APOD: 2026 October 3 – Selfie at Vera Rubin Ridge"
-    }
-  ],
-  "2026-10-05": [
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://github.com/omlahore/RemoveMacAI",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "macOS 27 並沒有提供一個單一的開關來完全停用 Apple Intelligence，且即使將相關功能關閉，其預載或下載的 AI 模型仍會持續佔用大量的磁碟空間。RemoveMacAI 解決了這個問題，它能徹底移除這些模型並防止其重新下載，從而幫助用戶釋放寶貴的儲存空間。",
-          "question": "為什麼 macOS 27 的用戶需要像 RemoveMacAI 這樣的第三方工具來管理 Apple Intelligence？"
-        },
-        {
-          "answer": "RemoveMacAI 的運作方式是安裝一個配置描述檔，此描述檔會應用 Apple 的限制鍵並強制執行設定，同時將已移除模型的下載請求重新導向到一個本地的封閉端口，以阻止系統再次下載。它利用 Apple 的資產服務來安全移除模型，並保持系統完整性保護 (SIP) 啟用，不直接修改 `/System` 下的檔案。所有更改都可以被還原，確保系統安全與可恢復性。",
-          "question": "RemoveMacAI 如何在不影響系統完整性或安全性的情況下移除 Apple Intelligence 模型？"
-        },
-        {
-          "answer": "安裝 RemoveMacAI 後，Siri（包括「嘿 Siri」）、寫作工具、Genmoji、圖像遊樂場、ChatGPT 擴展、郵件和訊息中的摘要、郵件智慧回覆、內聯文本預測、空間照片、照片清理和 Xcode 預測性程式碼補全等 Apple Intelligence 相關服務將會停止運作。然而，語音聽寫 (Dictation) 由於是一個獨立的設定，並使用不同的語音模型，因此不會受到影響，仍可正常使用。",
-          "question": "哪些具體的 Apple Intelligence 功能會在安裝 RemoveMacAI 後停止運作？語音聽寫等其他相關功能是否受影響？"
-        }
-      ],
-      "read_minutes": 3,
-      "slug": "2026-10-05-fb514e83ae",
-      "source": "Hacker News",
-      "summary": "針對 macOS 27 用戶，一個名為「RemoveMacAI」的第三方工具現已推出，能徹底關閉 Apple Intelligence 功能並回收其佔用的磁碟空間。由於 macOS 27 並未提供一個簡單的開關來完全停用這些 AI 功能，且即使停用後相關模型仍會保留在磁碟上，RemoveMacAI 應運而生，它能移除已下載的 AI 模型並阻止系統再次下載。這對於希望釋放儲存空間或不使用特定 AI 功能的用戶來說，是個實用的解決方案。\n- 該工具透過指令稿或 Homebrew 安裝，並利用配置描述檔來管理設定和阻止模型重新下載，而不直接修改系統核心檔案。\n- 受影響的功能包括 Siri、寫作工具、Genmoji、圖像遊樂場以及郵件和訊息中的多項智慧摘要服務。",
-      "summary_secondary": "",
-      "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back"
-    },
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://github.com/Niko1221/Strata",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "Strata 運用了獨特的技術，將模型的工作量分擔到整個 PC 硬體中，例如將常用的模型「專家」儲存在顯示卡 VRAM 中，其餘則由系統 RAM 和處理器協同處理，同時結合預測與檢查機制，大幅提升了在有限資源下的運行效率。",
-          "question": "Strata 如何實現將 125 億參數的大型 AI 模型在消費級硬體上運行，而不需要伺服器等級的資源？"
-        },
-        {
-          "answer": "在本地 PC 上運行 Qwen3.8-Flash-Next AI 模型意味著所有數據處理都在使用者自己的設備上完成，無需上傳至雲端伺服器。這確保了所有互動內容和個人資訊都保留在本地，極大地提升了數據隱私和安全性。",
-          "question": "在本地個人電腦上運行 Qwen3.8-Flash-Next AI 模型，對於使用者資料的隱私保護有何具體優勢？"
-        },
-        {
-          "answer": "建議的最低配置是具有 12GB 或更多 VRAM 的 NVIDIA 或 AMD 顯示卡，以及 32GB 或更多系統 RAM。安裝過程非常簡便，只需下載並執行自動安裝腳本（Windows 用戶雙擊 .bat 文件，Linux 用戶運行 .sh 腳本），它會引導使用者選擇模型和設定，並自動下載所需文件。",
-          "question": "對於想嘗試 Strata 的使用者，建議的最低硬體配置為何？安裝過程是否對一般使用者友好？"
-        }
-      ],
-      "read_minutes": 8,
-      "slug": "2026-10-05-bca476fd34",
-      "source": "Hacker News",
-      "summary": "Strata 應用程式現已推出，讓使用者能在配備 NVIDIA 或 AMD 顯示卡（需 12GB VRAM 或更多）的消費級個人電腦上運行通常需要伺服器才能執行的大型 125 億參數 AI 模型 Qwen3.8-Flash-Next。\n這款免費開源工具可在 Windows 或 Linux 系統上運作，允許用戶在本地進行 AI 聊天、編寫程式碼及圖像理解等任務，確保數據不離開個人電腦。測試顯示，例如 RTX 3090 可達每秒 100-140 個 token 的寫入速度，足以提供流暢的使用體驗。\n- 支援多種消費級顯示卡，最低要求 12GB VRAM 和 32GB RAM。\n- 採用創新技術將模型分擔於顯示卡、RAM 和處理器之間，實現高效運行。",
-      "summary_secondary": "",
-      "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s"
-    },
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "這些資訊是透過電腦游標選取報告中被遮蓋的文本框，然後複製貼上到另一個文件而揭露的。這顯示原始的遮蓋方式並未徹底隱藏資訊。",
-          "question": "為什麼這些本應保密的資訊會因為不當遮蓋而被揭露？"
-        },
-        {
-          "answer": "這些數字提供了資料中心對當地資源影響的具體數據。例如，Agate LLC去年的用水量足以填滿約20個奧運標準泳池，而所有資料中心總用水量高達7.65億加侖，這些數據有助於公眾和政府評估其環境足跡及資源管理策略。",
-          "question": "Google資料中心揭露的用水量和用電量數字對內布拉斯加州有何意義？"
-        },
-        {
-          "answer": "報告指出Google資料中心利用或預計利用「內布拉斯加州優勢法案」(Nebraska Advantage Act) 下的銷售和使用稅豁免。這些退款是該州為吸引和留住大型企業而提供的稅務激勵措施的一部分。",
-          "question": "Google在內布拉斯加州的資料中心為何能獲得如此巨額的稅務退款？"
-        }
-      ],
-      "read_minutes": 2,
-      "slug": "2026-10-05-1954cb720f",
-      "source": "Hacker News",
-      "summary": "一份提交給內布拉斯加州水、能源與環境部門的年度報告中，由於不當的塗黑處理，意外揭露了Google在該州的資料中心（包括林肯的Agate LLC）的用水量和用電量。Agate LLC去年尖峰用電量為52.65兆瓦，用水量達1329.9萬加侖，約可填滿20個奧運標準泳池。此外，報告也揭露Google在內布拉斯加州的三個資料中心預計將從2025年的稅務中獲得巨額退款，其中Agate LLC預計退款超過5500萬美元。這些被揭露的資訊引起了公眾對資料中心資源消耗及稅務優惠的關注。\n* 主要資料中心為Agate LLC (林肯), Fireball Group LLC (帕皮利恩), Westwood Solutions LLC (奧馬哈)。\n* 六個資料中心去年的總用水量達7.65億加侖。",
-      "summary_secondary": "",
-      "title": "Improper redaction reveals Google Data Center water and electricity usage"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "葉門內戰始於2014年，當時胡塞武裝從沙特支持的政府手中奪取了首都薩那。2015年，沙特阿拉伯領導一個國際聯軍介入，以恢復政府權威並遏制伊朗在中東地區的影響力。這場衝突也反映了什葉派（胡塞武裝）與遜尼派（沙特及其盟友）之間的地區性宗派對抗。",
-          "question": "葉門內戰的根源是什麼？是什麼導致了國際勢力的介入？"
-        },
-        {
-          "answer": "葉門是世界上最貧困的國家之一，全面戰爭的重燃無疑將使當地本已嚴峻的人道危機雪上加霜，導致更多平民傷亡、流離失所和糧食短缺。此外，衝突升級可能蔓延至更廣泛的中東地區，尤其是若胡塞武裝持續襲擊沙特石油設施，將威脅全球能源供應鏈，引發國際油價波動。",
-          "question": "這場全面戰爭對葉門人道危機和地區穩定會產生怎樣的影響？"
-        },
-        {
-          "answer": "胡塞武裝控制葉門整個紅海海岸線，包括曼德海峽這一關鍵航運要道，使其能夠影響國際海上貿易，也阻止沙特將此作為替代石油出口路線。切斷連接塔伊茲與亞丁的補給線，則成功孤立了塔伊茲這座政府軍控制的關鍵城市，對政府軍構成重大戰略壓力，為其進一步行動創造了有利條件。",
-          "question": "胡塞武裝佔領紅海海岸線和切斷塔伊茲補給線對戰局有何重要戰略意義？"
-        }
-      ],
-      "read_minutes": 3,
-      "slug": "2026-10-05-c663564d4e",
-      "source": "BBC World News",
-      "summary": "葉門國際承認政府於週日宣布將對伊朗支持的胡塞武裝發動全面戰爭，旨在奪回其佔領的剩餘領土並在全國範圍內擴展國家權威。此舉是在胡塞武裝上個月控制葉門整個紅海海岸線（包括重要的曼德海峽）以及近期胡塞武裝與沙特領導聯軍之間持續交火的背景下進行的，恐加劇該國的人道危機。\n\n- 胡塞武裝近日切斷了連接政府臨時首都亞丁與關鍵城市塔伊茲的補給線，有效包圍了塔伊茲。\n- 胡塞武裝聲稱已襲擊沙特阿美石油設施，顯示衝突可能進一步升級並影響全球能源供應。",
-      "summary_secondary": "",
-      "title": "Yemen's government announces all-out war to reclaim land from Houthis"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "俄羅斯軍方表示，其目的是打擊烏克蘭用來運輸部隊的橋樑，並作為對烏克蘭襲擊俄羅斯煉油廠的回應。這些攻擊旨在削弱烏克蘭的物流和作戰能力，並可能試圖在冬季來臨前對烏克蘭造成更大壓力。",
-          "question": "俄羅斯為何特別針對基輔的橋樑和關鍵基礎設施發動密集攻擊？"
-        },
-        {
-          "answer": "這些攻擊導致基輔部分地區交通嚴重堵塞，影響市民的日常通勤，並可能導致關鍵服務（如熱水供應）中斷。雖然專家認為無人機難以徹底摧毀橋樑，但重複襲擊可能迫使其關閉，削弱結構，影響交通，進而對首都的經濟和士氣造成負面影響。",
-          "question": "基輔的基礎設施持續遭受襲擊，對當地居民和烏克蘭的戰爭努力會產生什麼更廣泛的影響？"
-        },
-        {
-          "answer": "德國已成為烏克蘭最大的單一捐助國，其提供的超過13億歐元新援助，特別是武器和能源部門的支持，對烏克蘭在關鍵時期維持防禦能力至關重要。這不僅展現了國際社會對烏克蘭的持續承諾，也體現了德國認為自身安全與烏克蘭戰爭結果密切相關的立場。",
-          "question": "德國對烏克蘭的巨額援助和堅定支持，在當前的衝突階段中扮演什麼樣的角色？"
-        }
-      ],
-      "read_minutes": 4,
-      "slug": "2026-10-05-64aa4378c7",
-      "source": "BBC World News",
-      "summary": "俄羅斯軍隊連續四天對烏克蘭首都基輔的關鍵基礎設施發動無人機襲擊，特別是主要橋樑，造成兩人受傷並嚴重影響交通。這次襲擊正值德國總理梅爾茨（Friedrich Merz）突訪基輔，表達對烏克蘭的支持，並與烏克蘭總統澤倫斯基（Volodymyr Zelensky）達成超過13億歐元的新援助協議。俄羅斯聲明將加劇對基輔及其他地區的打擊，而烏克蘭則強調需要更多防空支援。\n- 基輔的北部和南部橋樑屢遭襲擊，儘管橋樑仍站立，但交通受阻嚴重。\n- 德國承諾提供武器和能源部門支援，並強調其安全也與烏克蘭戰爭結果息息相關。",
-      "summary_secondary": "",
-      "title": "Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "橋樑是城市重要交通動脈，連接基輔的不同區域，並可能用於軍事物資運輸。襲擊橋樑旨在阻礙烏克蘭的物流和運輸能力，對基輔造成更大的壓力和破壞。",
-          "question": "這些橋樑為何成為俄羅斯襲擊的目標？"
-        },
-        {
-          "answer": "襲擊發生在德國總理弗里德里希·梅爾茨訪問基輔期間，可能是一種挑釁行為，旨在傳達俄羅斯對國際外交努力的不屑，並向支持烏克蘭的西方國家展示其繼續攻擊的決心。",
-          "question": "德國總理訪問基輔期間發生襲擊有何意義？"
-        },
-        {
-          "answer": "這些襲擊可能導致交通中斷、出行困難，並可能影響日常物資的運輸和供應。持續的空襲警報和基礎設施損壞也會加劇基輔居民的恐懼和生活不確定性。",
-          "question": "這些對基輔橋樑的襲擊對當地居民有何影響？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-10-05-c464349ff4",
-      "source": "BBC World News",
-      "summary": "俄羅斯在過去四天內加強了對烏克蘭首都基輔的襲擊，鎖定該市的主要橋樑為目標。北橋（Pivnichnyi）已連續兩天遭到攻擊，而南橋（Pivdennyi）本週稍早也多次被擊中。最新一次襲擊發生在德國總理弗里德里希·梅爾茨週日訪問基輔之際，顯示莫斯科正升級其在烏克蘭的攻擊行動。\n* 基輔兩座主要橋樑——北橋和南橋——在四天內遭到多次襲擊。\n* 襲擊正值德國總理訪基輔，凸顯俄羅斯加強攻勢。",
-      "summary_secondary": "",
-      "title": "Watch: What we know about Russian strikes on Kyiv bridges"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://www.nasa.gov/general/mapping-the-gaps-in-nasas-return-to-the-moon-featuring-richard-spolzino/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "資料鴻溝是指美國太空總署在月球和火星任務中尚不清楚的資訊，例如月球土壤的承重能力或剪切強度。它會正式記錄所需但缺乏的知識、其重要性、現有資訊的不足之處，以及合作夥伴可以努力實現的具體可測量目標。這些資訊對於確保太空飛行器、居住艙和儀器的安全設計至關重要。",
-          "question": "在 Spolzino 的工作中，「資料鴻溝」具體指的是什麼？"
-        },
-        {
-          "answer": "識別資料鴻溝能為產業和國際合作夥伴提供明確的目標，讓他們知道應將資源投入何處。例如，這些資訊影響著陸器的設計和儀器開發決策，確保任務在關鍵未知資訊被解決後才推進。這使得外部貢獻能直接填補NASA的知識空白，加速安全且成功的太空探索。",
-          "question": "識別這些資料鴻溝如何實際幫助美國太空總署的任務？"
-        },
-        {
-          "answer": "Spolzino 建議，學業成績的重要性不如人們想像，更關鍵的是參與實際專案並展現成果。他強調，NASA 內部仍有許多「正在摸索中」的問題，因此早期職業員工只要願意承擔超出職責範圍的任務，便有機會做出實質性貢獻，而非僅僅執行既有劇本。因此，積極參與俱樂部、建立作品並展現解決問題的能力，比單純的學歷更重要。",
-          "question": "考慮到 Spolzino 本身的職涯道路，他對有興趣進入美國太空總署工作的人有何建議？"
-        }
-      ],
-      "read_minutes": 5,
-      "slug": "2026-10-05-6bc4726749",
-      "source": "NASA Breaking News",
-      "summary": "任職於美國太空總署（NASA）蘭利研究中心的 Richard Spolzino 負責識別並文件化其月球及火星任務的「資料鴻溝」（即知識缺口）。這項工作旨在確保在重返月球任務中，所有關鍵的未知資訊都能在造成問題前被發現並解決，對太空船的設計和儀器開發至關重要。他的團隊去年處理了約25個資料鴻溝，目標是今年底達到60個，有效引導合作夥伴的貢獻方向。他強調，NASA 並非萬事俱備，這為早期職業員工提供了實質性貢獻的機會。\n\n*   **資料鴻溝定義**：指關於月球土壤特性等關鍵未知資訊，及其對任務的潛在影響。\n*   **實際應用**：透過明確的目標，引導合作夥伴針對缺失的知識進行補充，以支持未來任務決策。",
-      "summary_secondary": "",
-      "title": "Mapping the Gaps in NASA’s Return to the Moon, featuring Richard Spolzino"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://science.nasa.gov/image-article/apod-2026-october-4-supernumerary-rainbows-over-new-jersey/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "一般彩虹主要是由光線在水滴中反射和折射形成，而過剩虹除了這些現象外，還涉及光波的干涉作用。它們通常以彩虹主弓內側出現的多道平行、色彩較淡的窄帶形式存在，且需要非常特定的大氣條件才能形成。",
-          "question": "過剩虹與一般彩虹有何不同？"
-        },
-        {
-          "answer": "過剩虹的形成需要落下的水滴大小幾乎一致，並且通常小於一毫米。這種均勻且微小的水滴尺寸是產生光波干涉的關鍵，使得光線在水滴內部相互作用，產生額外的彩虹帶。",
-          "question": "形成過剩虹需要哪些特殊條件？"
-        },
-        {
-          "answer": "過剩虹的存在無法僅憑光的幾何光學理論解釋，必須透過光的波動理論才能完全理解。因此，19世紀初觀察到的過剩虹現象，被視為支持光具有波動性質的早期重要證據之一。",
-          "question": "過剩虹的發現對科學理解有何重要性？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-10-05-32716ff772",
-      "source": "NASA Breaking News",
-      "summary": "2018年，當颶風佛羅倫斯殘餘勢力經過美國紐澤西州澤西海岸後，太陽從一個方向出現，但在相反方向卻出現了不尋常的「過剩虹」（Supernumerary Rainbows）奇景。在接下來的半小時內，攝影師及其女兒目睹了多道鮮豔的過剩虹漸隱漸現，其中一張特色照片捕捉到至少五道。\n\n過剩虹僅在落下的水滴大小幾乎一致且通常小於一毫米時形成，並且是光波干涉的結果，而非單純的反射，這項存在證據在19世紀初被視為光具有波動性質的早期證明。",
-      "summary_secondary": "",
-      "title": "APOD: 2026 October 4 – Supernumerary Rainbows over New Jersey"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://science.nasa.gov/blog/curiosity-blog-sols-5022-5028-cashing-in-at-cache-creek/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "「Cache Creek」區域是根據加拿大不列顛哥倫比亞省一個地質多樣的地區命名，該地區包含海洋地殼、海相沉積物、火山岩和冰川沉積物。此外，那裡還有化學成分不尋常的湖泊，可能與火星上曾經存在的湖泊相似。",
-          "question": "好奇號火星車探索的「Cache Creek」區域為何如此命名，它有何特殊意義？"
-        },
-        {
-          "answer": "CheMin儀器會進行X射線繞射分析，以識別樣本中存在的礦物種類。而SAM（火星樣本分析儀）將揭示更多關於該岩石的歷史和化學成分，提供其形成和變質過程的深入見解。",
-          "question": "CheMin和SAM儀器將從鑽取的樣本中提供哪些具體資訊？"
-        },
-        {
-          "answer": "好奇號面臨了顯著的電力限制，並且作為一台老化的探測車。儘管有這些挑戰，它還利用Mastcam拍攝了周圍地形，使用ChemCam分析了另一個基岩目標「Peace River」，並利用Navcam和Mastcam監測了蓋爾隕石坑的環境和大氣狀況。",
-          "question": "好奇號在這次鑽探和分析過程中面臨了哪些挑戰？除了主要任務外，它還進行了哪些其他活動？"
-        }
-      ],
-      "read_minutes": 3,
-      "slug": "2026-10-05-6f680eb4c9",
-      "source": "NASA Breaking News",
-      "summary": "好奇號火星車最近進入了火星上的「Cache Creek」探測區，並於本週（約2026年9月25日）成功鑽取了第48個岩石目標「Basque Lakes」。這項重要成就涉及詳細的接觸科學探測，包括APXS和MAHLI成像，以在電力限制下評估岩石。科學家們正熱切期待對鑽取樣本進行CheMin和SAM分析，希望能揭示其礦物成分並了解岩石的地質歷史，這可能與不列顛哥倫比亞省Cache Creek多樣的地質特徵有相似之處。樣本分析結果將有助於了解火星岩石的礦物組成與地質變遷史。\n- 成功鑽取了火星上的第48個岩石樣本。\n- 樣本分析將有助於了解火星岩石的礦物組成與地質變遷史。",
-      "summary_secondary": "",
-      "title": "Curiosity Blog, Sols 5022-5028: Cashing in at Cache Creek"
-    }
-  ],
   "2026-10-06": [
     {
       "category": "科技 Tech",
@@ -3981,6 +3561,268 @@
       "summary": "APOD於2026年10月18日展示了一部將著名的M16鷹星雲（Eagle Nebula）轉化為聽覺體驗的「聲音化」影片，讓觀眾不僅能看見這片距離地球約6,500光年的恆星誕生之地，也能用耳朵感受其壯麗。這片位於巨蛇座的星雲以其高聳的冷氣體和塵埃柱聞名，這些結構正被內部大質量恆星的能量侵蝕，同時孕育著新生恆星。這種恆星形成的動盪環境，與我們太陽系形成之初的環境可能相似。\n*   影片中，聲音化線條從左向右移動，恆星和塵埃的垂直位置決定發出的音高。\n*   鷹星雲的巨大塵埃柱雖然孕育新星，但也正遭受侵蝕而面臨最終毀滅的命運。",
       "summary_secondary": "",
       "title": "APOD: 2026 October 18 – Sonified: Eagle Nebula Pillars"
+    }
+  ],
+  "2026-10-20": [
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "擴散式大型語言模型是一種基於擴散模型原理構建的語言模型，與傳統的自迴歸模型在生成文本的機制上有所不同。文章指出，Mercury 3證明了擴散模型也能像自迴歸模型一樣大規模擴展並在複雜應用中競爭。",
+          "question": "什麼是擴散式大型語言模型，它與傳統的自迴歸模型有何不同？"
+        },
+        {
+          "answer": "Mercury 3的高速特性使其非常適合瀏覽器代理（agent）、互動式教育、即時搜尋代理和客戶支援等應用。例如，在瀏覽器代理中，它能加速網頁導航和研究；在教育中，則能提供即時回饋，讓學生保持學習流暢度。",
+          "question": "Mercury 3的極快速度在哪些具體的實際應用場景中能帶來顯著好處？"
+        },
+        {
+          "answer": "Mercury 3現已透過Inception API平台、OpenRouter、Baseten和Vercel提供，並與OpenAI API相容。其定價為每百萬輸入代幣0.20美元、每百萬輸出代幣0.70美元，且推出初期提供50%折扣。",
+          "question": "有興趣的使用者如何取得Mercury 3，以及其定價策略為何？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-10-20-f30a44480c",
+      "source": "Hacker News",
+      "summary": "今天，Inception AI發布了Mercury 3，這是迄今為止最先進的擴散式大型語言模型，證明了文本擴散技術的可擴展性。該模型在基準測試中表現優於GPT-6 Luna和Claude Haiku 5.5，同時運行速度快4至8倍，每秒可處理超過1,000個代幣。早期合作夥伴已將Mercury 3應用於語音和聊天支援、即時輔導、資料工程及網頁導航等各種延遲敏感型應用，顯著提升效率。\n\n- 速度：每秒1,068個代幣\n- 上下文長度：100萬個代幣",
+      "summary_secondary": "",
+      "title": "Mercury 3: Diffusion at scale"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://josie.lol/blog/linux-rtx-spark",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "作者本身是Arch Linux的套件維護者，對此發行版有深厚偏好。此外，他對Windows的不滿主要源於隱私條款、介面客製化限制（如任務欄位置）以及內置廣告，這些都與他推崇開源模型並在本地運行的理念相符。",
+          "question": "作者為何選擇在筆電上安裝Arch Linux而非Windows？除了隱私考量還有其他原因嗎？"
+        },
+        {
+          "answer": "主要技術挑戰包括NVIDIA驅動整合、修正ACPI覆蓋分配和幀緩衝區映射，以及解決鍵盤和音訊支援。作者利用NVIDIA針對Ubuntu的內核工作作為起點，從筆電自身的表格中提取ACPI覆蓋，並為鍵盤（透過修補hid-asus）和音訊（專屬機器驅動）開發了所需的支援。",
+          "question": "在這款特定的華碩筆電上安裝Arch Linux主要面臨了哪些技術挑戰？作者是如何克服這些挑戰的？"
+        },
+        {
+          "answer": "在本地運行LLM讓作者能夠在無需依賴雲端服務的情況下，進行強化學習、量化和微調等實驗。作為GGUF量化模型的發布者，這種本地配置有助於他進行深入的實踐優化和開發工作，從而支持他對開源模型和獨立研究的推廣。",
+          "question": "鑑於作者對開源模型感興趣，在這樣一台高效能的Linux筆電上本地運行大型語言模型，對他有何具體好處？"
+        }
+      ],
+      "read_minutes": 7,
+      "slug": "2026-10-20-e3ef569967",
+      "source": "Hacker News",
+      "summary": "一位Arch Linux套件維護者成功在其ASUS ProArt P16 H7607BA-SE033W筆記型電腦（配備128GB RAM及高效能GPU）上安裝了Arch Linux ARM，而非Windows。此舉證明了這款硬體在Linux環境下也能發揮其強大運算潛力，特別是針對本地執行大型語言模型和機器學習任務。在7-Zip基準測試中，Linux下的CPU效能與Windows相當，且LLM推論速度也具競爭力。\n\n* 成功在高端筆電上部署非官方支援的Arch Linux，展現其硬體兼容性。\n* 效能測試顯示Linux在多核心運算和LLM推論上具備競爭力。",
+      "summary_secondary": "",
+      "title": "Putting Linux on my RTX Spark laptop because I don't have a Microsoft account"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "http://peter.eisentraut.org/blog/2026/10/09/the-reverts-will-continue-until-morale-improves",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "原因可能有多方面，包括 LLM 輔助程式碼審查提高了品質標準，導致更多問題被及早發現；「Vulnpocalypse」安全事件佔用了資深開發者大量時間，減少了 Beta 期間的審查；以及 PostgreSQL 系統的複雜性使得某些功能難以正確實現，導致大量問題在後期才浮現。",
+          "question": "為什麼 PostgreSQL 19 會有如此多功能被還原，尤其是在 Beta 測試後期才發生？"
+        },
+        {
+          "answer": "作者預計，隨著 LLM 輔助程式碼審查能力的穩定，這種情況會趨於正常。開發社群也正考慮引入「實驗性」功能狀態，讓功能在主程式碼樹中逐步成熟。此外，許多被還原的功能預計將在未來版本中重新推出，PostgreSQL 20 也已有一些接近完成的新功能排隊等待。",
+          "question": "這種大規模功能還原的狀況將如何影響未來 PostgreSQL 的開發週期？"
+        },
+        {
+          "answer": "PostgreSQL 19 仍將包含一些重要的功能，例如 REPACK CONCURRENTLY、序列的邏輯複製以及使用 pg_plan_advice 進行的規劃器提示。作者強調，由於這些額外的嚴格審查，這個版本將會非常穩健可靠，確保其高品質和吸引力。",
+          "question": "儘管許多功能被還原，PostgreSQL 19 仍會包含哪些重要功能，以及為何它仍然被認為是一個「很棒的版本」？"
+        }
+      ],
+      "read_minutes": 5,
+      "slug": "2026-10-20-5e113e86ce",
+      "source": "Hacker News",
+      "summary": "在 PostgreSQL 19 版本的 Beta 測試期間，大約有 8 到 10 個重要功能被異常地還原，其中一些還在測試後期才發生。這促使開發社群反思程式碼品質、開發流程，以及近期「Vulnpocalypse」安全更新對資深開發者時間分配的影響。儘管這些還原，作者仍相信許多功能會很快回歸，且 PostgreSQL 19 透過額外審查將會是一個非常穩健且吸引人的版本。\n\n關鍵點：\n* LLM 輔助程式碼審查提高了程式碼品質標準，使更多問題被及早發現。\n* 「Vulnpocalypse」安全問題佔用了資深開發者大量時間，導致 Beta 測試期間的額外審查和測試減少。\n* 系統日益複雜，使得某些功能難以正確實作，且缺乏足夠的內部接口支持。",
+      "summary_secondary": "",
+      "title": "The reverts will continue until morale improves"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/cmj47yx572z5o?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "根據澤倫斯基顧問的說法，問題主要出在對俄羅斯彈道導彈襲擊的預警上，情報的接收不一致且有時非常延遲，導致居民沒有足夠時間躲避。美國白宮則否認情報共享有任何變化，國務卿馬爾科·盧比奧暗示這可能是「他們的早期預警系統」的軟體問題。",
+          "question": "美國與烏克蘭之間的情報共享具體出了什麼問題？"
+        },
+        {
+          "answer": "Starlink對移動單位的速度限制，降低了烏克蘭擊落來襲無人機的能力，也限制了對俄羅斯佔領區發動中程無人機襲擊。這嚴重影響了烏克蘭在戰場上的連接性、偵察和打擊能力。",
+          "question": "Starlink網路的限制對烏克蘭的軍事行動造成了哪些影響？"
+        },
+        {
+          "answer": "澤倫斯基的顧問貝斯克雷斯諾夫認為，情報分享和Starlink網路問題同時發生「可能」是美國施壓烏克蘭，促使其與俄羅斯進行談判並尋求妥協的蓄意舉動。儘管美方否認，但烏克蘭許多人懷疑這並非巧合。",
+          "question": "烏克蘭方面為何認為美國的行動可能是故意的？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-10-20-a47baae252",
+      "source": "BBC World News",
+      "summary": "烏克蘭總統澤倫斯基的重要顧問謝爾希·貝斯克雷斯諾夫向BBC表示，由於美國在俄羅斯彈道導彈襲擊預警情報分享方面不一致，烏克蘭人正在喪生，有些警報甚至在襲擊前幾分鐘才收到。他還指出，對烏克蘭軍事通訊和無人機行動至關重要的Starlink星鏈網路限制仍在持續，且沒有明確解釋。儘管澤倫斯基曾提及情報分享在三天暫停後已恢復，但貝斯克雷斯諾夫認為這些同時發生的問題可能是美國刻意施壓，要求烏克蘭與俄羅斯進行談判。美國白宮和川普政府否認有任何改變或介入，但此情況已導致重大生命損失並阻礙了烏克蘭的防禦工作。\n* 導彈襲擊預警時間不足導致生命損失。\n* Starlink網路限制影響了無人機防禦和進攻能力。",
+      "summary_secondary": "",
+      "title": "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/cx30ez03djyqo?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "最初的抗議源於學生對學校條件的不滿，但很快擴大到對燃油價格上漲、生活成本提高以及包括教育在內公共服務惡化等更廣泛的社會經濟問題。工會和各種抗議團體也加入了示威活動，導致參與人數激增，並進一步演變成大規模的暴力事件、縱火和商店搶劫。",
+          "question": "這些抗議活動是如何從學生訴求演變成全國性騷亂和搶劫的？除了學生最初的訴求，還有哪些主要因素加劇了這次的混亂？"
+        },
+        {
+          "answer": "經濟上，估計有超過2,000家商店和企業受到影響，損失高達數億歐元，許多店主對其生存感到絕望。社會上，騷亂導致了廣泛的公共秩序破壞、數千人被捕和數百名警察受傷。政府正考慮通過立法讓破壞者支付賠償，並為受影響的人提供部分失業補助，以減輕經濟衝擊並恢復社會秩序。",
+          "question": "這次騷亂對法國造成了哪些主要的經濟和社會影響？政府的應對措施預計將帶來什麼樣的後果？"
+        },
+        {
+          "answer": "法國近年來確實經歷過多次大規模社會運動，例如「黃背心」運動。這次騷亂與過往事件的相似之處在於它們都反映了民眾對生活成本、政府政策和社會不平等的深層次不滿。然而，這次事件的特點是其廣泛的地理分佈和快速升級的暴力程度，不僅在多個大城市爆發，還伴隨著嚴重的搶劫和設施破壞，導致當局需要實施宵禁來控制局面。",
+          "question": "法國近年來是否發生過類似規模的大規模抗議或騷亂？這次事件與過去的動盪有何不同或相似之處？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-10-20-7604d8c482",
+      "source": "BBC World News",
+      "summary": "法國當局在經歷週末全國各地騷亂和搶劫後，已對巴黎市中心部分地區及馬賽、波爾多、里昂等其他法國城市實施宵禁和禁止未經授權的集會。\n這些大規模騷亂最初由學生要求改善學校條件的抗議活動升級而來，現已擴大到對燃油價格上漲、生活成本和公共服務惡化等更廣泛的不滿。\n超過2,500人被捕，約1,000名警察受傷，逾2,000家商店和企業遭受數億歐元的損失，促使法國政府考慮動用緊急狀態權力並追究肇事者的賠償責任。\n重點：\n- 逾2,500人被捕，1,000名警察受傷。\n- 超過2,000家商店受損，損失達數億歐元。",
+      "summary_secondary": "",
+      "title": "Curfew imposed in parts of central Paris and other cities after rioting across France"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/centers-and-facilities/glenn/acoustics-software/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "這些軟體對於現代航空器設計至關重要，因為它們能幫助工程師在設計初期就預測並解決潛在的噪音問題。主要目標是開發更安靜、對環境影響更小的航空推進系統，以符合嚴格的噪音法規並提升乘客和周邊居民的生活品質。",
+          "question": "為什麼NASA格倫研究中心要投入大量資源開發這些飛機引擎噪音預測軟體？"
+        },
+        {
+          "answer": "以 MGBK 為例，它曾被用於分析渦輪風扇噴嘴邊緣鋸齒（稱為「雪佛龍」）的降噪效益，這些設計現在已廣泛應用於商業飛機引擎上。另外，V072 能協助工程師選擇最佳的葉片和導流葉片數量、轉子-定子間距等參數，以設計出低噪音的風扇級。",
+          "question": "這些噪音預測軟體如何具體應用於飛機引擎的設計改進上？"
+        },
+        {
+          "answer": "是的，文中明確指出這些軟體的副本可以透過NASA的軟體目錄（NASA’s Software Catalog）申請取得。這表示NASA鼓勵外部研究人員和工程師利用這些工具進行相關研究和開發，促進航空科技的進步。",
+          "question": "這些由NASA開發的噪音預測軟體是否對外開放？一般使用者或研究機構能否取得並使用？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-10-20-66ed15b5cc",
+      "source": "NASA Breaking News",
+      "summary": "美國太空總署（NASA）格倫研究中心的研究團隊開發了一系列先進軟體，旨在預測飛機引擎的噪音。這些工具如 JeNo、MGBK、V072、TFaNS 等，涵蓋了噴射噪音、轉子/定子交互作用噪音、螺旋槳噪音及多重純音噪音等多種噪音源，旨在協助工程師設計和分析新型及改良的航空推進系統以有效降低噪音。這些軟體對於航空器降噪設計至關重要，且可透過 NASA 的軟體目錄申請取得。\n- 涵蓋噴射引擎、渦輪風扇和螺旋槳等多種噪音來源的預測。\n- 提供從早期設計階段的快速估算到詳細物理建模的分析能力。",
+      "summary_secondary": "",
+      "title": "Software"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/centers-and-facilities/kennedy/nasa-improves-shock-vibration-analysis/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "火箭在升空時會經歷劇烈的振動、搖晃和彎曲，這些力量可能導致磨損甚至飛行失敗。提早預測和分析有助於在硬體製造前識別潛在的弱點和故障風險，確保敏感儀器和太空船的生存並提高任務成功率。",
+          "question": "為何在火箭發射前預測衝擊和振動如此重要？"
+        },
+        {
+          "answer": "過去工程師主要依靠經驗法則或擴展舊數據來估計衝擊和振動環境，這高度依賴工程判斷和簡單近似。新方法則利用標準化的有限元素建模工作流程，更全面、準確地視覺化結構行為，並能自動化複雜的分析，大大減少了手動建模的需求和時間。",
+          "question": "這種新的分析方法與過去的方式有何不同？"
+        },
+        {
+          "answer": "這種新方法不僅提高了任務安全性並節省了時間，還能促進知識共享、精進評估，並提高工程師對建模工具的熟練度。未來，它可持續協助NASA評估各種商業發射供應商的系統，並將其應用於更多地球觀測、行星探索等任務的太空船發射服務。",
+          "question": "這種改進的分析方法還有哪些更廣泛的益處或未來應用？"
+        }
+      ],
+      "read_minutes": 3,
+      "slug": "2026-10-20-c4df2f137f",
+      "source": "NASA Breaking News",
+      "summary": "NASA甘迺迪太空中心的發射服務計畫辦公室工程師們，改進了太空船和火箭的衝擊與振動分析方法。他們利用一種新的商用數位軟體工具，建立了標準化的有限元素建模工作流程，以確保硬體能承受發射時的極端環境。這項創新大幅強化了任務安全性，能提早識別潛在故障風險，並已首次成功應用於商業發射供應商的火箭認證，還節省了數個月的分析時間。\n\n- 該方法能在硬體製造前預測火箭和太空船的行為，有助於早期發現潛在的弱點和故障風險。\n- 團隊的應用還提供了關於運輸過程中衝擊問題的新見解。",
+      "summary_secondary": "",
+      "title": "NASA Improves Shock, Vibration Analysis"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/centers-and-facilities/glenn/acoustics-experimental-facilities/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "這些設施的主要目標是透過深入研究飛機引擎的空氣動力學和聲學特性，開發出更安靜的飛機設計與技術。這有助於降低飛機在起降和飛行過程中產生的噪音，從而有效減少機場周邊社區的噪音污染。",
+          "question": "這些實驗設施在減少航空噪音方面的主要目標是什麼？"
+        },
+        {
+          "answer": "AAPL 和 ATL 透過在牆壁和地板上安裝大量特殊設計的吸音材料（例如厚重的玻璃纖維楔形物）來實現無響或半無響環境。這些材料能有效吸收聲音並防止聲音反射，創造一個幾乎沒有迴聲的理想聲學測量空間，確保實驗結果的精確性和可靠性，不受外部噪音或室內反射的干擾。",
+          "question": "空氣聲學推進實驗室 (AAPL) 和聲學測試實驗室 (ATL) 如何實現「無響」或「半無響」環境，這對實驗為何重要？"
+        },
+        {
+          "answer": "SHJAR 被用於開發和應用先進的流場測量技術，例如雷射散射和粒子圖像測速法，以深入理解噴流亂流如何產生噪音。這些研究成果有助於驗證和改進電腦模擬噴射噪音的模型，最終目標是幫助工程師設計出更安靜的噴嘴，從而有效降低噴射機的噪音水平。",
+          "question": "小型熱噴流聲學實驗台 (SHJAR) 進行了哪些先進研究，最終能帶來什麼益處？"
+        }
+      ],
+      "read_minutes": 7,
+      "slug": "2026-10-20-ff1f34b4a5",
+      "source": "NASA Breaking News",
+      "summary": "NASA Glenn 研究中心的研究團隊利用一系列世界級的實驗設施，包括 9x15 低速風洞 (LSWT)、空氣聲學推進實驗室 (AAPL)、小型熱噴流聲學實驗台 (SHJAR) 和聲學測試實驗室 (ATL) 等，進行航空航天研究。\n這些設施主要用於研究飛機引擎的空氣動力學和聲學特性，旨在減少機場周邊社區的噪音、開發更安靜的航空器，並支援太空探索任務。\n\n* 設施如 9x15 LSWT 和 SHJAR 專注於飛機起降和噴射噪音的測量與減輕。\n* AAPL 是一個獨特的半無響或無響室，內含多種測試平台，用於引擎聲學測試。\n* ATL 則支援載人太空探索任務，例如量測國際太空站的噪音排放和太空船部件的聲學特性。",
+      "summary_secondary": "",
+      "title": "Experimental Facilities"
+    },
+    {
+      "category": "長文 Long Reads",
+      "has_full_text": true,
+      "link": "https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/",
+      "long_form": true,
+      "qa": [
+        {
+          "answer": "黎曼假設是一個關於黎曼zeta函數的非平凡零點都位於複數平面上實數部分為1/2的直線上。它與質數的分佈模式有著深刻的關係，解決它將能極大增進我們對質數如何稀疏分佈的理解。",
+          "question": "黎曼假設本身是什麼？它為何在數學界如此重要？"
+        },
+        {
+          "answer": "完整的黎曼假設主張所有非平凡零點都精確地落在1/2的直線上。而準黎曼假設則證明這些零點都包含在一個比0到1更窄的垂直帶內，例如1/12到11/12之間。雖然是較弱的結果，但其推論已足以帶來重大影響。",
+          "question": "準黎曼假設與完整的黎曼假設有何主要區別？"
+        },
+        {
+          "answer": "AI的證明並非發明新理論，而是透過發現既有數學工具和概念之間隱藏的聯繫，特別是利用了「亞純形式」和一個之前被忽視的函數族。這顯示AI在複雜的數學領域中，能以人意想不到的方式重新組合現有知識，推動解決長期未解的問題。",
+          "question": "AI是如何證明準黎曼假設的？這對AI在未來數學研究中的潛力有何啟示？"
+        }
+      ],
+      "read_minutes": 8,
+      "slug": "2026-10-20-d943a8df40",
+      "source": "Quanta Magazine",
+      "summary": "OpenAI於2026年10月宣布，其AI成功證明了「準黎曼假設」（quasi-Riemann hypothesis），這是數學界長期未解的黎曼假設的一個較弱版本，被譽為迄今為止AI在數學領域最重大的成就。此證明並未引入新概念，而是巧妙地連結了既有觀念，特別是利用了過去被忽視的「亞純形式」和函數族。這項突破將對數論、幾何學和理論電腦科學等領域產生深遠影響，儘管距離完全解決黎曼假設仍有距離，但已為數學研究帶來新視角。\n* 證明「準黎曼假設」意味著能更精確地理解質數的分佈。\n* AI的貢獻在於發現了現有工具和概念之間出乎意料的連接，而非創造全新理論。",
+      "summary_secondary": "",
+      "title": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now?"
+    },
+    {
+      "category": "長文 Long Reads",
+      "has_full_text": true,
+      "link": "https://aeon.co/essays/the-renaissance-gun-from-diabolical-device-to-popular-militias",
+      "long_form": true,
+      "qa": [
+        {
+          "answer": "傳統騎士精神強調近距離作戰和個人勇氣，而火器被視為懦弱的武器，因為它允許從遠距離殺戮，破壞了這些理想。當時的文學作品也常將其描繪成邪惡的發明，與傳統的英勇形象背道而馳。",
+          "question": "文章提到火器最初被認為「可怕」且「非男子氣概」，請問原因為何？"
+        },
+        {
+          "answer": "主要驅動力是法國和西班牙之間長期不斷的義大利戰爭（1494-1559），以及步兵在軍事上的重要性日益增加。這促使義大利各邦國建立和擴大公民民兵，統治者也積極推廣槍械擁有和射擊技能以應對公民防禦和軍事準備。",
+          "question": "16世紀義大利火器普及的主要驅動力是什麼？"
+        },
+        {
+          "answer": "槍械的普及促使男性氣概的定義從傳統的公民治理轉向更「粗獷、軍事化」的形象，尤其是在戰時。儘管如此，文化上對於火器的矛盾心態長期存在，許多槍械持有者是出於自衛或義務而被迫擁有，而非出於熱情或認可，這表明了人們對其複雜的情感。",
+          "question": "槍械普及如何影響了男性氣概和社會規範的觀念？人們對火器的文化態度是怎樣的？"
+        }
+      ],
+      "read_minutes": 17,
+      "slug": "2026-10-20-0980eea997",
+      "source": "Aeon",
+      "summary": "在16世紀的義大利，火器從最初被視為「可怕」、「非男子氣概」且具爭議性的「魔鬼發明」，逐漸演變成不可或缺的武器。這一轉變是由於連年戰事、步兵重要性增加，以及統治者為公民防禦和軍事準備而大力推廣民兵和射擊訓練所推動。\n*   精英階層將豪華槍枝作為地位象徵，融入藝術和宮廷文化。\n*   火器在社會各階層普及，用於狩獵、害蟲防治、自衛，甚至影響了男性氣概和統治形象的定義。",
+      "summary_secondary": "",
+      "title": "Horrible, unmanly, indispensable"
     }
   ]
 }

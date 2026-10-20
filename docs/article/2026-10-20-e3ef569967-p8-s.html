@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Putting Linux on my RTX Spark laptop because I don't have a Microsoft account</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-20-e3ef569967-p9.html">中</a><a href="2026-10-20-e3ef569967-p13-l.html">大</a><a class="pref-family" href="2026-10-20-e3ef569967-p8-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Putting Linux on my RTX Spark laptop because I don't have a Microsoft account</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 8 / 12 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://josie.lol/blog/linux-rtx-spark">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-20-e3ef569967-p7-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-20-e3ef569967-p9-s.html">下一頁 →</a>
+<span class="pager-num">第 8 / 12 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">I ran NVIDIA's Qwen3.8-Flash-Next-FP4-Local checkpoint through vLLM with B12X CUDA kernels in a native ARM64 container, using mixed quantization and FP8 KV cache. I turned off thinking for this run.</p>
+
+<p class="fulltext">Before loading the model, Linux reported 110.9 GiB of available RAM. vLLM logged 68.2 GiB for model loading and allocated another 21.1 GiB to the KV cache. That's nearly 90 GiB allocated to the model and KV cache on a laptop.</p>
+
+<p class="fulltext">Model loading and compilation took about 16 minutes before the first request. The timings below start after warmup. PLE embedding tables are backed by disk and benefit from a warm page cache; other components use CPU offload. CUDA handles inference, with some of the model outside GPU memory.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-20-e3ef569967-p7-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-20-e3ef569967-p9-s.html">下一頁 →</a>
+<span class="pager-num">第 8 / 12 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
