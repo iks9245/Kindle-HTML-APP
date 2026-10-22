@@ -1,240 +1,4 @@
 {
-  "2026-10-07": [
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "Lean是一種程式語言，專門用於編寫和驗證數學證明。使用Lean可以讓電腦自動檢查證明的邏輯正確性，確保AI生成的數學結果具有高度的精確性和可靠性。",
-          "question": "在這次成果發布中，為什麼特別使用Lean語言來編寫正式證明？"
-        },
-        {
-          "answer": "AI生成數學成果有望加速新發現，提供人類數學家新的視角和工具，並可能將他們從繁瑣的證明工作中解放出來，轉而專注於更高層次的數學問題。這同時也促使人們重新思考數學創造力的本質。",
-          "question": "AI生成數學成果對人類數學研究領域可能帶來哪些更深遠的影響？"
-        },
-        {
-          "answer": "該諮詢顧問小組是普林斯頓高等研究院（Institute for Advanced Study）的「數學與人工智慧獨立諮詢小組」。他們為AI數學成果的分享提供了最佳實踐和公共建議，指導了這次成果發布的方式，以確保負責任的科學傳播。",
-          "question": "文章中提及的「諮詢顧問小組」具體是指哪個機構，他們在此次成果發布中扮演了什麼角色？"
-        }
-      ],
-      "read_minutes": 2,
-      "slug": "2026-10-07-6e2c593ea4",
-      "source": "Hacker News",
-      "summary": "一家AI研究機構近期公開了其內部尖端模型所產生的一系列全新數學研究成果，旨在推動數學領域的知識前沿。這些成果被發佈在GitHub儲存庫上，並提供以Lean語言編寫的正式證明，供電腦驗證。為提升科學透明度與開放性，該機構同步公開了模型的推理過程摘要及計算資源消耗等詳細資訊，未來計畫資助一系列研討會以促進理解。他們也表示，將負責任地釋出該數學模型，並持續改進成果發布標準。\n- 成果發布於GitHub，包含以Lean語言編寫的正式證明。\n- 為透明化，公開了模型推理過程摘要及運算資源消耗（約3小時ChatGPT Pro運算量）。",
-      "summary_secondary": "",
-      "title": "Sharing AI progress in mathematics"
-    },
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://developers.openai.com/api/docs/guides/decisions",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "Decisions API 專注於快速返回特定類型的答案，如判斷式、選擇式或分數式，以用於分類和優先排序。相較之下，Responses API 結合結構化輸出是用於根據自定義 JSON 結構生成物件，例如提取特定欄位或書面解釋，而函式調用則是模型調用外部工具的機制。",
-          "question": "Decisions API 與現有的 Responses API 或其他結構化輸出方法有何不同？"
-        },
-        {
-          "answer": "Decisions API 可廣泛應用於自動化決策過程。例如，它可以自動檢查產品照片是否有可見損壞、將客戶投訴路由到正確的部門，或根據嚴重程度對客戶服務工單進行優先級排序，從而提高效率並減少人工干預。",
-          "question": "Decisions API 在實際應用中有哪些潛在用途？"
-        },
-        {
-          "answer": "目前，Decisions API 僅支援 gpt-6-luna 模型。對於圖像輸入，它們必須是內聯的 Base64 資料 URL；此端點不支援託管的 HTTP 或 HTTPS 圖像 URL，也不支援 file_id 輸入。這確保了處理過程的效率和安全性。",
-          "question": "使用 Decisions API 有哪些特定的限制或要求，尤其是在輸入類型或模型方面？"
-        }
-      ],
-      "read_minutes": 6,
-      "slug": "2026-10-07-a585154abd",
-      "source": "Hacker News",
-      "summary": "Decisions API 現已進入公開測試階段，能夠比 Responses API 快 10 倍的速度評估文字、圖像或兩者，並返回類型化的答案，用於內容分類、請求路由和工作優先排序。\n此 API 提供三種問題類型：判斷式 (predicate) 用於檢查條件的真實機率、選擇式 (choice) 用於從固定選項中選取一個、分數式 (score) 用於依據評分標準進行評級。\n\n* 目前僅支援 gpt-6-luna 模型。\n* 計費方式為按輸入代幣計費，不收取快取讀寫或輸出代幣費用。",
-      "summary_secondary": "",
-      "title": "Decisions API is in public beta"
-    },
-    {
-      "category": "科技 Tech",
-      "has_full_text": true,
-      "link": "https://arstechnica.com/tech-policy/2026/10/paramount-completes-111b-warner-merger-creating-skydance-behemoth/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "該訴訟認為，此次合併將大幅減少競爭並違反反壟斷法。具體而言，它提出了對電影發行和基本有線電視頻道授權的擔憂，這些問題在最終的和解協議中得到了解決。",
-          "question": "加州及其他州對此次合併提出的主要反壟斷擔憂是什麼？"
-        },
-        {
-          "answer": "和解協議要求對國內電影的投資和發行設定一定的最低門檻。它還規定，兩個實體的基本有線電視資產分銷必須繼續進行獨立談判，以減輕競爭方面的擔憂。",
-          "question": "為了解決反壟斷問題，和解協議包含了哪些內容？"
-        },
-        {
-          "answer": "新的 Skydance 公司結合了兩大電影製片廠、Paramount+ 和 HBO Max 等串流媒體服務、CBS 和 CNN 等電視網路，以及 CBS Sports 和 TNT Sports 等體育節目組合，還有龐大的節目庫和廣泛的品牌與特許經營權。",
-          "question": "新成立的 Skydance 公司合併了哪些資產？"
-        }
-      ],
-      "read_minutes": 2,
-      "slug": "2026-10-07-7bac83ddcb",
-      "source": "Hacker News",
-      "summary": "今天，Paramount Skydance 和 Warner Bros. Discovery 完成了價值 1110 億美元的合併，成立了一家名為 Skydance 的新媒體巨頭。儘管最初因反壟斷問題面臨來自加州及其他 11 個州的訴訟，但該交易在和解協議獲得聯邦法官批准且最高法院法官駁回了最後一刻阻止交易的嘗試後最終敲定。這將創建一個龐大的實體，結合了主要的電影製片廠、如 Paramount+ 和 HBO Max 等串流服務，以及 CBS 和 CNN 等新聞和體育網路，顯著重塑了娛樂版圖。\n*   新公司沿用「Skydance」之名。\n*   合併匯集了大量的內容，包括兩家主要電影製片廠和知名的串流/電視服務。",
-      "summary_secondary": "",
-      "title": "Paramount Skydance has completed its $111B merger with Warner Bros. Discovery"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/c8kgezxn54qko?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "派克因在1995年與當時的男友一起毆打、折磨並殺害19歲的科琳·斯萊默而被判死刑。她們是在一個問題青少年職業培訓營中認識斯萊默的。",
-          "question": "克莉絲塔·派克為何被判死刑？"
-        },
-        {
-          "answer": "州當局尚未說明是否會再次嘗試處決派克。然而，田納西州州長已暫停了今年剩餘的所有處決，以調查此次失敗的執行。",
-          "question": "田納西州當局是否會再次嘗試處決派克？"
-        },
-        {
-          "answer": "專家推測，致命藥物戊巴比妥可能未進入派克的血液循環，而是擴散到皮膚下方的組織中。她的案例獨特之處在於，她被注入了毒物卻仍存活，這在有記錄的死刑執行歷史上是前所未有的。",
-          "question": "這次處決失敗的原因可能為何？她的案例為何如此獨特？"
-        }
-      ],
-      "read_minutes": 3,
-      "slug": "2026-10-07-f17b197cdb",
-      "source": "BBC World News",
-      "summary": "美國死囚克莉絲塔·派克（Christa Pike）上週在田納西州經歷兩次失敗的致命注射後倖存下來，目前已清醒並能說話。她的律師表示，這是醫學上「前所未有」的恢復，因為據信她是唯一在毒物被注入體內後仍能存活的死囚。此事件促使田納西州州長比爾·李（Bill Lee）暫停了今年所有處決，該州監獄負責人也計劃辭職。\n* 派克因在1995年謀殺科琳·斯萊默（Colleen Slemmer）而被判死刑。\n* 這是唯一一起在毒物被注入犯人體內後仍未能成功執行死刑的案例。",
-      "summary_secondary": "",
-      "title": "US death row inmate Christa Pike awake and speaking after failed execution, lawyers say"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/c8x23706pvz3o?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "這些抗議活動最初於9月中旬在巴黎北部的塞納-聖但尼省爆發，導火線是學生們對教室過度擁擠、師資短缺以及學校建築破舊的不滿。這股不滿隨後迅速蔓延至全國各地甚至大學。",
-          "question": "引發這些抗議活動的核心不滿是什麼？"
-        },
-        {
-          "answer": "法國總理塞巴斯蒂安·勒科爾尼譴責了先前的暴力行為，並指責激進左翼政黨試圖製造混亂。教育部長愛德華·傑弗雷呼籲對話而非封鎖學校，但政府提出的解決方案，如設置申訴網站和校內討論，迄今未能平息學生的不滿。政府已逮捕數千人，但尚未有效回應核心訴求。",
-          "question": "法國政府對這些抗議和學生訴求有何回應？"
-        },
-        {
-          "answer": "警方在示威活動中被指控使用「過度武力」，引起了廣泛關注，目前有多起學生受重傷的案件正在調查。例如，一名警察因向學生發射催淚瓦斯導致其下顎骨折而被起訴，另一起事件中，一名15歲學生的手因手榴彈爆炸而斷裂，這些事件引發了對警方武器使用和戰術的質疑。",
-          "question": "在這些抗議活動中，警方的行動引發了哪些主要疑慮？"
-        }
-      ],
-      "read_minutes": 4,
-      "slug": "2026-10-07-d6af80cd86",
-      "source": "BBC World News",
-      "summary": "週二，法國各地爆發大規模抗議活動，數十萬高中生、大學生、家長及工會成員走上街頭，要求政府提供更多學校資源、改善校園環境並減少警察鎮壓。抗議活動已進入「第三幕」，並在巴黎和馬賽等城市與警方發生衝突，警方動用了催淚瓦斯。此事件不僅暴露了法國教育體系的問題，也引發了警方「過度武力」的爭議，多名學生在衝突中受重傷，政府面臨巨大壓力。\n\n關鍵訴求：\n• 改善學校設施破舊、教室擁擠、師資不足等問題。\n• 譴責警方在示威活動中使用武力導致學生受傷。",
-      "summary_secondary": "",
-      "title": "Tear gas in Paris and Marseille as school protests grow across France"
-    },
-    {
-      "category": "國際 World",
-      "has_full_text": true,
-      "link": "https://www.bbc.co.uk/news/articles/c58jzyer1kr0o?at_medium=RSS&at_campaign=rss",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "根據德國聯邦檢察官辦公室的聲明，目前尚未揭露涉嫌參與此案的具體外國勢力名稱。這類資訊在調查初期通常會保密，以避免影響案件進展或牽涉國際關係。",
-          "question": "根據報導，涉嫌參與此案的外國勢力有哪些？"
-        },
-        {
-          "answer": "是的，德國聯邦情報局並非首次面臨此類爭議。2023年，一名高級情報官員卡斯滕·L（Carsten L）因涉嫌向俄羅斯洩露包括烏克蘭戰爭情報在內的國家機密而被控叛國罪，其審判仍在進行中。",
-          "question": "德國聯邦情報局（BND）過去是否也曾發生類似的間諜醜聞？"
-        },
-        {
-          "answer": "據報導，漢寧涉嫌持有情報文件的情況是在另一起與德國牛排館女繼承人克莉絲汀娜·布洛克（Christina Block）相關的案件調查中浮出水面。調查人員在調查布洛克的綁架指控時，意外發現了一個包含敏感BND文件在內的電子數據儲存設備。",
-          "question": "奧古斯特·漢寧涉嫌的間諜行為是如何被發現的？"
-        }
-      ],
-      "read_minutes": 2,
-      "slug": "2026-10-07-6b094b95e2",
-      "source": "BBC World News",
-      "summary": "前德國聯邦情報局（BND）局長奧古斯特·漢寧（August Hanning）因涉嫌為外國勢力從事間諜活動、叛國罪及獲取機密資訊而被捕。檢察官指控他利用機密情報為一外國情報機構起草分析報告，並與另一外國情報機構保持聯繫。同時，前BND員工曼弗雷德·D（Manfred D）也因涉嫌提供約2,000份機密文件給漢寧以換取報酬而被捕。\n這起事件突顯了德國國家安全面臨的嚴峻挑戰，尤其考慮到這並非BND首次捲入類似的叛國爭議。\n- 檢方尚未揭露涉案的外國勢力名稱。\n- 漢寧的涉案是在另一起與綁架案相關的調查中浮出水面。",
-      "summary_secondary": "",
-      "title": "Former German spy chief arrested for espionage and treason"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://www.nasa.gov/news-release/nasa-to-cover-northrop-grumman-crs-24-spacecraft-departure/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "Cygnus XL飛船在此次CRS-24任務中，為國際太空站運送了超過11,000磅的補給品、科學實驗設備及其他貨物。這些物資對於維持太空站的日常運作以及進行各項科學研究至關重要。",
-          "question": "Cygnus XL飛船在本次任務中主要為國際太空站運送了哪些物資？"
-        },
-        {
-          "answer": "Cygnus XL飛船在離開國際太空站後，會裝載數千磅的廢棄物品和不再需要的貨物。它將於10月11日執行離軌任務，進行破壞性再入地球大氣層，屆時會安全地焚毀，因此NASA不提供此過程的直播。",
-          "question": "Cygnus XL飛船在完成任務後是如何處理廢棄物的？"
-        },
-        {
-          "answer": "CRS-24任務屬於NASA的「商業補給服務」（Commercial Resupply Services）計畫。這項計畫讓NASA能與像諾斯洛普·格魯曼這樣的私人公司合作，提供國際太空站的貨運服務，極大地降低了NASA自身的運輸成本，並確保了太空站的持續物資供應。",
-          "question": "諾斯洛普·格魯曼的CRS-24任務屬於什麼樣的計畫？這類商業補給服務對NASA有何重要性？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-10-07-ba88867a5f",
-      "source": "NASA Breaking News",
-      "summary": "NASA將於10月9日週五直播諾斯洛普·格魯曼的Cygnus XL貨運飛船（CRS-24任務）從國際太空站（ISS）脫離的過程。這艘飛船此前已為NASA運送超過11,000磅的補給與科學實驗品至ISS，目前裝載著廢棄物品，將於10月11日週日執行破壞性再入大氣層任務，安全焚毀。此次任務凸顯了商業補給服務在太空站運作中的關鍵作用。\n\n* 脫離操作由國際太空站的加拿大臂2執行，並由太空人路克·德萊尼監控。\n* 該飛船於4月11日由SpaceX的獵鷹9號火箭發射升空。",
-      "summary_secondary": "",
-      "title": "NASA to Cover Northrop Grumman CRS-24 Spacecraft Departure"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/lunar-grounding-challenge/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "月球南極因其獨特的地理位置，擁有許多長期處於陰影中的區域（包括永久陰影區，PSRs）。在這些黑暗區域，太空衣缺乏環境離子通量和光電發射來平衡電子收集，導致負電荷累積問題更為嚴重，大幅增加了靜電放電的風險。",
-          "question": "為何月球南極特別被提及為問題區域？"
-        },
-        {
-          "answer": "在地球上，靜電通常透過接地線、利用空氣濕度或使用導電材料來消散。太空船則可能透過與周圍電漿環境接地或設計導電路徑來管理靜電。然而，月球缺乏大氣層和濕度，且其獨特的表面粉塵、真空和電漿環境，使得這些傳統方法可能不足以安全有效地解決問題。",
-          "question": "地球上或太空環境中，處理靜電通常有哪些方法？這些方法為何可能不適用於月球？"
-        },
-        {
-          "answer": "NASA可能期待從材料科學、系統設計和操作流程等多方面尋找解決方案。這可能包括開發新型抗靜電太空衣材料、設計用於太空衣或著陸器上的主動放電或中和裝置、或是制定一套在太空人與著陸器接觸前能安全消散電荷的標準操作程序。",
-          "question": "美國太空總署可能期待哪些類型的創新解決方案來應對此挑戰？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-10-07-201cc542a7",
-      "source": "NASA Breaking News",
-      "summary": "美國太空總署（NASA）正透過「月球接地挑戰」，尋求創新方案來解決太空人在月球南極進行艙外活動（EVA）時，太空衣因摩擦和電漿充電累積高負電荷的問題。尤其在月球陰影區和永久陰影區（PSRs）此問題更為嚴重，導致太空衣積聚顯著的負電位。當太空人帶著高電壓的太空衣返回略帶正電的著陸器時，極端的電壓差可能引發危險的靜電放電（ESD），這不僅會損壞太空衣和敏感電子設備，更威脅氧氣環境並可能對太空人造成電擊。該挑戰目標是在太空人接觸著陸器前，安全及時地中和其太空衣上的電荷，以確保未來月球任務的安全。\n\n重點提示：\n• 靜電累積在月球表面行走及進入陰影區時尤為嚴重。\n• 未解決的靜電放電會對太空人、太空衣及著陸器造成嚴重風險。",
-      "summary_secondary": "",
-      "title": "Lunar Grounding Challenge"
-    },
-    {
-      "category": "科學 Science",
-      "has_full_text": true,
-      "link": "https://science.nasa.gov/earth/earth-observatory/october-2026-satellite-puzzler/",
-      "long_form": false,
-      "qa": [
-        {
-          "answer": "參與者可以提供關於拍攝影像的衛星和儀器、使用的光譜波段，或者指出該地區地質或歷史的細微細節。分享該地點對個人的意義或任何引人注目的特點也會受到歡迎。",
-          "question": "除了猜測地點之外，參與者還可以提供哪些資訊來「打動」NASA？"
-        },
-        {
-          "answer": "這項挑戰旨在鼓勵公眾深入觀察地球影像，提高他們對地球科學和衛星觀測的興趣。透過互動式的「拼圖」形式，NASA 希望能讓更多人參與了解我們地球的獨特之處。",
-          "question": "NASA Earth Observatory 舉辦這項每月挑戰的主要目的是什麼？"
-        },
-        {
-          "answer": "提交答案後，NASA Earth Observatory 會在大約一週後公布正確答案。他們會在頁面頂部揭示答案，並連結至一篇詳細解釋該影像的「每日地球觀測影像」故事，同時表揚第一位猜對者和分享特別見解的讀者。",
-          "question": "參與者提交答案後會發生什麼？正確答案何時公布？"
-        }
-      ],
-      "read_minutes": 1,
-      "slug": "2026-10-07-78631d1f1f",
-      "source": "NASA Breaking News",
-      "summary": "NASA Earth Observatory 每月推出一項「衛星拼圖」挑戰，而「2026 年 10 月拼圖」現已發布，邀請全球讀者辨識一張衛星影像中所示的地球地點。參與者需透過指定表格提交答案，並可分享辨識線索、該地的獨特之處，甚至提供拍攝影像的技術細節。此活動旨在提升大眾對地球觀測和科學的興趣，成功解答者將獲得「拼圖吹牛權」及可能在官方頁面被表揚。答案將於約一週後公布，並附有詳細的影像解釋。",
-      "summary_secondary": "",
-      "title": "October 2026 Satellite Puzzler"
-    }
-  ],
   "2026-10-08": [
     {
       "category": "科技 Tech",
@@ -3797,6 +3561,294 @@
       "summary": "法國哲學家布魯諾·拉圖爾（Bruno Latour）挑戰了將「自然」與「人工」或「人造」嚴格劃分的傳統觀點。他認為這種劃分是一種道德判斷而非本體論的區分，將自然視為好的，而其對立面則為壞的。拉圖爾建議，我們應重新思考世界不僅由人類行動者所影響，也居住著其他具有能動性的存在，這意味著自然與人類世界比我們通常認為的更加糾纏不清。這段影片與加泰隆尼亞導演的視覺作品結合，具體呈現了拉圖爾所質疑的這種界線崩潰，暗示兩者之間的緊密交織。\n\n要點：\n- 質疑「自然」與「人工」的二元對立\n- 強調非人類能動性與世界萬物的糾纏性",
       "summary_secondary": "",
       "title": "A vocabulary for the future: nature"
+    }
+  ],
+  "2026-10-22": [
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "環境變數是用於儲存程式運行所需配置資訊的變數，例如資料庫連線字串、API 金鑰或第三方服務憑證。在 Railway 平台上，這些變數對於應用程式安全地存取外部服務和資源至關重要，因此其洩露會構成嚴重的安全風險。",
+          "question": "環境變數是什麼？為什麼它們在 Railway 這樣的平台中如此重要？"
+        },
+        {
+          "answer": "Railway 強烈建議所有使用者除了立即輪換所有環境變數、API 金鑰和私有登錄憑證外，還要檢查使用這些服務的日誌是否有異常活動。這有助於及早發現任何潛在的未經授權存取或濫用。",
+          "question": "除了輪換環境變數之外，Railway 還建議使用者採取哪些額外措施來應對此安全事件？"
+        },
+        {
+          "answer": "這次攻擊被認為是針對平台公司以破壞 AI 推理提供商的一系列攻擊的一部分，這表明攻擊者可能試圖利用這些平台的計算能力或資料來進行惡意 AI 模型訓練、資料竊取或繞過安全機制。這可能導致資料外洩、服務中斷或進一步的網路攻擊。",
+          "question": "為什麼這次攻擊特別針對「AI 推理提供商」？這對受影響的平台或使用者有什麼潛在影響？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-10-22-5699ea0146",
+      "source": "Hacker News",
+      "summary": "Railway 於 10 月 21 日星期三偵測到其客戶環境變數儲存系統存在異常活動。初步調查顯示，未經授權的第三方可能已存取並解密部分加密的環境變數，這些變數可能包含 API 金鑰或資料庫憑證等機密。\n此次事件被認為是一系列針對平台公司以破壞 AI 推理提供商的攻擊之一，Railway 已建議所有使用者預防性地立即輪換所有環境變數，以保護其系統。\n此外，Railway 已暫停所有部署功能，以利進行全面調查，並將直接通知受影響的客戶。\n\n關鍵點：\n* 建議所有使用者立即輪換所有環境變數，包括 API 金鑰和私有登錄憑證。\n* 所有部署已暫停，使用者目前無法發布新版本。",
+      "summary_secondary": "",
+      "title": "Railway Security Disclosure"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://claude.com/product/claude-duet",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "一般的 Claude 應用程式等待使用者開啟聊天並與其協作，而 Claude Duet 則會主動提供每日簡報，根據訊息接收任務，並在任務完成或需要批准時聯繫使用者，更具自主性。",
+          "question": "Claude Duet 與一般的 Claude 應用程式有何主要區別？"
+        },
+        {
+          "answer": "它能承擔許多營運工作，例如查找未支付的發票並草擬提醒，準備薪資供審閱，以及預備合同以供發送。它也能整理簡報、提案或儀表板。",
+          "question": "Claude Duet 在企業營運方面能具體處理哪些任務？"
+        },
+        {
+          "answer": "在研究預覽期間，Claude Duet 會與您的 Claude 服務共享使用限制，其背景檢查也計入其中。此外，它可能會誤讀對話串，誤判緊急性，或錯過在檢查間隔期間到達的某些資訊。",
+          "question": "在研究預覽階段，Claude Duet 有哪些已知的限制或潛在問題？"
+        }
+      ],
+      "read_minutes": 2,
+      "slug": "2026-10-22-5dbb54a005",
+      "source": "Hacker News",
+      "summary": "Claude Duet 是一個由 Opus 5.5 驅動的預防性 AI 代理人，旨在理解用戶需求並主動處理任務。它能提供每日簡報、草擬後續步驟、管理業務操作如發票和薪資，並在用戶不在時持續工作，直到需要批准時才通知。\n目前，此服務在美國以研究預覽的形式，透過等候名單提供給 Claude Pro 和 Max 訂閱者。\n主要特點：\n- 主動處理訊息、會議安排、儀表板建立等任務。\n- 專為判斷力設計，並確保敏感操作的隱私和安全。\n- 可透過 iOS/Android 應用程式或網頁版使用。",
+      "summary_secondary": "",
+      "title": "Claude Duet"
+    },
+    {
+      "category": "科技 Tech",
+      "has_full_text": true,
+      "link": "https://aws.amazon.com/security/security-bulletins/2026-143-aws/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "這些是允許遠端程式碼執行的嚴重安全漏洞。攻擊者無需身份驗證即可透過特製的網頁請求來利用這些漏洞，進而可能在受影響的 PHP 運行時上執行任意程式碼、讀取敏感資料或造成服務阻斷。這類問題通常與不安全的輸入處理有關。",
+          "question": "這些 PHP 漏洞 (CVE-2026-109618 及 CVE-2026-109619) 的具體性質是什麼？"
+        },
+        {
+          "answer": "AWS 服務本身並未受到這些漏洞的直接影響。然而，在 AWS 環境（例如 Elastic Beanstalk、Amazon Linux 或 Lightsail）中部署並使用受影響 PHP 版本的客戶則會受到影響。客戶應根據其所使用的 AWS 服務，遵循相關指南進行 PHP 版本升級或應用 AWS 提供的緩解措施。",
+          "question": "AWS 服務本身是否受到這些漏洞的影響？客戶需要採取哪些行動？"
+        },
+        {
+          "answer": "對於已終止支援且沒有上游修復程式的 PHP 版本 (5.4-8.1)，唯一的完整解決方案是立即將應用程式遷移到受支援且已修復的 PHP 版本分支。雖然可以應用一些臨時的配置控制措施來減少部分漏洞的影響，但這不是全面的保護，且 CVE-2026-109618 在 EOL 分支上沒有任何修復方案。",
+          "question": "對於使用已終止支援 (EOL) PHP 版本的用戶，應如何應對這些未獲修復的漏洞？"
+        }
+      ],
+      "read_minutes": 3,
+      "slug": "2026-10-22-da87a51a53",
+      "source": "Hacker News",
+      "summary": "Amazon Web Services (AWS) 於 2026 年 10 月 21 日發布安全公告，指出 PHP 網頁執行時環境中存在兩個嚴重漏洞 (CVE-2026-109618 和 CVE-2026-109619)。這些漏洞允許未經身份驗證的攻擊者透過特製的網頁請求，在受影響的系統上執行任意程式碼、存取資料或導致服務阻斷，對客戶應用程式構成重大風險。\n受影響的客戶應立即將 PHP 升級至已修復的版本（例如 8.5.12、8.4.27、8.3.36 或 8.2.35），而使用已終止支援版本的客戶則需儘速遷移至受支援的分支。\n- AWS 已針對其部分服務（如 Elastic Beanstalk、Amazon Linux）提供修復或緩解措施。\n- 建議客戶同時考慮使用 AWS WAF 等彌補性控制措施。",
+      "summary_secondary": "",
+      "title": "PHP web runtimes (CVE-2026-109618 and CVE-2026-109619)"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "美國總統川普曾多次表示他能結束這場戰爭，並由其特使維特科夫和庫什納發起此次外交斡旋。然而，川普的立場引發爭議，他曾解除對俄羅斯的制裁，並指責烏克蘭襲擊俄羅斯煉油廠導致油價上漲，同時也質疑烏克蘭領導層。",
+          "question": "川普政府的特使為何在此時介入俄烏和談？川普對於俄烏衝突的立場是什麼？"
+        },
+        {
+          "answer": "烏克蘭總統澤倫斯基表示，他願意接受沿當前戰線凍結衝突的協議，並在之後討論烏克蘭的安全保障。俄羅斯方面則強調，和談必須著重於衝突結束後為俄羅斯和烏克蘭建立一個安全體系，並宣稱俄軍在前線擁有「戰略主動權」。",
+          "question": "俄羅斯和烏克蘭對於結束衝突的主要條件或談判重點是什麼？"
+        },
+        {
+          "answer": "最大的挑戰在於雙方仍持續的軍事衝突，基輔在和談消息傳出後仍遭導彈襲擊就是明證。此外，美國與烏克蘭之間因情報共享、星鏈網路限制以及川普政府的制裁政策等問題，也存在日益加劇的爭執，這些都可能阻礙和平進程的推進。",
+          "question": "儘管有和談的努力，當前俄烏和平前景面臨哪些主要挑戰？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-10-22-020c23c278",
+      "source": "BBC World News",
+      "summary": "美國總統川普的特使史蒂夫·維特科夫（Steve Witkoff）在會見烏克蘭總統澤倫斯基後，於週三在聖彼得堡與俄羅斯總統普丁會面，推動俄烏和平談判。儘管俄羅斯原則上同意重啟和談，並有新一輪會談的提議，烏克蘭首都基輔卻在同一晚遭到導彈襲擊，造成六人受傷。這起事件凸顯了在美國外交斡旋下，和平進程依然困難重重，衝突仍在持續。烏克蘭總統澤倫斯基已表示，他願意接受沿當前戰線凍結衝突的協議。",
+      "summary_secondary": "",
+      "title": "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/cm98zn5j89kdo?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "不，這篇文章指的是美國前總統川普的特使，而不是現任拜登政府的官方代表。川普及其團隊似乎正在獨立進行外交努力，反映他個人對結束戰爭的承諾以及對澤倫斯基總統的批評態度，與美國現行外交政策可能有所不同。",
+          "question": "文章中提到「川普總統的特使」史蒂夫·維特科夫，這是在暗示美國政府的官方立場嗎？"
+        },
+        {
+          "answer": "這對烏克蘭來說意味著冬季戰事可能會更加艱難。普丁可能利用寒冷天氣和烏克蘭防空系統的壓力，加大對烏克蘭基礎設施的攻擊，試圖迫使其屈服，導致戰爭進一步延長且平民遭受更多苦難。",
+          "question": "如果普丁目前不覺得結束戰爭有壓力，並認為冬季有利於俄羅斯，這對烏克蘭局勢可能意味著什麼？"
+        },
+        {
+          "answer": "這次潛在的「新雅爾達」會議，指的是普丁、川普和習近平可能在中國舉行的會晤，被視為一場重塑全球地緣政治格局的重要事件。如果成真，它將把普丁推向全球政治的頂端，並可能暗示一個由這三大強權主導的國際秩序，如同1945年雅爾達會議規劃戰後歐洲一樣，對國際關係產生深遠影響。",
+          "question": "文章中提及「新雅爾達」會議，普丁、川普和習近平這三位領導人可能在中國會面，這場會晤有何重要意義？"
+        }
+      ],
+      "read_minutes": 3,
+      "slug": "2026-10-22-4a38058068",
+      "source": "BBC World News",
+      "summary": "美國前總統川普的特使史蒂夫·維特科夫（Steve Witkoff）近期在挪威奧斯陸與烏克蘭總統澤倫斯基及歐洲代表會談後，又前往俄羅斯聖彼得堡會晤俄羅斯總統普丁，試圖推動烏克蘭和平進程。然而，俄方對會談成果表示不滿，普丁亦無意與澤倫斯基舉行領袖級會晤，使得短期內達成烏克蘭和平的可能性微乎其微。普丁目前似乎未感受到結束戰爭的壓力，反而可能利用烏克蘭防空系統的困境及即將到來的冬季擴大攻勢。\n*   美國前總統川普的特使進行外交斡旋，但俄方反應冷淡，未能促成即時和平。\n*   普丁不急於結束戰爭，並可能利用冬季形勢擴大戰果。\n*   未來普丁、川普和習近平可能在中國舉行會談，被稱為「新雅爾達」，對全球政治影響深遠。",
+      "summary_secondary": "",
+      "title": "Rosenberg: US diplomatic push offers little hope for imminent Ukraine peace"
+    },
+    {
+      "category": "國際 World",
+      "has_full_text": true,
+      "link": "https://www.bbc.co.uk/news/articles/ckjrw044ggxgo?at_medium=RSS&at_campaign=rss",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "這些騷亂最初是因生活成本抗議活動而起，隨後又發生了學生對高中狀況不滿的數週抗議。馬克宏總統將大部分麻煩歸咎於「極左派邊緣團體的煽動者」。",
+          "question": "法國騷亂的起因為何？"
+        },
+        {
+          "answer": "這類干預不僅可能加劇社會動盪，混淆公眾視聽，更可能破壞國家內部穩定與民主進程。它也使得公民難以辨別真相，進而影響國際關係與公眾對政府的信任。",
+          "question": "外國勢力利用AI和假新聞操弄國內騷亂，可能帶來哪些深遠影響？"
+        },
+        {
+          "answer": "其中一個例子是俄羅斯「Matryoshka」行動散播假新聞影片，這些影片模仿法國真實新聞媒體的品牌。另一個案例是一個聲稱巴黎老夫婦遭搶劫的AI生成圖片，由Infos-Israel.News製作，但該事件未經證實，且圖片在社群媒體上廣傳時，許多轉發者並未標明其為AI生成。",
+          "question": "文章中提到的假訊息活動或AI生成內容有哪些具體例子？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-10-22-643456b192",
+      "source": "BBC World News",
+      "summary": "法國總統馬克宏指控部分外國領導人，包含以色列總理納坦雅胡和美國前總統川普，利用近期法國各地發生的騷亂，透過不實訊息和AI生成影片進行政治操作，以圖利其國內選舉。他強調，騷亂本身雖無明顯外國干預，但後續資訊被嚴重操弄，導致諸如「極端伊斯蘭入侵」等不實言論散播。此事件凸顯了假訊息對國際關係及公眾認知的潛在衝擊。\n- 歐盟監管機構正在調查俄羅斯、伊朗和阿爾及利亞等國家可能參與的線上干預與假訊息宣傳活動。\n- 具體案例包括俄羅斯「Matryoshka」行動散播假新聞影片，以及一個聲稱巴黎老夫婦遭搶劫的AI生成圖片被廣泛傳播且未標明出處。",
+      "summary_secondary": "",
+      "title": "Macron accuses foreign leaders of exploiting French riots"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/image-article/rs-25-engine-test-in-support-of-future-artemis-missions/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "阿提米絲計畫是NASA旨在將人類（包括第一位女性和有色人種）送回月球表面，並為未來火星任務奠定基礎的計畫。SLS火箭是目前世界上最強大的火箭，用於將獵戶座（Orion）太空船和貨物送往月球軌道，而四具RS-25引擎則是SLS火箭發射時提供主要推力的關鍵組件。",
+          "question": "阿提米絲（Artemis）計畫的目標是什麼？SLS火箭和RS-25引擎在其中扮演了什麼角色？"
+        },
+        {
+          "answer": "這次測試雖然使用的是發展型引擎，但其主要目的是驗證新的飛行組件和熱防護系統，並收集在極端條件下的性能數據。這些數據對於提升未來用於實際飛行任務的量產型RS-25引擎的性能、可靠性及安全性至關重要，有助於阿提米絲任務的成功。",
+          "question": "既然這次測試的RS-25引擎不會用於實際飛行，為何還要進行如此長時間且高推力的測試？"
+        },
+        {
+          "answer": "「111%推力水平」指的是RS-25引擎在發射時所需達到的最大推力輸出，以確保SLS火箭能夠將太空船有效載荷送入軌道。對新生產的RS-25引擎來說，達到並驗證這一高推力水平，證明了它們在嚴苛發射環境下的可靠性和性能，是其被接受用於未來阿提米絲任務的必要條件。",
+          "question": "文章中提到的「111%推力水平」代表什麼意義？它對於新生產的RS-25引擎有何重要性？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-10-22-cf37dcb56b",
+      "source": "NASA Breaking News",
+      "summary": "美國國家航空暨太空總署（NASA）於10月21日在密西西比州的史丹尼斯太空中心，成功測試了編號10001的RS-25發展型引擎，為未來的阿提米絲（Artemis）登月任務提供支援。該引擎點火了約八分半鐘（500秒），並達到111%的推力水平，模擬太空發射系統（SLS）火箭的實際升空條件。此次測試旨在驗證飛行組件和新的熱防護系統，並收集關鍵數據以提升未來生產引擎的性能和可靠性，確保SLS火箭能順利將獵戶座（Orion）太空船送入軌道。\n\n• 這次測試的RS-25發展型引擎不會實際用於飛行任務，但其數據對改良量產引擎至關重要。\n• 每一次阿提米絲任務，SLS火箭將由四具RS-25引擎提供總計200萬磅的推力。",
+      "summary_secondary": "",
+      "title": "NASA Conducts RS-25 Engine Test in Support of Future Artemis Missions"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "JPL的早期成就包括在1958年發射美國第一顆科學衛星Explorer 1，它首次發現了地球的輻射帶，揭示了地球周圍的保護層。隨後在1964年，JPL成功執行美國首次登月任務Ranger 7，為後續的載人登月奠定了基礎。這些任務不僅開啟了太空科學研究的新時代，也確立了美國在太空領域的領導地位。",
+          "question": "JPL 成立90年來，其早期最具代表性的「第一次」任務有哪些，對太空探索有何重大影響？"
+        },
+        {
+          "answer": "除了火星和月球任務外，JPL的未來計畫還包括「SunRISE」任務，將用六顆小型衛星組成一個巨大的射電天線，研究太陽活動對太空天氣的影響，以提高未來載人深空探索的安全性。此外，還有「PRIMA」任務，這是一項全新的遠紅外天文物理探測任務，旨在透過觀測遠紅外線來增進人類對宇宙的理解。",
+          "question": "除了火星和月球任務外，JPL未來在深空探索方面還有哪些值得關注的計畫？"
+        },
+        {
+          "answer": "JPL的任務與地球保護和人類福祉密切相關。例如，「NEO Surveyor」任務負責搜尋潛在危險的近地小行星，提供預警以保護地球免受撞擊。JPL還開發了多項地球科學任務，如監測水資源變化、研究熱帶風暴形成以及分析空氣污染對人類健康的影響，這些都為應對氣候變化和改善地球環境提供了關鍵數據。",
+          "question": "JPL的太空探索任務如何與地球保護和人類福祉連結，有哪些具體案例？"
+        }
+      ],
+      "read_minutes": 4,
+      "slug": "2026-10-22-5a5a808935",
+      "source": "NASA Breaking News",
+      "summary": "美國國家航空暨太空總署（NASA）的噴射推進實驗室（JPL）正慶祝其成立90週年，同時展望未來，規劃了一系列開創性的太空任務。\n自1936年成立以來，JPL已締造多項歷史性「第一」，例如美國首顆人造衛星Explorer 1。\n未來數年，JPL將推出「SkyFall」火星直升機探測火星冰層、「MoonFall」月球著陸器支援月球基地，以及「SunRISE」研究太陽活動，旨在深化人類對宇宙的理解並保護地球。\n透過這些突破性項目，JPL持續引領太空探索的創新前沿，鞏固美國在太空領域的領導地位。\n\n- 主要任務包括2028年的火星冰層探測、月球南極登陸，以及2027年的太陽活動研究。\n- 同時致力於監測地球環境、尋找潛在危險近地小行星，並透過PRIMA任務探索宇宙的遠紅外線。",
+      "summary_secondary": "",
+      "title": "NASA JPL Looks to Next 90 Years of Innovation, Exploration"
+    },
+    {
+      "category": "科學 Science",
+      "has_full_text": true,
+      "link": "https://www.nasa.gov/news-release/nasa-to-conduct-ncaa-flyover-engage-fans-at-university-of-alabama/",
+      "long_form": false,
+      "qa": [
+        {
+          "answer": "NASA 的「啟發之旅」是一個全國性活動，旨在連結學術界、工業界和公共部門的利益相關者，以展示美國在太空領域的領導地位。透過此行程，NASA 希望讓大眾了解其人員、技術和組織如何推動其太空任務。",
+          "question": "NASA 的「啟發之旅」是什麼？其主要目標為何？"
+        },
+        {
+          "answer": "這些展示品代表了 NASA 及其合作夥伴在重返月球的 Artemis 計畫和未來太空探索任務中的關鍵技術。SLS 火箭是 NASA 的重型運載火箭，而 Starship 和 Blue Moon 則是計畫用於將太空人送上月球表面的載人登陸系統。",
+          "question": "在「NASA體驗區」中展示的 SLS 火箭、Starship 和 Blue Moon 登月系統有何重要性？"
+        },
+        {
+          "answer": "「MAX POWER」是一個為期多日、適合家庭參與的美國航空航太創新博覽會，將於 11 月 7 日至 8 日在甘迺迪太空中心舉行。此活動將展示下一代飛機、太空船、自動駕駛飛行器和各種有助於定義未來空中和太空交通的技術，以慶祝美國建國 250 週年。",
+          "question": "NASA 的「啟發之旅」將以「MAX POWER」活動作結，該活動的內容為何？"
+        }
+      ],
+      "read_minutes": 2,
+      "slug": "2026-10-22-2f4faef021",
+      "source": "NASA Breaking News",
+      "summary": "NASA 宣布將於 10 月 24 日星期六在阿拉巴馬州塔斯卡盧薩舉行的阿拉巴馬大學對德州農工大學的足球賽上空，進行由局長 Jared Isaacman 親自駕駛的 F-5 戰機飛越。此活動是 NASA「啟發之旅」的一部分，旨在突顯其在航空領域的貢獻並推進航空技術。同時，NASA 將在賽場外設立一個免費向公眾開放的「NASA體驗區」，讓訪客了解其 Artemis 登月計畫及太空探索技術。\n- 體驗區將展示 SLS 火箭模型、Starship 和 Blue Moon 登月系統，並提供 NASA 實習機會資訊。\n- 此次活動為全國性「啟發之旅」的一站，該旅程最終將以甘迺迪太空中心舉辦的 MAX POWER 航空太空創新博覽會告終。",
+      "summary_secondary": "",
+      "title": "NASA to Conduct NCAA Flyover, Engage Fans at University of Alabama"
+    },
+    {
+      "category": "長文 Long Reads",
+      "has_full_text": true,
+      "link": "https://www.quantamagazine.org/see-inside-cells-like-never-before-in-these-vivid-microscopic-images-20261021/",
+      "long_form": true,
+      "qa": [
+        {
+          "answer": "共聚焦顯微鏡的主要優勢在於它能聚焦於樣品中的單一深度層次，並透過逐行掃描來構建詳細圖像，有效避免傳統顯微鏡可能產生的模糊影像。這使得研究人員能夠獲得更高解析度和更清晰的三維細胞結構視圖，從而更精確地觀察細胞內部活動。",
+          "question": "共聚焦雷射掃描顯微鏡與傳統顯微鏡相比，其主要優勢是什麼？"
+        },
+        {
+          "answer": "這項發現挑戰了線粒體僅是「細胞發電廠」的傳統觀念，暗示它們在細胞質流動、信號傳遞以及與其他細胞器互動中扮演更廣泛的角色。這拓展了我們對線粒體功能的理解，並為未來研究細胞協調性與疾病機理提供了新的視角。",
+          "question": "為什麼帕特里克·希基發現線粒體比預期更具動態性，對細胞生物學來說是重要的發現？"
+        },
+        {
+          "answer": "尼康小世界比賽不僅頌揚了顯微攝影的藝術與創意，更重要的是，它記錄並反映了成像技術的持續進步。透過展示最前沿的顯微技術及其應用，該比賽推動了科學界對微觀世界的探索，並促進了細胞生物學領域的深入發展。",
+          "question": "尼康小世界比賽除了展示美麗的顯微影像外，還扮演了什麼角色？"
+        }
+      ],
+      "read_minutes": 2,
+      "slug": "2026-10-22-d0836814e2",
+      "source": "Quanta Magazine",
+      "summary": "「看見細胞內部：這些生動的顯微影像」這篇文章介紹了尼康小世界顯微攝影比賽，並強調了共聚焦雷射掃描顯微鏡等先進成像技術如何揭示細胞內部前所未有的動態。文章以帕特里克·希基發現龜背竹細胞中線粒體活躍運動的案例為例，挑戰了線粒體僅僅是「細胞發電廠」的傳統觀念，指出它們可能參與細胞質流動、信號傳遞及與其他細胞器的相互作用。\n這些技術的進步正不斷深化我們對細胞生命複雜性的理解。\n- 先進顯微技術如共聚焦雷射掃描顯微鏡，能捕捉到過去無法觀察到的細胞內動態。\n- 線粒體被發現比預期更具活力，不只負責能量產生，還可能參與多種細胞功能。",
+      "summary_secondary": "",
+      "title": "See Inside Cells Like Never Before in These Vivid Microscopic Images"
+    },
+    {
+      "category": "長文 Long Reads",
+      "has_full_text": true,
+      "link": "https://aeon.co/videos/what-four-years-of-ceaseless-war-looks-like-to-ukrainian-civilians",
+      "long_form": true,
+      "qa": [
+        {
+          "answer": "另外兩部紀錄片分別是《不分不散》（Do Not Split），記錄香港的民主抗議活動，以及《接管》（The Takeover），講述塔利班掌權後阿富汗女性的生活。",
+          "question": "安德斯·哈默的衝突三部曲中，另外兩部影片的主題是什麼？"
+        },
+        {
+          "answer": "哈默旨在透過捕捉戰區平民的視角，呈現暴力、恐懼與團結如何形塑他們的生活，藉此深入探索衝突對個體造成的深遠影響，並引發觀眾對這些全球事件的關注與反思。",
+          "question": "透過像《當它開始燃燒》這類影片，導演安德斯·哈默希望達到什麼樣的影響或目的？"
+        },
+        {
+          "answer": "克謝妮亞的故事體現了許多烏克蘭人在面對戰爭時的兩難與堅韌：在保護家人的同時，又展現出對家園和同胞的深厚責任感與團結精神。她的行動象徵著烏克蘭民間社會在極端不確定性和恐怖之中所展現出的非凡決心和互助精神。",
+          "question": "克謝妮亞選擇送走孩子後留在烏克蘭經營人道總部的個人故事，如何反映出烏克蘭更廣泛的局勢？"
+        }
+      ],
+      "read_minutes": 1,
+      "slug": "2026-10-22-110d7f29f7",
+      "source": "Aeon",
+      "summary": "挪威電影製作人安德斯·哈默的紀錄片《當它開始燃燒》是其捕捉全球衝突三部曲的第三部。這部影片追蹤了俄羅斯入侵烏克蘭四年期間的歷程，特別聚焦於一位基輔居民克謝妮亞的故事，她在送走孩子後，選擇留下經營一個人道總部，分發捐贈物資。透過烏克蘭平民的視角，哈默深入探討了暴力、持續的恐懼以及不間斷的團結如何定義他們的生活。",
+      "summary_secondary": "",
+      "title": "When it started to burn"
     }
   ]
 }

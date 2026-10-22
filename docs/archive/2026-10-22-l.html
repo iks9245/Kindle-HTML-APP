@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-10-22</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-22-s.html">小</a><a href="2026-10-22.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-22-sans-l.html">切換為無襯線</a></p>
+
+<h1>每日 AI 文摘 2026-10-22</h1>
+<p class="meta">
+2026-10-22
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="index-l.html">存檔列表</a>
+ ｜ <a href="../deepread/2026-10-22-l.html">每日深讀</a>
+
+
+ ｜ <a href="2026-10-21-l.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日全球焦點仍集中在烏克蘭戰事，儘管美國積極斡旋和平談判，基輔卻隨即遭遇導彈襲擊，加上俄方反應冷淡，預示短期內和平仍難實現，衝突中的人道困境也持續被關注。在科技領域，從雲端平台 Railway 的資料外洩到 PHP 網頁執行環境的嚴重漏洞，皆凸顯資安風險日益嚴峻，各界需加強防護。同時，AI 應用展現雙面刃特質，一方面有如 Claude Duet 般的主動式智慧代理人帶來便利，另一方面卻被指控用於散播假訊息干預國際政治。此外，美國國家航空暨太空總署（NASA）在太空探索方面取得進展，持續為阿提米絲任務進行引擎測試並展望 JPL 未來九十年的創新；而生物科學也透過先進顯微技術，以前所未有的視角揭示細胞內部動態。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>Railway Security Disclosure</h3>
+  <p class="summary">Railway 於 10 月 21 日星期三偵測到其客戶環境變數儲存系統存在異常活動。初步調查顯示，未經授權的第三方可能已存取並解密部分加密的環境變數，這些變數可能包含 API 金鑰或資料庫憑證等機密。
+此次事件被認為是一系列針對平台公司以破壞 AI 推理提供商的攻擊之一，Railway 已建議所有使用者預防性地立即輪換所有環境變數，以保護其系統。
+此外，Railway 已暫停所有部署功能，以利進行全面調查，並將直接通知受影響的客戶。
+
+關鍵點：
+* 建議所有使用者立即輪換所有環境變數，包括 API 金鑰和私有登錄憑證。
+* 所有部署已暫停，使用者目前無法發布新版本。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>環境變數是什麼？為什麼它們在 Railway 這樣的平台中如此重要？</summary>
+    <p>環境變數是用於儲存程式運行所需配置資訊的變數，例如資料庫連線字串、API 金鑰或第三方服務憑證。在 Railway 平台上，這些變數對於應用程式安全地存取外部服務和資源至關重要，因此其洩露會構成嚴重的安全風險。</p>
+  </details>
+  
+  <details>
+    <summary>除了輪換環境變數之外，Railway 還建議使用者採取哪些額外措施來應對此安全事件？</summary>
+    <p>Railway 強烈建議所有使用者除了立即輪換所有環境變數、API 金鑰和私有登錄憑證外，還要檢查使用這些服務的日誌是否有異常活動。這有助於及早發現任何潛在的未經授權存取或濫用。</p>
+  </details>
+  
+  <details>
+    <summary>為什麼這次攻擊特別針對「AI 推理提供商」？這對受影響的平台或使用者有什麼潛在影響？</summary>
+    <p>這次攻擊被認為是針對平台公司以破壞 AI 推理提供商的一系列攻擊的一部分，這表明攻擊者可能試圖利用這些平台的計算能力或資料來進行惡意 AI 模型訓練、資料竊取或繞過安全機制。這可能導致資料外洩、服務中斷或進一步的網路攻擊。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-22-5699ea0146-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://blog.railway.com/p/security-disclosure-wednesday-october-21st">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Claude Duet</h3>
+  <p class="summary">Claude Duet 是一個由 Opus 5.5 驅動的預防性 AI 代理人，旨在理解用戶需求並主動處理任務。它能提供每日簡報、草擬後續步驟、管理業務操作如發票和薪資，並在用戶不在時持續工作，直到需要批准時才通知。
+目前，此服務在美國以研究預覽的形式，透過等候名單提供給 Claude Pro 和 Max 訂閱者。
+主要特點：
+- 主動處理訊息、會議安排、儀表板建立等任務。
+- 專為判斷力設計，並確保敏感操作的隱私和安全。
+- 可透過 iOS/Android 應用程式或網頁版使用。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Claude Duet 與一般的 Claude 應用程式有何主要區別？</summary>
+    <p>一般的 Claude 應用程式等待使用者開啟聊天並與其協作，而 Claude Duet 則會主動提供每日簡報，根據訊息接收任務，並在任務完成或需要批准時聯繫使用者，更具自主性。</p>
+  </details>
+  
+  <details>
+    <summary>Claude Duet 在企業營運方面能具體處理哪些任務？</summary>
+    <p>它能承擔許多營運工作，例如查找未支付的發票並草擬提醒，準備薪資供審閱，以及預備合同以供發送。它也能整理簡報、提案或儀表板。</p>
+  </details>
+  
+  <details>
+    <summary>在研究預覽階段，Claude Duet 有哪些已知的限制或潛在問題？</summary>
+    <p>在研究預覽期間，Claude Duet 會與您的 Claude 服務共享使用限制，其背景檢查也計入其中。此外，它可能會誤讀對話串，誤判緊急性，或錯過在檢查間隔期間到達的某些資訊。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-22-5dbb54a005-l.html">全文（約 2 分鐘）</a> ｜ <a href="https://claude.com/product/claude-duet">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>PHP web runtimes (CVE-2026-109618 and CVE-2026-109619)</h3>
+  <p class="summary">Amazon Web Services (AWS) 於 2026 年 10 月 21 日發布安全公告，指出 PHP 網頁執行時環境中存在兩個嚴重漏洞 (CVE-2026-109618 和 CVE-2026-109619)。這些漏洞允許未經身份驗證的攻擊者透過特製的網頁請求，在受影響的系統上執行任意程式碼、存取資料或導致服務阻斷，對客戶應用程式構成重大風險。
+受影響的客戶應立即將 PHP 升級至已修復的版本（例如 8.5.12、8.4.27、8.3.36 或 8.2.35），而使用已終止支援版本的客戶則需儘速遷移至受支援的分支。
+- AWS 已針對其部分服務（如 Elastic Beanstalk、Amazon Linux）提供修復或緩解措施。
+- 建議客戶同時考慮使用 AWS WAF 等彌補性控制措施。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這些 PHP 漏洞 (CVE-2026-109618 及 CVE-2026-109619) 的具體性質是什麼？</summary>
+    <p>這些是允許遠端程式碼執行的嚴重安全漏洞。攻擊者無需身份驗證即可透過特製的網頁請求來利用這些漏洞，進而可能在受影響的 PHP 運行時上執行任意程式碼、讀取敏感資料或造成服務阻斷。這類問題通常與不安全的輸入處理有關。</p>
+  </details>
+  
+  <details>
+    <summary>AWS 服務本身是否受到這些漏洞的影響？客戶需要採取哪些行動？</summary>
+    <p>AWS 服務本身並未受到這些漏洞的直接影響。然而，在 AWS 環境（例如 Elastic Beanstalk、Amazon Linux 或 Lightsail）中部署並使用受影響 PHP 版本的客戶則會受到影響。客戶應根據其所使用的 AWS 服務，遵循相關指南進行 PHP 版本升級或應用 AWS 提供的緩解措施。</p>
+  </details>
+  
+  <details>
+    <summary>對於使用已終止支援 (EOL) PHP 版本的用戶，應如何應對這些未獲修復的漏洞？</summary>
+    <p>對於已終止支援且沒有上游修復程式的 PHP 版本 (5.4-8.1)，唯一的完整解決方案是立即將應用程式遷移到受支援且已修復的 PHP 版本分支。雖然可以應用一些臨時的配置控制措施來減少部分漏洞的影響，但這不是全面的保護，且 CVE-2026-109618 在 EOL 分支上沒有任何修復方案。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-22-da87a51a53-l.html">全文（約 3 分鐘）</a> ｜ <a href="https://aws.amazon.com/security/security-bulletins/2026-143-aws/">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks</h3>
+  <p class="summary">美國總統川普的特使史蒂夫·維特科夫（Steve Witkoff）在會見烏克蘭總統澤倫斯基後，於週三在聖彼得堡與俄羅斯總統普丁會面，推動俄烏和平談判。儘管俄羅斯原則上同意重啟和談，並有新一輪會談的提議，烏克蘭首都基輔卻在同一晚遭到導彈襲擊，造成六人受傷。這起事件凸顯了在美國外交斡旋下，和平進程依然困難重重，衝突仍在持續。烏克蘭總統澤倫斯基已表示，他願意接受沿當前戰線凍結衝突的協議。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>川普政府的特使為何在此時介入俄烏和談？川普對於俄烏衝突的立場是什麼？</summary>
+    <p>美國總統川普曾多次表示他能結束這場戰爭，並由其特使維特科夫和庫什納發起此次外交斡旋。然而，川普的立場引發爭議，他曾解除對俄羅斯的制裁，並指責烏克蘭襲擊俄羅斯煉油廠導致油價上漲，同時也質疑烏克蘭領導層。</p>
+  </details>
+  
+  <details>
+    <summary>俄羅斯和烏克蘭對於結束衝突的主要條件或談判重點是什麼？</summary>
+    <p>烏克蘭總統澤倫斯基表示，他願意接受沿當前戰線凍結衝突的協議，並在之後討論烏克蘭的安全保障。俄羅斯方面則強調，和談必須著重於衝突結束後為俄羅斯和烏克蘭建立一個安全體系，並宣稱俄軍在前線擁有「戰略主動權」。</p>
+  </details>
+  
+  <details>
+    <summary>儘管有和談的努力，當前俄烏和平前景面臨哪些主要挑戰？</summary>
+    <p>最大的挑戰在於雙方仍持續的軍事衝突，基輔在和談消息傳出後仍遭導彈襲擊就是明證。此外，美國與烏克蘭之間因情報共享、星鏈網路限制以及川普政府的制裁政策等問題，也存在日益加劇的爭執，這些都可能阻礙和平進程的推進。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-22-020c23c278-l.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Rosenberg: US diplomatic push offers little hope for imminent Ukraine peace</h3>
+  <p class="summary">美國前總統川普的特使史蒂夫·維特科夫（Steve Witkoff）近期在挪威奧斯陸與烏克蘭總統澤倫斯基及歐洲代表會談後，又前往俄羅斯聖彼得堡會晤俄羅斯總統普丁，試圖推動烏克蘭和平進程。然而，俄方對會談成果表示不滿，普丁亦無意與澤倫斯基舉行領袖級會晤，使得短期內達成烏克蘭和平的可能性微乎其微。普丁目前似乎未感受到結束戰爭的壓力，反而可能利用烏克蘭防空系統的困境及即將到來的冬季擴大攻勢。
+*   美國前總統川普的特使進行外交斡旋，但俄方反應冷淡，未能促成即時和平。
+*   普丁不急於結束戰爭，並可能利用冬季形勢擴大戰果。
+*   未來普丁、川普和習近平可能在中國舉行會談，被稱為「新雅爾達」，對全球政治影響深遠。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>文章中提到「川普總統的特使」史蒂夫·維特科夫，這是在暗示美國政府的官方立場嗎？</summary>
+    <p>不，這篇文章指的是美國前總統川普的特使，而不是現任拜登政府的官方代表。川普及其團隊似乎正在獨立進行外交努力，反映他個人對結束戰爭的承諾以及對澤倫斯基總統的批評態度，與美國現行外交政策可能有所不同。</p>
+  </details>
+  
+  <details>
+    <summary>如果普丁目前不覺得結束戰爭有壓力，並認為冬季有利於俄羅斯，這對烏克蘭局勢可能意味著什麼？</summary>
+    <p>這對烏克蘭來說意味著冬季戰事可能會更加艱難。普丁可能利用寒冷天氣和烏克蘭防空系統的壓力，加大對烏克蘭基礎設施的攻擊，試圖迫使其屈服，導致戰爭進一步延長且平民遭受更多苦難。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提及「新雅爾達」會議，普丁、川普和習近平這三位領導人可能在中國會面，這場會晤有何重要意義？</summary>
+    <p>這次潛在的「新雅爾達」會議，指的是普丁、川普和習近平可能在中國舉行的會晤，被視為一場重塑全球地緣政治格局的重要事件。如果成真，它將把普丁推向全球政治的頂端，並可能暗示一個由這三大強權主導的國際秩序，如同1945年雅爾達會議規劃戰後歐洲一樣，對國際關係產生深遠影響。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-22-4a38058068-l.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cm98zn5j89kdo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Macron accuses foreign leaders of exploiting French riots</h3>
+  <p class="summary">法國總統馬克宏指控部分外國領導人，包含以色列總理納坦雅胡和美國前總統川普，利用近期法國各地發生的騷亂，透過不實訊息和AI生成影片進行政治操作，以圖利其國內選舉。他強調，騷亂本身雖無明顯外國干預，但後續資訊被嚴重操弄，導致諸如「極端伊斯蘭入侵」等不實言論散播。此事件凸顯了假訊息對國際關係及公眾認知的潛在衝擊。
+- 歐盟監管機構正在調查俄羅斯、伊朗和阿爾及利亞等國家可能參與的線上干預與假訊息宣傳活動。
+- 具體案例包括俄羅斯「Matryoshka」行動散播假新聞影片，以及一個聲稱巴黎老夫婦遭搶劫的AI生成圖片被廣泛傳播且未標明出處。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>法國騷亂的起因為何？</summary>
+    <p>這些騷亂最初是因生活成本抗議活動而起，隨後又發生了學生對高中狀況不滿的數週抗議。馬克宏總統將大部分麻煩歸咎於「極左派邊緣團體的煽動者」。</p>
+  </details>
+  
+  <details>
+    <summary>外國勢力利用AI和假新聞操弄國內騷亂，可能帶來哪些深遠影響？</summary>
+    <p>這類干預不僅可能加劇社會動盪，混淆公眾視聽，更可能破壞國家內部穩定與民主進程。它也使得公民難以辨別真相，進而影響國際關係與公眾對政府的信任。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到的假訊息活動或AI生成內容有哪些具體例子？</summary>
+    <p>其中一個例子是俄羅斯「Matryoshka」行動散播假新聞影片，這些影片模仿法國真實新聞媒體的品牌。另一個案例是一個聲稱巴黎老夫婦遭搶劫的AI生成圖片，由Infos-Israel.News製作，但該事件未經證實，且圖片在社群媒體上廣傳時，許多轉發者並未標明其為AI生成。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-22-643456b192-l.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/ckjrw044ggxgo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>NASA Conducts RS-25 Engine Test in Support of Future Artemis Missions</h3>
+  <p class="summary">美國國家航空暨太空總署（NASA）於10月21日在密西西比州的史丹尼斯太空中心，成功測試了編號10001的RS-25發展型引擎，為未來的阿提米絲（Artemis）登月任務提供支援。該引擎點火了約八分半鐘（500秒），並達到111%的推力水平，模擬太空發射系統（SLS）火箭的實際升空條件。此次測試旨在驗證飛行組件和新的熱防護系統，並收集關鍵數據以提升未來生產引擎的性能和可靠性，確保SLS火箭能順利將獵戶座（Orion）太空船送入軌道。
+
+• 這次測試的RS-25發展型引擎不會實際用於飛行任務，但其數據對改良量產引擎至關重要。
+• 每一次阿提米絲任務，SLS火箭將由四具RS-25引擎提供總計200萬磅的推力。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>阿提米絲（Artemis）計畫的目標是什麼？SLS火箭和RS-25引擎在其中扮演了什麼角色？</summary>
+    <p>阿提米絲計畫是NASA旨在將人類（包括第一位女性和有色人種）送回月球表面，並為未來火星任務奠定基礎的計畫。SLS火箭是目前世界上最強大的火箭，用於將獵戶座（Orion）太空船和貨物送往月球軌道，而四具RS-25引擎則是SLS火箭發射時提供主要推力的關鍵組件。</p>
+  </details>
+  
+  <details>
+    <summary>既然這次測試的RS-25引擎不會用於實際飛行，為何還要進行如此長時間且高推力的測試？</summary>
+    <p>這次測試雖然使用的是發展型引擎，但其主要目的是驗證新的飛行組件和熱防護系統，並收集在極端條件下的性能數據。這些數據對於提升未來用於實際飛行任務的量產型RS-25引擎的性能、可靠性及安全性至關重要，有助於阿提米絲任務的成功。</p>
+  </details>
+  
+  <details>
+    <summary>文章中提到的「111%推力水平」代表什麼意義？它對於新生產的RS-25引擎有何重要性？</summary>
+    <p>「111%推力水平」指的是RS-25引擎在發射時所需達到的最大推力輸出，以確保SLS火箭能夠將太空船有效載荷送入軌道。對新生產的RS-25引擎來說，達到並驗證這一高推力水平，證明了它們在嚴苛發射環境下的可靠性和性能，是其被接受用於未來阿提米絲任務的必要條件。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-22-cf37dcb56b-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/rs-25-engine-test-in-support-of-future-artemis-missions/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NASA JPL Looks to Next 90 Years of Innovation, Exploration</h3>
+  <p class="summary">美國國家航空暨太空總署（NASA）的噴射推進實驗室（JPL）正慶祝其成立90週年，同時展望未來，規劃了一系列開創性的太空任務。
+自1936年成立以來，JPL已締造多項歷史性「第一」，例如美國首顆人造衛星Explorer 1。
+未來數年，JPL將推出「SkyFall」火星直升機探測火星冰層、「MoonFall」月球著陸器支援月球基地，以及「SunRISE」研究太陽活動，旨在深化人類對宇宙的理解並保護地球。
+透過這些突破性項目，JPL持續引領太空探索的創新前沿，鞏固美國在太空領域的領導地位。
+
+- 主要任務包括2028年的火星冰層探測、月球南極登陸，以及2027年的太陽活動研究。
+- 同時致力於監測地球環境、尋找潛在危險近地小行星，並透過PRIMA任務探索宇宙的遠紅外線。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>JPL 成立90年來，其早期最具代表性的「第一次」任務有哪些，對太空探索有何重大影響？</summary>
+    <p>JPL的早期成就包括在1958年發射美國第一顆科學衛星Explorer 1，它首次發現了地球的輻射帶，揭示了地球周圍的保護層。隨後在1964年，JPL成功執行美國首次登月任務Ranger 7，為後續的載人登月奠定了基礎。這些任務不僅開啟了太空科學研究的新時代，也確立了美國在太空領域的領導地位。</p>
+  </details>
+  
+  <details>
+    <summary>除了火星和月球任務外，JPL未來在深空探索方面還有哪些值得關注的計畫？</summary>
+    <p>除了火星和月球任務外，JPL的未來計畫還包括「SunRISE」任務，將用六顆小型衛星組成一個巨大的射電天線，研究太陽活動對太空天氣的影響，以提高未來載人深空探索的安全性。此外，還有「PRIMA」任務，這是一項全新的遠紅外天文物理探測任務，旨在透過觀測遠紅外線來增進人類對宇宙的理解。</p>
+  </details>
+  
+  <details>
+    <summary>JPL的太空探索任務如何與地球保護和人類福祉連結，有哪些具體案例？</summary>
+    <p>JPL的任務與地球保護和人類福祉密切相關。例如，「NEO Surveyor」任務負責搜尋潛在危險的近地小行星，提供預警以保護地球免受撞擊。JPL還開發了多項地球科學任務，如監測水資源變化、研究熱帶風暴形成以及分析空氣污染對人類健康的影響，這些都為應對氣候變化和改善地球環境提供了關鍵數據。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-22-5a5a808935-l.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NASA to Conduct NCAA Flyover, Engage Fans at University of Alabama</h3>
+  <p class="summary">NASA 宣布將於 10 月 24 日星期六在阿拉巴馬州塔斯卡盧薩舉行的阿拉巴馬大學對德州農工大學的足球賽上空，進行由局長 Jared Isaacman 親自駕駛的 F-5 戰機飛越。此活動是 NASA「啟發之旅」的一部分，旨在突顯其在航空領域的貢獻並推進航空技術。同時，NASA 將在賽場外設立一個免費向公眾開放的「NASA體驗區」，讓訪客了解其 Artemis 登月計畫及太空探索技術。
+- 體驗區將展示 SLS 火箭模型、Starship 和 Blue Moon 登月系統，並提供 NASA 實習機會資訊。
+- 此次活動為全國性「啟發之旅」的一站，該旅程最終將以甘迺迪太空中心舉辦的 MAX POWER 航空太空創新博覽會告終。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>NASA 的「啟發之旅」是什麼？其主要目標為何？</summary>
+    <p>NASA 的「啟發之旅」是一個全國性活動，旨在連結學術界、工業界和公共部門的利益相關者，以展示美國在太空領域的領導地位。透過此行程，NASA 希望讓大眾了解其人員、技術和組織如何推動其太空任務。</p>
+  </details>
+  
+  <details>
+    <summary>在「NASA體驗區」中展示的 SLS 火箭、Starship 和 Blue Moon 登月系統有何重要性？</summary>
+    <p>這些展示品代表了 NASA 及其合作夥伴在重返月球的 Artemis 計畫和未來太空探索任務中的關鍵技術。SLS 火箭是 NASA 的重型運載火箭，而 Starship 和 Blue Moon 則是計畫用於將太空人送上月球表面的載人登陸系統。</p>
+  </details>
+  
+  <details>
+    <summary>NASA 的「啟發之旅」將以「MAX POWER」活動作結，該活動的內容為何？</summary>
+    <p>「MAX POWER」是一個為期多日、適合家庭參與的美國航空航太創新博覽會，將於 11 月 7 日至 8 日在甘迺迪太空中心舉行。此活動將展示下一代飛機、太空船、自動駕駛飛行器和各種有助於定義未來空中和太空交通的技術，以慶祝美國建國 250 週年。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-22-2f4faef021-l.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-to-conduct-ncaa-flyover-engage-fans-at-university-of-alabama/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>See Inside Cells Like Never Before in These Vivid Microscopic Images</h3>
+  <p class="summary">「看見細胞內部：這些生動的顯微影像」這篇文章介紹了尼康小世界顯微攝影比賽，並強調了共聚焦雷射掃描顯微鏡等先進成像技術如何揭示細胞內部前所未有的動態。文章以帕特里克·希基發現龜背竹細胞中線粒體活躍運動的案例為例，挑戰了線粒體僅僅是「細胞發電廠」的傳統觀念，指出它們可能參與細胞質流動、信號傳遞及與其他細胞器的相互作用。
+這些技術的進步正不斷深化我們對細胞生命複雜性的理解。
+- 先進顯微技術如共聚焦雷射掃描顯微鏡，能捕捉到過去無法觀察到的細胞內動態。
+- 線粒體被發現比預期更具活力，不只負責能量產生，還可能參與多種細胞功能。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>共聚焦雷射掃描顯微鏡與傳統顯微鏡相比，其主要優勢是什麼？</summary>
+    <p>共聚焦顯微鏡的主要優勢在於它能聚焦於樣品中的單一深度層次，並透過逐行掃描來構建詳細圖像，有效避免傳統顯微鏡可能產生的模糊影像。這使得研究人員能夠獲得更高解析度和更清晰的三維細胞結構視圖，從而更精確地觀察細胞內部活動。</p>
+  </details>
+  
+  <details>
+    <summary>為什麼帕特里克·希基發現線粒體比預期更具動態性，對細胞生物學來說是重要的發現？</summary>
+    <p>這項發現挑戰了線粒體僅是「細胞發電廠」的傳統觀念，暗示它們在細胞質流動、信號傳遞以及與其他細胞器互動中扮演更廣泛的角色。這拓展了我們對線粒體功能的理解，並為未來研究細胞協調性與疾病機理提供了新的視角。</p>
+  </details>
+  
+  <details>
+    <summary>尼康小世界比賽除了展示美麗的顯微影像外，還扮演了什麼角色？</summary>
+    <p>尼康小世界比賽不僅頌揚了顯微攝影的藝術與創意，更重要的是，它記錄並反映了成像技術的持續進步。透過展示最前沿的顯微技術及其應用，該比賽推動了科學界對微觀世界的探索，並促進了細胞生物學領域的深入發展。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="../article/2026-10-22-d0836814e2-l.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/see-inside-cells-like-never-before-in-these-vivid-microscopic-images-20261021/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>When it started to burn</h3>
+  <p class="summary">挪威電影製作人安德斯·哈默的紀錄片《當它開始燃燒》是其捕捉全球衝突三部曲的第三部。這部影片追蹤了俄羅斯入侵烏克蘭四年期間的歷程，特別聚焦於一位基輔居民克謝妮亞的故事，她在送走孩子後，選擇留下經營一個人道總部，分發捐贈物資。透過烏克蘭平民的視角，哈默深入探討了暴力、持續的恐懼以及不間斷的團結如何定義他們的生活。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>安德斯·哈默的衝突三部曲中，另外兩部影片的主題是什麼？</summary>
+    <p>另外兩部紀錄片分別是《不分不散》（Do Not Split），記錄香港的民主抗議活動，以及《接管》（The Takeover），講述塔利班掌權後阿富汗女性的生活。</p>
+  </details>
+  
+  <details>
+    <summary>透過像《當它開始燃燒》這類影片，導演安德斯·哈默希望達到什麼樣的影響或目的？</summary>
+    <p>哈默旨在透過捕捉戰區平民的視角，呈現暴力、恐懼與團結如何形塑他們的生活，藉此深入探索衝突對個體造成的深遠影響，並引發觀眾對這些全球事件的關注與反思。</p>
+  </details>
+  
+  <details>
+    <summary>克謝妮亞選擇送走孩子後留在烏克蘭經營人道總部的個人故事，如何反映出烏克蘭更廣泛的局勢？</summary>
+    <p>克謝妮亞的故事體現了許多烏克蘭人在面對戰爭時的兩難與堅韌：在保護家人的同時，又展現出對家園和同胞的深厚責任感與團結精神。她的行動象徵著烏克蘭民間社會在極端不確定性和恐怖之中所展現出的非凡決心和互助精神。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-10-22-110d7f29f7-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/what-four-years-of-ceaseless-war-looks-like-to-ukrainian-civilians">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>
