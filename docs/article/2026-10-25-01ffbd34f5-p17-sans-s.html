@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Goose Programming Language</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-25-01ffbd34f5-p20-sans.html">中</a><a href="2026-10-25-01ffbd34f5-p28-sans-l.html">大</a><a class="pref-family" href="2026-10-25-01ffbd34f5-p17-s.html">切換為襯線</a></p>
+
+
+<h1>The Goose Programming Language</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 17 / 50 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://aardappel.github.io/goose/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p16-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-25-01ffbd34f5-p18-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 17 / 50 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">struct Node { key: i32, left: Node&<u32>?, right: Node&<u32>? }   // 12 bytes, links included</p>
+
+<p class="fulltext">fn insert(pool: Node[>..]&, key: i32) {</p>
+
+<p class="fulltext">if pool.len == 0 { pool.push(Node { key: key }); return; }</p>
+
+<p class="fulltext">var cur .= pool[0];                             // .= binds a reference; = would copy the node</p>
+
+<p class="fulltext">loop {</p>
+
+<p class="fulltext">if key == cur.key { return; }</p>
+
+<p class="fulltext">let next = if key < cur.key { cur.left } else { cur.right };</p>
+
+<p class="fulltext">if next { cur .= next; continue; }          // narrowed by `if`: next is a Node&</p>
+
+<p class="fulltext">if key < cur.key { cur.left .= pool.push(Node { key: key }); }</p>
+
+<p class="fulltext">else             { cur.right .= pool.push(Node { key: key }); }</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p16-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-25-01ffbd34f5-p18-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 17 / 50 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

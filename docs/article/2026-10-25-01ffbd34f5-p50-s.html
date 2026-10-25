@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Goose Programming Language</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-25-01ffbd34f5-p63.html">中</a><a href="2026-10-25-01ffbd34f5-p83-l.html">大</a><a class="pref-family" href="2026-10-25-01ffbd34f5-p50-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>The Goose Programming Language</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 50 / 50 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://aardappel.github.io/goose/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p49-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 50 / 50 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">It is also an experiment in using AI to implement a new language, rather than reproduce an existing one.</p>
+
+<p class="fulltext">You may wonder why I had it work in C++, if clearly I could have used any language, like Rust, or my own Lobster, or.. Goose itself (that may still happen). With Fable, it was my observation that it is almost equally capable in any language, and the strong guardrails of Rust or other languages are not as pressing as they once were. Since the compiler emits C, you likely already need to have a C/C++ compiler around, so sticking inside one ecosystem would seem to simplify deployment and adoption. I've also integrated libtcc and who knows what other C libraries in the future. And, like I said, to have the compiler code mimic my existing Lobster compiler seemed fun, at least I can read it like it is my own.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>Goose 如何在沒有傳統記憶體管理機制（如垃圾收集器或生命週期註釋）的情況下，實現其宣稱的效能和記憶體安全？</summary>
+  <p>Goose 透過其獨特的資料堆疊記憶體模型實現這一目標。所有動態值都直接內聯在由編譯器管理的資料堆疊上，記憶體在作用域結束時自動釋放，無需顯式的堆積分配或垃圾收集。語言的型別和生命週期規則在編譯時推斷並確保記憶體安全，從而避免了運行時開銷和手動註釋。</p>
+</details>
+
+<details>
+  <summary>鑑於 Goose 的設計原則，它最適合應用於哪些類型的專案或使用場景？</summary>
+  <p>Goose 因其高速、低記憶體佔用和記憶體安全的特性，非常適合系統級編程、嵌入式系統、遊戲開發、高效能運算以及其他對資源控制和確定性效能有嚴格要求的應用。它能夠編譯成單一 C 檔案的特性，也使其適用於任何具備 C 編譯器的環境。</p>
+</details>
+
+<details>
+  <summary>文章提及 Goose 幾乎完全由 AI 開發完成。開發者使用 AI 的動機是什麼？這對語言的發展有何影響？</summary>
+  <p>開發者 Wouter van Oortmerssen 多年前設計了 Goose，但因時間限制未能完成。他認為 AI（特別是 Fable）已足夠成熟，可以幫助實現其設計理念，並希望能複製他現有 Lobster 編譯器的風格。AI 的參與不僅加快了開發進程，更透過與 AI 的反覆互動，幫助他完善了許多最初未明確的設計細節，使 Goose 成為一個更強大、更完善的語言，同時也是一項運用 AI 開發新語言的實驗。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p49-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 50 / 50 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Goose Programming Language</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-25-01ffbd34f5-p7-s.html">小</a><span class="pref-on">中</span><a href="2026-10-25-01ffbd34f5-p12-l.html">大</a><a class="pref-family" href="2026-10-25-01ffbd34f5-p9-sans.html">切換為無襯線</a></p>
+
+
+<h1>The Goose Programming Language</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 9 / 64 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://aardappel.github.io/goose/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p8.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-25-01ffbd34f5-p10.html">下一頁 →</a>
+<span class="pager-num">第 9 / 64 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">var scratch: u8[>..] = [];                        // grow-only: growth is a pointer bump</p>
+
+<p class="fulltext">for i in 100000 { scratch.push((i % 256) as! u8); }</p>
+
+<p class="fulltext">print("round ", round, ": ", scratch.len, " bytes");</p>
+
+<p class="fulltext">}                                                     // the free: one store to the stack top</p>
+
+<p class="fulltext">Nothing moves, so references survive growth</p>
+
+<p class="fulltext">struct Item { id: i32, weight: f32 }</p>
+
+<p class="fulltext">var items: Item[>..] = [];</p>
+
+<p class="fulltext">let first .= items.push(Item { 1, 0.5 });             // a reference to element 0</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p8.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-25-01ffbd34f5-p10.html">下一頁 →</a>
+<span class="pager-num">第 9 / 64 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

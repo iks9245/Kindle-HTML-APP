@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Goose Programming Language</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-25-01ffbd34f5-p17.html">中</a><a href="2026-10-25-01ffbd34f5-p23-l.html">大</a><a class="pref-family" href="2026-10-25-01ffbd34f5-p14-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>The Goose Programming Language</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 14 / 50 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://aardappel.github.io/goose/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p13-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-25-01ffbd34f5-p15-s.html">下一頁 →</a>
+<span class="pager-num">第 14 / 50 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Algebraic data types are the only dynamic polymorphism: no</p>
+
+<p class="fulltext">inheritance, no vtables. Every ADT can be stored two ways, chosen at the</p>
+
+<p class="fulltext">point of use. Fixed mode (Shape) is a tag plus room for the</p>
+
+<p class="fulltext">largest payload, indexable and overwritable. Variable mode</p>
+
+<p class="fulltext">(Shape..) gives each value exactly its variant's size; the</p>
+
+<p class="fulltext">array becomes sequential and a value never changes variant, and in</p>
+
+<p class="fulltext">exchange you may take references into a payload:</p>
+
+<p class="fulltext">enum Shape { Circle { r: f64 }, Rect { w: f64, h: f64 }, Dot }</p>
+
+<p class="fulltext">var packed: Shape..[>..] = [];                 // 9, 17 and 1 bytes, not 17 each</p>
+
+<p class="fulltext">packed.push(Shape.Circle { r: 1.0 });</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p13-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-25-01ffbd34f5-p15-s.html">下一頁 →</a>
+<span class="pager-num">第 14 / 50 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

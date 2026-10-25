@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日深讀</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-25-sans-s.html">小</a><a href="2026-10-25-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-25-l.html">切換為襯線</a></p>
+
+<h1>每日深讀</h1>
+<p class="meta">
+2026-10-25 ｜ 本篇：The Goose Programming Language
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/2026-10-25-sans-l.html">當天文摘</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="../article/2026-10-25-01ffbd34f5-sans-l.html">讀全文</a>
+ ｜ <a href="https://aardappel.github.io/goose/">原文網頁</a>
+</p>
+
+
+
+<h2>脈絡</h2>
+<p>Goose 是一種記憶體安全的系統級程式語言，其設計目標是超越 C++ 和 Rust 的執行速度和記憶體效率。它透過獨特的記憶體模型實現這一目標，完全摒棄了堆記憶體分配器、垃圾回收器和生命週期註解。所有動態值都存在於由編譯器管理的資料堆疊上，記憶體在作用域結束時自動釋放。</p>
+
+
+<h2>重點</h2>
+<ul>
+<li>Goose 在速度和記憶體使用方面優於 C++ 和安全的 Rust，展現出顯著的效能增益。</li><li>它採用無堆記憶體、無垃圾回收、無引用計數和無析構函數的創新記憶體模型，簡化了記憶體管理。</li><li>Goose 在沒有任何生命週期註解的情況下實現記憶體安全，由編譯器自動推斷引用並拒絕可能超出其所有者生命週期的引用。</li><li>資料結構以內聯方式儲存，支持高效的變長ADT和相對引用，有助於緊湊和位置獨立的資料表示。</li><li>語言設計避免了資料競爭，透過訊息傳遞實現並發，並可編譯為 C 語言，確保廣泛的互操作性。</li>
+</ul>
+
+
+<h2>影響與延伸</h2>
+<p>Goose 的出現可能挑戰傳統系統語言的範式，為需要極致效能和記憶體效率的應用提供一個引人注目的替代方案。它簡化的記憶體模型和 AI 輔助開發的成功，也預示著未來程式語言設計和實作的新方向，可能加速開發流程並降低複雜性。</p>
+
+
+<h2>小辭典</h2>
+<dl class="glossary">
+
+<dt>記憶體安全系統語言</dt>
+<dd>一種設計用於底層系統程式設計的語言，它能保證防止如緩衝區溢位、釋放後使用等記憶體相關錯誤。</dd>
+
+<dt>資料堆疊</dt>
+<dd>一塊記憶體區域，用於儲存局部變數和函式呼叫框架，其記憶體由編譯器管理，並在作用域結束時自動釋放。</dd>
+
+<dt>垃圾回收器 (GC)</dt>
+<dd>一種自動化的記憶體管理機制，它會自動識別並回收程式中不再被使用的記憶體物件。</dd>
+
+<dt>Fable</dt>
+<dd>在文章中提到的人工智慧模型，被廣泛用於實現 Goose 編譯器，體現了AI在複雜軟體開發中的應用。</dd>
+
+</dl>
+
+
+
+</div>
+</body>
+</html>

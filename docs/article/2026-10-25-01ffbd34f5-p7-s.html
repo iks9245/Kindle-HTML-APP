@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Goose Programming Language</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-25-01ffbd34f5-p8.html">中</a><a href="2026-10-25-01ffbd34f5-p11-l.html">大</a><a class="pref-family" href="2026-10-25-01ffbd34f5-p7-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>The Goose Programming Language</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 7 / 50 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://aardappel.github.io/goose/">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p6-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-25-01ffbd34f5-p8-s.html">下一頁 →</a>
+<span class="pager-num">第 7 / 50 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">A program has the native call stack, static data and N data stacks, where the compiler works out N. A data stack is a large address-space reservation with a bump pointer, and there is no other memory. At most one resizable value is live per stack and it is always on top, so growth never moves anything and never checks a capacity. All of this is proved at compile time; the runtime tracks only the bump pointers.</p>
+
+<p class="fulltext">for round in 3 {</p>
+
+<p class="fulltext">var scratch: u8[>..] = [];                        // grow-only: growth is a pointer bump</p>
+
+<p class="fulltext">for i in 100000 { scratch.push((i % 256) as! u8); }</p>
+
+<p class="fulltext">print("round ", round, ": ", scratch.len, " bytes");</p>
+
+<p class="fulltext">}                                                     // the free: one store to the stack top</p>
+
+<p class="fulltext">Nothing moves, so references survive growth</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-25-01ffbd34f5-p6-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-25-01ffbd34f5-p8-s.html">下一頁 →</a>
+<span class="pager-num">第 7 / 50 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
