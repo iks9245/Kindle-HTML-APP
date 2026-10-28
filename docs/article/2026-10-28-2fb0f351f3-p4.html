@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tailscale SSH: Investigation and remediation update</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-28-2fb0f351f3-p3-s.html">小</a><span class="pref-on">中</span><a href="2026-10-28-2fb0f351f3-p5-l.html">大</a><a class="pref-family" href="2026-10-28-2fb0f351f3-p4-sans.html">切換為無襯線</a></p>
+
+
+<h1>Tailscale SSH: Investigation and remediation update</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 4 / 5 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://tailscale.com/ssh-investigation-update">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-28-2fb0f351f3-p3.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-28-2fb0f351f3-p5.html">下一頁 →</a>
+<span class="pager-num">第 4 / 5 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Disable SSH forwarding if you don't need it. Set TS_SSH_DISABLE_FORWARDING=1 in the tailscaled service environment and restart the service. This disables SSH forwarding without disabling Tailscale SSH entirely, and mitigates several of the more serious findings.</p>
+
+<p class="fulltext">- Review access to sensitive systems. Consider temporarily tightening your Tailscale SSH access policies while we investigate, so that only the specific users and devices that need access can connect.</p>
+
+<p class="fulltext">- Prepare to update. Apply the patched Tailscale client release when it becomes available.</p>
+
+<p class="fulltext">What happens next</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-28-2fb0f351f3-p3.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-28-2fb0f351f3-p5.html">下一頁 →</a>
+<span class="pager-num">第 4 / 5 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-10-28</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-28.html">中</a><a href="2026-10-28-l.html">大</a><a class="pref-family" href="2026-10-28-sans-s.html">切換為無襯線</a></p>
+
+<h1>每日 AI 文摘 2026-10-28</h1>
+<p class="meta">
+2026-10-28
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="index-s.html">存檔列表</a>
+ ｜ <a href="../deepread/2026-10-28-s.html">每日深讀</a>
+
+
+ ｜ <a href="2026-10-27-s.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日，人工智慧在加速藥物開發上展現突破性進展，並為離線緊急應變提供實用工具，凸顯其多元應用潛力。與此同時，NASA持續探索外太空與地球防禦，而烏克蘭地區的停火協議和北歐國家與俄羅斯的直接對話，則反映出全球在複雜局勢下尋求和平的努力。在科技與地緣政治的進展與挑戰之外，社會也面臨文化敏感議題，並更深層地探討人類失落與悲傷的意義。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>Early progress on accelerating drug development with Claude</h3>
+  <p class="summary">Anthropic 的生命科學團隊在過去幾個月中，已與六個組織建立深度合作夥伴關係，並啟動了自己的藥物開發項目，旨在利用其 AI 模型 Claude 大幅加速藥物發現與開發過程。這項工作涵蓋了從分子設計、優化到監管文件準備和臨床試驗設計等多個環節，以解決藥物開發中的各種瓶頸。初步成果包括透過 Claude 重新設計 CAR T 細胞療法以治療實體瘤，以及在不到 18 個月內將一種肌肉萎縮症的潛在療法從概念推進到小鼠實驗的良好結果。其目標是縮短新藥上市時間，以期能為癌症、食物過敏及罕見兒童疾病等提供有效的新藥。
+
+*   Claude 參與從早期研究到臨床試驗的多個藥物開發階段。
+*   已在 CAR T 細胞療法、食物過敏和肌肉萎縮症治療方面取得早期進展。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Claude 在藥物開發的哪些具體環節中發揮作用？</summary>
+    <p>Claude 協助處理藥物開發過程中的多個環節，包括提出新分子的初步設計、優化分子特性以實現大規模製造、起草臨床試驗所需的監管文件，以及管理實驗室營運和物流。它旨在解決從早期研究到後期開發階段的各種瓶頸。</p>
+  </details>
+  
+  <details>
+    <summary>這些藥物開發項目目前的進展如何？離人體臨床試驗還有多遠？</summary>
+    <p>目前大多數研究仍處於臨床前階段，意味著藥物尚未在人體上進行測試。例如，一種針對肌肉萎縮症的潛在療法預計最快可能在 2028 年底啟動人體臨床試驗。Anthropic 計劃隨著項目推進，將 Claude 的角色擴展到臨床試驗中。</p>
+  </details>
+  
+  <details>
+    <summary>除了與合作夥伴共同開發之外，Anthropic 如何讓其他研究人員也能使用 Claude 的技術？</summary>
+    <p>Anthropic 推出了面向研究人員的 AI 工作台「Claude Science」，並為生命科學家提供 Claude 使用額度。他們還設立了生命科學驗證計劃，讓受信任的組織能夠在更寬鬆的安全措施下使用最強大的模型，並發起了邀請客座研究員的徵集活動，鼓勵更多團隊利用 Claude 探索藥物發現的關鍵問題。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-28-fdf27bf996-s.html">全文（約 9 分鐘）</a> ｜ <a href="https://www.anthropic.com/research/early-progress-drug-development">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Tailscale SSH: Investigation and remediation update</h3>
+  <p class="summary">Tailscale 於 2026 年 10 月 26 日發布更新，指出其 Tailscale SSH 服務發現了嚴重的安全漏洞，主要是權限提升問題。這意味著已獲授權透過 Tailscale SSH 連線的使用者，在特定情況下可能執行超出其本機使用者權限的操作，甚至獲取提升的權限。Tailscale 工程團隊已為大多數問題實施修復，並預計在 10 月 27 日（星期二）結束前發布修補後的客戶端版本。這些漏洞雖然嚴重，但目前不建議所有用戶禁用 Tailscale SSH，而是建議採取以下措施：
+
+* 審查 SSH 存取政策以限制權限。
+* 禁用 SSH 轉發功能（如果不需要）。
+* 準備在更新發布後立即應用補丁。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是 Tailscale SSH 中的「權限提升」漏洞？</summary>
+    <p>「權限提升」漏洞是指已獲授權透過 Tailscale SSH 連線的用戶，在特定配置或情況下，能夠執行超出其設定的本機使用者權限範圍的操作。這可能導致攻擊者在系統上獲取更高的存取權限，例如以管理員身份執行命令，從而造成潛在的數據洩露或系統破壞。</p>
+  </details>
+  
+  <details>
+    <summary>在補丁發布之前，Tailscale 用戶應立即採取哪些措施來降低風險？</summary>
+    <p>在補丁發布之前，Tailscale 建議用戶審查其 SSH 存取政策，確保只有必要的用戶和設備才能連接。此外，如果不需要，應禁用 SSH 轉發（透過設定 `TS_SSH_DISABLE_FORWARDING=1`），這可以緩解幾個較嚴重的問題。最後，考慮暫時收緊對敏感系統的存取政策。</p>
+  </details>
+  
+  <details>
+    <summary>Tailscale 後續會提供關於這些漏洞的更多技術細節嗎？</summary>
+    <p>是的，一旦修復程式可用，Tailscale 將會發布一份安全諮詢，詳細說明已確認的漏洞、受影響的版本和配置及其影響。之後，他們還會發布一篇技術部落格文章，解釋這些發現、根本原因以及所做的工程變更。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-28-2fb0f351f3-s.html">全文（約 2 分鐘）</a> ｜ <a href="https://tailscale.com/ssh-investigation-update">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Survival LLM: AI assistant and emergency library that runs on your own computer</h3>
+  <p class="summary">「Survival LLM」是一款免費且開源的AI助理及緊急圖書館，專為在無網路連線狀況下提供資訊而設計。它完全在使用者自己的電腦上運行（支援Mac和Windows），可在停電或網路中斷等緊急情況下，提供如何安全儲存食物、處理燒傷或淨化水源等來自可靠來源的應急指南和知識，並明確標示資料來源。這確保了使用者在關鍵時刻仍能獲取重要的生存資訊，同時保障個人隱私，因為所有查詢都不會離開本機。
+
+重點：
+- 無需網路即可運作，資料庫豐富。
+- 提供答案來源，使用者可自行驗證。
+- 支援加入個人文件進行查詢。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>Survival LLM 是如何實現在無網路狀態下運作的？它對電腦硬體有什麼要求？</summary>
+    <p>Survival LLM 將 AI 模型和龐大的知識庫全部儲存在使用者的本機電腦上，因此一旦完成初始設定和下載，便不再需要網路連線。對於硬體要求，它支援 macOS 14 Sonoma 或更新版本的 Apple Silicon Mac，以及 64 位元 Windows 10 或 11 電腦，並建議至少 16 GB 記憶體，更高記憶體（例如 128 GB 或更多）則能運行更強大的 AI 模型。</p>
+  </details>
+  
+  <details>
+    <summary>除了生存指南，Survival LLM 的緊急圖書館還包含了哪些具體的資料來源和主題？</summary>
+    <p>該圖書館收錄了約 93 萬篇維基百科最常閱讀的文章、WikiMed 醫學百科、美國國家醫學圖書館的 MedlinePlus、FEMA 緊急指南、CDC 旅行者健康資訊、美國軍方醫學與生存手冊，以及 iFixit 維修指南等，涵蓋了醫療、應急準備、技術維修和生活技能等多方面內容。使用者甚至可以加入自己的 PDF 文件或筆記，讓 AI 進行搜尋。</p>
+  </details>
+  
+  <details>
+    <summary>依賴 Survival LLM 在緊急情況下獲取資訊時，使用者需要注意什麼潛在的限制或風險？</summary>
+    <p>最大的限制是 AI 模型可能會犯錯，尤其是較小的模型更容易出錯。因此，Survival LLM 在提供答案時會明確顯示其參考的原始文章，建議使用者點擊查閱原文以驗證資訊的準確性。此外，雖然它提供了大量資訊，但並不能替代專業的緊急服務或醫療建議。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-28-62b1fcdba2-s.html">全文（約 4 分鐘）</a> ｜ <a href="https://www.brangus.io/survival-llm">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Ceasefire extended across Ukraine's Kherson region, officials say</h3>
+  <p class="summary">烏克蘭赫爾松地區（Kherson）的停火協議已擴大範圍，以利向被俄羅斯佔領的奧列什基市（Oleshky）運送人道援助物資並進行疏散。這項由美國第一夫人梅蘭妮亞·川普和教宗良十四世促成的停火協議，於週二生效，並將持續至11月1日星期日。數千名居民被困在奧列什基，面臨極度飢餓，且沒有電力、水或食物。此協議被視為自2022年以來最大規模的局勢降級，若成功執行，可能為未來的和平進程鋪路。
+- 奧列什基自2022年2月起被俄羅斯佔領，卡霍夫卡水壩於2023年被炸毀後，該市一直缺乏基本服務，逃生路線也佈滿地雷。
+- 烏克蘭方面擔憂俄羅斯可能將撤離居民引導至俄羅斯，而非烏克蘭控制區，且居民也擔憂因支持烏克蘭而遭報復。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼奧列什基（Oleshky）的居民面臨如此絕望的人道危機？</summary>
+    <p>奧列什基自2022年2月俄羅斯全面入侵初期就被佔領，且在2023年卡霍夫卡水壩被炸毀後，城市就失去了電力、天然氣和水供應。由於第聶伯河（Dnipro river）和俄羅斯軍隊的阻礙，加上所有出城道路都佈滿地雷且危險，數千居民被困，面臨極度飢餓。</p>
+  </details>
+  
+  <details>
+    <summary>美國第一夫人梅蘭妮亞·川普和教宗良十四世在這次停火協議中扮演了什麼角色？</summary>
+    <p>美國第一夫人梅蘭妮亞·川普和教宗良十四世協助促成了這次停火協議。梅蘭妮亞·川普週二宣布停火範圍已擴大到赫爾松地區（Kherson）之外，以提供人道救援車隊「安全通道」。克里姆林宮發言人也對美國的調解表示讚揚，特別提到了梅蘭妮亞·川普的代表。</p>
+  </details>
+  
+  <details>
+    <summary>儘管有停火協議，居民和烏克蘭當局對於疏散行動存在哪些主要擔憂？</summary>
+    <p>烏克蘭總統澤倫斯基警告，俄羅斯掃雷後的撤離路線可能導致平民被導向俄羅斯而非烏克蘭控制區。此外，居民們也擔心俄羅斯可能會檢查他們的手機和線上活動，以尋找支持烏克蘭的證據，這可能使他們面臨危險。撤離計畫的許多細節尚不清楚，居民們對信任官方感到警惕。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-28-4ce40386ca-s.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Norway and Finland leaders hold rare call with Putin</h3>
+  <p class="summary">芬蘭總統亞歷山大·斯圖布和挪威總理約納斯·加爾·斯托雷最近在赫爾辛基進行了一次罕見的聯合通話，與俄羅斯總統弗拉基米爾·普丁進行了90分鐘的對話。此次通話的目的是直接傳達關於結束俄羅斯對烏克蘭戰爭的未來和平談判訊息，強調「沉默」無法實現和平。儘管雙方未取得突破，且存在「巨大分歧」，但三方同意繼續直接溝通。
+*   此次通話是在與烏克蘭及美國協商後進行的。
+*   普丁表示，公正持久的和平只有在充分考慮俄羅斯利益的情況下才有可能。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>芬蘭和挪威為何選擇在此時與普丁直接通話，而不是由其他歐洲國家領袖代表？</summary>
+    <p>芬蘭總統斯圖布和挪威總理斯托雷強調，他們是以俄羅斯鄰國的身份進行此次通話，而非代表整個歐洲。此舉旨在直接傳達訊息，促進和平談判，避免衝突因沉默而持續。</p>
+  </details>
+  
+  <details>
+    <summary>其他歐洲國家或歐盟對芬蘭和挪威的獨立通話有何反應？</summary>
+    <p>丹麥和瑞典總理表示，此次對話並未與其他歐洲領導人協調，瑞典總理克里斯特松認為歐洲應該團結一致而非各自為政。波蘭總理圖斯克則對即將在阿布達比舉行的談判持「審慎樂觀」態度。</p>
+  </details>
+  
+  <details>
+    <summary>既然雙方同意繼續直接溝通，對未來的烏克蘭和平談判有何影響或潛在進展？</summary>
+    <p>儘管此次通話未取得實質突破，但三方同意繼續直接電話溝通，這為未來可能在阿布達比舉行的美烏俄三方會談奠定基礎。俄羅斯克里姆林宮也表示，歡迎歐洲談判代表參與和平談判。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-28-5da481dc97-s.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Mbappé sorry for 'ill-judged' Mao remark after backlash in China</h3>
+  <p class="summary">法國足球明星基利安·姆巴佩近日因在法國脫口秀中提及一張與中國已故領導人毛澤東相似的「中國獨裁者」迷因，發表了「判斷不當」的言論並公開道歉。此事件在中國社群媒體上迅速引發強烈反彈，導致姆巴佩與蒙牛、東鵬等中國主要品牌終止代言合約，甚至有報導指出中國中央電視台將停播西甲聯賽。
+姆巴佩對其言論傷害了許多中國人民表達歉意，此事件再次凸顯了毛澤東形象在中國的高度敏感性，以及外國公眾人物在中國市場經營時需謹慎言行的重要性。
+* 爭議言論在中國足球論壇「懂球帝」揭露後迅速蔓延。
+* 中國官方媒體和品牌對此採取強硬立場，切斷合作。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>毛澤東在中國為何是一個極度敏感的議題？</summary>
+    <p>毛澤東在中國共產黨內被尊為國家象徵，儘管他的統治曾導致數百萬人死亡，歷史上也有大躍進和文化大革命等爭議事件。任何對毛澤東的嘲諷或迷因，都被視為對黨及其精心維護的國家歷史敘事的冒犯，觸及了中國官方最敏感的神經。</p>
+  </details>
+  
+  <details>
+    <summary>此事件對國際公眾人物及與中國市場互動的品牌有何更廣泛的影響？</summary>
+    <p>此事件顯示了國際公眾人物若被認為不尊重中國民族情感，將面臨巨大的商業和聲譽風險。品牌為符合政府及黨的立場會迅速斷絕合作關係，國家媒體也可能停止相關內容播放，嚴重影響市場進入和形象。這凸顯了在中國經營時，了解並尊重當地文化與政治敏感性的必要性。</p>
+  </details>
+  
+  <details>
+    <summary>姆巴佩過去是否曾被冠上「獨裁者」的綽號，或者他以前是否對此類迷因發表過評論？</summary>
+    <p>這並非姆巴佩首次被稱為「獨裁者」，這個綽號因他在足球界的巨大影響力而廣為流傳，也讓他成為許多迷因的對象。他曾表示理解這些迷因的玩笑性質，但也坦承它們有時揭示了人們「缺乏政治和人文意識」，畢竟歷史上真正的獨裁者造成了巨大傷害。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-28-f8a0b434e8-s.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>NASA Invites Media to Crew Completion of Yearlong Mars Simulation</h3>
+  <p class="summary">美國太空總署 (NASA) 的第二次 CHAPEA 火星模擬任務將於 10 月 31 日星期六結束，四名志願者在休士頓詹森太空中心的一個設施中隔離了 378 天後將離開他們的棲息地。這項任務模擬了火星探測行動，包括太空行走、維護和植物種植，同時承受了通訊延遲和資源限制等壓力。從中收集到的健康與性能數據，對於 NASA 未來 Artemis 月球任務及深空探險至關重要，有助於優化食物系統、醫療照護和應對太空飛行風險。
+
+重點：
+*   在 1,700 平方英尺的 3D 列印設施中模擬火星生活，包括操作、太空行走及植物種植。
+*   為未來月球基地和火星任務提供關鍵數據，以應對人類太空飛行的挑戰。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>CHAPEA 的全名是什麼？這項任務的主要目標為何？</summary>
+    <p>CHAPEA 的全名是「乘員健康與表現探索類比 (Crew Health and Performance Exploration Analog)」。其主要目標是透過模擬長期火星任務的生活和工作條件，收集乘員健康和表現的數據，以幫助 NASA 為未來的深空探索做好準備。</p>
+  </details>
+  
+  <details>
+    <summary>CHAPEA 任務所收集的數據將如何具體應用於 NASA 未來的任務？</summary>
+    <p>這些數據將有助於優化食物系統設計、提高乘員時間的效率，以及深空通訊的頻寬利用。此外，它還能加強太空飛行的醫療照護和行為支持實踐，確保乘員為 Artemis 月球任務和潛在的火星探險做好準備。</p>
+  </details>
+  
+  <details>
+    <summary>志願者在隔離期間面臨了哪些主要的挑戰或壓力？</summary>
+    <p>志願者面臨了深空任務中常見的各種壓力，包括與地球之間的通訊延遲、資源限制，以及在 1,700 平方英尺的有限棲息地內的長期隔離。他們也在這些條件下進行了模擬太空行走和棲息地維護。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-28-2a05fc2547-s.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/news-release/nasa-invites-media-to-crew-completion-of-yearlong-mars-simulation/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>NASA’s Neo Surveyor Sunshade</h3>
+  <p class="summary">美國太空總署（NASA）的「近地天體勘測員」（NEO Surveyor）任務，其大型遮陽罩於2026年10月26日發布影像顯示技師正在進行檢查。這個高20英尺、寬8英尺的遮陽罩對紅外線太空望遠鏡至關重要，它能確保望遠鏡在搜尋近地小行星和彗星時保持低溫，並同時提供電力。NEO Surveyor將能偵測到地面光學望遠鏡難以觀測到的天體，尤其是在太陽方向的小行星和彗星，這對於地球防禦具有重要意義。
+* 任務目標：搜尋近地小行星與彗星，強化地球防禦。
+* 技術關鍵：大型遮陽罩確保紅外線望遠鏡運作。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這個遮陽罩為何如此巨大，且低溫對NEO Surveyor任務為何如此關鍵？</summary>
+    <p>遮陽罩高達20英尺、寬8英尺，其主要目的是要讓紅外線太空望遠鏡在搜尋近地小行星和彗星時保持低溫。紅外線望遠鏡對熱敏感，需要極低的溫度才能有效運作，以偵測宇宙中的微弱熱訊號。遮陽罩同時也負責為太空船提供電力，確保任務能順利執行。</p>
+  </details>
+  
+  <details>
+    <summary>什麼是近地天體（NEOs），為何偵測它們，特別是那些靠近太陽的天體，如此重要？</summary>
+    <p>近地天體是軌道與地球軌道接近的小行星和彗星。NEO Surveyor的任務是偵測這些潛在危險的天體，特別是那些地面光學望遠鏡難以在太陽方向搜尋到的天體。及早發現這些天體對於地球防禦至關重要，能提供更多時間評估潛在威脅並規劃應對措施。</p>
+  </details>
+  
+  <details>
+    <summary>相較於現有的觀測方式，NEO Surveyor 如何提升近地天體的偵測能力？</summary>
+    <p>NEO Surveyor作為一個紅外線太空望遠鏡，能夠偵測到地面光學望遠鏡難以發現的近地小行星和彗星。特別是，它能有效搜尋位於太陽方向的天體，這些區域因陽光眩光而使地面觀測變得困難。透過在太空中以紅外線進行觀測，NEO Surveyor大大擴展了我們對這些潛在威脅天體的偵測範圍和能力。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-28-a8e684ce56-s.html">全文（約 1 分鐘）</a> ｜ <a href="https://www.nasa.gov/image-article/nasas-neo-surveyor-sunshade/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>How a Johnson Mentor Shapes the Next Generation of NASA Talent</h3>
+  <p class="summary">NASA詹森太空中心工程師Daniel Cohen透過其豐富經驗與對太空探索的熱情，指導萊斯大學實習生Malvika Bhardwaj，展現導師對下一代人才培養的重要性。Bhardwaj正在為美國除役載具開發工具，以確保國際太空站安全離軌，並從Cohen的教導與NASA團隊合作中獲益良多。這篇文章在10月27日「全國指導日」之際，強調了導師在STEM領域中傳承知識、提供支持的關鍵角色。
+要點：
+- Bhardwaj正開發分析工具，用於國際太空站的除役載具。
+- NASA詹森太空中心實習生計畫提供實際操作經驗及團隊協作機會。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>美國除役載具(U.S. Deorbit Vehicle)在國際太空站的除役任務中扮演什麼角色？</summary>
+    <p>美國除役載具的任務是確保國際太空站在其使用壽命結束時能安全地脫離軌道並重返地球大氣層，避免產生太空碎片或其他危險。Malvika Bhardwaj開發的工具將幫助分析其推進器點火，確保過程精確無誤。</p>
+  </details>
+  
+  <details>
+    <summary>NASA透過其STEM推廣辦公室為實習生提供哪些機會，對學生有何益處？</summary>
+    <p>NASA的STEM推廣辦公室讓實習生有機會參與實際的太空機構專案，並在NASA導師的指導下學習。這不僅能讓他們獲得專業技術技能和實務經驗，更能為未來在太空探索領域的職業生涯奠定堅實基礎。</p>
+  </details>
+  
+  <details>
+    <summary>從Daniel Cohen和Malvika Bhardwaj的經驗中，NASA的導師制度和團隊協作文化如何幫助機構的專案？</summary>
+    <p>NASA的導師制度和團隊協作文化有助於新進人才迅速融入並學習，同時確保知識和經驗的有效傳承。透過鼓勵實習生參與會議和協作，促進了不同視角之間的交流，這對於解決複雜的太空探索問題至關重要，能有效推動專案進展。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-28-ba39248fe6-s.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/general/how-a-johnson-mentor-shapes-the-next-generation-of-nasa-talent/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>How to build real peace</h3>
+  <p class="summary">這篇文章深入探討了建立真正和平的挑戰與途徑，作者從自身庫德族的經歷出發，批判傳統和平協議僅止於停止直接暴力（消極和平），卻未能解決導致衝突的深層結構性不公。文章主張，真正的和平必須超越傳統框架，建構以合作社模式為核心的「反資本主義和平」經濟體系，優先滿足集體需求而非資本積累，並挑戰資本主義所固有的剝削、父權、種族主義等問題。透過敘利亞羅賈瓦和哥倫比亞ECOMÚN的案例，作者闡明和平是從底層建構的日常實踐，讓人民重獲對自身時間、地域和經濟的掌控，並共同決定如何生活，而不僅僅是簽署一份文件。
+* 傳統和平協議（如瓜地馬拉的經驗）常未能解決根本不公，導致衝突捲土重來。
+* 真正的和平必須挑戰資本主義邏輯，轉向以合作社為基礎的自下而上的經濟與社會模式。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>作者在文章開頭提到庫德斯坦的經歷，庫德族在當地遭遇了哪些長期性的壓迫，導致作者對和平有如此深刻的追求？</summary>
+    <p>庫德族長期以來被現代民族國家否認其民族認同，語言被禁，土地被剝奪，甚至公民權利也被剝奪，這導致了長達一個世紀的暴力同化。作者的家庭因此被迫流離失所，這段親身經歷讓她深信，自由與和平絕非抽象政治議題，而是需要透過反抗壓迫來實現。</p>
+  </details>
+  
+  <details>
+    <summary>羅賈瓦（Rojava）和哥倫比亞ECOMÚN的合作社模式，具體而言如何體現「反資本主義和平」的理念，它們與一般的合作社有何不同？</summary>
+    <p>這些合作社的特別之處在於它們不僅僅是經濟組織，更是廣泛社會運動的一部分，優先滿足集體需求而非資本積累。它們致力於挑戰經濟剝削、父權制、種族主義和殖民主義等與資本主義交織的深層結構性暴力，旨在從根本上轉變經濟關係，建構自下而上的民主自主生活模式。</p>
+  </details>
+  
+  <details>
+    <summary>文章指出「反資本主義和平」不只適用於戰區，那麼在一般沒有明顯武裝衝突的現代社會中，個人或社區可以如何實踐這種和平理念？</summary>
+    <p>在日常生活中，這意味著要質疑資本主義體系對個人時間、需求和關係的掌控，並嘗試透過集體審議和合作社模式來恢復自主權。例如，重新思考工作與生活的平衡，參與社區決策，或建立以共同利益為導向的經濟活動，讓生命本身回歸和諧，而非被無止盡的生產和消費所驅動。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-10-28-faaea3809d-s.html">全文（約 19 分鐘）</a> ｜ <a href="https://aeon.co/essays/what-cooperatives-for-an-anticapitalist-peace-look-like">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Love with nowhere to go</h3>
+  <p class="summary">這篇文章深入探討悲傷的本質，指出它遠不只與死亡相關，而是「無處可去的愛」。作者透過自身經歷，包括對活著卻已改變的父母、逝去的友誼與學術身份的悲痛，論證當深植於個人認同、生命結構及未來可能性受到破壞時，即使沒有死亡，也會產生深刻的失落。文章批評西方文化長期將悲傷侷限於喪親，甚至將其病態化，強調這種狹隘理解阻礙了人際連結與共同承受痛苦的能力。最終，擁抱並分享悲傷，而非壓抑或否認，才是促進人類繁榮的關鍵。
+
+* 悲傷是因「身份認同被瓦解」而產生的失落，它切斷了你與「一個你自己的版本」的連結。
+* 壓抑或病態化悲傷會阻礙人類蓬勃發展，並破壞人際連結。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>為什麼西方文化會對悲傷產生如此狹隘的理解，僅限於死亡？</summary>
+    <p>文章指出，從古希臘羅馬哲學家如馬可·奧理略，到基督教思想家如聖奧古斯丁和斯賓諾莎，都曾將依戀視為負擔，悲傷視為錯誤。他們認為智慧之人應減少對無常事物的依戀，這種哲學觀點逐漸滲透到西方文化中，導致了對悲傷的壓抑和病態化。</p>
+  </details>
+  
+  <details>
+    <summary>根據文章的觀點，將悲傷限制為喪親之痛或視為心理疾病，會帶來什麼負面影響？</summary>
+    <p>這種做法會阻礙人類的蓬勃發展，切斷我們與所愛事物的連結，也隔絕了人與人之間的共情。當非死亡的悲傷不被承認或被貼上病態標籤時，個人會感到孤立無援，無法獲得社會支持，也錯失了透過共同脆弱性建立深刻連結的機會。</p>
+  </details>
+  
+  <details>
+    <summary>文章建議我們應如何處理這種廣泛的、非死亡的悲傷，尤其是在缺乏社會認可的情況下？</summary>
+    <p>文章主張，應當將悲傷「命名並揭示」，讓它被看見並可以被他人共同承擔。透過分享脆弱性，人們能夠在共同的人性中相互認可，並發現自己的痛苦並非孤單。這意味著需要創造一個社群環境，讓悲傷能夠被接納、持有和處理，而非獨自承受。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-10-28-7e2f20c3fd-s.html">全文（約 18 分鐘）</a> ｜ <a href="https://aeon.co/essays/we-need-a-language-to-name-the-grief-that-comes-without-death">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>
