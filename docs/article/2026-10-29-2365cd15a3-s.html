@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why is this fingerprinting script creating bioweapons?</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-29-2365cd15a3.html">中</a><a href="2026-10-29-2365cd15a3-l.html">大</a><a class="pref-family" href="2026-10-29-2365cd15a3-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>Why is this fingerprinting script creating bioweapons?</h1>
+<p class="meta">
+Hacker News ｜ 約 8 分鐘閱讀
+ ｜ 第 1 / 20 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://nullpt.rs/fingerprinting-bioweapons">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<span class="pager-prev pager-off">← 上一頁</span>
+<a class="pager-next" href="2026-10-29-2365cd15a3-p2-s.html">下一頁 →</a>
+<span class="pager-num">第 1 / 20 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Preamble</p>
+
+<p class="fulltext">I've always had a fascination with reverse-engineering browser fingerprinting scripts. Most of my time has been spent looking at the usual suspects (popular fingerprinting libraries like FingerprintJS and more sophisticated scripts used by anti-bots like Cloudflare Turnstile, Akamai, and others).</p>
+
+<p class="fulltext">At some point, I wanted to know what else was out there. I had an idea: What if I crawled the web and intercepted fingerprinting-related browser API calls and mapped it all?</p>
+
+<p class="fulltext">To do this, I used the Tranco Top Sites list and began crawling using Playwright. I would hook canvas toDataURL calls and common fingerprinting/anti-bot properties like navigator.webdriver to filter out benign canvases.</p>
+
+<p class="fulltext">For those unfamiliar, canvas fingerprinting generally involves drawing text, shapes, or other graphics onto an HTML <canvas> and extracting the resulting pixel data. Subtle differences in how browsers, operating systems, graphics drivers, and hardware render those graphics can help distinguish one browser environment from another.</p>
+
+
+
+
+
+
+<nav class="pager">
+<span class="pager-prev pager-off">← 上一頁</span>
+<a class="pager-next" href="2026-10-29-2365cd15a3-p2-s.html">下一頁 →</a>
+<span class="pager-num">第 1 / 20 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
