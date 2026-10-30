@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-30-c30c38a613-p23.html">中</a><a href="2026-10-30-c30c38a613-p33-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p18-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 18 / 28 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p17-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p19-s.html">下一頁 →</a>
+<span class="pager-num">第 18 / 28 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">src/tinyworldformer/rustexport/ imports only numpy and torch (a test keeps it that way), so other projects can reuse the export: build a model from rustexport.qat (QLinear, LoopedBlock), train it with ActQuant.enabled = True after a float warm-up, convert it with rustexport.convert.looped_model, then write the Rust source with int_model_arrays, mlp_arrays and codegen.write_module. rustexport.Golden writes the vectors a Rust test checks.</p>
+
+<p class="fulltext">The firmware (tinyworldformer-rs/firmware) is no_std Rust on embassy. Nothing is allocated at run time: the weights are static arrays in flash, and every buffer is a fixed-size static in RAM.</p>
+
+<p class="fulltext">Core 1 runs the game. One pass of its loop (dream_loop in firmware/src/main.rs) is one frame:</p>
+
+<p class="fulltext">- The actor reads features off the current frame (agent::observe) and runs its MLP to pick a button. If on-device learning is on, the learning agent picks instead; if you are pressing buttons, your press is used.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p17-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p19-s.html">下一頁 →</a>
+<span class="pager-num">第 18 / 28 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

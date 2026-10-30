@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-30-c30c38a613-p37.html">中</a><a href="2026-10-30-c30c38a613-p51-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p28-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 28 / 28 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p27-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 28 / 28 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">| src/tinyworldformer/games/ | the five games (rules, rendering, read), the Game registry, scripted agents, terminal play |</p>
+
+<p class="fulltext">| src/tinyworldformer/training/ | data, world model, training, dream checks, stream-x, export to the Rust crate |</p>
+
+<p class="fulltext">| src/tinyworldformer/rustexport/ | reusable PyTorch → no_std Rust export: QAT layers, the int8 spec, conversion, code generation |</p>
+
+<p class="fulltext">| tinyworldformer-rs/ | no_std int8 engine, dream loop, agent and learner; host demo (src/main.rs) |</p>
+
+<p class="fulltext">| tinyworldformer-rs/firmware/ | Pico 2 W firmware |</p>
+
+<p class="fulltext">| tinyworldformer-rs/web/ | WebAssembly build and the browser page ( www/) |</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>摘要中提到系統能在「夢境」中學習，這種學習方式具體是如何運作的？</summary>
+  <p>系統中的參與者網路可以在世界模型生成而非真實遊戲提供的幀中學習。這意味著AI可以在不接觸真實環境的情況下，透過其內建的世界模型進行模擬訓練，從而降低對實際資料收集的需求。</p>
+</details>
+
+<details>
+  <summary>為何此專案選擇了 Raspberry Pi Pico 2 W 作為運行平台？它有何特殊優勢？</summary>
+  <p>選擇 Raspberry Pi Pico 2 W 的主要原因是其低廉的成本以及內建浮點運算單元（FPU）。FPU 對於神經網路的運算效率至關重要，使其能夠在微控制器級別的硬體上流暢地執行這些小型AI模型。</p>
+</details>
+
+<details>
+  <summary>將複雜的AI模型運行在微型硬體上，對於未來的嵌入式系統或邊緣AI應用有什麼重要的意義？</summary>
+  <p>這項成就意味著AI技術可以被整合到更小、更低功耗、更便宜的設備中，擴展了邊緣AI的應用範圍。例如，它可能促進智能傳感器、微型機器人或獨立運行AI遊戲設備的發展，無需雲端連接即可進行智能處理。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p27-s.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 28 / 28 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

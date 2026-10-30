@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-30-c30c38a613-p18-sans-s.html">小</a><a href="2026-10-30-c30c38a613-p23-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-30-c30c38a613-p33-l.html">切換為襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 33 / 52 頁
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p32-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p34-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 33 / 52 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">src/tinyworldformer/rustexport/ imports only numpy and torch (a test keeps it that way), so other projects can reuse the export: build a model from rustexport.qat (QLinear, LoopedBlock), train it with ActQuant.enabled = True after a float warm-up, convert it with rustexport.convert.looped_model, then write the Rust source with int_model_arrays, mlp_arrays and codegen.write_module. rustexport.Golden writes the vectors a Rust test checks.</p>
+
+<p class="fulltext">The firmware (tinyworldformer-rs/firmware) is no_std Rust on embassy. Nothing is allocated at run time: the weights are static arrays in flash, and every buffer is a fixed-size static in RAM.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p32-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p34-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 33 / 52 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

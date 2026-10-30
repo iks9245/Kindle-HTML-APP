@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-30-c30c38a613-p26-s.html">小</a><span class="pref-on">中</span><a href="2026-10-30-c30c38a613-p48-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p35-sans.html">切換為無襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 35 / 37 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p34.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p36.html">下一頁 →</a>
+<span class="pager-num">第 35 / 37 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">uv run python -m tinyworldformer.training.streamx --out models/${G}_agent.pt --export tinyworldformer-rs</p>
+
+<p class="fulltext">cd tinyworldformer-rs && TWF_ENV=$G cargo test --release && TWF_ENV=$G cargo run --release</p>
+
+<p class="fulltext">Settings that differ per game:</p>
+
+<p class="fulltext">| game | settings |</p>
+
+<p class="fulltext">|---|---|</p>
+
+<p class="fulltext">| Breakout | 1M transitions, --miss-penalty 5, then collect with the agent (data --learned <agent> --holes 0.5 --out data/breakout_learned) and fine-tune on all of it (train --init ... --data data/breakout data/breakout_learned --steps 15000 --warmup-float 0 --lr 1e-3), four rounds |</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p34.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p36.html">下一頁 →</a>
+<span class="pager-num">第 35 / 37 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

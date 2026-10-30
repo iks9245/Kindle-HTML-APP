@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-30-c30c38a613-p20.html">中</a><a href="2026-10-30-c30c38a613-p29-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p16-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 16 / 28 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p15-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p17-s.html">下一頁 →</a>
+<span class="pager-num">第 16 / 28 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Every matrix in the world model is int8 with one scale per output row (scale = max|w| / 127). Activations are int8 too, with one scale per tensor and per loop index, since the loops see different ranges. Matmuls sum int8 × int8 into int32 (two multiply-adds per SMLAD instruction on the RP2350) and then apply one float multiply by the two scales. Softmax uses a 1024-entry exp table, with probabilities stored as uint8. Norms, residuals and embeddings stay in float32, since the RP2350 has an FPU.</p>
+
+<p class="fulltext">Training applies the same rounding (QAT with a straight-through estimator), so the int8 model is the model that was trained. rustexport/intref.py is the int8 model in numpy with every float operation in a fixed order; the Rust engine reproduces it bit for bit, and cargo test checks golden vectors for every exported env.</p>
+
+<p class="fulltext">| game | int8 weights | float32 (embeddings, norms, scales) | game data | agent (float32) | firmware flash | firmware RAM |</p>
+
+<p class="fulltext">|---|---|---|---|---|---|---|</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p15-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p17-s.html">下一頁 →</a>
+<span class="pager-num">第 16 / 28 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

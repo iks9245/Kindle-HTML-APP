@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-30-c30c38a613-p8-sans.html">中</a><a href="2026-10-30-c30c38a613-p11-sans-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p6-s.html">切換為襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 6 / 28 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p5-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p7-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 6 / 28 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The model is a single transformer block (attention plus a ReLU MLP) with one set of weights, applied 1 to 4 times, with the input added back before every pass. The output after every pass is trained against the next frame, so at run time the loop count trades speed for accuracy. On the Pico to keep a decent frame rate we use uses two loops.</p>
+
+<p class="fulltext">The animation shows one held-out Doom-lite step. After one pass the model draws an enemy that isn't there, and each further pass removes part of it: 92, 35, 12, then 0 wrong cells. The bars on the right are the share of held-out frames each loop count gets exactly right.</p>
+
+<p class="fulltext">Here is a dreamed Doom-lite step decoded after 1, 2, 3 and 4 loops, with red boxes on cells that differ from the real rules:</p>
+
+<p class="fulltext">Exact held-out frames by loop count:</p>
+
+<p class="fulltext">| loops | Breakout | Doom-lite | Flappy Bird | Pong | Pac-Man |</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p5-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p7-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 6 / 28 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

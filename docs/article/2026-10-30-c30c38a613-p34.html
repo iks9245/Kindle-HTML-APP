@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-30-c30c38a613-p25-s.html">小</a><span class="pref-on">中</span><a href="2026-10-30-c30c38a613-p47-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p34-sans.html">切換為無襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 34 / 37 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p33.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p35.html">下一頁 →</a>
+<span class="pager-num">第 34 / 37 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">uv run python -m tinyworldformer.training.data --game $G --transitions 2000000 --varied 0.3   # -> data/$G</p>
+
+<p class="fulltext">uv run python -m tinyworldformer.training.train --data data/$G --d 48 --heads 3 --ff 96 --out models/${G}_wm.pt</p>
+
+<p class="fulltext">uv run python -m tinyworldformer.training.streamx --env real --game $G --out models/${G}_agent.pt</p>
+
+<p class="fulltext">uv run python -m tinyworldformer.training.evalwm --ckpt models/${G}_wm.pt --agent models/${G}_agent.pt   # check the dream</p>
+
+<p class="fulltext">uv run python -m tinyworldformer.training.streamx --env dream --wm models/${G}_wm.pt --out models/${G}_dream_agent.pt</p>
+
+<p class="fulltext">uv run python -m tinyworldformer.training.export --ckpt models/${G}_wm.pt</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p33.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p35.html">下一頁 →</a>
+<span class="pager-num">第 34 / 37 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

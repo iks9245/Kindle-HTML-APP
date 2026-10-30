@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-10-30-c30c38a613-p6-s.html">小</a><span class="pref-on">中</span><a href="2026-10-30-c30c38a613-p11-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p8-sans.html">切換為無襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 8 / 37 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p7.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p9.html">下一頁 →</a>
+<span class="pager-num">第 8 / 37 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The model is a single transformer block (attention plus a ReLU MLP) with one set of weights, applied 1 to 4 times, with the input added back before every pass. The output after every pass is trained against the next frame, so at run time the loop count trades speed for accuracy. On the Pico to keep a decent frame rate we use uses two loops.</p>
+
+<p class="fulltext">The animation shows one held-out Doom-lite step. After one pass the model draws an enemy that isn't there, and each further pass removes part of it: 92, 35, 12, then 0 wrong cells. The bars on the right are the share of held-out frames each loop count gets exactly right.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p7.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p9.html">下一頁 →</a>
+<span class="pager-num">第 8 / 37 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-30-c30c38a613-p4.html">中</a><a href="2026-10-30-c30c38a613-p5-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p3-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 3 / 28 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p2-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p4-s.html">下一頁 →</a>
+<span class="pager-num">第 3 / 28 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">On the chip neither network ever uses the real game: the actor only sees frames the world model, and the world model only gets actions from the actor. Both run on core 1 of the RP2350, while core 0 handles USB and the display.</p>
+
+<p class="fulltext">The pretrained actor can be swapped for a fresh stream-x agent that learns from scratch on the board. And any button press hands control to you, so you can play the dream yourself.</p>
+
+<p class="fulltext">Each game is a few hundred lines of numpy in src/tinyworldformer/games/. It renders to a small grid of token ids, and one frame always holds the whole game state, so hidden state has to be drawn into the frame: the ball's heading is part of its token, and Doom-lite has a minimap.</p>
+
+<p class="fulltext">| game | frame | rules | random event | world model | exact frames, 2 loops |</p>
+
+<p class="fulltext">|---|---|---|---|---|---|</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p2-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p4-s.html">下一頁 →</a>
+<span class="pager-num">第 3 / 28 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

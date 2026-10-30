@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-30-c30c38a613-sans.html">中</a><a href="2026-10-30-c30c38a613-sans-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-s.html">切換為襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News ｜ 約 17 分鐘閱讀
+ ｜ 第 1 / 28 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<span class="pager-prev pager-off">← 上一頁</span>
+<a class="pager-next" href="2026-10-30-c30c38a613-p2-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 1 / 28 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Using 2 small neural networks to generate and play the game at the same time on a Raspberry Pi Pico 2 W. The first one creates the game: given the current frame and the action, it predicts the next frame and the reward. The second one plays that game: it uses the generated frame and picks an action.</p>
+
+<p class="fulltext">Every frame above was sampled by the world model network, and the actions were taken by the actor network.</p>
+
+<p class="fulltext">I got interested in looped transformers, where one transformer block is applied several times with the same weights instead of stacking different layers. Reusing weights is cheap on memory, so I wanted to see if a looped world model could be small enough to run on a microcontroller. I picked the Pico 2 W because it is cheap and has an FPU, and small games because I could write the real versions directly into numpy and check every generated frame against them. Later I added a streaming RL agent so the board could also learn to play inside its own dream.</p>
+
+
+
+
+
+
+<nav class="pager">
+<span class="pager-prev pager-off">← 上一頁</span>
+<a class="pager-next" href="2026-10-30-c30c38a613-p2-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 1 / 28 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

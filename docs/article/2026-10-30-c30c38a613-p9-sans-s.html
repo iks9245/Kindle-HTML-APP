@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-30-c30c38a613-p12-sans.html">中</a><a href="2026-10-30-c30c38a613-p16-sans-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p9-s.html">切換為襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 9 / 28 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p8-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p10-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 9 / 28 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">Accuracy on recorded data wasn't enough. An agent drives the dream into states the data never had, and any mistake there is something it can exploit. So the main check runs while an agent plays: read the game state back off the dreamed frame (games/<game>.py: read), apply the real rules to that state and the agent's action, and compare the result with the next dreamed frame and reward.</p>
+
+<p class="fulltext">5,000 dreamed steps per game at 2 loops, with the shipped agent (training/evalwm.py --agent):</p>
+
+<p class="fulltext">| game | wrong game states | wrong rewards | wrong cells per step |</p>
+
+<p class="fulltext">|---|---|---|---|</p>
+
+<p class="fulltext">| Breakout | not read back; 0 frames with impossible tokens | 6 (paid without a brick breaking) | – |</p>
+
+<p class="fulltext">| Doom-lite | 1 | 0 | 1.50 |</p>
+
+<p class="fulltext">| Flappy Bird | 0 | 0 | 0.00 |</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p8-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p10-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 9 / 28 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

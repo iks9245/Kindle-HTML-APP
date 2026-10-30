@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny world model running games on a Raspberry Pi Pico 2 W</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-10-30-c30c38a613-p34-sans.html">中</a><a href="2026-10-30-c30c38a613-p47-sans-l.html">大</a><a class="pref-family" href="2026-10-30-c30c38a613-p26-s.html">切換為襯線</a></p>
+
+
+<h1>A tiny world model running games on a Raspberry Pi Pico 2 W</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 26 / 28 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p25-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p27-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 26 / 28 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">uv run python -m tinyworldformer.training.evalwm --ckpt models/${G}_wm.pt --agent models/${G}_agent.pt   # check the dream</p>
+
+<p class="fulltext">uv run python -m tinyworldformer.training.streamx --env dream --wm models/${G}_wm.pt --out models/${G}_dream_agent.pt</p>
+
+<p class="fulltext">uv run python -m tinyworldformer.training.export --ckpt models/${G}_wm.pt</p>
+
+<p class="fulltext">uv run python -m tinyworldformer.training.streamx --out models/${G}_agent.pt --export tinyworldformer-rs</p>
+
+<p class="fulltext">cd tinyworldformer-rs && TWF_ENV=$G cargo test --release && TWF_ENV=$G cargo run --release</p>
+
+<p class="fulltext">Settings that differ per game:</p>
+
+<p class="fulltext">| game | settings |</p>
+
+<p class="fulltext">|---|---|</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-10-30-c30c38a613-p25-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-10-30-c30c38a613-p27-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 26 / 28 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

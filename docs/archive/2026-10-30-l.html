@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日 AI 文摘 2026-10-30</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-10-30-s.html">小</a><a href="2026-10-30.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-10-30-sans-l.html">切換為無襯線</a></p>
+
+<h1>每日 AI 文摘 2026-10-30</h1>
+<p class="meta">
+2026-10-30
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="index-l.html">存檔列表</a>
+ ｜ <a href="../deepread/2026-10-30-l.html">每日深讀</a>
+
+
+ ｜ <a href="2026-10-29-l.html">← 前一日</a>
+</p>
+
+
+<div class="brief">
+<p class="brief-label">主編導讀</p>
+<p>今日新聞呈現了科技與太空探索的尖端成就：從AI代理群體在虛擬世界中展現複雜的協作行為，到低功耗AI模型在微型硬體上運行，乃至全球合作觀測黑洞並追溯火星隕石起源，皆顯示了人類在理解宇宙與智慧科技上的不懈追求。然而，世界各地也同時面臨嚴峻挑戰，包括大規模加密貨幣盜竊案、西班牙列車追撞悲劇、以色列的選舉爭議及烏克蘭戰事的短暫平靜，這些事件無不考驗著社會的安全與穩定。這些報導不僅揭示了系統的脆弱性，也提醒我們在嚴峻環境中維繫人性的重要，並可借鑒物理思維來理解複雜的社會現象，以更全面的視角應對當前挑戰。</p>
+</div>
+
+
+
+
+
+<h2>科技 Tech</h2>
+
+<article>
+  <h3>We ran AI agent swarms in Minecraft and Mindustry</h3>
+  <p class="summary">Olam Labs 的研究人員於 2026 年 10 月與合作夥伴在 Minecraft 和 Mindustry 等遊戲環境中進行了一系列實驗，探討 AI 代理群體的動態行為。
+這項研究利用 50 個 GPT-6.1 Sol 代理在 Minecraft 中試圖建立文明，旨在理解多代理系統的協調、角色分工及複雜的緊急行為，這對於 AI 對齊是重要的挑戰。
+
+關鍵發現：
+- Minecraft 代理群體在面對生存壓力時，發展出類似政府的組織、共享規則及資源分配系統。
+- 早期的高死亡率導致代理變得更規避風險，傾向於在庇護所中集結而非執行高風險任務。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這些 AI 代理如何在 Minecraft 中建立「偽政府」？它們具備了哪些能力來實現這點？</summary>
+    <p>這些代理透過共享沙盒、代理目錄以及發送私訊的能力來進行溝通與協調。牠們利用這些工具形成階層、訂立規章、管理配給，並由「Ada」等代理擔任領導者制定計畫。</p>
+  </details>
+  
+  <details>
+    <summary>摘要提到代理在經歷大量死亡後變得更規避風險，這對於理解 AI 代理在類似環境中的學習或適應能力有何啟示？</summary>
+    <p>儘管死亡在遊戲中僅是裝備掉落且可重新生成，代理們仍展現出基於經驗的行為調整。這表明即使沒有嚴重的負面後果，AI 代理群體也能透過集體經驗學習並改變其策略，例如優先生存而非探索。</p>
+  </details>
+  
+  <details>
+    <summary>文章提到此研究與「AI 對齊」以及「OpenAI-Hugging Face 事件」相關，這項多代理人研究在更廣泛的 AI 對齊和潛在風險背景下，有何重要意義？</summary>
+    <p>這項研究對於理解 AI 對齊至關重要，因為它揭示了代理群體在追求共同目標時可能產生的強大緊急能力，包括協調和階層。這些行為既能用於解決複雜問題，也可能帶來如 OpenAI-Hugging Face 事件所示的危險，因此實證研究對於預測和引導 AI 行為至關重要。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-30-d8eb5a4b64-l.html">全文（約 15 分鐘）</a> ｜ <a href="https://labs.ycombinator.com/projects/games/index.html">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>A tiny world model running games on a Raspberry Pi Pico 2 W</h3>
+  <p class="summary">這項專案在 Raspberry Pi Pico 2 W 微控制器上，展示了一個由兩個小型神經網路組成的「微型世界模型」，能夠同時生成並遊玩簡單遊戲。其中，世界模型網路負責預測遊戲的下一幀與獎勵，而參與者網路則根據預測的幀來選擇動作。此項技術證明了即使在低成本、低功耗的硬體上，也能實現複雜的AI自我學習與執行遊戲的能力。
+
+• 使用循環式Transformer架構來節省記憶體，並透過量化技術進一步優化。
+• 系統甚至能在「夢境」中學習遊玩遊戲，顯示了其內部的學習能力。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>摘要中提到系統能在「夢境」中學習，這種學習方式具體是如何運作的？</summary>
+    <p>系統中的參與者網路可以在世界模型生成而非真實遊戲提供的幀中學習。這意味著AI可以在不接觸真實環境的情況下，透過其內建的世界模型進行模擬訓練，從而降低對實際資料收集的需求。</p>
+  </details>
+  
+  <details>
+    <summary>為何此專案選擇了 Raspberry Pi Pico 2 W 作為運行平台？它有何特殊優勢？</summary>
+    <p>選擇 Raspberry Pi Pico 2 W 的主要原因是其低廉的成本以及內建浮點運算單元（FPU）。FPU 對於神經網路的運算效率至關重要，使其能夠在微控制器級別的硬體上流暢地執行這些小型AI模型。</p>
+  </details>
+  
+  <details>
+    <summary>將複雜的AI模型運行在微型硬體上，對於未來的嵌入式系統或邊緣AI應用有什麼重要的意義？</summary>
+    <p>這項成就意味著AI技術可以被整合到更小、更低功耗、更便宜的設備中，擴展了邊緣AI的應用範圍。例如，它可能促進智能傳感器、微型機器人或獨立運行AI遊戲設備的發展，無需雲端連接即可進行智能處理。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-30-c30c38a613-l.html">全文（約 17 分鐘）</a> ｜ <a href="https://github.com/SheepSeb/tinyworldformer">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Binance-hacker-1029 – $5.6B stolen from Binance</h3>
+  <p class="summary">一名被稱為「Binance-hacker-1029」的駭客，從領先的加密貨幣交易所幣安（Binance）竊取了高達56億美元的資產。這起事件代表了加密貨幣歷史上最大規模的盜竊案之一，對幣安的安全性及其用戶資產造成了嚴重打擊。
+此大規模盜竊案凸顯了加密貨幣交易所面臨的持續安全挑戰，並可能影響用戶對平台安全的信任。
+
+* 竊取金額：56億美元
+* 受害者：幣安（Binance）</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>這次駭客事件的具體細節為何？例如，駭客是如何取得這些資產的？</summary>
+    <p>原始資訊非常有限，目前沒有關於「Binance-hacker-1029」如何成功竊取56億美元的具體技術細節或攻擊方法的說明。通常，這類大規模竊盜案可能涉及智能合約漏洞、私鑰洩漏或內部人員串通等，但本次事件的確切原因尚不明朗。</p>
+  </details>
+  
+  <details>
+    <summary>這起價值56億美元的盜竊案對幣安及其用戶會產生什麼影響？</summary>
+    <p>如此巨額的資產損失將對幣安的聲譽和用戶信任造成嚴重打擊。雖然幣安聲稱擁有安全資產基金（SAFU）來彌補用戶損失，但大規模盜竊仍可能引發用戶恐慌性提款，並引起全球監管機構的嚴密關注。</p>
+  </details>
+  
+  <details>
+    <summary>56億美元的盜竊案在加密貨幣歷史上規模如何？</summary>
+    <p>如果56億美元的盜竊屬實，這將使其成為加密貨幣歷史上最大規模的單一竊盜案之一，遠超過去著名的Mt. Gox、Poly Network或Ronin Bridge等事件。這凸顯了加密貨幣生態系統中安全風險的嚴峻性，以及大型交易所面臨的巨大挑戰。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Hacker News ｜ <a href="../article/2026-10-30-4c4b30fd36-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8">原文網頁</a></p>
+</article>
+
+
+<h2>國際 World</h2>
+
+<article>
+  <h3>Audio reveals exchanges between Spain train operators and drivers moments before deadly crash</h3>
+  <p class="summary">週三上午，西班牙烏爾達附近發生一起列車追撞事故，造成69人死亡，數十人受傷。洩露的音頻顯示，一列因自動號誌系統故障而停駛的Iryo列車前方，控制中心錯誤地指示國營Renfe高速列車以「正常速度」繼續行駛，導致追撞。此悲劇引發了西班牙的國家哀悼、民眾抗議，並對鐵路安全協議及基礎設施管理提出嚴重質疑。當局已承諾全面調查事故原因，確保未來不再發生類似事件。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>根據洩露的音頻，此次列車追撞事故的直接原因是什麼？</summary>
+    <p>洩露的音頻顯示，一列私營Iryo列車因自動號誌系統故障而停駛，但控制中心錯誤地指示後方的國營Renfe高速列車以「正常速度」繼續行駛，導致後車撞上前車。控制中心甚至在獲知Iryo列車仍停駛後，仍讓Renfe列車行駛，這被西班牙交通部長稱為「難以解釋」。</p>
+  </details>
+  
+  <details>
+    <summary>西班牙大眾和政界對此次災難及洩露的音頻有何反應？</summary>
+    <p>此次災難引發了西班牙全國三天的哀悼，並激起了民眾對政府官員辭職的呼聲和大規模抗議。鐵路司機舉行罷工以捍衛鐵路安全，而一些政客則批評音頻洩露是「卑鄙的」，但也要求政府對基礎設施狀況給出解釋。</p>
+  </details>
+  
+  <details>
+    <summary>為避免此類悲劇再次發生，當局正在採取或討論哪些措施？</summary>
+    <p>首相桑切斯和國王費利佩六世均承諾將徹底調查事故的每一個細節，以確定事故原因並加強安全措施。此外，交通部長也指出，決策指示列車在沒有速度限制下移動是「難以解釋的」，暗示會審查操作程序。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-30-3e2b659163-l.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/cmqxnl312v34o?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Israeli opposition accuses Netanyahu of trying to 'delegitimise' election</h3>
+  <p class="summary">以色列反對派領袖加迪·艾森科特與阿拉伯政黨領袖指責總理班傑明·納坦雅胡，在他所屬的執政聯盟在近期大選中失去多數席位後，試圖「抹黑」選舉。納坦雅胡的利庫德黨聲稱阿拉伯政黨「竊取」選舉，並指控其接受卡達和土耳其的非法資金，但以色列安全總局（Shin Bet）和中央選舉委員會均表示沒有發現系統性違規的證據。此舉被批評者視為納坦雅胡阻止艾森科特與獲得創紀錄19席的阿拉伯政黨結盟的策略，因為這可能是艾森科特組建政府的唯一途徑。納坦雅胡此舉被認為是一場精心策劃的運動，旨在否定選舉結果。
+
+* 阿拉伯裔選民投票率顯著上升，使阿拉伯政黨成為組閣的潛在「造王者」。
+* 以色列國安機構和卡達外交部均否認了納坦雅胡的指控。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>阿拉伯裔選民投票率大幅上升的原因為何？這對他們在以色列的政治地位有何影響？</summary>
+    <p>許多阿拉伯裔以色列公民（部分自稱巴勒斯坦公民）過去選擇抵制選舉，認為這會使他們被視為二等公民的制度合法化。然而，此次他們因渴望推翻納坦雅胡領導的極右翼政府而踴躍投票，這次創紀錄的投票率讓阿拉伯政黨贏得19個席位，使其成為組建政府的關鍵力量。</p>
+  </details>
+  
+  <details>
+    <summary>假如艾森科特的陣營真的與阿拉伯政黨結盟，他們在組建政府後可能面臨哪些挑戰？</summary>
+    <p>艾森科特及其陣營成員過去除了少數一人外，都曾拒絕與阿拉伯政黨合作組建政府。儘管最新民調顯示此選項在反對派選民中最受歡迎，但這樣的結盟可能會引發來自右翼陣營的強烈反彈，並可能在施政上遇到意識形態和政策上的顯著分歧，尤其是在巴勒斯坦議題上。</p>
+  </details>
+  
+  <details>
+    <summary>除了阻止艾森科特組建政府之外，納坦雅胡「抹黑」選舉結果的長期策略是什麼？</summary>
+    <p>納坦雅胡的策略旨在貶低阿拉伯政黨的合法性及其在以色列政治中的作用，這符合他長期以來將高阿拉伯裔投票率視為「緊急情況」的立場。此舉可能試圖在公眾輿論中塑造阿拉伯政黨為「反以色列」的形象，藉此鞏固其右翼支持者，並防止未來任何非右翼政府透過與阿拉伯政黨合作而上台。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-30-121deaff89-l.html">全文（約 3 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/ckdd8qdl9e0eo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>'The city is alive': A brief peace in Kherson, but residents fear what comes next</h3>
+  <p class="summary">烏克蘭城市赫爾松（Kherson）在美國第一夫人梅拉尼婭·川普（Melania Trump）斡旋的臨時停火協議下，自週二起迎來了多年來首次的平靜。
+這項為期數日的停火協議，讓飽受俄羅斯空襲困擾的居民得以享受短暫的正常生活，例如在街上散步、咖啡館和商店重現生機。
+然而，此和平是為了協助俄羅斯佔領的奧列什基（Oleshky）平民撤離，居民和烏克蘭官員擔憂俄羅斯正利用此機會增強其在該地區的軍事力量，為停火結束後的更大規模攻勢做準備。
+* 停火期間，赫爾松居民得以安全進入多年無人敢去的「紅區」取回物品或探望逝者。
+* 臨時停火預計於週日奧列什基撤離行動結束後告終，屆時赫爾松可能面臨更猛烈的攻擊。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>赫爾松此次停火的具體目的為何？</summary>
+    <p>此次停火是由美國第一夫人梅拉尼婭·川普斡旋，旨在為俄羅斯佔領的烏克蘭城市奧列什基（Oleshky）的平民提供安全撤離通道。俄羅斯軍隊利用此期間清除道路地雷，為預計的平民撤離做準備。</p>
+  </details>
+  
+  <details>
+    <summary>烏克蘭方面對此次停火的主要擔憂是什麼？</summary>
+    <p>烏克蘭官員和當地居民普遍擔心，俄羅斯正在利用停火期間，增強其在赫爾松地區的軍事陣地、補給武器彈藥和重新部署兵力。他們預計一旦停火結束，赫爾松將面臨比之前更猛烈、更具破壞性的攻擊。</p>
+  </details>
+  
+  <details>
+    <summary>對於赫爾松的居民來說，這短暫的和平期意義何在？</summary>
+    <p>對於赫爾松居民而言，這幾天的平靜是多年來未曾有過的奢望。他們得以安全地在街上活動、購物、喝咖啡，甚至回到曾經極度危險的「紅區」取回物品或探望親人的墳墓，體驗到在戰場前線極為罕見的「正常生活」。這短暫的寧靜，讓他們從持續的恐懼和破壞中喘息，但同時也對停火結束後的情況感到深切的擔憂。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">BBC World News ｜ <a href="../article/2026-10-30-32fc73a1f7-l.html">全文（約 5 分鐘）</a> ｜ <a href="https://www.bbc.co.uk/news/articles/ck1l393pyrylo?at_medium=RSS&at_campaign=rss">原文網頁</a></p>
+</article>
+
+
+<h2>科學 Science</h2>
+
+<article>
+  <h3>Map Showing Potential Origins of Martian Meteorite Teghaza 001</h3>
+  <p class="summary">NASA科學家利用火星全球探勘者號和火星偵察軌道器的數據，識別出火星上13個潛在地點，這些地點在礦物學和化學成分上與地球上發現的最古老火星隕石之一「Teghaza 001」相符。這些線索指向火星南半球的高地，儘管無法百分之百確認，但這項研究對於追溯Teghaza 001的起源提供了重要方向，有助於深入理解早期火星的形成與演化。
+- 關鍵發現：在火星南半球高地找到13個潛在來源地。
+- 研究意義：為了解火星最古老隕石的來源及早期火星歷史提供重要線索。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>什麼是「Teghaza 001」？</summary>
+    <p>「Teghaza 001」是地球上發現的最古老的火星隕石之一。其獨特的礦物學和化學成分，為科學家研究火星的早期歷史提供了寶貴樣本。</p>
+  </details>
+  
+  <details>
+    <summary>追溯火星隕石的起源有什麼重要性？</summary>
+    <p>確定火星隕石的來源地，有助於科學家將這些太空岩石帶來的數據與火星地表特定區域的地質背景結合起來。這能更精確地了解火星的形成、演化和地質活動，特別是其早期歷史。</p>
+  </details>
+  
+  <details>
+    <summary>科學家如何識別這些潛在的來源地點？</summary>
+    <p>科學家利用NASA火星全球探勘者號的火星軌道雷射高度計數據繪製基礎地圖，並結合火星偵察軌道器的數據。他們比對火星地表區域與Teghaza 001的礦物學和化學成分，從而找出相符的潛在來源地。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-30-92feff1a75-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/photojournal/map-showing-potential-origins-of-martian-meteorite-teghaza-001/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Halloween Aboard the International Space Station</h3>
+  <p class="summary">國際太空站（ISS）上的太空人每年都會慶祝萬聖節，穿著創意服裝，有時甚至是用太空站上的現有材料製作。這項傳統展現了太空人在嚴峻環境下保持人類連結和節日氣氛的能力，從2009年至今已有多個團隊參與，最新紀錄是2023年的慶祝活動。這不僅是一種娛樂，也為長期任務中的太空人提供了心理調適。
+
+* 服裝多為自製，利用太空站現有材料。
+* 慶祝活動橫跨多年，展現不同國家太空人的創意。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>太空站上的太空人為何會選擇慶祝萬聖節這樣的節日？</summary>
+    <p>慶祝萬聖節有助於太空人在長時間的太空任務中維持士氣、減輕壓力，並保持與地球文化的連結。這是一種維持心理健康和團隊凝聚力的方式。</p>
+  </details>
+  
+  <details>
+    <summary>太空人在太空站上是如何利用現有材料製作萬聖節服裝的？</summary>
+    <p>太空人會發揮創意，利用太空站上的日常用品、包裝材料、廢棄物或科學儀器部件來製作服裝。例如，曾有太空人將儲物櫃改裝成服裝的一部分，或扮演知名卡通及電玩角色。</p>
+  </details>
+  
+  <details>
+    <summary>這些在國際太空站上的節日慶祝活動，對未來人類長期太空探索有何更深層的意義？</summary>
+    <p>這些活動不僅提供娛樂，更重要的是展現了人類在孤立環境中維持心理健康和社會連結的能力。這對於規劃前往月球或火星等更長期的深空任務至關重要，確保太空人能在身心健康下執行任務。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-30-422040b63e-l.html">全文（約 2 分鐘）</a> ｜ <a href="https://www.nasa.gov/centers-and-facilities/johnson/halloween-aboard-the-international-space-station/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Slice of Martian Meteorite Teghaza 001</h3>
+  <p class="summary">這片被稱為 Teghaza 001 的火星隕石切片是迄今在地球上發現最古老的火星隕石之一，科學家利用它來測定該岩石的年代。透過反射光圖像，研究人員能夠識別出鐵鈦氧化物、輝石和受衝擊的斜長石等礦物，這些礦物揭示了火星地殼和地函的形成過程。
+* 揭示火星地殼與地函形成過程
+* 提供火星撞擊事件的線索</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>科學家如何確定 Teghaza 001 隕石來自火星？</summary>
+    <p>科學家通常透過分析隕石中封存的氣體成分來判斷其來源，如果這些氣體與火星大氣的已知成分相符，便可確認其火星血統。此外，隕石的礦物組成和同位素比值也能提供關鍵證據。</p>
+  </details>
+  
+  <details>
+    <summary>文中提及的鐵鈦氧化物、輝石和受衝擊斜長石等礦物，分別揭示了火星哪些故事？</summary>
+    <p>鐵鈦氧化物和輝石提供了火星地殼與地函的形成過程資訊，有助於了解其岩漿活動與冷卻歷史。受衝擊斜長石則證明了火星曾遭受劇烈撞擊事件，這些撞擊可能將岩石從火星表面拋射至太空。</p>
+  </details>
+  
+  <details>
+    <summary>隕石上在地球形成的水蝕變礦物（如碳酸鹽、硫酸鹽和黏土）對研究有何影響？</summary>
+    <p>這些水蝕變礦物是在隕石降落地球後，與地球環境（如水和空氣）作用而形成。區分這些地球來源的礦物與火星本身的礦物至關重要，以避免混淆，確保對火星原始地質特徵的準確分析。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">NASA Breaking News ｜ <a href="../article/2026-10-30-8a058a7405-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://science.nasa.gov/photojournal/slice-of-martian-meteorite-teghaza-001/">原文網頁</a></p>
+</article>
+
+
+<h2>長文 Long Reads</h2>
+
+<article>
+  <h3>How Do You Take a Picture of a Black Hole?</h3>
+  <p class="summary">這篇文章探討了哈佛大學天體物理學家Shep Doeleman及其250名研究人員如何透過連結全球無線電望遠鏡組成的事件視界望遠鏡（EHT），成功拍攝到黑洞的「陰影」影像。
+這項前所未有的壯舉克服了黑洞本身不發光的挑戰，為理解這些宇宙中最奇特且基礎的天體提供了理論之外的見解。
+EHT的成就不僅加深了我們對M87和銀河系中心超大質量黑洞的理解，也彰顯了國際科學合作的巨大潛力，並展望了未來在2030年代初期製作黑洞動態影像的可能性。
+
+*   **主要成就：** 首次捕捉到超大質量黑洞（M87和人馬座A*）的清晰影像。
+*   **技術關鍵：** 將地球轉變為單一巨型望遠鏡的全球無線電望遠鏡網路。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>黑洞的「陰影」究竟指的是什麼？它為何能被觀測到？</summary>
+    <p>黑洞陰影並非黑洞本身，而是黑洞極端重力場扭曲其周圍光線所形成的暗區，由光子環圍繞。由於黑洞會吞噬所有進入事件視界的光線，使得其後方的發光物質無法被看見，從而形成一個像「剪影」般的黑暗區域，這就是EHT所捕捉到的影像。</p>
+  </details>
+  
+  <details>
+    <summary>事件視界望遠鏡（EHT）的全球合作模式是如何運作的？</summary>
+    <p>EHT透過將分佈在全球各地的多個無線電望遠鏡陣列同步觀測同一個天體，利用甚長基線干涉測量（VLBI）技術，將這些望遠鏡的數據組合起來。這種方式創造了一個虛擬的、口徑與地球直徑相當的巨型望遠鏡，從而獲得極高的角解析度，足以觀測到遙遠黑洞的微小結構。</p>
+  </details>
+  
+  <details>
+    <summary>文章提到未來可能製作黑洞的「動態影像」，這將如何進一步提升我們對黑洞的理解？</summary>
+    <p>製作黑洞的動態影像將使科學家能夠觀察黑洞周圍物質（如吸積盤和噴流）的即時動態變化，而非靜態快照。這有助於驗證廣義相對論在極端條件下的預測，理解黑洞如何影響其周圍環境，並揭示其自旋、質量等關鍵參數的演化過程。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Quanta Magazine ｜ <a href="../article/2026-10-30-f4d81f9dca-l.html">全文（約 48 分鐘）</a> ｜ <a href="https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>Hills and mountains</h3>
+  <p class="summary">「山與山脈」（Hills and Mountains）這部電影由阿富汗裔加拿大導演沙拉爾·帕什圖亞執導，講述了1979年蘇聯入侵阿富汗如何顛覆了該國曾經穩定的生活。電影透過一位受訪女性的視角，描述她童年「和平寬容」的家園如何惡化，導致父母為避免女兒挨餓而將她們早早嫁掉，最終她自己也因錯誤指控被迫結婚，家庭生活破碎。導演巧妙地將她的敘述與阿富汗山區的壯麗景色結合，突顯了地景、個人經歷與全球歷史之間的交織影響。
+- 蘇聯入侵是國家衰敗的開端。
+- 女性的個人經歷反映了歷史的巨大變遷。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>電影中阿富汗在蘇聯入侵前是怎樣的景象？</summary>
+    <p>根據片中女性的描述，她童年時期的家園是「和平寬容」的。這與入侵後國家陷入混亂、人民生活艱困的景象形成鮮明對比。</p>
+  </details>
+  
+  <details>
+    <summary>導演是如何保護片中敘事女性的身份的？</summary>
+    <p>導演沙拉爾·帕什圖亞透過使用配音演員講述故事，並對該女性的一些生活細節進行了修改，以此來保護她的真實身份。這種做法旨在確保她的隱私與安全。</p>
+  </details>
+  
+  <details>
+    <summary>將女性的敘述與「壯麗的山區景色」結合有何意義？</summary>
+    <p>這種結合旨在揭示地景、個人的生活經歷與全球歷史事件之間複雜的相互作用。它暗示著即使歷史動盪，土地本身仍是見證一切的永恆存在，同時也可能象徵著阿富汗人民面對逆境的韌性。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-10-30-4a8fe907f9-l.html">全文（約 1 分鐘）</a> ｜ <a href="https://aeon.co/videos/an-afghan-woman-recalls-how-her-countrys-devastation-led-to-her-own">原文網頁</a></p>
+</article>
+
+<article>
+  <h3>The physics of getting fired</h3>
+  <p class="summary">這篇文章探討了物理學在理解個人困境與社會複雜性中的應用價值。作者從自身被解僱的經歷出發，質疑了單純的因果邏輯，轉而利用物理思維框架來解讀生活中的混亂與不確定性。文章主張，物理學的核心價值不在於將事物簡化為最小單位的還原論，而是一種辨識模式、質疑假設、並在不確定性中導航系統的思維方式。最終，作者呼籲將物理學視為一種生活智慧，培養批判性思維、謙遜與好奇心，以更人道的方式應對現實的複雜性。
+- 強調物理學的「框架」功能，而非僅是「還原論」。
+- 區分了宇宙中的「不平等」與人類社會中的「不公平」。</p>
+  
+  
+  <div class="qa">
+  
+  <details>
+    <summary>文章提到作者在網路泡沫化期間被解僱。什麼是網路泡沫，以及它破裂後如何引發全球經濟波動？</summary>
+    <p>網路泡沫是指20世紀末網路公司股價虛高，與其實際價值脫節的現象。泡沫破裂導致大量網路公司倒閉，投資人蒙受巨大損失，進而引發全球科技股暴跌和經濟緊縮，迫使企業縮減開支並裁員。</p>
+  </details>
+  
+  <details>
+    <summary>作者區分了「不平等」與「不公平」。這種區別對於將物理思維應用於社會議題為何如此重要？</summary>
+    <p>作者認為，宇宙中的不平等（如量子漲落導致的物質分佈不均）是結構和多樣性形成的條件，不一定為負面。然而，不公平則是指機會被阻礙、規則被操縱，導致系統「流動」受阻。這種區分有助於我們理解，社會問題的根源往往是不公平的制度，而非單純的財富或機會差異。</p>
+  </details>
+  
+  <details>
+    <summary>文章建議以不同方式教授物理學，以培養跨領域思考者。物理教育應做出哪些具體改變來達成此目標？</summary>
+    <p>文章主張，物理教育不應只側重方程式和技術細節，而應強調其作為理解複雜系統、培養批判性思維和應對不確定性的框架。這可能包括將物理學與人文藝術、社會科學結合，鼓勵學生探討物理原理在生活決策和社會議題中的應用，並教授如何質疑假設、測試模型。</p>
+  </details>
+  
+  </div>
+  
+  <p class="source">Aeon ｜ <a href="../article/2026-10-30-21fe777cfc-l.html">全文（約 16 分鐘）</a> ｜ <a href="https://aeon.co/essays/how-to-use-physics-to-make-sense-of-the-messiness-of-life">原文網頁</a></p>
+</article>
+
+
+
+</div>
+</body>
+</html>
