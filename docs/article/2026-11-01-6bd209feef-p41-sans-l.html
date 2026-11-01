@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-11-01-6bd209feef-p25-sans-s.html">小</a><a href="2026-11-01-6bd209feef-p34-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-11-01-6bd209feef-p41-l.html">切換為襯線</a></p>
+
+
+<h1>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 41 / 41 頁
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p40-sans-l.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 41 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Research: Anthropic: Discovering and exploiting vulnerabilities in critical, real-world software with Claude · Anthropic's coordinated vulnerability disclosure policy</p>
+
+<p class="fulltext">The Atlas security byline: write-ups of vulnerabilities in widely deployed software — what changed, who is exposed, and what to check — verified against primary sources.</p>
+
+
+
+<h2>延伸問答</h2>
+<div class="qa">
+
+<details>
+  <summary>什麼是「use-after-free」漏洞，為何它的嚴重性如此之高？</summary>
+  <p>「use-after-free」漏洞是指程式在釋放記憶體後，又再次嘗試使用該記憶體，可能導致記憶體損壞、程式崩潰，甚至允許攻擊者執行惡意程式碼。此漏洞特別危險，因為它在 TCP 握手階段發生，攻擊者無需任何憑證即可遠端觸發，進而取得系統的完全控制權。</p>
+</details>
+
+<details>
+  <summary>文章中提到「多路徑 TCP 監聽器」與 Go 程式，這如何使此漏洞更具危險性？</summary>
+  <p>多路徑 TCP 監聽器允許 TCP 連線同時利用多個路徑，而 Go 程式預設會開啟這類監聽器。Anthropic 的研究指出，其概念驗證漏洞利用程式能針對啟用多路徑 TCP 監聽的伺服器取得 root 權限，這表示許多預設配置的 Go 應用程式伺服器面臨更高的風險。</p>
+</details>
+
+<details>
+  <summary>對於尚未發布修補程式的 Linux 發行版用戶，應如何應對此漏洞？</summary>
+  <p>由於許多主流發行版尚未提供修補程式，用戶應密切關注其發行版的安全公告，並盡快更新核心。同時，考慮實施臨時緩解措施，例如限制對受影響 TCP 埠的網路訪問，或禁用多路徑 TCP 功能，以降低潛在的攻擊風險，直到官方修補程式可用為止。</p>
+</details>
+
+</div>
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p40-sans-l.html">← 上一頁</a>
+<span class="pager-next pager-off">下一頁 →</span>
+<span class="pager-num">第 41 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

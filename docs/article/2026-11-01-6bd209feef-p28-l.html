@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-large">
+<div class="page">
+<p class="prefs"><a href="2026-11-01-6bd209feef-p17-s.html">小</a><a href="2026-11-01-6bd209feef-p23.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-11-01-6bd209feef-p28-sans-l.html">切換為無襯線</a></p>
+
+
+<h1>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 28 / 41 頁
+ ｜ <a href="../index-l.html">首頁</a>
+ ｜ <a href="../archive/index-l.html">存檔列表</a>
+ ｜ <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p27-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-01-6bd209feef-p29-l.html">下一頁 →</a>
+<span class="pager-num">第 28 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">The u32 match reads the IPv4 header-length field, and a value of 6 to 15 means the header carries options. We tested it with iptables 1.8.9, on both its nf_tables and legacy backends, in a Debian 12 container: it dropped a Record Route SYN sent to the host and one routed through it, and ordinary TCP connections still worked. Remove it by running the same command with -D in place of -I; like the nft rule, it lasts until reboot. It needs the kernel's xt_u32 module, which the Debian 12, Ubuntu 22.04 and 24.04, and RHEL 8 kernels include. RHEL 9 and 10 kernels, and their rebuilds, leave it out, so use the nft rule there.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p27-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-01-6bd209feef-p29-l.html">下一頁 →</a>
+<span class="pager-num">第 28 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

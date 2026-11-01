@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-11-01-6bd209feef-p12-sans-s.html">小</a><a href="2026-11-01-6bd209feef-p16-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-11-01-6bd209feef-p19-l.html">切換為襯線</a></p>
+
+
+<h1>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 19 / 41 頁
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p18-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-01-6bd209feef-p20-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 19 / 41 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">- Hosts with a multipath TCP (MPTCP) listener first. That's the setup Anthropic's working exploit needs: "Linux servers with a multipath TCP listener." Anthropic hasn't said why that listener matters, and the CVE record doesn't mention MPTCP. A server has one only if an application opens an MPTCP socket, and Go programs do by default: the Go Security Team says "as of Go 1.24, Go programs enable MPTCP by default for listen sockets on Linux." The default follows the go line in the program's go.mod, and applies only where the kernel allows MPTCP (net.mptcp.enabled = 1, as on the Debian 12 kernel we checked; AlmaLinux says it ships MPTCP off). The Go team adds that "the underlying bug is not specific to MPTCP. It is possible that systems with no MPTCP listeners are vulnerable to similar attacks." The check is below.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p18-sans-l.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-01-6bd209feef-p20-sans-l.html">下一頁 →</a>
+<span class="pager-num">第 19 / 41 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

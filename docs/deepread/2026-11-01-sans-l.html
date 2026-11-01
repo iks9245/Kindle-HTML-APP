@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日深讀</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-large">
+<div class="page">
+<p class="prefs"><a href="2026-11-01-sans-s.html">小</a><a href="2026-11-01-sans.html">中</a><span class="pref-on">大</span><a class="pref-family" href="2026-11-01-l.html">切換為襯線</a></p>
+
+<h1>每日深讀</h1>
+<p class="meta">
+2026-11-01 ｜ 本篇：TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8
+ ｜ <a href="../index-sans-l.html">首頁</a>
+ ｜ <a href="../archive/2026-11-01-sans-l.html">當天文摘</a>
+ ｜ <a href="../archive/index-sans-l.html">存檔列表</a>
+ ｜ <a href="../article/2026-11-01-6bd209feef-sans-l.html">讀全文</a>
+ ｜ <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf">原文網頁</a>
+</p>
+
+
+
+<h2>脈絡</h2>
+<p>這篇文章深入探討了 CVE-2026-98432，一個影響 Linux 核心中 IPv4 TCP 握手的嚴重「使用後釋放」(use-after-free) 漏洞。此漏洞允許未經身份驗證的遠端攻擊者在應用程式處理連線之前，就能在幾乎所有 Linux 伺服器上觸發潛在的遠端程式碼執行。儘管上游核心已發布修復，許多主要發行版如 Ubuntu 和 Red Hat 在報導時仍未提供補丁。</p>
+
+
+<h2>重點</h2>
+<ul>
+<li>CVE-2026-98432 是一個評分高達 CVSS 9.8 的嚴重 Linux 核心漏洞。</li><li>此漏洞是一個「使用後釋放」錯誤，發生在 IPv4 TCP 握手階段，可被遠端且未經身份驗證的用戶利用。</li><li>它影響 Linux 核心 4.4 版本及之後的所有版本，並可能導致核心記憶體損壞或遠端程式碼執行。</li><li>Anthropic 的研究表明，AI 模型 Claude 已能建立一個針對啟用多路徑 TCP 伺服器的遠端 root 權限漏洞利用程式。</li><li>截至 2026 年 10 月 31 日，許多廣泛使用的發行版（如 Ubuntu 和 Red Hat Enterprise Linux）的穩定版本仍未修復此關鍵漏洞。</li>
+</ul>
+
+
+<h2>影響與延伸</h2>
+<p>這個漏洞的嚴重性在於它存在於每個 Linux 伺服器在接受 IPv4 TCP 連線時都會執行的基本程式碼中，攻擊者無需任何憑證即可利用。企業和個人用戶必須立即檢查其 Linux 系統的更新狀態，並盡快應用補丁並重啟伺服器，以防止潛在的伺服器入侵和資料洩露。</p>
+
+
+<h2>小辭典</h2>
+<dl class="glossary">
+
+<dt>Use-after-free (UAF)</dt>
+<dd>是一種記憶體錯誤，當程式嘗試存取已釋放的記憶體位址時發生。這可能導致程式崩潰、資料損壞或允許攻擊者執行任意程式碼。</dd>
+
+<dt>TCP 握手 (TCP Handshake)</dt>
+<dd>指的是在兩個主機之間建立 TCP 連線的三步驟過程（SYN, SYN-ACK, ACK），用於協商連線參數。</dd>
+
+<dt>CVSS (Common Vulnerability Scoring System)</dt>
+<dd>一個開放且通用的標準，用於評估電腦系統安全漏洞的嚴重性。分數越高，表示漏洞的嚴重性越高。</dd>
+
+<dt>多路徑 TCP (Multipath TCP, MPTCP)</dt>
+<dd>是 TCP 協定的擴展，允許 TCP 連線同時使用多個路徑。這可以提高網路效能、彈性和容錯能力，但在本案例中，如果啟用可能會使伺服器更容易受到特定利用。</dd>
+
+</dl>
+
+
+
+</div>
+</body>
+</html>

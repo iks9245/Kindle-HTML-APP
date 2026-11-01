@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-11-01-6bd209feef-p22.html">中</a><a href="2026-11-01-6bd209feef-p26-l.html">大</a><a class="pref-family" href="2026-11-01-6bd209feef-p16-sans-s.html">切換為無襯線</a></p>
+
+
+<h1>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 16 / 26 頁
+ ｜ <a href="../index-s.html">首頁</a>
+ ｜ <a href="../archive/index-s.html">存檔列表</a>
+ ｜ <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p15-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-01-6bd209feef-p17-s.html">下一頁 →</a>
+<span class="pager-num">第 16 / 26 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">ip hdrlength gt 5 matches any IPv4 header longer than the 20-byte minimum, which only options produce. The rule runs before connection tracking and doesn't touch IPv6 or non-TCP traffic. We tested it in a Debian 12 container: it dropped a SYN carrying a Record Route option, and ordinary TCP connections still worked. We haven't tested it against an exploit, and it doesn't fix the kernel. It lasts until reboot, which is fine if the reboot is into a fixed kernel; remove it with nft delete table ip cve_2026_98432. If your edge firewall can drop IPv4 packets with options, doing it there protects every host behind it.</p>
+
+<p class="fulltext">If you manage the firewall with iptables, this rule does the same job from the raw table, which also runs before connection tracking:</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p15-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-01-6bd209feef-p17-s.html">下一頁 →</a>
+<span class="pager-num">第 16 / 26 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-sans z-small">
+<div class="page">
+<p class="prefs"><span class="pref-on">小</span><a href="2026-11-01-6bd209feef-p19-sans.html">中</a><a href="2026-11-01-6bd209feef-p22-sans-l.html">大</a><a class="pref-family" href="2026-11-01-6bd209feef-p14-s.html">切換為襯線</a></p>
+
+
+<h1>TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 14 / 26 頁
+ ｜ <a href="../index-sans-s.html">首頁</a>
+ ｜ <a href="../archive/index-sans-s.html">存檔列表</a>
+ ｜ <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p13-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-01-6bd209feef-p15-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 14 / 26 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">ss -M lists only MPTCP sockets, so an empty result means no MPTCP listener. net.mptcp.enabled = 1 alone doesn't create one: an application has to open an MPTCP socket. We tested both with iproute2 6.1 in a Debian 12 container, where ss -Mlnp listed a test MPTCP listener and skipped a plain TCP one beside it. On October 31 it also listed a Go HTTP server whose go.mod says go 1.24, and skipped the same server built with go 1.23.</p>
+
+<p class="fulltext">How to fix</p>
+
+<p class="fulltext">Update the kernel and reboot</p>
+
+<p class="fulltext">Install your distribution's fixed kernel as soon as it ships, then reboot: a kernel update doesn't take effect until the machine boots into it. Reboot container hosts and Kubernetes nodes too. Appliances and cloud images that bundle a kernel need their vendor's update.</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-01-6bd209feef-p13-sans-s.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-01-6bd209feef-p15-sans-s.html">下一頁 →</a>
+<span class="pager-num">第 14 / 26 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
