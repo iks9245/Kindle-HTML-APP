@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask HN: Which TV do you recommend for privacy?</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="f-serif z-medium">
+<div class="page">
+<p class="prefs"><a href="2026-11-02-242d15603b-p68-s.html">小</a><span class="pref-on">中</span><a href="2026-11-02-242d15603b-p110-l.html">大</a><a class="pref-family" href="2026-11-02-242d15603b-p90-sans.html">切換為無襯線</a></p>
+
+
+<h1>Ask HN: Which TV do you recommend for privacy?</h1>
+<p class="meta">
+Hacker News
+ ｜ 第 90 / 93 頁
+ ｜ <a href="../index.html">首頁</a>
+ ｜ <a href="../archive/index.html">存檔列表</a>
+ ｜ <a href="https://news.ycombinator.com/item?id=50328896">原文網頁</a>
+</p>
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-02-242d15603b-p89.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-02-242d15603b-p91.html">下一頁 →</a>
+<span class="pager-num">第 90 / 93 頁</span>
+</nav>
+
+
+
+
+
+<p class="fulltext">|  |  | Avoid Vizio at all costs! I recently picked one up at Sam's Club. Since my use was only to display an external HDMI source, I never even configured Wifi. Unfortunately, they're now wise to this. If it detects its been offline for ten or so start-ups, the TV will 'helpfully' force you into the Wifi config workflow on the next start. It seems to keep an internal counter in flash memory which nothing but a factory reset will clear. In my tests, it seemed like it can be kept offline forever but at the cost of manually dismissing the Wifi config workflow with three clicks on the remote every ~10 power-ons. The TV also will not turn on and just display an external HDMI source even though it has a "Remember Last Source" feature. That feature does work as expected with any internal streaming source but external sources must first be manually selected with the remote after each power on (also undocumented in the manual). I figured this out because I bought this small TV to be a wall-mounted screen in the dedicated bathroom of our home theater room. It's only job is to turn on while someone is in the little bathroom and display a copy what's on the main 150" projector screen in the next room, then turn off when they leave. The on/off is handled by a motion sensor and standard Home Assistant automation but after power on it correctly shows the Last Selected external HDMI source for 1 second, then blanks the screen. The source is already selected and working but being blacked out until you manually re-select the same source with the remote (only if it's external). This is clearly an undocumented anti-pattern added specifically to prevent the TV being used unattended as a display screen, picture frame, digital sign etc. Why? Because Vizio (now owned by WalMart) doesn't get rev share if it's: 1) Not online, and 2) Only displaying external sources. That's why it demands manual "proof-of-life" before it'll grudgingly deliver the basic functionality it claims on the box. This made me angry - and the TV was otherwise the perfect size and feature set for my use case. So I programmed an ESP32 with an IR emitter so that every time the TV powers on it sends the remote presses to manually clear the "Please Connect Internet" message and re-select the already-selected external HDMI. Very annoying to be forced to figure this out but now it works fine and no one even sees the annoying messages as they're already gone before by the time we enter and see the screen. So, fuck Vizio :-). Although, I'm pretty sure almost all current consumer TVs now sell all your data exactly the same. The only differences may be the depth of dark patterns they deploy to resist offline usage. To be fair, aside from all the super evil dark patterns, it's a shockingly good quality small TV (24-inch) for $88. Although it's obviously not a high-end display (no native HDR or 24fps), the chipset does do a decent job tone mapping external HDR (and HDR10) sources to SDR and it does proper 3:2 pull-down to display 24 frame external sources at 60fps - which very few TVs in this size do well (or at all). This is why I kept it and spent the time 'fixing' it. Of course, this is only because the TV is subsidized by the $35-$60 avg yearly revenue TV manufacturers reportedly can collect from advertising, app install payments, rev shares and selling all your viewing data. For $88 at local retail, it's probably being sold at a small loss. What's sad is I would have paid double that for the same TV without the dark patterns (in fact, I did buy and return two 24" TVs before this one for $160 and $200 but they couldn't even display external HDR or 24fps sources at all - which was a requirement since this secondary display has to display sources configured for the main projector). |</p>
+
+
+
+
+
+
+<nav class="pager">
+<a class="pager-prev" href="2026-11-02-242d15603b-p89.html">← 上一頁</a>
+<a class="pager-next" href="2026-11-02-242d15603b-p91.html">下一頁 →</a>
+<span class="pager-num">第 90 / 93 頁</span>
+</nav>
+
+
+
+</div>
+</body>
+</html>
